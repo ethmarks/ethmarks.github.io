@@ -24,11 +24,19 @@
       align-items: center;
       min-height: 100vh;
       overflow: hidden;
-      
-      background:
-        radial-gradient(#2a2a2a 1.5px, transparent 1.5px) center / 20px 20px,
-        radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), #222222 0%, #121212 70%) center / cover no-repeat, /* Use CSS variables for position */
-        #121212;
+      background-color: #121212;
+      position: relative;
+    }
+
+    .dot-grid {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(#2a2a2a 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+      mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
     }
 
     .container {
@@ -59,7 +67,6 @@
 
     /* Subheader styles */
     .subheader {
-        
       font-family: "Titan One", sans-serif;
       font-size: 1.8rem;
       font-weight: 200;
@@ -134,6 +141,7 @@
   </style>
 </head>
 <body>
+  <div class="dot-grid"></div>
   <div class="background" id="background"></div>
 
   <div class="container">
@@ -165,11 +173,8 @@
   <script>
     // Update radial gradient origin based on mouse position
     window.addEventListener('mousemove', (e) => {
-      const { clientX, clientY } = e;
-      const x = Math.round((clientX / window.innerWidth) * 100);
-      const y = Math.round((clientY / window.innerHeight) * 100);
-      document.documentElement.style.setProperty('--mouse-x', `${x}%`);
-      document.documentElement.style.setProperty('--mouse-y', `${y}%`);
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
     });
   </script>
 </body>
