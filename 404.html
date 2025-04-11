@@ -131,28 +131,33 @@
             function updateDots() {
                 // Update rotation angle
                 angle += rotationSpeed;
-                
+
+                const enableMouseEffect = window.innerWidth >= window.innerHeight;
+
                 dots.forEach(dot => {
                     // Rotate the dot around the center
                     const rotatedX = Math.cos(angle) * dot.origX - Math.sin(angle) * dot.origY;
                     const rotatedY = Math.sin(angle) * dot.origX + Math.cos(angle) * dot.origY;
-                    
+
                     // Update position with rotation
                     dot.x = rotatedX + centerX;
                     dot.y = rotatedY + centerY;
-                    
-                    // Calculate vertical distance from cursor's horizontal band
-                    const dy = Math.abs(mouseY - dot.y);
-                    
-                    // Update radius based on vertical distance (horizontal band effect)
-                    if (dy < bandHeight) {
-                        const scale = 1 - (dy / bandHeight);
-                        dot.radius = baseRadius + (maxRadius - baseRadius) * scale;
+
+                    // Apply horizontal band effect only if aspect ratio permits
+                    if (enableMouseEffect) {
+                        const dy = Math.abs(mouseY - dot.y);
+                        if (dy < bandHeight) {
+                            const scale = 1 - (dy / bandHeight);
+                            dot.radius = baseRadius + (maxRadius - baseRadius) * scale;
+                        } else {
+                            dot.radius = baseRadius;
+                        }
                     } else {
                         dot.radius = baseRadius;
                     }
                 });
             }
+
             
             // Draw the dots
             function drawDots() {
