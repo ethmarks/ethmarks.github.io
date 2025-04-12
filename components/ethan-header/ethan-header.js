@@ -103,11 +103,9 @@ class EthanHeader extends HTMLElement {
       <header>
           <nav aria-label="Main Navigation">
               <ul>
-                  <li><a href="/blog">Blog</a></li>
-                  <li><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="blog/index.html">Blog</a></li>
                   <li><a href="/" id="home-link"><img src="components/ethan-header/home.svg" alt="Home"></a></li> 
-                  <li><a href="/about">About Me</a></li>
-                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="about/index.html">About Me</a></li>
               </ul>
           </nav>
       </header>
