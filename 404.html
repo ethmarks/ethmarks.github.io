@@ -9,6 +9,10 @@
         body {
             margin: 0;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         #canvas {
@@ -16,30 +20,28 @@
             top: 0;
             left: 0;
             z-index: 1;
-            pointer-events: none; /* Ensure the canvas doesn't block interactions */
+            pointer-events: none;
         }
-        
+
         main {
             position: relative;
             z-index: 2;
             color: white;
             text-align: center;
         }
-        
+
         h1 {
             font-family: "Kenia", sans-serif;
             font-weight: 1;
             font-size: 14rem;
-            margin-bottom: -2rem;
+            margin: auto;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        
+
         p {
             font-family: monospace, sans-serif;
             font-size: 1.6rem;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
+            margin: auto;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
     </style>
@@ -47,7 +49,7 @@
 <body>
     <script src="components/ethan-header/ethan-header.js"></script>
     <ethan-header></ethan-header>
-    
+
     <main>
         <h1>404</h1>
         <p>Page not found</p>
@@ -59,11 +61,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
-            
+
             // Set canvas to full window size
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            
+
             // Variables for the grid
             const ringSpacing = 30; // Distance between rings
             const dotSpacingFactor = 30; // Factor to determine dots per ring
@@ -71,30 +73,42 @@
             const maxRadius = 5;
             const bandHeight = 80; // Height of the horizontal band effect
             const dots = [];
-            
+
             // Center of rotation
             let centerX = canvas.width / 2;
             let centerY = canvas.height / 2;
-            
+
             // Rotation variables
             let angle = 0;
             const rotationSpeed = 0.0005; // Speed of rotation
-            
+
             let mouseX = 0;
             let mouseY = 0;
-            
-            // Track mouse position
+
+            // Determine if the device is likely mobile (no fine pointer)
+            const isMobile = window.matchMedia('(pointer: coarse)').matches;
+
+            // Track mouse/touch position
             document.addEventListener('mousemove', function(e) {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
+                if (!isMobile) { // Only track mouse on non-mobile
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                }
             });
-            
+
+            document.addEventListener('touchmove', function(e) {
+                if (isMobile && e.touches.length > 0) {
+                    mouseX = e.touches[0].clientX;
+                    mouseY = e.touches[0].clientY;
+                }
+            });
+
             // Create concentric ring dot pattern
             function createConcentricRings() {
                 // Calculate max radius needed to cover the screen
                 const maxDimension = Math.max(canvas.width, canvas.height);
                 const maxRadius = (maxDimension * Math.sqrt(2)) / 2; // Half the diagonal
-                
+
                 // Start with a single dot at the center
                 dots.push({
                     origX: 0,
@@ -103,19 +117,19 @@
                     y: centerY,
                     radius: baseRadius
                 });
-                
+
                 // Create concentric rings
                 for (let r = ringSpacing; r <= maxRadius; r += ringSpacing) {
                     // Calculate number of dots for this ring based on circumference
                     const circumference = 2 * Math.PI * r;
                     const dotsInRing = Math.floor(circumference / dotSpacingFactor);
-                    
+
                     // Place dots evenly around the ring
                     for (let i = 0; i < dotsInRing; i++) {
                         const angle = (i / dotsInRing) * 2 * Math.PI;
                         const x = r * Math.cos(angle);
                         const y = r * Math.sin(angle);
-                        
+
                         dots.push({
                             origX: x, // Store position relative to center
                             origY: y,
@@ -126,13 +140,11 @@
                     }
                 }
             }
-            
-            // Update the dots based on rotation and mouse position
+
+            // Update the dots based on rotation and mouse/touch position
             function updateDots() {
                 // Update rotation angle
                 angle += rotationSpeed;
-
-                const enableMouseEffect = window.innerWidth >= window.innerHeight;
 
                 dots.forEach(dot => {
                     // Rotate the dot around the center
@@ -143,8 +155,8 @@
                     dot.x = rotatedX + centerX;
                     dot.y = rotatedY + centerY;
 
-                    // Apply horizontal band effect only if aspect ratio permits
-                    if (enableMouseEffect) {
+                    // Apply horizontal band effect only on desktop (non-mobile)
+                    if (!isMobile) {
                         const dy = Math.abs(mouseY - dot.y);
                         if (dy < bandHeight) {
                             const scale = 1 - (dy / bandHeight);
@@ -153,16 +165,16 @@
                             dot.radius = baseRadius;
                         }
                     } else {
-                        dot.radius = baseRadius;
+                        dot.radius = baseRadius; // No band effect on mobile
                     }
                 });
             }
 
-            
+
             // Draw the dots
             function drawDots() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
+
                 dots.forEach(dot => {
                     // Only draw dots that are within the canvas view (with a small margin)
                     if (dot.x >= -10 && dot.x <= canvas.width + 10 &&
@@ -174,14 +186,14 @@
                     }
                 });
             }
-            
+
             // Animation loop
             function animate() {
                 updateDots();
                 drawDots();
                 requestAnimationFrame(animate);
             }
-            
+
             // Handle window resize
             window.addEventListener('resize', function() {
                 canvas.width = window.innerWidth;
@@ -191,7 +203,7 @@
                 dots.length = 0;
                 createConcentricRings();
             });
-            
+
             // Initialize
             createConcentricRings();
             animate();
