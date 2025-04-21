@@ -9,20 +9,25 @@
     :root {
       --mouse-x: 50%;
       --mouse-y: 50%;
+      --accent-color: #8fdfd4;
+      --accent-color-dark: #65c0b4;
+      --text-color: #e0e0e0;
+      --bg-color: #121212;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #e0e0e0;
+      color: var(--text-color);
       line-height: 1.6;
       margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       overflow: hidden;
       position: relative;
+      background-color: var(--bg-color);
+      transition: background-color 0.3s ease;
     }
 
     .dot-grid {
@@ -31,115 +36,172 @@
       background: radial-gradient(#6d6d6d 1.5px, transparent 1.5px);
       background-size: 20px 20px;
       mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 40%);
-      -webkit-mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 20%);
+      -webkit-mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 40%);
       pointer-events: none;
       z-index: 1;
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+    }
+
+    body:hover .dot-grid {
+      opacity: 0.8;
     }
 
     .container {
       max-width: 800px;
-      padding: 2rem;
+      padding: 3rem;
       text-align: center;
       position: relative;
       z-index: 10;
+      background: rgba(30, 30, 30, 0.7);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
-    /* Name header styles */
     .name-header {
       font-family: "Sen", sans-serif;
       font-size: 5rem;
       letter-spacing: 5px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(135deg, #ffffff, var(--accent-color));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
     }
 
-    /* Subheader styles */
     .subheader {
       font-family: "Sen", sans-serif;
       font-size: 2rem;
       font-weight: 600;
-      margin-bottom: 2rem;
-      margin-top: -1rem;
-      color: #8fdfd4;
+      margin-bottom: 2.5rem;
+      margin-top: -0.5rem;
+      color: var(--accent-color);
       opacity: 0.9;
+      letter-spacing: 2px;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      opacity: 0.8;
+      opacity: 0.9;
+      line-height: 1.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .tools {
       display: flex;
       justify-content: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
 
     .tool {
-      margin: 0.5rem;
-      animation: float 3s ease infinite;
-      font-size: 2rem;
+      margin: 0.5rem 1rem;
+      animation: float 4s ease-in-out infinite;
+      font-size: 2.5rem;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .tool:hover {
+      transform: scale(1.2) rotate(15deg);
+      cursor: pointer;
+    }
+
+    .tool:nth-child(1) {
+      animation-duration: 4s;
     }
 
     .tool:nth-child(2) {
       animation-delay: 0.5s;
+      animation-duration: 3.5s;
     }
 
     .tool:nth-child(3) {
       animation-delay: 1s;
+      animation-duration: 5s;
     }
 
     .social {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .social a {
-      padding: 0.75rem 1.5rem;
-      background: linear-gradient(135deg, #8fdfd4, #9ecebe);
-      color: white;
+      padding: 0.75rem 1.75rem;
+      background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
+      color: #111;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 8px;
       font-size: 1rem;
-      transition: opacity 0.3s ease;
+      transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
+      box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
+      position: relative;
+      overflow: hidden;
     }
 
     .social a:hover {
-      opacity: 0.9;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(143, 223, 212, 0.4);
     }
 
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
+    .social a:hover::after {
+      transform: translateX(200%) skewX(-20deg);
+    }
+
+    .social svg {
+      transition: transform 0.3s ease;
+    }
+
+    .social a:hover svg {
+      transform: rotate(10deg);
     }
 
     @keyframes float {
       0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-15px); }
       100% { transform: translateY(0px); }
     }
+
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+
   </style>
 </head>
 <body>
+  <div class="glow"></div>
   <div class="dot-grid"></div>
-  <div class="background" id="background"></div>
 
   <div class="container">
     <div class="name-header">Ethan Marks</div>
@@ -153,8 +215,7 @@
 
     <h1>🚧 Under Construction</h1>
 
-    <p>Welcome to my personal website! I'm still working on it, so check back later!</p>
-    <p>While you wait, check out my Github profile to see some of the things I've made.</p>
+    <p>Welcome to my personal website! I'm still working on it, so check back soon to see how it turns out.</p>
 
     <div class="social">
       <a href="https://github.com/ColourlessSpearmint" title="GitHub">
@@ -167,8 +228,7 @@
   </div>
 
   <script>
-    // Update radial gradient origin based on mouse position
-    window.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => {
       document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
       document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
     });
