@@ -1,117 +1,90 @@
-// Define the custom element
 class EthanHeader extends HTMLElement {
     constructor() {
       super();
-      // Create a shadow DOM
-      this.attachShadow({ mode: 'open' });
-  
-      // Create the header content
-      this.shadowRoot.innerHTML = `
-      <style>
-          :host {
-              display: block;
-              width: 100%;
-              z-index: 3;
+      const shadow = this.attachShadow({ mode: 'open' });
+
+      shadow.innerHTML = `
+        <style>
+          .container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            padding: 10px 15px;
+            background: rgba(30, 30, 30, 0.2);
+            border-radius: 40px;
+            backdrop-filter: blur(20px) saturate(0.8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            box-sizing: border-box;
+            z-index: 1000;
           }
-          
-          nav {
-              display: flex;
-              justify-content: center;
-              padding: 1rem 0;
+
+          .title {
+            font-family: "Sen", sans-serif;
+            font-size: clamp(1rem, 4vw, 2rem);
+            flex-shrink: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 10px;
           }
-          
-          ul {
-              display: flex;
-              list-style: none;
-              padding: 0;
-              margin: 0;
-              gap: 1rem;
-              flex-wrap: wrap;
-              justify-content: center;
-              align-items: center;
+
+          .nav-buttons {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
           }
-  
-          li {
-              display: flex;
-          }
-          
+
           a {
-              display: block;
-              padding: 0.8rem 1rem;
-              text-decoration: none;
-              background-color: rgba(255, 255, 255, 0.07);
-              backdrop-filter: blur(5px);
-              border-radius: 2rem;
-              transition: all 0.2s ease;
-              font-size: 1rem;
-              color: white;
-              font-family: "Tomorrow", sans-serif;
-              font-weight: 400;
-              line-height: 1;
+            background: rgba(60, 60, 60, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-family: "Sen", sans-serif;
+            font-size: clamp(0.75rem, 3vw, 1rem);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+            text-decoration:none;
           }
-          
+
           a:hover {
-              background-color: rgba(255, 255, 255, 0.14);
-              transform: translateY(-2px);
+            background-color: rgba(80, 80, 80, 0.7);
           }
           
-          a:active {
-              transform: translateY(0);
-          }
-  
-          #home-link {
-              padding: 0;
-              width: 3rem;
-              height: 3rem;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-          }
-  
-          #home-link img {
-              display: block;
-              width: 1.5rem; 
-              height: 1.5rem;
-          }
-  
-          @media (max-width: 600px) {
-            ul {
-              flex-direction: column;
-              align-items: center;
+          @media (max-width: 400px) {
+            .container {
+              border-radius: 25px;
+              padding: 8px 12px;
             }
             
-            li:not(:has(#home-link)) a {
-              visibility: hidden;
-              position: absolute;
+            .nav-buttons {
+              gap: 5px;
             }
-           
-            #home-link {
-               width: 2.5rem; 
-               height: 2.5rem;
-            }
-  
-           
-            a:not(#home-link) {
-              width: auto;
-              min-width: 150px;
-              text-align: center;
+            
+            a {
+              padding: 5px 10px;
             }
           }
-      </style>
-      
-      <header>
-          <nav aria-label="Main Navigation">
-              <ul>
-                  <li><a href="blog/index.html">Blog</a></li>
-                  <li><a href="/" id="home-link"><img src="components/ethan-header/home.svg" alt="Home"></a></li> 
-                  <li><a href="about/index.html">About Me</a></li>
-              </ul>
-          </nav>
-      </header>
+        </style>
+
+        <div class="container">
+          <div class="title">Ethan Marks</div>
+          <div class="nav-buttons">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+          </div>
+        </div>
       `;
     }
   }
-  
-  // Register the custom element
+
   customElements.define('ethan-header', EthanHeader);
