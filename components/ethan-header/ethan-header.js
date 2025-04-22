@@ -32,9 +32,13 @@ class EthanHeader extends HTMLElement {
             overflow: hidden;
             text-overflow: ellipsis;
             margin-right: 10px;
+            background: linear-gradient(135deg, #ffffff, #8fdfd4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-          .nav-buttons {
+          nav {
             display: flex;
             gap: 8px;
             flex-shrink: 0;
@@ -65,7 +69,7 @@ class EthanHeader extends HTMLElement {
               padding: 8px 12px;
             }
             
-            .nav-buttons {
+            nav {
               gap: 5px;
             }
             
@@ -76,12 +80,12 @@ class EthanHeader extends HTMLElement {
         </style>
 
         <div class="container">
-          <div class="title">Ethan Marks</div>
-          <div class="nav-buttons">
+          <span class="title">Ethan Marks</span>
+          <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/blog">Blog</a>
-          </div>
+          </nav>
         </div>
       `;
     }
