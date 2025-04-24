@@ -6,7 +6,7 @@ customElements.define('ethan-header',
 
         shadow.innerHTML = `
             <style>
-            .container {
+            header {
                 position: fixed;
                 top: 20px;
                 left: 50%;
@@ -65,57 +65,83 @@ customElements.define('ethan-header',
             }
             
             @media (max-width: 400px) {
-                .container {
-                border-radius: 25px;
-                padding: 8px 12px;
+                header {
+                    border-radius: 25px;
+                    padding: 8px 12px;
                 }
                 
                 nav {
-                gap: 5px;
+                    gap: 5px;
                 }
                 
                 a {
-                padding: 5px 10px;
+                    padding: 5px 10px;
                 }
             }
             </style>
 
-            <div class="container">
-            <span class="title">Ethan Marks</span>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/blog">Blog</a>
-            </nav>
-            </div>
+            <header>
+                <span class="title">Ethan Marks</span>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/blog">Blog</a>
+                </nav>
+            </header>
         `;
         }
     }
 );
 
-customElements.define('ethan-footer', 
+customElements.define('ethan-footer',
     class EthanFooter extends HTMLElement {
         constructor() {
-          super();
-          // Create a shadow DOM
-          this.attachShadow({ mode: 'open' });
-      
-          // Create the header content
-          this.shadowRoot.innerHTML = `
-          <style>
-              :host {
-                  display: block;
-                  width: 100%;
-                  z-index: 3;
-              }
-      
-              @media (max-width: 600px) {
-              }
-          </style>
-          
-          <footer>
-            
-          </footer>
+            super();
+            this.attachShadow({ mode: 'open' });
+
+            this.shadowRoot.innerHTML = `
+            <style>
+                footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 40px;
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    border-radius: 12px;
+                    padding: 10px 30px;
+                    box-sizing: border-box;
+                    color: #eee;
+                    z-index: 9999;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                a:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+
+                .copyright {
+                   font-style: italic;
+                }
+
+                .sitemap {
+                    align-self: flex-end;
+                }
+            </style>
+
+            <footer>
+                <span class="copyright">Ethan Marks, &copy;2025</span>
+                <span class="sitemap"><a href="/sitemap">Sitemap</a></span>
+            </footer>
           `;
         }
     }
