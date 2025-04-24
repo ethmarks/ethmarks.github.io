@@ -102,3 +102,101 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
 }
+
+.longtext {
+    overflow-wrap: break-word;  
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(143, 223, 212, 0.2);
+}
+
+thead {
+    background: rgba(20, 20, 20, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    font-family: "Sen", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    color: #8fdfd4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover td {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+tr.accent-row td {
+    background: linear-gradient(90deg, rgba(143, 223, 212, 0.1), rgba(30, 30, 30, 0));
+    border-left: 3px solid #8fdfd4;
+}
+
+@media (max-width: 768px) {
+    table {
+        max-width: 90vw;
+    }
+    
+    th, td {
+        padding: 0.8rem;
+    }
+    
+    /* Stack tables on mobile */
+    thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    td {
+        position: relative;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    td:before {
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: 600;
+        color: #8fdfd4;
+    }
+}
