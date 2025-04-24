@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -23,7 +23,8 @@ h1 {
     font-size: clamp(1rem, 8vw, 3rem);
     flex-shrink: 1;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    margin: 0;
 }
 
 .mint {
@@ -34,6 +35,7 @@ h1 {
 }
 
 panel {
+    margin-top: 30px;
     max-width: 60vw;
     padding: 1rem 2rem;
     background: rgba(30, 30, 30, 0.7);
@@ -44,6 +46,13 @@ panel {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+time {
+    font-family: "Sen", sans-serif;
+    font-size: clamp(0.5rem, 4vw, 1.5rem);
+    font-style: italic;
+    color: #8dd4cc;
 }
 
 a:link, a:visited {
