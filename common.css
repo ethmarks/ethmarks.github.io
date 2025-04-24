@@ -87,3 +87,18 @@ a:link, a:visited {
 .social a:hover svg {
     transform: rotate(10deg);
 }
+
+figure {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+    color: #c0c0c0;
+}
+
+img {
+    width: clamp(20vw,40vh,50vw);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
+}
