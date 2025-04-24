@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/common.css">
+  <link rel="stylesheet" href="../common.css">
   <title>Under Construction</title>
   <style>
     :root {
@@ -13,12 +13,6 @@
       --accent-color-dark: #65c0b4;
       --text-color: #e0e0e0;
       --bg-color: #121212;
-    }
-
-    body {
-      color: var(--text-color);
-      line-height: 1.6;
-      background-color: var(--bg-color);
     }
 
     panel {
@@ -37,10 +31,6 @@
       z-index: 1;
       opacity: 0.5;
       transition: opacity 0.5s ease;
-    }
-
-    body:hover .dot-grid {
-      opacity: 0.8;
     }
 
     panel:hover {
@@ -65,10 +55,6 @@
       font-size: 5rem;
       letter-spacing: 5px;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-      background: linear-gradient(135deg, #ffffff, var(--accent-color));
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       margin-bottom: 0.5rem;
     }
 
@@ -86,12 +72,7 @@
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      line-height: 1.8;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .tools {
@@ -109,11 +90,6 @@
       transition: transform 0.3s ease;
     }
 
-    .tool:hover {
-      transform: scale(1.2) rotate(15deg);
-      cursor: pointer;
-    }
-
     .tool:nth-child(1) {
       animation-duration: 4s;
     }
@@ -128,56 +104,11 @@
       animation-duration: 5s;
     }
 
-    .social {
-      margin-top: 3rem;
-    }
-
-    .social a {
-      padding: 0.75rem 1.75rem;
-      background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
-      color: #111;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .social a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(143, 223, 212, 0.4);
-    }
-
-    .social a:hover::after {
-      transform: translateX(200%) skewX(-20deg);
-    }
-
-    .social svg {
-      transition: transform 0.3s ease;
-    }
-
-    .social a:hover svg {
-      transform: rotate(10deg);
-    }
-
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-15px); }
       100% { transform: translateY(0px); }
     }
-
-    @keyframes pulse {
-      0% { opacity: 0.8; }
-      50% { opacity: 1; }
-      100% { opacity: 0.8; }
-    }
-
   </style>
 </head>
 <body>
@@ -185,7 +116,7 @@
 
   <main>
     <panel>
-      <div class="name-header">Ethan Marks</div>
+      <div class="name-header mint">Ethan Marks</div>
       <div class="subheader">ColourlessSpearmint</div>
       <div class="tools">
         <div class="tool">🔨</div>

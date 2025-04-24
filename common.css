@@ -49,3 +49,41 @@ panel {
 a:link, a:visited {
     color: #9ce3d9;
 }
+
+.social {
+    margin-top: 3rem;
+}
+
+.social a {
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.social a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(143, 223, 212, 0.4);
+}
+
+.social a:hover::after {
+    transform: translateX(200%) skewX(-20deg);
+}
+
+.social svg {
+    transition: transform 0.3s ease;
+}
+
+.social a:hover svg {
+    transform: rotate(10deg);
+}
