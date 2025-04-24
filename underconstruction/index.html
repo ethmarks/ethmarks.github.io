@@ -16,18 +16,14 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text-color);
       line-height: 1.6;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
-      position: relative;
       background-color: var(--bg-color);
-      transition: background-color 0.3s ease;
+    }
+
+    panel {
+      z-index: 10;
+      text-align: center;
     }
 
     .dot-grid {
@@ -47,23 +43,7 @@
       opacity: 0.8;
     }
 
-    .container {
-      max-width: 800px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-      background: rgba(30, 30, 30, 0.7);
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transform: translateY(0);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .container:hover {
+    panel:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
     }
@@ -200,32 +180,29 @@
   </style>
 </head>
 <body>
-  <div class="glow"></div>
   <div class="dot-grid"></div>
 
-  <div class="container">
-    <div class="name-header">Ethan Marks</div>
-    <div class="subheader">ColourlessSpearmint</div>
-
-    <div class="tools">
-      <div class="tool">🔨</div>
-      <div class="tool">🔧</div>
-      <div class="tool">⚙️</div>
-    </div>
-
-    <h1>🚧 Under Construction</h1>
-
-    <p>Welcome to my personal website! I'm still working on it, so check back soon to see how it turns out.</p>
-
-    <div class="social">
-      <a href="https://github.com/ColourlessSpearmint" title="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-        </svg>
-        GitHub
-      </a>
-    </div>
-  </div>
+  <main>
+    <panel>
+      <div class="name-header">Ethan Marks</div>
+      <div class="subheader">ColourlessSpearmint</div>
+      <div class="tools">
+        <div class="tool">🔨</div>
+        <div class="tool">🔧</div>
+        <div class="tool">⚙️</div>
+      </div>
+      <h1>🚧 Under Construction</h1>
+      <p>Welcome to my personal website! I'm still working on it, so check back soon to see how it turns out.</p>
+      <div class="social">
+        <a href="https://github.com/ColourlessSpearmint" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </panel>
+  </main>
 
   <script>
     document.addEventListener('mousemove', (e) => {
