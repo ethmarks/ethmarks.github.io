@@ -140,7 +140,7 @@ customElements.define('ethan-footer',
 
             <footer>
                 <span class="copyright">Ethan Marks, &copy;2025</span>
-                <span class="sitemap"><a href="/sitemap">Sitemap</a></span>
+                <span class="sitemap"><a href="/sitemap.html">Sitemap</a></span>
             </footer>
           `;
         }
