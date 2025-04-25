@@ -22,6 +22,7 @@ h1 {
     font-family: "Sen", sans-serif;
     font-size: clamp(1rem, 8vw, 3rem);
     flex-shrink: 1;
+    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
@@ -123,7 +124,6 @@ img {
     max-width: 25vw;
     max-height: 25vh;
 }
-
 
 @media (max-width: 768px) {
     .bigimage {
