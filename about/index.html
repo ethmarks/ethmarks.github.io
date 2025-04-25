@@ -1,6 +1,97 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="refresh" content="0;url=/underconstruction">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../common.css">
+    <script src="../common.js"></script>
+    <style>
+        .intro-container {
+            display: flex; 
+            align-items: stretch;
+            gap: 20px; 
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+        }
+
+        .personal-container {
+            display: flex; 
+            align-items: stretch;
+            gap: 20px; 
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+        }
+
+        .personal-container > .column {
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .personal-container {
+                display: block;
+                align-items: normal;
+            }
+        }
+        .column {
+            display: flex; 
+            flex-direction: column;
+            padding: 10px;
+            overflow-wrap: break-word;
+            flex-basis: 0;
+            flex-grow: 1; 
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 4rem;
+            font-family: "Sen", sans-serif;
+        }
+
+        .column p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        img {
+            flex-shrink: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1 class="mint">About Me</h1>
+
+<div class="intro-container">
+    <div class="column">
+        <img class="bigimage" src="images/ethan_2022.jpg" alt="A picture of Ethan">
+    </div>
+    <div class="column">
+        <h2>Ahoy!</h2>
+        <p>My name is <b>Ethan Marks</b>.</p>
+        <p>I'm a software engineer.</p>
+    </div>
+</div>
+
+<div class="personal-container">
+    <div class="column">
+        <h2>Education</h2>
+        <p>I'm a homeschooled high school student, but I'm also dual-enrolled at my local college.</p> 
+    </div>
+    <div class="column">
+        <h2>Interests</h2>
+        <p>I'm interested in most things computery.</p>
+    </div>
+    <div class="column">
+        <h2>Favorites</h2>
+        <p>My favorite novel is <a href="https://www.goodreads.com/book/show/119322.The_Golden_Compass">The Golden Compass</a>.</p>
+    </div>
+</div>
+
+</main>
+<ethan-footer></ethan-footer>
+</body>
 </html>

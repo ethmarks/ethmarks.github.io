@@ -112,6 +112,25 @@ img {
     box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
 }
 
+.bigimage {
+    height: auto;
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
+.smallimage {
+    height: auto;
+    max-width: 25vw;
+    max-height: 25vh;
+}
+
+
+@media (max-width: 768px) {
+    .bigimage {
+        max-width: 40vw;
+    }
+}
+
 .longtext {
     overflow-wrap: break-word;  
 }
