@@ -110,6 +110,11 @@ img {
     box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
 }
 
+.noshadow {
+    box-shadow: none;
+    border: none;
+}
+
 .bigimage {
     height: auto;
     max-width: 60vw;
