@@ -7,35 +7,14 @@
   <title>Under Construction</title>
   <style>
     :root {
-      --mouse-x: 50%;
-      --mouse-y: 50%;
       --accent-color: #8fdfd4;
       --accent-color-dark: #65c0b4;
       --text-color: #e0e0e0;
       --bg-color: #121212;
     }
 
-    panel {
-      z-index: 10;
+    body {
       text-align: center;
-    }
-
-    .dot-grid {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(#6d6d6d 1.5px, transparent 1.5px);
-      background-size: 20px 20px;
-      mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 40%);
-      -webkit-mask-image: radial-gradient(ellipse at var(--mouse-x) var(--mouse-y), black 0%, transparent 40%);
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.5;
-      transition: opacity 0.5s ease;
-    }
-
-    panel:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
@@ -110,10 +89,10 @@
       100% { transform: translateY(0px); }
     }
   </style>
+  <script src="../common.js"></script>
 </head>
 <body>
-  <div class="dot-grid"></div>
-
+  <ethan-header></ethan-header>
   <main>
     <panel>
       <div class="name-header mint">Ethan Marks</div>
@@ -124,7 +103,9 @@
         <div class="tool">⚙️</div>
       </div>
       <h1>🚧 Under Construction</h1>
-      <p>Welcome to my personal website! I'm still working on it, so check back soon to see how it turns out.</p>
+      <p>Hi! I'm still writing the code for this page.</p>
+      <p>It should be done soon, but in the meantime you can navigate to my other pages using the header or the <a href="../sitemap.html">sitemap</a>.</p>
+      <p>You could also check out my Github profile to see what I'm working on.</p>
       <div class="social">
         <a href="https://github.com/ColourlessSpearmint" title="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -135,12 +116,6 @@
       </div>
     </panel>
   </main>
-
-  <script>
-    document.addEventListener('mousemove', (e) => {
-      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-    });
-  </script>
+  <ethan-footer></ethan-footer>
 </body>
 </html>

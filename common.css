@@ -60,10 +60,6 @@ a:link, a:visited {
     color: #9ce3d9;
 }
 
-.social {
-    margin-top: 3rem;
-}
-
 .social a {
     padding: 0.75rem 1.75rem;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
