@@ -103,7 +103,8 @@ figure {
 }
 
 img {
-    height: clamp(20vw,40vh,25vw);
+    max-height: clamp(20vw,40vh,25vw);
+    max-width: clamp(30vw,35vw,40vw);
     border-radius: clamp(1rem, 3vw, 2rem);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
