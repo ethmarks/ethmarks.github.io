@@ -146,3 +146,139 @@ customElements.define('ethan-footer',
         }
     }
 );
+
+customElements.define('button-link',
+    class ButtonLink extends HTMLElement {
+      constructor() {
+        super();
+        const shadow = this.attachShadow({ mode: 'open' });
+  
+        shadow.innerHTML = `
+          <style>
+            /* Import necessary fonts */
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sen:wght@700&display=swap');
+  
+            :host {
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+              margin-bottom: 1rem;
+            }
+  
+            a {
+              display: block;
+              padding: 1rem 1.5rem;
+              background: rgba(30, 30, 30, 0.6);
+              border-radius: 12px;
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              color: white;
+              transition: all 0.3s ease;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            }
+  
+            /* --- Hover Effects --- */
+            a:hover {
+              background: rgba(45, 45, 45, 0.75);
+              border-color: rgba(143, 223, 212, 0.3);
+              transform: translateY(-3px);
+              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+  
+            /* --- Corrected Text Styling --- */
+  
+            /* Style the elements slotted into the 'title' slot */
+            slot[name="title"]::slotted(*) {
+              font-family: "Sen", sans-serif; /* Use Sen font */
+              font-size: 1.1rem;
+              font-weight: 700;
+              display: block; /* Ensure block display if needed */
+              color: #ffffff; /* White title text */
+              margin-bottom: 0; /* Remove bottom margin */
+              transition: color 0.3s ease; /* Smooth color transition on hover */
+            }
+  
+            /* Style the elements slotted into the 'description' slot */
+            slot[name="description"]::slotted(*) {
+              font-family: "Poppins", sans-serif; /* Use Poppins */
+              font-size: 0.9rem;
+              color: #c0c0c0; /* Lighter grey */
+              line-height: 1.4;
+              display: block; /* Ensure block display */
+              margin-top: 0.25rem; /* Space between title and description */
+            }
+  
+            /* Change title color on link hover */
+            a:hover slot[name="title"]::slotted(*) {
+               color: #8fdfd4; /* Mint color for title text on hover */
+            }
+  
+            /* --- Layout Helpers --- */
+  
+            /* Hide the description wrapper span if the slot is empty */
+            /* This visually hides the slot area if no description is provided */
+            .description:not(:has(slot:not([name]):not(:empty))), /* Handles default slot */
+            .description:not(:has(slot[name="description"]:not(:empty))) {
+               /* A more robust way to check if the slot has assigned nodes */
+               /* Or simply rely on margin/padding adjustments if hiding is tricky */
+            }
+  
+            /* Simpler approach: Hide the span if its slot has no assigned elements */
+             span.description {
+                 /* Default styles for the span itself if needed */
+             }
+  
+             /* We can rely on the margin-top of the description slot */
+             /* If no description is slotted, the margin won't apply to anything visible */
+  
+  
+             /* Keep the span for structure, but style the slotted content directly */
+             .title, .description {
+                 display: block; /* Make the wrapper spans block */
+             }
+  
+          </style>
+  
+          <a id="link-wrapper" href="#">
+            <span class="title">
+              <slot name="title">Default Link Title</slot>
+            </span>
+            <span class="description">
+              <slot name="description"></slot> <!-- Optional description -->
+            </span>
+          </a>
+        `;
+  
+        this.linkElement = shadow.getElementById('link-wrapper');
+      }
+  
+      connectedCallback() {
+        if (this.hasAttribute('href')) {
+          this.linkElement.setAttribute('href', this.getAttribute('href'));
+        } else {
+          this.linkElement.setAttribute('href', '#');
+          console.warn('button-link element created without an href attribute.');
+        }
+  
+        if (this.hasAttribute('target')) {
+          this.linkElement.setAttribute('target', this.getAttribute('target'));
+        }
+  
+        // Check if description slot is empty and potentially add a class for styling
+        // This is less reliable than CSS-only solutions usually
+        // const descriptionSlot = this.shadowRoot.querySelector('slot[name="description"]');
+        // if (descriptionSlot && descriptionSlot.assignedNodes().length === 0) {
+        //    this.linkElement.classList.add('no-description');
+        // }
+      }
+  
+      // Optional: Observe attribute changes if needed
+      // static get observedAttributes() { return ['href', 'target']; }
+      // attributeChangedCallback(name, oldValue, newValue) { ... }
+    }
+);
