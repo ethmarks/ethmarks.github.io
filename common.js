@@ -182,66 +182,35 @@ customElements.define('button-link',
               overflow: hidden;
             }
   
-            /* --- Hover Effects --- */
             a:hover {
               background: rgba(45, 45, 45, 0.75);
               border-color: rgba(143, 223, 212, 0.3);
               transform: translateY(-3px);
               box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             }
-  
-            /* --- Corrected Text Styling --- */
-  
-            /* Style the elements slotted into the 'title' slot */
+
             slot[name="title"]::slotted(*) {
-              font-family: "Sen", sans-serif; /* Use Sen font */
+              font-family: "Sen", sans-serif;
               font-size: 1.1rem;
               font-weight: 700;
-              display: block; /* Ensure block display if needed */
-              color: #ffffff; /* White title text */
-              margin-bottom: 0; /* Remove bottom margin */
-              transition: color 0.3s ease; /* Smooth color transition on hover */
+              display: block;
+              color: #ffffff;
+              margin-bottom: 0;
+              transition: color 0.3s ease;
             }
   
-            /* Style the elements slotted into the 'description' slot */
             slot[name="description"]::slotted(*) {
-              font-family: "Poppins", sans-serif; /* Use Poppins */
+              font-family: "Poppins", sans-serif;
               font-size: 0.9rem;
-              color: #c0c0c0; /* Lighter grey */
+              color: #c0c0c0;
               line-height: 1.4;
-              display: block; /* Ensure block display */
-              margin-top: 0.25rem; /* Space between title and description */
+              display: block;
+              margin-top: 0.25rem;
             }
   
-            /* Change title color on link hover */
             a:hover slot[name="title"]::slotted(*) {
-               color: #8fdfd4; /* Mint color for title text on hover */
+               color: #8fdfd4;
             }
-  
-            /* --- Layout Helpers --- */
-  
-            /* Hide the description wrapper span if the slot is empty */
-            /* This visually hides the slot area if no description is provided */
-            .description:not(:has(slot:not([name]):not(:empty))), /* Handles default slot */
-            .description:not(:has(slot[name="description"]:not(:empty))) {
-               /* A more robust way to check if the slot has assigned nodes */
-               /* Or simply rely on margin/padding adjustments if hiding is tricky */
-            }
-  
-            /* Simpler approach: Hide the span if its slot has no assigned elements */
-             span.description {
-                 /* Default styles for the span itself if needed */
-             }
-  
-             /* We can rely on the margin-top of the description slot */
-             /* If no description is slotted, the margin won't apply to anything visible */
-  
-  
-             /* Keep the span for structure, but style the slotted content directly */
-             .title, .description {
-                 display: block; /* Make the wrapper spans block */
-             }
-  
           </style>
   
           <a id="link-wrapper" href="#">
@@ -249,7 +218,7 @@ customElements.define('button-link',
               <slot name="title">Default Link Title</slot>
             </span>
             <span class="description">
-              <slot name="description"></slot> <!-- Optional description -->
+              <slot name="description"></slot>
             </span>
           </a>
         `;
