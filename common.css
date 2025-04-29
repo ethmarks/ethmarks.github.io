@@ -1,26 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
 
+:root {
+    /* Colors */
+    --color-background: #121212;
+    --color-text: white;
+    --color-text-secondary: #c0c0c0;
+    --color-accent: #8fdfd4;
+    --color-accent-medium: #8dd4cc;
+    --color-accent-light: #9ce3d9;
+    --color-link: var(--color-accent-light);
+    --color-panel-bg: rgba(30, 30, 30, 0.7);
+    --color-panel-border: rgba(255, 255, 255, 0.1);
+    --color-panel-border-light: rgba(255, 255, 255, 0.05);
+    --color-table-header-bg: rgba(20, 20, 20, 0.8);
+    --color-table-row-hover: rgba(50, 50, 50, 0.5);
+    --color-accent-transparent-10: rgba(143, 223, 212, 0.1); /* Derived from accent */
+    --color-accent-transparent-20: rgba(143, 223, 212, 0.2); /* Derived from accent */
+    --color-button-text: #111;
+    --color-chat-sender-bg: #3a3a3a;
+    --color-chat-recipient-bg: #124161;
+
+    /* Fonts */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Sen", sans-serif;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 0.75rem;  /* 12px */
+    --spacing-md: 1rem;     /* 16px */
+    --spacing-lg: 1.5rem;   /* 24px */
+    --spacing-xl: 2rem;     /* 32px */
+    --main-margin-top: 5rem; /* 80px */
+    --panel-margin-top: 1.875rem; /* 30px */
+    --chat-padding-y: 10px;
+    --chat-padding-x: 16px;
+    --chat-margin-bottom: 0.8rem;
+
+    /* Borders & Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-round: 18px;
+    --border-standard: 1px solid var(--color-panel-border);
+    --border-light: 1px solid var(--color-panel-border-light);
+    --border-accent: 3px solid var(--color-accent);
+
+    /* Shadows */
+    --shadow-color-dark: rgba(0, 0, 0, 0.2);
+    --shadow-color-accent: rgba(143, 223, 212, 0.3);
+    --shadow-color-accent-hover: rgba(143, 223, 212, 0.4);
+    --shadow-panel: 0 8px 32px var(--shadow-color-dark);
+    --shadow-button: 0 4px 12px var(--shadow-color-accent);
+    --shadow-button-hover: 0 8px 20px var(--shadow-color-accent-hover);
+    --shadow-image: var(--shadow-button);
+    --shadow-table: var(--shadow-panel);
+    --shadow-table-hover: 0 12px 40px var(--color-accent-transparent-20);
+    --shadow-chat: 0 1px 2px var(--shadow-color-dark);
+
+    /* Transitions */
+    --transition-duration: 0.3s;
+    --transition-duration-fast: 0.2s;
+    --transition-timing: ease;
+    --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
+    --transition-all: all var(--transition-duration) var(--transition-timing);
+    --transition-transform: transform var(--transition-duration) var(--transition-timing);
+    --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
+
+    /* Effects */
+    --blur-intensity: 10px;
+}
+
 body {
-    background: #121212;
+    background: var(--color-background);
+    /* Complex gradients are kept as is for fidelity */
     background-image: linear-gradient(38.73deg, rgba(0, 127, 204, 0.25) 0%, rgba(32, 200, 201, 0) 50%), linear-gradient(141.27deg, rgba(209, 0, 48, 0) 50%, rgba(0, 217, 255, 0.25) 100%);
     background-attachment: fixed;
     line-height: 1.4;
-    font-family: "Poppins", sans-serif;
-    color: white;
+    font-family: var(--font-primary);
+    color: var(--color-text);
 }
 
 main {
-    margin-top: 80px;
+    margin-top: var(--main-margin-top);
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     position: relative;
     flex-direction: column;
 }
 
 h1 {
-    font-family: "Sen", sans-serif;
-    font-size: clamp(1rem, 8vw, 3rem);
+    font-family: var(--font-secondary);
+    font-size: clamp(1rem, 8vw, 3rem); /* Keeping clamp for responsiveness */
     flex-shrink: 1;
     text-align: center;
     overflow: hidden;
@@ -29,65 +103,68 @@ h1 {
 }
 
 .mint {
-    background: linear-gradient(135deg, #ffffff, #8fdfd4);
+    background: linear-gradient(135deg, #ffffff, var(--color-accent));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Using 'panel' as a custom element selector; consider using a class like '.panel' */
 panel {
-    margin-top: 30px;
+    margin-top: var(--panel-margin-top);
     max-width: 60vw;
-    padding: 1rem 2rem;
-    background: rgba(30, 30, 30, 0.7);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--color-panel-bg);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    box-shadow: var(--shadow-panel);
+    border: var(--border-standard);
     transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition-transform-shadow);
 }
 
+/* Using 'time' as a custom element selector; consider using a class */
 time {
-    font-family: "Sen", sans-serif;
-    font-size: clamp(0.5rem, 4vw, 1.5rem);
+    font-family: var(--font-secondary);
+    font-size: clamp(0.5rem, 4vw, 1.5rem); /* Keeping clamp */
     font-style: italic;
-    color: #8dd4cc;
+    color: var(--color-accent-medium);
 }
 
 a:link, a:visited {
-    color: #9ce3d9;
+    color: var(--color-link);
 }
 
 .social a {
-    padding: 0.75rem 1.75rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
-    color: #111;
-    font-weight: 600;
+    padding: var(--spacing-sm) 1.75rem; /* Keep unique horizontal padding */
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent)); /* Corrected gradient */
+    color: var(--color-button-text);
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    border-radius: var(--radius-md);
+    font-size: var(--spacing-md); /* 1rem */
+    transition: var(--transition-all);
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
+    gap: var(--spacing-sm); /* 0.75rem */
+    box-shadow: var(--shadow-button);
     position: relative;
     overflow: hidden;
 }
 
 .social a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(143, 223, 212, 0.4);
+    box-shadow: var(--shadow-button-hover);
 }
 
 .social a:hover::after {
+    /* Shimmer effect kept as is */
     transform: translateX(200%) skewX(-20deg);
 }
 
 .social svg {
-    transition: transform 0.3s ease;
+    transition: var(--transition-transform);
 }
 
 .social a:hover svg {
@@ -99,15 +176,16 @@ figure {
     margin: 0 auto;
     text-align: center;
     font-style: italic;
-    color: #c0c0c0;
+    color: var(--color-text-secondary);
 }
 
 img {
-    max-height: clamp(20vw,40vh,25vw);
-    max-width: clamp(30vw,35vw,40vw);
-    border-radius: clamp(1rem, 3vw, 2rem);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(143, 223, 212, 0.3);
+    /* Clamps kept for responsive image sizing */
+    max-height: clamp(20vw, 40vh, 25vw);
+    max-width: clamp(30vw, 35vw, 40vw);
+    border-radius: clamp(1rem, 3vw, 2rem); /* Keeping clamp for responsive radius */
+    border: var(--border-standard);
+    box-shadow: var(--shadow-image);
 }
 
 .noshadow {
@@ -134,49 +212,49 @@ img {
 }
 
 .longtext {
-    overflow-wrap: break-word;  
+    overflow-wrap: break-word;
 }
 
 table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin: 2rem 0;
-    border-radius: 12px;
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    background: rgba(30, 30, 30, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
+    background: var(--color-panel-bg);
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    box-shadow: var(--shadow-table);
+    border: var(--border-standard);
+    transition: var(--transition-transform);
 }
 
 table:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(143, 223, 212, 0.2);
+    box-shadow: var(--shadow-table-hover);
 }
 
 thead {
-    background: rgba(20, 20, 20, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-table-header-bg);
+    border-bottom: var(--border-standard);
 }
 
 th {
-    font-family: "Sen", sans-serif;
-    font-weight: 700;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
     text-align: left;
-    padding: 1.2rem 1.5rem;
-    color: #8fdfd4;
+    padding: 1.2rem 1.5rem; /* Keep specific table padding */
+    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Keep specific font size */
 }
 
 td {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: background-color 0.2s ease;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: var(--border-light);
+    transition: var(--transition-background);
 }
 
 tr:last-child td {
@@ -184,59 +262,60 @@ tr:last-child td {
 }
 
 tbody tr:hover td {
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: var(--color-table-row-hover);
 }
 
 tr.accent-row td {
-    background: linear-gradient(90deg, rgba(143, 223, 212, 0.1), rgba(30, 30, 30, 0));
-    border-left: 3px solid #8fdfd4;
+    background: linear-gradient(90deg, var(--color-accent-transparent-10), rgba(30, 30, 30, 0)); /* Use transparent accent color */
+    border-left: var(--border-accent);
 }
 
 @media (max-width: 768px) {
     table {
         max-width: 90vw;
     }
-    
+
     th, td {
-        padding: 0.8rem;
+        padding: var(--spacing-xs); /* 0.8rem -> 0.5rem (8px) or adjust variable */
     }
-    
+
     /* Stack tables on mobile */
     thead, tbody, th, td, tr {
         display: block;
     }
 
     tr {
-        margin-bottom: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
+        margin-bottom: var(--spacing-md);
+        border: var(--border-standard);
+        border-radius: var(--radius-md);
         overflow: hidden;
     }
-    
+
     td {
         position: relative;
         border: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: var(--border-light);
     }
-    
+
     td:before {
         position: absolute;
-        left: 1rem;
+        left: var(--spacing-md);
         width: 45%;
-        padding-right: 10px;
+        padding-right: 10px; /* Keep specific padding */
         white-space: nowrap;
         content: attr(data-label);
-        font-weight: 600;
-        color: #8fdfd4;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-accent);
     }
 }
 
 /* Message styling */
+/* Using 'chat' as a custom element selector; consider using a class */
 chat p {
     clear: both;
-    padding: 10px 16px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.8rem;
+    padding: var(--chat-padding-y) var(--chat-padding-x);
+    box-shadow: var(--shadow-chat);
+    margin-bottom: var(--chat-margin-bottom);
     max-width: 80%;
     word-wrap: break-word;
 }
@@ -244,15 +323,15 @@ chat p {
 /* Sender messages (left side) */
 chat p:nth-child(odd) {
     float: left;
-    background-color: #3a3a3a;
-    border-radius: 18px 18px 18px 4px;
+    background-color: var(--color-chat-sender-bg);
+    border-radius: var(--radius-round) var(--radius-round) var(--radius-round) var(--radius-sm);
 }
 
 /* Recipient messages (right side) */
 chat p:nth-child(even) {
     float: right;
-    background-color: #124161;
-    border-radius: 18px 18px 4px 18px;
+    background-color: var(--color-chat-recipient-bg);
+    border-radius: var(--radius-round) var(--radius-round) var(--radius-sm) var(--radius-round);
 }
 
 /* Clear the float after messages */
@@ -262,11 +341,13 @@ chat::after {
     clear: both;
 }
 
-/* Image styling */
+/* Image styling within chat */
 chat p img {
     max-width: 100%;
     height: auto;
-    margin-top: 8px;
-    border-radius: 8px;
+    margin-top: var(--spacing-xs);
+    border-radius: var(--radius-md);
     display: block;
+    box-shadow: none; /* Override default img shadow if needed */
+    border: none; /* Override default img border if needed */
 }
