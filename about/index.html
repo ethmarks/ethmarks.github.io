@@ -65,8 +65,10 @@
             text-align: center;
         }
 
-        img {
-            flex-shrink: 1;
+        .intro-container img {
+            max-width: 60vw;
+            max-height: 60vh;       
+            border-radius: clamp(1rem, 3vw, 2rem); /* Keeping clamp for responsive radius */
         }
 
         figure {
@@ -82,7 +84,7 @@
 
 <div class="intro-container">
     <div class="cell">
-        <img class="bigimage" src="images/ethan_2022.jpg" alt="Ethan sits casually on a large rock underneath a tree">
+        <img src="images/ethan_2022.jpg" alt="Ethan sits casually on a large rock underneath a tree">
     </div>
     <div class="cell">
         <h2>Ahoy!</h2>
