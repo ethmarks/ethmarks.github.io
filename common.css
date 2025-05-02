@@ -252,6 +252,11 @@ img {
     margin-right: auto;
 }
 
+.juxtapose img{
+    max-height: clamp(20vh, 40vh, 50vh);
+    max-width: clamp(50vw, 60vw, 600px);
+}
+
 .noshadow {
     box-shadow: none;
     border: none;
