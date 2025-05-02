@@ -33,7 +33,7 @@
 <p>About a month after seeing the painting, I had the idea to edit my cat, Toby, into the painting in place of the bear.</p>
 <p>At the time, I was still <i>very</i> new to photo editing, so my workflow was hacky.</p>
 <p>To remove the bear, I uploaded the photo to Google Photos, used <a href="https://www.google.com/intl/en_us/photos/editing/">Magic Eraser</a> to remove the bear, then downloaded it back to my computer.</p>
-<p>Then I opened a photo of Toby in <a href="https://www.gimp.org/">GIMP</a>, manually traced a selection around Toby and deleted everything outside of that selection. I then foolishly exported it in the non-alpha-supporting JPEG format and had to do it again (I used the JPEG for the juxtapose below because its a smaller file).</p>
+<p>Then I opened a photo of Toby in <a href="https://www.gimp.org/">GIMP</a>, manually traced a selection around Toby and deleted everything outside of that selection. I then foolishly exported it in the non-alpha-supporting JPEG format and had to do the whole thing over again, this time with PNG. (Sidenote: I used the JPEG for the juxtapose below because its a smaller file).</p>
 
 <figure>
     <div class="juxtapose-container">
@@ -58,12 +58,16 @@
     <figcaption>Result 1</figcaption>
 </figure>
 
-<p>This is a completely acceptable result. It doesn't look convincing (Toby is hovering above the ground, the lighting is wrong, no eye contact, etc.), but that was never the point. It would be ridiculous to spend any more time on this.</p>
+<p>This is a completely acceptable result. It doesn't look convincing (Toby is hovering above the ground, the lighting is wrong, no eye contact, etc.), but that was never the point. It was more about the humorous concept than the execution. It would be ridiculous to spend any more time on this.</p>
 
 <h2>Second Attempt</h2>
 <p>So today I spent some more time on it.</p>
-<p>Over the past three weeks, I've spent a few hours (in total, not per week) learning Adobe Photoshop. This means that I'm at least <i>somewhat</i> more skilled at photo manipulation now than I was in January.</p>
-<p>To be continued...</p>
+<p>Over the past three weeks, I've spent a few hours (in total, not per week) learning Adobe Photoshop. This means that I'm at least <i>somewhat</i> more skilled at photo manipulation now than I was in January. I had some ideas on how to get a better result.</p>
+<ul>
+    <li>I used a scanned version of the painting rather than my photo. The scan is actually <i>lower</i> quality than my photo (48MP camera go brrrr), but it has better lighting and doesn't have perspective I would have to account for.</li>
+    <li>To remove the bear from the original, I used Photoshop's Content-Aware Fill rather than Magic Eraser. It's slightly more difficult to use, but gives a far better result with less artifacts.</li>
+    <li>To remove the background from the Toby photo, I used Photoshop's Select and Mask tool, which—in addition to being much easier to use—includes things like color decontamination, meaning light doesn't leak through fur.</li>
+</ul>
 </panel>
 </main>
 <ethan-footer></ethan-footer>
