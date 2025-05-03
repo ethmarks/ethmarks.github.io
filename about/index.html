@@ -17,7 +17,7 @@
             margin-bottom: 20px; 
         }
 
-        .row {
+        row {
             display: flex; 
             align-items: stretch;
             gap: 20px; 
@@ -25,17 +25,17 @@
             margin-bottom: 20px; 
         }
 
-        .row > .cell {
+        row > cell {
             align-items: center;
         }
 
         @media (max-width: 768px) {
-            .row {
+            row {
                 display: block;
                 align-items: normal;
             }
         }
-        .cell {
+        cell {
             display: flex; 
             flex-direction: column;
             padding: 10px;
@@ -56,12 +56,12 @@
             font-family: "Sen", sans-serif;
         }
 
-        .cell p {
+        cell p {
             margin: 0;
             font-size: 1.2rem;
         }
 
-        .row > .cell > p {
+        row > cell > p {
             text-align: center;
         }
 
@@ -83,66 +83,66 @@
 <h1 class="mint">About Me</h1>
 
 <div class="intro-container">
-    <div class="cell">
+    <cell>
         <img src="images/ethan_2022.jpg" alt="Ethan sits casually on a large rock underneath a tree">
-    </div>
-    <div class="cell">
+    </cell>
+    <cell>
         <h2>Ahoy!</h2>
         <p>My name is <b>Ethan Marks</b>.</p>
         <p>I'm a software engineer.</p>
         <p style="margin-top: 2em;">I'm 14 years old and live in North Carolina.</p>
-    </div>
+    </cell>
 </div>
 <panel style="max-width: 90vw; width: 90vw;">
-<div class="row">
-    <div class="cell">
+<row>
+    <cell>
         <h3>Interests</h3>
         <p>I'm interested in programming, automation, neural networks, logistics, mathematics, cryptology, and lots of other stuff</p>
-    </div>
-    <div class="cell">
+    </cell>
+    <cell>
         <h3>Likes</h3>
         <p>My favorite colour is <span class="mint"><b>Spearmint Teal</b></span></p>
         <p>My favorite novel is <a href="https://www.goodreads.com/book/show/119322.The_Golden_Compass">The Golden Compass</a></p>
         <p>My favorite map projection is the <a href="https://colourlessspearmint.github.io/blog/curios/waterman.html">Waterman Butterfly</a></p>
         <p>My favorite bird is the <a href="https://en.wikipedia.org/wiki/Starling">Starling</a></p>
         <p>My favorite foreign language is <a href="https://en.wikipedia.org/wiki/Bulgarian_language">Bulgarian</a></p>
-    </div>
-    <div class="cell">
+    </cell>
+    <cell>
         <h3>Hobbies</h3>
         <p>I enjoy programming, reading, and hiking in new places. I've been to all 48 continental states as well as Canada (Prince Edward Island, Toronto, and Quebec) and Mexico</p>
-    </div>
-</div>
+    </cell>
+</row>
 
-<div class="row">
-    <div class="cell">
+<row>
+    <cell>
         <h3>Education</h3>
         <p>I'm a homeschooled <b>high school student</b>, but I'm also dual-enrolled at my local <b>college</b>. This has allowed me to learn advanced material at an unusually young age</p>
-    </div>
-    <div class="cell">
+    </cell>
+    <cell>
         <h3>Job</h3>
         <p>I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash new operating systems, and resell them for profit</p>
-    </div>
-</div>
+    </cell>
+</row>
 
-<div class="row">
-    <div class="cell">
+<row>
+    <cell>
         <h3>Programming Skills</h3>
         <p>I've been coding in some form or another since I was 7 years old, and in that time I've become competent in both fundamental programming principles and in language-specific syntax</p>
         <p>I do most of my coding in <b>Python</b> because it's simple, prevalent, and acceptably performant (for my use case)</p>
         <p>In 2022, I published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a> that I built using <b>Unity</b>. I also have a tiny bit of experience making games in <b>Godot</b></p>
         <p>I wrote my <a href="https://colourlessspearmint.github.io">personal website</a> myself using pure HTML, CSS, and JavaScript without any frameworks</p>
-    </div>
-</div>
-<div class="row">
-    <div class="cell">
+    </cell>
+</row>
+<row>
+    <cell>
         <h3>Cat</h3>
         <p>I have a blind cat named Toby. His hobbies include waking me up in the middle of the night as well as stealing my chicken nuggets</p>
         <figure>
             <img src="images/toby.jpg" alt="Toby, a fluffy gray Persian cat, looks heroically upwards near a tranquil pond.">
             <figcaption>Toby the cat</figcaption>
         </figure>
-    </div>
-</div>
+    </cell>
+</row>
 </panel>
 </main>
 <ethan-footer></ethan-footer>
