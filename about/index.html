@@ -6,82 +6,6 @@
     <title>About Me</title>
     <link rel="stylesheet" href="../common.css">
     <script src="../common.js"></script>
-    <script src="../vendor/rellax.js"></script>
-    <script>var rellax = new Rellax('.rellax');</script>
-    <style>
-        .intro-container {
-            display: flex;
-            align-items: stretch;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        row {
-            display: flex;
-            align-items: stretch;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        row > cell {
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            row {
-                display: block;
-                align-items: normal;
-            }
-        }
-        cell {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            overflow-wrap: break-word;
-            flex-basis: 0;
-            flex-grow: 1;
-        }
-
-        h2 {
-            margin: 0;
-            font-size: 3rem;
-            font-family: "Sen", sans-serif;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 2rem;
-            font-family: "Sen", sans-serif;
-        }
-
-        cell p {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-
-        row > cell > p {
-            text-align: center;
-        }
-
-        .intro-container img {
-            max-width: 50vw;
-            max-height: 50vh;
-            border-radius: clamp(1rem, 3vw, 2rem); /* Keeping clamp for responsive radius */
-        }
-
-        figure {
-            margin-top: 1rem;
-        }
-
-        .external-link-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            align-self: center;
-        }
-    </style>
 </head>
 <body>
 <ethan-header></ethan-header>
@@ -145,14 +69,13 @@
         <p>I have a blind cat named Toby. His hobbies include waking me up in the middle of the night as well as stealing my chicken nuggets</p>
         <figure>
             <img src="images/toby.jpg" alt="Toby, a fluffy gray Persian cat, looks heroically upwards near a tranquil pond.">
-            <figcaption>Toby the cat</figcaption>
         </figure>
     </cell>
 </row>
 <row>
     <cell>
         <h3>Links</h3>
-        <div class="external-link-links">
+        <div class="external-link-row">
             <external-link icon="github" href="https://github.com/ColourlessSpearmint">
                 <span slot="title">GitHub</span>
             </external-link>

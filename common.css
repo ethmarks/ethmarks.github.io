@@ -109,6 +109,7 @@ main {
 p {
     font-weight: var(--font-weight-normal);
 }
+
 h1 {
     font-family: var(--font-secondary);
     font-size: clamp(1.5rem, 8vw, 3rem); /* Slightly increased min h1 size */
@@ -118,6 +119,12 @@ h1 {
     text-overflow: ellipsis;
     margin: 0 0 var(--spacing-md) 0; /* Add bottom margin */
     font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
 }
 
 .mint {
@@ -396,4 +403,66 @@ chat p img {
     display: block;
     box-shadow: none;
     border: none;
+}
+
+.intro-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.intro-container img {
+    max-width: 50vw;
+    max-height: 50vh;
+    border-radius: clamp(1rem, 3vw, 2rem);
+}
+
+.intro-container h2 {
+    font-size: 3rem;
+    font-family: var(--font-secondary);
+}
+
+.external-link-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-self: center;
+}
+
+row {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+row > cell {
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    row {
+        display: block;
+        align-items: normal;
+    }
+}
+cell {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-wrap: break-word;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+cell p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+row > cell > p {
+    text-align: center;
 }
