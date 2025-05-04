@@ -321,12 +321,11 @@ customElements.define('external-link',
                         box-shadow: var(--shadow-button);
                         position: relative;
                         overflow: hidden;
-                        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure transition is defined here */
+                        transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
                     }
 
                     a:hover {
                         transform: translateY(-3px);
-                        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure transition is defined here */
                         box-shadow: var(--shadow-button-hover);
                     }
 
