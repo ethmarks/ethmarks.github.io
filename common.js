@@ -25,7 +25,7 @@ customElements.define('ethan-header',
                 left: 50%;
                 transform: translateX(-50%);
                 width: 90%;
-                max-width: 500px;
+                max-width: 700px;
                 padding: 10px 15px;
                 background: rgba(30, 30, 30, 0.2);
                 border-radius: 40px;
@@ -99,6 +99,7 @@ customElements.define('ethan-header',
                     <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/blog">Blog</a>
+                    <a href="/projects">Projects</a>
                 </nav>
             </header>
         `;
