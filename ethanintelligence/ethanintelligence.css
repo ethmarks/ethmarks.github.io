@@ -271,6 +271,10 @@ body {
     font-size: 20px;
 }
 
+.bot-message .avatar-icon {
+    font-family: "Audiowide", sans-serif;
+}
+
 /* Custom scrollbar */
 .chat-messages::-webkit-scrollbar {
     width: 8px;
