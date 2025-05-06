@@ -24,7 +24,7 @@ customElements.define('ethan-header',
                 top: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 90%;
+                width: 100vw;
                 max-width: 700px;
                 padding: 10px 15px;
                 background: rgba(30, 30, 30, 0.2);
@@ -36,6 +36,13 @@ customElements.define('ethan-header',
                 color: white;
                 box-sizing: border-box;
                 z-index: 1000;
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    max-width: 100vw;
+                    border-radius: 0;
+                }
             }
 
             .title {
