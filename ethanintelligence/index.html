@@ -15,7 +15,7 @@
             <div class="intro-content">
                 <h1 class="intro-heading">Ethan Intelligence</h1>
                 <h2 class="intro-subheading">The next step in the Ethan Emulation Project</h2>
-                <p class="intro-text">Ethan Intelligence leverages cutting-edge natural language processing and machine learning to deliver a hyper-realistic simulation of having a conversation with me. No use cases have yet been discovered for this.</p>
+                <p class="intro-text">Ethan Intelligence leverages cutting-edge natural language processing to deliver a hyper-realistic simulation of having a conversation with me. As of yet, no practical uses have  been discovered for this.</p>
 
             </div>
             <div class="illustration">
@@ -48,7 +48,7 @@
         
         <div class="chat-container">
             <div class="chat-header">
-                <div class="chat-logo">EI</div>
+                <div class="chat-logo">Ethan Intelligence</div>
             </div>
         
         <div class="chat-messages" id="chat-messages">
@@ -68,7 +68,7 @@
                     <span class="avatar-icon">U</span>
                 </div>
                 <div class="message-content user-content">
-                    What can you do?
+                    What kind of things can you do?
                 </div>
             </div>
             
@@ -134,14 +134,27 @@
                 if (message) {
                     // Add user message
                     addMessage(message, true);
-                    
+
                     // Clear input
                     messageInput.value = '';
-                    
-                    // Add bot response (with a small delay)
+
+                    // Show "typing..." message
+                    const typingIndicator = document.createElement('div');
+                    typingIndicator.className = 'message bot-message typing-indicator';
+                    typingIndicator.innerHTML = `
+                        <div class="avatar">
+                            <span class="avatar-icon">EI</span>
+                        </div>
+                        <div class="message-content bot-content">thinking,..</div>
+                    `;
+                    chatMessages.appendChild(typingIndicator);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                    // Replace with actual bot response after a delay
                     setTimeout(() => {
-                        addMessage("You understand that this isn't actually a chatbot, right? I just coded this page as a joke because I was bored. It can't actually respond.", false);
-                    }, 2000);
+                        typingIndicator.remove(); // Remove the "..." indicator
+                        addMessage("That's a great question/comment/whatever! Unfortunately, this is just a prewritten message. I couldn't be bothered to integrate an actual AI into this overproduced attempt at humor.", false);
+                    }, 1500);
                 }
             }
             
