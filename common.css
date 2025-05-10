@@ -485,3 +485,18 @@ ul li {
 ul li:hover {
     color: var(--color-accent);
 }
+
+/* ASCII Art Style */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    text-align: center;
+    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+    font-size: clamp(0.1rem, 2vw, 0.5rem); /* Scale font size based on display size */
+    line-height: 1.2; /* Adjust line height for better readability */
+    background-color: var(--color-article-bg); /* Optional background */
+    padding: var(--spacing-sm); /* Add some padding */
+    border-radius: var(--radius-md); /* Rounded corners */
+    border: var(--border-standard); /* Add border */
+}
+
