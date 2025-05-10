@@ -26,7 +26,6 @@
     --font-primary: "Nunito", sans-serif;
     --font-secondary: "Sen", sans-serif;
     --font-weight-normal: 600;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
@@ -297,8 +296,12 @@ tr.accent-row td {
         transform: none; /* Disable hover transform */
         box-shadow: none;
     }
-
-    thead { display: none; } /* Hide table header */
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
 
     tbody, tr, td { display: block; } /* Stack elements */
 
@@ -465,4 +468,20 @@ cell p {
 
 row > cell > p {
     text-align: center;
+}
+
+ul {
+    list-style: disc inside;
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-lg);
+}
+
+ul li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    transition: color var(--transition-duration-fast) var(--transition-timing);
+}
+
+ul li:hover {
+    color: var(--color-accent);
 }
