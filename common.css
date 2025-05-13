@@ -73,9 +73,6 @@
     --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
     --transition-transform: transform var(--transition-duration) var(--transition-timing);
     --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
-
-    /* Effects */
-    --blur-intensity: 10px;
 }
 
 html {
@@ -148,8 +145,6 @@ article {
     padding: var(--spacing-lg) var(--spacing-xl);
     background: var(--color-article-bg);
     border-radius: var(--radius-xl);
-    backdrop-filter: blur(var(--blur-intensity));
-    -webkit-backdrop-filter: blur(var(--blur-intensity));
     box-shadow: var(--shadow-article);
     border: var(--border-standard);
     transform: translateY(0);
@@ -236,8 +231,6 @@ table {
     border-radius: var(--radius-lg);
     overflow: hidden; /* Clips children to the radius */
     background: var(--color-article-bg);
-    backdrop-filter: blur(var(--blur-intensity));
-    -webkit-backdrop-filter: blur(var(--blur-intensity));
     box-shadow: var(--shadow-table);
     border: var(--border-standard);
     transition: var(--transition-transform-shadow); /* Use combined */

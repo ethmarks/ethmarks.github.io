@@ -23,7 +23,7 @@ customElements.define('ethan-header',
                 position: fixed;
                 top: 20px;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%) translate3d(0,0,0);
                 width: 100vw;
                 max-width: 700px;
                 padding: 10px 15px;
@@ -66,8 +66,7 @@ customElements.define('ethan-header',
             }
 
             a {
-                background: rgba(60, 60, 60, 0.2);
-                backdrop-filter: blur(10px);
+                background: rgba(60, 60, 60, 0.1);
                 color: white;
                 border: 1px solid rgba(255, 255, 255, 0.03);
                 border-radius: 20px;
@@ -130,6 +129,7 @@ customElements.define('ethan-footer',
                     margin-top: 40px;
                     background: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(10px);
+                    transform: translate3d(0,0,0); /* Force GPU rendering */
                     border: 1px solid rgba(255, 255, 255, 0.18);
                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                     border-radius: 12px;
@@ -191,8 +191,6 @@ customElements.define('button-link',
               padding: 1rem 1.5rem;
               background: rgba(30, 30, 30, 0.6);
               border-radius: 12px;
-              backdrop-filter: blur(8px);
-              -webkit-backdrop-filter: blur(8px);
               box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
               border: 1px solid rgba(255, 255, 255, 0.08);
               text-decoration: none;
