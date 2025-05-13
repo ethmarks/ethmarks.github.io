@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="../common.css">
     <script src="../common.js"></script>
     <style>
-        h3 {
+        h2 {
             margin: 0;
             font-size: 2rem;
+        }
+
+        article {
+            max-width: 85vw;
+            width: 85vw;
         }
     </style>
 </head>
@@ -17,26 +22,30 @@
 <ethan-header></ethan-header>
 <main>
 <h1 class="mint">About Me</h1>
-
-<div class="intro-container">
-    <cell>
-        <img src="images/ethan_2022.webp" alt="Ethan sits casually on a large rock underneath a tree">
-    </cell>
-    <cell>
-        <h2>Ahoy!</h2>
-        <p>My name is <b>Ethan Marks</b>.</p>
-        <p>I'm a software engineer.</p>
-        <p style="margin-top: 2em;">I'm 14 years old and live in North Carolina.</p>
-    </cell>
-</div>
-<article style="max-width: 90vw; width: 90vw;">
+<article>
 <row>
     <cell>
-        <h3>Interests</h3>
+        <h2>Bio</h2>
+        <p>My name is <b>Ethan Marks</b></p>
+        <p>I'm a <b>software engineer</b></p>
+        <p>I'm <b>14</b> years old</p>
+        <p>I live in <b>North Carolina</b></p>
+    </cell>
+</row>
+
+<row>
+    <cell>
+        <img class="bigimage" src="images/ethan_suit.webp" alt="Ethan smiles pleasantly wearing a black suit and white shirt">
+    </cell>
+</row>
+
+<row>
+    <cell>
+        <h2>Interests</h2>
         <p>I'm interested in programming, automation, neural networks, logistics, mathematics, cryptology, and lots of other stuff</p>
     </cell>
     <cell>
-        <h3>Likes</h3>
+        <h2>Likes</h2>
         <p>My favorite colour is <span class="mint"><b>Spearmint Teal</b></span></p>
         <p>My favorite novel is <a href="https://www.goodreads.com/book/show/119322.The_Golden_Compass">The Golden Compass</a></p>
         <p>My favorite map projection is the <a href="https://colourlessspearmint.github.io/blog/curios/waterman.html">Waterman Butterfly</a></p>
@@ -44,43 +53,55 @@
         <p>My favorite foreign language is <a href="https://en.wikipedia.org/wiki/Bulgarian_language">Bulgarian</a></p>
     </cell>
     <cell>
-        <h3>Hobbies</h3>
-        <p>I enjoy programming, reading, and hiking in new places. I've been to all 48 continental states as well as Canada (Prince Edward Island, Toronto, and Quebec) and Mexico</p>
+        <h2>Hobbies</h2>
+        <p>I enjoy programming, reading, and hiking in new places. I've been to 48/50 US states, 5/10 Canadian provinces, and 1/31 Mexican states</p>
     </cell>
 </row>
 
 <row>
     <cell>
-        <h3>Education</h3>
-        <p>I'm a homeschooled <b>high school student</b>, but I'm also dual-enrolled at my local <b>college</b>. This has allowed me to learn advanced material at an unusually young age</p>
+        <h2>Education</h2>
+        <p>I'm a homeschooled <b>high school student</b>, but I'm also dual-enrolled at my local <b>college</b> with a 4.0 GPA. This has allowed me to learn advanced material at a very young age</p>
     </cell>
     <cell>
-        <h3>Job</h3>
+        <h2>Job</h2>
         <p>I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash new operating systems, and resell them for profit</p>
     </cell>
 </row>
 
 <row>
     <cell>
-        <h3>Programming Skills</h3>
-        <p>I've been coding in some form or another since I was 7 years old, and in that time I've become competent in both fundamental programming principles and in language-specific syntax</p>
-        <p>I do most of my coding in <b>Python</b> because it's simple, prevalent, and acceptably performant (for my use case)</p>
-        <p>In 2022, I published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a> that I built using <b>Unity</b>. I also have a tiny bit of experience making games in <b>Godot</b></p>
-        <p>I wrote my <a href="https://colourlessspearmint.github.io">personal website</a> myself using pure HTML, CSS, and JavaScript without any frameworks</p>
+        <h2>Skills</h2>
+        <p>I do most of my coding in <a href="https://www.python.org/">Python</a> and have since 2021</p>
+        <p>I use <a href="https://git-scm.com/">Git</a> and <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> for project source control</p>
+        <p>I do front-end development in <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></p>
+        <p>I am proficient in <a href="https://unity.com/">Unity</a> and <a href="https://godotengine.org/">Godot</a></p>
+        <p>I routinely use image editing software like <a href="https://www.adobe.com/products/photoshop.html">Photoshop</a>, <a href="https://www.gimp.org/">GIMP</a>, and <a href="https://inkscape.org/">Inkscape</a></p>
+        <p>I taught myself 3D modeling in <a href="https://www.blender.org/">Blender</a></p>
+    </cell>
+    <cell>
+        <h2>Experience</h2>
+        <p>I've been coding since I was 7 years old, when I made my first program in <a href="https://scratch.mit.edu/">Scratch</a></p>
+        <p>I made and published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a></p>
+        <p>I developed my <a href="../projects/personalwebsite.html">personal website</a></p>
+        <p>I reimplemented <a href="../projects/eliza.html">ELIZA</a>, an early AI chatbot, to run on modern hardware</p>
+        <p>I programmed <a href="../projects/asciiglobe.html">ASCII-Globe</a>, a novelty cartographic rendering engine that generates text-based maps of the Earth</p>
     </cell>
 </row>
+
 <row>
     <cell>
-        <h3>Cat</h3>
+        <h2>Cat</h2>
         <p>I have a blind cat named Toby. His hobbies include waking me up in the middle of the night as well as stealing my chicken nuggets</p>
         <figure>
             <img src="images/toby.webp" alt="Toby, a fluffy gray Persian cat, looks heroically upwards near a tranquil pond.">
         </figure>
     </cell>
 </row>
+
 <row>
     <cell>
-        <h3>Links</h3>
+        <h2>Links</h2>
         <div class="external-link-row">
             <external-link icon="github" href="https://github.com/ColourlessSpearmint">
                 <span slot="title">GitHub</span>

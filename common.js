@@ -317,7 +317,7 @@ customElements.define('external-link',
                     }
 
                     a {
-                        padding: var(--spacing-sm) var(--spacing-lg);
+                        padding: clamp(0.5rem, 1vw, 1rem) clamp(0.8rem, 2vw, 2rem);
                         background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
                         color: var(--color-button-text);
                         font-weight: var(--font-weight-semibold);
