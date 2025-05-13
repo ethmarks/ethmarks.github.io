@@ -30,7 +30,7 @@
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
     --font-size-md: 1rem;
-    --font-size-lg: 1.125rem;
+    --font-size-lg: 1.4rem;
 
     /* Spacing */
     --spacing-xs: 0.5rem;   /* 8px */
@@ -120,8 +120,7 @@ h1 {
 }
 
 h3 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
     font-family: var(--font-secondary);
 }
 
