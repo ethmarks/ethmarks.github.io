@@ -61,7 +61,6 @@
     --shadow-article: 0 8px 32px var(--shadow-color-dark);
     --shadow-button: 0 4px 12px var(--shadow-color-accent);
     --shadow-button-hover: 0 8px 20px var(--shadow-color-accent-hover);
-    --shadow-image: var(--shadow-button);
     --shadow-table: var(--shadow-article);
     --shadow-table-hover: 0 12px 40px var(--color-accent-transparent-20);
     --shadow-chat: 0 1px 2px var(--shadow-color-dark);
@@ -190,7 +189,6 @@ img {
     max-width: clamp(50vw, 60vw, 600px); /* Simplified width clamp */
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg)); /* Clamp radius */
     border: var(--border-standard);
-    box-shadow: var(--shadow-image);
     margin-left: auto; /* Center if needed within figure/div */
     margin-right: auto;
 }
@@ -200,8 +198,7 @@ img {
     max-width: clamp(50vw, 60vw, 600px);
 }
 
-.noshadow {
-    box-shadow: none;
+.noborder {
     border: none;
 }
 
