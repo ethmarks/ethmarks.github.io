@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourlessTransformer</title>
+    <link rel="stylesheet" href="../common.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1 class="mint">ColourlessTransformer</h1>
+<external-link icon="github" href="https://github.com/ColourlessSpearmint/ColourlessTransformer">
+    <span slot="title">GitHub Repo</span>
+</external-link>
+<article>
+<p><a href="https://github.com/Huage001/PaintTransformer">PaintTransformer</a> is a neural network that approximates images using paint strokes. This gives it a very pretty and stylized watercolor/painterly aesthetic.</p>
+<p>I like how this looks, and I'll sometimes just run random photos through it to see how they turn out.</p>
+
+<figure>
+    <div class="juxtapose-container">
+        <div class="juxtapose" style="width: 1000px;">
+            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+        </div>
+        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+    </div>
+    <figcaption>PaintTransformer applied to a photo I took at <a href="https://franklloydwright.org/taliesin-west/">Taliesin West</a></figcaption>
+</figure>
+
+<p>Another cool thing you can do is save each step as a frame, which creates a cool animation similar to a <a href="https://youtu.be/1rc0qmqcqMY">watercolor timelapse</a>.</p>
+<p>Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: <i>how quickly can you guess what it's painting?</i></p>
+<figure>
+    <img style="width: 1000px;" src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.gif" alt="A timelapse animation of a highly stylized watercolor painting of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+    <figcaption>An PaintTransformer timelapse of my Taliesin photo</figcaption>
+</figure>
+
+<p>PaintTransformer was developed in <a href="https://arxiv.org/abs/2108.03798">this paper</a> by a team of researchers. It was later <a href="https://github.com/Huage001/PaintTransformer">implemented in PyTorch</a> by <a href="https://github.com/Huage001">Huage001</a></p>
+<p>I wanted to use PaintTransformer, but I didn't want to have to write code for every image, nor did I want to use the sketchy PaintTransformer app written in Chinese.</p>
+<p>So instead I took this opportunity to brush up on my interface frontend skills and code a client. I decided to name it ColourlessTransformer because I was going through a phase of naming everything eponymously.</p>
+
+<h2>Streamlit</h2>
+<p>This was my first time working with <a href="https://streamlit.io/">Streamlit</a>. I originally planned to use <a href="https://www.gradio.app/">Gradio</a> for this project because I had previous experience, but Gradio is an extremely heavy framework for my use case, and the 2-minute starting times were bothering me.</p>
+<p>I'm quite happy with how the Streamlit app turned out. A detail I'm particularly proud of is how the previous output fades out slightly while the new one is processing.</p>
+<figure>
+    <img src="images/colourlesstransformer_streamlit.webp" alt="A streamlit app">
+</figure>
+
+<h2>Usage</h2>
+<p>If you want to try this out on your own, follow the <a href="https://github.com/ColourlessSpearmint/ColourlessTransformer?tab=readme-ov-file#usage">instructions in the README</a>. You'll need Git, Python, a GPU, and a tiny bit of familiarity with the terminal. In other words, you might want to skip this one if you're not a programmer.</p>
+
+<h2>Conclusion</h2>
+<p>ColourlessTransformer was one of my favorite projects because I started with a complex task that took 3-5 minutes of tedious parameter filling and file reorganization and ended with a sleek, fast, and painless custom application.</p>
+<p>Apparently it wasn't enough to automate watercolor; I also had to automate the automation.</p>
+<p>-Ethan</p>
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>

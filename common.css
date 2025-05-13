@@ -496,3 +496,8 @@ ul li:hover {
     border: var(--border-standard); /* Add border */
 }
 
+.juxtapose-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
