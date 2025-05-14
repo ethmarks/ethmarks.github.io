@@ -1,7 +1,130 @@
-<!-- This is the main landing page -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="refresh" content="0;url=/underconstruction">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="common.js"></script>
+    <style>
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .intro-container {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .intro-container img {
+        max-width: 50vw;
+        max-height: 50vh;
+        animation: intro-image 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
+    }
+
+    .intro-container h2 {
+        font-size: 3rem;
+        font-family: var(--font-secondary);
+        animation: intro-text 2s cubic-bezier(0, 0.8, 0.2, 1) both;
+    }
+
+    .intro-container p {
+        font-size: 1.5rem;
+        animation: intro-text 3s cubic-bezier(0, 0.8, 0.2, 1) both;
+    }
+
+    @keyframes intro-text {
+        from {
+            transform: translate(0, 5rem);
+        }
+        to {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes intro-image {
+        from {
+            transform: translate(-6rem, 0);
+            clip-path: circle(2.5vh);
+        }
+        to {
+            transform: translate(0, 0);
+            clip-path: circle(75%);
+        }
+    }
+
+    @keyframes article {
+        from {
+            transform: translate(0, 12rem);
+        }
+        to {
+            transform: translate(0, 0);
+        }
+    }
+
+    article {
+        animation: article 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+        color: var(--color-text);
+        padding: var(--spacing-lg);
+        text-align: center;
+        box-shadow: var(--shadow-article);
+        border-top: var(--border-standard);
+        border-bottom: var(--border-standard);
+        border-radius: var(--radius-lg);
+        margin-top: var(--spacing-xl);
+    }
+    </style>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<div class="intro-container">
+    <cell>
+        <img src="about/images/ethan_home.webp" alt="Ethan sits casually on a large rock underneath a tree">
+    </cell>
+    <cell>
+        <div class="intro-text">
+            <h2>Ahoy!</h2>
+            <p>My name is <b>Ethan Marks</b>.</p>
+            <p>I'm a software engineer.</p>
+        </div>
+    </cell>
+</div>
+<article>
+<h1>Welcome to My Personal Website</h1>
+<p>I built this site from scratch, and it represents presence on the World Wide Web</p>
+<br>
+<p>Here are some of the pages on this site</p>
+<row>
+    <cell>
+        <button-link href="about/">
+            <span slot="title">About</span>
+            <span slot="description">A bio about me, Ethan Marks</span>
+        </button-link>
+    </cell>
+    <cell>
+        <button-link href="blog/">
+            <span slot="title">Blog</span>
+            <span slot="description">An aggregator for my blogs: Curios, Figments, and Elsewise</span>
+        </button-link>
+    </cell>
+    <cell>
+        <button-link href="projects/">
+            <span slot="title">Projects</span>
+            <span slot="description">Programming projects I've worked on</span>
+        </button-link>
+    </cell>
+</row>
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
 </html>
