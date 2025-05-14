@@ -502,3 +502,7 @@ ul li {
 poem {
     text-align: center;
 }
+
+blockquote {
+    font-style: italic;    
+}
