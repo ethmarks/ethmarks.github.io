@@ -503,6 +503,6 @@ poem {
     text-align: center;
 }
 
-blockquote {
+blockquote p {
     font-style: italic;    
 }
