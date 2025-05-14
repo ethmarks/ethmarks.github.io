@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="common.css">
     <script src="common.js"></script>
     <style>
-    body {
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    
     .intro-container {
         display: flex;
         align-items: stretch;
@@ -23,30 +18,49 @@
     .intro-container img {
         max-width: 50vw;
         max-height: 50vh;
-        animation: intro-image 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: circle-reveal 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
     .intro-container h2 {
         font-size: 3rem;
         font-family: var(--font-secondary);
-        animation: intro-text 2s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: slide-down 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
     .intro-container p {
-        font-size: 1.5rem;
-        animation: intro-text 3s cubic-bezier(0, 0.8, 0.2, 1) both;
+        font-size: clamp(0.8rem, 1.7rem, 5vw);
+        animation: slide-left 2s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
-    @keyframes intro-text {
+    h1 {
+        animation: reveal-left 5s cubic-bezier(0, 0.8, 0.2, 1) both;
+    }
+
+    @media (min-width: 768px) {
+        .intro-container p {
+            white-space: nowrap;
+        }
+    }
+
+    @keyframes slide-down {
         from {
-            transform: translate(0, 5rem);
+            transform: translate(0, -5rem);
         }
         to {
             transform: translate(0, 0);
         }
     }
 
-    @keyframes intro-image {
+    @keyframes slide-left {
+        from {
+            transform: translate(5rem, 0);
+        }
+        to {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes circle-reveal {
         from {
             transform: translate(-6rem, 0);
             clip-path: circle(2.5vh);
@@ -57,7 +71,7 @@
         }
     }
 
-    @keyframes article {
+    @keyframes slide-up {
         from {
             transform: translate(0, 12rem);
         }
@@ -66,20 +80,26 @@
         }
     }
 
+    @keyframes reveal-left {
+        from {
+            clip-path: inset(0 100vw 0 0);
+        }
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
     article {
-        animation: article 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
         width: 100%;
         max-width: 100%;
-        margin: 0;
-        background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-        color: var(--color-text);
-        padding: var(--spacing-lg);
         text-align: center;
-        box-shadow: var(--shadow-article);
-        border-top: var(--border-standard);
-        border-bottom: var(--border-standard);
-        border-radius: var(--radius-lg);
-        margin-top: var(--spacing-xl);
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    main {
+        overflow: hidden;
     }
     </style>
 </head>
@@ -93,16 +113,14 @@
     <cell>
         <div class="intro-text">
             <h2>Ahoy!</h2>
-            <p>My name is <b>Ethan Marks</b>.</p>
+            <p>My name is <span class="mint"><b>Ethan&nbsp;Marks</b></span>.</p>
             <p>I'm a software engineer.</p>
         </div>
     </cell>
 </div>
 <article>
 <h1>Welcome to My Personal Website</h1>
-<p>I built this site from scratch, and it represents presence on the World Wide Web</p>
-<br>
-<p>Here are some of the pages on this site</p>
+<p>This site represents my presence on the World Wide Web</p>
 <row>
     <cell>
         <button-link href="about/">
