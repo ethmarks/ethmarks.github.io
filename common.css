@@ -89,6 +89,22 @@ body {
     color: var(--color-text);
     margin: 0; /* Reset default body margin */
     font-size: var(--font-size-base);
+    animation: fadeIn 0.3s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.noanim {
+    animation: none;
+    opacity: 1;
 }
 
 main {

@@ -1,103 +1,14 @@
-(function() {
-    'use strict';
-
-    const FADE_DURATION = 300;
-    let isTransitioning = false;
-
-    if (document.body) {
-        document.body.style.opacity = '0';
-    } else {
-        document.addEventListener('DOMContentLoaded', () => {
-            if (document.body) document.body.style.opacity = '0';
-        });
-    }
-
-    function fadeOutBody() {
-        return new Promise((resolve) => {
-            document.body.style.transition = `opacity ${FADE_DURATION / 1000}s ease-out`;
-            document.body.style.opacity = '0';
-            setTimeout(resolve, FADE_DURATION);
-        });
-    }
-
-    function fadeInBody() {
-        document.body.style.opacity = '0';
-        document.body.style.transition = 'none';
-
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                document.body.style.transition = `opacity ${FADE_DURATION / 1000}s ease-in`;
-                document.body.style.opacity = '1';
-            });
-        });
-    }
-
-    async function loadPage(url, isPopState = false) {
-        if (isTransitioning) return;
-        isTransitioning = true;
-
-        await fadeOutBody();
-
-        try {
-            const response = await fetch(url, {
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
-            });
-
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-            const htmlText = await response.text();
-            const newDoc = new DOMParser().parseFromString(htmlText, 'text/html');
-
-            document.body.innerHTML = newDoc.body.innerHTML;
-            document.title = newDoc.title;
-
-            if (!isPopState) {
-                history.pushState({ path: url }, newDoc.title, url);
-            }
-
-            window.scrollTo(0, 0);
-            fadeInBody();
-        } catch (error) {
-            console.error('Page transition failed:', error);
-            window.location.assign(url);
-            return;
-        }
-
-        setTimeout(() => { isTransitioning = false; }, FADE_DURATION);
-    }
-
-    document.addEventListener('click', function(event) {
-        const anchor = event.target.closest('a');
-        if (!anchor || !anchor.href) return;
-
-        const isInternal = anchor.hostname === window.location.hostname;
-        const isDifferentPath = anchor.pathname !== window.location.pathname || anchor.search !== window.location.search || !anchor.hash;
-        const isSafe = !['mailto:', 'tel:', 'javascript:'].some(p => anchor.protocol.startsWith(p));
-        const noModifiers = !(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey);
-        const notBlank = anchor.target !== '_blank';
-        const isDifferent = anchor.href !== window.location.href;
-
-        if (isInternal && isDifferentPath && isSafe && noModifiers && notBlank && isDifferent) {
-            event.preventDefault();
-            loadPage(anchor.href);
-        }
-    });
-
-    window.addEventListener('popstate', () => {
-        loadPage(window.location.href, true);
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-        if (document.body && document.body.style.opacity === '0') {
-            setTimeout(() => {
-                fadeInBody();
-                setTimeout(() => { isTransitioning = false; }, FADE_DURATION);
-            }, 50);
-        } else if (document.body) {
-            document.body.style.opacity = '1';
-            isTransitioning = false;
-        }
-    });
+(function loadQuicklink() {
+  if (typeof quicklink === 'undefined') {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js';
+    script.onload = () => {
+      quicklink.listen();
+    };
+    document.head.appendChild(script);
+  } else {
+    quicklink.listen();
+  }
 })();
 
 customElements.define('ethan-header',
