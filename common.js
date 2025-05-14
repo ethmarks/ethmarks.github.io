@@ -100,19 +100,6 @@
     });
 })();
 
-(function loadQuicklink() {
-  if (typeof quicklink === 'undefined') {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js';
-    script.onload = () => {
-      quicklink.listen();
-    };
-    document.head.appendChild(script);
-  } else {
-    quicklink.listen();
-  }
-})();
-
 customElements.define('ethan-header',
     class EthanHeader extends HTMLElement {
         constructor() {
