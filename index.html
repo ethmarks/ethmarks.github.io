@@ -18,7 +18,7 @@
     .intro-container img {
         max-width: 50vw;
         max-height: 50vh;
-        animation: circle-reveal 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: circle-reveal 2.5s cubic-bezier(0, 0.8, 0.2, 1) both, slide-right 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
     .intro-container h2 {
@@ -35,29 +35,15 @@
 
     h1 span {
         display: inline-block;
-        animation: word-slide-fall 1s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: fall 1s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
-    h1 span:nth-child(1) {
-        animation-delay: 0.1s;
-    }
-
-    h1 span:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    h1 span:nth-child(3) {
-        animation-delay: 0.3s;
-    }
-
-    h1 span:nth-child(4) {
-        animation-delay: 0.4s;
-    }
-
-    h1 span:nth-child(5) {
-        animation-delay: 0.5s;
-    }
-
+    h1 span:nth-child(1) {animation-delay: 0.1s;}
+    h1 span:nth-child(2) {animation-delay: 0.2s;}
+    h1 span:nth-child(3) {animation-delay: 0.3s;}
+    h1 span:nth-child(4) {animation-delay: 0.4s;}
+    h1 span:nth-child(5) {animation-delay: 0.5s;}
+    
     @media (min-width: 768px) {
         .intro-container p {
             white-space: nowrap;
@@ -82,13 +68,20 @@
         }
     }
 
-    @keyframes circle-reveal {
+    @keyframes slide-right {
         from {
             transform: translate(-6rem, 0);
-            clip-path: circle(2.5vh);
         }
         to {
             transform: translate(0, 0);
+        }
+    }
+
+    @keyframes circle-reveal {
+        from {
+            clip-path: circle(2.5vh);
+        }
+        to {
             clip-path: circle(75%);
         }
     }
@@ -102,17 +95,17 @@
         }
     }
 
-    @keyframes word-slide-fall {
+    @keyframes fall {
         0% {
-            transform: translateX(-5rem);
+            transform: translateX(-5rem) translateY(-0.5rem);
             opacity: 0;
         }
         50% {
-            transform: translateX(0);
+            transform: translateX(0) translateY(-0.5rem);
             opacity: 1;
         }
         100% {
-            transform: translateY(0.5rem);
+            transform: translateY(0);
         }
     }
 
@@ -154,26 +147,18 @@
     <span>Website</span>
 </h1>
 <p>This site represents my presence on the World Wide Web</p>
-<row>
-    <cell>
-        <button-link href="about/">
-            <span slot="title">About</span>
-            <span slot="description">A bio about me, Ethan Marks</span>
-        </button-link>
-    </cell>
-    <cell>
-        <button-link href="blog/">
-            <span slot="title">Blog</span>
-            <span slot="description">An aggregator for my blogs: Curios, Figments, and Elsewise</span>
-        </button-link>
-    </cell>
-    <cell>
-        <button-link href="projects/">
-            <span slot="title">Projects</span>
-            <span slot="description">Programming projects I've worked on</span>
-        </button-link>
-    </cell>
-</row>
+<button-link href="about/">
+    <span slot="title">About</span>
+    <span slot="description">A bio about me, Ethan Marks</span>
+</button-link>
+<button-link href="blog/">
+    <span slot="title">Blog</span>
+    <span slot="description">An aggregator for my blogs: Curios, Figments, and Elsewise</span>
+</button-link>
+<button-link href="projects/">
+    <span slot="title">Projects</span>
+    <span slot="description">Programming projects I've worked on</span>
+</button-link>
 </article>
 </main>
 <ethan-footer></ethan-footer>
