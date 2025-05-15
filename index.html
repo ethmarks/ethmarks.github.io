@@ -227,9 +227,48 @@
     }
     
     @media (max-width: 900px) {
-        .card-container {
-            flex-direction: column;
-            align-items: center;
+        .tilt-card {
+            height: clamp(90px, 10vh, 120px);
+            padding: 0.7rem 1rem;
+            box-shadow: none;
+            transform: none !important;
+        }
+        .tilt-card-title {
+            font-size: 1.5rem;
+            color: var(--color-accent, #00ffd0);
+            transform: none !important;
+        }
+        .tilt-card-desc {
+            font-size: 1rem;
+            color: #fff;
+            transform: none !important;
+        }
+        .tilt-card-anim {
+            animation: none !important;
+            opacity: 1 !important;
+        }
+        .tilt-card:hover, .tilt-card:focus,
+        .tilt-card *:hover, .tilt-card *:focus {
+            text-decoration: none !important;
+            border-color: var(--color-accent, #00ffd0) !important;
+            box-shadow: none !important;
+            transform: none !important;
+            color: inherit !important;
+        }
+    }
+
+    @media (pointer: coarse) {
+        .tilt-card:hover, .tilt-card:focus,
+        .tilt-card *:hover, .tilt-card *:focus {
+            text-decoration: none !important;
+            border-color: var(--color-accent, #00ffd0) !important;
+            box-shadow: none !important;
+            transform: none !important;
+            color: inherit !important;
+        }
+        .tilt-card-anim {
+            animation: none !important;
+            opacity: 1 !important;
         }
     }
     </style>
@@ -282,18 +321,23 @@
 </main>
 <ethan-footer></ethan-footer>
 <script>
-  VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-    glare: true,
-    "max-glare": 0.18,
-    reverse: true,
-    perspective: 900,
-    "gyroscope": true,
-    "gyroscopeMinAngleX": -45,
-    "gyroscopeMaxAngleX": 45,
-    "gyroscopeMinAngleY": -45,
-    "gyroscopeMaxAngleY": 45,
-    parallax: true
-  });
+  function isMobileDevice() {
+    return window.matchMedia('(pointer: coarse)').matches;
+  }
+  if (!isMobileDevice()) {
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+      glare: true,
+      "max-glare": 0.18,
+      reverse: true,
+      perspective: 900,
+      "gyroscope": true,
+      "gyroscopeMinAngleX": -45,
+      "gyroscopeMaxAngleX": 45,
+      "gyroscopeMinAngleY": -45,
+      "gyroscopeMaxAngleY": 45,
+      parallax: true
+    });
+  }
 </script>
 </body>
 </html>
