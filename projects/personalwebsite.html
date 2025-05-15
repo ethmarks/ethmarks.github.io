@@ -71,9 +71,9 @@
 <p>I had a moderately specific vision for what I wanted my website to look like, and I think I accomplished that well with <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/common.css">500+ lines of CSS</a>.</p>
 <h3>Color Palette</h3>
 <ul>
-    <li><b>Primary</b>: <span class="white"><b>#ffffff</b></span>: White.</li>
-    <li><b>Backdrop</b>: <span class="black"><b>#121212</b></span>: Black.</li>
-    <li><b>Accent</b>: <span class="teal"><b>#8fdfd4</b></span>: Spearmint Teal.</li>
+    <li><b>Primary</b>: <span class="white"><b>#ffffff</b></span>: White</li>
+    <li><b>Backdrop</b>: <span class="black"><b>#121212</b></span>: Black</li>
+    <li><b>Accent</b>: <span class="teal"><b>#8fdfd4</b></span>: Spearmint Teal</li>
 </ul>
 <h3>Typography</h3>
 <ul>
@@ -82,13 +82,13 @@
 </ul>
 <h3>Animations</h3>
 <ul>
-    <li><b>Page Load</b>: Every time a page loads, <code>&lt;body&gt;</code> fades in from transparency in 0.3 seconds.</li>
-    <li><b>Home Page</b>: My <a href="../">Home Page</a> has 4 animations. I'm very happy with how they turned out.</li>
+    <li><b>Page Load</b>: Every time a page is loaded, the content smoothly fades in from transparency. This is accomplished giving, <code>&lt;body&gt;</code> the following animation: <code>animation: fadeIn 0.3s ease-in forwards</code>.</li>
+    <li><b>Home Page</b>: I made heavy use of animations on my <a href="../">Home page</a>. The intro image, header, and subheader all slide in from different directions. Each word in the title text clicks in place with a staggered falling effect. The navigation cards gently fade and rise. I'm very happy with how it turned out.</li>
 </ul>
 <h3>Effects</h3>
 <ul>
     <li><b>Blur</b>: I love <a href="https://css.glass/">glassmorphic</a> blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to efficiently take a gaussian blur over a large sample space, I want to be the first to know so I can add a subtle blur to the <code>&lt;article&gt;</code> styles without tanking performance.</li>
-    <li><b>Shadows</b>: Unless an object is interactive, (e.g. buttons), it doesn't have a drop shadow.</li>
+    <li><b>Shadows</b>: Some Interactive elements (e.g. buttons) have subtle drop shadows.</li>
     <li><b>Borders</b>: Many elements (buttons, images, articles) have this border <code>border: 1px solid rgba(255, 255, 255, 0.1)</code>; it's 1 pixel thick, 10% opaque, and pure white.</li>
     <li><b>Rounded Corners</b>: Many elements have slightly rounded corners. The radius is defined with <code>border-radius: clamp(8px, 3vw, 12px)</code>.</li>
 </ul>
