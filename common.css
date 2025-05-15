@@ -246,7 +246,6 @@ table {
     border-spacing: 0;
     margin: var(--spacing-xl) 0;
     border-radius: var(--radius-lg);
-    overflow: hidden; /* Clips children to the radius */
     background: var(--color-article-bg);
     box-shadow: var(--shadow-table);
     border: var(--border-standard);
@@ -302,71 +301,17 @@ tr.accent-row td {
     }
 
     table {
-        max-width: 100%; /* Allow table to take full width */
-        border-radius: var(--radius-md); /* Smaller radius */
-        box-shadow: none; /* Simplify shadow */
-        border: none; /* Remove outer border */
+        overflow-x: auto; /* Allow horizontal scrolling for tables */
+        display: block; /* Ensure proper scrolling behavior */
     }
-
     table:hover {
         transform: none; /* Disable hover transform */
-        box-shadow: none;
-    }
-    
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
+        box-shadow: var(--shadow-table); /* Keep default shadow */
     }
 
-    tbody, tr, td { display: block; } /* Stack elements */
-
-    tr {
-        margin-bottom: var(--spacing-md);
-        border: var(--border-standard);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        background: var(--color-article-bg); /* Give each row its own bg */
-    }
-
-    td {
-        padding: var(--spacing-sm);
-        padding-left: 50%; /* Make space for the label */
-        position: relative;
-        border: none;
-        border-bottom: var(--border-light);
-        text-align: right; /* Align content to the right */
-        min-height: 1.5em; /* Ensure some height even if empty */
-    }
-
-    td:last-child {
-        border-bottom: none;
-    }
-
-    td:before {
-        content: attr(data-label); /* Use data-label attribute */
-        position: absolute;
-        left: var(--spacing-sm);
-        top: var(--spacing-sm); /* Align top */
-        width: 45%; /* Adjust width */
-        padding-right: var(--spacing-xs);
-        white-space: nowrap;
-        overflow: hidden; /* Prevent long labels overflowing */
-        text-overflow: ellipsis;
-        font-weight: var(--font-weight-semibold);
-        color: var(--color-accent);
-        text-align: left; /* Align label text left */
-    }
-
-    tr.accent-row td {
-        border-left: none; /* Remove left border */
-        background: linear-gradient(90deg, var(--color-accent-transparent-10), rgba(30, 30, 30, 0));
-        /* Keep background if desired */
-        padding-left: 50%; /* Reset padding */
-    }
-
-    tr.accent-row td:before {
-         left: var(--spacing-sm); /* Ensure label aligns */
+    tbody tr:hover td {
+        background-color: transparent; /* Disable row hover background */
+        color: inherit; /* Keep default text color */
     }
 }
 
