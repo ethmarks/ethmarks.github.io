@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="common.css">
     <script src="common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
     <style>
     .intro-container {
         display: flex;
@@ -121,6 +122,68 @@
     main {
         overflow: hidden;
     }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: nowrap;
+        margin-top: 2rem;
+    }
+
+    .tilt-card {
+        background: var(--color-bg, #121212);
+        color: var(--color-fg, #fff);
+        border-radius: 1.2rem;
+        padding: 2rem 2.5rem;
+        width: clamp(260px, 60vw, 540px);
+        height: clamp(180px, 22vh, 240px);
+        cursor: pointer;
+        transition: border-color 0.2s;
+        text-align: center;
+        border: 2px solid rgba(255,255,255,0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+    }
+
+    .tilt-card:hover {
+        border-color: var(--color-accent, #00ffd0);
+    }
+
+    .tilt-card-title, .tilt-card-desc {
+        will-change: transform;
+        transition: transform 0.2s;
+        transform: translateZ(50px)
+    }
+
+    .tilt-card-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--color-accent, #00ffd0);
+    }
+
+    .tilt-card-desc {
+        font-size: 1.25rem;
+    }
+
+    .tilt-card:hover, .tilt-card:focus {
+        text-decoration: none;
+    }
+
+    .tilt-card *:hover, .tilt-card *:focus {
+        text-decoration: none !important;
+    }
+    
+    @media (max-width: 900px) {
+        .card-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     </style>
 </head>
 <body class="noanim">
@@ -147,20 +210,36 @@
     <span>Website</span>
 </h1>
 <p>This site represents my presence on the World Wide Web</p>
-<button-link href="about/">
-    <span slot="title">About</span>
-    <span slot="description">A bio about me, Ethan Marks</span>
-</button-link>
-<button-link href="blog/">
-    <span slot="title">Blog</span>
-    <span slot="description">An aggregator for my blogs: Curios, Figments, and Elsewise</span>
-</button-link>
-<button-link href="projects/">
-    <span slot="title">Projects</span>
-    <span slot="description">Programming projects I've worked on</span>
-</button-link>
+<div class="card-container">
+    <a href="about/" class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.18" data-tilt-reverse="true" data-tilt-perspective="900">
+        <div class="tilt-card-title">About</div>
+        <div class="tilt-card-desc">My bio</div>
+    </a>
+    <a href="blog/" class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.18" data-tilt-reverse="true" data-tilt-perspective="900">
+        <div class="tilt-card-title">Blog</div>
+        <div class="tilt-card-desc">My blogs: Curios, Figments, and Elsewise</div>
+    </a>
+    <a href="projects/" class="tilt-card" data-tilt data-tilt-glare data-tilt-max-glare="0.18" data-tilt-reverse="true" data-tilt-perspective="900">
+        <div class="tilt-card-title">Projects</div>
+        <div class="tilt-card-desc">My programming projects</div>
+    </a>
+</div>
 </article>
 </main>
 <ethan-footer></ethan-footer>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+    glare: true,
+    "max-glare": 0.18,
+    reverse: true,
+    perspective: 900,
+    "gyroscope": true,
+    "gyroscopeMinAngleX": -45,
+    "gyroscopeMaxAngleX": 45,
+    "gyroscopeMinAngleY": -45,
+    "gyroscopeMaxAngleY": 45,
+    parallax: true
+  });
+</script>
 </body>
 </html>
