@@ -8,6 +8,7 @@
     --color-accent: #8fdfd4;
     --color-accent-medium: #8dd4cc;
     --color-accent-light: #9ce3d9;
+    --color-accent-dark: #7db8b0;
     --color-link: var(--color-accent-light);
     --color-link-hover: white;
     --color-article-bg: rgba(30, 30, 30, 0.7);
@@ -450,4 +451,23 @@ poem {
 
 blockquote p {
     font-style: italic;    
+}
+
+iframe {
+    width: clamp(80%, 100%, 800px);
+    height: clamp(30vh, 50vh, 400px);;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-article);
+}
+
+code {
+    font-family: monospace;
+    background-color: var(--color-article-bg);
+    color: var(--color-accent-dark);
+    border-radius: var(--radius-sm);
+    border: var(--border-standard);
+    font-size: 0.95em;
+    white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+    word-wrap: break-word; /* Break long words */
 }
