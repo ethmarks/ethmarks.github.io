@@ -20,6 +20,12 @@
         max-width: 50vw;
         max-height: 50vh;
         animation: circle-reveal 2.5s cubic-bezier(0, 0.8, 0.2, 1) both, slide-right 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
+        border: var(--border-standard);
+        transition: border-color 0.25s;
+    }
+
+    .intro-container img:hover {
+        border-color: var(--color-accent);
     }
 
     .intro-container h2 {
