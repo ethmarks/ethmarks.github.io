@@ -377,7 +377,7 @@ chat p img {
     align-self: center;
 }
 
-row {
+section {
     display: flex;
     align-items: stretch;
     gap: 20px;
@@ -385,12 +385,12 @@ row {
     margin-bottom: 20px;
 }
 
-row > cell {
+section > cell {
     align-items: center;
 }
 
 @media (max-width: 768px) {
-    row {
+    section {
         display: block;
         align-items: normal;
     }
@@ -409,7 +409,7 @@ cell p {
     font-size: 1.2rem;
 }
 
-row > cell > p {
+section > cell > p {
     text-align: center;
 }
 
