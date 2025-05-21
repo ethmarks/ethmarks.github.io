@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thessa</title>
+    <link rel="stylesheet" href="../common.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1>Thessa</h1>
+<external-link icon="link" href="https://colourlessspearmint.github.io/thessa.html">
+    <span slot="title">Thessa Webpage</span>
+</external-link>
+<article>
+<figure>
+    <img src="images/thessa.webp" alt="A screenshot of the Thessa interface showing synonyms for the word 'screenshot'">
+</figure>
+<p>A while ago, I <a href="https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt">configured my instance of ChatGPT</a> to "respond with a <a href="https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula">Dale-Chall readability level</a> of 9.1". This is a precise way of telling it to 'use big words'. I did this because I like interesting words.</p>
+<p>I was taken aback by how well ChatGPT obliged. It even started using words I didn't know, and I found myself having to keep a dictionary open on another monitor in order to understand what it was saying. I learned a huge amount of new words this way, and it contributed significantly to my interest in language. Whenever I needed a word that I didn't have, I would ask ChatGPT. More often than not, it would respond with some delightful <a href="https://en.wiktionary.org/wiki/archaism">archaism</a> I would add to my vocabulary.</p>
+<p>When I switched from ChatGPT to <a href="https://aistudio.google.com">Google AI Studio</a>, I wrote a system prompt that would make Gemini enumerate a list of synonyms for a given word. I used it as a custom thesaurus.</p>
+<p>Yesterday (May 21, 2025), I decided to make a web interface for my custom-instructed Gemini. I named it <b>Thessa</b>, derived from 'thesaurus'.</p>
+
+<h2>Usage</h2>
+<ol>
+    <li><b>Set Gemini API key</b>: You can acquire an API key from <a href="https://aistudio.google.com/app/apikey">Google AI Studio</a>.</li>
+    <li><b>Input a Word</b>: Any word will do. Add parenthesis to provide context, if you want.</li>
+    <li><b>Press the Generate Button</b>: Thessa will take your word, construct a prompt, and send it to Gemini.</li>
+    <li><b>Examine Synonyms</b>: Thessa will generate 8 synonyms for your perusal, with the eighth being in Bulgarian.</li>
+    <li><b>Get the Definition</b>: You can click on a synonym to have Thessa define it for you.</li>
+    <li><b>Copy to Clipboard</b>: You can double click on a synonym to copy it to your clipboard.</li>
+</ol>
+
+<h2>Gemini API</h2>
+<p>To retrieve the list of synonyms, Thessa sends queries to the <a href="https://ai.google.dev/gemini-api">Gemini API</a>, a web service for third-parties (like me; I don't work at Google) to access the Gemini LLM. Once the user provides the word to synonymize, Thessa constructs a prompt, sends it to Gemini, and processes the response.</p>
+<p>The prompt template used to generate synonyms is below.</p>
+<pre style="overflow-x: hidden;"><code>Provide a list of diverse English synonyms for "${word}", limited to a maximum of ${NUM_OF_SYNONYMS}. Include some common synonyms as well as rare, esoteric ones. The ${NUM_OF_SYNONYMS}th and final synonym should be in Bulgarian. "${word}" cannot be in your list of synonyms. No repeats. Capitalize the first letter of each synonym. Newline separated. Each line should ONLY include the synonym. NEVER anything other than the synonym on the line, especially not a parenthetical. Your response should only include the list. If none, say "No synonyms found for ${word}."</code></pre>
+<h3>API Key</h3>
+<p>Google places some restrictions on access to the Gemini API. They <i>very</i> generously offer 15 requests per minute (1 request every 4 seconds) for free, but you need an API key first. I <i>could</i> just hardcode my personal API key into the website. This would allow all users to use my key. This would be a bad idea. First, it would mean that all users would be collectively limited to 15 requests per minute: if someone else is using Thessa at the same time you are, they could run my key out of requests and prevent you from accessing Thessa. Second, there are bots and scrapers that clone GitHub repos searching for hardcoded API keys. Once they inevitably stumble upon my key, they would sell it and run it out of requests.</p>
+<p>My solution is to have each user generate their own free API key. I wish I didn't have to do this, but it was pretty much the only way I could publish Thessa. Thessa stores your API key in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a>. This means that you only have to enter your key once and Thessa will request it from storage on each page load. Information stored in Local Storage is secure and never leaves your device.</p>
+
+<h2>Conclusion</h2>
+<p>Thessa was my first project that uses the Gemini API. I think it's one of my most polished projects yet, and I'm quite proud of how it turned out. I designed Thessa for myself (which is why it includes Bulgarian cognates), but I hope that you find it useful too.</p>
+<p>~Ethan</p>
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>
