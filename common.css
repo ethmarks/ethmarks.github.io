@@ -425,13 +425,11 @@ ul li {
     transition: color var(--transition-duration-fast) var(--transition-timing);
 }
 
-/* ASCII Art Style */
-.ascii-art {
+pre {
     font-family: monospace;
     white-space: pre;
     text-align: center;
     overflow-x: auto; /* Allow horizontal scrolling for long lines */
-    font-size: clamp(0.1rem, 2vw, 0.5rem); /* Scale font size based on display size */
     line-height: 1.2; /* Adjust line height for better readability */
     background-color: var(--color-article-bg); /* Optional background */
     padding: var(--spacing-sm); /* Add some padding */
@@ -467,7 +465,6 @@ code {
     color: var(--color-accent-dark);
     border-radius: var(--radius-sm);
     border: var(--border-standard);
-    font-size: 0.95em;
     white-space: pre-wrap; /* Preserve whitespace and wrap lines */
     word-wrap: break-word; /* Break long words */
 }
