@@ -25,7 +25,7 @@ customElements.define('ethan-header',
                 left: 50%;
                 transform: translateX(-50%) translate3d(0,0,0);
                 width: 100vw;
-                max-width: 700px;
+                max-width: 1000px;
                 padding: 10px 15px;
                 background: rgba(30, 30, 30, 0.2);
                 border-radius: 40px;
