@@ -543,3 +543,17 @@ customElements.define('scroll-indicator',
         }
     }
 );
+
+(function addScrollIndicatorIfTall() {
+  window.addEventListener('DOMContentLoaded', function() {
+    if (window.ENABLE_SCROLL_INDICATOR === false) return;
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
+    if (docHeight >= winHeight * 2) {
+      if (!document.body.querySelector('scroll-indicator')) {
+        const indicator = document.createElement('scroll-indicator');
+        document.body.insertBefore(indicator, document.body.firstChild);
+      }
+    }
+  });
+})();
