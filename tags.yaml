@@ -1,6 +1,6 @@
 all:
   description: "All posts"
-  definition: "All (adj) - the entire quantity or extent"
+  definition: "All (adjective) - the entire quantity or extent"
   text: |
     This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place.
 curios:
