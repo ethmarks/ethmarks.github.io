@@ -47,3 +47,6 @@ out/
 # If you use any preprocessors or bundlers
 .sass-cache/
 .cache/
+
+# Debugging directory used while developing and migrating to tag system
+blog_out/
