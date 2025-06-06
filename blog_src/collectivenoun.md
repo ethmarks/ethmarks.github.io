@@ -1,0 +1,219 @@
+---
+title: Collective Nouns
+date: 2025-04-23
+tags: [curios]
+slug: collectivenoun
+---
+
+A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word that names a group of people, animals, or things treated as a single entity.
+
+For example, a 'class' is the collective noun for students. A class is grammatically treated as a singular object even though it's composed of multiple students.
+
+For reasons unbeknownst to me, people really love coming up with ridiculous and silly collective nouns for animals.
+
+![The collective noun for ferrets is a business](images/business_of_ferrets.webp)
+
+Below is my collection.
+
+- An ambush of tigers
+- An array of hedgehogs
+- An army of ants/caterpillars/frogs
+- An ascension of larks
+- A badling of ducks
+- A bale of turtles
+- A ballet of swans
+- A band of coyotes/gorillas/jays/men
+- A barrel of monkeys
+- A barren of mules
+- A bask of crocodiles
+- A battery of barracudas
+- A bazaar of guillemots
+- A bed of clams/eels/oysters/snakes
+- A bevy of quail/roebucks/swans
+- A bloat of hippos
+- A bouquet of pheasants
+- A brace of ducks/grouse
+- A brood of chicks/hens/pheasants
+- A building of rooks
+- A bury of conies/rabbits
+- A business of ferrets/flies
+- A caravan of camels
+- A cast of falcons/hawks
+- A cete of badgers
+- A chain of bobolinks
+- A charm of falcons/finches/magpies
+- A chattering of choughs
+- A clamor of rooks
+- A cloud of gnats/bats/grasshoppers
+- A clowder of cats
+- A cluster of bees/grasshoppers
+- A clutch of chicks
+- A clutter of cats/starlings
+- A colony of ants/beavers/gulls/penguins/rabbits
+- A company of parrots/widgeons
+- A congregation of plover/people
+- A congress of baboons
+- A conspiracy of ravens
+- A convocation of eagles
+- A cover of coots
+- A covey of grouse/partridges/pheasants/ptarmigans/quail
+- A cowardice of curs
+- A crash of rhinos
+- A crowd of people
+- A cry of hounds
+- A culture of bacteria
+- A deceit of lapwings
+- A descent of woodpeckers
+- A dissimulation of birds
+- A dole of doves
+- A down of hares
+- A doylt of swine
+- A draught of fish
+- A dray of squirrels
+- A drift of swine
+- A dropping of pigeons
+- A drove of cattle
+- A drumming of grouse
+- A dule of doves
+- A durante of toucans
+- An earth of foxes
+- An exaltation of larks
+- A fall of woodcocks
+- A family of otters
+- A fesnyng of ferrets
+- A field of racehorses
+- A flamboyance of flamingos
+- A flight of birds/butterflies/cormorants/doves/goshawks/swallows
+- A flink of cows
+- A float of crocodiles
+- A flock of geese/lice/sheep
+- A fluther of jellyfish
+- A gaggle of geese
+- A gam of whales
+- A gang of buffalo/elk
+- A gatling of woodpeckers
+- A generation of vipers
+- A grist of bees
+- A gulp of cormorants/magpies
+- A harras of horses
+- A herd of buffaloes/curlews/elephants/horse/kangaroo/pigs/wrens
+- A hide of tigers
+- A hive of bees
+- A horde of gnats
+- A host of sparrows
+- A hover of trout
+- A hum of bees
+- A husk of hares/jackrabbits
+- An intrigue of kittens
+- An intrusion of cockroaches
+- A kennel of dogs
+- A kettle of hawks
+- A kindle of kittens
+- A kine of cows
+- A knot of snakes/toads
+- A labour of moles
+- A lamentation of swans
+- A leap of hares/leopards
+- A leash of foxes/greyhounds
+- A litter of cubs/pigs/puppies
+- A mask of raccoons
+- A mob of kangaroos/emus
+- A murder of crows/magpies
+- A murmuration of starlings
+- A muster of peacocks
+- A mustering of storks
+- A mutation of thrushes
+- A mute of hounds
+- An obstinacy of buffalo
+- An ostentation of peacocks
+- A muster of storks
+- A mute of hounds
+- A nest of hornets/mice/rabbits/vipers/wasps
+- A nye/nide of pheasants
+- A pace of asses
+- A pack of hounds/rats/wolves
+- A paddling of ducks
+- A pair of horses
+- A pandemonium of parrots
+- A parade of elephants
+- A parliament of owls/rooks
+- A party of jays
+- A passel/parcel of hogs
+- A peep of chickens
+- A piteousness of doves
+- A pitying of turtledoves
+- A pladge of wasps
+- A plague of locusts
+- A plump of waterfowl/wildfowl
+- A pod of boar/dolphin/seals/walrus/whales
+- A pounce of cats
+- A prattle of parrots
+- A prickle of hedgehogs/porcupines
+- A pride of lions
+- A quiver of cobras
+- A rafter of turkeys
+- A rag of colts
+- A ramuda of horses
+- A rhumba of rattlesnakes
+- A richness of martens
+- A romp of otters
+- A rookery of penguins
+- A rout of wolves
+- A rumpus of baboons
+- A run of poultry
+- A rush of pochard
+- A school of fish/porposes
+- A scold of jays
+- A sedge of cranes
+- A shiver of sharks
+- A shoal of bass/pilchards/shad
+- A shrewdness of apes
+- A siege of cranes/herons
+- A singular of boars
+- A skein of geese/pheasants
+- A skulk of foxes/larks/quail
+- A sleuth/sloth of bears
+- A smack/smuth of jellyfish
+- A sneak of weasels
+- A sord of mallards
+- A sounder of wild swine/boars/foxes
+- A span of mules
+- A spring of teal
+- A squabble of seagulls
+- A stand of flamingos
+- A stench of skunks
+- A streak of tigers
+- A string of ponies/horses
+- A stud of mares
+- A swarm of ants/bees/eels
+- A team of horses/ducks/oxen
+- A swarm of bees
+- A thunder of hippos
+- A tiding of magpies
+- A tittering of magpies
+- A tok of capercaillie
+- A totter/tower of giraffes
+- A tribe of goats/monkeys/dotterel
+- A trip of goats
+- A troop of baboons/monkeys/kangaroos
+- A turn of turtles
+- An ubiquity of sparrows
+- An unkindness of ravens
+- A volary of birds
+- A wake of buzzards/vultures
+- A walk of snipe
+- A warren of rabbits
+- A watch of nightingales
+- A wedge of geese/swans
+- A wing of plovers
+- A wisdom of owls
+- A wisp of snipe
+- A yoke of oxen
+
+Sources:
+
+- <https://en.wikipedia.org/wiki/List_of_animal_names>
+- <https://www.herbweb.org/animals-collective-nouns.html>
+- <https://auduboncnc.org/the-fascinating-history-of-collective-nouns/>
+
+~Ethan
