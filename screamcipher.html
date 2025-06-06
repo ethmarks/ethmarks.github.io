@@ -36,18 +36,25 @@
             animation: animate-bg 25s ease infinite;
             color: var(--text-color);
             margin: 0;
-            padding: 2rem 1rem;
             line-height: 1.6;
-            display: flex;
             justify-content: center;
             min-height: 100vh;
             box-sizing: border-box;
         }
 
-        .main-container {
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+
+        .container {
+            margin-top: 5rem;
             width: 100%;
             max-width: 1000px;
-            margin-top: 2rem;
         }
 
         header {
@@ -363,7 +370,8 @@
 </head>
 <body>
     <ethan-header></ethan-header>
-    <div class="main-container">
+    <main>
+    <div class="container">
         <header>
             <h1>Scream Cipher Converter</h1>
             <button id="open-key-modal" title="View Cipher Key">
@@ -399,7 +407,6 @@
             <p>Based on <a href="https://xkcd.com/3054/" target="_blank" rel="noopener noreferrer">xkcd #3054</a>.</p>
         </footer>
     </div>
-
     <!-- Error Modal -->
     <div id="error-modal" class="modal">
         <div class="modal-content">
@@ -423,6 +430,8 @@
             </div>
         </div>
     </div>
+    </main>
+
     <ethan-footer></ethan-footer>
 
     <script>
