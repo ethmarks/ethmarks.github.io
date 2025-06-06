@@ -412,3 +412,106 @@ customElements.define('external-link',
         }
     }
 );
+
+customElements.define('scroll-indicator',
+    class ScrollIndicator extends HTMLElement {
+        
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.innerHTML = `
+                <style>
+                    :host {
+                        display: block;
+                        position: fixed;
+                        top: 0;
+                        width: 3px;
+                        height: 100vh;
+                        z-index: 10;
+                    }
+                    .track {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(255, 255, 255, 0.05);
+                        border-radius: 4px;
+                        position: relative;
+                    }
+                    .indicator {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 120px;
+                        background: linear-gradient(
+                            180deg, 
+                            rgba(102, 252, 241, 0) 0%,
+                            rgba(102, 252, 241, 0.8) 50%,
+                            rgba(102, 252, 241, 0) 100%
+                        );
+                        border-radius: 4px;
+                        transform: translateY(0);
+                    }
+                </style>
+                <div class="track">
+                    <div class="indicator"></div>
+                </div>
+            `;
+        }
+
+        connectedCallback() {
+            this.indicator = this.shadowRoot.querySelector('.indicator');
+            this.mainContent = document.querySelector('main.article-content');
+            this.targetY = 0;
+            this.currentY = 0;
+            this.smoothing = 0.1;
+            this.lastScrollY = window.scrollY;
+            this.animationFrameId = null;
+            this.handleScroll = this.handleScroll.bind(this);
+            this.setTargetPosition = this.setTargetPosition.bind(this);
+            this.updateHorizontalPosition = this.updateHorizontalPosition.bind(this);
+            this.animate = this.animate.bind(this);
+            this.setTargetPosition();
+            this.updateHorizontalPosition();
+            window.addEventListener('resize', this.setTargetPosition);
+            window.addEventListener('resize', this.updateHorizontalPosition);
+            window.addEventListener('scroll', this.handleScroll, { passive: true });
+            this.animate();
+        }
+
+        disconnectedCallback() {
+            window.removeEventListener('resize', this.setTargetPosition);
+            window.removeEventListener('resize', this.updateHorizontalPosition);
+            window.removeEventListener('scroll', this.handleScroll);
+            if (this.animationFrameId) {
+                cancelAnimationFrame(this.animationFrameId);
+            }
+        }
+
+        setTargetPosition() {
+            const indicatorHeight = this.indicator.offsetHeight;
+            this.targetY = (window.innerHeight / 2) - (indicatorHeight / 2);
+            this.currentY = this.targetY;
+            this.indicator.style.transform = `translateY(${this.currentY}px)`;
+        }
+
+        updateHorizontalPosition() {
+            if (this.mainContent) {
+                const mainRect = this.mainContent.getBoundingClientRect();
+                this.style.left = `${mainRect.left - 20}px`;
+            }
+        }
+
+        handleScroll() {
+            const scrollDelta = window.scrollY - this.lastScrollY;
+            this.currentY -= scrollDelta;
+            this.lastScrollY = window.scrollY;
+        }
+
+        animate() {
+            const dy = (this.targetY - this.currentY) * this.smoothing;
+            this.currentY += dy;
+            this.indicator.style.transform = `translateY(${this.currentY}px)`;
+            this.animationFrameId = requestAnimationFrame(this.animate);
+        }
+    }
+);
