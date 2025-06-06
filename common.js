@@ -175,13 +175,20 @@ customElements.define('ethan-footer',
         connectedCallback() {
             this.footer = this.shadowRoot.querySelector('footer');
             this.updateFooterPosition = this.updateFooterPosition.bind(this);
+            this._footerAnimationFrame = null;
+            this._footerLoop = () => {
+                this.updateFooterPosition();
+                this._footerAnimationFrame = requestAnimationFrame(this._footerLoop);
+            };
             window.addEventListener('resize', this.updateFooterPosition);
-            window.addEventListener('DOMContentLoaded', this.updateFooterPosition);
-            this.updateFooterPosition();
+            this._footerLoop();
         }
         disconnectedCallback() {
             window.removeEventListener('resize', this.updateFooterPosition);
-            window.removeEventListener('DOMContentLoaded', this.updateFooterPosition);
+            if (this._footerAnimationFrame) {
+                cancelAnimationFrame(this._footerAnimationFrame);
+                this._footerAnimationFrame = null;
+            }
         }
         updateFooterPosition() {
             // Check if the document is shorter than the viewport
@@ -223,10 +230,13 @@ customElements.define('button-link',
               border: 1px solid rgba(255, 255, 255, 0.08);
               text-decoration: none;
               color: white;
-              transition: all 0.3s ease;
+              transition: none;
               width: 100%;
               box-sizing: border-box;
               overflow: hidden;
+            }
+            a.loaded {
+              transition: all 0.3s ease;
             }
   
             a:hover {
@@ -243,6 +253,9 @@ customElements.define('button-link',
               display: block;
               color: #ffffff;
               margin-bottom: 0;
+              transition: none;
+            }
+            a.loaded slot[name="title"]::slotted(*) {
               transition: color 0.3s ease;
             }
   
@@ -284,6 +297,11 @@ customElements.define('button-link',
         if (this.hasAttribute('target')) {
           this.linkElement.setAttribute('target', this.getAttribute('target'));
         }
+
+        // Only enable transition after load
+        setTimeout(() => {
+          this.linkElement.classList.add('loaded');
+        }, 400);
   
         // Check if description slot is empty and potentially add a class for styling
         // This is less reliable than CSS-only solutions usually
