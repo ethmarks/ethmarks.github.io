@@ -130,40 +130,68 @@ customElements.define('ethan-footer',
                     background: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(10px);
                     transform: translate3d(0,0,0); /* Force GPU rendering */
-                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    border-top: 1px solid rgba(255, 255, 255, 0.18);
                     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                    border-radius: 12px;
+                    border-radius: 0px;
                     padding: 10px 30px;
                     box-sizing: border-box;
                     color: #eee;
                     z-index: 9999;
+                    position: static;
+                    left: unset;
+                    bottom: unset;
+                    transition: position 0.2s;
                 }
-
+                footer.fixed-bottom {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    margin-top: 0;
+                    width: 100vw;
+                    max-width: 100vw;
+                }
                 a {
                     color: inherit;
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
-
                 a:hover {
                     color: #fff;
                     text-decoration: underline;
                 }
-
                 .copyright {
                    font-style: italic;
                 }
-
                 .sitemap {
                     align-self: flex-end;
                 }
             </style>
-
             <footer>
                 <span class="copyright">Ethan Marks, &copy;2025</span>
                 <span class="sitemap"><a href="/sitemap.html">Sitemap</a></span>
             </footer>
           `;
+        }
+        connectedCallback() {
+            this.footer = this.shadowRoot.querySelector('footer');
+            this.updateFooterPosition = this.updateFooterPosition.bind(this);
+            window.addEventListener('resize', this.updateFooterPosition);
+            window.addEventListener('DOMContentLoaded', this.updateFooterPosition);
+            this.updateFooterPosition();
+        }
+        disconnectedCallback() {
+            window.removeEventListener('resize', this.updateFooterPosition);
+            window.removeEventListener('DOMContentLoaded', this.updateFooterPosition);
+        }
+        updateFooterPosition() {
+            // Check if the document is shorter than the viewport
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            if (docHeight <= winHeight + 1) {
+                this.footer.classList.add('fixed-bottom');
+            } else {
+                this.footer.classList.remove('fixed-bottom');
+            }
         }
     }
 );
