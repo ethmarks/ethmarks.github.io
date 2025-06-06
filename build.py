@@ -78,6 +78,46 @@ def main():
             f.write(html)
         posts.append({**meta, "out_path": out_path})
     # TODO: Generate index pages for each tag using a template
+    # --- Tag index generation ---
+    with open("tags.yaml", encoding="utf-8") as f:
+        tag_data = yaml.safe_load(f)
+
+    # Group posts by tag
+    tag_posts = {tag: [] for tag in tag_data}
+    for post in posts:
+        for tag in post.get("tags", []):
+            if tag in tag_posts:
+                tag_posts[tag].append(post)
+
+    # Render tag index pages
+    tag_template = env.get_template("tag_index.html")
+    for tag, posts_list in tag_posts.items():
+        tag_info = tag_data[tag]
+        # Sort posts by date descending
+        posts_list_sorted = sorted(posts_list, key=lambda p: p["date"], reverse=True)
+        tag_dir = os.path.join(OUT_DIR, tag)
+        os.makedirs(tag_dir, exist_ok=True)
+        out_path = os.path.join(tag_dir, "index.html")
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(tag_template.render(
+                tag_title=tag.capitalize(),
+                tag_definition=tag_info["definition"],
+                tag_text=tag_info["text"],
+                posts=posts_list_sorted
+            ))
+
+    # Render main blog index page
+    blog_index_template = env.get_template("blog_index.html")
+    tags_for_index = []
+    for tag, info in tag_data.items():
+        tags_for_index.append({
+            "slug": tag,
+            "title": tag.capitalize(),
+            "description": info["description"]
+        })
+    blog_index_path = os.path.join(OUT_DIR, "index.html")
+    with open(blog_index_path, "w", encoding="utf-8") as f:
+        f.write(blog_index_template.render(tags=tags_for_index))
 
 if __name__ == "__main__":
     main()
