@@ -3,6 +3,7 @@ title: Early AI
 date: 2025-05-11
 tags: [curios]
 slug: earlyai
+description: A personal history and overview of early chatbots and the evolution of artificial intelligence.
 ---
 
 You might have noticed this new thing all the multi-billion dollar tech companies are doing called AI.

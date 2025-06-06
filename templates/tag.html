@@ -18,7 +18,8 @@
 {% for post in posts %}
 <button-link href="../{{ post['slug'] }}">
     <span slot="title">{{ post['title'] }}</span>
-    <span slot="description">{{ post['date_human'] }}</span>
+    <span slot="description">{{ get_post_description(post) }}</span>
+    <span style="display:none;">{{ post['date_human'] }}</span>
 </button-link>
 {% endfor %}
 </article>

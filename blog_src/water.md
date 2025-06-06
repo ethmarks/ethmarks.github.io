@@ -3,6 +3,7 @@ title: Fish swim in WHAT?!
 date: 2025-04-28
 tags: [figments]
 slug: water
+description: A humorous sci-fi take on Earth's naming conventions and the prevalence of water and aquatic life.
 ---
 
 # Fish swim in *what*?!

@@ -8,6 +8,7 @@ from datetime import datetime
 SRC_DIR = "blog_src"
 TEMPLATE_DIR = "templates"
 OUT_DIR = "blog_out"
+WEBSITE_URL = "https://colourlessspearmint.github.io"
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
@@ -53,14 +54,33 @@ def render_post(meta, body):
         date_human = date_obj.strftime("%B %-d, %Y")
     except ValueError:
         date_human = date_obj.strftime("%B %d, %Y").replace(' 0', ' ')
+    
+    # Provide a generic description if not present
+    description = meta.get("description")
+    if not description or not description.strip():
+        description = "A post from Ethan's personal website blog."
+    # Build canonical URL (assumes posts are at /blog/<slug>/)
+    canonical_url = f"{WEBSITE_URL}/blog/{meta.get('slug', os.path.splitext(os.path.basename(meta.get('out_path', meta.get('slug', ''))))[0])}/"
     return template.render(
         title=meta["title"],
         date=date_obj.strftime("%Y-%m-%d"),
         date_human=date_human,
         content=html,
         tags=meta.get("tags", []),
-        slug=meta.get("slug", "")
+        slug=meta.get("slug", ""),
+        description=description,
+        canonical_url=canonical_url
     )
+
+def human_readable_date(date_obj):
+    try:
+        # Use platform-specific day format
+        if os.name == 'nt':
+            return date_obj.strftime("%B %#d, %Y")
+        else:
+            return date_obj.strftime("%B %-d, %Y")
+    except Exception:
+        return date_obj.strftime("%B %d, %Y").replace(' 0', ' ')
 
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -77,8 +97,6 @@ def main():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
         posts.append({**meta, "out_path": out_path})
-    # TODO: Generate index pages for each tag using a template
-    # --- Tag index generation ---
     with open("tags.yaml", encoding="utf-8") as f:
         tag_data = yaml.safe_load(f)
 
@@ -90,7 +108,7 @@ def main():
                 tag_posts[tag].append(post)
 
     # Render tag index pages
-    tag_template = env.get_template("tag_index.html")
+    tag_template = env.get_template("tag.html")
     for tag, posts_list in tag_posts.items():
         tag_info = tag_data[tag]
         # Sort posts by date descending
@@ -103,11 +121,15 @@ def main():
                 tag_title=tag.capitalize(),
                 tag_definition=tag_info["definition"],
                 tag_text=tag_info["text"],
-                posts=posts_list_sorted
+                posts=posts_list_sorted,
+                get_post_description=lambda post: (
+                    human_readable_date(post["date"]) if hasattr(post["date"], 'strftime') else 
+                    human_readable_date(datetime.strptime(str(post["date"]), "%Y-%m-%d"))
+                )
             ))
 
     # Render main blog index page
-    blog_index_template = env.get_template("blog_index.html")
+    blog_index_template = env.get_template("blog.html")
     tags_for_index = []
     for tag, info in tag_data.items():
         tags_for_index.append({

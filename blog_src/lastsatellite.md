@@ -3,6 +3,7 @@ title: The Last Satellite
 date: 2024-07-30
 tags: [figments]
 slug: lastsatellite
+description: A short story about the last satellite orbiting a post-human Earth and its final descent.
 ---
 
 ![A watercolor painting of a satellite burning up on re-entry; generated with Imagen 3](images/satellite.webp)

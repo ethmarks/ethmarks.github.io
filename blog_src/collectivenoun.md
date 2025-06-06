@@ -3,6 +3,7 @@ title: Collective Nouns
 date: 2025-04-23
 tags: [curios]
 slug: collectivenoun
+description: A collection of amusing and obscure collective nouns for animals.
 ---
 
 A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word that names a group of people, animals, or things treated as a single entity.

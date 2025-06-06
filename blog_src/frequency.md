@@ -3,6 +3,7 @@ title: 8.7539319
 date: 2024-09-14
 tags: [figments]
 slug: frequency
+description: A fictional police report and investigation into a mysterious frequency and a missing scientist.
 ---
 
 ## Police Report: Case No. 2024-3517

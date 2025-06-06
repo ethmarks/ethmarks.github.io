@@ -3,6 +3,7 @@ title: Tsevhu
 date: 2025-04-26
 tags: [curios]
 slug: tsevhu
+description: An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.
 ---
 
 I found a language written with fish.

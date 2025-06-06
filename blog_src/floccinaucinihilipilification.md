@@ -3,6 +3,7 @@ title: Floccinaucinihilipilification
 date: 2025-05-14
 tags: [curios]
 slug: valueless-vocab
+description: A playful look at the word floccinaucinihilipilification, its meaning, and usage.
 ---
 
 I love vocabulary, but I can't help but give a [floccinaucinihilipilification](https://en.wiktionary.org/wiki/floccinaucinihilipilification) on some words, especially those that are long and highly specific.

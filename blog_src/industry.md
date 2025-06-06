@@ -3,6 +3,7 @@ title: Symphony of Industry
 date: 2024-04-29
 tags: [figments]
 slug: industry
+description: A poem and reflection on the sights and sounds of industrial progress and machinery.
 ---
 
 ![A complex and massive industrial chamber robotic arms, an assembly line, and welding sparks, all doused in cold blue light; generated with Imagen 3](images/industry.webp)
