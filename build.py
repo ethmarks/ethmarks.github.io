@@ -1,6 +1,7 @@
 import os
 import markdown
 import yaml
+import re
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 
@@ -21,9 +22,25 @@ def parse_markdown_with_frontmatter(path):
         body = text
     return meta, body
 
+def process_poem_tag(match):
+    # Known bug: Removes all newlines so the output is one big block
+    # Workaround: Remember that it's slightly more bandwidth efficient and call it a feature
+    poem_text = match.group(1).strip()
+    stanzas = re.split(r'\n\s*\n', poem_text)
+    processed_stanzas = []
+    for stanza in stanzas:
+        lines = stanza.strip().split('\n')
+        p_lines = [f'<p>{line.strip()}</p>' for line in lines if line.strip()]
+        processed_stanzas.append(''.join(p_lines))
+    final_poem_html = '<br>'.join(processed_stanzas)
+    return f'<poem>{final_poem_html}</poem>'
+
 def render_post(meta, body):
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
+    md.block_level_elements.append('poem')
     html = md.convert(body)
+    html = re.sub(r'<poem>(.*?)</poem>', process_poem_tag, html, flags=re.DOTALL)
+    html = re.sub(r'<p>(\s*<img[^>]+>\s*)</p>', r'\1', html)
     template = env.get_template("post.html")
     date_val = meta["date"]
     if isinstance(date_val, datetime):
@@ -32,11 +49,10 @@ def render_post(meta, body):
         date_obj = date_val
     else:
         date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
-    # Format date_human without leading zero in day
     try:
-        date_human = date_obj.strftime("%B %-d, %Y")  # Unix
+        date_human = date_obj.strftime("%B %-d, %Y")
     except ValueError:
-        date_human = date_obj.strftime("%B %d, %Y").replace(' 0', ' ')  # Windows fallback
+        date_human = date_obj.strftime("%B %d, %Y").replace(' 0', ' ')
     return template.render(
         title=meta["title"],
         date=date_obj.strftime("%Y-%m-%d"),
