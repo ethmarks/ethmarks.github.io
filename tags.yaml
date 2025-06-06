@@ -1,26 +1,22 @@
-# Tag metadata for blog categories
+all:
+  description: "All posts"
+  definition: "All (adj) - the entire quantity or extent"
+  text: |
+    This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place.
 curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"
   text: |
-    This blog is for personal essays on things I find interesting. For creative writing, check out Figments, for computery things I've made, check out Projects, and for miscellaneous posts check out Elsewise.
-    
-    I made this blog because I want to share the stuff I've made, but don't want to use social media.
-    
-    ~Ethan
+    Posts tagged as Curios are personal essays and thoughts on things I find interesting or unusual
 figments:
   description: "Creative writing"
-  definition: "Figments (noun) - products of the imagination, especially those crafted into stories, characters, and worlds."
+  definition: "Figments (noun) - products of the imagination"
   text: |
-    This blog is for any creative writing pieces I've made, such as short stories or poems. For computery things I've made, check out Projects, for interesting things I've found check out Curios, and for miscellaneous posts check out Elsewise.
-    
-    Many of the works were created long before I made this blog, and accordingly have publication dates predating that of this site.
-    
-    ~Ethan
+    Posts tagged as Figments are creative writing pieces, such as short stories or poems
+    <br>
+    Some works were created before this blog existed, so their publication dates may predate that of this site.
 elsewise:
   description: "Miscellaneous"
   definition: "Elsewise (adverb) - in a different way or manner; otherwise"
   text: |
-    This blog is for things I've written that don't fit into another category. For creative writing, check out Figments. For computery things I've made, check out Projects, and for interesting things I've found check out Curios.
-    
-    ~Ethan
+    Posts tagged as Elsewise don't fit into another category

@@ -102,6 +102,7 @@ def main():
 
     # Group posts by tag
     tag_posts = {tag: [] for tag in tag_data}
+    tag_posts['all'] = posts[:]  # Special 'all' tag lists all posts
     for post in posts:
         for tag in post.get("tags", []):
             if tag in tag_posts:
@@ -110,7 +111,10 @@ def main():
     # Render tag index pages
     tag_template = env.get_template("tag.html")
     for tag, posts_list in tag_posts.items():
-        tag_info = tag_data[tag]
+        tag_info = tag_data.get(tag, {
+            "definition": "All posts in all categories.",
+            "text": "This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place."
+        })
         # Sort posts by date descending
         posts_list_sorted = sorted(posts_list, key=lambda p: p["date"], reverse=True)
         tag_dir = os.path.join(OUT_DIR, tag)

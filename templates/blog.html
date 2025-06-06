@@ -19,12 +19,19 @@
 <p>I wrote this blog for anyone else who shares my interests. I enjoy small personal blogs about things that interest me, and I wanted to make one of my own.</p>
 <p>~Ethan</p>
 
-<h2>Blogs</h2>
-{% for tag in tags %}
-<button-link href="{{ tag['slug'] }}/">
-    <span slot="title">{{ tag['title'] }}</span>
-    <span slot="description">{{ tag['description'] }}</span>
+<button-link href="all/" class="all-posts-button">
+    <span slot="title">All Posts</span>
+    <span slot="description">Browse every blog post in one place</span>
 </button-link>
+
+<h2>Tags</h2>
+{% for tag in tags %}
+    {% if tag['slug'] != 'all' %}
+    <button-link href="{{ tag['slug'] }}/">
+        <span slot="title">{{ tag['title'] }}</span>
+        <span slot="description">{{ tag['description'] }}</span>
+    </button-link>
+    {% endif %}
 {% endfor %}
 </article>
 </main>
