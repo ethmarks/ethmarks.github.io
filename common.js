@@ -544,6 +544,7 @@ customElements.define('scroll-indicator',
     }
 );
 
+/*
 (function addScrollIndicatorIfTall() {
   window.addEventListener('DOMContentLoaded', function() {
     if (window.ENABLE_SCROLL_INDICATOR === false) return;
@@ -557,3 +558,4 @@ customElements.define('scroll-indicator',
     }
   });
 })();
+*/
