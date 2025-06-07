@@ -6,8 +6,10 @@ from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 
 SRC_DIR = "blog_src"
+OUT_DIR = "blog"
+PROJECTS_SRC_DIR = "projects_src"
+PROJECTS_OUT_DIR = "projects"
 TEMPLATE_DIR = "templates"
-OUT_DIR = "blog_out"
 WEBSITE_URL = "https://colourlessspearmint.github.io"
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
@@ -188,8 +190,6 @@ def main():
         f.write(blog_index_template.render(tags=tags_for_index, projects_link="/blog/projects/"))
 
     # --- PROJECTS GENERATION ---
-    PROJECTS_SRC_DIR = "projects_src"
-    PROJECTS_OUT_DIR = "projects_out"
     projects = []
     for fname in os.listdir(PROJECTS_SRC_DIR):
         if not fname.endswith(".md"):

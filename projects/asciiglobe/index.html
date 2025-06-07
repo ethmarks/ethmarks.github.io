@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII-Globe</title>
-    <link rel="stylesheet" href="../common.css">
-    <script src="../common.js"></script>
+    <link rel="stylesheet" href="../../common.css">
+    <script src="../../common.js"></script>
+    <meta name="description" content="A text-based cartographic rendering engine that uses NASA satellite data">
+    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/asciiglobe/">
+    <meta property="og:title" content="ASCII-Globe">
+    <meta property="og:description" content="A text-based cartographic rendering engine that uses NASA satellite data">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/asciiglobe/">
 </head>
 <body>
 <ethan-header></ethan-header>
 <main>
 <h1>ASCII-Globe</h1>
+
 <external-link icon="github" href="https://github.com/ColourlessSpearmint/ASCII-Globe">
     <span slot="title">GitHub Repo</span>
 </external-link>
+
 <article>
 <p>Have you ever wanted to see what the Earth looks like in text form?</p>
-<p>Well, allow me to introduce <b>ASCII-Globe</b>, a program I made that dynamically renders the Earth in <a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>.</p>
+<p>Well, allow me to introduce <strong>ASCII-Globe</strong>, a program I made that dynamically renders the Earth in <a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>.</p>
 <h2>Demo</h2>
 <figure>
 <img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/images/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
-<figcaption>An example output from ASCII-Globe</figcaption>  
 </figure>
+
 <p>Here's a flattened text version. Feel free to copy and paste it.</p>
-<pre style="font-size: clamp(0.1rem, 2vw, 0.5rem); /* Scale font size based on display size */">
+<pre style="font-size: clamp(0.1rem, 2vw, 0.5rem);">
 ..........................................................................................................................................................................................................
 .........................................................      ............           .................................................................................................................  .
 ...............................................         .........          .....:::....       ................................    .       ....... .....    ...............................................
@@ -110,16 +118,12 @@ VVVVVVVVVVVVVVVVVVVVV..VVVVVVVV..VVVVV..V...VV..............VVV.VV..............
 <p>ASCII-Globe uses a bit of Python code I wrote that renders text onto a simulated 3D sphere.</p>
 <p>It does this with the same <a href="https://www.cs.trinity.edu/~jhowland/class.files.cs357.html/blender/blender-stuff/m3d.pdf">trigonometry that all rendering engines use</a>, so I won't explain it in detail here.</p>
 <p>ASCII-Globe also supports features such as rotation, tilt, scale, and a day-night cycle. It accomplishes the day-night cycle by switching between a day texture and a night texture, and the rest are achieved with more trigonometry.</p>
-
 <h2>Texture Generation</h2>
 <p>ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the <a href="https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md">documentation</a>) is to download <a href="https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg">this image</a> taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.</p>
-
 <h2>Animation</h2>
 <p>ASCII-Globe also comes with code to generate animated GIFs from a list of frames. It uses a <a href="https://en.wikipedia.org/wiki/Monospaced_font">monospace font</a> like most ASCII art to maintain text column alignment. The default behavior is to render white text on a transparent background, but the code comes with lots of parameters to customize the output.</p>
-
 <h2>Installation</h2>
 <p>If you want to use ASCII-Globe yourself, follow the <a href="https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md#installation">installation instructions</a> in the documentation.</p>
-
 <h2>Conclusion</h2>
 <p>ASCII-Globe was a delightful project to develop, and coding it taught me a lot about graphics programming. I hope you find it useful, or at least amusing.</p>
 <p>~Ethan</p>
