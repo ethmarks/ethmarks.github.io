@@ -1,7 +1,7 @@
 ---
 index: True
 title: Scream Cipher Converter
-date: 2025-06-07
+date: 2025-06-06
 tags: [projects]
 slug: screamcipher
 description: An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'

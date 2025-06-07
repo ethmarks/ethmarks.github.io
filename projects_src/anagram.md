@@ -1,7 +1,7 @@
 ---
 index: True
 title: Anagram Animator
-date: 2025-05-21
+date: 2025-04-18
 tags: [projects]
 slug: anagram
 description: A simple little Jupyter notebook to create anagram GIFs

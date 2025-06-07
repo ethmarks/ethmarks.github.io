@@ -1,7 +1,7 @@
 ---
 index: True
 title: Personal Website
-date: 2025-05-21
+date: 2025-05-14
 tags: [projects]
 slug: personalwebsite
 description: The website you're reading right now

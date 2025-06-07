@@ -1,7 +1,7 @@
 ---
 index: True
 title: ASCII-Globe
-date: 2025-05-21
+date: 2025-01-18
 tags: [projects]
 slug: asciiglobe
 description: A text-based cartographic rendering engine that uses NASA satellite data

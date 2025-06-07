@@ -1,7 +1,7 @@
 ---
 index: True
 title: Eliza
-date: 2025-05-21
+date: 2024-12-17
 tags: [projects]
 slug: eliza
 description: My implementation of the 1966 chatbot Eliza
