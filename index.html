@@ -44,16 +44,21 @@
 
     .intro-container p:nth-child(2) {animation: slide-left 2s cubic-bezier(0, 0.8, 0.2, 1) both;}
 
-    h1 span {
+    .fall {
         display: inline-block;
         animation: fall 1s cubic-bezier(0, 0.8, 0.2, 1) both;
     }
 
-    h1 span:nth-child(1) {animation-delay: 0.1s;}
-    h1 span:nth-child(2) {animation-delay: 0.2s;}
-    h1 span:nth-child(3) {animation-delay: 0.3s;}
-    h1 span:nth-child(4) {animation-delay: 0.4s;}
-    h1 span:nth-child(5) {animation-delay: 0.5s;}
+    .tilt-in {
+        display: inline-block;
+        animation: tilt-in 1s ease-in-out;
+    }
+
+    h1 .fall:nth-child(1) {animation-delay: 0.1s;}
+    h1 .fall:nth-child(2) {animation-delay: 0.2s;}
+    h1 .fall:nth-child(3) {animation-delay: 0.3s;}
+    h1 .fall:nth-child(4) {animation-delay: 0.4s;}
+    h1 .fall:nth-child(5) {animation-delay: 0.5s;}
     
     @media (min-width: 768px) {
         .intro-container p {
@@ -117,6 +122,18 @@
         }
         100% {
             transform: translateY(0);
+        }
+    }
+
+    @keyframes tilt-in {
+        0% {
+            transform: rotate(-1deg);
+        }
+        50% {
+            transform: rotate(-1deg);
+        }
+        100% {
+            transform: rotate(0deg);
         }
     }
 
@@ -300,11 +317,11 @@
 </div>
 <article>
 <h1>
-    <span>Welcome</span>
-    <span>to</span>
-    <span>My</span>
-    <span>Personal</span>
-    <span>Website</span>
+    <span class="fall"><span class="tilt-in">Welcome</span></span>
+    <span class="fall"><span class="tilt-in">to</span></span>
+    <span class="fall"><span class="tilt-in">My</span></span>
+    <span class="fall"><span class="tilt-in">Personal</span></span>
+    <span class="fall"><span class="tilt-in">Website</span></span>
 </h1>
 <p>This site represents my presence on the World Wide Web</p>
 <div class="card-container">
