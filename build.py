@@ -11,7 +11,6 @@ PROJECTS_SRC_DIR = "projects_src"
 PROJECTS_OUT_DIR = "projects"
 TEMPLATE_DIR = "templates"
 WEBSITE_URL = "https://colourlessspearmint.github.io"
-NUM_OF_RECENT_POSTS = 5
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
@@ -190,11 +189,11 @@ def main():
             "title": tag.capitalize(),
             "description": info["description"]
         })
-    # Get most recent posts (by date, descending)
-    recent_posts_sorted = sorted(posts_for_index, key=lambda p: p["date"], reverse=True)[:NUM_OF_RECENT_POSTS]
-    # Prepare recent_posts with human-readable date
+    # Get all posts (by date, descending)
+    all_posts_sorted = sorted(posts_for_index, key=lambda p: p["date"], reverse=True)
+    # Prepare all_posts with human-readable date
     recent_posts = []
-    for post in recent_posts_sorted:
+    for post in all_posts_sorted:
         date_obj = post["date"]
         if not hasattr(date_obj, 'strftime'):
             date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")

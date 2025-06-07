@@ -21,7 +21,6 @@
 <p>~Ethan</p>
 
 <div class="post-tags">
-<a class="post-tag" href="all/">#All</a>
 {% for tag in tags %}
     {% if tag['slug'] != 'all' %}
     <a class="post-tag" href="{{ tag['slug'] }}/">#{{ tag['title'] }}</a>
@@ -29,7 +28,6 @@
 {% endfor %}
 </div>
 
-<h2>Recent</h2>
 {% for post in recent_posts %}
 <button-link href="{{ post['slug'] }}/">
     <span slot="title">{{ post['title'] }}</span>

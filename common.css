@@ -475,6 +475,7 @@ code {
     gap: 0.5em;
     justify-content: center;
     margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .post-tag {
