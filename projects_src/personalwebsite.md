@@ -11,7 +11,9 @@ link_icon: github
 
 My personal website is my home on the web.
 
-<iframe src="../index.html" scrolling="no" style="pointer-events: none;"></iframe>
+<figure>
+    <iframe src="../../index.html" scrolling="no" style="pointer-events: none;"></iframe>
+</figure>
 
 I made this site because I want to have an online presence, but I don't want to use social media (e.g. [Instagram](https://www.instagram.com/), [Twitter](https://twitter.com/)), nor do I want to use someone else's premade blogging platform (e.g. [Blogger](https://www.blogger.com), [Tumblr](https://www.tumblr.com/), [Wordpress](https://wordpress.com/)).
 
@@ -25,7 +27,7 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 - [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/): Used to make the cards on the home page.
 - [quicklink](https://github.com/GoogleChromeLabs/quicklink): Used to improve loading times.
-- [Juxtapose.js](https://github.com/NUKnightLab/juxtapose): Used to make before/after comparisons ([Example](colourlesstransformer.html)).
+- [Juxtapose.js](https://github.com/NUKnightLab/juxtapose): Used to make before/after comparisons ([Example](/projects/colourlesstransformer)).
 
 ### GitHub Pages
 
@@ -35,17 +37,15 @@ This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub
 
 My Github Pages deployment workflow
 
-### Unbuilt
+### Build
 
-My website doesn't have a build step (other than stock GitHub Pages deployment); the source HTML files are the same as what gets deployed. My motivation for doing this was mostly comprised of aversion to frameworks. I didn't want to use [Jekyll](https://jekyllrb.com/) (in fact, I tried to [Hyde](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde) from it entirely). I would have been fine with using a templating language like [Handlebars](https://handlebarsjs.com/), but then I would have had to learn [GitHub Actions](https://github.com/features/actions) YAML scripting.
-
-In the end, I decided it was preferable to just author each page in HTML. The words you're reading right now were written in [VSCode](https://code.visualstudio.com/) (my preferred code editor) instead of [Obsidian](https://obsidian.md/) (my preferred text editor). The trade-off is that each page must have a bunch of redundant and repetitive tags (in contrast to Markdown where it's pure content). I <s>solved</s> "good-enoughed" this by just creating a `template.html` file and duplicating it whenever I created a new page.
+Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](https://colourlessspearmint.github.io/blog/all) page) with links to each blog post.
 
 ### Web Components
 
 I've utilized [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for things like the header, footer, and buttons.
 
-This has allowed me to just add an `<ethan-header>` element, and the header is instantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Otherwise, I would have to write out the code for the entire header on every single page. This would not only be unnecessarily verbose, but would also mean that I couldn't rework the header without updating every single instance on every single page.
+This allows me to just quickly drop in an `<ethan-header>` element, and the header will beinstantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Style Guide
 
@@ -53,8 +53,8 @@ I had a moderately specific vision for what I wanted my website to look like, an
 
 ### Color Palette
 
-- **Primary**: <span style="color: #ffffff; background: #121212;">#ffffff</span>: White
-- **Backdrop**: <span style="color: #121212; background: #ffffff;">#121212</span>: Black
+- **Primary**: <span style="color: #ffffff; text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;">#ffffff</span>: White
+- **Backdrop**: <span style="color: #121212; text-shadow: -1px -1px 0 #3c3c3c, 1px -1px 0 #3c3c3c, -1px 1px 0 #3c3c3c, 1px 1px 0 #3c3c3c;">#121212</span>: Black
 - **Accent**: <span style="color: #8fdfd4;">#8fdfd4</span>: Spearmint Teal
 
 ### Typography
@@ -65,7 +65,7 @@ I had a moderately specific vision for what I wanted my website to look like, an
 ### Animations
 
 - **Page Load**: Every time a page is loaded, the content smoothly fades in from transparency. This is accomplished giving, `<body>` the following animation: `animation: fadeIn 0.3s ease-in forwards`.
-- **Home Page**: I made heavy use of animations on my [Home page](../). The intro image, header, and subheader all slide in from different directions. Each word in the title text clicks in place with a staggered falling effect. The navigation cards gently fade and rise. I'm very happy with how it turned out.
+- **Home Page**: I made heavy use of animations on my [Home page](https://colourlessspearmint.github.io/). The intro image, header, and subheader all slide in from different directions. Each word in the title text clicks in place with a staggered falling effect. The navigation cards gently fade and rise. I'm very happy with how it turned out.
 
 ### Effects
 
@@ -76,15 +76,13 @@ I had a moderately specific vision for what I wanted my website to look like, an
 
 ## Lighthouse
 
-As of May 14, 2025, the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 96.4
+As of [May 14, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/x6c865vinn?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 96.4.
 
 ![A Lighthouse analytic page showing 95 performance, 100 accessibility, 100 best practices, 91 SEO](images/lighthouse.webp)
 
-2025-05-14 [Lighthouse Analysis](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/x6c865vinn?form_factor=desktop)
-
 The missing points in performance are due to the animations on the home screen that cause [Cumulative Layout Shift](https://web.dev/articles/cls). I could fix it by removing the animations, but I'm hesitant to sacrifice their aesthetic value for a small nominal performance gain.
 
-The missing points in SEO are because I don't have `<meta>` description tags on every page. I'm working on rectifying this; I just haven't got around to it yet.
+The missing points in SEO are because I don't have `<meta>` description tags on every page. I'm actively working on fixing this.
 
 ## Privacy
 
@@ -92,7 +90,7 @@ This site does not use cookies, trackers, analytics, or any external telemetry t
 
 ## Accessibility
 
-This site is designed to be accessible to as many users as possible. Before each [git push](https://git-scm.com/docs/git-push), I test every single page in Firefox's [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/) to ensure that the site remains functional on a variety of devices. I've done my best to follow best practices regarding semantic markup, keyboard navigation, and alt text.
+This site is designed to be accessible to as many users as possible. Before each [git push](https://git-scm.com/docs/git-push), I test every single page in Firefox's [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/) to ensure that the site remains functional on a variety of devices. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text.
 
 ## Conclusion
 
