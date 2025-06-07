@@ -20,19 +20,21 @@
 <p>I wrote this blog for anyone else who shares my interests. I enjoy small personal blogs about things that interest me, and I wanted to make one of my own.</p>
 <p>~Ethan</p>
 
-<button-link href="all/" class="all-posts-button">
-    <span slot="title">All Posts</span>
-    <span slot="description">Browse every blog post in one place</span>
-</button-link>
-
-<h2>Tags</h2>
+<div class="post-tags">
+<a class="post-tag" href="all/">#All</a>
 {% for tag in tags %}
     {% if tag['slug'] != 'all' %}
-    <button-link href="{{ tag['slug'] }}/">
-        <span slot="title">{{ tag['title'] }}</span>
-        <span slot="description">{{ tag['description'] }}</span>
-    </button-link>
+    <a class="post-tag" href="{{ tag['slug'] }}/">#{{ tag['title'] }}</a>
     {% endif %}
+{% endfor %}
+</div>
+
+<h2>Recent</h2>
+{% for post in recent_posts %}
+<button-link href="{{ post['slug'] }}/">
+    <span slot="title">{{ post['title'] }}</span>
+    <span slot="description">{{ post['date_human'] }}</span>
+</button-link>
 {% endfor %}
 </article>
 </main>
