@@ -16,20 +16,22 @@ I found a language written with fish.
 
 According to the inventor Tsevhu, Koa Vhukva, the fishes in the poem above translate to:
 
-> "When I traveled the world,
-> I traveled lonely.
-> A desolate landscape
-> scraped my view,
-> A dead thing to keep me company.
-> I wandered because
-> it was the only thing left to do.
-> When I found you,
-> you were in stasis,
-> frozen for more
-> than a century
-> asleep, delicate in all your graces,
-> and I felt all my years
-> telling me to wake you."
+<poem>
+"When I traveled the world,
+I traveled lonely.
+A desolate landscape
+scraped my view,
+A dead thing to keep me company.
+I wandered because
+it was the only thing left to do.
+When I found you,
+you were in stasis,
+frozen for more
+than a century
+asleep, delicate in all your graces,
+and I felt all my years
+telling me to wake you."
+</poem>
 
 This is a lovely little poem, but what's interesting is how it's encoded with fish.
 

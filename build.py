@@ -39,6 +39,8 @@ def process_poem_tag(match):
 def render_post(meta, body):
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     md.block_level_elements.append('poem')
+    md.block_level_elements.append('chat')
+    md.block_level_elements.append('cell')
     html = md.convert(body)
     html = re.sub(r'<poem>(.*?)</poem>', process_poem_tag, html, flags=re.DOTALL)
     html = re.sub(r'<p>(\s*<img[^>]+>\s*)</p>', r'\1', html)

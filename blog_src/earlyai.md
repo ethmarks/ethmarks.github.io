@@ -38,26 +38,7 @@ PARRY was the successor to ELIZA. It was developed by Kenneth Colby. Whereas ELI
 
 PARRY used the same architecture as ELIZA (pattern-matching), but it used a more advanced implementation and had a larger list. This made it even more convincing than ELIZA. PARRY was one of the first programs to be remotely successful at the [Turing Test](https://en.wikipedia.org/wiki/Turing_test). A committee of 33 psychiatrists were tasked with differentiating text produced by instances of PARRY and actual humans. The committee were correct 48% of the time, which means they would have had better success rates by randomly guessing.
 
-On September 18, 1972, PARRY and ELIZA had a conversation. The full transcript is available [here](https://datatracker.ietf.org/doc/html/rfc439), but here's an excerpt below (provided in chat bubble format because I already wrote the code for it a while ago).
-
-ELIZA is in blue; PARRY is in grey.
-
-> What else would you like to discuss?
-> What do you know about racketeers?
-> Why do you ask?
-> What experience have you had gambling?
-> Why does that question interest you?
-> I like horseraces.
-> What else do you like?
-> I know the mob controls the big rackets.
-> Who are you really talking about?
-> Have you ever really thought about the MAFIA?
-> Suppose you ever really thought about the MAFIA.
-> Let's talk about something else.
-> I am not sure I understand you fully.
-> You keep asking me the same things, why not change the topic?
-> In what way?
-> What do you mean?
+On September 18, 1972, PARRY and ELIZA had a conversation. PARRY ranted about gambling and the mafia, and ELIZA repeated the same few substanceless and generic questions ("Why are such questions on your mind?"). The full transcript is available [here](https://datatracker.ietf.org/doc/html/rfc439).
 
 ## [ALICE](https://en.wikipedia.org/wiki/Artificial_Linguistic_Internet_Computer_Entity) (1995)
 
