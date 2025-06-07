@@ -48,5 +48,6 @@ out/
 .sass-cache/
 .cache/
 
-# Debugging directory used while developing and migrating to tag system
+# Debugging directory used while developing and migrating to build paradigm
 blog_out/
+projects_out/

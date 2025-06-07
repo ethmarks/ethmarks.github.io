@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../common.css">
+    <script src="../common.js"></script>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1>Projects</h1>
+<article>
+<p>As a programmer, I spend a lot of time telling computers what to do. These projects are what happens when they actually listen.</p>
+<p>~Ethan</p>
+{% for project in projects %}
+<button-link href="{{ project.slug }}">
+    <span slot="title">{{ project.title }}</span>
+    <span slot="description">{{ project.description }}</span>
+    <span style="display:none;">{{ project.date }}</span>
+</button-link>
+{% endfor %}
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>

@@ -187,6 +187,7 @@ def main():
 
     # --- PROJECTS GENERATION ---
     PROJECTS_SRC_DIR = "projects_src"
+    PROJECTS_OUT_DIR = "projects_out"
     projects = []
     for fname in os.listdir(PROJECTS_SRC_DIR):
         if not fname.endswith(".md"):
@@ -194,27 +195,20 @@ def main():
         meta, body = parse_markdown_with_frontmatter(os.path.join(PROJECTS_SRC_DIR, fname))
         html = render_project(meta, body)
         slug = meta.get("slug", os.path.splitext(fname)[0])
-        out_dir = os.path.join(OUT_DIR, slug)
+        out_dir = os.path.join(PROJECTS_OUT_DIR, slug)
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
         projects.append({**meta, "out_path": out_path})
 
-    # Render projects index page
-    projects_index_dir = os.path.join(OUT_DIR, "projects")
-    os.makedirs(projects_index_dir, exist_ok=True)
-    projects_index_path = os.path.join(projects_index_dir, "index.html")
-    # Sort projects by date descending if date exists, else by title
+    # Render projects index page using a dedicated template
+    projects_index_path = os.path.join(PROJECTS_OUT_DIR, "index.html")
     projects_sorted = sorted(projects, key=lambda p: p.get("date", p.get("title", "")), reverse=True)
+    projects_template = env.get_template("projects.html")
     with open(projects_index_path, "w", encoding="utf-8") as f:
-        f.write(tag_template.render(
-            tag_title="Projects",
-            tag_definition="All projects by Ethan.",
-            tag_text="Browse all programming and creative projects.",
-            posts=projects_sorted,
-            get_post_description=lambda post: post.get("description", "A project."),
-            projects_link=None  # Don't link to self
+        f.write(projects_template.render(
+            projects=projects_sorted,
         ))
 
 if __name__ == "__main__":
