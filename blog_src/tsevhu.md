@@ -1,4 +1,5 @@
 ---
+index: True
 title: Tsevhu
 date: 2025-04-26
 tags: [curios]

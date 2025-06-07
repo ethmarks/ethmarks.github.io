@@ -128,6 +128,7 @@ def human_readable_date(date_obj):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     posts = []
+    posts_for_index = []
     for fname in os.listdir(SRC_DIR):
         if not fname.endswith(".md"):
             continue
@@ -139,14 +140,17 @@ def main():
         out_path = os.path.join(out_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
-        posts.append({**meta, "out_path": out_path})
+        post_entry = {**meta, "out_path": out_path}
+        posts.append(post_entry)
+        if meta.get("index", True):
+            posts_for_index.append(post_entry)
     with open("tags.yaml", encoding="utf-8") as f:
         tag_data = yaml.safe_load(f)
 
     # Group posts by tag
     tag_posts = {tag: [] for tag in tag_data}
-    tag_posts['all'] = posts[:]  # Special 'all' tag lists all posts
-    for post in posts:
+    tag_posts['all'] = posts_for_index[:]  # Special 'all' tag lists all posts (that are indexed)
+    for post in posts_for_index:
         for tag in post.get("tags", []):
             if tag in tag_posts:
                 tag_posts[tag].append(post)
@@ -191,6 +195,7 @@ def main():
 
     # --- PROJECTS GENERATION ---
     projects = []
+    projects_for_index = []
     for fname in os.listdir(PROJECTS_SRC_DIR):
         if not fname.endswith(".md"):
             continue
@@ -202,11 +207,14 @@ def main():
         out_path = os.path.join(out_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
-        projects.append({**meta, "out_path": out_path})
+        project_entry = {**meta, "out_path": out_path}
+        projects.append(project_entry)
+        if meta.get("index", True):
+            projects_for_index.append(project_entry)
 
     # Render projects index page using a dedicated template
     projects_index_path = os.path.join(PROJECTS_OUT_DIR, "index.html")
-    projects_sorted = sorted(projects, key=lambda p: p.get("date", p.get("title", "")), reverse=True)
+    projects_sorted = sorted(projects_for_index, key=lambda p: p.get("date", p.get("title", "")), reverse=True)
     projects_template = env.get_template("projects.html")
     with open(projects_index_path, "w", encoding="utf-8") as f:
         f.write(projects_template.render(

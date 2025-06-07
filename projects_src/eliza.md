@@ -1,4 +1,5 @@
 ---
+index: True
 title: Eliza
 date: 2025-05-21
 tags: [projects]

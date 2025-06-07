@@ -1,4 +1,5 @@
 ---
+index: True
 title: Collective Nouns
 date: 2025-04-23
 tags: [curios]

@@ -1,4 +1,5 @@
 ---
+index: True
 title: ASCII-Globe
 date: 2025-05-21
 tags: [projects]

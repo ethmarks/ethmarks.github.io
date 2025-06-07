@@ -1,4 +1,5 @@
 ---
+index: True
 title: Symphony of Industry
 date: 2024-04-29
 tags: [figments]
