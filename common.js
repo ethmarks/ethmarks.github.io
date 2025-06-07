@@ -577,3 +577,22 @@ customElements.define('scroll-indicator',
   });
 })();
 */
+
+// Inject Juxtapose resources if a div with class "juxtapose" exists
+(function injectJuxtaposeIfPresent() {
+  window.addEventListener('DOMContentLoaded', function() {
+    var juxtaposeDiv = document.querySelector('div.juxtapose');
+    if (juxtaposeDiv) {
+      // Create script tag
+      var script = document.createElement('script');
+      script.src = 'https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js';
+      // Create link tag
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css';
+      // Insert after the juxtapose div
+      juxtaposeDiv.insertAdjacentElement('afterend', script);
+      juxtaposeDiv.insertAdjacentElement('afterend', link);
+    }
+  });
+})();
