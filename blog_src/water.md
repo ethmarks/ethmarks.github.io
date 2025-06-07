@@ -69,7 +69,7 @@ I disagree.
 
 ## Conclusion
 
-First of all, yes, these aliens use the Metric system. I figured that using [my absolute measurement system](../elsewise/quanth.html) would be detrimental to readbility.
+First of all, yes, these aliens use the Metric system. I figured that using [my absolute measurement system](../quanth) would be detrimental to readbility.
 
 Also, the links aren't canonically present; they're for your convenience in case you want to do further reading.
 

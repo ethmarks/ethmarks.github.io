@@ -31,7 +31,7 @@ Behind the scenes, ELIZA was a fairly rudimentary pattern-matching algorithm wit
 
 Despite its basic implementation, ELIZA proved to be quite convincing. Even when Weizenbaum explained ELIZA's protocolic reasoning, many users insisted that it was intelligent and understood what they were telling it. Reportedly, Weizenbaum's secretary insisted that he leave the room so that she could speak privately with ELIZA. The word Weizenbaum chose to describe people's reaction to his program was "delusion".
 
-If you'd like to try it out, I made an [ELIZA emulator](https://colourlessspearmint.github.io/projects/eliza.html) that runs on modern computers.
+If you'd like to try it out, I made an [ELIZA emulator](https://colourlessspearmint.github.io/projects/eliza) that runs on modern computers.
 
 ## [PARRY](https://en.wikipedia.org/wiki/PARRY) (1972)
 
