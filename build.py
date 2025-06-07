@@ -72,6 +72,45 @@ def render_post(meta, body):
         canonical_url=canonical_url
     )
 
+def render_project(meta, body):
+    md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
+    md.block_level_elements.append('poem')
+    html = md.convert(body)
+    html = re.sub(r'<poem>(.*?)</poem>', process_poem_tag, html, flags=re.DOTALL)
+    html = re.sub(r'<p>(\s*<img[^>]+>\s*)</p>', r'\1', html)
+    template = env.get_template("project.html")
+    date_val = meta.get("date")
+    if date_val is None:
+        date_obj = None
+        date_human = None
+    elif isinstance(date_val, datetime):
+        date_obj = date_val
+        date_human = human_readable_date(date_obj)
+    elif hasattr(date_val, 'strftime'):
+        date_obj = date_val
+        date_human = human_readable_date(date_obj)
+    else:
+        date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
+        date_human = human_readable_date(date_obj)
+    description = meta.get("description", "A project by Ethan.")
+    canonical_url = f"{WEBSITE_URL}/blog/{meta.get('slug', os.path.splitext(os.path.basename(meta.get('out_path', meta.get('slug', ''))))[0])}/"
+    # Pass through all link params
+    return template.render(
+        title=meta.get("title", "Untitled Project"),
+        date=date_obj.strftime("%Y-%m-%d") if date_obj else None,
+        date_human=date_human,
+        content=html,
+        tags=meta.get("tags", []),
+        slug=meta.get("slug", ""),
+        description=description,
+        canonical_url=canonical_url,
+        link=meta.get("link"),
+        link_name=meta.get("link_name"),
+        link_icon=meta.get("link_icon"),
+        github=meta.get("github"),
+        website=meta.get("website")
+    )
+
 def human_readable_date(date_obj):
     try:
         # Use platform-specific day format
@@ -129,7 +168,8 @@ def main():
                 get_post_description=lambda post: (
                     human_readable_date(post["date"]) if hasattr(post["date"], 'strftime') else 
                     human_readable_date(datetime.strptime(str(post["date"]), "%Y-%m-%d"))
-                )
+                ),
+                projects_link="/blog/projects/"
             ))
 
     # Render main blog index page
@@ -143,7 +183,39 @@ def main():
         })
     blog_index_path = os.path.join(OUT_DIR, "index.html")
     with open(blog_index_path, "w", encoding="utf-8") as f:
-        f.write(blog_index_template.render(tags=tags_for_index))
+        f.write(blog_index_template.render(tags=tags_for_index, projects_link="/blog/projects/"))
+
+    # --- PROJECTS GENERATION ---
+    PROJECTS_SRC_DIR = "projects_src"
+    projects = []
+    for fname in os.listdir(PROJECTS_SRC_DIR):
+        if not fname.endswith(".md"):
+            continue
+        meta, body = parse_markdown_with_frontmatter(os.path.join(PROJECTS_SRC_DIR, fname))
+        html = render_project(meta, body)
+        slug = meta.get("slug", os.path.splitext(fname)[0])
+        out_dir = os.path.join(OUT_DIR, slug)
+        os.makedirs(out_dir, exist_ok=True)
+        out_path = os.path.join(out_dir, "index.html")
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html)
+        projects.append({**meta, "out_path": out_path})
+
+    # Render projects index page
+    projects_index_dir = os.path.join(OUT_DIR, "projects")
+    os.makedirs(projects_index_dir, exist_ok=True)
+    projects_index_path = os.path.join(projects_index_dir, "index.html")
+    # Sort projects by date descending if date exists, else by title
+    projects_sorted = sorted(projects, key=lambda p: p.get("date", p.get("title", "")), reverse=True)
+    with open(projects_index_path, "w", encoding="utf-8") as f:
+        f.write(tag_template.render(
+            tag_title="Projects",
+            tag_definition="All projects by Ethan.",
+            tag_text="Browse all programming and creative projects.",
+            posts=projects_sorted,
+            get_post_description=lambda post: post.get("description", "A project."),
+            projects_link=None  # Don't link to self
+        ))
 
 if __name__ == "__main__":
     main()

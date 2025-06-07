@@ -5,8 +5,8 @@ tags: [projects]
 slug: asciiglobe
 description: A text-based cartographic rendering engine that uses NASA satellite data
 link: https://github.com/ColourlessSpearmint/ASCII-Globe
-link-name: GitHub Repo
-link-icon: github
+link_name: GitHub Repo
+link_icon: github
 ---
 
 Have you ever wanted to see what the Earth looks like in text form?

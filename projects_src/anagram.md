@@ -5,8 +5,8 @@ tags: [projects]
 slug: anagram
 description: A simple little Jupyter notebook to create anagram GIFs
 link: https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK
-link-name: Colab Notebook
-link-icon: colab
+link_name: Colab Notebook
+link_icon: colab
 ---
 
 An [Anagram](https://en.wikipedia.org/wiki/Anagram) is a word created by rearranging the letters of another word.

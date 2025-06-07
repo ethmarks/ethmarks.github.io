@@ -5,8 +5,8 @@ tags: [projects]
 slug: colourlesstransformer
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
 link: https://github.com/ColourlessSpearmint/ColourlessTransformer
-link-name: GitHub Repo
-link-icon: github
+link_name: GitHub Repo
+link_icon: github
 ---
 
 [PaintTransformer](https://github.com/Huage001/PaintTransformer) is a neural network that approximates images using paint strokes. This gives it a very pretty and stylized watercolor/painterly aesthetic.
@@ -20,7 +20,7 @@ I like how this looks, and I'll sometimes just run random photos through it to s
             <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
         </div>
     </div>
-    <figcaption>PaintTransformer applied to a photo I took at [Taliesin West](https://franklloydwright.org/taliesin-west/)</figcaption>
+    <figcaption>PaintTransformer applied to a photo I took at <a href="https://franklloydwright.org/taliesin-west/">Taliesin West</a></figcaption>
 </figure>
 
 Another cool thing you can do is save each step as a frame, which creates a cool animation similar to a [watercolor timelapse](https://youtu.be/1rc0qmqcqMY).

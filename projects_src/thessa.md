@@ -5,8 +5,8 @@ tags: [projects]
 slug: thessa
 description: An AI-powered thesaurus that uses the Gemini API
 link: https://colourlessspearmint.github.io/thessa.html
-link-name: Thessa Webpage
-link-icon: link
+link_name: Thessa Webpage
+link_icon: link
 ---
 
 ![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](images/thessa/screenshot.webp)

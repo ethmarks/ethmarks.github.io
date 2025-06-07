@@ -5,8 +5,8 @@ tags: [projects]
 slug: personalwebsite
 description: The website you're reading right now
 link: https://github.com/ColourlessSpearmint/colourlessspearmint.github.io
-link-name: GitHub Repo
-link-icon: github
+link_name: GitHub Repo
+link_icon: github
 ---
 
 My personal website is my home on the web.

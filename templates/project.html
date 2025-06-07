@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../../common.css">
+    <script src="../../common.js"></script>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ canonical_url }}">
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1>{{ title }}</h1>
+{% if link %}
+<external-link {% if link_icon %}icon="{{ link_icon }}"{% endif %} href="{{ link }}">
+    <span slot="title">{{ link_name if link_name else 'Project Link' }}</span>
+</external-link>
+{% endif %}
+<article>
+{{ content | safe }}
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>
