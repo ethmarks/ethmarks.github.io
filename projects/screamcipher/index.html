@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scream Cipher Converter</title>
+    <link rel="stylesheet" href="../../common.css">
+    <script src="../../common.js"></script>
+    <meta name="description" content="An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'">
+    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/screamcipher/">
+    <meta property="og:title" content="Scream Cipher Converter">
+    <meta property="og:description" content="An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/screamcipher/">
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1>Scream Cipher Converter</h1>
+
+<external-link icon="link" href="https://colourlessspearmint.github.io/screamcipher.html">
+    <span slot="title">Webpage</span>
+</external-link>
+
+<article>
+<img alt="An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet" src="https://imgs.xkcd.com/comics/scream_cipher.png" />
+<p>This is one of my favorite <a href="https://xkcd.com/">xkcd</a> comics. It proposes the <a href="https://xkcd.com/3054/">Scream Cipher</a>, a creative, amusing, and not <em>completely</em> useless <a href="https://en.wikipedia.org/wiki/Cipher">cipher</a>.</p>
+<p>The Scream Cipher works by assigning each letter of the alphabet to a unique <a href="https://en.wikipedia.org/wiki/Diacritic">diacritical</a> variant of the letter A. For example, <code>THIS IS SOME EXAMPLE TEXT</code> becomes <code>ĀA̰ẢÃ ẢÃ ÃÅǍÁ ÁA̽AǍA̯ĂÁ ĀÁA̽Ā</code>.</p>
+<p>The punchline in the comic is that attempting to pronounce the encrypted text would sound like screaming (<a href="https://xkcd.com/2957/">AAAAAAAAAAA</a>).</p>
+<p>The Scream Cipher isn't great for actually making secret messages due to a lack of a key (although you could shift the diacritic dictionary with a 26-combination key to create a <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</a>), but it is a pretty good <a href="https://en.wikipedia.org/wiki/Obfuscation">obfuscation</a> technique. If you hadn't heard of the Scream Cipher and you encountered Scream-encrypted text, you probably wouldn't even know that there was a secret message; you would just think it was something akin to <a href="https://en.wikipedia.org/wiki/Zalgo_text">Zalgo text</a>.</p>
+<p>This is called a <a href="https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle">Kerckhoffs-insecure</a> cipher, and it's a demonstration of <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">Security through Obscurity</a>. The advantage is that, if you forget the key (which Scream Cipher doesn't have, but the principle still applies), you won't be locked out because the cipher is entropically weak enough to brute-force.</p>
+<h2>Converter</h2>
+<img alt="a screenshot of the Scream Cipher Converter interface" src="../../images/screamcipher_screenshot.webp" />
+<p>Anyways, I built a <a href="https://colourlessspearmint.github.io/screamcipher.html">Scream Cipher converter webpage</a> to automate the process of ciphering in Scream Cipher.</p>
+<h2>Usage</h2>
+<ol>
+<li><strong>Go to the Scream Cipher Converter webpage</strong>: <a href="https://colourlessspearmint.github.io/screamcipher.html">https://colourlessspearmint.github.io/screamcipher.html</a></li>
+<li><strong>Input Text</strong>: Type or paste the text you want to convert. It can be either plaintext or encrypted text; the program will detect it automatically. The conversion happens automatically.</li>
+<li><strong>Copy to Clipboard</strong>: You can press the clipboard icon above the result area to copy the text to your clipboard.</li>
+</ol>
+<h2>Implementation Details</h2>
+<p>For the sake of simplicity and thoroughness, my converter has a few quirks.</p>
+<ul>
+<li>All lowercase letters are treated as though they were uppercase.</li>
+<li>Non-letters characters (like numbers and punctuation) are left unmodified.</li>
+<li>An error is thrown if non-ASCII unicode characters (like emoji) are detected.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>ȀA̰ẢĂÁ ẢĀ ÅȦÀẢÅÄÃĂA̦ ẢÃÂ'Ā ÀÁȂA̦ A̯ȂAA̧ĀẢA̧AĂ, Ả A̮ẢÂA̱ ĀA̰Á ÃA̧ȂÁAǍ A̧ẢA̯A̰ÁȂ A̱ÁĂẢA̋A̰ĀA̮ÄĂ AÂA̱ ÁÂA̓ÅA̦ÁA̱ ǍAẠẢÂA̋ ĀA̰ẢÃ A̧ÅÂÀÁȂĀÁȂ. ĀA̰Á ÅÂĂA̦ ÄÃÁ A̧AÃÁ Ả A̧AÂ ĀA̰ẢÂẠ ÅA̮ ẢÃ ÃÁÂA̱ẢÂA̋ ĂÅȀ-ÃÁA̧ÄȂẢĀA̦ A̯ȂẢÀAĀÁ ǍÁÃÃAA̋ÁÃ ÅÀÁȂ A̧ÅǍǍÄÂẢA̧AĀẢÅÂ A̧A̰AÂÂÁĂÃ ȀA̰ÁȂÁ ÂÅȦÅA̱A̦ ÁĂÃÁ ȂÁAA̱Ã A̽ẠA̧A̱, ȦÄĀ ĀA̰AĀ'Ã A A̯ȂÁĀĀA̦ A̮ÄÂÂA̦ ÄÃÁ A̧AÃÁ.</p>
+<p>~ÁĀA̰AÂ</p>
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>
