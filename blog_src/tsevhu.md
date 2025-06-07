@@ -8,7 +8,7 @@ description: An introduction to Tsevhu, a constructed language written with fish
 
 I found a language written with fish.
 
-![A poem written in Tsevhu](images/tsevhu_poem.svg)
+![A poem written in Tsevhu](../../images/tsevhu_poem.svg)
 
 *Disclaimer: I only kind of understand how Tsevhu works, so my explanation is probably partially inaccurate.*
 
@@ -37,7 +37,7 @@ This is a lovely little poem, but what's interesting is how it's encoded with fi
 
 ## Grammar
 
-![A Tsevhu grammar chart](images/tsevhu_grammar.webp)
+![A Tsevhu grammar chart](../../images/tsevhu_grammar.webp)
 
 ### Clauses
 
@@ -80,7 +80,7 @@ This is obviously too many for me to put in this blog post, so I'll just provide
 
 Tsevhu is a cool little language. I'm glad I stumbled upon this corner of the internet; conlang linguists are really creative.
 
-![A Tsevhu poem written on parchment that translates to a thank you poem](images/tsevhu_thanks.webp)
+![A Tsevhu poem written on parchment that translates to a thank you poem](../../images/tsevhu_thanks.webp)
 
 <poem>
 "I'm glad

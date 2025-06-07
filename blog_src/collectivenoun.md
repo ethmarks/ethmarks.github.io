@@ -6,13 +6,11 @@ slug: collectivenoun
 description: A collection of amusing and obscure collective nouns for animals.
 ---
 
-A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word that names a group of people, animals, or things treated as a single entity.
+A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word that names a group of people, animals, or things treated as a single entity. For example, a 'class' is the collective noun for students. A class is grammatically treated as a singular object even though it's composed of multiple students.
 
-For example, a 'class' is the collective noun for students. A class is grammatically treated as a singular object even though it's composed of multiple students.
+For reasons unbeknownst to me, people really love coming up with ridiculous and silly collective nouns for animals. For example, a 'business' is the collective noun for ferrets.
 
-For reasons unbeknownst to me, people really love coming up with ridiculous and silly collective nouns for animals.
-
-![The collective noun for ferrets is a business](images/business_of_ferrets.webp)
+![The collective noun for ferrets is a business](../../images/business_of_ferrets.webp)
 
 Below is my collection.
 

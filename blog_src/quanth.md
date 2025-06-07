@@ -12,7 +12,7 @@ On the one hand, Metric is the international standard, it's what (most) computer
 
 But on the other hand, Feet are simply a more convenient length than Meters. Also, I'm American, so the vast majority of the people I interact with use Imperial, making it more useful.
 
-![Original: https://xkcd.com/1643/](images/distance_xkcd.webp)
+![Original: https://xkcd.com/1643/](../../images/distance_xkcd.webp)
 
 I prefer Metric and use it whenever possible, but I'm aware that using it has the unfortunate side effect of making me seem like a contrarian elitist.
 
@@ -28,7 +28,7 @@ Because there is a 'smallest amount of energy' (quanta) and a 'smallest amount o
 
 This distance is called a **Planck Length**, and it's commonly described as the pixel size of the universe.
 
-![The Planck Length](images/planck_length.webp)
+![The Planck Length](../../images/planck_length.webp)
 
 The Planck Length is a **fundamental constant**, which is just a physics word for 'very important number'.
 

@@ -27,7 +27,10 @@ Another cool thing you can do is save each step as a frame, which creates a cool
 
 Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: *how quickly can you guess what it's painting?*
 
-![A timelapse animation of a highly stylized watercolor painting of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.](https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.gif)
+<figure>
+    <img style="width: 1000px;" src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.gif" alt="A timelapse animation of a highly stylized watercolor painting of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+    <figcaption>An PaintTransformer timelapse of my Taliesin photo</figcaption>
+</figure>
 
 An PaintTransformer timelapse of my Taliesin photo
 
@@ -43,7 +46,7 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 I'm quite happy with how the Streamlit app turned out. A detail I'm particularly proud of is how the previous output fades out slightly while the new one is processing.
 
-![A streamlit app](images/colourlesstransformer_streamlit.webp)
+![A streamlit app](../../images/colourlesstransformer_streamlit.webp)
 
 ## Usage
 

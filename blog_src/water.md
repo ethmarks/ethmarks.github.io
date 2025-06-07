@@ -39,7 +39,7 @@ I disagree.
 <p>How does the water stay liquid? Wouldn't it get vaporized by the sun?</p>
 <p>It does. The water vapor is lighter than the ambient atmosphere so it floats upwards and collects into megastructures that we're calling 'clouds' that hover a few kilometers above the planet surface</p>
 <p>No seriously</p>
-<p>I am being serious. It's the white stuff in this picture <img src="images\earth_far_away.webp" alt="An image of the Earth from orbit"></p>
+<p>I am being serious. It's the white stuff in this picture <img src="../../images\earth_far_away.webp" alt="An image of the Earth from orbit"></p>
 <p>What!?</p>
 <p>Yeah, we found it hard to believe too</p>
 <p>So that's collected over billions of years, right?</p>

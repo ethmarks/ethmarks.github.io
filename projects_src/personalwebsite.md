@@ -33,7 +33,7 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.
 
-![A screenshot of my Github Pages dashboard](images/ghpages.webp)
+![A screenshot of my Github Pages dashboard](../../images/ghpages.webp)
 
 My Github Pages deployment workflow
 
@@ -78,7 +78,7 @@ I had a moderately specific vision for what I wanted my website to look like, an
 
 As of [May 14, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/x6c865vinn?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 96.4.
 
-![A Lighthouse analytic page showing 95 performance, 100 accessibility, 100 best practices, 91 SEO](images/lighthouse.webp)
+![A Lighthouse analytic page showing 95 performance, 100 accessibility, 100 best practices, 91 SEO](../../images/lighthouse.webp)
 
 The missing points in performance are due to the animations on the home screen that cause [Cumulative Layout Shift](https://web.dev/articles/cls). I could fix it by removing the animations, but I'm hesitant to sacrifice their aesthetic value for a small nominal performance gain.
 
