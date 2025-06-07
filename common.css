@@ -90,7 +90,6 @@ body {
     color: var(--color-text);
     margin: 0; /* Reset default body margin */
     font-size: var(--font-size-base);
-    animation: fadeIn 0.3s ease-in forwards;
     opacity: 0;
 }
 
