@@ -2,7 +2,7 @@ all:
   description: "All posts"
   definition: "All (adjective) - the entire quantity or extent"
   text: |
-    This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place.
+    This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place
 curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"
@@ -14,7 +14,7 @@ figments:
   text: |
     Posts tagged as Figments are creative writing pieces, such as short stories or poems
     <br>
-    Some works were created before this blog existed, so their publication dates may predate that of this site.
+    Some works were created before this blog existed, so their publication dates may predate that of this site
 elsewise:
   description: "Miscellaneous"
   definition: "Elsewise (adverb) - in a different way or manner; otherwise"
