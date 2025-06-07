@@ -178,7 +178,7 @@ time {
 
 a {
     color: var(--color-link);
-    text-decoration: none; /* Remove underline by default */
+    text-decoration: none;
     transition: color var(--transition-duration-fast) var(--transition-timing);
 }
 
@@ -461,11 +461,22 @@ iframe {
 code {
     font-family: monospace;
     background-color: var(--color-article-bg);
-    color: var(--color-accent-dark);
+    color: #239283;
     border-radius: var(--radius-sm);
     border: var(--border-standard);
     white-space: pre-wrap; /* Preserve whitespace and wrap lines */
     word-wrap: break-word; /* Break long words */
+}
+
+a code {
+    color: var(--color-accent-light);
+    text-decoration: none;
+    transition: color var(--transition-duration-fast) var(--transition-timing);
+}
+
+a code:hover, a code:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline; /* Add underline on hover/focus */
 }
 
 /* Post tags styling */
