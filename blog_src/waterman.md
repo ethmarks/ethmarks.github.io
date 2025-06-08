@@ -63,7 +63,7 @@ The equator on the Waterman is split into four separate lines that don't touch. 
 
 ### Relative North
 
-Almost every map projection sets North as being in the upwards direction.
+Almost every map projection sets North as being in the upwards direction. It looks odd otherwise.
 
 ![Maps looks weird upside down](../../images/flipped_map.webp)
 
