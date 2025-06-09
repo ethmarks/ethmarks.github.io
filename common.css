@@ -90,6 +90,7 @@ body {
     color: var(--color-text);
     margin: 0; /* Reset default body margin */
     font-size: var(--font-size-base);
+    overflow-wrap: break-word;
 }
 
 @keyframes fadeIn {
@@ -118,6 +119,7 @@ main {
 
 p {
     font-weight: var(--font-weight-normal);
+    word-break: normal;
 }
 
 h1 {
@@ -133,6 +135,7 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-break: break-all;
 }
 
 .nomint { /* Disable mint background */
