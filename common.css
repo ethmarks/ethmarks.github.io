@@ -138,6 +138,21 @@ h1 {
     word-break: break-all;
 }
 
+.animated-h1 {
+    animation: slideInFromTop 1s var(--transition-timing) both;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .nomint { /* Disable mint background */
     background: none;
     background-clip: none;
