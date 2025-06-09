@@ -16,18 +16,18 @@ customElements.define('ethan-header',
         constructor() {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
-
         shadow.innerHTML = `
             <style>
             header {
                 position: fixed;
                 top: 20px;
                 left: 50%;
-                transform: translateX(-50%) translate3d(0,0,0);
+                transform: translateX(-50%) translateY(-20px) translate3d(0,0,0);
                 width: 100vw;
                 max-width: 1000px;
                 padding: 10px 15px;
                 background: rgba(30, 30, 30, 0.2);
+                border: 1.5px solid rgba(255, 255, 255, 0.03);
                 border-radius: 40px;
                 backdrop-filter: blur(20px) saturate(0.8);
                 display: flex;
@@ -36,6 +36,90 @@ customElements.define('ethan-header',
                 color: white;
                 box-sizing: border-box;
                 z-index: 1000;
+                overflow: hidden;
+                animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            }
+
+            @keyframes flyInFromTop {
+                to {
+                    transform: translateX(-50%) translateY(0) translate3d(0,0,0);
+                }
+            }
+
+            .title-container {
+                background: linear-gradient(135deg, #ffffff, #8fdfd4);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                flex-shrink: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transform: translateX(-300px);
+                animation: flyInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+                opacity: 0.2;
+            }
+
+            .title-item:nth-child(2) { animation: increaseLeftMargin 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+            
+            @keyframes flyInFromLeft {
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes increaseLeftMargin {
+                from {
+                    margin-left: -20px;
+                }
+                to {
+                    margin-left: 10px;
+                }
+            }
+
+            .title-item {
+                font-family: "Sen", sans-serif;
+                font-size: clamp(1rem, 4vw, 2rem);
+            }
+            nav {
+                display: flex;
+                gap: 8px;
+                flex-shrink: 0;
+            }
+            a {
+                background: rgba(60, 60, 60, 0.1);
+                color: white;
+                border: 2px solid rgba(255, 255, 255, 0.03);
+                border-radius: 20px;
+                padding: 6px 12px;
+                font-family: "Sen", sans-serif;
+                font-size: clamp(0.75rem, 3vw, 1rem);
+                cursor: pointer;
+                transition: background-color 0.2s ease, transform 0.2s ease;
+                white-space: nowrap;
+                text-decoration: none;
+                transform: translateX(350px);
+                opacity: 0;
+                animation: flyInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            }
+            
+            /* Staggered animation delays for each button */
+            a:nth-child(1) { animation-delay: 0.1s; }
+            a:nth-child(2) { animation-delay: 0.2s; }
+            a:nth-child(3) { animation-delay: 0.3s; }
+            a:nth-child(4) { animation-delay: 0.4s; }
+
+            @keyframes flyInFromRight {
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            a:hover {
+                background-color: rgba(80, 80, 80, 0.7);
+                transform: translateY(-1px) scale(1.02);
             }
 
             @media (max-width: 768px) {
@@ -43,64 +127,19 @@ customElements.define('ethan-header',
                     max-width: 100vw;
                     border-radius: 0;
                 }
-            }
-
-            .title {
-                font-family: "Sen", sans-serif;
-                font-size: clamp(1rem, 4vw, 2rem);
-                flex-shrink: 1;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                margin-right: 10px;
-                background: linear-gradient(135deg, #ffffff, #8fdfd4);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            nav {
-                display: flex;
-                gap: 8px;
-                flex-shrink: 0;
-            }
-
-            a {
-                background: rgba(60, 60, 60, 0.1);
-                color: white;
-                border: 1px solid rgba(255, 255, 255, 0.03);
-                border-radius: 20px;
-                padding: 6px 12px;
-                font-family: "Sen", sans-serif;
-                font-size: clamp(0.75rem, 3vw, 1rem);
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-                white-space: nowrap;
-                text-decoration:none;
-            }
-
-            a:hover {
-                background-color: rgba(80, 80, 80, 0.7);
-            }
-            
-            @media (max-width: 400px) {
-                header {
-                    border-radius: 25px;
-                    padding: 8px 12px;
-                }
-                
                 nav {
-                    gap: 5px;
+                    gap: 4px;
                 }
-                
-                a {
-                    padding: 5px 10px;
+                .title-item:nth-child(2) {
+                    animation: none;
                 }
             }
             </style>
-
             <header>
-                <span class="title">Ethan Marks</span>
+                <span class="title-container">
+                    <span class="title-item">Ethan</span>
+                    <span class="title-item"> Marks</span>
+                </span>
                 <nav>
                     <a href="/">Home</a>
                     <a href="/about">About</a>
