@@ -16,18 +16,21 @@
             max-width: 85vw;
             width: 85vw;
         }
+
+        table {
+            margin: 0;
+        }
+
+        table,th {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <ethan-header></ethan-header>
 <main>
-<h1>About Me</h1>
-<article>
-    <section>
-    <cell>
-        <img class="bigimage" src="../images/ethan_bio.webp" alt="Ethan sits casually on a large rock underneath a tree">
-    </cell>
-</section>
+<h1 class="animated">About Me</h1>
+<article class="animated">
 
 <section>
     <cell>
@@ -35,26 +38,78 @@
         <p>My name is <b>Ethan Marks</b></p>
         <p>I'm a <b>software engineer</b></p>
         <p>I'm <b>14</b> years old</p>
-        <p>I live in <b>North Carolina</b></p>
     </cell>
 </section>
 
 <section>
     <cell>
         <h2>Interests</h2>
-        <p>I'm interested in programming, neural networks, automation, logistics, mathematics, cryptology, linguistics, and lots of other stuff</p>
+        <table class="compact">
+            <thead>
+                <tr><th>Interests</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Programming</td></tr>
+                <tr><td>Automation</td></tr>
+                <tr><td>Logistics</td></tr>
+                <tr><td>Mathematics</td></tr>
+                <tr><td>Cryptology</td></tr>
+                <tr><td>Linguistics</td></tr>
+            </tbody>
+            </table>
     </cell>
     <cell>
         <h2>Likes</h2>
-        <p>My favorite colour is <span class="mint"><b>Spearmint Teal</b></span></p>
-        <p>My favorite novel is <a href="https://www.goodreads.com/book/show/119322.The_Golden_Compass">The Golden Compass</a></p>
-        <p>My favorite map projection is the <a href="https://colourlessspearmint.github.io/blog/waterman">Waterman Butterfly</a></p>
-        <p>My favorite bird is the <a href="https://en.wikipedia.org/wiki/Starling">Starling</a></p>
-        <p>My favorite foreign language is <a href="https://en.wikipedia.org/wiki/Bulgarian_language">Bulgarian</a></p>
+        <table class="compact gridlines">
+        <thead>
+            <tr>
+            <th>Category</th>
+            <th>My Favorite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Colour</td>
+                <td><span class="mint"><b>Spearmint Teal</b></span></td>
+            </tr>
+            <tr>
+                <td>Novel</td>
+                <td><a href="https://www.goodreads.com/book/show/119322.The_Golden_Compass">The Golden Compass</a></td>
+            </tr>
+            <tr>
+                <td>Map Projection</td>
+                <td><a href="https://colourlessspearmint.github.io/blog/waterman">Waterman Butterfly</a></td>
+            </tr>
+            <tr>
+                <td>Bird</td>
+                <td><a href="https://en.wikipedia.org/wiki/Starling">Starling</a></td>
+            </tr>
+            <tr>
+                <td>Foreign Language</td>
+                <td><a href="https://en.wikipedia.org/wiki/Bulgarian_language">Bulgarian</a></td>
+            </tr>
+            <tr>
+                <td>Logical Operator</td>
+                <td><a href="https://en.wikipedia.org/wiki/Exclusive_or">XOR</a></td>
+            </tr>
+        </tbody>
+        </table>
     </cell>
     <cell>
         <h2>Hobbies</h2>
-        <p>I enjoy programming, reading, and hiking in new places. I've been to 48/50 US states, 5/10 Canadian provinces, and 1/31 Mexican states</p>
+        <table class="compact">
+            <thead>
+                <tr><th>Hobbies</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Coding <a href="../projects/">things</a></td></tr>
+                <tr><td>Reading <a href="https://www.goodreads.com/author/show/3618.Philip_Pullman">novels</a> and <a href="https://www.goodreads.com/author/show/8352985.Sam_Hughes?from_search=true&from_srp=true">sci-fi short stories</a></td></tr>
+                <tr><td>Playing <a href="https://en.wikipedia.org/wiki/Factorio">Factorio</a></td></tr>
+                <tr><td><a href="https://en.wikipedia.org/wiki/Special:Random">Wikipedia Roulette</a> (random article button)</td></tr>
+                <tr><td>Memorizing every <a href="https://xkcd.com/">xkcd</a> comic</td></tr>
+                <tr><td>Visiting <a href="https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States">National Parks</a> (I've been to 34 so far)</td></tr>
+            </tbody>
+            </table>
     </cell>
 </section>
 
@@ -65,27 +120,40 @@
     </cell>
     <cell>
         <h2>Job</h2>
-        <p>I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash new operating systems, and resell them for profit</p>
+        <p>I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash the <a href="https://chromeos.google/products/chromeos-flex/">ChromeOS Flex</a> operating system, and resell them for profit</p>
     </cell>
 </section>
 
 <section>
     <cell>
         <h2>Skills</h2>
-        <p><a href="https://www.python.org/">Python</a></p>
-        <p><a href="https://git-scm.com/">Git</a></p>
-        <p><a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, and <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></p>
-        <p><a href="https://unity.com/">Unity</a> and <a href="https://godotengine.org/">Godot</a></p>
-        <p><a href="https://www.adobe.com/products/photoshop.html">Photoshop</a>, <a href="https://www.gimp.org/">GIMP</a>, and <a href="https://inkscape.org/">Inkscape</a></p>
-        <p><a href="https://www.blender.org/">Blender</a> and <a href="https://www.creality.com/products/ender-3-pro-3d-printer">3D printing</a></p>
+        <table class="compact">
+            <thead>
+                <tr><th>Skills</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><a href="https://www.python.org/">Python</a></td></tr>
+                <tr><td><a href="https://git-scm.com/">Git</a>, <a href="https://github.com/">GitHub</a></td></tr>
+                <tr><td><a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></td></tr>
+                <tr><td><a href="https://unity.com/">Unity</a>, <a href="https://godotengine.org/">Godot</a></td></tr>
+                <tr><td><a href="https://www.adobe.com/products/photoshop.html">Photoshop</a>, <a href="https://www.gimp.org/">GIMP</a>, <a href="https://inkscape.org/">Inkscape</a></td></tr>
+            </tbody>
+        </table>
     </cell>
     <cell>
         <h2>Experience</h2>
-        <p>I've been coding since I was 7 years old, when I made my first program in <a href="https://scratch.mit.edu/">Scratch</a></p>
-        <p>I developed and published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a></p>
-        <p>I designed my <a href="../projects/personalwebsite">personal website</a> from scratch</p>
-        <p>I reimplemented <a href="../projects/eliza">ELIZA</a>, an early AI chatbot, to run on modern hardware</p>
-        <p>I programmed <a href="../projects/asciiglobe">ASCII-Globe</a>, a novelty cartographic rendering engine that generates text-based maps of the Earth</p>
+        <table class="compact">
+            <thead>
+                <tr><th>Experience</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Coding since age 7 (my first program was written in <a href="https://scratch.mit.edu/">Scratch</a>)</td></tr>
+                <tr><td>Developed and published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a></td></tr>
+                <tr><td>Built my <a href="../projects/personalwebsite">personal website</a> from scratch</td></tr>
+                <tr><td>Modified a <a href="../projects/eliza">1966 chatbot</a> to run on modern hardware</td></tr>
+                <tr><td>Developed a <a href="ASCII-Globe">text-based cartographic rendering engine</a></td></tr>
+            </tbody>
+        </table>
     </cell>
 </section>
 
@@ -94,9 +162,9 @@
         <h2>Cat</h2>
         <p>I have a cat named Toby</p>
         <p>He is 16 years old and blind</p>
-        <p>His hobbies include stealing my chicken nuggets as well as pretending to be an air raid siren</p>
+        <p>His hobbies include stealing my chicken nuggets as well as imitating an air raid siren</p>
         <figure>
-            <img src="../images/toby.webp" alt="Toby, a fluffy gray Persian cat, looks heroically upwards by a tranquil green pond.">
+            <img class="bigimage" src="../images/toby.webp" alt="Toby, a fluffy gray Persian cat, curiously surveys a desert (White Sands National Park) while being petted by Ethan, a brown-haired fair-skinned teenage boy.">
         </figure>
     </cell>
 </section>
