@@ -16,16 +16,16 @@
 <body>
 <ethan-header></ethan-header>
 <main>
-<h1 class="animated-h1">{{ title }}</h1>
-<time datetime="{{ date }}">{{ date_human }}</time>
+<h1 class="animated">{{ title }}</h1>
+<time class="animated" datetime="{{ date }}">{{ date_human }}</time>
 {% if tags %}
 <div class="post-tags">
   {% for tag in tags %}
-    <a class="post-tag" href="/blog/{{ tag }}/">#{{ tag }}</a>{% if not loop.last %} {% endif %}
+    <a class="post-tag animated" href="/blog/{{ tag }}/">#{{ tag }}</a>{% if not loop.last %} {% endif %}
   {% endfor %}
 </div>
 {% endif %}
-<article>
+<article class="animated">
 {{ content | safe }}
 </article>
 </main>

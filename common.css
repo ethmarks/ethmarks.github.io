@@ -138,7 +138,7 @@ h1 {
     word-break: break-all;
 }
 
-.animated-h1 {
+h1.animated {
     animation: slideInFromTop 1s var(--transition-timing) both;
 }
 
@@ -185,6 +185,21 @@ article {
     transition: var(--transition-transform-shadow);
 }
 
+@keyframes articleSlideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+article.animated {
+    animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
+}
+
 time {
     font-family: var(--font-secondary);
     font-size: clamp(0.75rem, 4vw, 1.25rem);
@@ -192,6 +207,21 @@ time {
     color: var(--color-accent-medium);
     display: block;
     margin-bottom: var(--spacing-sm);
+}
+
+@keyframes timeSlideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+time.animated {
+    animation: timeSlideInFromLeft 0.8s var(--transition-timing) both;
 }
 
 a {
@@ -525,4 +555,25 @@ a code:hover, a code:focus {
     color: var(--color-background);
     border-color: var(--color-accent-light);
     text-decoration: none;
+}
+
+.post-tag.animated {
+    opacity: 0;
+    transform: translateX(60px);
+    animation: postTagSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Staggered animation delays for each tag */
+.post-tag.animated:nth-child(1) { animation-delay: 0.1s; }
+.post-tag.animated:nth-child(2) { animation-delay: 0.2s; }
+.post-tag.animated:nth-child(3) { animation-delay: 0.3s; }
+.post-tag.animated:nth-child(4) { animation-delay: 0.4s; }
+.post-tag.animated:nth-child(5) { animation-delay: 0.5s; }
+.post-tag.animated:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes postTagSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

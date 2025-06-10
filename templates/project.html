@@ -16,16 +16,16 @@
 <body>
 <ethan-header></ethan-header>
 <main>
-<h1 class="animated-h1">{{ title }}</h1>
+<h1 class="animated">{{ title }}</h1>
 {% if link %}
 <external-link {% if link_icon %}icon="{{ link_icon }}"{% endif %} href="{{ link }}">
     <span slot="title">{{ link_name if link_name else 'Project Link' }}</span>
 </external-link>
 {% endif %}
 <div class="post-tags">
-<a class="post-tag" href="/projects">#projects</a>
+<a class="post-tag animated" href="/projects">#projects</a>
 </div>
-<article>
+<article class="animated">
 {{ content | safe }}
 </article>
 </main>
