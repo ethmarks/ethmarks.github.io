@@ -352,7 +352,6 @@ table.compact {
 table.compact th,
 table.compact td {
     padding: var(--spacing-xs) var(--spacing-md);
-    font-size: 0.92em;
 }
 table.compact th {
     letter-spacing: 0.5px;
@@ -362,18 +361,18 @@ table.compact tr.accent-row td {
 }
 
 @media (max-width: 768px) {
-    table {
-        overflow-x: auto; /* Allow horizontal scrolling for tables */
-        display: block; /* Ensure proper scrolling behavior */
+    table.scroll {
+        overflow-x: auto;
+        display: block;
     }
     table:hover {
-        transform: none; /* Disable hover transform */
-        box-shadow: var(--shadow-table); /* Keep default shadow */
+        transform: none;
+        box-shadow: var(--shadow-table);
     }
 
     tbody tr:hover td {
-        background-color: transparent; /* Disable row hover background */
-        color: inherit; /* Keep default text color */
+        background-color: transparent;
+        color: inherit;
     }
     
     table.compact {

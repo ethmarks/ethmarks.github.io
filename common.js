@@ -644,3 +644,15 @@ customElements.define('scroll-indicator',
         }
     });
 })();
+
+// Add 'scroll' class to tables wider than 90vw
+(function addScrollClassToWideTables() {
+    window.addEventListener('DOMContentLoaded', function() {
+        var vw90 = window.innerWidth * 0.9;
+        document.querySelectorAll('table').forEach(function(table) {
+            if (table.scrollWidth > vw90) {
+                table.classList.add('scroll');
+            }
+        });
+    });
+})();
