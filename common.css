@@ -200,6 +200,13 @@ article.animated {
     animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
 }
 
+@media (max-width: 768px) {
+    article {
+        width: 90vw; /* article takes more width */
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
+
 time {
     font-family: var(--font-secondary);
     font-size: clamp(0.75rem, 4vw, 1.25rem);
@@ -282,11 +289,7 @@ img {
     border-radius: var(--radius-md);
 }
 
-.longtext {
-    overflow-wrap: break-word;
-    hyphens: auto; /* Add auto hyphens for better word breaking */
-}
-
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: separate; /* Keep separate for outer radius + overflow */
@@ -297,6 +300,7 @@ table {
     box-shadow: var(--shadow-table);
     border: var(--border-standard);
     transition: var(--transition-transform-shadow); /* Use combined */
+    overflow: hidden;
 }
 
 table:hover {
@@ -341,12 +345,23 @@ tr.accent-row td {
     padding-left: calc(var(--spacing-lg) - 3px); /* Adjust padding for border */
 }
 
-@media (max-width: 768px) {
-    article {
-        width: 90vw; /* article takes more width */
-        padding: var(--spacing-md) var(--spacing-lg);
-    }
+table.compact {
+    font-size: 0.92em;
+    margin: var(--spacing-sm) 0;
+}
+table.compact th,
+table.compact td {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 0.92em;
+}
+table.compact th {
+    letter-spacing: 0.5px;
+}
+table.compact tr.accent-row td {
+    padding-left: calc(var(--spacing-md) - 2px);
+}
 
+@media (max-width: 768px) {
     table {
         overflow-x: auto; /* Allow horizontal scrolling for tables */
         display: block; /* Ensure proper scrolling behavior */
@@ -359,6 +374,10 @@ tr.accent-row td {
     tbody tr:hover td {
         background-color: transparent; /* Disable row hover background */
         color: inherit; /* Keep default text color */
+    }
+    
+    table.compact {
+        font-size: 0.88em;
     }
 }
 
