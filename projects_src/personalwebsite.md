@@ -63,27 +63,18 @@ I had a moderately specific vision for what I wanted my website to look like, an
 - **Body Font**: I perused the *entire* [Google Fonts](https://fonts.google.com/) catalogue to find a sleek [neo-grotesque](https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque) font that supported [Latin](https://en.wikipedia.org/wiki/Latin_script) and [Cyrillic](https://en.wikipedia.org/wiki/Cyrillic_script). I finally settled on [Nunito](https://fonts.google.com/specimen/Nunito). (Заслужаваше си, защото вече мога да имам български текст!)
 - **Header Font**: I chose [Sen](https://fonts.google.com/specimen/Sen) for the headers because it looks stylish, clean, and I like the look of the lowercase t.
 
-### Animations
+### Special Effects
 
-- **Page Load**: Every time a page is loaded, the content smoothly fades in from transparency. This is accomplished giving, `<body>` the following animation: `animation: fadeIn 0.3s ease-in forwards`.
-- **Home Page**: I made heavy use of animations on my [Home page](https://colourlessspearmint.github.io/). The intro image, header, and subheader all slide in from different directions. Each word in the title text clicks in place with a staggered falling effect. The navigation cards gently fade and rise. I'm very happy with how it turned out.
-
-### Effects
-
-- **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to efficiently take a gaussian blur over a large sample space, I want to be the first to know so I can add a subtle blur to the `<article>` styles without tanking performance.
-- **Shadows**: Some Interactive elements (e.g. buttons) have subtle drop shadows.
-- **Borders**: Many elements (buttons, images, articles) have this border `border: 1px solid rgba(255, 255, 255, 0.1)`; it's 1 pixel thick, 10% opaque, and pure white.
-- **Rounded Corners**: Many elements have slightly rounded corners. The radius is defined with `border-radius: clamp(8px, 3vw, 12px)`.
+- **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a [gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) over a large sample space, I want to be the first to know so I can add a subtle blur to the `<article>` styles without tanking performance.
+- **Tilt**: If you hover over the cards on my home page, they'll respond to the mouse by tilting in 3D. I used [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/) for this 
 
 ## Lighthouse
 
-As of [May 14, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/x6c865vinn?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 96.4.
+As of [June 9, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 99.75.
 
-![A Lighthouse analytic page showing 95 performance, 100 accessibility, 100 best practices, 91 SEO](../../images/lighthouse.webp)
+![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](../../images/lighthouse.webp)
 
-The missing points in performance are due to the animations on the home screen that cause [Cumulative Layout Shift](https://web.dev/articles/cls). I could fix it by removing the animations, but I'm hesitant to sacrifice their aesthetic value for a small nominal performance gain.
-
-The missing points in SEO are because I don't have `<meta>` description tags on every page. I'm actively working on fixing this.
+It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.
 
 ## Privacy
 
@@ -91,7 +82,7 @@ This site does not use cookies, trackers, analytics, or any external telemetry t
 
 ## Accessibility
 
-This site is designed to be accessible to as many users as possible. Before each [git push](https://git-scm.com/docs/git-push), I test every single page in Firefox's [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/) to ensure that the site remains functional on a variety of devices. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text.
+This site is designed to be accessible to as many users as possible. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text. Also, before each [git push](https://git-scm.com/docs/git-push) I test every single page in Firefox's [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/) to ensure that the site remains functional on different devices and screens.
 
 ## Conclusion
 

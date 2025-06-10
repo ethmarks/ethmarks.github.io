@@ -63,27 +63,19 @@
 <li><strong>Body Font</strong>: I perused the <em>entire</em> <a href="https://fonts.google.com/">Google Fonts</a> catalogue to find a sleek <a href="https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque">neo-grotesque</a> font that supported <a href="https://en.wikipedia.org/wiki/Latin_script">Latin</a> and <a href="https://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic</a>. I finally settled on <a href="https://fonts.google.com/specimen/Nunito">Nunito</a>. (Заслужаваше си, защото вече мога да имам български текст!)</li>
 <li><strong>Header Font</strong>: I chose <a href="https://fonts.google.com/specimen/Sen">Sen</a> for the headers because it looks stylish, clean, and I like the look of the lowercase t.</li>
 </ul>
-<h3>Animations</h3>
+<h3>Special Effects</h3>
 <ul>
-<li><strong>Page Load</strong>: Every time a page is loaded, the content smoothly fades in from transparency. This is accomplished giving, <code>&lt;body&gt;</code> the following animation: <code>animation: fadeIn 0.3s ease-in forwards</code>.</li>
-<li><strong>Home Page</strong>: I made heavy use of animations on my <a href="https://colourlessspearmint.github.io/">Home page</a>. The intro image, header, and subheader all slide in from different directions. Each word in the title text clicks in place with a staggered falling effect. The navigation cards gently fade and rise. I'm very happy with how it turned out.</li>
-</ul>
-<h3>Effects</h3>
-<ul>
-<li><strong>Blur</strong>: I love <a href="https://css.glass/">glassmorphic</a> blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to efficiently take a gaussian blur over a large sample space, I want to be the first to know so I can add a subtle blur to the <code>&lt;article&gt;</code> styles without tanking performance.</li>
-<li><strong>Shadows</strong>: Some Interactive elements (e.g. buttons) have subtle drop shadows.</li>
-<li><strong>Borders</strong>: Many elements (buttons, images, articles) have this border <code>border: 1px solid rgba(255, 255, 255, 0.1)</code>; it's 1 pixel thick, 10% opaque, and pure white.</li>
-<li><strong>Rounded Corners</strong>: Many elements have slightly rounded corners. The radius is defined with <code>border-radius: clamp(8px, 3vw, 12px)</code>.</li>
+<li><strong>Blur</strong>: I love <a href="https://css.glass/">glassmorphic</a> blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a <a href="https://en.wikipedia.org/wiki/Gaussian_blur">gaussian blur</a> over a large sample space, I want to be the first to know so I can add a subtle blur to the <code>&lt;article&gt;</code> styles without tanking performance.</li>
+<li><strong>Tilt</strong>: If you hover over the cards on my home page, they'll respond to the mouse by tilting in 3D. I used <a href="https://micku7zu.github.io/vanilla-tilt.js/">vanilla-tilt.js</a> for this </li>
 </ul>
 <h2>Lighthouse</h2>
-<p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/x6c865vinn?form_factor=desktop">May 14, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse">Lighthouse</a> score of 96.4.</p>
-<img alt="A Lighthouse analytic page showing 95 performance, 100 accessibility, 100 best practices, 91 SEO" src="../../images/lighthouse.webp" />
-<p>The missing points in performance are due to the animations on the home screen that cause <a href="https://web.dev/articles/cls">Cumulative Layout Shift</a>. I could fix it by removing the animations, but I'm hesitant to sacrifice their aesthetic value for a small nominal performance gain.</p>
-<p>The missing points in SEO are because I don't have <code>&lt;meta&gt;</code> description tags on every page. I'm actively working on fixing this.</p>
+<p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop">June 9, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse">Lighthouse</a> score of 99.75.</p>
+<img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="../../images/lighthouse.webp" />
+<p>It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.</p>
 <h2>Privacy</h2>
 <p>This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and harvesting it sounds complicated. Your data remains yours because I don't want it and can't figure out how to get it.</p>
 <h2>Accessibility</h2>
-<p>This site is designed to be accessible to as many users as possible. Before each <a href="https://git-scm.com/docs/git-push">git push</a>, I test every single page in Firefox's <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/">Responsive Design Mode</a> to ensure that the site remains functional on a variety of devices. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text.</p>
+<p>This site is designed to be accessible to as many users as possible. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text. Also, before each <a href="https://git-scm.com/docs/git-push">git push</a> I test every single page in Firefox's <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/">Responsive Design Mode</a> to ensure that the site remains functional on different devices and screens.</p>
 <h2>Conclusion</h2>
 <p>My personal website is one of my favorite projects I've ever made. It's aesthetically pleasing, serves a purpose, was fun to make, and forced me to learn new programming concepts.</p>
 <p>I'm proud of my little corner on the web, and I hope you enjoy it as much as I do. Thanks for reading.</p>
