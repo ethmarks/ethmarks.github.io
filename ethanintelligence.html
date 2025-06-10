@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A joke AI chat interface for a clone of Ethan Marks">
     <title>Ethan Intelligence</title>
-    <script src="../common.js"></script>
+    <meta name="description" content="A joke AI chat interface for a clone of Ethan Marks">
+    <link rel="icon" href="images/ei-favicon.ico" type="image/x-icon"/>
+    <script src="common.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik&display=swap');
         * {
@@ -18,12 +19,12 @@
 
         body {
             background-color: #0a0b21;
-            padding: 20px;
             min-height: 100vh;
             color: white;
         }
 
         .page-container {
+            padding-top: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -573,8 +574,8 @@
         </div>
     </div>    
     <p style="text-align: center; color: #7f8adb; font-size: 14px; margin-top: 20px;">Inspired by when Evangeline called me "EthanGPT"</p>
-    <ethan-footer></ethan-footer>
     </div>
+    <ethan-footer></ethan-footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
