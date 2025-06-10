@@ -379,7 +379,7 @@ customElements.define('external-link',
                         flex-wrap: wrap;
                         gap: var(--spacing-md);
                         justify-content: center; /* Center links if they wrap */
-                        margin-top: var(--spacing-lg);
+                        margin-bottom: var(--spacing-md);
                     }
 
                     .icon {
@@ -415,6 +415,18 @@ customElements.define('external-link',
                         position: relative;
                         overflow: hidden;
                         transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+                        animation: externalLinkReveal 1s var(--transition-timing) forwards;
+                    }
+
+                    @keyframes externalLinkReveal {
+                        from {
+                            transform: translateX(-30px) scale(0.9);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0) scale(1);
+                            opacity: 1;
+                        }
                     }
 
                     a:hover {
@@ -440,7 +452,6 @@ customElements.define('external-link',
                         transition: transform 0.5s ease; /* Slower shimmer transition */
                         opacity: 0.8;
                     }
-
 
                     a:hover::after {
                         transform: translateX(250%) skewX(-20deg);
