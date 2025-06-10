@@ -17,6 +17,7 @@
     --color-table-header-bg: rgba(20, 20, 20, 0.8);
     --color-table-row-hover: rgba(50, 50, 50, 0.5);
     --color-accent-transparent-10: rgba(143, 223, 212, 0.1);
+    --color-accent-transparent-15: rgba(143, 223, 212, 0.15);
     --color-accent-transparent-20: rgba(143, 223, 212, 0.2);
     --color-button-text: #111;
     --color-chat-sender-bg: #3a3a3a;
@@ -112,7 +113,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     flex-direction: column;
     padding: 0 var(--spacing-md); /* Add some horizontal padding */
 }
@@ -594,4 +594,48 @@ a code:hover, a code:focus {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.random-blog-btn-container {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.random-blog-btn {
+    background: var(--color-accent-transparent-15);
+    color: var(--color-accent-dark);
+    border: 1px solid var(--color-accent-dark);
+    border-radius: var(--radius-round);
+    padding: 0.5em 1.5em;
+    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    box-shadow: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.random-blog-btn:hover, .random-blog-btn:focus {
+    background: var(--color-accent-transparent-20);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: none;
+    outline: 2px solid var(--color-accent-dark);
+}
+
+@keyframes randomBtnSlideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.random-blog-btn-container.animated {
+    animation: randomBtnSlideInFromLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
 }
