@@ -5,6 +5,7 @@ import re
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 import xml.etree.ElementTree as ET
+import json
 
 SRC_DIR = "blog_src"
 OUT_DIR = "blog"
@@ -273,6 +274,104 @@ def main():
     sitemap_path = "sitemap.xml"
     tree = ET.ElementTree(urlset)
     tree.write(sitemap_path, encoding="utf-8", xml_declaration=True)
+
+    # --- INFO.JSON GENERATION ---
+    info_entries = []
+
+    # Static pages: home, about, blog index, projects index (first in list)
+    info_entries.append({
+        "url": f"{WEBSITE_URL}/",
+        "title": "Home",
+        "tags": [],
+        "date": None,
+        "description": "The personal website of Ethan Marks (@ColourlessSpearmint)",
+        "category": "static",
+        "slug": "home"
+    })
+    info_entries.append({
+        "url": f"{WEBSITE_URL}/about/",
+        "title": "About",
+        "tags": [],
+        "date": None,
+        "description": "About Ethan Marks (@ColourlessSpearmint)",
+        "category": "static",
+        "slug": "about"
+    })
+    info_entries.append({
+        "url": f"{WEBSITE_URL}/blog/",
+        "title": "Blog Index",
+        "tags": [],
+        "date": None,
+        "description": "Main blog index page.",
+        "category": "static",
+        "slug": "index"
+    })
+    info_entries.append({
+        "url": f"{WEBSITE_URL}/projects/",
+        "title": "Projects Index",
+        "tags": [],
+        "date": None,
+        "description": "Main projects index page.",
+        "category": "static",
+        "slug": "projects-index"
+    })
+
+    # Blog posts
+    for post in posts:
+        slug = post.get("slug", os.path.splitext(os.path.basename(post.get("out_path", "")))[0])
+        url = f"{WEBSITE_URL}/blog/{slug}/"
+        date_obj = post["date"]
+        if not hasattr(date_obj, 'strftime'):
+            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+        info_entries.append({
+            "url": url,
+            "title": post.get("title", ""),
+            "tags": post.get("tags", []),
+            "date": date_obj.strftime("%Y-%m-%d"),
+            "description": post.get("description", "A post from Ethan's personal website blog."),
+            "category": "blog",
+            "slug": slug
+        })
+
+    # Tag pages
+    for tag, posts_list in tag_posts.items():
+        url = f"{WEBSITE_URL}/blog/{tag}/"
+        info_entries.append({
+            "url": url,
+            "title": tag.capitalize(),
+            "tags": [tag],
+            "date": None,
+            "description": tag_data.get(tag, {}).get("description", ""),
+            "category": "tag",
+            "slug": tag
+        })
+
+    # Projects
+    for project in projects:
+        slug = project.get("slug", os.path.splitext(os.path.basename(project.get("out_path", "")))[0])
+        url = f"{WEBSITE_URL}/projects/{slug}/"
+        date_val = project.get("date")
+        if date_val is not None:
+            if not hasattr(date_val, 'strftime'):
+                date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
+            else:
+                date_obj = date_val
+            date_str = date_obj.strftime("%Y-%m-%d")
+        else:
+            date_str = None
+        info_entries.append({
+            "url": url,
+            "title": project.get("title", "Untitled Project"),
+            "tags": project.get("tags", []),
+            "date": date_str,
+            "description": project.get("description", "A project by Ethan."),
+            "category": "project",
+            "slug": slug
+        })
+
+    info_path = "sitemap.json"
+    with open(info_path, "w", encoding="utf-8") as f:
+        json.dump(info_entries, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
     main()

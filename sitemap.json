@@ -1,0 +1,313 @@
+[
+  {
+    "url": "https://colourlessspearmint.github.io/",
+    "title": "Home",
+    "tags": [],
+    "date": null,
+    "description": "The personal website of Ethan Marks (@ColourlessSpearmint)",
+    "category": "static",
+    "slug": "home"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/about/",
+    "title": "About",
+    "tags": [],
+    "date": null,
+    "description": "About Ethan Marks (@ColourlessSpearmint)",
+    "category": "static",
+    "slug": "about"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/",
+    "title": "Blog Index",
+    "tags": [],
+    "date": null,
+    "description": "Main blog index page.",
+    "category": "static",
+    "slug": "index"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/",
+    "title": "Projects Index",
+    "tags": [],
+    "date": null,
+    "description": "Main projects index page.",
+    "category": "static",
+    "slug": "projects-index"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/backronyms/",
+    "title": "Backronyms",
+    "tags": [
+      "elsewise"
+    ],
+    "date": "2025-06-09",
+    "description": "A fun list of backronyms",
+    "category": "blog",
+    "slug": "backronyms"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/collectivenoun/",
+    "title": "Collective Nouns",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-04-23",
+    "description": "A collection of amusing and obscure collective nouns for animals.",
+    "category": "blog",
+    "slug": "collectivenoun"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/earlyai/",
+    "title": "Early AI",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-05-11",
+    "description": "A personal history and overview of early chatbots and the evolution of artificial intelligence.",
+    "category": "blog",
+    "slug": "earlyai"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/valueless-vocab/",
+    "title": "Floccinaucinihilipilification",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-05-14",
+    "description": "A playful look at the word floccinaucinihilipilification, its meaning, and usage.",
+    "category": "blog",
+    "slug": "valueless-vocab"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/frequency/",
+    "title": 8.7539319,
+    "tags": [
+      "figments"
+    ],
+    "date": "2024-09-14",
+    "description": "A fictional police report and investigation into a mysterious frequency and a missing scientist.",
+    "category": "blog",
+    "slug": "frequency"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/industry/",
+    "title": "Symphony of Industry",
+    "tags": [
+      "figments"
+    ],
+    "date": "2024-04-29",
+    "description": "A poem and reflection on the sights and sounds of industrial progress and machinery.",
+    "category": "blog",
+    "slug": "industry"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/lastsatellite/",
+    "title": "The Last Satellite",
+    "tags": [
+      "figments"
+    ],
+    "date": "2024-07-30",
+    "description": "A short story about the last satellite orbiting a post-human Earth and its final descent.",
+    "category": "blog",
+    "slug": "lastsatellite"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/quanth/",
+    "title": "I have invented a new measurement system",
+    "tags": [
+      "elsewise"
+    ],
+    "date": "2025-04-24",
+    "description": "A whimsical proposal for a new measurement system based on Planck lengths and quantum physics.",
+    "category": "blog",
+    "slug": "quanth"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/timeunits/",
+    "title": "Units of Time",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-05-09",
+    "description": "A fun list of obscure and historical units of time, from the jiffy to the lustrum.",
+    "category": "blog",
+    "slug": "timeunits"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/tsevhu/",
+    "title": "Tsevhu",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-04-26",
+    "description": "An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.",
+    "category": "blog",
+    "slug": "tsevhu"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/username/",
+    "title": "My Username",
+    "tags": [
+      "elsewise"
+    ],
+    "date": "2025-06-07",
+    "description": "An explanation of my username, ColourlessSpearmint",
+    "category": "blog",
+    "slug": "username"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/water/",
+    "title": "Fish swim in WHAT?!",
+    "tags": [
+      "figments"
+    ],
+    "date": "2025-04-28",
+    "description": "A humorous sci-fi take on Earth's naming conventions and the prevalence of water and aquatic life.",
+    "category": "blog",
+    "slug": "water"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/waterman/",
+    "title": "The Waterman Butterfly",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-04-25",
+    "description": "An exploration of the Waterman Butterfly map projection, its advantages, disadvantages, and visual appeal.",
+    "category": "blog",
+    "slug": "waterman"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/whitesands/",
+    "title": "White Sands National Park",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-05-01",
+    "description": "A personal travelogue and review of White Sands National Park, its unique gypsum dunes, activities, and quirks.",
+    "category": "blog",
+    "slug": "whitesands"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/all/",
+    "title": "All",
+    "tags": [
+      "all"
+    ],
+    "date": null,
+    "description": "All posts",
+    "category": "tag",
+    "slug": "all"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/curios/",
+    "title": "Curios",
+    "tags": [
+      "curios"
+    ],
+    "date": null,
+    "description": "Interesting things I've found",
+    "category": "tag",
+    "slug": "curios"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/figments/",
+    "title": "Figments",
+    "tags": [
+      "figments"
+    ],
+    "date": null,
+    "description": "Creative writing",
+    "category": "tag",
+    "slug": "figments"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/elsewise/",
+    "title": "Elsewise",
+    "tags": [
+      "elsewise"
+    ],
+    "date": null,
+    "description": "Miscellaneous",
+    "category": "tag",
+    "slug": "elsewise"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/anagram/",
+    "title": "Anagram Animator",
+    "tags": [
+      "projects"
+    ],
+    "date": "2025-04-18",
+    "description": "A simple little Jupyter notebook to create anagram GIFs",
+    "category": "project",
+    "slug": "anagram"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/asciiglobe/",
+    "title": "ASCII-Globe",
+    "tags": [
+      "projects"
+    ],
+    "date": "2025-01-18",
+    "description": "A text-based cartographic rendering engine that uses NASA satellite data",
+    "category": "project",
+    "slug": "asciiglobe"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/colourlesstransformer/",
+    "title": "ColourlessTransformer",
+    "tags": [
+      "projects"
+    ],
+    "date": "2024-12-22",
+    "description": "My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses",
+    "category": "project",
+    "slug": "colourlesstransformer"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/eliza/",
+    "title": "Eliza",
+    "tags": [
+      "projects"
+    ],
+    "date": "2024-12-17",
+    "description": "My implementation of the 1966 chatbot Eliza",
+    "category": "project",
+    "slug": "eliza"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/personalwebsite/",
+    "title": "Personal Website",
+    "tags": [
+      "projects"
+    ],
+    "date": "2025-05-14",
+    "description": "The website you're reading right now",
+    "category": "project",
+    "slug": "personalwebsite"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/screamcipher/",
+    "title": "Scream Cipher Converter",
+    "tags": [
+      "projects"
+    ],
+    "date": "2025-06-06",
+    "description": "An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'",
+    "category": "project",
+    "slug": "screamcipher"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/thessa/",
+    "title": "Thessa",
+    "tags": [
+      "projects"
+    ],
+    "date": "2025-05-21",
+    "description": "An AI-powered thesaurus that uses the Gemini API",
+    "category": "project",
+    "slug": "thessa"
+  }
+]
