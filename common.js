@@ -58,6 +58,16 @@ customElements.define('ethan-header',
                 transform: translateX(-300px);
                 animation: flyInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
                 opacity: 0.2;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .title-container:focus-visible {
+                outline: 2px solid var(--color-focus-outline, #8fdfd4);
+                outline-offset: 2px;
             }
 
             .title-item:nth-child(2) { animation: increaseLeftMargin 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
@@ -87,7 +97,7 @@ customElements.define('ethan-header',
                 gap: 8px;
                 flex-shrink: 0;
             }
-            a {
+            nav a {
                 background: rgba(60, 60, 60, 0.1);
                 color: white;
                 border: 2px solid rgba(255, 255, 255, 0.03);
@@ -105,10 +115,10 @@ customElements.define('ethan-header',
             }
             
             /* Staggered animation delays for each button */
-            a:nth-child(1) { animation-delay: 0.1s; }
-            a:nth-child(2) { animation-delay: 0.2s; }
-            a:nth-child(3) { animation-delay: 0.3s; }
-            a:nth-child(4) { animation-delay: 0.4s; }
+            nav a:nth-child(1) { animation-delay: 0.1s; }
+            nav a:nth-child(2) { animation-delay: 0.2s; }
+            nav a:nth-child(3) { animation-delay: 0.3s; }
+            nav a:nth-child(4) { animation-delay: 0.4s; }
 
             @keyframes flyInFromRight {
                 to {
@@ -117,7 +127,7 @@ customElements.define('ethan-header',
                 }
             }
             
-            a:hover {
+            nav a:hover {
                 background-color: rgba(80, 80, 80, 0.7);
                 transform: translateY(-1px) scale(1.02);
             }
@@ -136,10 +146,10 @@ customElements.define('ethan-header',
             }
             </style>
             <header>
-                <span class="title-container">
+                <a href="/" class="title-container" tabindex="0" aria-label="Home">
                     <span class="title-item">Ethan</span>
                     <span class="title-item"> Marks</span>
-                </span>
+                </a>
                 <nav>
                     <a href="/">Home</a>
                     <a href="/about">About</a>
