@@ -4,6 +4,7 @@ import yaml
 import re
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
+import xml.etree.ElementTree as ET
 
 SRC_DIR = "blog_src"
 OUT_DIR = "blog"
@@ -233,6 +234,45 @@ def main():
         f.write(projects_template.render(
             projects=projects_sorted,
         ))
+
+    # --- SITEMAP GENERATION ---
+    sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
+    ET.register_namespace('', sitemap_ns)
+    urlset = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")
+
+    def add_url(loc, lastmod):
+        url = ET.SubElement(urlset, "{http://www.sitemaps.org/schemas/sitemap/0.9}url")
+        ET.SubElement(url, "{http://www.sitemaps.org/schemas/sitemap/0.9}loc").text = loc
+        ET.SubElement(url, "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod").text = lastmod
+
+    # Blog posts
+    for post in posts:
+        slug = post.get("slug", os.path.splitext(os.path.basename(post.get("out_path", "")))[0])
+        url = f"{WEBSITE_URL}/blog/{slug}/"
+        date_obj = post["date"]
+        if not hasattr(date_obj, 'strftime'):
+            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+        lastmod = date_obj.strftime("%Y-%m-%d")
+        add_url(url, lastmod)
+
+    # Projects
+    for project in projects:
+        slug = project.get("slug", os.path.splitext(os.path.basename(project.get("out_path", "")))[0])
+        url = f"{WEBSITE_URL}/projects/{slug}/"
+        date_val = project.get("date")
+        if date_val is not None:
+            if not hasattr(date_val, 'strftime'):
+                date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
+            else:
+                date_obj = date_val
+            lastmod = date_obj.strftime("%Y-%m-%d")
+        else:
+            lastmod = None
+        add_url(url, lastmod or datetime.now().strftime("%Y-%m-%d"))
+
+    sitemap_path = "sitemap.xml"
+    tree = ET.ElementTree(urlset)
+    tree.write(sitemap_path, encoding="utf-8", xml_declaration=True)
 
 if __name__ == "__main__":
     main()
