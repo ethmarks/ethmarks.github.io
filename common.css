@@ -219,11 +219,11 @@ time {
 @keyframes timeSlideInFromLeft {
     from {
         opacity: 0;
-        transform: translateX(-40px);
+        transform: translateX(-40px) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
     }
 }
 
