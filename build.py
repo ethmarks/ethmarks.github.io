@@ -185,7 +185,15 @@ def main():
     # Render main blog index page
     blog_index_template = env.get_template("blog.html")
     tags_for_index = []
-    for tag, info in tag_data.items():
+    # Count tag usage
+    tag_usage = {tag: 0 for tag in tag_data}
+    for post in posts_for_index:
+        for tag in post.get("tags", []):
+            if tag in tag_usage:
+                tag_usage[tag] += 1
+    # Sort tags: by usage desc, then alphabetically
+    sorted_tags = sorted(tag_data.items(), key=lambda item: (-tag_usage[item[0]], item[0]))
+    for tag, info in sorted_tags:
         tags_for_index.append({
             "slug": tag,
             "title": tag.capitalize(),
