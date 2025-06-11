@@ -190,11 +190,14 @@ def main():
             except Exception:
                 return ""
         posts_list_sorted = sorted(posts_list, key=lambda p: get_date(p), reverse=True)
-        # Add (Project) to the title of projects
+        # Add (Project) to the title of projects and set correct url
         for item in posts_list_sorted:
             if "projects" in item.get("tags", []):
                 if not item["title"].endswith(" (Project)"):
                     item["title"] += " (Project)"
+                item["url"] = f"projects/{item.get('slug', '')}"
+            else:
+                item["url"] = f"blog/{item.get('slug', '')}"
         tag_dir = os.path.join(OUT_DIR, tag)
         os.makedirs(tag_dir, exist_ok=True)
         out_path = os.path.join(tag_dir, "index.html")

@@ -17,7 +17,7 @@
 <p style="font-size: 1.5rem;">{{ tag_definition }}</p>
 <p>{{ tag_text|safe }}</p>
 {% for post in posts %}
-<button-link href="../{{ post['slug'] }}">
+<button-link href="../../{{ post['url'] }}">
     <span slot="title">{{ post['title'] }}</span>
     <span slot="description">{{ get_post_description(post) }}</span>
     <span style="display:none;">{{ post['date_human'] }}</span>
