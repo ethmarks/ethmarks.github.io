@@ -157,6 +157,20 @@ def main():
             if tag in tag_posts:
                 tag_posts[tag].append(post)
 
+    # --- INCLUDE PROJECTS IN TAG PAGES ---
+    # Add projects with matching tags to tag_posts
+    projects_for_tags = []
+    for fname in os.listdir(PROJECTS_SRC_DIR):
+        if not fname.endswith(".md"):
+            continue
+        meta, body = parse_markdown_with_frontmatter(os.path.join(PROJECTS_SRC_DIR, fname))
+        if meta.get("index", True):
+            projects_for_tags.append(meta)
+    for project in projects_for_tags:
+        for tag in project.get("tags", []):
+            if tag in tag_posts:
+                tag_posts[tag].append(project)
+
     # Render tag index pages
     tag_template = env.get_template("tag.html")
     for tag, posts_list in tag_posts.items():
@@ -164,8 +178,23 @@ def main():
             "definition": "All posts in all categories.",
             "text": "This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place."
         })
-        # Sort posts by date descending
-        posts_list_sorted = sorted(posts_list, key=lambda p: p["date"], reverse=True)
+        # Sort posts and projects by date descending (if available)
+        def get_date(item):
+            date_val = item.get("date")
+            if date_val is None:
+                return ""
+            if hasattr(date_val, 'strftime'):
+                return date_val
+            try:
+                return datetime.strptime(str(date_val), "%Y-%m-%d")
+            except Exception:
+                return ""
+        posts_list_sorted = sorted(posts_list, key=lambda p: get_date(p), reverse=True)
+        # Add (Project) to the title of projects
+        for item in posts_list_sorted:
+            if "projects" in item.get("tags", []):
+                if not item["title"].endswith(" (Project)"):
+                    item["title"] += " (Project)"
         tag_dir = os.path.join(OUT_DIR, tag)
         os.makedirs(tag_dir, exist_ok=True)
         out_path = os.path.join(tag_dir, "index.html")
@@ -177,7 +206,7 @@ def main():
                 posts=posts_list_sorted,
                 get_post_description=lambda post: (
                     human_readable_date(post["date"]) if hasattr(post["date"], 'strftime') else 
-                    human_readable_date(datetime.strptime(str(post["date"]), "%Y-%m-%d"))
+                    human_readable_date(datetime.strptime(str(post["date"]), "%Y-%m-%d")) if post.get("date") else "No date"
                 ),
                 projects_link="/blog/projects/"
             ))
