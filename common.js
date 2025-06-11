@@ -37,6 +37,7 @@ customElements.define('ethan-header',
                 box-sizing: border-box;
                 z-index: 1000;
                 overflow: hidden;
+                /* Header itself still animates in */
                 animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
             }
 
@@ -109,8 +110,8 @@ customElements.define('ethan-header',
                 transition: background-color 0.2s ease, transform 0.2s ease;
                 white-space: nowrap;
                 text-decoration: none;
-                transform: translateX(350px);
-                opacity: 0;
+                transform: translateX(350px); /* Initial state for nav links */
+                opacity: 0; /* Initial state for nav links */
                 animation: flyInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
             }
             
@@ -144,6 +145,15 @@ customElements.define('ethan-header',
                     animation: none;
                 }
             }
+
+            /* New styles to skip nav animations when the 'nav-animations-skipped' class is applied to header */
+            header.nav-animations-skipped nav a {
+                animation-duration: 0s;
+                animation-delay: 0s; /* Crucial to override staggered delays */
+                /* Ensure they jump to their final state */
+                transform: translateX(0);
+                opacity: 1;
+            }
             </style>
             <header>
                 <a href="/" class="title-container" tabindex="0" aria-label="Home">
@@ -158,6 +168,40 @@ customElements.define('ethan-header',
                 </nav>
             </header>
         `;
+        }
+
+        connectedCallback() {
+            // Get references to the header and nav elements within the shadow DOM
+            const headerElement = this.shadowRoot.querySelector('header');
+            const navElement = this.shadowRoot.querySelector('nav');
+
+            if (headerElement && navElement) {
+                // Function to add the 'nav-animations-skipped' class and clean up listeners
+                const skipNavAnimations = () => {
+                    headerElement.classList.add('nav-animations-skipped');
+                    // Once nav animations are skipped, remove event listeners.
+                    // The "fly-in" effects are meant to run once or be instantly skipped.
+                    headerElement.removeEventListener('mouseenter', handleHeaderEnter);
+                    headerElement.removeEventListener('focusin', handleHeaderFocusIn);
+                };
+
+                // Event handler for mouse entering the entire header area
+                const handleHeaderEnter = () => {
+                    skipNavAnimations();
+                };
+
+                // Event handler for keyboard focus entering anywhere within the header
+                // This covers accessibility for keyboard users by checking if focus lands inside <header>
+                const handleHeaderFocusIn = (event) => {
+                    if (headerElement.contains(event.target)) { // Ensure focus is truly within the header
+                        skipNavAnimations();
+                    }
+                };
+
+                // Attach event listeners to the header element
+                headerElement.addEventListener('mouseenter', handleHeaderEnter);
+                headerElement.addEventListener('focusin', handleHeaderFocusIn);
+            }
         }
     }
 );
