@@ -24,7 +24,13 @@
 </external-link>
 {% endif %}
 <div class="post-tags">
-<a class="post-tag animated" href="/projects">#projects</a>
+    {% for tag in tags %}
+        {% if tag == 'projects' %}
+            <a class="post-tag animated" href="/projects">#projects</a>
+        {% else %}
+            <a class="post-tag animated" href="/blog/{{ tag }}/">#{{ tag }}</a>
+        {% endif %}
+    {% endfor %}
 </div>
 <article class="animated">
 {{ content | safe }}
