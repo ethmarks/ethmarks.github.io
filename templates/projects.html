@@ -17,7 +17,7 @@
 <p>As a programmer, I spend a lot of time telling computers what to do. These projects are what happens when they actually listen.</p>
 <p>~Ethan</p>
 {% for project in projects %}
-<button-link href="{{ project.slug }}">
+<button-link href="{{ project.slug }}" tags="{{ project.tags }}">
     <span slot="title">{{ project.title }}</span>
     <span slot="description">{{ project.description }}</span>
     <span style="display:none;">{{ project.date }}</span>

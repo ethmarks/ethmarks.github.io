@@ -315,7 +315,9 @@ customElements.define('button-link',
             }
   
             a {
-              display: block;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
               padding: 1rem 1.5rem;
               background: rgba(30, 30, 30, 0.6);
               border-radius: 12px;
@@ -337,6 +339,40 @@ customElements.define('button-link',
               border-color: rgba(143, 223, 212, 0.3);
               transform: translateY(-3px);
               box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .content {
+              display: flex;
+              flex-direction: column;
+              flex: 1 1 auto;
+              min-width: 0;
+            }
+
+            .tags {
+              display: flex;
+              gap: 0.4em;
+              flex-shrink: 0;
+              margin-left: 1em;
+            }
+            .tag {
+              background: rgba(143, 223, 212, 0.15);
+              color: #8fdfd4;
+              font-family: "Poppins", sans-serif;
+              font-size: 0.8rem;
+              font-weight: 600;
+              border-radius: 999px;
+              padding: 0.2em 0.8em;
+              white-space: nowrap;
+              border: 1px solid rgba(143, 223, 212, 0.25);
+              letter-spacing: 0.01em;
+              user-select: none;
+              pointer-events: none;
+              transition: background 0.2s, color 0.2s;
+            }
+            @media (max-width: 600px) {
+              .tags {
+                display: none;
+              }
             }
 
             slot[name="title"]::slotted(*) {
@@ -367,18 +403,36 @@ customElements.define('button-link',
           </style>
   
           <a id="link-wrapper" href="#">
-            <span class="title">
-              <slot name="title">Default Link Title</slot>
+            <span class="content">
+              <span class="title">
+                <slot name="title">Default Link Title</slot>
+              </span>
+              <span class="description">
+                <slot name="description"></slot>
+              </span>
             </span>
-            <span class="description">
-              <slot name="description"></slot>
-            </span>
+            <span class="tags" id="tags"></span>
           </a>
         `;
   
         this.linkElement = shadow.getElementById('link-wrapper');
+        this.tagsElement = shadow.getElementById('tags');
       }
   
+      static get observedAttributes() {
+        return ['href', 'target', 'tags'];
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'href') {
+          this.linkElement.setAttribute('href', newValue);
+        } else if (name === 'target') {
+          this.linkElement.setAttribute('target', newValue);
+        } else if (name === 'tags') {
+          this.renderTags();
+        }
+      }
+
       connectedCallback() {
         if (this.hasAttribute('href')) {
           this.linkElement.setAttribute('href', this.getAttribute('href'));
@@ -391,22 +445,25 @@ customElements.define('button-link',
           this.linkElement.setAttribute('target', this.getAttribute('target'));
         }
 
+        this.renderTags();
+
         // Only enable transition after load
         setTimeout(() => {
           this.linkElement.classList.add('loaded');
         }, 400);
-  
-        // Check if description slot is empty and potentially add a class for styling
-        // This is less reliable than CSS-only solutions usually
-        // const descriptionSlot = this.shadowRoot.querySelector('slot[name="description"]');
-        // if (descriptionSlot && descriptionSlot.assignedNodes().length === 0) {
-        //    this.linkElement.classList.add('no-description');
-        // }
       }
-  
-      // Optional: Observe attribute changes if needed
-      // static get observedAttributes() { return ['href', 'target']; }
-      // attributeChangedCallback(name, oldValue, newValue) { ... }
+
+      renderTags() {
+        if (!this.tagsElement) return;
+        let tags = this.getAttribute('tags');
+        if (!tags) {
+          this.tagsElement.innerHTML = '';
+          return;
+        }
+        // Accept comma or space separated
+        tags = tags.split(',').map(t => t.trim()).filter(Boolean);
+        this.tagsElement.innerHTML = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+      }
     }
 );
 

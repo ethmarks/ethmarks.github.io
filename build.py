@@ -246,7 +246,8 @@ def main():
         recent_posts.append({
             "title": post["title"],
             "slug": post["slug"],
-            "date_human": human_readable_date(date_obj)
+            "date_human": human_readable_date(date_obj),
+            "tags": ','.join(post.get("tags", []))
         })
     blog_index_path = os.path.join(BLOG_OUT_DIR, "index.html")
     with open(blog_index_path, "w", encoding="utf-8") as f:
@@ -274,10 +275,21 @@ def main():
     # Render projects index page using a dedicated template
     projects_index_path = os.path.join(PROJECTS_OUT_DIR, "index.html")
     projects_sorted = sorted(projects_for_index, key=lambda p: p.get("date", p.get("title", "")), reverse=True)
+    # Prepare projects with tags as comma-separated string, excluding 'projects' tag
+    projects_for_template = []
+    for project in projects_sorted:
+        tags = [t for t in project.get("tags", []) if t != "projects"]
+        projects_for_template.append({
+            "title": project.get("title", "Untitled Project"),
+            "slug": project.get("slug", ""),
+            "description": project.get("description", "A project by Ethan."),
+            "date": project.get("date"),
+            "tags": ','.join(tags)
+        })
     projects_template = env.get_template("projects.html")
     with open(projects_index_path, "w", encoding="utf-8") as f:
         f.write(projects_template.render(
-            projects=projects_sorted,
+            projects=projects_for_template,
         ))
 
     # --- SITEMAP GENERATION ---

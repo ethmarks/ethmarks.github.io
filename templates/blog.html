@@ -33,7 +33,7 @@
 </div>
 
 {% for post in recent_posts %}
-<button-link href="{{ post['slug'] }}/">
+<button-link href="{{ post['slug'] }}/" tags="{{ post['tags'] }}">
     <span slot="title">{{ post['title'] }}</span>
     <span slot="description">{{ post['date_human'] }}</span>
 </button-link>
