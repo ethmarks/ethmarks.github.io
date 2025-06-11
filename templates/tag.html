@@ -14,7 +14,7 @@
 <main>
 <h1 class="animated">{{ tag_title }}</h1>
 <article class="animated">
-<p style="font-size: 1.5rem;">{{ tag_definition }}</p>
+<p class="definition">{{ tag_definition }}</p>
 <p>{{ tag_text|safe }}</p>
 {% for post in posts %}
 <button-link href="../../{{ post['url'] }}">

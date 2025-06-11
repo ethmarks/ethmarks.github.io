@@ -652,3 +652,7 @@ a code:hover, a code:focus {
     animation-delay: 0.4s;
     opacity: 0;
 }
+
+.definition {
+    font-size: 1.5rem;
+}
