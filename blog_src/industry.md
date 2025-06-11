@@ -2,7 +2,7 @@
 index: True
 title: Symphony of Industry
 date: 2024-04-29
-tags: [figments]
+tags: [figments, poem, factory]
 slug: industry
 description: A poem and reflection on the sights and sounds of industrial progress and machinery.
 ---

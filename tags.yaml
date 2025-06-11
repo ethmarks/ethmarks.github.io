@@ -15,8 +15,68 @@ figments:
     Posts tagged as Figments are creative writing pieces, such as short stories or poems
     <br>
     Some works were created before this blog existed, so their publication dates may predate that of this site
-elsewise:
-  description: "Miscellaneous"
-  definition: "Elsewise (adverb) - in a different way or manner; otherwise"
+cartography:
+  description: "Cartography"
+  definition: "Cartography (noun) - the science or practice of drawing maps"
   text: |
-    Posts tagged as Elsewise don't fit into another category
+    Posts tagged as Cartography are related to maps, mapping, and geographic information systems
+language:
+  description: "Language and linguistics"
+  definition: "Language (noun) - a system of communication used by a particular community or country"
+  text: |
+    Posts tagged as Language are related to linguistics, vocabulary, or languages (probably Bulgarian)
+humor:
+  description: "Humor"
+  definition: "Humor (noun) - the quality of being amusing or entertaining"
+  text: |
+    Posts tagged as Humor are light-hearted, funny, or satirical in nature
+ai:
+  description: "Artificial intelligence"
+  definition: "AI (noun) - the simulation of human intelligence in machines"
+  text: |
+    Posts tagged as AI are related to artificial intelligence, machine learning, and related technologies
+history:
+  description: "History"
+  definition: "History (noun) - the study of the past"
+  text: |
+    Posts tagged as History cover historical events, figures, and analysis
+sci-fi:
+  description: "Science fiction"
+  definition: "Sci-fi (noun) - a genre of speculative fiction that explores futuristic concepts"
+  text: |
+    Posts tagged as Sci-fi are related to science fiction
+short-story:
+  description: "Short stories"
+  definition: "Short story (noun) - a brief work of fiction"
+  text: |
+    Posts tagged as short-story are related to original short stories or discussion/review of existing short stories
+poem:
+  description: "Poems"
+  definition: "Poem (noun) - a piece of writing that expresses emotions, experiences, or ideas in a rhythmic and often metaphorical way"
+  text: |
+    Posts tagged as Poem are related to original poems or discussion/review of existing poems
+factory:
+  description: "Factory"
+  definition: "Factory (noun) - a building or group of buildings where goods are manufactured"
+  text: |
+    Posts tagged as Factory are related to manufacturing or automation, a topic which I'm interested in
+physics:
+  description: "Physics"
+  definition: "Physics (noun) - the natural science that studies matter, its motion and behavior through space and energy"
+  text: |
+    Posts tagged as Physics are related to physics
+quanth:
+  description: "The Quanth unit of measurement"
+  definition: "Quanth (noun) - a unit of length equal to 10^34 Planck Lengths"
+  text: |
+    Posts tagged as Quanth are related to my new unit of measurement, the Quanth
+meta:
+  description: "Meta posts"
+  definition: "Meta (adjective) - self-referential; referring to itself or its own category"
+  text: |
+    Posts tagged as Meta are about my personal website
+travel:
+  description: "Travel"
+  definition: "Travel (noun) - the act of going from one place to another, typically over a distance"
+  text: |
+    Posts tagged as Travel are related to my travels and experiences in different places

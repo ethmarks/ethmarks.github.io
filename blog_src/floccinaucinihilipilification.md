@@ -2,7 +2,7 @@
 index: True
 title: Floccinaucinihilipilification
 date: 2025-05-14
-tags: [curios]
+tags: [curios, language]
 slug: valueless-vocab
 description: A playful look at the word floccinaucinihilipilification, its meaning, and usage.
 ---

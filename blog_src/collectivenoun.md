@@ -2,7 +2,7 @@
 index: True
 title: Collective Nouns
 date: 2025-04-23
-tags: [curios]
+tags: [curios, language]
 slug: collectivenoun
 description: A collection of amusing and obscure collective nouns for animals.
 ---

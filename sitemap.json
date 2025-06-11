@@ -39,7 +39,8 @@
     "url": "https://colourlessspearmint.github.io/blog/backronyms/",
     "title": "Backronyms",
     "tags": [
-      "elsewise"
+      "humor",
+      "language"
     ],
     "date": "2025-06-09",
     "description": "A fun list of backronyms",
@@ -50,7 +51,8 @@
     "url": "https://colourlessspearmint.github.io/blog/collectivenoun/",
     "title": "Collective Nouns",
     "tags": [
-      "curios"
+      "curios",
+      "language"
     ],
     "date": "2025-04-23",
     "description": "A collection of amusing and obscure collective nouns for animals.",
@@ -61,7 +63,9 @@
     "url": "https://colourlessspearmint.github.io/blog/earlyai/",
     "title": "Early AI",
     "tags": [
-      "curios"
+      "curios",
+      "ai",
+      "history"
     ],
     "date": "2025-05-11",
     "description": "A personal history and overview of early chatbots and the evolution of artificial intelligence.",
@@ -72,7 +76,8 @@
     "url": "https://colourlessspearmint.github.io/blog/valueless-vocab/",
     "title": "Floccinaucinihilipilification",
     "tags": [
-      "curios"
+      "curios",
+      "language"
     ],
     "date": "2025-05-14",
     "description": "A playful look at the word floccinaucinihilipilification, its meaning, and usage.",
@@ -83,7 +88,9 @@
     "url": "https://colourlessspearmint.github.io/blog/frequency/",
     "title": 8.7539319,
     "tags": [
-      "figments"
+      "figments",
+      "sci-fi",
+      "short-story"
     ],
     "date": "2024-09-14",
     "description": "A fictional police report and investigation into a mysterious frequency and a missing scientist.",
@@ -94,7 +101,9 @@
     "url": "https://colourlessspearmint.github.io/blog/industry/",
     "title": "Symphony of Industry",
     "tags": [
-      "figments"
+      "figments",
+      "poem",
+      "factory"
     ],
     "date": "2024-04-29",
     "description": "A poem and reflection on the sights and sounds of industrial progress and machinery.",
@@ -105,7 +114,9 @@
     "url": "https://colourlessspearmint.github.io/blog/lastsatellite/",
     "title": "The Last Satellite",
     "tags": [
-      "figments"
+      "figments",
+      "sci-fi",
+      "short-story"
     ],
     "date": "2024-07-30",
     "description": "A short story about the last satellite orbiting a post-human Earth and its final descent.",
@@ -116,7 +127,8 @@
     "url": "https://colourlessspearmint.github.io/blog/quanth/",
     "title": "I have invented a new measurement system",
     "tags": [
-      "elsewise"
+      "physics",
+      "quanth"
     ],
     "date": "2025-04-24",
     "description": "A whimsical proposal for a new measurement system based on Planck lengths and quantum physics.",
@@ -127,7 +139,9 @@
     "url": "https://colourlessspearmint.github.io/blog/timeunits/",
     "title": "Units of Time",
     "tags": [
-      "curios"
+      "curios",
+      "history",
+      "language"
     ],
     "date": "2025-05-09",
     "description": "A fun list of obscure and historical units of time, from the jiffy to the lustrum.",
@@ -138,7 +152,8 @@
     "url": "https://colourlessspearmint.github.io/blog/tsevhu/",
     "title": "Tsevhu",
     "tags": [
-      "curios"
+      "curios",
+      "language"
     ],
     "date": "2025-04-26",
     "description": "An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.",
@@ -149,7 +164,7 @@
     "url": "https://colourlessspearmint.github.io/blog/username/",
     "title": "My Username",
     "tags": [
-      "elsewise"
+      "meta"
     ],
     "date": "2025-06-07",
     "description": "An explanation of my username, ColourlessSpearmint",
@@ -160,7 +175,9 @@
     "url": "https://colourlessspearmint.github.io/blog/water/",
     "title": "Fish swim in WHAT?!",
     "tags": [
-      "figments"
+      "figments",
+      "sci-fi",
+      "humor"
     ],
     "date": "2025-04-28",
     "description": "A humorous sci-fi take on Earth's naming conventions and the prevalence of water and aquatic life.",
@@ -171,7 +188,8 @@
     "url": "https://colourlessspearmint.github.io/blog/waterman/",
     "title": "The Waterman Butterfly",
     "tags": [
-      "curios"
+      "curios",
+      "cartography"
     ],
     "date": "2025-04-25",
     "description": "An exploration of the Waterman Butterfly map projection, its advantages, disadvantages, and visual appeal.",
@@ -182,7 +200,8 @@
     "url": "https://colourlessspearmint.github.io/blog/whitesands/",
     "title": "White Sands National Park",
     "tags": [
-      "curios"
+      "curios",
+      "travel"
     ],
     "date": "2025-05-01",
     "description": "A personal travelogue and review of White Sands National Park, its unique gypsum dunes, activities, and quirks.",
@@ -223,15 +242,147 @@
     "slug": "figments"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/elsewise/",
-    "title": "Elsewise",
+    "url": "https://colourlessspearmint.github.io/blog/cartography/",
+    "title": "Cartography",
     "tags": [
-      "elsewise"
+      "cartography"
     ],
     "date": null,
-    "description": "Miscellaneous",
+    "description": "Cartography",
     "category": "tag",
-    "slug": "elsewise"
+    "slug": "cartography"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/language/",
+    "title": "Language",
+    "tags": [
+      "language"
+    ],
+    "date": null,
+    "description": "Language and linguistics",
+    "category": "tag",
+    "slug": "language"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/humor/",
+    "title": "Humor",
+    "tags": [
+      "humor"
+    ],
+    "date": null,
+    "description": "Humor",
+    "category": "tag",
+    "slug": "humor"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/ai/",
+    "title": "Ai",
+    "tags": [
+      "ai"
+    ],
+    "date": null,
+    "description": "Artificial intelligence",
+    "category": "tag",
+    "slug": "ai"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/history/",
+    "title": "History",
+    "tags": [
+      "history"
+    ],
+    "date": null,
+    "description": "History",
+    "category": "tag",
+    "slug": "history"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/sci-fi/",
+    "title": "Sci-fi",
+    "tags": [
+      "sci-fi"
+    ],
+    "date": null,
+    "description": "Science fiction",
+    "category": "tag",
+    "slug": "sci-fi"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/short-story/",
+    "title": "Short-story",
+    "tags": [
+      "short-story"
+    ],
+    "date": null,
+    "description": "Short stories",
+    "category": "tag",
+    "slug": "short-story"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/poem/",
+    "title": "Poem",
+    "tags": [
+      "poem"
+    ],
+    "date": null,
+    "description": "Poems",
+    "category": "tag",
+    "slug": "poem"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/factory/",
+    "title": "Factory",
+    "tags": [
+      "factory"
+    ],
+    "date": null,
+    "description": "Factory",
+    "category": "tag",
+    "slug": "factory"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/physics/",
+    "title": "Physics",
+    "tags": [
+      "physics"
+    ],
+    "date": null,
+    "description": "Physics",
+    "category": "tag",
+    "slug": "physics"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/quanth/",
+    "title": "Quanth",
+    "tags": [
+      "quanth"
+    ],
+    "date": null,
+    "description": "The Quanth unit of measurement",
+    "category": "tag",
+    "slug": "quanth"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/meta/",
+    "title": "Meta",
+    "tags": [
+      "meta"
+    ],
+    "date": null,
+    "description": "Meta posts",
+    "category": "tag",
+    "slug": "meta"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/travel/",
+    "title": "Travel",
+    "tags": [
+      "travel"
+    ],
+    "date": null,
+    "description": "Travel",
+    "category": "tag",
+    "slug": "travel"
   },
   {
     "url": "https://colourlessspearmint.github.io/projects/anagram/",

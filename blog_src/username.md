@@ -2,7 +2,7 @@
 index: False
 title: My Username
 date: 2025-06-07
-tags: [elsewise]
+tags: [meta]
 slug: username
 description: An explanation of my username, ColourlessSpearmint
 ---

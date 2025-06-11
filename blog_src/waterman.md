@@ -2,7 +2,7 @@
 index: True
 title: The Waterman Butterfly
 date: 2025-04-25
-tags: [curios]
+tags: [curios, cartography]
 slug: waterman
 description: An exploration of the Waterman Butterfly map projection, its advantages, disadvantages, and visual appeal.
 ---
