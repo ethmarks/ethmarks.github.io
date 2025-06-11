@@ -2,7 +2,7 @@
 index: True
 title: ASCII-Globe
 date: 2025-01-18
-tags: [projects]
+tags: [projects, programming, cartography]
 slug: asciiglobe
 description: A text-based cartographic rendering engine that uses NASA satellite data
 link: https://github.com/ColourlessSpearmint/ASCII-Globe

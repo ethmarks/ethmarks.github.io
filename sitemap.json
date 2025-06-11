@@ -65,7 +65,8 @@
     "tags": [
       "curios",
       "ai",
-      "history"
+      "history",
+      "programming"
     ],
     "date": "2025-05-11",
     "description": "A personal history and overview of early chatbots and the evolution of artificial intelligence.",
@@ -385,10 +386,23 @@
     "slug": "travel"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/programming/",
+    "title": "Programming",
+    "tags": [
+      "programming"
+    ],
+    "date": null,
+    "description": "Programming",
+    "category": "tag",
+    "slug": "programming"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/projects/anagram/",
     "title": "Anagram Animator",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "language"
     ],
     "date": "2025-04-18",
     "description": "A simple little Jupyter notebook to create anagram GIFs",
@@ -399,7 +413,9 @@
     "url": "https://colourlessspearmint.github.io/projects/asciiglobe/",
     "title": "ASCII-Globe",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "cartography"
     ],
     "date": "2025-01-18",
     "description": "A text-based cartographic rendering engine that uses NASA satellite data",
@@ -410,7 +426,8 @@
     "url": "https://colourlessspearmint.github.io/projects/colourlesstransformer/",
     "title": "ColourlessTransformer",
     "tags": [
-      "projects"
+      "projects",
+      "programming"
     ],
     "date": "2024-12-22",
     "description": "My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses",
@@ -421,7 +438,10 @@
     "url": "https://colourlessspearmint.github.io/projects/eliza/",
     "title": "Eliza",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "ai",
+      "history"
     ],
     "date": "2024-12-17",
     "description": "My implementation of the 1966 chatbot Eliza",
@@ -432,7 +452,9 @@
     "url": "https://colourlessspearmint.github.io/projects/personalwebsite/",
     "title": "Personal Website",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "meta"
     ],
     "date": "2025-05-14",
     "description": "The website you're reading right now",
@@ -443,7 +465,9 @@
     "url": "https://colourlessspearmint.github.io/projects/screamcipher/",
     "title": "Scream Cipher Converter",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "humor"
     ],
     "date": "2025-06-06",
     "description": "An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'",
@@ -454,7 +478,9 @@
     "url": "https://colourlessspearmint.github.io/projects/thessa/",
     "title": "Thessa",
     "tags": [
-      "projects"
+      "projects",
+      "programming",
+      "ai"
     ],
     "date": "2025-05-21",
     "description": "An AI-powered thesaurus that uses the Gemini API",

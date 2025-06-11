@@ -2,7 +2,7 @@
 index: True
 title: Scream Cipher Converter
 date: 2025-06-06
-tags: [projects]
+tags: [projects, programming, humor]
 slug: screamcipher
 description: An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'
 link: https://colourlessspearmint.github.io/screamcipher.html

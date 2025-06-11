@@ -2,7 +2,7 @@
 index: True
 title: Personal Website
 date: 2025-05-14
-tags: [projects]
+tags: [projects, programming, meta]
 slug: personalwebsite
 description: The website you're reading right now
 link: https://github.com/ColourlessSpearmint/colourlessspearmint.github.io
