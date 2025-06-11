@@ -22,7 +22,7 @@
 {% if tags %}
 <div class="post-tags">
   {% for tag in tags %}
-    <a class="post-tag animated" href="/blog/{{ tag }}/">#{{ tag }}</a>{% if not loop.last %} {% endif %}
+    <a class="post-tag animated" href="/{{  tag_dir  }}/{{ tag }}">#{{ tag }}</a>{% if not loop.last %} {% endif %}
   {% endfor %}
 </div>
 {% endif %}

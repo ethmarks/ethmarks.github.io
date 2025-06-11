@@ -7,10 +7,11 @@ from datetime import datetime
 import xml.etree.ElementTree as ET
 import json
 
-SRC_DIR = "blog_src"
-OUT_DIR = "blog"
+BLOG_SRC_DIR = "blog_src"
+BLOG_OUT_DIR = "blog"
 PROJECTS_SRC_DIR = "projects_src"
 PROJECTS_OUT_DIR = "projects"
+TAG_DIR = "tag"
 TEMPLATE_DIR = "templates"
 WEBSITE_URL = "https://colourlessspearmint.github.io"
 
@@ -73,6 +74,7 @@ def render_post(meta, body):
         date_human=date_human,
         content=html,
         tags=meta.get("tags", []),
+        tag_dir=TAG_DIR,
         slug=meta.get("slug", ""),
         description=description,
         canonical_url=canonical_url
@@ -107,6 +109,7 @@ def render_project(meta, body):
         date_human=date_human,
         content=html,
         tags=meta.get("tags", []),
+        tag_dir=TAG_DIR,
         slug=meta.get("slug", ""),
         description=description,
         canonical_url=canonical_url,
@@ -128,16 +131,16 @@ def human_readable_date(date_obj):
         return date_obj.strftime("%B %d, %Y").replace(' 0', ' ')
 
 def main():
-    os.makedirs(OUT_DIR, exist_ok=True)
+    os.makedirs(BLOG_OUT_DIR, exist_ok=True)
     posts = []
     posts_for_index = []
-    for fname in os.listdir(SRC_DIR):
+    for fname in os.listdir(BLOG_SRC_DIR):
         if not fname.endswith(".md"):
             continue
-        meta, body = parse_markdown_with_frontmatter(os.path.join(SRC_DIR, fname))
+        meta, body = parse_markdown_with_frontmatter(os.path.join(BLOG_SRC_DIR, fname))
         html = render_post(meta, body)
         slug = meta.get("slug", os.path.splitext(fname)[0])
-        out_dir = os.path.join(OUT_DIR, slug)
+        out_dir = os.path.join(BLOG_OUT_DIR, slug)
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
@@ -198,7 +201,7 @@ def main():
                 item["url"] = f"projects/{item.get('slug', '')}"
             else:
                 item["url"] = f"blog/{item.get('slug', '')}"
-        tag_dir = os.path.join(OUT_DIR, tag)
+        tag_dir = os.path.join(TAG_DIR, tag)
         os.makedirs(tag_dir, exist_ok=True)
         out_path = os.path.join(tag_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
@@ -228,6 +231,7 @@ def main():
     for tag, info in sorted_tags:
         tags_for_index.append({
             "slug": tag,
+            "url": f"/{TAG_DIR}/{tag}",
             "title": tag.capitalize(),
             "description": info["description"]
         })
@@ -244,7 +248,7 @@ def main():
             "slug": post["slug"],
             "date_human": human_readable_date(date_obj)
         })
-    blog_index_path = os.path.join(OUT_DIR, "index.html")
+    blog_index_path = os.path.join(BLOG_OUT_DIR, "index.html")
     with open(blog_index_path, "w", encoding="utf-8") as f:
         f.write(blog_index_template.render(tags=tags_for_index, projects_link="/blog/projects/", recent_posts=recent_posts))
 

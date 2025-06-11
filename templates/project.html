@@ -28,7 +28,7 @@
         {% if tag == 'projects' %}
             <a class="post-tag animated" href="/projects">#projects</a>
         {% else %}
-            <a class="post-tag animated" href="/blog/{{ tag }}/">#{{ tag }}</a>
+            <a class="post-tag animated" href="/{{  tag_dir  }}/{{ tag }}">#{{ tag }}</a>
         {% endif %}
     {% endfor %}
 </div>

@@ -23,7 +23,7 @@
 <div class="post-tags">
 {% for tag in tags %}
     {% if tag['slug'] != 'all' %}
-    <a class="post-tag animated" href="{{ tag['slug'] }}/">#{{ tag['title'] }}</a>
+    <a class="post-tag animated" href="{{ tag['url'] }}/">#{{ tag['title'] }}</a>
     {% endif %}
 {% endfor %}
 </div>
