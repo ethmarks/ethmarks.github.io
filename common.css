@@ -304,7 +304,7 @@ table {
 }
 
 table:hover {
-    transform: translateY(-5px) scale(1.01); /* Add subtle scale */
+    transform: translateY(-10px); /* Add subtle scale */
     box-shadow: var(--shadow-table-hover);
 }
 
