@@ -147,6 +147,10 @@ customElements.define('ethan-header',
             }
 
             /* New styles to skip nav animations when the 'nav-animations-skipped' class is applied to header */
+            header.nav-animations-skipped {
+                animation-duration: 0s;
+                transform: translateX(-50%) translateY(0) translate3d(0,0,0);
+            }
             header.nav-animations-skipped nav a {
                 animation-duration: 0s;
                 animation-delay: 0s; /* Crucial to override staggered delays */
