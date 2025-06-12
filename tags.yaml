@@ -7,7 +7,7 @@ curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"
   text: |
-    Posts tagged as Curios are personal essays and thoughts on things I find interesting or unusual
+    Posts tagged as Curios are essays and thoughts on interesting things I found the Internet
 figments:
   description: "Creative writing"
   definition: "Figments (noun) - products of the imagination"
@@ -49,12 +49,12 @@ short-story:
   description: "Short stories"
   definition: "Short story (noun) - a brief work of fiction"
   text: |
-    Posts tagged as short-story are related to original short stories or discussion/review of existing short stories
-poem:
-  description: "Poems"
-  definition: "Poem (noun) - a piece of writing that expresses emotions, experiences, or ideas in a rhythmic and often metaphorical way"
+    Posts tagged as Short-Story are related to original short stories or discussion/review of existing short stories
+poetry:
+  description: "Poetry"
+  definition: "Poetry (noun) - a composition in verse, usually with meter and rhyme"
   text: |
-    Posts tagged as Poem are related to original poems or discussion/review of existing poems
+    Posts tagged as Poetry are related to original poems or discussion/review of existing poems
 factory:
   description: "Factory"
   definition: "Factory (noun) - a building or group of buildings where goods are manufactured"

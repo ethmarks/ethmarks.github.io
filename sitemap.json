@@ -103,7 +103,7 @@
     "title": "Symphony of Industry",
     "tags": [
       "figments",
-      "poem",
+      "poetry",
       "factory"
     ],
     "date": "2024-04-29",
@@ -201,7 +201,6 @@
     "url": "https://colourlessspearmint.github.io/blog/whitesands/",
     "title": "White Sands National Park",
     "tags": [
-      "curios",
       "travel"
     ],
     "date": "2025-05-01",
@@ -320,15 +319,15 @@
     "slug": "short-story"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/poem/",
-    "title": "Poem",
+    "url": "https://colourlessspearmint.github.io/blog/poetry/",
+    "title": "Poetry",
     "tags": [
-      "poem"
+      "poetry"
     ],
     "date": null,
-    "description": "Poems",
+    "description": "Poetry",
     "category": "tag",
-    "slug": "poem"
+    "slug": "poetry"
   },
   {
     "url": "https://colourlessspearmint.github.io/blog/factory/",

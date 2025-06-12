@@ -2,7 +2,7 @@
 index: True
 title: White Sands National Park
 date: 2025-05-01
-tags: [curios, travel]
+tags: [travel]
 slug: whitesands
 description: A personal travelogue and review of White Sands National Park, its unique gypsum dunes, activities, and quirks.
 ---
