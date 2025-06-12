@@ -137,6 +137,17 @@
     "slug": "quanth"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/saltassociation/",
+    "title": "A website about Salt",
+    "tags": [
+      "curios"
+    ],
+    "date": "2025-06-11",
+    "description": "A description of https://saltassociation.co.uk/, a website devoted entirely to salt",
+    "category": "blog",
+    "slug": "saltassociation"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/timeunits/",
     "title": "Units of Time",
     "tags": [
