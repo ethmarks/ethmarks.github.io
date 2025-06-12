@@ -103,11 +103,6 @@ body {
   }
 }
 
-.noanim {
-    animation: none;
-    opacity: 1;
-}
-
 main {
     margin-top: var(--main-margin-top);
     display: flex;
@@ -115,6 +110,7 @@ main {
     align-items: center;
     flex-direction: column;
     padding: 0 var(--spacing-md); /* Add some horizontal padding */
+    overflow-x: hidden;
 }
 
 p {
@@ -124,7 +120,7 @@ p {
 
 h1 {
     font-family: var(--font-secondary);
-    font-size: clamp(1.5rem, 8vw, 3rem); /* Slightly increased min h1 size */
+    font-size: clamp(1.5rem, 8vw, 3rem);
     flex-shrink: 1;
     text-align: center;
     overflow: hidden;
@@ -135,7 +131,6 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    word-break: break-all;
 }
 
 h1.animated {
@@ -259,9 +254,8 @@ figure {
 img {
     display: block; /* Prevents bottom margin */
     height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow within containers */
-    max-height: clamp(20vh, 40vh, 50vh); /* Allow a bit taller */
-    max-width: clamp(50vw, 60vw, 600px); /* Simplified width clamp */
+    max-width: clamp(300px, 60vw, 600px);
+    max-height: clamp(200px, 40vh, 500px);
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg)); /* Clamp radius */
     border: var(--border-standard);
     margin-left: auto; /* Center if needed within figure/div */
