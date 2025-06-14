@@ -43,7 +43,7 @@ Second, Liquid Glass feels futuristic. It
 
 ### Animations
 
-<video src="../../images/liquid_glass_coalescence.webm" autoplay loop muted playsinline></video>
+![Test video](../../images/liquid_glass_coalescence.webm)
 
 Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalescence [like real blobs of liquid](youtu.be/Aq5ydeWWr4A). It reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching).
 

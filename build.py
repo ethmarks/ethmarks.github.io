@@ -41,6 +41,25 @@ def process_poem_tag(match):
     final_poem_html = '<p>‎ </p>'.join(processed_stanzas)
     return f'<poem>{final_poem_html}</poem>'
 
+def embed_media_tag(match):
+    # Group 1 captures the entire <img> tag.
+    # Group 2 captures the value of the src attribute.
+    img_tag = match.group(1)
+    src = match.group(2).strip()
+    # Extract alt text if present
+    alt_match = re.search(r'alt=["\']([^"\']*)["\']', img_tag)
+    alt_text = alt_match.group(1) if alt_match else ''
+    # Check for YouTube links
+    youtube_match = re.match(r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]+)", src)
+    if youtube_match:
+        video_id = youtube_match.group(1)
+        return f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+    # Check for video file extensions
+    video_exts = ('.mp4', '.webm', '.ogg', '.mov')
+    if src.lower().endswith(video_exts):
+        return f'<video src="{src}" autoplay loop playsinline></video>'
+    return img_tag
+
 def render_post(meta, body):
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     md.block_level_elements.append('poem')
@@ -48,7 +67,14 @@ def render_post(meta, body):
     md.block_level_elements.append('cell')
     html = md.convert(body)
     html = re.sub(r'<poem>(.*?)</poem>', process_poem_tag, html, flags=re.DOTALL)
-    html = re.sub(r'<p>(\s*<img[^>]+>\s*)</p>', r'\1', html)
+    html = re.sub(r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html)
+    
+    # NEW FIX: Unwrap any <img>, <video>, or <iframe> tags from surrounding <p> tags
+    # This regex looks for a <p> tag containing only an <img>, <video>, or <iframe> tag
+    # with optional whitespace around it.
+    html = re.sub(r'<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>', r'\1', html, flags=re.IGNORECASE | re.DOTALL)
+    html = re.sub(r'<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>', r'\1', html, flags=re.IGNORECASE | re.DOTALL) # Keep the previous one as it's more specific for closing tags
+
     template = env.get_template("post.html")
     date_val = meta["date"]
     if isinstance(date_val, datetime):
@@ -85,7 +111,12 @@ def render_project(meta, body):
     md.block_level_elements.append('poem')
     html = md.convert(body)
     html = re.sub(r'<poem>(.*?)</poem>', process_poem_tag, html, flags=re.DOTALL)
-    html = re.sub(r'<p>(\s*<img[^>]+>\s*)</p>', r'\1', html)
+    html = re.sub(r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html)
+
+    # NEW FIX: Unwrap any <img>, <video>, or <iframe> tags from surrounding <p> tags
+    html = re.sub(r'<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>', r'\1', html, flags=re.IGNORECASE | re.DOTALL)
+    html = re.sub(r'<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>', r'\1', html, flags=re.IGNORECASE | re.DOTALL)
+    
     template = env.get_template("project.html")
     date_val = meta.get("date")
     if date_val is None:
