@@ -59,7 +59,7 @@ factory:
   description: "Factory"
   definition: "Factory (noun) - a building or group of buildings where goods are manufactured"
   text: |
-    Posts tagged as Factory are related to manufacturing or automation, a topic which I'm interested in
+    Posts tagged as Factory are related to manufacturing or automation, topics which delight me
 physics:
   description: "Physics"
   definition: "Physics (noun) - the natural science that studies matter, its motion and behavior through space and energy"
@@ -85,3 +85,8 @@ programming:
   definition: "Programming (noun) - the process of designing and building computer software"
   text: |
     Posts tagged as Programming are related to programming, software development, and related topics
+tech:
+  description: "Tech"
+  definition: "Tech (noun) - the application of scientific knowledge for practical purposes"
+  text: |
+    Posts tagged as Tech are related to technology, especially tech news
