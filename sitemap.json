@@ -113,6 +113,17 @@
     "slug": "lastsatellite"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/liquidglass/",
+    "title": "Liquid Glass",
+    "tags": [
+      "tech"
+    ],
+    "date": "2025-06-14",
+    "description": "My thoughts on Apple's new Liquid Glass design",
+    "category": "blog",
+    "slug": "liquidglass"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/quanth/",
     "title": "I have invented a new measurement system",
     "tags": [

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Glass</title>
+    <meta name="description" content="My thoughts on Apple's new Liquid Glass design">
+    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/liquidglass/">
+    <meta property="og:title" content="Liquid Glass">
+    <meta property="og:description" content="My thoughts on Apple's new Liquid Glass design">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/liquidglass/">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
+    <script src="../../common.js" defer></script>
+</head>
+<body>
+<ethan-header></ethan-header>
+<main>
+<h1 class="animated">Liquid Glass</h1>
+<time class="animated" datetime="2025-06-14">June 14, 2025</time>
+
+<div class="post-tags">
+  
+    <a class="post-tag animated" href="/tag/tech">#tech</a>
+  
+</div>
+
+<article class="animated">
+<img alt="The new MacOS 26, displaying its glassmorphic Liquid Glass interface" src="https://cdn.mos.cms.futurecdn.net/x6hH5edzsmvbowYLaPTkmH-970-80.jpg.webp" />
+<p>As part of <a href="https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/">IOS 26</a>, Apple unveiled their new <a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Liquid Glass</a> material and incorporated it into the design of the iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision.</p>
+<p>For context, I'm not a huge Apple fan: I'm writing this on a Windows laptop, listening to music from my Android phone. I don't dislike Apple, but I generally disapprove of the Apple ecosystem and don't think that it's right for me.</p>
+<p>That being said, I absolutely love Liquid Glass. At no other point in time has my opinion of Apple been higher than when they showed off the new interface at the <a href="https://developer.apple.com/videos/play/wwdc2025/101/">WWDC25 keynote</a>. It's not a </p>
+<h2>Glassmorphism</h2>
+<p>Liquid Glass is just the Applelogism (A term coined by me to describe Apple's tendency to take popular existing concepts and give them a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for <a href="https://hype4.academy/tools/glassmorphism-generator"><strong>Glassmorphism</strong></a>: a design philosophy that uses translucent blur to emulate <a href="https://en.wikipedia.org/wiki/Frosted_glass">frosted glass</a>.</p>
+<img alt="Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds" src="https://upload.wikimedia.org/wikipedia/en/a/a3/Windows_Vista.png" />
+<p>As many other people have pointed out, Apple absolutely did not invent glassmorphism. Frosted glass designs were first popularized by <a href="https://en.wikipedia.org/wiki/Windows_Aero">Windows Aero</a> in 2007, and <a href="https://css.glass/">lots</a> <a href="https://tricks-glassmorphism.webflow.io/">of</a> <a href="https://reflect.app/">other</a> <a href="https://hype4.academy/tools/glassmorphism-generator">designers</a> <a href="https://www.reflectorai.app/">have</a> <a href="https://www.behance.net/gallery/113924121/Kit-UI-Glassmorphism-trend#">used</a> <a href="https://leanrada.com/">it</a> <a href="https://jetgirl.art/">since</a>, including me!</p>
+<p>This website (at least, as of the time of writing) features a glassmorphic header at the top of each page. The header has gone through quite a bit of iteration, but the frosted glass effect has been present from <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/commit/e4d6dcd0c97ed13c39c4b96709b844a0465720f3#diff-9bef76ac5cd1246a53c15ea6cf7aea15d8af6c1fd0978867c27ba8fe9ae6b1f4">the very first design</a>, created on April 11, 2025. Glassmorphism is one of my favorite effects, so I was absolutely delighted that Apple decided to implement it in the form of Liquid Glass.</p>
+<h2>Advantages of Liquid Glass</h2>
+<p>At its core, the only thing that Liquid Glass does is make the iPhone look prettier. It accomplishes this exceptionally well.</p>
+<h3>Novelty</h3>
+<img alt="Liquid Glass promotional material with the text &quot;Introducing Liquid Glass&quot; in chromatic type, next to six colourful pieces of glass, visibly refracting light and demonstrating additive color mixing" src="https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg" />
+<p>First, Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, later versions of Windows use <a href="https://en.wikipedia.org/wiki/Fluent_Design_System">Fluent Design</a>, which is the same boring <a href="https://en.wikipedia.org/wiki/Flat_design">flat design language</a> that pretty much every other interface uses. With its novel transparency, Liquid Glass is a splash of colour (or lack thereof) that makes it stand out.</p>
+<img alt="Four Apple devices: A Macbook, an iPad, an iPhone, and an Apple Watch, all lined up in a row and using a glassmorphic Liquid Glass interface with frosted glass buttons and widgets" src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/liquidglassmain2.jpg?quality=90&amp;strip=all&amp;crop=0,0,100,100" />
+<h3>Futuristic</h3>
+<p>Second, Liquid Glass feels futuristic. It</p>
+<h3>Animations</h3>
+<video src="../../images/liquid_glass_coalescence.webm" autoplay loop muted playsinline></video>
+
+<p>Third, Liquid Glass is, well, <em>liquid</em>. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalescence <a href="youtu.be/Aq5ydeWWr4A">like real blobs of liquid</a>. It reminds me of <a href="https://youtu.be/Cp5WWtMoeKg&amp;t=198">object blending via ray marching</a>, although apparently Apple actually used <a href="https://en.wikipedia.org/wiki/Signed_distance_function">signed distance field interpolation</a> for the <a href="https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass">Fluid Morph</a> effect, not <a href="https://en.wikipedia.org/wiki/Ray_marching">ray marching</a>.</p>
+</article>
+</main>
+<ethan-footer></ethan-footer>
+</body>
+</html>
