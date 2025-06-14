@@ -7,9 +7,9 @@ from datetime import datetime
 import xml.etree.ElementTree as ET
 import json
 
-BLOG_SRC_DIR = "blog_src"
+BLOG_SRC_DIR = "md_src/blog_src"
 BLOG_OUT_DIR = "blog"
-PROJECTS_SRC_DIR = "projects_src"
+PROJECTS_SRC_DIR = "md_src/projects_src"
 PROJECTS_OUT_DIR = "projects"
 TAG_DIR = "tag"
 TEMPLATE_DIR = "templates"
