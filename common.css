@@ -262,6 +262,30 @@ img {
     margin-right: auto;
 }
 
+@media (min-width: 768px) {
+    img {
+        min-height: 40vh;
+    }
+}
+
+video {
+    display: block;
+    height: auto;
+    max-width: clamp(300px, 60vw, 600px);
+    max-height: clamp(200px, 40vh, 500px);
+    border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
+    border: var(--border-standard);
+    margin-left: auto;
+    margin-right: auto;
+    background: #000; /* fallback background */
+}
+
+@media (min-width: 768px) {
+    video {
+        min-height: 40vh;
+    }
+}
+
 .juxtapose img{
     max-height: clamp(20vh, 40vh, 50vh);
     max-width: clamp(50vw, 60vw, 600px);
