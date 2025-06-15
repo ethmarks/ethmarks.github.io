@@ -70,11 +70,11 @@ quanth:
   definition: "Quanth (noun) - a unit of length equal to 10^34 Planck Lengths"
   text: |
     Posts tagged as Quanth are related to my new unit of measurement, the Quanth
-meta:
-  description: "Meta posts"
-  definition: "Meta (adjective) - self-referential; referring to itself or its own category"
+personalwebsite:
+  description: "Personal Website"
+  definition: "Personal website (noun) - a website created and maintained by an individual"
   text: |
-    Posts tagged as Meta are about my personal website
+    Posts tagged as Personal Website are related to my personal website, including its design, development, and content
 travel:
   description: "Travel"
   definition: "Travel (noun) - the act of going from one place to another, typically over a distance"
