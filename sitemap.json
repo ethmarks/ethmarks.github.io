@@ -116,6 +116,7 @@
     "url": "https://colourlessspearmint.github.io/blog/liquidglass/",
     "title": "Thoughts on Liquid Glass",
     "tags": [
+      "curios",
       "tech",
       "apple"
     ],
@@ -374,15 +375,15 @@
     "slug": "quanth"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/meta/",
-    "title": "Meta",
+    "url": "https://colourlessspearmint.github.io/blog/personalwebsite/",
+    "title": "Personalwebsite",
     "tags": [
-      "meta"
+      "personalwebsite"
     ],
     "date": null,
-    "description": "Meta posts",
+    "description": "Personal Website",
     "category": "tag",
-    "slug": "meta"
+    "slug": "personalwebsite"
   },
   {
     "url": "https://colourlessspearmint.github.io/blog/travel/",
@@ -497,7 +498,7 @@
     "tags": [
       "projects",
       "programming",
-      "meta"
+      "personalwebsite"
     ],
     "date": "2025-05-14",
     "description": "The website you're reading right now",
