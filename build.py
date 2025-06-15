@@ -253,12 +253,24 @@ def main():
     tags_for_index = []
     # Count tag usage
     tag_usage = {tag: 0 for tag in tag_data}
+    # Count blog posts
     for post in posts_for_index:
         for tag in post.get("tags", []):
             if tag in tag_usage:
                 tag_usage[tag] += 1
+    # Count projects
+    for fname in os.listdir(PROJECTS_SRC_DIR):
+        if not fname.endswith(".md"):
+            continue
+        meta, _ = parse_markdown_with_frontmatter(os.path.join(PROJECTS_SRC_DIR, fname))
+        if meta.get("index", True):
+            for tag in meta.get("tags", []):
+                if tag in tag_usage:
+                    tag_usage[tag] += 1
+    # Only include tags that are used at least once
+    used_tags = {tag: info for tag, info in tag_data.items() if tag_usage.get(tag, 0) > 0}
     # Sort tags: by usage desc, then alphabetically
-    sorted_tags = sorted(tag_data.items(), key=lambda item: (-tag_usage[item[0]], item[0]))
+    sorted_tags = sorted(used_tags.items(), key=lambda item: (-tag_usage[item[0]], item[0]))
     for tag, info in sorted_tags:
         tags_for_index.append({
             "slug": tag,
