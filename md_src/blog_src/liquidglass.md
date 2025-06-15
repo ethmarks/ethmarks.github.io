@@ -7,7 +7,7 @@ slug: liquidglass
 description: My thoughts on Apple's new Liquid Glass design
 ---
 
-![The new MacOS 26, displaying its glassmorphic Liquid Glass interface](https://images.frandroid.com/wp-content/uploads/2025/06/macos-tahoe-5-scaled.jpg?utm_medium=distributed&utm_source=microsoft&utm_campaign=2645735)
+![Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass](https://iboysoft.com/images/en-wiki/apple-liquid-glass/liquid-glass-apple.jpg)
 
 As part of [WWDC25](https://developer.apple.com/wwdc25/) on June 9, 2025, Apple unveiled their new [Liquid Glass](https://en.wikipedia.org/wiki/Liquid_Glass) material and incorporated it into the design of the iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision.
 
@@ -51,7 +51,7 @@ For example, consider the image above. On the left is a screenshot of [my phone]
 
 ![Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](../../images/liquid_glass_coalescence.webm)
 
-Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalescence [like real blobs of liquid](youtu.be/Aq5ydeWWr4A) (the way the blobs merge reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching)). Because Liquid Glass imitates real-life fluid dynamics that we understand intuitively, it feels responsive and dynamic in a way that is pleasing to use.
+Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalesce [like real blobs of liquid](youtu.be/Aq5ydeWWr4A) (the way the blobs merge reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching)). Because Liquid Glass imitates real-life fluid dynamics that we understand intuitively, it feels responsive and dynamic in a way that is pleasing to use.
 
 ### …Light Bending
 
