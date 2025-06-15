@@ -80,12 +80,14 @@
 html {
     font-size: 100%; /* Base for rem units (usually 16px) */
     scroll-behavior: smooth;
+    overscroll-behavior: none;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%),
+        var(--color-background);
 }
 
 body {
-    background: var(--color-background);
-    background-image: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%),
-                      radial-gradient(circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%);
     line-height: 1.4;
     font-family: var(--font-primary);
     color: var(--color-text);
