@@ -137,6 +137,7 @@ customElements.define('ethan-header',
                 header {
                     max-width: 100vw;
                     border-radius: 0;
+                    top: 0;
                 }
                 nav {
                     gap: 4px;
