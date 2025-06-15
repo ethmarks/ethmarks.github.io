@@ -16,7 +16,7 @@ I like how this looks, and I'll sometimes just run random photos through it to s
 
 <figure>
     <div class="juxtapose-container">
-        <div class="juxtapose" style="width: 1000px;">
+        <div class="juxtapose long">
             <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
             <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
         </div>

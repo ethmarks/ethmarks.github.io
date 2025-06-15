@@ -73,7 +73,7 @@ A Gaussian blur is a method of making each pixel have an influence on the pixels
 
 <figure>
     <div class="juxtapose-container">
-        <div class="juxtapose" style="width: 400px;">
+        <div class="juxtapose">
             <img src="https://github.com/bfraboni/FastGaussianBlur/raw/main/data/demo.png" alt="A photo of a lake by a canyon">
             <img src="https://github.com/bfraboni/FastGaussianBlur/raw/main/data/blur50.png" alt="An extremely blurred and definition-lacking image with colours similar to that of a photo of a lake by a canyon">
         </div>

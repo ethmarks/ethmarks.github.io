@@ -254,9 +254,9 @@ figure {
 img {
     display: block; /* Prevents bottom margin */
     height: auto; /* Maintain aspect ratio */
-    max-width: clamp(300px, 60vw, 600px);
-    max-height: clamp(200px, 40vh, 500px);
-    border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg)); /* Clamp radius */
+    max-width: clamp(300px, 60vw, 1000px);
+    max-height: clamp(200px, 40vh, 1000px);
+    border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
     border: var(--border-standard);
     margin-left: auto;
     margin-right: auto;
@@ -265,7 +265,7 @@ img {
 video {
     display: block;
     height: auto;
-    max-width: clamp(300px, 60vw, 600px);
+    max-width: clamp(300px, 60vw, 1000px);
     max-height: clamp(200px, 40vh, 500px);
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
     border: var(--border-standard);
@@ -274,13 +274,15 @@ video {
     background: #000; /* fallback background */
 }
 
-@media (min-width: 768px) {
-    video, img {
-        min-height: 40vh;
-    }
+.juxtapose {
+    max-width: 500px;
 }
 
-.juxtapose img{
+.juxtapose.long {
+    max-width: 1000px;
+}
+
+.juxtapose img {
     max-height: clamp(20vh, 40vh, 50vh);
     max-width: clamp(50vw, 60vw, 600px);
 }
