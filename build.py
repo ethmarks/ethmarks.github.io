@@ -38,7 +38,7 @@ def process_poem_tag(match):
         lines = stanza.strip().split('\n')
         p_lines = [f'<p>{line.strip()}</p>' for line in lines if line.strip()]
         processed_stanzas.append(''.join(p_lines))
-    final_poem_html = '<p>‎ </p>'.join(processed_stanzas)
+    final_poem_html = '<br>'.join(processed_stanzas)
     return f'<poem>{final_poem_html}</poem>'
 
 def embed_media_tag(match):
