@@ -40,7 +40,7 @@ My Github Pages deployment workflow
 
 ### Build
 
-Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](https://colourlessspearmint.github.io/blog/all) page) with links to each blog post.
+Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](https://colourlessspearmint.github.io/blog/all) page) with links to each blog post. I also wrote a [pre-commit hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) that runs build.py before each commit, ensuring I don't forget.
 
 ### Web Components
 
