@@ -90,3 +90,13 @@ tech:
   definition: "Tech (noun) - the application of scientific knowledge for practical purposes"
   text: |
     Posts tagged as Tech are related to technology, especially tech news
+apple:
+  description: "Apple"
+  definition: "Apple (noun) - a technology company known for its consumer electronics"
+  text: |
+    Posts tagged as Apple are related to Apple Inc. and its products
+google:
+  description: "Google"
+  definition: "Google (noun) - a technology company known for its search engine and online services"
+  text: |
+    Posts tagged as Google are related to Google Inc. and its products

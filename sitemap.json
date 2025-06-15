@@ -116,7 +116,8 @@
     "url": "https://colourlessspearmint.github.io/blog/liquidglass/",
     "title": "Thoughts on Liquid Glass",
     "tags": [
-      "tech"
+      "tech",
+      "apple"
     ],
     "date": "2025-06-14",
     "description": "My thoughts on Apple's new Liquid Glass design",
@@ -415,6 +416,28 @@
     "description": "Tech",
     "category": "tag",
     "slug": "tech"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/apple/",
+    "title": "Apple",
+    "tags": [
+      "apple"
+    ],
+    "date": null,
+    "description": "Apple",
+    "category": "tag",
+    "slug": "apple"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/google/",
+    "title": "Google",
+    "tags": [
+      "google"
+    ],
+    "date": null,
+    "description": "Google",
+    "category": "tag",
+    "slug": "google"
   },
   {
     "url": "https://colourlessspearmint.github.io/projects/anagram/",
