@@ -17,7 +17,7 @@ That being said, I absolutely love Liquid Glass. At no other point in time has m
 
 ## Glassmorphism
 
-Liquid Glass is just the Applelogism (A portmanteau of [Apple](https://en.wikipedia.org/wiki/Apple_Inc.) and [neologism](https://en.wiktionary.org/wiki/neologism) coined by me to describe Apple's tendency to take popular existing concepts and give them a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator): a design philosophy that uses translucent blur effects to emulate [frosted glass](https://en.wikipedia.org/wiki/Frosted_glass).
+Liquid Glass is just the Applelogism (A portmanteau of [Apple](https://en.wikipedia.org/wiki/Apple_Inc.) and [neologism](https://en.wiktionary.org/wiki/neologism) coined by me to describe Apple's tendency to take popular existing concepts and rebrand them under a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator): a design philosophy that uses translucent blur effects to emulate [frosted glass](https://en.wikipedia.org/wiki/Frosted_glass).
 
 ![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](https://img.sysnettechsolutions.com/What-is-Windows-Vista-Nedir-01.webp)
 
@@ -33,7 +33,7 @@ At its core, the only thing that Liquid Glass does is make the iPhone look prett
 
 ![Liquid Glass promotional material with the text "Introducing Liquid Glass" in chromatic type, next to six colourful pieces of glass, visibly refracting light and demonstrating additive color mixing](https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg)
 
-First, Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
+Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
 
 Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalism.
 
@@ -41,7 +41,7 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 ![Two VisionOS panels using Liquid Glass displaying information about the weather](https://cdn.macstories.net/screenshot-02-04-2024-19-35-44-1707094523402.png)
 
-Second, Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
+Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
 ![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](../../images/android_ios18_ios26.webp)
 
@@ -92,9 +92,9 @@ Something you almost never notice is that, no matter the format, the text you re
 
 This isn't a problem for subtle transparency (for example, the background behind my site text is actually only 70% opaque), but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible. 
 
-For example, try to read the text at the bottom of the iOS 26 screenshot below. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
-
 ![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, "Dark Mode On", "Night Shift Off", and "True Tone Off"](https://preview.redd.it/apples-liquid-glass-with-a-white-background-new-find-the-v0-1n1r4io5026f1.jpeg?width=640&crop=smart&auto=webp&s=da5f097e22749a3a59d4732e27199e7c1478e867)
+
+For example, try to read the text at the bottom of the iOS 26 screenshot above. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
 
 Apple claims that Liquid Glass dynamically adapts to the content behind it, but this clearly isn't quite working yet. It's important to remember that iOS 26 is still in a public beta and these concerns will probably be addressed before it's fully released, but as it stands this is a huge usability issue that needs to be addressed sooner rather than later.
 
