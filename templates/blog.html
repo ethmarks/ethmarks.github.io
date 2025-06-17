@@ -32,18 +32,28 @@
     <button onclick="redirectToRandomBlog()" class="random-blog-btn" title="Go to a random blog post">🎲 Random Post</button>
 </div>
 
+<nav class="button-links">
 {% for post in recent_posts %}
-<button-link href="{{ post['slug'] }}/" tags="{{ post['tags'] }}">
-    <span slot="title">{{ post['title'] }}</span>
-    <span slot="description">{{ post['date_human'] }}</span>
-</button-link>
+<a class="button-link" href="{{ post['slug'] }}/">
+    <span class="content">
+        <span class="title">{{ post['title'] }}</span>
+        <span class="description">{{ post['date_human'] }}</span>
+    </span>
+    <span class="tags">
+        {% set tags = post['tags'] if post['tags'] is iterable and post['tags'] is not string else post['tags'].split(',') %}
+        {% for tag in tags if tag|string %}
+            <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </span>
+</a>
 {% endfor %}
+</nav>
 </article>
 </main>
 <ethan-footer></ethan-footer>
 <script>
 function redirectToRandomBlog() {
-    const links = document.querySelectorAll('button-link[href]');
+    const links = document.querySelectorAll('a.button-link[href]');
     if (!links.length) {
         document.body.innerText = 'No blog posts found.';
         return;

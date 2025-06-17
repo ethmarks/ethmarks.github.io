@@ -16,13 +16,25 @@
 <article class="animated">
 <p class="definition">{{ tag_definition }}</p>
 <p>{{ tag_text|safe }}</p>
+<nav class="button-links">
 {% for post in posts %}
-<button-link href="../../{{ post['url'] }}">
-    <span slot="title">{{ post['title'] }}</span>
-    <span slot="description">{{ get_post_description(post) }}</span>
-    <span style="display:none;">{{ post['date_human'] }}</span>
-</button-link>
+<a class="button-link" href="../../{{ post['url'] }}">
+    <span class="content">
+        <span class="title">{{ post['title'] }}</span>
+        <span class="description">{{ get_post_description(post) }}</span>
+        <span style="display:none;">{{ post['date_human'] }}</span>
+    </span>
+    <span class="tags">
+        {% if post['tags'] %}
+            {% set tags = post['tags'] if post['tags'] is iterable and post['tags'] is not string else post['tags'].split(',') %}
+            {% for tag in tags if tag|string %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        {% endif %}
+    </span>
+</a>
 {% endfor %}
+</nav>
 </article>
 </main>
 <ethan-footer></ethan-footer>
