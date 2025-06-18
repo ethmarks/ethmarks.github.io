@@ -34,9 +34,7 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.
 
-![A screenshot of my Github Pages dashboard](../../images/ghpages.webp)
-
-My Github Pages deployment workflow
+![My Github Pages deployment workflow](../../images/ghpages.webp)
 
 ### Build
 
