@@ -28,18 +28,11 @@ Another cool thing you can do is save each step as a frame, which creates a cool
 
 Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: *how quickly can you guess what it's painting?*
 
-<figure>
-    <img style="width: 1000px;" src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.gif" alt="A timelapse animation of a highly stylized watercolor painting of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
-    <figcaption>An PaintTransformer timelapse of my Taliesin photo</figcaption>
-</figure>
-
-An PaintTransformer timelapse of my Taliesin photo
+![A PaintTransformer timelapse of my Taliesin photo](https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.webm)
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 
-I wanted to use PaintTransformer, but I didn't want to have to write code for every image, nor did I want to use the sketchy PaintTransformer app written in Chinese.
-
-So instead I took this opportunity to brush up on my interface frontend skills and code a client. I decided to name it ColourlessTransformer because I was going through a phase of naming everything eponymously.
+I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I took this opportunity to brush up on my interface coding skills and code a client. I decided to name it ColourlessTransformer because I was going through a phase of naming everything eponymously after my username.
 
 ## Streamlit
 
@@ -47,11 +40,11 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 I'm quite happy with how the Streamlit app turned out. A detail I'm particularly proud of is how the previous output fades out slightly while the new one is processing.
 
-![A streamlit app](../../images/colourlesstransformer_streamlit.webp)
+![ColourlessTransformer Streamlit demo](../../images/colourlesstransformer_streamlit.webp)
 
 ## Usage
 
-If you want to try this out on your own, follow the [instructions in the README](https://github.com/ColourlessSpearmint/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and a tiny bit of familiarity with the terminal. In other words, you might want to skip this one if you're not a programmer.
+If you want to try this out on your own, follow the [instructions in the README](https://github.com/ColourlessSpearmint/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and some familiarity with the terminal.
 
 ## Conclusion
 
