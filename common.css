@@ -133,7 +133,7 @@ h1 {
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 0 var(--spacing-md) 0;
+    margin: 0;
     /* Add bottom margin */
     font-weight: var(--font-weight-bold);
     background: linear-gradient(135deg, #ffffff, var(--color-accent));
@@ -484,6 +484,10 @@ chat p img {
     display: block;
     box-shadow: none;
     border: none;
+}
+
+external-link {
+    margin-top: var(--spacing-md);
 }
 
 .external-link-row {
