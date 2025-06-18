@@ -732,6 +732,14 @@ a code:focus {
     animation-delay: 1.00s;
 }
 
+.post-tags {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
 @keyframes postTagSlideIn {
     to {
         opacity: 1;

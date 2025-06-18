@@ -21,7 +21,7 @@
 <p>~Ethan</p>
 
 <div class="post-tags">
-{% for tag in tags %}
+{% for tag in tags[:15] %}
     {% if tag['slug'] != 'all' %}
     <a class="post-tag animated" href="{{ tag['url'] }}/">#{{ tag['title'] }}</a>
     {% endif %}
