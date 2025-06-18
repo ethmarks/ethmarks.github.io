@@ -441,6 +441,15 @@
     "slug": "google"
   },
   {
+    "url": "https://colourlessspearmint.github.io/tag/",
+    "title": "All Tags",
+    "tags": [],
+    "date": null,
+    "description": "Browse all tags used on Ethan's blog and projects.",
+    "category": "tag-index",
+    "slug": "tags-index"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/projects/anagram/",
     "title": "Anagram Animator",
     "tags": [

@@ -335,6 +335,12 @@ def main():
                 "description": info["description"],
             }
         )
+    # Render tags aggregator page
+    tags_template = env.get_template("tags.html")
+    tags_index_path = os.path.join(TAG_DIR, "index.html")
+    os.makedirs(TAG_DIR, exist_ok=True)
+    with open(tags_index_path, "w", encoding="utf-8") as f:
+        f.write(tags_template.render(tags=tags_for_index))
     # Get all posts (by date, descending)
     all_posts_sorted = sorted(posts_for_index, key=lambda p: p["date"], reverse=True)
     # Prepare all_posts with human-readable date
@@ -453,6 +459,10 @@ def main():
             lastmod = None
         add_url(url, lastmod or datetime.now().strftime("%Y-%m-%d"))
 
+    # Tags index page
+    tags_index_url = f"{WEBSITE_URL}/tag/"
+    add_url(tags_index_url, datetime.now().strftime("%Y-%m-%d"))
+
     sitemap_path = "sitemap.xml"
     tree = ET.ElementTree(urlset)
     tree.write(sitemap_path, encoding="utf-8", xml_declaration=True)
@@ -543,6 +553,20 @@ def main():
                 "slug": tag,
             }
         )
+
+    # Add tags index page to sitemap/info.json
+    tags_index_url = f"{WEBSITE_URL}/tag/"
+    info_entries.append(
+        {
+            "url": tags_index_url,
+            "title": "All Tags",
+            "tags": [],
+            "date": None,
+            "description": "Browse all tags used on Ethan's blog and projects.",
+            "category": "tag-index",
+            "slug": "tags-index",
+        }
+    )
 
     # Projects
     for project in projects:
