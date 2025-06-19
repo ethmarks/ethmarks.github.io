@@ -44,7 +44,7 @@ Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 I've utilized [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for things like the header, footer, and buttons.
 
-This allows me to just quickly drop in an `<ethan-header>` element, and the header will beinstantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
+This allows me to just quickly drop in an \<ethan-header\> element, and the header will be instantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Style Guide
 
@@ -63,7 +63,7 @@ I had a moderately specific vision for what I wanted my website to look like, an
 
 ### Special Effects
 
-- **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a [gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) over a large sample space, I want to be the first to know so I can add a subtle blur to the `<article>` styles without tanking performance.
+- **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a [gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) over a large sample space, I want to be the first to know so I can add a subtle blur to the main panel without tanking performance.
 - **Tilt**: If you hover over the cards on my home page, they'll respond to the mouse by tilting in 3D. I used [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/) for this 
 
 ## Lighthouse
