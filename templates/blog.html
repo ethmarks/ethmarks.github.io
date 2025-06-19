@@ -21,11 +21,12 @@
 <p>~Ethan</p>
 
 <div class="post-tags">
-{% for tag in tags[:15] %}
+{% for tag in tags[:8] %}
     {% if tag['slug'] != 'all' %}
     <a class="post-tag animated" href="{{ tag['url'] }}/">#{{ tag['title'] }}</a>
     {% endif %}
 {% endfor %}
+    <a class="post-tag animated" href="../tag/">...</a>
 </div>
 
 <div class="random-blog-btn-container animated">
