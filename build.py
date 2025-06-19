@@ -52,7 +52,64 @@ def embed_media_tag(match):
     return img_tag
 
 
+def parse_double_blockquote(body):
+    # This function finds consecutive lines starting with '>>' and wraps them in a centered blockquote
+    lines = body.split("\n")
+    new_lines = []
+    in_centered = False
+    centered_lines = []
+    for line in lines:
+        if line.strip().startswith(">>"):
+            centered_lines.append(line.lstrip()[2:].lstrip())
+            in_centered = True
+        else:
+            if in_centered:
+                if centered_lines:
+                    # Group into stanzas separated by blank lines
+                    stanzas = []
+                    stanza = []
+                    for l in centered_lines:
+                        if l.strip() == "":
+                            if stanza:
+                                stanzas.append(stanza)
+                                stanza = []
+                        else:
+                            stanza.append(l)
+                    if stanza:
+                        stanzas.append(stanza)
+                    html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
+                    new_lines.append(
+                        "<blockquote class='centered-blockquote'>\n"
+                        + "\n".join(html_lines)
+                        + "\n</blockquote>"
+                    )
+                centered_lines = []
+                in_centered = False
+            new_lines.append(line)
+    # If file ends with a centered blockquote
+    if in_centered and centered_lines:
+        stanzas = []
+        stanza = []
+        for l in centered_lines:
+            if l.strip() == "":
+                if stanza:
+                    stanzas.append(stanza)
+                    stanza = []
+            else:
+                stanza.append(l)
+        if stanza:
+            stanzas.append(stanza)
+        html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
+        new_lines.append(
+            "<blockquote class='centered-blockquote'>\n"
+            + "\n".join(html_lines)
+            + "\n</blockquote>"
+        )
+    return "\n".join(new_lines)
+
+
 def render_post(meta, body):
+    body = parse_double_blockquote(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     md.block_level_elements.append("chat")
     md.block_level_elements.append("cell")
