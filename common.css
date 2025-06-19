@@ -549,24 +549,6 @@ ul li {
     transition: color var(--transition-duration-fast) var(--transition-timing);
 }
 
-pre {
-    font-family: monospace;
-    white-space: pre;
-    text-align: center;
-    overflow-x: auto;
-    /* Allow horizontal scrolling for long lines */
-    line-height: 1.2;
-    /* Adjust line height for better readability */
-    background-color: var(--color-article-bg);
-    /* Optional background */
-    padding: var(--spacing-sm);
-    /* Add some padding */
-    border-radius: var(--radius-md);
-    /* Rounded corners */
-    border: var(--border-standard);
-    /* Add border */
-}
-
 .juxtapose-container {
     display: flex;
     justify-content: center;
@@ -594,18 +576,179 @@ iframe {
 iframe.homepage {
     width: clamp(80%, 100%, 800px);
     height: clamp(30vh, 50vh, 400px);
-    ;
+}
+
+.codehilite {
+    font-family: monospace;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    overflow-x: auto;
+    line-height: 1.4;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-accent-dark);
+    box-shadow: var(--shadow-article);
+}
+
+.codehilite .hll {
+    background-color: var(--color-accent-transparent-15);
+}
+
+.codehilite .c,
+/* Comment */
+.codehilite .ch,
+.codehilite .cm,
+.codehilite .cpf,
+.codehilite .c1,
+.codehilite .cs,
+.codehilite .sd {
+    color: #7db8b0;
+    font-style: italic;
+}
+
+.codehilite .k,
+/* Keyword */
+.codehilite .kc,
+.codehilite .kd,
+.codehilite .kn,
+.codehilite .kp,
+.codehilite .kr,
+.codehilite .nt {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.codehilite .o,
+/* Operator */
+.codehilite .ow {
+    color: #9ce3d9;
+}
+
+.codehilite .s,
+/* String */
+.codehilite .sa,
+.codehilite .sb,
+.codehilite .sc,
+.codehilite .dl,
+.codehilite .s2,
+.codehilite .sh,
+.codehilite .si,
+.codehilite .sx,
+.codehilite .sr,
+.codehilite .s1 {
+    color: #8fdfd4;
+}
+
+.codehilite .m,
+/* Number */
+.codehilite .mb,
+.codehilite .mf,
+.codehilite .mh,
+.codehilite .mi,
+.codehilite .mo,
+.codehilite .il {
+    color: #b0e6e0;
+}
+
+.codehilite .n,
+/* Name */
+.codehilite .na,
+.codehilite .nb,
+.codehilite .nc,
+.codehilite .no,
+.codehilite .nd,
+.codehilite .ni,
+.codehilite .ne,
+.codehilite .nf,
+.codehilite .nl,
+.codehilite .nn,
+.codehilite .nv,
+.codehilite .bp,
+.codehilite .fm,
+.codehilite .vc,
+.codehilite .vg,
+.codehilite .vi,
+.codehilite .vm {
+    color: #fff;
+}
+
+.codehilite .err,
+.codehilite .gr {
+    color: #fff;
+    background: #d2413a;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.codehilite .gd {
+    color: #ffb3b3;
+}
+
+.codehilite .gi {
+    color: #b3ffcc;
+}
+
+.codehilite .gh,
+.codehilite .gp,
+.codehilite .gs,
+.codehilite .gu {
+    color: #8fdfd4;
+    font-weight: bold;
+}
+
+.codehilite .w {
+    color: #c0c0c0;
+}
+
+.codehilite .go {
+    color: #888;
+}
+
+.codehilite .kt {
+    color: #B00040;
+}
+
+.codehilite .cp {
+    color: #BC7A00;
+}
+
+.codehilite .se {
+    color: #BB6622;
+    font-weight: bold;
+}
+
+.codehilite .ss {
+    color: #19177C;
+}
+
+/* Remove old individual codehilite/ascii-art block, keep .ascii-art as is */
+.ascii-art {
+    text-align: center;
+    font-family: monospace;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    overflow-x: auto;
+    line-height: 1.2;
+    background-color: var(--color-article-bg);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    border: var(--border-standard);
+}
+
+.ascii-art.large {
+    font-size: clamp(0.1rem, 2vw, 0.5rem);
 }
 
 code {
     font-family: monospace;
-    background-color: var(--color-article-bg);
-    border-radius: var(--radius-sm);
-    border: var(--border-standard);
     white-space: pre-wrap;
-    /* Preserve whitespace and wrap lines */
     word-wrap: break-word;
-    /* Break long words */
 }
 
 /* Post tags styling */
