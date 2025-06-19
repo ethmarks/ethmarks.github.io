@@ -612,3 +612,47 @@ customElements.define('scroll-indicator',
         });
     });
 })();
+
+// Inject copy-to-clipboard button into .codehilite blocks
+(function injectCopyButtonToCodehilite() {
+    window.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.codehilite').forEach(function (block) {
+            // Avoid double-injecting
+            if (block.querySelector('.copy-code-btn')) return;
+            // Create button
+            var btn = document.createElement('button');
+            btn.className = 'copy-code-btn';
+            btn.type = 'button';
+            btn.title = 'Copy code to clipboard';
+            btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                var code = block.querySelector('pre') ? block.querySelector('pre').innerText : block.innerText;
+                navigator.clipboard.writeText(code).then(function () {
+                    btn.classList.add('copied');
+                    btn.title = 'Copied!';
+                    // Tooltip logic
+                    var tooltip = document.createElement('span');
+                    tooltip.className = 'copy-tooltip';
+                    tooltip.textContent = 'Copied!';
+                    btn.appendChild(tooltip);
+                    setTimeout(function () {
+                        tooltip.classList.add('visible');
+                    }, 10);
+                    setTimeout(function () {
+                        tooltip.classList.remove('visible');
+                        setTimeout(function () {
+                            if (tooltip.parentNode) tooltip.parentNode.removeChild(tooltip);
+                        }, 200);
+                    }, 1100);
+                    setTimeout(function () {
+                        btn.classList.remove('copied');
+                        btn.title = 'Copy code to clipboard';
+                    }, 1200);
+                });
+            });
+            // Insert button as first child (so it appears in header)
+            block.insertBefore(btn, block.firstChild);
+        });
+    });
+})();
