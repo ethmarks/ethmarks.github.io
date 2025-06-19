@@ -7,7 +7,7 @@ slug: username
 description: An explanation of my username, ColourlessSpearmint
 ---
 
-<pre class="ascii-art">
+```ascii
  ██████╗ ██████╗ ██╗      ██████╗ ██╗   ██╗██████╗ ██╗     ███████╗███████╗███████╗
 ██╔════╝██╔═══██╗██║     ██╔═══██╗██║   ██║██╔══██╗██║     ██╔════╝██╔════╝██╔════╝
 ██║     ██║   ██║██║     ██║   ██║██║   ██║██████╔╝██║     █████╗  ███████╗███████╗
@@ -21,7 +21,7 @@ description: An explanation of my username, ColourlessSpearmint
 ╚════██║██╔═══╝ ██╔══╝  ██╔══██║██╔══██╗██║╚██╔╝██║██║██║╚██╗██║   ██║             
 ███████║██║     ███████╗██║  ██║██║  ██║██║ ╚═╝ ██║██║██║ ╚████║   ██║             
 ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝             
-</pre>
+```
 
 This site's URL is ["colourlessspearmint.github.io"](https://colourlessspearmint.github.io/). The ".github.io" part is because it's hosted via [GitHub Pages](https://pages.github.com/), and the "colourlessspearmint" comes from my username, [ColourlessSpearmint](https://github.com/ColourlessSpearmint).
 

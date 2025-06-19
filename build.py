@@ -108,8 +108,30 @@ def parse_double_blockquote(body):
     return "\n".join(new_lines)
 
 
+def parse_ascii_block(body):
+    # This function finds code blocks starting with ```ascii and ending with ```
+    # and replaces them with the specified HTML structure.
+    def replacer(match):
+        content = match.group(1)
+        # Remove trailing newline if present
+        if content.endswith("\n"):
+            content = content[:-1]
+        # Check if any line is longer than 160 characters
+        lines = content.split("\n")
+        if any(len(line) > 160 for line in lines):
+            div_class = "codehilite ascii-art large"
+        else:
+            div_class = "codehilite ascii-art"
+        return f'<div class="{div_class}"><pre><span></span><code>{content}</code></pre></div>'
+
+    # Regex: match ```ascii\n...content...```
+    pattern = r"```ascii\n([\s\S]*?)```"
+    return re.sub(pattern, replacer, body)
+
+
 def render_post(meta, body):
     body = parse_double_blockquote(body)
+    body = parse_ascii_block(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     md.block_level_elements.append("chat")
     md.block_level_elements.append("cell")
@@ -167,6 +189,7 @@ def render_post(meta, body):
 
 
 def render_project(meta, body):
+    body = parse_ascii_block(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     html = md.convert(body)
     html = re.sub(

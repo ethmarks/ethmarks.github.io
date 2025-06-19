@@ -37,7 +37,18 @@ To retrieve the list of synonyms, Thessa sends queries to the [Gemini API](https
 The prompt template used to generate synonyms is below.
 
 ```txt
-Provide a list of diverse English synonyms for "${word}", limited to a maximum of ${NUM_OF_SYNONYMS}. Include some common synonyms as well as rare, esoteric ones. The ${NUM_OF_SYNONYMS}th and final synonym should be in Bulgarian. "${word}" cannot be in your list of synonyms. No repeats. Capitalize the first letter of each synonym. Newline separated. Each line should ONLY include the synonym. NEVER anything other than the synonym on the line. NEVER include parenthesis. Your response should only include the list without any introductory or concluding text. If none, say "No synonyms found for ${word}."
+Provide a list of diverse English synonyms for "${word}", limited to a maximum of 8. 
+Include some common synonyms as well as rare, esoteric ones. 
+The 8th and final synonym should be in Bulgarian. 
+"${word}" cannot be in your list of synonyms. 
+No repeats. 
+Capitalize the first letter of each synonym. 
+Newline separated. 
+Each line should ONLY include the synonym. 
+NEVER anything other than the synonym on the line. 
+NEVER include parenthesis. 
+Your response should only include the list without any introductory or concluding text. 
+If none, say "No synonyms found for ${word}."
 ```
 
 ### API Key

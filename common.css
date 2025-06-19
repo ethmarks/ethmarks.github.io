@@ -581,8 +581,9 @@ iframe.homepage {
 
 code {
     font-family: monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    white-space: pre;
+    overflow-x: auto;
+    display: block;
 }
 
 .copy-code-btn {
@@ -594,7 +595,7 @@ code {
     color: var(--color-accent, #8fdfd4);
     border: 1.5px solid var(--color-accent-transparent-15, #8fdfd426);
     border-radius: 6px;
-    padding: 0.18em 0.6em;
+    padding: 5px 12px;
     font-size: 1em;
     cursor: pointer;
     opacity: 0.92;
@@ -660,13 +661,21 @@ code {
     width: fit-content;
     white-space: pre;
     overflow-x: auto;
+    display: block;
     line-height: 1.4;
     background-color: var(--color-codehilite-bg);
     color: var(--color-text);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-accent-dark);
     box-shadow: var(--shadow-article);
+}
+
+.codehilite pre {
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre;
+    display: block;
 }
 
 .codehilite .hll {
@@ -795,18 +804,24 @@ code {
 }
 
 .ascii-art {
-    text-align: center;
+    text-align: left;
     font-family: monospace;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    white-space: pre;
-    overflow-x: auto;
-    line-height: 1.2;
-    background-color: var(--color-article-bg);
-    padding: var(--spacing-sm);
-    border-radius: var(--radius-md);
-    border: var(--border-standard);
+}
+
+@media (max-width: 1200px) {
+    .codehilite {
+        width: auto;
+    }
+
+    .ascii-art {
+        font-size: 0.8rem;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .ascii-art.large {
