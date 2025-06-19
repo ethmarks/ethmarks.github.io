@@ -30,20 +30,6 @@ def parse_markdown_with_frontmatter(path):
     return meta, body
 
 
-def process_poem_tag(match):
-    # Known bug: Removes all newlines so the output is one big block
-    # Workaround: Remember that it's slightly more bandwidth efficient and call it a feature
-    poem_text = match.group(1).strip()
-    stanzas = re.split(r"\n\s*\n", poem_text)
-    processed_stanzas = []
-    for stanza in stanzas:
-        lines = stanza.strip().split("\n")
-        p_lines = [f"<p>{line.strip()}</p>" for line in lines if line.strip()]
-        processed_stanzas.append("".join(p_lines))
-    final_poem_html = "<br>".join(processed_stanzas)
-    return f"<poem>{final_poem_html}</poem>"
-
-
 def embed_media_tag(match):
     # Group 1 captures the entire <img> tag.
     # Group 2 captures the value of the src attribute.
@@ -68,11 +54,9 @@ def embed_media_tag(match):
 
 def render_post(meta, body):
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
-    md.block_level_elements.append("poem")
     md.block_level_elements.append("chat")
     md.block_level_elements.append("cell")
     html = md.convert(body)
-    html = re.sub(r"<poem>(.*?)</poem>", process_poem_tag, html, flags=re.DOTALL)
     html = re.sub(
         r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html
     )
@@ -127,9 +111,7 @@ def render_post(meta, body):
 
 def render_project(meta, body):
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
-    md.block_level_elements.append("poem")
     html = md.convert(body)
-    html = re.sub(r"<poem>(.*?)</poem>", process_poem_tag, html, flags=re.DOTALL)
     html = re.sub(
         r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html
     )
