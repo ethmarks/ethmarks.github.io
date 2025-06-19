@@ -92,7 +92,7 @@
     "tags": [
       "figments",
       "poetry",
-      "factory"
+      "automation"
     ],
     "date": "2024-04-29",
     "description": "A poem and reflection on the sights and sounds of industrial progress and machinery.",
@@ -342,15 +342,26 @@
     "slug": "poetry"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/factory/",
-    "title": "Factory",
+    "url": "https://colourlessspearmint.github.io/blog/automation/",
+    "title": "Automation",
     "tags": [
-      "factory"
+      "automation"
     ],
     "date": null,
-    "description": "Factory",
+    "description": "Automation",
     "category": "tag",
-    "slug": "factory"
+    "slug": "automation"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/cryptology/",
+    "title": "Cryptology",
+    "tags": [
+      "cryptology"
+    ],
+    "date": null,
+    "description": "Cryptology",
+    "category": "tag",
+    "slug": "cryptology"
   },
   {
     "url": "https://colourlessspearmint.github.io/blog/physics/",
@@ -492,7 +503,8 @@
     "title": "ColourlessTransformer",
     "tags": [
       "projects",
-      "programming"
+      "programming",
+      "automation"
     ],
     "date": "2024-12-22",
     "description": "My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses",
@@ -533,7 +545,9 @@
     "tags": [
       "projects",
       "programming",
-      "humor"
+      "humor",
+      "cryptology",
+      "automation"
     ],
     "date": "2025-06-06",
     "description": "An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'",

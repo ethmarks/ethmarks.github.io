@@ -42,10 +42,14 @@ poetry:
   description: "Poetry"
   definition: "Poetry (noun) - a composition in verse, usually with meter and rhyme"
   text: "Posts tagged as Poetry are related to original poems or discussion/review of existing poems"
-factory:
-  description: "Factory"
-  definition: "Factory (noun) - a building or group of buildings where goods are manufactured"
-  text: "Posts tagged as Factory are related to manufacturing or automation, topics which delight me"
+automation:
+  description: "Automation"
+  definition: "Automation (noun) - the use of technology to perform tasks with minimal human intervention"
+  text: "Posts tagged as Automation are related to automating tasks, scripts, and tools"
+cryptology:
+  description: "Cryptology"
+  definition: "Cryptology (noun) - the study of codes and ciphers"
+  text: "Posts tagged as Cryptology are related to cryptography, encryption, and security"
 physics:
   description: "Physics"
   definition: "Physics (noun) - the natural science that studies matter, its motion and behavior through space and energy"
