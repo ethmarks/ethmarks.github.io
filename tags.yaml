@@ -1,105 +1,84 @@
 all:
   description: "All posts"
   definition: "All (adjective) - the entire quantity or extent"
-  text: |
-    This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place
+  text: "This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place"
 curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"
-  text: |
-    Posts tagged as Curios are essays and thoughts on interesting things I found the Internet
+  text: "Posts tagged as Curios are essays and thoughts on interesting things I found the Internet"
 figments:
   description: "Creative writing"
   definition: "Figments (noun) - products of the imagination"
-  text: |
-    Posts tagged as Figments are creative writing pieces, such as short stories or poems
-    <br>
-    Some works were created before this blog existed, so their publication dates may predate that of this site
+  text: "Posts tagged as Figments are creative writing pieces, such as short stories or poems\n    <br><br>\n    Some works were created before this blog existed, so their publication dates may predate that of this site"
 cartography:
   description: "Cartography"
   definition: "Cartography (noun) - the science or practice of drawing maps"
-  text: |
-    Posts tagged as Cartography are related to maps, mapping, and geographic information systems
+  text: "Posts tagged as Cartography are related to maps, mapping, and geographic information systems"
 language:
   description: "Language and linguistics"
   definition: "Language (noun) - a system of communication used by a particular community or country"
-  text: |
-    Posts tagged as Language are related to linguistics, vocabulary, or languages (probably Bulgarian)
+  text: "Posts tagged as Language are related to linguistics, vocabulary, or languages (probably Bulgarian)"
 humor:
   description: "Humor"
   definition: "Humor (noun) - the quality of being amusing or entertaining"
-  text: |
-    Posts tagged as Humor are light-hearted, funny, or satirical in nature
+  text: "Posts tagged as Humor are light-hearted, funny, or satirical in nature"
 ai:
   description: "Artificial intelligence"
   definition: "AI (noun) - the simulation of human intelligence in machines"
-  text: |
-    Posts tagged as AI are related to artificial intelligence, machine learning, and related technologies
+  text: "Posts tagged as AI are related to artificial intelligence, machine learning, and related technologies"
 history:
   description: "History"
   definition: "History (noun) - the study of the past"
-  text: |
-    Posts tagged as History cover historical events, figures, and analysis
+  text: "Posts tagged as History cover historical events, figures, and analysis"
 sci-fi:
   description: "Science fiction"
   definition: "Sci-fi (noun) - a genre of speculative fiction that explores futuristic concepts"
-  text: |
-    Posts tagged as Sci-fi are related to science fiction
+  text: "Posts tagged as Sci-fi are related to science fiction"
 short-story:
   description: "Short stories"
   definition: "Short story (noun) - a brief work of fiction"
-  text: |
-    Posts tagged as Short-Story are related to original short stories or discussion/review of existing short stories
+  text: "Posts tagged as Short-Story are related to original short stories or discussion/review of existing short stories"
 poetry:
   description: "Poetry"
   definition: "Poetry (noun) - a composition in verse, usually with meter and rhyme"
-  text: |
-    Posts tagged as Poetry are related to original poems or discussion/review of existing poems
+  text: "Posts tagged as Poetry are related to original poems or discussion/review of existing poems"
 factory:
   description: "Factory"
   definition: "Factory (noun) - a building or group of buildings where goods are manufactured"
-  text: |
-    Posts tagged as Factory are related to manufacturing or automation, topics which delight me
+  text: "Posts tagged as Factory are related to manufacturing or automation, topics which delight me"
 physics:
   description: "Physics"
   definition: "Physics (noun) - the natural science that studies matter, its motion and behavior through space and energy"
-  text: |
-    Posts tagged as Physics are related to physics
+  text: "Posts tagged as Physics are related to physics"
 quanth:
   description: "The Quanth unit of measurement"
   definition: "Quanth (noun) - a unit of length equal to 10^34 Planck Lengths"
-  text: |
-    Posts tagged as Quanth are related to my new unit of measurement, the Quanth
+  text: "Posts tagged as Quanth are related to my new unit of measurement, the <a href='/blog/quanth'>Quanth</a>"
 personalwebsite:
   description: "Personal Website"
   definition: "Personal website (noun) - a website created and maintained by an individual"
-  text: |
-    Posts tagged as Personal Website are related to my personal website, including its design, development, and content
+  text: "Posts tagged as Personal Website are related to my personal website, including its design, development, and content"
 travel:
   description: "Travel"
   definition: "Travel (noun) - the act of going from one place to another, typically over a distance"
-  text: |
-    Posts tagged as Travel are related to my travels and experiences in different places
+  text: "Posts tagged as Travel are related to my travels and experiences in different places"
 programming:
   description: "Programming"
   definition: "Programming (noun) - the process of designing and building computer software"
-  text: |
-    Posts tagged as Programming are related to programming, software development, and related topics
+  text: "Posts tagged as Programming are related to programming, software development, and related topics"
 tech:
   description: "Tech"
   definition: "Tech (noun) - the application of scientific knowledge for practical purposes"
-  text: |
-    Posts tagged as Tech are related to technology, especially tech news
+  text: "Posts tagged as Tech are related to technology, especially tech news"
 apple:
   description: "Apple"
   definition: "Apple (noun) - a technology company known for its consumer electronics"
-  text: |
-    Posts tagged as Apple are related to Apple Inc. and its products
+  text: "Posts tagged as Apple are related to Apple Inc. and its products"
 google:
   description: "Google"
   definition: "Google (noun) - a technology company known for its search engine and online services"
-  text: |
-    Posts tagged as Google are related to Google Inc. and its products
+  text: "Posts tagged as Google are related to Google Inc. and its products"
 colab:
   description: "Google Colab"
   definition: "Google Colab (noun) - a free Jupyter notebook environment that runs in the cloud"
+  text: "Posts tagged as Colab are related to <a href='https://colab.research.google.com/'>Google Colab</a>, a free <a href='https://jupyter.org/'>Jupyter</a> notebook environment that runs in the cloud"
