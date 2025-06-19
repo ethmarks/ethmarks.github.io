@@ -441,6 +441,17 @@
     "slug": "google"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/colab/",
+    "title": "Colab",
+    "tags": [
+      "colab"
+    ],
+    "date": null,
+    "description": "Google Colab",
+    "category": "tag",
+    "slug": "colab"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/tag/",
     "title": "All Tags",
     "tags": [],
@@ -455,7 +466,8 @@
     "tags": [
       "projects",
       "programming",
-      "language"
+      "language",
+      "colab"
     ],
     "date": "2025-04-18",
     "description": "A simple little Jupyter notebook to create anagram GIFs",
@@ -494,7 +506,8 @@
       "projects",
       "programming",
       "ai",
-      "history"
+      "history",
+      "colab"
     ],
     "date": "2024-12-17",
     "description": "My implementation of the 1966 chatbot Eliza",

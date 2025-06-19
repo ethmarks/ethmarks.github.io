@@ -14,8 +14,8 @@
 <main>
 <h1 class="animated">{{ tag_title }}</h1>
 <article class="animated">
-<p class="definition">{{ tag_definition }}</p>
-<p>{{ tag_text|safe }}</p>
+<p class="definition">{{ tag_definition }}</p>{% if tag_text %}
+<p>{{ tag_text|safe }}</p>{% endif %}
 <nav class="button-links">
 {% for post in posts %}
 <a class="button-link" href="../../{{ post['url'] }}">

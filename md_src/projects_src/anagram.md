@@ -2,7 +2,7 @@
 index: True
 title: Anagram Animator
 date: 2025-04-18
-tags: [projects, programming, language]
+tags: [projects, programming, language, colab]
 slug: anagram
 description: A simple little Jupyter notebook to create anagram GIFs
 link: https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK

@@ -100,3 +100,6 @@ google:
   definition: "Google (noun) - a technology company known for its search engine and online services"
   text: |
     Posts tagged as Google are related to Google Inc. and its products
+colab:
+  description: "Google Colab"
+  definition: "Google Colab (noun) - a free Jupyter notebook environment that runs in the cloud"

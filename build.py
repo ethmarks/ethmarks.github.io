@@ -292,6 +292,9 @@ def main():
             },
         )
 
+        # Ensure tag_text is blank if not present in tag_info
+        tag_text = tag_info.get("text", "")
+
         # Sort posts and projects by date descending (if available)
         def get_date(item):
             date_val = item.get("date")
@@ -321,7 +324,7 @@ def main():
                 tag_template.render(
                     tag_title=tag.capitalize(),
                     tag_definition=tag_info["definition"],
-                    tag_text=tag_info["text"],
+                    tag_text=tag_text,
                     posts=posts_list_sorted,
                     get_post_description=lambda post: (
                         human_readable_date(post["date"])
