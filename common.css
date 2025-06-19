@@ -83,7 +83,12 @@ html {
     font-size: 100%;
     /* Base for rem units (usually 16px) */
     scroll-behavior: smooth;
-    overscroll-behavior: none;
+}
+
+@media (pointer: fine) {
+    html {
+        overscroll-behavior: none;
+    }
 }
 
 body {
