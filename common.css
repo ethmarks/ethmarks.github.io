@@ -536,12 +536,10 @@ section>cell>p {
 
 ul {
     list-style: disc inside;
-    margin: var(--spacing-md) 0;
     padding-left: var(--spacing-lg);
 }
 
 ul li {
-    margin-bottom: var(--spacing-sm);
     line-height: 1.6;
     transition: color var(--transition-duration-fast) var(--transition-timing);
 }
