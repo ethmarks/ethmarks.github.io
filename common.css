@@ -578,11 +578,15 @@ iframe.homepage {
     height: clamp(30vh, 50vh, 400px);
 }
 
+code {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 .codehilite {
     font-family: monospace;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     white-space: pre;
     overflow-x: auto;
     line-height: 1.4;
@@ -599,7 +603,6 @@ iframe.homepage {
 }
 
 .codehilite .c,
-/* Comment */
 .codehilite .ch,
 .codehilite .cm,
 .codehilite .cpf,
@@ -611,25 +614,22 @@ iframe.homepage {
 }
 
 .codehilite .k,
-/* Keyword */
 .codehilite .kc,
 .codehilite .kd,
 .codehilite .kn,
 .codehilite .kp,
 .codehilite .kr,
 .codehilite .nt {
-    color: var(--color-accent);
+    color: #6cb6eb;
     font-weight: bold;
 }
 
 .codehilite .o,
-/* Operator */
 .codehilite .ow {
-    color: #9ce3d9;
+    color: #8fdfd4;
 }
 
 .codehilite .s,
-/* String */
 .codehilite .sa,
 .codehilite .sb,
 .codehilite .sc,
@@ -640,22 +640,20 @@ iframe.homepage {
 .codehilite .sx,
 .codehilite .sr,
 .codehilite .s1 {
-    color: #8fdfd4;
+    color: #ffe082;
 }
 
 .codehilite .m,
-/* Number */
 .codehilite .mb,
 .codehilite .mf,
 .codehilite .mh,
 .codehilite .mi,
 .codehilite .mo,
 .codehilite .il {
-    color: #b0e6e0;
+    color: #f78c6c;
 }
 
 .codehilite .n,
-/* Name */
 .codehilite .na,
 .codehilite .nb,
 .codehilite .nc,
@@ -709,23 +707,22 @@ iframe.homepage {
 }
 
 .codehilite .kt {
-    color: #B00040;
+    color: #b2a1ff;
 }
 
 .codehilite .cp {
-    color: #BC7A00;
+    color: #bc7a00;
 }
 
 .codehilite .se {
-    color: #BB6622;
+    color: #bb6622;
     font-weight: bold;
 }
 
 .codehilite .ss {
-    color: #19177C;
+    color: #e0b0ff;
 }
 
-/* Remove old individual codehilite/ascii-art block, keep .ascii-art as is */
 .ascii-art {
     text-align: center;
     font-family: monospace;
@@ -743,12 +740,6 @@ iframe.homepage {
 
 .ascii-art.large {
     font-size: clamp(0.1rem, 2vw, 0.5rem);
-}
-
-code {
-    font-family: monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
 }
 
 /* Post tags styling */
