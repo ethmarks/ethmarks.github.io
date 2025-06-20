@@ -29,6 +29,7 @@
     /* Fonts */
     --font-primary: "Nunito", sans-serif;
     --font-secondary: "Sen", sans-serif;
+    --font-monospace: monospace;
     --font-weight-normal: 600;
     --font-weight-bold: 700;
     --font-size-base: 1.07rem;
@@ -580,7 +581,7 @@ iframe.homepage {
 }
 
 code {
-    font-family: monospace;
+    font-family: var(--font-monospace);
     white-space: pre;
     overflow-x: auto;
     display: block;
@@ -657,7 +658,7 @@ code {
 
 .codehilite {
     position: relative;
-    font-family: monospace;
+    font-family: var(--font-monospace);
     width: fit-content;
     white-space: pre;
     overflow-x: auto;
@@ -805,7 +806,7 @@ code {
 
 .ascii-art {
     text-align: left;
-    font-family: monospace;
+    font-family: var(--font-monospace);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
