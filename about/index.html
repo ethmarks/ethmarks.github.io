@@ -26,6 +26,40 @@
         table,th {
             text-align: center;
         }
+
+        section {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        section>div {
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                display: block;
+                align-items: normal;
+            }
+        }
+
+        section div {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            overflow-wrap: break-word;
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+        section div p {
+            margin: 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -35,16 +69,16 @@
 <article class="animated">
 
 <section>
-    <cell>
+    <div>
         <h2>Bio</h2>
         <p>My name is <b>Ethan Marks</b></p>
         <p>I'm a <b>software engineer</b></p>
         <p>I'm <b>14</b> years old</p>
-    </cell>
+    </div>
 </section>
 
 <section>
-    <cell>
+    <div>
         <h2>Interests</h2>
         <table class="compact">
             <thead>
@@ -59,8 +93,8 @@
                 <tr><td><a href="../tag/language/">Linguistics</a></td></tr>
             </tbody>
             </table>
-    </cell>
-    <cell>
+    </div>
+    <div>
         <h2>Likes</h2>
         <table class="compact gridlines">
         <thead>
@@ -96,8 +130,8 @@
             </tr>
         </tbody>
         </table>
-    </cell>
-    <cell>
+    </div>
+    <div>
         <h2>Hobbies</h2>
         <table class="compact">
             <thead>
@@ -112,67 +146,85 @@
                 <tr><td>Visiting <a href="https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States">National Parks</a> (I've been to 34 so far)</td></tr>
             </tbody>
             </table>
-    </cell>
+    </div>
 </section>
 
 <section>
-    <cell>
+    <div>
         <h2>Education</h2>
-        <p>I'm a homeschooled high school student, but I'm also dual-enrolled at my local college with a 4.0 GPA. This has allowed me to learn advanced material at an unusually young age</p>
-    </cell>
-    <cell>
+        <p>I'm a homeschooled high school student, and I'm also dual-enrolled at my local college with a 4.0 GPA.</p>
+    </div>
+    <div>
         <h2>Job</h2>
         <p>I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash the <a href="https://chromeos.google/products/chromeos-flex/">ChromeOS Flex</a> operating system, and resell them for profit</p>
-    </cell>
+    </div>
 </section>
 
 <section>
-    <cell>
+    <div>
         <h2>Skills</h2>
         <table class="compact">
             <thead>
-                <tr><th>Skills</th></tr>
+                <tr>
+                    <th>Subject</th>
+                    <th>Skills</th>
+                </tr>
             </thead>
             <tbody>
-                <tr><td><a href="https://www.python.org/">Python</a></td></tr>
-                <tr><td><a href="https://git-scm.com/">Git</a>, <a href="https://github.com/">GitHub</a></td></tr>
-                <tr><td><a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></td></tr>
-                <tr><td><a href="https://unity.com/">Unity</a>, <a href="https://godotengine.org/">Godot</a></td></tr>
-                <tr><td><a href="https://www.adobe.com/products/photoshop.html">Photoshop</a>, <a href="https://www.gimp.org/">GIMP</a>, <a href="https://inkscape.org/">Inkscape</a></td></tr>
+                <tr>
+                    <td>General Purpose Langauge</td>
+                    <td><a href="https://www.python.org/">Python</a></td>
+                </tr>
+                <tr>
+                    <td>Version Control</td>
+                    <td><a href="https://git-scm.com/">Git</a>, <a href="https://github.com/">GitHub</a></td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td><a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></td>
+                </tr>
+                <tr>
+                    <td>Game Engine</td>
+                    <td><a href="https://unity.com/">Unity</a>, <a href="https://godotengine.org/">Godot</a></td>
+                </tr>
+                <tr>
+                    <td>Image Editing Software</td>
+                    <td><a href="https://www.adobe.com/products/photoshop.html">Photoshop</a>, <a href="https://www.gimp.org/">GIMP</a>, <a href="https://inkscape.org/">Inkscape</a></td>
+                </tr>
             </tbody>
         </table>
-    </cell>
-    <cell>
+    </div>
+    <div>
         <h2>Experience</h2>
         <table class="compact">
             <thead>
                 <tr><th>Experience</th></tr>
             </thead>
             <tbody>
-                <tr><td>Coding since age 7 (my first program was written in <a href="https://scratch.mit.edu/">Scratch</a>)</td></tr>
+                <tr><td>Coding since age 7 (I wrote my first program in <a href="https://scratch.mit.edu/">Scratch</a>)</td></tr>
                 <tr><td>Developed and published a <a href="https://colourlessspearmint.itch.io/soaring-squirrel-shipment">video game about flying squirrels</a></td></tr>
                 <tr><td>Built my <a href="../projects/personalwebsite">personal website</a> from scratch</td></tr>
                 <tr><td>Modified a <a href="../projects/eliza">1966 chatbot</a> to run on modern hardware</td></tr>
                 <tr><td>Developed a <a href="../projects/asciiglobe">text-based cartographic rendering engine</a></td></tr>
             </tbody>
         </table>
-    </cell>
+    </div>
 </section>
 
 <section>
-    <cell>
+    <div>
         <h2>Cat</h2>
-        <p>I have a cat named Toby</p>
-        <p>He is 16 years old and blind</p>
-        <p>His hobbies include stealing my chicken nuggets as well as imitating an air raid siren</p>
+        <p>I have a cat named Toby.</p>
+        <p>He is 16 years old and blind.</p>
+        <p>His hobbies include stealing my chicken nuggets as well as imitating an air raid siren.</p>
         <figure>
             <img class="bigimage" src="../images/toby.webp" alt="Toby, a fluffy gray Persian cat, curiously surveys a desert (White Sands National Park) while being petted by Ethan, a brown-haired fair-skinned teenage boy.">
         </figure>
-    </cell>
+    </div>
 </section>
 
 <section>
-    <cell>
+    <div>
         <h2>Links</h2>
         <div class="external-link-row">
             <external-link icon="github" href="https://github.com/ColourlessSpearmint">
@@ -185,7 +237,7 @@
                 <span slot="title">Email</span>
             </external-link>
         </div>
-    </cell>
+    </div>
 </section>
 </article>
 </main>

@@ -133,8 +133,6 @@ def render_post(meta, body):
     body = parse_double_blockquote(body)
     body = parse_ascii_block(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
-    md.block_level_elements.append("chat")
-    md.block_level_elements.append("cell")
     html = md.convert(body)
     html = re.sub(
         r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html
