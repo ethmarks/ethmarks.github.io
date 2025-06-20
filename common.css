@@ -48,7 +48,7 @@
     --article-margin-top: 1.875rem;
     --chat-padding-y: 0.625rem;
     --chat-padding-x: 1rem;
-    --chat-margin-bottom: 0.8rem;
+    --chat-margin-bottom: 0.2rem;
 
     /* Borders & Radius */
     --radius-sm: 4px;
@@ -445,6 +445,7 @@ table.compact tr.accent-row td {
     clear: both;
     padding: var(--chat-padding-y) var(--chat-padding-x);
     box-shadow: var(--shadow-chat);
+    margin-top: 0;
     margin-bottom: var(--chat-margin-bottom);
     max-width: 80%;
     word-wrap: break-word;
