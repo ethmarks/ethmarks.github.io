@@ -59,7 +59,7 @@ The question then becomes: 'what do we call this new unit?'
 
 ## Unit Names
 
-If we were using the Metric standard, we would express 10^34 by combining the SI prefixes deca (10^1) ronto (10^33), into decaronto. A Decarontoplanck doesn't quite roll off the tongue. So instead we'll invent a new term.
+If we were using the Metric standard, we would express 10^34 by combining the SI prefixes deca (10^1) and bramto (10^33), into decabramto. A Decabramtoplanck doesn't quite roll off the tongue. So instead we'll invent a new term.
 
 Here are a few ideas:
 
@@ -75,12 +75,12 @@ To describe distances other than ~6.3 inches, we apply SI prefixes to Quanth, ju
 
 | Unit           | Planck Lengths | Quanth           | Imperial Approx   | Metric Approx     |
 |----------------|----------------|------------------|-------------------|-------------------|
-| **Microquanth**| 10^28          | 0.000001 Quanth  | 1/158000 Inches   | 1.61 Micrometers  |
-| **Milliquanth**| 10^31          | 0.001 Quanth     | 1/158 Inches      | 161 Micrometers   |
-| **Quanth**     | 10^34          | 1 Quanth         | 6.3 Inches        | 1.61 Meters       |
-| **Kiloquanth** | 10^37          | 1,000 Quanth     | 525 Feet          | 161 Meters        |
-| **Myriaquanth**| 10^38          | 10,000 Quanth    | 1 Mile            | 1.61 Kilometers   |
-| **Megaquanth** | 10^41          | 1,000,000 Quanth | 1,000 Miles       | 161 Kilometers    |
+| **Microquanth**| 10^28 ℓP       | 0.000001 Q       | 0.0000063 Inches  | 1.61 Micrometers  |
+| **Milliquanth**| 10^31 ℓP       | 0.001 Q          | 0.0063 Inches     | 161 Micrometers   |
+| **Quanth**     | 10^34 ℓP       | 1 Q              | 6.3 Inches        | 1.61 Meters       |
+| **Kiloquanth** | 10^37 ℓP       | 1,000 Q          | 525 Feet          | 161 Meters        |
+| **Myriaquanth**| 10^38 ℓP       | 10,000 Q         | 1 Mile            | 1.61 Kilometers   |
+| **Megaquanth** | 10^41 ℓP       | 1,000,000 Q      | 1,000 Miles       | 161 Kilometers    |
 
 I suggest that we abbreviate 'Myriaquanth' (~1 mile) as 'Myr' (pronounced like in '**mir**ror') in common usage. So you would say "The road is 5 Myr long". 
 
