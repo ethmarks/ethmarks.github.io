@@ -18,15 +18,18 @@
         margin-bottom: 20px;
     }
 
-    .intro-container img {
+    .headshot {
+        animation: circle-reveal 2.5s ease both, slide-right 2.5s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+    }
+
+    .headshot img {
         max-width: 50vw;
         max-height: 50vh;
-        animation: circle-reveal 2.5s cubic-bezier(0, 0.8, 0.2, 1) both, slide-right 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
         border: var(--border-standard);
         transition: border-color 0.25s;
     }
 
-    .intro-container img:hover {
+    .headshot img:hover {
         border-color: var(--color-accent);
     }
 
@@ -34,16 +37,19 @@
         font-size: 3rem;
         margin-top: 0;
         font-family: var(--font-secondary);
-        animation: slide-down 2.5s cubic-bezier(0, 0.8, 0.2, 1) both;
+        opacity: 0;
+        animation: slide-down 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
 
     .intro-container p {
         font-size: clamp(0.8rem, 1.7rem, 5vmin);
-        animation: slide-left 3s cubic-bezier(0, 0.8, 0.2, 1) both;
+        opacity: 0;
+        animation: spearmint-drift-in 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     }
 
-    .intro-container p:nth-child(2) {animation: slide-left 2s cubic-bezier(0, 0.8, 0.2, 1) both;}
+    .intro-container p:nth-child(2) { animation-delay: 0.2s; }
+    .intro-container p:nth-child(3) { animation-delay: 0.5s; }
 
     .headshot, .intro-text {
         display: flex;
@@ -69,6 +75,10 @@
         animation: tilt-in 1s ease-in-out;
     }
 
+    .name {
+        font-weight: 800;
+    }
+
     h1 .fall:nth-child(1) {animation-delay: 0.1s;}
     h1 .fall:nth-child(2) {animation-delay: 0.2s;}
     h1 .fall:nth-child(3) {animation-delay: 0.3s;}
@@ -83,37 +93,60 @@
 
     @keyframes slide-down {
         from {
-            transform: translate(0, -5rem);
+            opacity: 0;
+            transform: translate(0, -1.5em);
         }
         to {
+            opacity: 1;
             transform: translate(0, 0);
         }
     }
 
-    @keyframes slide-left {
-        from {
-            transform: translate(5rem, 0);
-        }
-        to {
-            transform: translate(0, 0);
-        }
+    @keyframes spearmint-drift-in {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+        text-shadow:
+          0px 0 3px var(--color-accent, #00ffd0),
+          20px 0 3px var(--color-accent, #00ffd0),
+          40px 0 3px #00bfae,
+          80px 0 3px #009e8e;
+      }
+      60% {
+        text-shadow:
+          0px 0 1px var(--color-accent, #8dffea),
+          1px 0 1px var(--color-accent, #8cffea),
+          2px 0 1px #5fb8b0,
+          4px 0 1px #4e918a;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow:
+          0px 0 1px #8dffea00,
+          1px 0 1px #8cffea00,
+          2px 0 1px #5fb8b100,
+          4px 0 1px #4e918a00;
+      }
     }
 
     @keyframes slide-right {
         from {
+            opacity: 0;
             transform: translate(-6rem, 0);
         }
         to {
+            opacity: 1;
             transform: translate(0, 0);
         }
     }
 
     @keyframes circle-reveal {
-        from {
-            clip-path: circle(2.5vh);
+        0% {
+            clip-path: circle(1%);
         }
-        to {
-            clip-path: circle(75%);
+        100% {
+            clip-path: circle(100%);
         }
     }
 
@@ -324,7 +357,7 @@
     </div>
     <div class="intro-text">
         <h2>Ahoy!</h2>
-        <p>My name is <span class="mint"><b>Ethan&nbsp;Marks</b></span>.</p>
+        <p>My name is <span class="name">Ethan&nbsp;Marks</span>.</p>
         <p>I'm a software engineer.</p>
     </div>
 </div>
