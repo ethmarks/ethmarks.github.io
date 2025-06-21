@@ -20,6 +20,7 @@
 
     .headshot {
         animation: circle-reveal 2.5s ease both, slide-right 2.5s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+        animation-delay: 0.3s;
     }
 
     .headshot img {
@@ -38,14 +39,14 @@
         margin-top: 0;
         font-family: var(--font-secondary);
         opacity: 0;
-        animation: slide-down 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation: shadow-drift-down 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
 
     .intro-container p {
         font-size: clamp(0.8rem, 1.7rem, 5vmin);
         opacity: 0;
-        animation: spearmint-drift-in 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        animation: shadow-drift-left 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     }
 
     .intro-container p:nth-child(2) { animation-delay: 0.2s; }
@@ -79,11 +80,11 @@
         font-weight: 800;
     }
 
-    h1 .fall:nth-child(1) {animation-delay: 0.1s;}
-    h1 .fall:nth-child(2) {animation-delay: 0.2s;}
-    h1 .fall:nth-child(3) {animation-delay: 0.3s;}
-    h1 .fall:nth-child(4) {animation-delay: 0.4s;}
-    h1 .fall:nth-child(5) {animation-delay: 0.5s;}
+    h1 .fall:nth-child(1) {animation-delay: 0.8s;}
+    h1 .fall:nth-child(2) {animation-delay: 0.9s;}
+    h1 .fall:nth-child(3) {animation-delay: 1.0s;}
+    h1 .fall:nth-child(4) {animation-delay: 1.1s;}
+    h1 .fall:nth-child(5) {animation-delay: 1.2s;}
     
     @media (min-width: 768px) {
         .intro-container p {
@@ -91,59 +92,78 @@
         }
     }
 
-    @keyframes slide-down {
-        from {
+    @keyframes shadow-drift-down {
+        0% {
             opacity: 0;
             transform: translate(0, -1.5em);
+            text-shadow:
+                0 0px 3px var(--color-accent, #00ffd0),
+                0 -20px 3px var(--color-accent, #00ffd0),
+                0 -40px 3px #00bfae,
+                0 -80px 3px #009e8e;
         }
-        to {
+        80% {
+            text-shadow:
+                0 0px 1px var(--color-accent, #8dffea),
+                0 -1px 1px var(--color-accent, #8cffea),
+                0 -2px 1px #5fb8b0,
+                0 -4px 1px #4e918a;
+        }
+        100% {
             opacity: 1;
             transform: translate(0, 0);
-        }
+            text-shadow:
+                0 0px 1px #8dffea00,
+                0 -1px 1px #8cffea00,
+                0 -2px 1px #5fb8b100,
+                0 -4px 1px #4e918a00;
+      }
     }
 
-    @keyframes spearmint-drift-in {
-      0% {
-        opacity: 0;
-        transform: translateX(100px);
-        text-shadow:
-          0px 0 3px var(--color-accent, #00ffd0),
-          20px 0 3px var(--color-accent, #00ffd0),
-          40px 0 3px #00bfae,
-          80px 0 3px #009e8e;
-      }
-      60% {
-        text-shadow:
-          0px 0 1px var(--color-accent, #8dffea),
-          1px 0 1px var(--color-accent, #8cffea),
-          2px 0 1px #5fb8b0,
-          4px 0 1px #4e918a;
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-        text-shadow:
-          0px 0 1px #8dffea00,
-          1px 0 1px #8cffea00,
-          2px 0 1px #5fb8b100,
-          4px 0 1px #4e918a00;
-      }
+    @keyframes shadow-drift-left {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+            text-shadow:
+            0px 0 3px var(--color-accent, #00ffd0),
+            20px 0 3px var(--color-accent, #00ffd0),
+            40px 0 3px #00bfae,
+            80px 0 3px #009e8e;
+        }
+        60% {
+            text-shadow:
+            0px 0 1px var(--color-accent, #8dffea),
+            1px 0 1px var(--color-accent, #8cffea),
+            2px 0 1px #5fb8b0,
+            4px 0 1px #4e918a;
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+            text-shadow:
+            0px 0 1px #8dffea00,
+            1px 0 1px #8cffea00,
+            2px 0 1px #5fb8b100,
+            4px 0 1px #4e918a00;
+        }
     }
 
     @keyframes slide-right {
-        from {
-            opacity: 0;
+        0% {
+            opacity: 0.5;
             transform: translate(-6rem, 0);
         }
-        to {
+        60% {
             opacity: 1;
+        }
+        100% {
             transform: translate(0, 0);
         }
     }
 
     @keyframes circle-reveal {
         0% {
-            clip-path: circle(1%);
+            clip-path: circle(0%);
         }
         100% {
             clip-path: circle(100%);
@@ -196,7 +216,8 @@
 
     article p {
         opacity: 0;
-        animation: fade-in-up 1.2s 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        animation: fade-in-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        animation-delay: 1.5s;
     }
 
     @keyframes fade-in-up {
