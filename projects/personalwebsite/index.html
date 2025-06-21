@@ -10,9 +10,9 @@
     <meta property="og:description" content="The website you're reading right now">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://colourlessspearmint.github.io/blog/personalwebsite/">
-    <link rel="stylesheet" href="../../common.css">
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
-    <script src="../../common.js"></script>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <script src="/common.js"></script>
 </head>
 <body>
 <ethan-header></ethan-header>
@@ -41,7 +41,7 @@
 <article class="animated">
 <p>My personal website is my home on the web.</p>
 <figure>
-    <iframe class="homepage" src="../../index.html" loading="lazy" scrolling="no" style="pointer-events: none;"></iframe>
+    <iframe class="homepage" src="/index.html" loading="lazy" scrolling="no" style="pointer-events: none;"></iframe>
 </figure>
 
 <p>I made this site because I want to have an online presence, but I don't want to use social media (e.g. <a href="https://www.instagram.com/">Instagram</a>, <a href="https://twitter.com/">Twitter</a>), nor do I want to use someone else's premade blogging platform (e.g. <a href="https://www.blogger.com">Blogger</a>, <a href="https://www.tumblr.com/">Tumblr</a>, <a href="https://wordpress.com/">Wordpress</a>).</p>
@@ -56,9 +56,9 @@
 </ul>
 <h3>GitHub Pages</h3>
 <p>This site is hosted on <a href="https://pages.github.com/">GitHub Pages</a>. I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.</p>
-<img alt="My Github Pages deployment workflow" src="../../images/ghpages.webp" />
+<img alt="My Github Pages deployment workflow" src="/images/ghpages.webp" />
 <h3>Build</h3>
-<p>Each blog post is stored as a <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> document, and is built into HTML by my custom <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a>. My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the <a href="https://colourlessspearmint.github.io/blog/all">All tag</a> page) with links to each blog post. I also wrote a <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks">pre-commit hook</a> that runs build.py before each commit, ensuring I don't forget.</p>
+<p>Each blog post is stored as a <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> document, and is built into HTML by my custom <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a>. My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the <a href="/tag/all/">All tag</a> page) with links to each blog post. I also wrote a <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks">pre-commit hook</a> that runs build.py before each commit, ensuring I don't forget.</p>
 <h3>Web Components</h3>
 <p>I've utilized <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">Web Components</a> for things like the header, footer, and buttons.</p>
 <p>This allows me to just quickly drop in an \&lt;ethan-header&gt; element, and the header will be instantiated in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a>.</p>
@@ -82,7 +82,7 @@
 </ul>
 <h2>Lighthouse</h2>
 <p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop">June 9, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse">Lighthouse</a> score of 99.75.</p>
-<img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="../../images/lighthouse.webp" />
+<img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="/images/lighthouse.webp" />
 <p>It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.</p>
 <h2>Privacy</h2>
 <p>This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and harvesting it sounds complicated. Your data remains yours because I don't want it and can't figure out how to get it.</p>

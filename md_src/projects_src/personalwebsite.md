@@ -13,7 +13,7 @@ link_icon: github
 My personal website is my home on the web.
 
 <figure>
-    <iframe class="homepage" src="../../index.html" loading="lazy" scrolling="no" style="pointer-events: none;"></iframe>
+    <iframe class="homepage" src="/index.html" loading="lazy" scrolling="no" style="pointer-events: none;"></iframe>
 </figure>
 
 I made this site because I want to have an online presence, but I don't want to use social media (e.g. [Instagram](https://www.instagram.com/), [Twitter](https://twitter.com/)), nor do I want to use someone else's premade blogging platform (e.g. [Blogger](https://www.blogger.com), [Tumblr](https://www.tumblr.com/), [Wordpress](https://wordpress.com/)).
@@ -34,11 +34,11 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.
 
-![My Github Pages deployment workflow](../../images/ghpages.webp)
+![My Github Pages deployment workflow](/images/ghpages.webp)
 
 ### Build
 
-Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](https://colourlessspearmint.github.io/blog/all) page) with links to each blog post. I also wrote a [pre-commit hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) that runs build.py before each commit, ensuring I don't forget.
+Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](/tag/all/) page) with links to each blog post. I also wrote a [pre-commit hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) that runs build.py before each commit, ensuring I don't forget.
 
 ### Web Components
 
@@ -70,7 +70,7 @@ I had a moderately specific vision for what I wanted my website to look like, an
 
 As of [June 9, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 99.75.
 
-![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](../../images/lighthouse.webp)
+![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](/images/lighthouse.webp)
 
 It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.
 

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ tag_title }}</title>
     <meta name="description" content="{{ tag_definition }}">
-    <link rel="stylesheet" href="../../common.css">
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
-    <script src="../../common.js"></script>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <script src="/common.js"></script>
 </head>
 <body>
 <ethan-header></ethan-header>
@@ -18,7 +18,7 @@
 <p>{{ tag_text|safe }}</p>{% endif %}
 <nav class="button-links">
 {% for post in posts %}
-<a class="button-link" href="../../{{ post['url'] }}">
+<a class="button-link" href="/{{ post['url'] }}">
     <span class="content">
         <span class="title">{{ post['title'] }}</span>
         <span class="description">{{ get_post_description(post) }}</span>

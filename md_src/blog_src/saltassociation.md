@@ -31,9 +31,9 @@ It covers various [famous geological salt formations](https://saltassociation.co
 
 It even covers [salt controversies](https://saltassociation.co.uk/position-statement-government-salt-reduction-strategy/) and combats [salt misinformation](https://saltassociation.co.uk/salt-the-facts/).
 
-![A 404 page with the header "404 Error" in large red text, and below it the subheader "You’ve found a lost salt crystal!" in smaller blue text. To the right is a photo of a salt crystal.](../../images/salt_404.webp)
+![A 404 page with the header "404 Error" in large red text, and below it the subheader "You’ve found a lost salt crystal!" in smaller blue text. To the right is a photo of a salt crystal.](/images/salt_404.webp)
 
-The [404 page](https://saltassociation.co.uk/404) says "You’ve found a lost salt crystal!". I thought [my 404 page](https://colourlessspearmint.github.io/404) was great, but this one is clearly far superior.
+The [404 page](https://saltassociation.co.uk/404) says "You’ve found a lost salt crystal!". I thought [my 404 page](/404) was great, but this one is clearly far superior.
 
 ## Conclusion
 

@@ -24,7 +24,7 @@ This is called a [Kerckhoffs-insecure](https://en.wikipedia.org/wiki/Kerckhoffs%
 
 ## Converter
 
-![a screenshot of the Scream Cipher Converter interface](../../images/screamcipher_screenshot.webp)
+![a screenshot of the Scream Cipher Converter interface](/images/screamcipher_screenshot.webp)
 
 Anyways, I built a [Scream Cipher converter webpage](https://colourlessspearmint.github.io/screamcipher.html) to automate the process of ciphering in Scream Cipher.
 

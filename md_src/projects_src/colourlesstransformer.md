@@ -40,7 +40,7 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 I'm quite happy with how the Streamlit app turned out. A detail I'm particularly proud of is how the previous output fades out slightly while the new one is processing.
 
-![ColourlessTransformer Streamlit demo](../../images/colourlesstransformer_streamlit.webp)
+![ColourlessTransformer Streamlit demo](/images/colourlesstransformer_streamlit.webp)
 
 ## Usage
 

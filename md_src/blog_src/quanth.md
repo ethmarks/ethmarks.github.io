@@ -13,7 +13,7 @@ On the one hand, Metric is the international standard, it scales better than Imp
 
 But on the other hand, Feet are simply a more convenient length than Meters. Also, I'm American, so the vast majority of the people I interact with use Imperial, making it more useful.
 
-[![Original: https://xkcd.com/1643](../../images/distance_xkcd.webp)](https://xkcd.com/1643)
+[![Original: https://xkcd.com/1643](/images/distance_xkcd.webp)](https://xkcd.com/1643)
 
 I prefer Metric and use it whenever possible, but I'm aware that using it has the unfortunate side effect of making me seem like a contrarian elitist.
 
