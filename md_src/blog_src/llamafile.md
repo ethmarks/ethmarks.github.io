@@ -40,7 +40,7 @@ If you have a menial task that requires the adaptability and language understand
 
 param(
     # Defines a mandatory string parameter named StoryId.
-    # This parameter will hold the Hacker News story ID (e.g., 38814545 for a specific story).
+    # This parameter will hold the Hacker News story ID.
     [Parameter(Mandatory=$true)]
     [string]$StoryId
 )
@@ -56,17 +56,25 @@ function Get-HnCommentText($comments) {
     foreach ($comment in $comments) {
         # If the current comment object has a 'text' property and it's not null,
         # output its value. This will be collected by the calling expression.
-        if ($null -ne $comment.text) { $comment.text }
+        if ($null -ne $comment.text) { 
+            $comment.text 
+        }
         
-        # If the current comment object has 'children' (i.e., replies),
-        # recursively call this function on those children to extract their text.
-        if ($null -ne $comment.children) { Get-HnCommentText -comments $comment.children }
+        # If the current comment object has children (replies),
+        # recursively call this function extract their text.
+        if ($null -ne $comment.children) { 
+            Get-HnCommentText -comments $comment.children
+        }
     }
 }
 
+# Retrieve all comments for the Hacker News story with a REST method.
+$commentText = Get-HnCommentText (Invoke-RestMethod `
+    "https://hn.algolia.com/api/v1/items/$StoryId").children | Out-String
+
 # Constructs the prompt string for the AI model using a here-string.
 $prompt = @"
-$(Get-HnCommentText (Invoke-RestMethod "https://hn.algolia.com/api/v1/items/$StoryId").children | Out-String)
+$commentText
 
 Summarize the themes of the opinions expressed here, including direct quotes.
 "@

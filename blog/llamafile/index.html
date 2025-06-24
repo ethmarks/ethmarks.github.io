@@ -54,7 +54,7 @@
 
 <span class="k">param</span><span class="p">(</span>
     <span class="c"># Defines a mandatory string parameter named StoryId.</span>
-    <span class="c"># This parameter will hold the Hacker News story ID (e.g., 38814545 for a specific story).</span>
+    <span class="c"># This parameter will hold the Hacker News story ID.</span>
     <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span><span class="p">=</span><span class="nv">$true</span><span class="p">)]</span>
     <span class="no">[string]</span><span class="nv">$StoryId</span>
 <span class="p">)</span>
@@ -70,17 +70,25 @@
     <span class="k">foreach</span> <span class="p">(</span><span class="nv">$comment</span> <span class="k">in</span> <span class="nv">$comments</span><span class="p">)</span> <span class="p">{</span>
         <span class="c"># If the current comment object has a &#39;text&#39; property and it&#39;s not null,</span>
         <span class="c"># output its value. This will be collected by the calling expression.</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$null</span> <span class="o">-ne</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">text</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">text</span> <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$null</span> <span class="o">-ne</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">text</span><span class="p">)</span> <span class="p">{</span> 
+            <span class="nv">$comment</span><span class="p">.</span><span class="n">text</span> 
+        <span class="p">}</span>
 
-        <span class="c"># If the current comment object has &#39;children&#39; (i.e., replies),</span>
-        <span class="c"># recursively call this function on those children to extract their text.</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$null</span> <span class="o">-ne</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">children</span><span class="p">)</span> <span class="p">{</span> <span class="nb">Get-HnCommentText</span> <span class="n">-comments</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">children</span> <span class="p">}</span>
+        <span class="c"># If the current comment object has children (replies),</span>
+        <span class="c"># recursively call this function extract their text.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$null</span> <span class="o">-ne</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">children</span><span class="p">)</span> <span class="p">{</span> 
+            <span class="nb">Get-HnCommentText</span> <span class="n">-comments</span> <span class="nv">$comment</span><span class="p">.</span><span class="n">children</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
+<span class="c"># Retrieve all comments for the Hacker News story with a REST method.</span>
+<span class="nv">$commentText</span> <span class="p">=</span> <span class="nb">Get-HnCommentText</span> <span class="p">(</span><span class="nb">Invoke-RestMethod</span> <span class="p">`</span>
+    <span class="s2">&quot;https://hn.algolia.com/api/v1/items/$StoryId&quot;</span><span class="p">).</span><span class="n">children</span> <span class="p">|</span> <span class="nb">Out-String</span>
+
 <span class="c"># Constructs the prompt string for the AI model using a here-string.</span>
 <span class="nv">$prompt</span> <span class="p">=</span> <span class="sh">@&quot;</span>
-<span class="p">$(</span><span class="nb">Get-HnCommentText</span> <span class="p">(</span><span class="nb">Invoke-RestMethod</span> <span class="s2">&quot;https://hn.algolia.com/api/v1/items/$StoryId&quot;</span><span class="p">).</span><span class="n">children</span> <span class="p">|</span> <span class="nb">Out-String</span><span class="p">)</span>
+<span class="sh">$commentText</span>
 
 <span class="sh">Summarize the themes of the opinions expressed here, including direct quotes.</span>
 <span class="sh">&quot;@</span>
