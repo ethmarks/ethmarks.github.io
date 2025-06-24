@@ -126,6 +126,19 @@
     "slug": "liquidglass"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/llamafile/",
+    "title": "Llamafile",
+    "tags": [
+      "curios",
+      "programming",
+      "ai"
+    ],
+    "date": "2025-06-24",
+    "description": "An explanation of llamafile, a file type that lets you run LLMs from a single file",
+    "category": "blog",
+    "slug": "llamafile"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/quanth/",
     "title": "I have invented a new measurement system",
     "tags": [
