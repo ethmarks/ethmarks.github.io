@@ -35,20 +35,37 @@ def embed_media_tag(match):
     # Group 2 captures the value of the src attribute.
     img_tag = match.group(1)
     src = match.group(2).strip()
+
     # Extract alt text if present
     alt_match = re.search(r'alt=["\']([^"\']*)["\']', img_tag)
+    # alt_text will be an empty string if the alt attribute is not found
     alt_text = alt_match.group(1) if alt_match else ""
-    # Check for YouTube links
+
+    # 1. Handle YouTube links first. These are always iframes.
     youtube_match = re.match(
         r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]+)", src
     )
     if youtube_match:
         video_id = youtube_match.group(1)
         return f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-    # Check for video file extensions
+
+    # 2. Define common video file extensions.
+    # We include .gif here because it's a common way to denote a short, looped video,
+    # even if the underlying file might be a .webm or .mp4.
     video_exts = (".mp4", ".webm", ".ogg", ".mov")
+
+    # 3. Check if the src points to a direct video file.
     if src.lower().endswith(video_exts):
-        return f'<video src="{src}" autoplay loop playsinline></video>'
+        # Now, apply the logic based on the alt text for these video files.
+        if alt_text.lower().startswith("gif"):
+            # If alt text starts with "GIF", apply autoplay, loop, muted, playsinline.
+            return f'<video class="gif" src="{src}" autoplay loop muted playsinline></video>'
+        else:
+            # Otherwise (alt text does NOT start with "GIF"), apply controls only.
+            return f'<video class="video" src="{src}" controls></video>'
+
+    # 4. If it's not a YouTube link and not a direct video file, return the original <img> tag.
+    # This ensures that regular images (e.g., .jpg, .png) are not converted to <video> tags.
     return img_tag
 
 
