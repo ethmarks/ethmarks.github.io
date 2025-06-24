@@ -76,10 +76,17 @@
     --transition-duration-fast: 0.2s;
     --transition-timing: ease;
     --transition-default: all var(--transition-duration-fast) var(--transition-timing);
-    /* Default transition */
     --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
     --transition-transform: transform var(--transition-duration) var(--transition-timing);
     --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
+
+    /* Media Sizes */
+    --max-media-width: clamp(300px, 60vw, 1000px);
+    --max-media-height: clamp(200px, 50vh, 600px);
+    --max-media-width-big: clamp(70vw, 80vw, 800px);
+    --max-media-height-big: 70vh;
+    --max-media-width-small: clamp(25vw, 30vw, 250px);
+    --max-media-height-small: 30vh;
 }
 
 html {
@@ -281,11 +288,9 @@ figure {
 
 img {
     display: block;
-    /* Prevents bottom margin */
     height: auto;
-    /* Maintain aspect ratio */
-    max-width: clamp(300px, 60vw, 1000px);
-    max-height: clamp(200px, 40vh, 1000px);
+    max-width: var(--max-media-width);
+    max-height: var(--max-media-height);
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
     border: var(--border-standard);
     margin-left: auto;
@@ -295,14 +300,12 @@ img {
 video {
     display: block;
     height: auto;
-    max-width: clamp(300px, 60vw, 1000px);
-    max-height: clamp(200px, 40vh, 500px);
+    max-width: var(--max-media-width);
+    max-height: var(--max-media-height);
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
     border: var(--border-standard);
     margin-left: auto;
     margin-right: auto;
-    background: #000;
-    /* fallback background */
 }
 
 .juxtapose {
@@ -324,14 +327,13 @@ video {
 
 /* Simplified image size classes */
 .bigimage {
-    max-width: clamp(70vw, 80vw, 800px);
-    max-height: 70vh;
+    max-width: var(--max-media-width-big);
+    max-height: var(--max-media-height-big);
 }
 
 .smallimage {
-    max-width: clamp(25vw, 30vw, 250px);
-    max-height: 30vh;
-    border-radius: var(--radius-md);
+    max-width: var(--max-media-width-small);
+    max-height: var(--max-media-height-small);
 }
 
 /* Table Styles */
