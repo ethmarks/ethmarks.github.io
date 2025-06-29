@@ -162,6 +162,18 @@
     "slug": "saltassociation"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/scrambleanim/",
+    "title": "Text Scramble Animation",
+    "tags": [
+      "curios",
+      "programming"
+    ],
+    "date": "2025-06-29",
+    "description": "A demonstration of my text scrambling JavaScript animation",
+    "category": "blog",
+    "slug": "scrambleanim"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/timeunits/",
     "title": "Units of Time",
     "tags": [
