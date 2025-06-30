@@ -5,7 +5,7 @@ all:
 curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"
-  text: "Posts tagged as Curios are essays and thoughts on interesting things I found the Internet"
+  text: "Posts tagged as Curios are short essays about interesting things I've found. They're similar to a TIL (Today I Learned), in that I'm just bringing something I found to the reader's attention. There's a fuzzy line between a Curio post and an in-depth analysis post, but the difference is usually in the amount of effort I put into it. If it was more effort to find the topic than to write the post, it's a Curio."
 figments:
   description: "Creative writing"
   definition: "Figments (noun) - products of the imagination"

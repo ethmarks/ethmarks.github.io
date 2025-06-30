@@ -2,7 +2,7 @@
 index: True
 title: Text Scramble Animation
 date: 2025-06-29
-tags: [curios, programming]
+tags: [programming]
 slug: scrambleanim
 description: A demonstration of my text scrambling JavaScript animation  
 ---

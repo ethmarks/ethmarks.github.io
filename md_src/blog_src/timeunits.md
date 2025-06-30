@@ -2,7 +2,7 @@
 index: True
 title: Units of Time
 date: 2025-05-09
-tags: [curios, history, language]
+tags: [history, language]
 slug: timeunits
 description: A fun list of obscure and historical units of time, from the jiffy to the lustrum.
 ---
