@@ -614,10 +614,24 @@ customElements.define('scroll-indicator',
 })();
 
 // Inject copy-to-clipboard button into .codehilite blocks
-(function injectCopyButtonToCodehilite() {
+// Inject copy-to-clipboard button and theme for .codehilite blocks
+(function injectCodehiliteAssets() {
     window.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.codehilite').forEach(function (block) {
-            // Avoid double-injecting
+        var codeBlocks = document.querySelectorAll('.codehilite');
+        if (codeBlocks.length === 0) return;
+
+        // Inject stylesheet for syntax highlighting if it's not already present.
+        var stylesheetId = 'codehilite-theme';
+        if (!document.getElementById(stylesheetId)) {
+            var link = document.createElement('link');
+            link.id = stylesheetId;
+            link.rel = 'stylesheet';
+            link.href = '/codehilite.css';
+            document.head.appendChild(link);
+        }
+
+        codeBlocks.forEach(function (block) {
+            // Avoid double-injecting button
             if (block.querySelector('.copy-code-btn')) return;
             // Create button
             var btn = document.createElement('button');

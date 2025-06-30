@@ -633,7 +633,7 @@ code {
     overflow-x: auto;
     display: block;
     line-height: 1.4;
-    background-color: var(--color-codehilite-bg);
+    background-color: var(--color-codehilite-bg) !important;
     color: var(--color-text);
     padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
     border-radius: var(--radius-md);
@@ -650,127 +650,6 @@ code {
 
 .codehilite .hll {
     background-color: var(--color-accent-transparent-15);
-}
-
-.codehilite .c,
-.codehilite .ch,
-.codehilite .cm,
-.codehilite .cpf,
-.codehilite .c1,
-.codehilite .cs,
-.codehilite .sd {
-    color: #7db8b0;
-    font-style: italic;
-}
-
-.codehilite .k,
-.codehilite .kc,
-.codehilite .kd,
-.codehilite .kn,
-.codehilite .kp,
-.codehilite .kr,
-.codehilite .nt {
-    color: #6cb6eb;
-    font-weight: bold;
-}
-
-.codehilite .o,
-.codehilite .ow {
-    color: #8fdfd4;
-}
-
-.codehilite .s,
-.codehilite .sa,
-.codehilite .sb,
-.codehilite .sc,
-.codehilite .dl,
-.codehilite .s2,
-.codehilite .sh,
-.codehilite .si,
-.codehilite .sx,
-.codehilite .sr,
-.codehilite .s1 {
-    color: #ffe082;
-}
-
-.codehilite .m,
-.codehilite .mb,
-.codehilite .mf,
-.codehilite .mh,
-.codehilite .mi,
-.codehilite .mo,
-.codehilite .il {
-    color: #f78c6c;
-}
-
-.codehilite .n,
-.codehilite .na,
-.codehilite .nb,
-.codehilite .nc,
-.codehilite .no,
-.codehilite .nd,
-.codehilite .ni,
-.codehilite .ne,
-.codehilite .nf,
-.codehilite .nl,
-.codehilite .nn,
-.codehilite .nv,
-.codehilite .bp,
-.codehilite .fm,
-.codehilite .vc,
-.codehilite .vg,
-.codehilite .vi,
-.codehilite .vm {
-    color: #fff;
-}
-
-.codehilite .err,
-.codehilite .gr {
-    color: #fff;
-    background: #d2413a;
-    border-radius: 3px;
-    padding: 0 2px;
-}
-
-.codehilite .gd {
-    color: #ffb3b3;
-}
-
-.codehilite .gi {
-    color: #b3ffcc;
-}
-
-.codehilite .gh,
-.codehilite .gp,
-.codehilite .gs,
-.codehilite .gu {
-    color: #8fdfd4;
-    font-weight: bold;
-}
-
-.codehilite .w {
-    color: #c0c0c0;
-}
-
-.codehilite .go {
-    color: #888;
-}
-
-.codehilite .kt {
-    color: #b2a1ff;
-}
-
-.codehilite .cp {
-    color: #bc7a00;
-}
-
-.codehilite .se {
-    color: #bb6622;
-    font-weight: bold;
-}
-
-.codehilite .ss {
-    color: #e0b0ff;
 }
 
 .ascii-art {
