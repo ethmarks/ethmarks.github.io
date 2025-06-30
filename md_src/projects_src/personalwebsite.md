@@ -12,9 +12,7 @@ link_icon: github
 
 My personal website is my home on the web.
 
-<figure>
-    <iframe class="homepage" src="/index.html" loading="lazy" scrolling="no" style="pointer-events: none;"></iframe>
-</figure>
+![[homepage]](/index.html)
 
 I made this site because I want to have an online presence, but I don't want to use social media (e.g. [Instagram](https://www.instagram.com/), [Twitter](https://twitter.com/)), nor do I want to use someone else's premade blogging platform (e.g. [Blogger](https://www.blogger.com), [Tumblr](https://www.tumblr.com/), [Wordpress](https://wordpress.com/)).
 

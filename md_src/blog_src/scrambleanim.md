@@ -120,11 +120,7 @@ You use it by defining a CSS keyframe named scramble-text that doesn't do anythi
 
 I realize that you, dear reader, probably aren't invested enough to actually test out my code, so I've made a little demo with [CodePen](https://codepen.io).
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Scramble Text Demo" src="https://codepen.io/ColourlessSpearmint/embed/jEPRNXG?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/ColourlessSpearmint/pen/jEPRNXG">
-  Scramble Text Demo</a> by Ethan Marks (<a href="https://codepen.io/ColourlessSpearmint">@ColourlessSpearmint</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+![[Scramble Text Demo]](https://codepen.io/ColourlessSpearmint/embed/jEPRNXG?default-tab=result)
 
 ## Conclusion
 

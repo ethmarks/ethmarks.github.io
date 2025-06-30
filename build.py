@@ -158,12 +158,20 @@ def parse_ascii_block(body):
     return re.sub(pattern, replacer, body)
 
 
+def parse_iframe(body):
+    # This function finds custom iframe syntax ![[$title]]($url) and replaces it with an iframe tag.
+    pattern = r"!\[\[(.*?)\]\]\((.*?)\)"
+    replacement = r'<iframe scrolling="no" title="\1" src="\2" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>'
+    return re.sub(pattern, replacement, body)
+
+
 def render_content(item):
     meta = item["meta"]
     body = item["body"]
     # Preprocess body
     body = parse_double_blockquote(body)
     body = parse_ascii_block(body)
+    body = parse_iframe(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     html = md.convert(body)
     html = re.sub(

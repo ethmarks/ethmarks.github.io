@@ -536,6 +536,8 @@ blockquote.centered-blockquote {
 iframe {
     display: block;
     border: none;
+    width: var(--max-media-width);
+    height: 500px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-article);
     margin-left: auto;
