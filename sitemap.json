@@ -182,6 +182,19 @@
     "slug": "llamafile"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/mfm/",
+    "title": "Mint Flavoured Markdown",
+    "tags": [
+      "projects",
+      "programming",
+      "personalwebsite"
+    ],
+    "date": "2025-06-30",
+    "description": "a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG",
+    "category": "blog",
+    "slug": "mfm"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/personalwebsite/",
     "title": "Personal Website",
     "tags": [

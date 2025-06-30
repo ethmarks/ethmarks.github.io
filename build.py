@@ -85,7 +85,41 @@ def parse_double_blockquote(body):
     new_lines = []
     in_centered = False
     centered_lines = []
+    in_code_block = False
+
     for line in lines:
+        # Detect start/end of code block
+        if line.strip().startswith("```"):
+            in_code_block = not in_code_block
+            if in_centered and not in_code_block:
+                # End any open centered block before code block starts
+                if centered_lines:
+                    stanzas = []
+                    stanza = []
+                    for l in centered_lines:
+                        if l.strip() == "":
+                            if stanza:
+                                stanzas.append(stanza)
+                                stanza = []
+                        else:
+                            stanza.append(l)
+                    if stanza:
+                        stanzas.append(stanza)
+                    html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
+                    new_lines.append(
+                        "<blockquote class='centered-blockquote'>\n"
+                        + "\n".join(html_lines)
+                        + "\n</blockquote>"
+                    )
+                centered_lines = []
+                in_centered = False
+            new_lines.append(line)
+            continue
+
+        if in_code_block:
+            new_lines.append(line)
+            continue
+
         if line.strip().startswith(">>"):
             centered_lines.append(line.lstrip()[2:].lstrip())
             in_centered = True
@@ -157,8 +191,9 @@ def parse_ascii_block(body):
 
 
 def parse_iframe(body):
-    # This function finds custom iframe syntax ![[$title]]($url) and replaces it with an iframe tag.
-    pattern = r"!\[\[(.*?)\]\]\((.*?)\)"
+    # This function finds custom iframe syntax ![[$title]]($url) and replaces it with an iframe tag,
+    # but does not match if $title is exactly "Test".
+    pattern = r"!\[\[(?!Test\]\])([^\]]+)\]\]\((.*?)\)"
     replacement = r'<iframe scrolling="no" title="\1" src="\2" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>'
     return re.sub(pattern, replacement, body)
 
