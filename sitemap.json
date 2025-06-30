@@ -194,15 +194,6 @@
     "slug": "tsevhu"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/username/",
-    "title": "My Username",
-    "tags": [],
-    "date": "2025-06-07",
-    "description": "An explanation of my username, ColourlessSpearmint",
-    "category": "blog",
-    "slug": "username"
-  },
-  {
     "url": "https://colourlessspearmint.github.io/blog/water/",
     "title": "Fish swim in WHAT?!",
     "tags": [
@@ -237,6 +228,102 @@
     "description": "A personal travelogue and review of White Sands National Park, its unique gypsum dunes, activities, and quirks.",
     "category": "blog",
     "slug": "whitesands"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/anagram/",
+    "title": "Anagram Animator (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "language",
+      "colab"
+    ],
+    "date": "2025-04-18",
+    "description": "A simple little Jupyter notebook to create anagram GIFs",
+    "category": "project",
+    "slug": "anagram"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/asciiglobe/",
+    "title": "ASCII-Globe (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "cartography"
+    ],
+    "date": "2025-01-18",
+    "description": "A text-based cartographic rendering engine that uses NASA satellite data",
+    "category": "project",
+    "slug": "asciiglobe"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/colourlesstransformer/",
+    "title": "ColourlessTransformer (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "automation"
+    ],
+    "date": "2024-12-22",
+    "description": "My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses",
+    "category": "project",
+    "slug": "colourlesstransformer"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/eliza/",
+    "title": "Eliza (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "ai",
+      "history",
+      "colab"
+    ],
+    "date": "2024-12-17",
+    "description": "My implementation of the 1966 chatbot Eliza",
+    "category": "project",
+    "slug": "eliza"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/personalwebsite/",
+    "title": "Personal Website (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "personalwebsite"
+    ],
+    "date": "2025-05-14",
+    "description": "The website you're reading right now",
+    "category": "project",
+    "slug": "personalwebsite"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/screamcipher/",
+    "title": "Scream Cipher Converter (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "humor",
+      "cryptology",
+      "automation"
+    ],
+    "date": "2025-06-06",
+    "description": "An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'",
+    "category": "project",
+    "slug": "screamcipher"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/projects/thessa/",
+    "title": "Thessa (Project)",
+    "tags": [
+      "projects",
+      "programming",
+      "ai"
+    ],
+    "date": "2025-05-21",
+    "description": "An AI-powered thesaurus that uses the Gemini API",
+    "category": "project",
+    "slug": "thessa"
   },
   {
     "url": "https://colourlessspearmint.github.io/blog/all/",
@@ -488,101 +575,5 @@
     "description": "Browse all tags used on Ethan's blog and projects.",
     "category": "tag-index",
     "slug": "tags-index"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/anagram/",
-    "title": "Anagram Animator",
-    "tags": [
-      "projects",
-      "programming",
-      "language",
-      "colab"
-    ],
-    "date": "2025-04-18",
-    "description": "A simple little Jupyter notebook to create anagram GIFs",
-    "category": "project",
-    "slug": "anagram"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/asciiglobe/",
-    "title": "ASCII-Globe",
-    "tags": [
-      "projects",
-      "programming",
-      "cartography"
-    ],
-    "date": "2025-01-18",
-    "description": "A text-based cartographic rendering engine that uses NASA satellite data",
-    "category": "project",
-    "slug": "asciiglobe"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/colourlesstransformer/",
-    "title": "ColourlessTransformer",
-    "tags": [
-      "projects",
-      "programming",
-      "automation"
-    ],
-    "date": "2024-12-22",
-    "description": "My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses",
-    "category": "project",
-    "slug": "colourlesstransformer"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/eliza/",
-    "title": "Eliza",
-    "tags": [
-      "projects",
-      "programming",
-      "ai",
-      "history",
-      "colab"
-    ],
-    "date": "2024-12-17",
-    "description": "My implementation of the 1966 chatbot Eliza",
-    "category": "project",
-    "slug": "eliza"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/personalwebsite/",
-    "title": "Personal Website",
-    "tags": [
-      "projects",
-      "programming",
-      "personalwebsite"
-    ],
-    "date": "2025-05-14",
-    "description": "The website you're reading right now",
-    "category": "project",
-    "slug": "personalwebsite"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/screamcipher/",
-    "title": "Scream Cipher Converter",
-    "tags": [
-      "projects",
-      "programming",
-      "humor",
-      "cryptology",
-      "automation"
-    ],
-    "date": "2025-06-06",
-    "description": "An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'",
-    "category": "project",
-    "slug": "screamcipher"
-  },
-  {
-    "url": "https://colourlessspearmint.github.io/projects/thessa/",
-    "title": "Thessa",
-    "tags": [
-      "projects",
-      "programming",
-      "ai"
-    ],
-    "date": "2025-05-21",
-    "description": "An AI-powered thesaurus that uses the Gemini API",
-    "category": "project",
-    "slug": "thessa"
   }
 ]

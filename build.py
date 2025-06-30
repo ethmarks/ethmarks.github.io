@@ -158,72 +158,17 @@ def parse_ascii_block(body):
     return re.sub(pattern, replacer, body)
 
 
-def render_post(meta, body):
+def render_content(item):
+    meta = item["meta"]
+    body = item["body"]
+    # Preprocess body
     body = parse_double_blockquote(body)
     body = parse_ascii_block(body)
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     html = md.convert(body)
     html = re.sub(
-        r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html
+        r'(<img[^>]*src=["\"]([^"\"]+)["\"][^>]*>)', lambda m: embed_media_tag(m), html
     )
-
-    # NEW FIX: Unwrap any <img>, <video>, or <iframe> tags from surrounding <p> tags
-    # This regex looks for a <p> tag containing only an <img>, <video>, or <iframe> tag
-    # with optional whitespace around it.
-    html = re.sub(
-        r"<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>",
-        r"\1",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-    html = re.sub(
-        r"<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>",
-        r"\1",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )  # Keep the previous one as it's more specific for closing tags
-
-    template = env.get_template("post.html")
-    date_val = meta["date"]
-    if isinstance(date_val, datetime):
-        date_obj = date_val
-    elif hasattr(date_val, "strftime"):
-        date_obj = date_val
-    else:
-        date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
-    try:
-        date_human = date_obj.strftime("%B %-d, %Y")
-    except ValueError:
-        date_human = date_obj.strftime("%B %d, %Y").replace(" 0", " ")
-
-    # Provide a generic description if not present
-    description = meta.get("description")
-    if not description or not description.strip():
-        description = "A post from Ethan's personal website blog."
-    # Build canonical URL (assumes posts are at /blog/<slug>/)
-    canonical_url = f"{WEBSITE_URL}/blog/{meta.get('slug', os.path.splitext(os.path.basename(meta.get('out_path', meta.get('slug', ''))))[0])}/"
-    return template.render(
-        title=meta["title"],
-        date=date_obj.strftime("%Y-%m-%d"),
-        date_human=date_human,
-        content=html,
-        tags=meta.get("tags", []),
-        tag_dir=TAG_DIR,
-        slug=meta.get("slug", ""),
-        description=description,
-        canonical_url=canonical_url,
-    )
-
-
-def render_project(meta, body):
-    body = parse_ascii_block(body)
-    md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
-    html = md.convert(body)
-    html = re.sub(
-        r'(<img[^>]*src=["\']([^"\']+)["\'][^>]*>)', lambda m: embed_media_tag(m), html
-    )
-
-    # NEW FIX: Unwrap any <img>, <video>, or <iframe> tags from surrounding <p> tags
     html = re.sub(
         r"<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>",
         r"\1",
@@ -236,40 +181,44 @@ def render_project(meta, body):
         html,
         flags=re.IGNORECASE | re.DOTALL,
     )
-
-    template = env.get_template("project.html")
+    # Date handling
     date_val = meta.get("date")
-    if date_val is None:
-        date_obj = None
-        date_human = None
-    elif isinstance(date_val, datetime):
-        date_obj = date_val
-        date_human = human_readable_date(date_obj)
-    elif hasattr(date_val, "strftime"):
-        date_obj = date_val
-        date_human = human_readable_date(date_obj)
-    else:
-        date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
-        date_human = human_readable_date(date_obj)
-    description = meta.get("description", "A project by Ethan.")
-    canonical_url = f"{WEBSITE_URL}/blog/{meta.get('slug', os.path.splitext(os.path.basename(meta.get('out_path', meta.get('slug', ''))))[0])}/"
-    # Pass through all link params
-    return template.render(
-        title=meta.get("title", "Untitled Project"),
+    date_obj = None
+    if date_val:
+        if isinstance(date_val, datetime):
+            date_obj = date_val
+        elif hasattr(date_val, "strftime"):
+            date_obj = date_val
+        else:
+            try:
+                date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
+            except Exception:
+                date_obj = None
+    date_human = human_readable_date(date_obj) if date_obj else None
+    # Description
+    description = meta.get("description") or f"A {item['type']} by Ethan."
+    # Canonical URL
+    canonical_url = f"{WEBSITE_URL}/{'blog' if item['type']=='blog' else 'projects'}/{item.get('slug','')}/"
+    # Template
+    template_name = "post.html" if item["type"] == "blog" else "project.html"
+    template = env.get_template(template_name)
+    # Render
+    context = dict(
+        title=meta.get("title", f"Untitled {item['type'].title()}"),
         date=date_obj.strftime("%Y-%m-%d") if date_obj else None,
         date_human=date_human,
         content=html,
         tags=meta.get("tags", []),
         tag_dir=TAG_DIR,
-        slug=meta.get("slug", ""),
+        slug=meta.get("slug", item.get("slug", "")),
         description=description,
         canonical_url=canonical_url,
-        link=meta.get("link"),
-        link_name=meta.get("link_name"),
-        link_icon=meta.get("link_icon"),
-        github=meta.get("github"),
-        website=meta.get("website"),
     )
+    # Add project-specific fields if present
+    for k in ["link", "link_name", "link_icon", "github", "website"]:
+        if k in meta:
+            context[k] = meta[k]
+    return template.render(**context)
 
 
 def human_readable_date(date_obj):
@@ -283,174 +232,150 @@ def human_readable_date(date_obj):
         return date_obj.strftime("%B %d, %Y").replace(" 0", " ")
 
 
+def parse_date(val):
+    if not val:
+        return None
+    if hasattr(val, "strftime"):
+        return val
+    try:
+        return datetime.strptime(str(val), "%Y-%m-%d")
+    except Exception:
+        return None
+
+
+def get_out_dir(item):
+    if item["type"] == "blog":
+        return os.path.join(BLOG_OUT_DIR, item["slug"])
+    else:
+        return os.path.join(PROJECTS_OUT_DIR, item["slug"])
+
+
+def get_url(item):
+    if item["type"] == "blog":
+        return f"{WEBSITE_URL}/blog/{item['slug']}/"
+    else:
+        return f"{WEBSITE_URL}/projects/{item['slug']}/"
+
+
 def main():
     os.makedirs(BLOG_OUT_DIR, exist_ok=True)
-    posts = []
-    posts_for_index = []
-    for fname in os.listdir(BLOG_SRC_DIR):
-        if not fname.endswith(".md"):
-            continue
-        meta, body = parse_markdown_with_frontmatter(os.path.join(BLOG_SRC_DIR, fname))
-        html = render_post(meta, body)
-        slug = meta.get("slug", os.path.splitext(fname)[0])
-        out_dir = os.path.join(BLOG_OUT_DIR, slug)
+    os.makedirs(PROJECTS_OUT_DIR, exist_ok=True)
+    os.makedirs(TAG_DIR, exist_ok=True)
+
+    # Parse all content
+    content_items = []
+    for src_dir, ctype in [(BLOG_SRC_DIR, "blog"), (PROJECTS_SRC_DIR, "project")]:
+        for fname in os.listdir(src_dir):
+            if not fname.endswith(".md"):
+                continue
+            meta, body = parse_markdown_with_frontmatter(os.path.join(src_dir, fname))
+            slug = meta.get("slug", os.path.splitext(fname)[0])
+            date_val = parse_date(meta.get("date"))
+            content_items.append(
+                {
+                    "type": ctype,
+                    "meta": meta,
+                    "body": body,
+                    "slug": slug,
+                    "tags": meta.get("tags", []),
+                    "date": date_val,
+                    "index": meta.get("index", True),
+                    "title": meta.get("title", f"Untitled {ctype.title()}"),
+                    "description": meta.get("description", f"A {ctype} by Ethan."),
+                }
+            )
+
+    # Render individual pages
+    for item in content_items:
+        html = render_content(item)
+        out_dir = get_out_dir(item)
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, "index.html")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
-        post_entry = {**meta, "out_path": out_path}
-        posts.append(post_entry)
-        if meta.get("index", True):
-            posts_for_index.append(post_entry)
+        item["out_path"] = out_path
+
+    # Tag aggregation
     with open("tags.yaml", encoding="utf-8") as f:
         tag_data = yaml.safe_load(f)
-
-    # Group posts by tag
     tag_posts = {tag: [] for tag in tag_data}
-    tag_posts["all"] = posts_for_index[
-        :
-    ]  # Special 'all' tag lists all posts (that are indexed)
-    for post in posts_for_index:
-        for tag in post.get("tags", []):
-            if tag in tag_posts:
-                tag_posts[tag].append(post)
-
-    # --- INCLUDE PROJECTS IN TAG PAGES ---
-    # Add projects with matching tags to tag_posts
-    projects_for_tags = []
-    for fname in os.listdir(PROJECTS_SRC_DIR):
-        if not fname.endswith(".md"):
+    tag_posts["all"] = []
+    for item in content_items:
+        if not item["index"]:
             continue
-        meta, body = parse_markdown_with_frontmatter(
-            os.path.join(PROJECTS_SRC_DIR, fname)
-        )
-        if meta.get("index", True):
-            projects_for_tags.append(meta)
-    for project in projects_for_tags:
-        for tag in project.get("tags", []):
+        tag_posts["all"].append(item)
+        for tag in item["tags"]:
             if tag in tag_posts:
-                tag_posts[tag].append(project)
+                tag_posts[tag].append(item)
 
     # Render tag index pages
     tag_template = env.get_template("tag.html")
-    for tag, posts_list in tag_posts.items():
+    for tag, items in tag_posts.items():
         tag_info = tag_data.get(
-            tag,
-            {
-                "definition": "All posts in all categories.",
-                "text": "This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place.",
-            },
+            tag, {"definition": "All posts in all categories.", "text": ""}
         )
-
-        # Ensure tag_text is blank if not present in tag_info
-        tag_text = tag_info.get("text", "")
-
-        # Sort posts and projects by date descending (if available)
-        def get_date(item):
-            date_val = item.get("date")
-            if date_val is None:
-                return ""
-            if hasattr(date_val, "strftime"):
-                return date_val
-            try:
-                return datetime.strptime(str(date_val), "%Y-%m-%d")
-            except Exception:
-                return ""
-
-        posts_list_sorted = sorted(posts_list, key=lambda p: get_date(p), reverse=True)
-        # Add (Project) to the title of projects and set correct url
-        for item in posts_list_sorted:
-            if "projects" in item.get("tags", []):
-                if not item["title"].endswith(" (Project)"):
-                    item["title"] += " (Project)"
-                item["url"] = f"projects/{item.get('slug', '')}"
-            else:
-                item["url"] = f"blog/{item.get('slug', '')}"
+        items_sorted = sorted(
+            items, key=lambda p: p["date"] or datetime.min, reverse=True
+        )
+        for item in items_sorted:
+            item["url"] = (
+                f"projects/{item['slug']}"
+                if item["type"] == "project"
+                else f"blog/{item['slug']}"
+            )
+            if item["type"] == "project" and not item["title"].endswith(" (Project)"):
+                item["title"] += " (Project)"
         tag_dir = os.path.join(TAG_DIR, tag)
         os.makedirs(tag_dir, exist_ok=True)
-        out_path = os.path.join(tag_dir, "index.html")
-        with open(out_path, "w", encoding="utf-8") as f:
+        with open(os.path.join(tag_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(
                 tag_template.render(
                     tag_title=tag.capitalize(),
                     tag_definition=tag_info["definition"],
-                    tag_text=tag_text,
-                    posts=posts_list_sorted,
+                    tag_text=tag_info.get("text", ""),
+                    posts=items_sorted,
                     get_post_description=lambda post: (
-                        human_readable_date(post["date"])
-                        if hasattr(post["date"], "strftime")
-                        else (
-                            human_readable_date(
-                                datetime.strptime(str(post["date"]), "%Y-%m-%d")
-                            )
-                            if post.get("date")
-                            else "No date"
-                        )
+                        human_readable_date(post["date"]) if post["date"] else "No date"
                     ),
                     projects_link="/blog/projects/",
                 )
             )
 
-    # Render main blog index page
+    # Render blog index
     blog_index_template = env.get_template("blog.html")
-    tags_for_index = []
-    # Count tag usage
     tag_usage = {tag: 0 for tag in tag_data}
-    # Count blog posts
-    for post in posts_for_index:
-        for tag in post.get("tags", []):
+    for item in content_items:
+        if not item["index"]:
+            continue
+        for tag in item["tags"]:
             if tag in tag_usage:
                 tag_usage[tag] += 1
-    # Count projects
-    for fname in os.listdir(PROJECTS_SRC_DIR):
-        if not fname.endswith(".md"):
-            continue
-        meta, _ = parse_markdown_with_frontmatter(os.path.join(PROJECTS_SRC_DIR, fname))
-        if meta.get("index", True):
-            for tag in meta.get("tags", []):
-                if tag in tag_usage:
-                    tag_usage[tag] += 1
-    # Only include tags that are used at least once
-    used_tags = {
-        tag: info for tag, info in tag_data.items() if tag_usage.get(tag, 0) > 0
-    }
-    # Sort tags: by usage desc, then alphabetically
-    sorted_tags = sorted(
-        used_tags.items(), key=lambda item: (-tag_usage[item[0]], item[0])
-    )
-    for tag, info in sorted_tags:
-        tags_for_index.append(
-            {
-                "slug": tag,
-                "url": f"/{TAG_DIR}/{tag}",
-                "title": tag.capitalize(),
-                "description": info["description"],
-            }
+    tags_for_index = [
+        {
+            "slug": tag,
+            "url": f"/{TAG_DIR}/{tag}",
+            "title": tag.capitalize(),
+            "description": info["description"],
+        }
+        for tag, info in sorted(
+            ((t, tag_data[t]) for t in tag_data if tag_usage.get(t, 0) > 0),
+            key=lambda x: (-tag_usage[x[0]], x[0]),
         )
-    # Render tags aggregator page
-    tags_template = env.get_template("tags.html")
-    tags_index_path = os.path.join(TAG_DIR, "index.html")
-    os.makedirs(TAG_DIR, exist_ok=True)
-    with open(tags_index_path, "w", encoding="utf-8") as f:
-        f.write(tags_template.render(tags=tags_for_index))
-    # Get all posts (by date, descending)
-    all_posts_sorted = sorted(posts_for_index, key=lambda p: p["date"], reverse=True)
-    # Prepare all_posts with human-readable date
-    recent_posts = []
-    for post in all_posts_sorted:
-        date_obj = post["date"]
-        if not hasattr(date_obj, "strftime"):
-            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
-        recent_posts.append(
-            {
-                "title": post["title"],
-                "slug": post["slug"],
-                "date_human": human_readable_date(date_obj),
-                "tags": ",".join(post.get("tags", [])),
-            }
+    ]
+    recent_posts = [
+        {
+            "title": p["title"],
+            "slug": p["slug"],
+            "date_human": human_readable_date(p["date"]),
+            "tags": ",".join(p.get("tags", [])),
+        }
+        for p in sorted(
+            [i for i in content_items if i["type"] == "blog" and i["index"]],
+            key=lambda p: p["date"] or datetime.min,
+            reverse=True,
         )
-    blog_index_path = os.path.join(BLOG_OUT_DIR, "index.html")
-    with open(blog_index_path, "w", encoding="utf-8") as f:
+    ]
+    with open(os.path.join(BLOG_OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(
             blog_index_template.render(
                 tags=tags_for_index,
@@ -459,56 +384,26 @@ def main():
             )
         )
 
-    # --- PROJECTS GENERATION ---
-    projects = []
-    projects_for_index = []
-    for fname in os.listdir(PROJECTS_SRC_DIR):
-        if not fname.endswith(".md"):
-            continue
-        meta, body = parse_markdown_with_frontmatter(
-            os.path.join(PROJECTS_SRC_DIR, fname)
-        )
-        html = render_project(meta, body)
-        slug = meta.get("slug", os.path.splitext(fname)[0])
-        out_dir = os.path.join(PROJECTS_OUT_DIR, slug)
-        os.makedirs(out_dir, exist_ok=True)
-        out_path = os.path.join(out_dir, "index.html")
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(html)
-        project_entry = {**meta, "out_path": out_path}
-        projects.append(project_entry)
-        if meta.get("index", True):
-            projects_for_index.append(project_entry)
-
-    # Render projects index page using a dedicated template
-    projects_index_path = os.path.join(PROJECTS_OUT_DIR, "index.html")
-    projects_sorted = sorted(
-        projects_for_index,
-        key=lambda p: p.get("date", p.get("title", "")),
-        reverse=True,
-    )
-    # Prepare projects with tags as comma-separated string, excluding 'projects' tag
-    projects_for_template = []
-    for project in projects_sorted:
-        tags = [t for t in project.get("tags", []) if t != "projects"]
-        projects_for_template.append(
-            {
-                "title": project.get("title", "Untitled Project"),
-                "slug": project.get("slug", ""),
-                "description": project.get("description", "A project by Ethan."),
-                "date": project.get("date"),
-                "tags": ",".join(tags),
-            }
-        )
+    # Render projects index
     projects_template = env.get_template("projects.html")
-    with open(projects_index_path, "w", encoding="utf-8") as f:
-        f.write(
-            projects_template.render(
-                projects=projects_for_template,
-            )
+    projects_for_template = [
+        {
+            "title": p["title"],
+            "slug": p["slug"],
+            "description": p["description"],
+            "date": p["date"],
+            "tags": ",".join([t for t in p.get("tags", []) if t != "projects"]),
+        }
+        for p in sorted(
+            [i for i in content_items if i["type"] == "project" and i["index"]],
+            key=lambda p: p["date"] or p["title"],
+            reverse=True,
         )
+    ]
+    with open(os.path.join(PROJECTS_OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
+        f.write(projects_template.render(projects=projects_for_template))
 
-    # --- SITEMAP GENERATION ---
+    # Sitemap and info.json
     sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", sitemap_ns)
     urlset = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")
@@ -522,48 +417,7 @@ def main():
             url, "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod"
         ).text = lastmod
 
-    # Blog posts
-    for post in posts:
-        slug = post.get(
-            "slug", os.path.splitext(os.path.basename(post.get("out_path", "")))[0]
-        )
-        url = f"{WEBSITE_URL}/blog/{slug}/"
-        date_obj = post["date"]
-        if not hasattr(date_obj, "strftime"):
-            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
-        lastmod = date_obj.strftime("%Y-%m-%d")
-        add_url(url, lastmod)
-
-    # Projects
-    for project in projects:
-        slug = project.get(
-            "slug", os.path.splitext(os.path.basename(project.get("out_path", "")))[0]
-        )
-        url = f"{WEBSITE_URL}/projects/{slug}/"
-        date_val = project.get("date")
-        if date_val is not None:
-            if not hasattr(date_val, "strftime"):
-                date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
-            else:
-                date_obj = date_val
-            lastmod = date_obj.strftime("%Y-%m-%d")
-        else:
-            lastmod = None
-        add_url(url, lastmod or datetime.now().strftime("%Y-%m-%d"))
-
-    # Tags index page
-    tags_index_url = f"{WEBSITE_URL}/tag/"
-    add_url(tags_index_url, datetime.now().strftime("%Y-%m-%d"))
-
-    sitemap_path = "sitemap.xml"
-    tree = ET.ElementTree(urlset)
-    tree.write(sitemap_path, encoding="utf-8", xml_declaration=True)
-
-    # --- INFO.JSON GENERATION ---
-    info_entries = []
-
-    # Static pages: home, about, blog index, projects index (first in list)
-    info_entries.append(
+    info_entries = [
         {
             "url": f"{WEBSITE_URL}/",
             "title": "Home",
@@ -572,9 +426,7 @@ def main():
             "description": "The personal website of Ethan Marks (@ColourlessSpearmint)",
             "category": "static",
             "slug": "home",
-        }
-    )
-    info_entries.append(
+        },
         {
             "url": f"{WEBSITE_URL}/about/",
             "title": "About",
@@ -583,9 +435,7 @@ def main():
             "description": "About Ethan Marks (@ColourlessSpearmint)",
             "category": "static",
             "slug": "about",
-        }
-    )
-    info_entries.append(
+        },
         {
             "url": f"{WEBSITE_URL}/blog/",
             "title": "Blog Index",
@@ -594,9 +444,7 @@ def main():
             "description": "Main blog index page.",
             "category": "static",
             "slug": "index",
-        }
-    )
-    info_entries.append(
+        },
         {
             "url": f"{WEBSITE_URL}/projects/",
             "title": "Projects Index",
@@ -605,38 +453,31 @@ def main():
             "description": "Main projects index page.",
             "category": "static",
             "slug": "projects-index",
-        }
-    )
-
-    # Blog posts
-    for post in posts:
-        slug = post.get(
-            "slug", os.path.splitext(os.path.basename(post.get("out_path", "")))[0]
-        )
-        url = f"{WEBSITE_URL}/blog/{slug}/"
-        date_obj = post["date"]
-        if not hasattr(date_obj, "strftime"):
-            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+        },
+    ]
+    for item in content_items:
+        if not item["index"]:
+            continue
+        url = get_url(item)
+        date_str = item["date"].strftime("%Y-%m-%d") if item["date"] else None
+        add_url(url, date_str or datetime.now().strftime("%Y-%m-%d"))
         info_entries.append(
             {
                 "url": url,
-                "title": post.get("title", ""),
-                "tags": post.get("tags", []),
-                "date": date_obj.strftime("%Y-%m-%d"),
-                "description": post.get(
-                    "description", "A post from Ethan's personal website blog."
-                ),
-                "category": "blog",
-                "slug": slug,
+                "title": item["title"],
+                "tags": item.get("tags", []),
+                "date": date_str,
+                "description": item["description"],
+                "category": item["type"],
+                "slug": item["slug"],
             }
         )
-
-    # Tag pages
-    for tag, posts_list in tag_posts.items():
-        url = f"{WEBSITE_URL}/blog/{tag}/"
+    for tag in tag_posts:
+        tag_url = f"{WEBSITE_URL}/blog/{tag}/"
+        add_url(tag_url, datetime.now().strftime("%Y-%m-%d"))
         info_entries.append(
             {
-                "url": url,
+                "url": tag_url,
                 "title": tag.capitalize(),
                 "tags": [tag],
                 "date": None,
@@ -645,9 +486,8 @@ def main():
                 "slug": tag,
             }
         )
-
-    # Add tags index page to sitemap/info.json
     tags_index_url = f"{WEBSITE_URL}/tag/"
+    add_url(tags_index_url, datetime.now().strftime("%Y-%m-%d"))
     info_entries.append(
         {
             "url": tags_index_url,
@@ -659,36 +499,8 @@ def main():
             "slug": "tags-index",
         }
     )
-
-    # Projects
-    for project in projects:
-        slug = project.get(
-            "slug", os.path.splitext(os.path.basename(project.get("out_path", "")))[0]
-        )
-        url = f"{WEBSITE_URL}/projects/{slug}/"
-        date_val = project.get("date")
-        if date_val is not None:
-            if not hasattr(date_val, "strftime"):
-                date_obj = datetime.strptime(str(date_val), "%Y-%m-%d")
-            else:
-                date_obj = date_val
-            date_str = date_obj.strftime("%Y-%m-%d")
-        else:
-            date_str = None
-        info_entries.append(
-            {
-                "url": url,
-                "title": project.get("title", "Untitled Project"),
-                "tags": project.get("tags", []),
-                "date": date_str,
-                "description": project.get("description", "A project by Ethan."),
-                "category": "project",
-                "slug": slug,
-            }
-        )
-
-    info_path = "sitemap.json"
-    with open(info_path, "w", encoding="utf-8") as f:
+    ET.ElementTree(urlset).write("sitemap.xml", encoding="utf-8", xml_declaration=True)
+    with open("sitemap.json", "w", encoding="utf-8") as f:
         json.dump(info_entries, f, indent=2, ensure_ascii=False)
 
 
