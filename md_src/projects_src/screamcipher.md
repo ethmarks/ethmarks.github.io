@@ -14,13 +14,13 @@ link_icon: link
 
 This is one of my favorite [xkcd](https://xkcd.com/) comics. It proposes the [Scream Cipher](https://xkcd.com/3054/), a creative, amusing, and not *completely* useless [cipher](https://en.wikipedia.org/wiki/Cipher).
 
-The Scream Cipher works by assigning each letter of the alphabet to a unique [diacritical](https://en.wikipedia.org/wiki/Diacritic) variant of the letter A. For example, `THIS IS SOME EXAMPLE TEXT` becomes `ĀA̰ẢÃ ẢÃ ÃÅǍÁ ÁA̽AǍA̯ĂÁ ĀÁA̽Ā`.
+The Scream Cipher works by assigning each letter of the alphabet to a unique [diacritical](https://en.wikipedia.org/wiki/Diacritic) variant of the letter A. For example, "THIS IS SOME EXAMPLE TEXT" becomes "ĀA̰ẢÃ ẢÃ ÃÅǍÁ ÁA̽AǍA̯ĂÁ ĀÁA̽Ā".
 
 The punchline in the comic is that attempting to pronounce the encrypted text would sound like screaming ([AAAAAAAAAAA](https://xkcd.com/2957/)).
 
 The Scream Cipher isn't great for actually making secret messages due to a lack of a key (although you could shift the diacritic dictionary with a 26-combination key to create a [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)), but it is a pretty good [obfuscation](https://en.wikipedia.org/wiki/Obfuscation) technique. If you hadn't heard of the Scream Cipher and you encountered Scream-encrypted text, you probably wouldn't even know that there was a secret message; you would just think it was something akin to [Zalgo text](https://en.wikipedia.org/wiki/Zalgo_text).
 
-This is called a [Kerckhoffs-insecure](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) cipher, and it's a demonstration of [Security through Obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity). The advantage is that, if you forget the key (which Scream Cipher doesn't have, but the principle still applies), you won't be locked out because the cipher is entropically weak enough to brute-force.
+This is called a [Kerckhoffs-insecure](https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle) cipher, and it's a demonstration of [Security through Obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity). The crucial part of any encryption or security system is that you have something or know something that other people don't. Generally, this is a physical key or a secret password. With Kerckhoffs-insecurity, the special information is about how the system works. You can assume that a hacker knows how a password works, so you need to choose a strong password. If your encryption method is so obscure and stupid that nobody other than you knows how to use it, you don't need a password at all.
 
 ## Converter
 
