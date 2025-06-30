@@ -7,7 +7,7 @@ slug: liquidglass
 description: My thoughts on Apple's new Liquid Glass design
 ---
 
-![Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass](https://iboysoft.com/images/en-wiki/apple-liquid-glass/liquid-glass-apple.jpg)
+![Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass](https://pbs.twimg.com/amplify_video_thumb/1932203267888713728/img/DKIoV_kZtHKr4MSv.jpg)
 
 As part of [WWDC25](https://developer.apple.com/wwdc25/) on June 9, 2025, Apple unveiled their new [Liquid Glass](https://en.wikipedia.org/wiki/Liquid_Glass) material and incorporated it into the design of the iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision.
 
@@ -67,9 +67,7 @@ Despite its aesthetic appeal, Liquid Glass does have a significant amount of pro
 
 ### …Performant
 
-Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that frosted glass effect.
-
-A Gaussian blur is a method of making each pixel have an influence on the pixels around it, which causes the colours to average out into a definition-less blob. What this means from a computational perspective is that the computer needs to perform a mathematical function dozens or hundreds (eyeballing it, Liquid Glass has a blur radius of 6 pixels, meaning it has pi*6^2 ≈ 113 pixels around it) of times for every single pixel, of which there are millions (iPhone 16 has a 2556x1179 screen, so 3,013,524 total pixels), and you need to do this once per frame, of which there are ideally 60 per second on the iPhone 16. This adds up to a huge amount of computation, and it doesn't help that the [2D Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function#Two-dimensional_Gaussian_function) isn't exactly simple.
+Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that frosted glass effect. Below is an interactive demo of the effect of a Gaussian blur.
 
 <figure>
     <div class="juxtapose-container">
@@ -79,6 +77,8 @@ A Gaussian blur is a method of making each pixel have an influence on the pixels
         </div>
     </div>
 </figure>
+
+From a technical perspective, a Gaussian blur is a method of making each pixel have an influence on the pixels around it, which causes the colours to average out into a definitionless blob. What this means is that the computer needs to perform a mathematical function dozens or hundreds (eyeballing it, Liquid Glass has a blur radius of 6 pixels, meaning it has pi*6^2 ≈ 113 pixels around it) of times for every single pixel, of which there are millions (iPhone 16 has a 2556x1179 screen, so 3,013,524 total pixels), and you need to do this once per frame, of which there are ideally 60 per second on the iPhone 16. This adds up to a huge amount of computation, and it doesn't help that the [2D Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function#Two-dimensional_Gaussian_function) isn't exactly simple.
 
 In other words, Liquid Glass absolutely requires a powerful processor, which in turn requires a lot of electricity. In my opinion, a lot of the concerns about Liquid Glass are being overstated, but this one is definitely not. From programming my site header, I know firsthand how taxing Gaussian blurs are; incorporating a bunch of *layered* glassmorphic panels is a performance nightmare that will and already is causing problematic battery drain on devices that really ought not to be running out of battery (e.g. watches), especially not on something as trivial as the interface.
 
