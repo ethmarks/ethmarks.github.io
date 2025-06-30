@@ -9,8 +9,6 @@ import json
 
 BLOG_SRC_DIR = "md_src/blog_src"
 BLOG_OUT_DIR = "blog"
-PROJECTS_SRC_DIR = "md_src/projects_src"
-PROJECTS_OUT_DIR = "projects"
 TAG_DIR = "tag"
 TEMPLATE_DIR = "templates"
 WEBSITE_URL = "https://colourlessspearmint.github.io"
@@ -204,15 +202,15 @@ def render_content(item):
                 date_obj = None
     date_human = human_readable_date(date_obj) if date_obj else None
     # Description
-    description = meta.get("description") or f"A {item['type']} by Ethan."
+    description = meta.get("description") or f"A post by Ethan."
     # Canonical URL
-    canonical_url = f"{WEBSITE_URL}/{'blog' if item['type']=='blog' else 'projects'}/{item.get('slug','')}/"
+    canonical_url = f"{WEBSITE_URL}/blog/{item.get('slug','')}/"
     # Template
-    template_name = "post.html" if item["type"] == "blog" else "project.html"
+    template_name = "post.html"
     template = env.get_template(template_name)
     # Render
     context = dict(
-        title=meta.get("title", f"Untitled {item['type'].title()}"),
+        title=meta.get("title", "Untitled Post"),
         date=date_obj.strftime("%Y-%m-%d") if date_obj else None,
         date_human=date_human,
         content=html,
@@ -222,8 +220,7 @@ def render_content(item):
         description=description,
         canonical_url=canonical_url,
     )
-    # Add project-specific fields if present
-    for k in ["link", "link_name", "link_icon", "github", "website"]:
+    for k in ["link", "link_name", "link_icon"]:
         if k in meta:
             context[k] = meta[k]
     return template.render(**context)
@@ -252,46 +249,38 @@ def parse_date(val):
 
 
 def get_out_dir(item):
-    if item["type"] == "blog":
-        return os.path.join(BLOG_OUT_DIR, item["slug"])
-    else:
-        return os.path.join(PROJECTS_OUT_DIR, item["slug"])
+    return os.path.join(BLOG_OUT_DIR, item["slug"])
 
 
 def get_url(item):
-    if item["type"] == "blog":
-        return f"{WEBSITE_URL}/blog/{item['slug']}/"
-    else:
-        return f"{WEBSITE_URL}/projects/{item['slug']}/"
+    return f"{WEBSITE_URL}/blog/{item['slug']}/"
 
 
 def main():
     os.makedirs(BLOG_OUT_DIR, exist_ok=True)
-    os.makedirs(PROJECTS_OUT_DIR, exist_ok=True)
     os.makedirs(TAG_DIR, exist_ok=True)
 
     # Parse all content
     content_items = []
-    for src_dir, ctype in [(BLOG_SRC_DIR, "blog"), (PROJECTS_SRC_DIR, "project")]:
-        for fname in os.listdir(src_dir):
-            if not fname.endswith(".md"):
-                continue
-            meta, body = parse_markdown_with_frontmatter(os.path.join(src_dir, fname))
-            slug = meta.get("slug", os.path.splitext(fname)[0])
-            date_val = parse_date(meta.get("date"))
-            content_items.append(
-                {
-                    "type": ctype,
-                    "meta": meta,
-                    "body": body,
-                    "slug": slug,
-                    "tags": meta.get("tags", []),
-                    "date": date_val,
-                    "index": meta.get("index", True),
-                    "title": meta.get("title", f"Untitled {ctype.title()}"),
-                    "description": meta.get("description", f"A {ctype} by Ethan."),
-                }
-            )
+    for fname in os.listdir(BLOG_SRC_DIR):
+        if not fname.endswith(".md"):
+            continue
+        meta, body = parse_markdown_with_frontmatter(os.path.join(BLOG_SRC_DIR, fname))
+        slug = meta.get("slug", os.path.splitext(fname)[0])
+        date_val = parse_date(meta.get("date"))
+        content_items.append(
+            {
+                "type": "blog",
+                "meta": meta,
+                "body": body,
+                "slug": slug,
+                "tags": meta.get("tags", []),
+                "date": date_val,
+                "index": meta.get("index", True),
+                "title": meta.get("title", "Untitled Post"),
+                "description": meta.get("description", "A post by Ethan."),
+            }
+        )
 
     # Render individual pages
     for item in content_items:
@@ -326,13 +315,7 @@ def main():
             items, key=lambda p: p["date"] or datetime.min, reverse=True
         )
         for item in items_sorted:
-            item["url"] = (
-                f"projects/{item['slug']}"
-                if item["type"] == "project"
-                else f"blog/{item['slug']}"
-            )
-            if item["type"] == "project" and not item["title"].endswith(" (Project)"):
-                item["title"] += " (Project)"
+            item["url"] = f"blog/{item['slug']}"
         tag_dir = os.path.join(TAG_DIR, tag)
         os.makedirs(tag_dir, exist_ok=True)
         with open(os.path.join(tag_dir, "index.html"), "w", encoding="utf-8") as f:
@@ -345,7 +328,6 @@ def main():
                     get_post_description=lambda post: (
                         human_readable_date(post["date"]) if post["date"] else "No date"
                     ),
-                    projects_link="/blog/projects/",
                 )
             )
 
@@ -387,29 +369,9 @@ def main():
         f.write(
             blog_index_template.render(
                 tags=tags_for_index,
-                projects_link="/blog/projects/",
                 recent_posts=recent_posts,
             )
         )
-
-    # Render projects index
-    projects_template = env.get_template("projects.html")
-    projects_for_template = [
-        {
-            "title": p["title"],
-            "slug": p["slug"],
-            "description": p["description"],
-            "date": p["date"],
-            "tags": ",".join([t for t in p.get("tags", []) if t != "projects"]),
-        }
-        for p in sorted(
-            [i for i in content_items if i["type"] == "project" and i["index"]],
-            key=lambda p: p["date"] or p["title"],
-            reverse=True,
-        )
-    ]
-    with open(os.path.join(PROJECTS_OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(projects_template.render(projects=projects_for_template))
 
     # Sitemap and info.json
     sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -452,15 +414,6 @@ def main():
             "description": "Main blog index page.",
             "category": "static",
             "slug": "index",
-        },
-        {
-            "url": f"{WEBSITE_URL}/projects/",
-            "title": "Projects Index",
-            "tags": [],
-            "date": None,
-            "description": "Main projects index page.",
-            "category": "static",
-            "slug": "projects-index",
         },
     ]
     for item in content_items:

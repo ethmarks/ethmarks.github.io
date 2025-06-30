@@ -2,6 +2,10 @@ all:
   description: "All posts"
   definition: "All (adjective) - the entire quantity or extent"
   text: "This is a special tag that lists every blog post, regardless of category. Use it to browse everything in one place"
+projects:
+  description: "Projects"
+  definition: "Project (noun) - a planned undertaking with a specific goal"
+  text: "As a programmer, I spend a lot of time telling computers what to do. These projects are what happens when they actually listen."
 curios:
   description: "Interesting things I've found"
   definition: "Curio (noun) - a curious and intriguing object of collection"

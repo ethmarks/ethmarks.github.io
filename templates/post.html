@@ -25,6 +25,10 @@
     <a class="post-tag animated" href="/{{  tag_dir  }}/{{ tag }}">#{{ tag }}</a>{% if not loop.last %} {% endif %}
   {% endfor %}
 </div>
+{% endif %}{% if link %}
+<external-link {% if link_icon %}icon="{{ link_icon }}"{% endif %} href="{{ link }}">
+    <span slot="title">{{ link_name if link_name else 'External Link' }}</span>
+</external-link>
 {% endif %}
 <article class="animated">
 {{ content | safe }}

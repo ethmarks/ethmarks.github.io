@@ -26,7 +26,7 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 - [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/): Used to make the cards on the home page.
 - [quicklink](https://github.com/GoogleChromeLabs/quicklink): Used to improve loading times.
-- [Juxtapose.js](https://github.com/NUKnightLab/juxtapose): Used to make before/after comparisons ([Example](/projects/colourlesstransformer)).
+- [Juxtapose.js](https://github.com/NUKnightLab/juxtapose): Used to make before/after comparisons ([Example](/blog/colourlesstransformer)).
 
 ### GitHub Pages
 
