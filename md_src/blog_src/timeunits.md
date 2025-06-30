@@ -1,5 +1,4 @@
 ---
-index: True
 title: Units of Time
 date: 2025-05-09
 tags: [history, language]

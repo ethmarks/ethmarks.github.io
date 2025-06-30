@@ -1,5 +1,4 @@
 ---
-index: True
 title: Personal Website
 date: 2025-05-14
 tags: [projects, programming, personalwebsite]

@@ -1,5 +1,4 @@
 ---
-index: True
 title: ASCII-Globe
 date: 2025-01-18
 tags: [projects, programming, cartography]

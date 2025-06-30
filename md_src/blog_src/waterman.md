@@ -1,5 +1,4 @@
 ---
-index: True
 title: The Waterman Butterfly
 date: 2025-04-25
 tags: [curios, cartography]

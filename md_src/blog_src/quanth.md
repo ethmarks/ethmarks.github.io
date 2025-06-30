@@ -1,5 +1,4 @@
 ---
-index: True
 title: I have invented a new measurement system
 date: 2025-04-24
 tags: [physics, quanth]

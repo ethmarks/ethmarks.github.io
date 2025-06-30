@@ -1,5 +1,4 @@
 ---
-index: True
 title: ColourlessTransformer
 date: 2024-12-22
 tags: [projects, programming, automation]

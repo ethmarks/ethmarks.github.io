@@ -1,5 +1,4 @@
 ---
-index: True
 title: The Last Satellite
 date: 2024-07-30
 tags: [figments, sci-fi, short-story]

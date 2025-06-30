@@ -1,5 +1,4 @@
 ---
-index: True
 title: Llamafile
 date: 2025-06-24
 tags: [curios, programming, ai]

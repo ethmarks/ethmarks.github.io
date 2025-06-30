@@ -1,5 +1,4 @@
 ---
-index: True
 title: Scream Cipher Converter
 date: 2025-06-06
 tags: [projects, programming, humor, cryptology, automation]

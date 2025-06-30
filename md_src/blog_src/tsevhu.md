@@ -1,5 +1,4 @@
 ---
-index: True
 title: A language written in fish
 date: 2025-04-26
 tags: [curios, language]

@@ -1,5 +1,4 @@
 ---
-index: True
 title: Anagram Animator
 date: 2025-04-18
 tags: [projects, programming, language, colab]

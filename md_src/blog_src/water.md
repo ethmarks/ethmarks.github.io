@@ -1,5 +1,4 @@
 ---
-index: True
 title: Fish swim in WHAT?!
 date: 2025-04-28
 tags: [figments, sci-fi, humor]

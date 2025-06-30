@@ -1,5 +1,5 @@
 ---
-index: False
+noindex: True
 title: My Username
 date: 2025-06-07
 tags: []

@@ -1,5 +1,4 @@
 ---
-index: True
 title: Text Scramble Animation
 date: 2025-06-29
 tags: [programming]

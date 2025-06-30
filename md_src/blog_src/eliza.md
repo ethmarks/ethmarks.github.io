@@ -1,5 +1,4 @@
 ---
-index: True
 title: Eliza
 date: 2024-12-17
 tags: [projects, programming, ai, history, colab]

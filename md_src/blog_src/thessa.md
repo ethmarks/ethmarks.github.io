@@ -1,5 +1,4 @@
 ---
-index: True
 title: Thessa
 date: 2025-05-21
 tags: [projects, programming, ai]

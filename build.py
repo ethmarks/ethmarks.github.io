@@ -276,7 +276,7 @@ def main():
                 "slug": slug,
                 "tags": meta.get("tags", []),
                 "date": date_val,
-                "index": meta.get("index", True),
+                "index": not meta.get("noindex", False),
                 "title": meta.get("title", "Untitled Post"),
                 "description": meta.get("description", "A post by Ethan."),
             }

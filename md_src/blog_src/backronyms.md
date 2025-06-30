@@ -1,5 +1,4 @@
 ---
-index: True
 title: Backronyms
 date: 2025-06-09
 tags: [humor, language]

@@ -1,5 +1,4 @@
 ---
-index: True
 title: "8.7539319"
 date: 2024-09-14
 tags: [figments, sci-fi, short-story]
