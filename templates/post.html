@@ -26,9 +26,12 @@
   {% endfor %}
 </div>
 {% endif %}{% if link %}
-<external-link {% if link_icon %}icon="{{ link_icon }}"{% endif %} href="{{ link }}">
-    <span slot="title">{{ link_name if link_name else 'External Link' }}</span>
-</external-link>
+<div class="external-link-row">
+<a class="external-link" href="{{ link }}">
+    <img src="/images/icons/{{ link_icon if link_icon else 'link' }}.svg" alt="{{ link_icon if link_icon else 'link' }} icon">
+    <span>{{ link_name if link_name else 'External Link' }}</span>
+</a>
+</div>
 {% endif %}
 <article class="animated">
 {{ content | safe }}

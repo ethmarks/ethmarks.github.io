@@ -637,7 +637,7 @@ a.external-link:hover img {
 }
 
 .external-link-row {
-    margin: 0;
+    margin: var(--spacing-md) 0 0 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
