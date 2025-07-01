@@ -31,7 +31,7 @@ You can also set the horizontal offset of the initial string relative to the cen
 
 I looked into incorporating a way to natively record GIFs in the webpage, but from my initial experiments it seems like that's extremely difficult so I decided not to implement it. Instead the method for saving the animation to a GIF is much more convoluted. 
 
-1. Go to the CodePen embed: [https://codepen.io/ColourlessSpearmint/embed/YPXMvxg?default-tab=result](https://codepen.io/ColourlessSpearmint/embed/YPXMvxg?default-tab=result)
+1. Go to the CodePen: <https://codepen.io/ColourlessSpearmint/full/YPXMvxg>
 2. Customize the animation and tweak the parameters to your liking
 3. Open a screen recording program (Windows Snipping Tool works for this. Press Win+Shift+S)
 4. Record a few loops of the animation
