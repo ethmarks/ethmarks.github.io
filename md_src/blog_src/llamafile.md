@@ -4,6 +4,9 @@ date: 2025-06-24
 tags: [curios, programming, ai]
 slug: llamafile
 description: An explanation of llamafile, a file type that lets you run LLMs from a single file 
+link: github.com/Mozilla-Ocho/llamafile
+link_name: GitHub Repo
+link_icon: github
 ---
 
 ![llamafile banner](https://cdn-uploads.huggingface.co/production/uploads/64a523ba1ed90082dafde3d3/kJrkxofwOp-89uYFe0EBb.png)

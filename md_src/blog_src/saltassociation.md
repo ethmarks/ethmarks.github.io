@@ -4,6 +4,8 @@ date: 2025-06-11
 tags: [curios]
 slug: saltassociation
 description: A description of https://saltassociation.co.uk/, a website devoted entirely to salt
+link: https://saltassociation.co.uk/
+link_name: Website
 ---
 
 Salt is my favorite mineral. It's easily the most delicious (Sitenote: despite its name, [Cinnabar](https://en.wikipedia.org/wiki/Cinnabar) is actually not tasty at all), it [looks awesome under an electron microscope](https://salinity.oceansciences.org/images/ed_image_81_salt_crystal.jpg), and it's so abundant that it forms colossal salt caverns and vast salt flats.
