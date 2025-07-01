@@ -408,6 +408,11 @@ def main():
             )
         )
 
+    # Render all tags page
+    all_tags_template = env.get_template("tags.html")
+    with open(os.path.join(TAG_DIR, "index.html"), "w", encoding="utf-8") as f:
+        f.write(all_tags_template.render(tags=tags_for_index))
+
     # Sitemap and info.json
     sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", sitemap_ns)
