@@ -549,7 +549,7 @@ a.external-link:hover::after {
 }
 
 a.external-link img {
-    transition: var(--transition-transform);
+    transition: var(--transition-transform), filter 0.3s ease;
     width: 1.2em;
     height: 1.2em;
     border-radius: 0;
@@ -623,13 +623,17 @@ a.external-link:hover::after {
 }
 
 a.external-link img {
-    transition: var(--transition-transform);
+    transition: var(--transition-transform), filter 0.3s ease;
     width: 1.2em;
     height: 1.2em;
+    border: none;
 }
 
 a.external-link:hover img {
     transform: rotate(10deg) scale(1.1);
+    filter: invert(1) brightness(2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none;
 }
 
 .external-link-row {
