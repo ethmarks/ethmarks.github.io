@@ -35,13 +35,13 @@ This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub
 
 ### Build
 
-Each blog post is stored as a [Markdown](https://en.wikipedia.org/wiki/Markdown) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). My SSG searches the blog_src directory for markdown files, reads the file contents, and applies it a template to create HTML files. It also dynamically updates other files (like the [All tag](/tag/all/) page) with links to each blog post. I also wrote a [pre-commit hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) that runs build.py before each commit, ensuring I don't forget.
+Each blog post is stored as a [Mint Flavoured Markdown](/blog/mfm) document, and is built into HTML by my custom [static site generator](https://en.wikipedia.org/wiki/Static_site_generator). [My SSG](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/build.py) searches the blog_src directory for markdown files, reads the file contents, and applies it to a template to create the final HTML files that are sent to your browser. It also dynamically updates other pages (like the [tag aggregators](/tag)) with links to each blog post. I also wrote a [pre-commit hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) that runs build.py before each commit, ensuring I don't forget.
 
 ### Web Components
 
 I've utilized [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for things like the header, footer, and buttons.
 
-This allows me to just quickly drop in an \<ethan-header\> element, and the header will be instantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
+This allows me to just quickly drop in an <ethan-header\> element, and the header will be instantiated in [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Style Guide
 
