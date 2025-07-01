@@ -118,6 +118,18 @@
     "slug": "eliza"
   },
   {
+    "url": "https://colourlessspearmint.github.io/blog/floodfilltext/",
+    "title": "Flood Fill Text",
+    "tags": [
+      "projects",
+      "programming"
+    ],
+    "date": "2025-06-30",
+    "description": "a codepen to generate meme-y gif animations where individual characters of text flood fill outwards",
+    "category": "blog",
+    "slug": "floodfilltext"
+  },
+  {
     "url": "https://colourlessspearmint.github.io/blog/frequency/",
     "title": "8.7539319",
     "tags": [
