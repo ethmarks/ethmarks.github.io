@@ -10,7 +10,8 @@
     <meta property="og:description" content="{{ description }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{ canonical_url }}">
-    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/common.css">{% if "codehilite" in content  %}
+    <link rel="stylesheet" href="/static/codehilite.css">{% endif %}
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
     <script src="/common.js"></script>
 </head>

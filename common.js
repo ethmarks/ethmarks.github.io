@@ -468,16 +468,6 @@ customElements.define('scroll-indicator',
         var codeBlocks = document.querySelectorAll('.codehilite');
         if (codeBlocks.length === 0) return;
 
-        // Inject stylesheet for syntax highlighting if it's not already present.
-        var stylesheetId = 'codehilite-theme';
-        if (!document.getElementById(stylesheetId)) {
-            var link = document.createElement('link');
-            link.id = stylesheetId;
-            link.rel = 'stylesheet';
-            link.href = '/codehilite.css';
-            document.head.appendChild(link);
-        }
-
         codeBlocks.forEach(function (block) {
             // Avoid double-injecting button
             if (block.querySelector('.copy-code-btn')) return;
