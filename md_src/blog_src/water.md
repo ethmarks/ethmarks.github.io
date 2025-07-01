@@ -46,7 +46,7 @@ I disagree.
 <p class="a">The water vapor is lighter than the ambient atmosphere, so it floats upwards and collects into megastructures that we're calling 'clouds.' They hover a few kilometers above the planet surface.</p>
 <p class="b">No, seriously.</p>
 <p class="a">I am being serious.</p>
-<p class="a">It's the white stuff in this picture. <img src="/images/earth_far_away.webp" alt="An image of the Earth from orbit" width="400px"></p>
+<p class="a">It's the white stuff in this picture. <img src="/media/earth_far_away.webp" alt="An image of the Earth from orbit" width="400px"></p>
 <p class="b">What!?</p>
 <p class="a">Yeah, we found it hard to believe too.</p>
 <p class="b">So that's collected over billions of years, right?</p>

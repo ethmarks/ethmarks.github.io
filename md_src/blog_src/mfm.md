@@ -6,7 +6,7 @@ slug: mfm
 description: a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG
 ---
 
-![The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks](/images/mfm-banner.webp)
+![The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks](/media/mfm-banner.webp)
 
 When I started designing and prototyping my [personal website](/blog/personalwebsite), I was very much inspired by [this blog post](https://leanrada.com/notes/vanilla-web-rewrite/) by [Lean Rada](https://leanrada.com/). Basically, it advocates for authoring blog content in pure [HTML](https://en.wikipedia.org/wiki/HTML), rather than using a [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) like [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)) that converts [Markdown](https://en.wikipedia.org/wiki/Markdown) into HTML.
 
@@ -71,7 +71,7 @@ If the file extension of the media src is an [MP4](https://en.wikipedia.org/wiki
 The default behavior is for it to be parsed into a video element that does not loop, is not muted, and requires user input to start playback. For example, the following Markdown...
 
 ```markdown
-![Test](https://colourlessspearmint.github.io/images/example.webm)
+![Test](https://colourlessspearmint.github.io/media/example.webm)
 ```
 
 ...parses into the following HTML.
@@ -79,7 +79,7 @@ The default behavior is for it to be parsed into a video element that does not l
 ```html
 <video 
     class="video" 
-    src="https://colourlessspearmint.github.io/images/example.webm" 
+    src="https://colourlessspearmint.github.io/media/example.webm" 
     controls
     alt="Test">
 </video>
@@ -90,7 +90,7 @@ The default behavior is for it to be parsed into a video element that does not l
 The MFM animation syntax is an override of the video syntax. The difference is that the text in the square brackets is prefixed with "GIF ". The "GIF" prefix will be removed from the final alt text. It is then parsed into a video element that loops, is muted, and autoplays. For example, the following Markdown...
 
 ```markdown
-![GIF Test](https://colourlessspearmint.github.io/images/example.webm)
+![GIF Test](https://colourlessspearmint.github.io/media/example.webm)
 ```
 
 ...parses into the following HTML.
@@ -98,7 +98,7 @@ The MFM animation syntax is an override of the video syntax. The difference is t
 ```html
 <video 
     class="gif" 
-    src="https://colourlessspearmint.github.io/images/example.webm" 
+    src="https://colourlessspearmint.github.io/media/example.webm" 
     autoplay
     loop
     muted

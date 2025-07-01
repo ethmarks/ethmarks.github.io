@@ -16,8 +16,8 @@ I like how this looks, and I'll sometimes just run random photos through it to s
 <figure>
     <div class="juxtapose-container">
         <div class="juxtapose long">
-            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
-            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/media/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
+            <img src="https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/media/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
         </div>
     </div>
     <figcaption>PaintTransformer applied to a photo I took at <a href="https://franklloydwright.org/taliesin-west/">Taliesin West</a></figcaption>
@@ -27,7 +27,7 @@ Another cool thing you can do is save each step as a frame, which creates a cool
 
 Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: *how quickly can you guess what it's painting?*
 
-![A PaintTransformer timelapse of my Taliesin photo](https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/images/walkway.webm)
+![A PaintTransformer timelapse of my Taliesin photo](https://github.com/ColourlessSpearmint/ColourlessTransformer/raw/main/media/walkway.webm)
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 
@@ -39,7 +39,7 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 I'm quite happy with how the Streamlit app turned out. A detail I'm particularly proud of is how the previous output fades out slightly while the new one is processing.
 
-![ColourlessTransformer Streamlit demo](/images/colourlesstransformer_streamlit.webp)
+![ColourlessTransformer Streamlit demo](/media/colourlesstransformer_streamlit.webp)
 
 ## Usage
 

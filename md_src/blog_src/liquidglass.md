@@ -42,13 +42,13 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
-![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](/images/android_ios18_ios26.webp)
+![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](/media/android_ios18_ios26.webp)
 
 For example, consider the image above. On the left is a screenshot of [my phone](https://q1.cricketwireless.com/product/motorola-moto-g-5g-2023/) running [Android 14](https://www.android.com/android-14/), in the middle is a phone running [iOS 18](https://www.apple.com/ios/ios-18/), and on the right is a phone running [iOS 26](https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/). Of these three, which one looks most like something you'd find in a sci-fi movie? The answer is unambiguously the phone on the right. However you feel about Liquid Glass, you can't deny that it looks straight out of Black Mirror. In a good way.
 
 ### …Animated
 
-![GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](/images/liquid_glass_coalescence.webm)
+![GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](/media/liquid_glass_coalescence.webm)
 
 Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalesce [like real blobs of liquid](https://youtu.be/Aq5ydeWWr4A) (the way the blobs merge reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching)). Because Liquid Glass imitates real-life fluid dynamics that we understand intuitively, it feels responsive and dynamic in a way that is pleasing to use.
 

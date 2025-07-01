@@ -16,7 +16,7 @@ Well, allow me to introduce **ASCII-Globe**, a program I made that dynamically r
 ## Demo
 
 <figure>
-<img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/images/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
+<img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/media/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
 </figure>
 
 Here's a flattened text version. Feel free to copy and paste it.
@@ -114,7 +114,7 @@ ASCII-Globe also supports features such as rotation, tilt, scale, and a day-nigh
 
 ## Texture Generation
 
-ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the [documentation](https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md)) is to download [this image](https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg) taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.
+ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the [documentation](https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md)) is to download [this image](https://eoimages.gsfc.nasa.gov/media/imagerecords/74000/74218/world.200412.3x5400x2700.jpg) taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.
 
 ## Animation
 

@@ -33,7 +33,7 @@
 </div>
 
 <article class="animated">
-<img alt="The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks" src="/images/mfm-banner.webp" />
+<img alt="The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks" src="/media/mfm-banner.webp" />
 <p>When I started designing and prototyping my <a href="/blog/personalwebsite">personal website</a>, I was very much inspired by <a href="https://leanrada.com/notes/vanilla-web-rewrite/">this blog post</a> by <a href="https://leanrada.com/">Lean Rada</a>. Basically, it advocates for authoring blog content in pure <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, rather than using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> like <a href="https://en.wikipedia.org/wiki/Jekyll_(software)">Jekyll</a> that converts <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> into HTML.</p>
 <p>This made a lot of sense to me, as I really didn't want to have to learn Jekyll (in fact, I wanted to <a href="https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde">Hyde</a> from it entirely). So for a couple months, I authored each and every blog post in pure HTML.</p>
 <p>As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each blog post's file had to contain a bunch of <a href="https://en.wikipedia.org/wiki/Boilerplate_code">boilerplate</a> that was the same on every page, like where the site <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> is located. It also meant that I had to do a bunch of things manually, like adding new blog posts to their aggregator page (There were three: Curios, Figments, and Elsewise. Nowadays I use <a href="/tag">tags</a> for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious blog-authoring tasks.</p>
@@ -72,13 +72,13 @@
 <h4>Videos</h4>
 <p>If the file extension of the media src is an <a href="https://en.wikipedia.org/wiki/MP4_file_format">MP4</a>, <a href="https://en.wikipedia.org/wiki/WebM">WebM</a>, <a href="https://en.wikipedia.org/wiki/Ogg">Ogg</a>, or <a href="https://en.wikipedia.org/wiki/QuickTime_File_Format">QTFF</a> (.mov), it will be treated as a video, rather than an image.</p>
 <p>The default behavior is for it to be parsed into a video element that does not loop, is not muted, and requires user input to start playback. For example, the following Markdown...</p>
-<div class="codehilite"><pre><span></span><code>![<span class="nt">Test</span>](<span class="na">https://colourlessspearmint.github.io/images/example.webm</span>)
+<div class="codehilite"><pre><span></span><code>![<span class="nt">Test</span>](<span class="na">https://colourlessspearmint.github.io/media/example.webm</span>)
 </code></pre></div>
 
 <p>...parses into the following HTML.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">video</span> 
     <span class="na">class</span><span class="o">=</span><span class="s">&quot;video&quot;</span> 
-    <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://colourlessspearmint.github.io/images/example.webm&quot;</span> 
+    <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://colourlessspearmint.github.io/media/example.webm&quot;</span> 
     <span class="na">controls</span>
     <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Test&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
@@ -86,13 +86,13 @@
 
 <h4>Animations</h4>
 <p>The MFM animation syntax is an override of the video syntax. The difference is that the text in the square brackets is prefixed with "GIF ". The "GIF" prefix will be removed from the final alt text. It is then parsed into a video element that loops, is muted, and autoplays. For example, the following Markdown...</p>
-<div class="codehilite"><pre><span></span><code>![<span class="nt">GIF Test</span>](<span class="na">https://colourlessspearmint.github.io/images/example.webm</span>)
+<div class="codehilite"><pre><span></span><code>![<span class="nt">GIF Test</span>](<span class="na">https://colourlessspearmint.github.io/media/example.webm</span>)
 </code></pre></div>
 
 <p>...parses into the following HTML.</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">video</span> 
     <span class="na">class</span><span class="o">=</span><span class="s">&quot;gif&quot;</span> 
-    <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://colourlessspearmint.github.io/images/example.webm&quot;</span> 
+    <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://colourlessspearmint.github.io/media/example.webm&quot;</span> 
     <span class="na">autoplay</span>
     <span class="na">loop</span>
     <span class="na">muted</span>

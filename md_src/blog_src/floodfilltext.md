@@ -11,7 +11,7 @@ link_icon: codepen
 
 A few weeks ago, a friend sent me this reaction GIF.
 
-![GIF an animated gif where a bunch of "O"s spiral out from an "N", overlayed on a clip of Darth Vader saying "Nooooo"](/images/darthvadernooo.webm)
+![GIF an animated gif where a bunch of "O"s spiral out from an "N", overlayed on a clip of Darth Vader saying "Nooooo"](/media/darthvadernooo.webm)
 
 I'd never seen this GIF before, and the premise was pretty interesting. Rather than the text scrolling past or appearing letter-by-letter in a straight line like in many other reaction GIFs, this GIF has the text change direction, fork, and spiral as it appears. This was both amusing and interesting, and I spent the next few hours trying to recreate the effect with [CSS](https://en.wikipedia.org/wiki/CSS) animations. I had been [nerd sniped](https://xkcd.com/356/).
 

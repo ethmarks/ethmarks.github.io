@@ -17,7 +17,7 @@ ELIZA's source code was written by Joseph Weizenbaum in 1966 in the [SLIP](https
 
 I still wanted to test ELIZA as part of my [research on early AI](/blog/earlyai), so I was left no other choice but to re-implement ELIZA for modern computers in Python.
 
-![My ELIZA program running in Google Colab](/images/eliza_colab.webp)
+![My ELIZA program running in Google Colab](/media/eliza_colab.webp)
 
 If you'd be interested to see for yourself what state-of-the-art AI looked like 59 years ago, feel free to check out my [ELIZA Colab notebook](https://colab.research.google.com/drive/1RQ2-HzSdCBQfYQZu6OSrYlOgOHqbQpn_).
 

@@ -34,7 +34,7 @@
 
 <div class="external-link-row">
 <a class="external-link" href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io">
-    <img src="/images/icons/github.svg" alt="github icon">
+    <img src="/media/icons/github.svg" alt="github icon">
     <span>GitHub Repo</span>
 </a>
 </div>
@@ -55,7 +55,7 @@
 </ul>
 <h3>GitHub Pages</h3>
 <p>This site is hosted on <a href="https://pages.github.com/">GitHub Pages</a>. I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.</p>
-<img alt="My Github Pages deployment workflow" src="/images/ghpages.webp" />
+<img alt="My Github Pages deployment workflow" src="/media/ghpages.webp" />
 <h3>Build</h3>
 <p>Each blog post is stored as a <a href="/blog/mfm">Mint Flavoured Markdown</a> document, and is built into HTML by my custom <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a>. <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/build.py">My SSG</a> searches the blog_src directory for markdown files, reads the file contents, and applies it to a template to create the final HTML files that are sent to your browser. It also dynamically updates other pages (like the <a href="/tag">tag aggregators</a>) with links to each blog post. I also wrote a <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks">pre-commit hook</a> that runs build.py before each commit, ensuring I don't forget.</p>
 <h3>Web Components</h3>
@@ -81,7 +81,7 @@
 </ul>
 <h2>Lighthouse</h2>
 <p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop">June 9, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse">Lighthouse</a> score of 99.75.</p>
-<img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="/images/lighthouse.webp" />
+<img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="/media/lighthouse.webp" />
 <p>It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.</p>
 <h2>Privacy</h2>
 <p>This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and harvesting it sounds complicated. Your data remains yours because I don't want it and can't figure out how to get it.</p>

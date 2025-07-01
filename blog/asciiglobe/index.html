@@ -32,7 +32,7 @@
 
 <div class="external-link-row">
 <a class="external-link" href="https://github.com/ColourlessSpearmint/ASCII-Globe">
-    <img src="/images/icons/github.svg" alt="github icon">
+    <img src="/media/icons/github.svg" alt="github icon">
     <span>GitHub Repo</span>
 </a>
 </div>
@@ -42,7 +42,7 @@
 <p>Well, allow me to introduce <strong>ASCII-Globe</strong>, a program I made that dynamically renders the Earth in <a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>.</p>
 <h2>Demo</h2>
 <figure>
-<img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/images/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
+<img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/media/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
 </figure>
 
 <p>Here's a flattened text version. Feel free to copy and paste it.</p>
@@ -132,7 +132,7 @@ VVVVVVVVVVVVVVVVVVVVV..VVVVVVVV..VVVVV..V...VV..............VVV.VV..............
 <p>It does this with the same <a href="https://www.cs.trinity.edu/~jhowland/class.files.cs357.html/blender/blender-stuff/m3d.pdf">trigonometry that all rendering engines use</a>, so I won't explain it in detail here.</p>
 <p>ASCII-Globe also supports features such as rotation, tilt, scale, and a day-night cycle. It accomplishes the day-night cycle by switching between a day texture and a night texture, and the rest are achieved with more trigonometry.</p>
 <h2>Texture Generation</h2>
-<p>ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the <a href="https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md">documentation</a>) is to download <a href="https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg">this image</a> taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.</p>
+<p>ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the <a href="https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md">documentation</a>) is to download <a href="https://eoimages.gsfc.nasa.gov/media/imagerecords/74000/74218/world.200412.3x5400x2700.jpg">this image</a> taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.</p>
 <h2>Animation</h2>
 <p>ASCII-Globe also comes with code to generate animated GIFs from a list of frames. It uses a <a href="https://en.wikipedia.org/wiki/Monospaced_font">monospace font</a> like most ASCII art to maintain text column alignment. The default behavior is to render white text on a transparent background, but the code comes with lots of parameters to customize the output.</p>
 <h2>Installation</h2>

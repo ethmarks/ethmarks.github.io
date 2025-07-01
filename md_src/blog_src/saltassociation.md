@@ -8,7 +8,7 @@ link: https://saltassociation.co.uk/
 link_name: Website
 ---
 
-Salt is my favorite mineral. It's easily the most delicious (Sitenote: despite its name, [Cinnabar](https://en.wikipedia.org/wiki/Cinnabar) is actually not tasty at all), it [looks awesome under an electron microscope](https://salinity.oceansciences.org/images/ed_image_81_salt_crystal.jpg), and it's so abundant that it forms colossal salt caverns and vast salt flats.
+Salt is my favorite mineral. It's easily the most delicious (Sitenote: despite its name, [Cinnabar](https://en.wikipedia.org/wiki/Cinnabar) is actually not tasty at all), it [looks awesome under an electron microscope](https://salinity.oceansciences.org/media/ed_image_81_salt_crystal.jpg), and it's so abundant that it forms colossal salt caverns and vast salt flats.
 
 ![A large, textured salt flat with polygonal patterns stretches to a distant mountain range under a vibrant orange and blue sunset sky](https://149576366.v2.pressablecdn.com/wp-content/uploads/Salar_de_Uyuni_in_Bolivia.jpg)
 
@@ -32,7 +32,7 @@ It covers various [famous geological salt formations](https://saltassociation.co
 
 It even covers [salt controversies](https://saltassociation.co.uk/position-statement-government-salt-reduction-strategy/) and combats [salt misinformation](https://saltassociation.co.uk/salt-the-facts/).
 
-![A 404 page with the header "404 Error" in large red text, and below it the subheader "You’ve found a lost salt crystal!" in smaller blue text. To the right is a photo of a salt crystal.](/images/salt_404.webp)
+![A 404 page with the header "404 Error" in large red text, and below it the subheader "You’ve found a lost salt crystal!" in smaller blue text. To the right is a photo of a salt crystal.](/media/salt_404.webp)
 
 The [404 page](https://saltassociation.co.uk/404) says "You’ve found a lost salt crystal!". I thought [my 404 page](/404) was great, but this one is clearly far superior.
 
