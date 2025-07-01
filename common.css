@@ -507,7 +507,9 @@ external-link {
 }
 
 .external-link-row {
+    margin: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
