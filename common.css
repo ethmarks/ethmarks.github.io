@@ -502,8 +502,134 @@ table.compact tr.accent-row td {
     border: none;
 }
 
-external-link {
-    margin-top: var(--spacing-md);
+
+
+@keyframes externalLinkReveal {
+    from {
+        transform: translateX(-30px) scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+a.external-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+    color: var(--color-link-hover, white);
+}
+
+a.external-link:focus-visible {
+    outline: 2px solid var(--color-focus-outline);
+    outline-offset: 3px;
+    box-shadow: var(--shadow-button-hover);
+}
+
+a.external-link::after {
+    /* Shimmer effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%) skewX(-20deg);
+    /* Start off-screen */
+    transition: transform 0.5s ease;
+    /* Slower shimmer transition */
+    opacity: 0.8;
+}
+
+a.external-link:hover::after {
+    transform: translateX(250%) skewX(-20deg);
+}
+
+a.external-link img {
+    transition: var(--transition-transform);
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 0;
+    color: inherit;
+}
+
+a.external-link:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+a.external-link {
+    padding: 1rem 1.6rem;
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+    color: var(--color-button-text);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    box-shadow: var(--shadow-button);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    animation: externalLinkReveal 1s var(--transition-timing) forwards;
+}
+
+@keyframes externalLinkReveal {
+    from {
+        transform: translateX(-30px) scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+a.external-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+    color: var(--color-link-hover, white);
+}
+
+a.external-link:focus-visible {
+    outline: 2px solid var(--color-focus-outline);
+    outline-offset: 3px;
+    box-shadow: var(--shadow-button-hover);
+}
+
+a.external-link::after {
+    /* Shimmer effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%) skewX(-20deg);
+    /* Start off-screen */
+    transition: transform 0.5s ease;
+    /* Slower shimmer transition */
+    opacity: 0.8;
+}
+
+a.external-link:hover::after {
+    transform: translateX(250%) skewX(-20deg);
+}
+
+a.external-link img {
+    transition: var(--transition-transform);
+    width: 1.2em;
+    height: 1.2em;
+}
+
+a.external-link:hover img {
+    transform: rotate(10deg) scale(1.1);
 }
 
 .external-link-row {
