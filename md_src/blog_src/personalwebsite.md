@@ -1,7 +1,7 @@
 ---
 title: Personal Website
 date: 2025-05-14
-tags: [projects, programming, personalwebsite]
+tags: [projects, programming, webdev, personalwebsite]
 slug: personalwebsite
 description: The website you're reading right now
 link: https://github.com/ColourlessSpearmint/colourlessspearmint.github.io

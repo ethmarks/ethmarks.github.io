@@ -1,7 +1,7 @@
 ---
 title: Thessa
 date: 2025-05-21
-tags: [projects, programming, ai]
+tags: [projects, programming, webdev, ai]
 slug: thessa
 description: An AI-powered thesaurus that uses the Gemini API
 link: https://colourlessspearmint.github.io/thessa.html

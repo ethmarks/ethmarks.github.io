@@ -1,7 +1,7 @@
 ---
 title: ColourlessTransformer
 date: 2024-12-22
-tags: [projects, programming, automation]
+tags: [projects, programming, webdev, automation]
 slug: colourlesstransformer
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
 link: https://github.com/ColourlessSpearmint/ColourlessTransformer

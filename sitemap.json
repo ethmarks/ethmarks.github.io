@@ -82,6 +82,7 @@
     "tags": [
       "projects",
       "programming",
+      "webdev",
       "automation"
     ],
     "date": "2024-12-22",
@@ -122,7 +123,9 @@
     "title": "Flood Fill Text",
     "tags": [
       "projects",
-      "programming"
+      "programming",
+      "webdev",
+      "codepen"
     ],
     "date": "2025-06-30",
     "description": "a codepen to generate meme-y gif animations where individual characters of text flood fill outwards",
@@ -199,6 +202,7 @@
     "tags": [
       "projects",
       "programming",
+      "webdev",
       "personalwebsite"
     ],
     "date": "2025-06-30",
@@ -212,6 +216,7 @@
     "tags": [
       "projects",
       "programming",
+      "webdev",
       "personalwebsite"
     ],
     "date": "2025-05-14",
@@ -246,7 +251,9 @@
     "url": "https://colourlessspearmint.github.io/blog/scrambleanim/",
     "title": "Text Scramble Animation",
     "tags": [
-      "programming"
+      "programming",
+      "webdev",
+      "codepen"
     ],
     "date": "2025-06-29",
     "description": "A demonstration of my text scrambling JavaScript animation",
@@ -259,6 +266,7 @@
     "tags": [
       "projects",
       "programming",
+      "webdev",
       "humor",
       "cryptology",
       "automation"
@@ -274,6 +282,7 @@
     "tags": [
       "projects",
       "programming",
+      "webdev",
       "ai"
     ],
     "date": "2025-05-21",
@@ -593,6 +602,28 @@
     "description": "Google Colab",
     "category": "tag",
     "slug": "colab"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/codepen/",
+    "title": "Codepen",
+    "tags": [
+      "codepen"
+    ],
+    "date": null,
+    "description": "CodePen",
+    "category": "tag",
+    "slug": "codepen"
+  },
+  {
+    "url": "https://colourlessspearmint.github.io/blog/webdev/",
+    "title": "Webdev",
+    "tags": [
+      "webdev"
+    ],
+    "date": null,
+    "description": "Web development",
+    "category": "tag",
+    "slug": "webdev"
   },
   {
     "url": "https://colourlessspearmint.github.io/tag/",

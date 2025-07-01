@@ -90,3 +90,11 @@ colab:
   description: "Google Colab"
   definition: "Google Colab (noun) - a free Jupyter notebook environment that runs in the cloud"
   text: "Posts tagged as Colab are related to <a href='https://colab.research.google.com/'>Google Colab</a>, a free <a href='https://jupyter.org/'>Jupyter</a> notebook environment that runs in the cloud"
+codepen:
+  description: "CodePen"
+  definition: "CodePen (noun) - an online webpage code editor"
+  text: "Posts tagged as CodePen are related to <a href='https://codepen.io/'>CodePen</a>, an online code editor for HTML, CSS, and JS webpages"
+webdev:
+  description: "Web development"
+  definition: "Web development (noun) - the work involved in developing a website for the Internet"
+  text: "Posts tagged as WebDev are related to web development, including HTML, CSS, JavaScript, and related technologies"
