@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thessa</title>
-    <meta name="description" content="An AI-powered thesaurus that uses the Gemini API">
-    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/thessa/">
-    <meta property="og:title" content="Thessa">
-    <meta property="og:description" content="An AI-powered thesaurus that uses the Gemini API">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/thessa/">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="/static/codehilite.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-    <script src="/common.js"></script>
-</head>
-<body>
-<ethan-header></ethan-header>
-<main>
-<h1 class="animated">Thessa</h1>
-<time class="animated" datetime="2025-05-21">May 21, 2025</time>
-
-<div class="post-tags">
-  
-    <a class="post-tag animated" href="/tag/projects">#projects</a> 
-  
-    <a class="post-tag animated" href="/tag/programming">#programming</a> 
-  
-    <a class="post-tag animated" href="/tag/webdev">#webdev</a> 
-  
-    <a class="post-tag animated" href="/tag/ai">#ai</a>
-  
-</div>
-
-<div class="external-link-row">
-<a class="external-link" href="https://colourlessspearmint.github.io/thessa.html">
-    <img src="/media/icons/link.svg" alt="link icon">
-    <span>Thessa Webpage</span>
-</a>
-</div>
-
-<article class="animated">
-<img alt="A screenshot of the Thessa interface showing synonyms for the word 'screenshot'" src="/media/thessa/screenshot.webp" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thessa</title>
+        <meta name="description" content="An AI-powered thesaurus that uses the Gemini API" />
+        <link rel="canonical" href="https://colourlessspearmint.github.io/blog/thessa/" />
+        <meta property="og:title" content="Thessa" />
+        <meta property="og:description" content="An AI-powered thesaurus that uses the Gemini API" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://colourlessspearmint.github.io/blog/thessa/" />
+        <link rel="stylesheet" href="/common.css" />
+        
+        <link rel="stylesheet" href="/static/codehilite.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script src="/common.js"></script>
+    </head>
+    <body>
+        <ethan-header></ethan-header>
+        <main>
+            <h1 class="animated">Thessa</h1>
+            <time class="animated" datetime="2025-05-21">May 21, 2025</time>
+            
+            <div class="post-tags">
+                
+                <a class="post-tag animated" href="/tag/projects"
+                    >#projects</a
+                >  
+                <a class="post-tag animated" href="/tag/programming"
+                    >#programming</a
+                >  
+                <a class="post-tag animated" href="/tag/webdev"
+                    >#webdev</a
+                >  
+                <a class="post-tag animated" href="/tag/ai"
+                    >#ai</a
+                > 
+            </div>
+            
+            <div class="external-link-row">
+                <a class="external-link" href="https://colourlessspearmint.github.io/thessa.html">
+                    <img
+                        src="/media/icons/link.svg"
+                        alt="link icon"
+                    />
+                    <span
+                        >Thessa Webpage</span
+                    >
+                </a>
+            </div>
+            
+            <article class="animated"><img alt="A screenshot of the Thessa interface showing synonyms for the word 'screenshot'" src="/media/thessa/screenshot.webp" />
 <p>A while ago, I <a href="https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt" target="_blank">configured my instance of ChatGPT</a> to "respond with a <a href="https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula" target="_blank">Dale-Chall readability level</a> of 9.1". This is a precise way of telling it to 'use big words'.</p>
 <p>I was taken aback by how well ChatGPT obliged. It even started using words I didn't know, and I found myself having to keep a dictionary open on another monitor in order to understand what it was saying. I learned a huge amount of new words this way, and it contributed significantly to my interest in language. Whenever I needed a word that I didn't have, I would ask ChatGPT. More often than not, it would respond with some delightful <a href="https://en.wiktionary.org/wiki/archaism" target="_blank">archaism</a> I would add to my vocabulary.</p>
 <p>When I switched from ChatGPT to <a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>, I wrote a system prompt that would make Gemini enumerate a list of synonyms for a given word. I used it as a custom thesaurus.</p>
@@ -81,9 +94,8 @@ If<span class="w"> </span>none,<span class="w"> </span>say<span class="w"> </spa
 <p>My solution is to have each user generate their own free API key. I wish I didn't have to do this, but it was pretty much the only way I could publish Thessa. Thessa stores your API key in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">Local Storage</a>. This means that you only have to enter your key once and Thessa will request it from storage on each page load. Information stored in Local Storage is secure and never leaves your device.</p>
 <h2>Conclusion</h2>
 <p>Thessa was my first project that uses the Gemini API. I think it's one of my most polished projects yet, and I'm quite proud of how it turned out. I designed Thessa for myself (which is why it includes Bulgarian cognates), but I hope that you find it useful too.</p>
-<p>~Ethan</p>
-</article>
-</main>
-<ethan-footer></ethan-footer>
-</body>
+<p>~Ethan</p></article>
+        </main>
+        <ethan-footer></ethan-footer>
+    </body>
 </html>

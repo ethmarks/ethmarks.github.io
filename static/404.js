@@ -1,7 +1,6 @@
-
-document.addEventListener('DOMContentLoaded', function () {
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
+document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
 
     // Set canvas to full window size
     canvas.width = window.innerWidth;
@@ -27,17 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
     let mouseY = 0;
 
     // Determine if the device is likely mobile (no fine pointer)
-    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
     // Track mouse/touch position
-    document.addEventListener('mousemove', function (e) {
-        if (!isMobile) { // Only track mouse on non-mobile
+    document.addEventListener("mousemove", function (e) {
+        if (!isMobile) {
+            // Only track mouse on non-mobile
             mouseX = e.clientX;
             mouseY = e.clientY;
         }
     });
 
-    document.addEventListener('touchmove', function (e) {
+    document.addEventListener("touchmove", function (e) {
         if (isMobile && e.touches.length > 0) {
             mouseX = e.touches[0].clientX;
             mouseY = e.touches[0].clientY;
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             origY: 0,
             x: centerX,
             y: centerY,
-            radius: baseRadius
+            radius: baseRadius,
         });
 
         // Create concentric rings
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     origY: y,
                     x: x + centerX,
                     y: y + centerY,
-                    radius: baseRadius
+                    radius: baseRadius,
                 });
             }
         }
@@ -87,10 +87,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update rotation angle
         angle += rotationSpeed;
 
-        dots.forEach(dot => {
+        dots.forEach((dot) => {
             // Rotate the dot around the center
-            const rotatedX = Math.cos(angle) * dot.origX - Math.sin(angle) * dot.origY;
-            const rotatedY = Math.sin(angle) * dot.origX + Math.cos(angle) * dot.origY;
+            const rotatedX =
+                Math.cos(angle) * dot.origX - Math.sin(angle) * dot.origY;
+            const rotatedY =
+                Math.sin(angle) * dot.origX + Math.cos(angle) * dot.origY;
 
             // Update position with rotation
             dot.x = rotatedX + centerX;
@@ -100,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isMobile) {
                 const dy = Math.abs(mouseY - dot.y);
                 if (dy < bandHeight) {
-                    const scale = 1 - (dy / bandHeight);
+                    const scale = 1 - dy / bandHeight;
                     dot.radius = baseRadius + (maxRadius - baseRadius) * scale;
                 } else {
                     dot.radius = baseRadius;
@@ -111,18 +113,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
     // Draw the dots
     function drawDots() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        dots.forEach(dot => {
+        dots.forEach((dot) => {
             // Only draw dots that are within the canvas view (with a small margin)
-            if (dot.x >= -10 && dot.x <= canvas.width + 10 &&
-                dot.y >= -10 && dot.y <= canvas.height + 10) {
+            if (
+                dot.x >= -10 &&
+                dot.x <= canvas.width + 10 &&
+                dot.y >= -10 &&
+                dot.y <= canvas.height + 10
+            ) {
                 ctx.beginPath();
                 ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
                 ctx.fill();
             }
         });
@@ -136,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Handle window resize
-    window.addEventListener('resize', function () {
+    window.addEventListener("resize", function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         centerX = canvas.width / 2;

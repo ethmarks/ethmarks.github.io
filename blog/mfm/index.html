@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mint Flavoured Markdown</title>
-    <meta name="description" content="a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG">
-    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/mfm/">
-    <meta property="og:title" content="Mint Flavoured Markdown">
-    <meta property="og:description" content="a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/mfm/">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="/static/codehilite.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-    <script src="/common.js"></script>
-</head>
-<body>
-<ethan-header></ethan-header>
-<main>
-<h1 class="animated">Mint Flavoured Markdown</h1>
-<time class="animated" datetime="2025-06-30">June 30, 2025</time>
-
-<div class="post-tags">
-  
-    <a class="post-tag animated" href="/tag/projects">#projects</a> 
-  
-    <a class="post-tag animated" href="/tag/programming">#programming</a> 
-  
-    <a class="post-tag animated" href="/tag/webdev">#webdev</a> 
-  
-    <a class="post-tag animated" href="/tag/personalwebsite">#personalwebsite</a>
-  
-</div>
-
-<article class="animated">
-<img alt="The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks" src="/media/mfm-banner.webp" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mint Flavoured Markdown</title>
+        <meta name="description" content="a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG" />
+        <link rel="canonical" href="https://colourlessspearmint.github.io/blog/mfm/" />
+        <meta property="og:title" content="Mint Flavoured Markdown" />
+        <meta property="og:description" content="a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://colourlessspearmint.github.io/blog/mfm/" />
+        <link rel="stylesheet" href="/common.css" />
+        
+        <link rel="stylesheet" href="/static/codehilite.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script src="/common.js"></script>
+    </head>
+    <body>
+        <ethan-header></ethan-header>
+        <main>
+            <h1 class="animated">Mint Flavoured Markdown</h1>
+            <time class="animated" datetime="2025-06-30">June 30, 2025</time>
+            
+            <div class="post-tags">
+                
+                <a class="post-tag animated" href="/tag/projects"
+                    >#projects</a
+                >  
+                <a class="post-tag animated" href="/tag/programming"
+                    >#programming</a
+                >  
+                <a class="post-tag animated" href="/tag/webdev"
+                    >#webdev</a
+                >  
+                <a class="post-tag animated" href="/tag/personalwebsite"
+                    >#personalwebsite</a
+                > 
+            </div>
+            
+            <article class="animated"><img alt="The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks" src="/media/mfm-banner.webp" />
 <p>When I started designing and prototyping my <a href="/blog/personalwebsite">personal website</a>, I was very much inspired by <a href="https://leanrada.com/notes/vanilla-web-rewrite/" target="_blank">this blog post</a> by <a href="https://leanrada.com/" target="_blank">Lean Rada</a>. Basically, it advocates for authoring blog content in pure <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>, rather than using a <a href="https://en.wikipedia.org/wiki/Static_site_generator" target="_blank">static site generator</a> like <a href="https://en.wikipedia.org/wiki/Jekyll_(software)" target="_blank">Jekyll</a> that converts <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> into HTML.</p>
 <p>This made a lot of sense to me, as I really didn't want to have to learn Jekyll (in fact, I wanted to <a href="https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde" target="_blank">Hyde</a> from it entirely). So for a couple months, I authored each and every blog post in pure HTML.</p>
 <p>As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each blog post's file had to contain a bunch of <a href="https://en.wikipedia.org/wiki/Boilerplate_code" target="_blank">boilerplate</a> that was the same on every page, like where the site <a href="https://en.wikipedia.org/wiki/Favicon" target="_blank">favicon</a> is located. It also meant that I had to do a bunch of things manually, like adding new blog posts to their aggregator page (There were three: Curios, Figments, and Elsewise. Nowadays I use <a href="/tag">tags</a> for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious blog-authoring tasks.</p>
@@ -154,9 +162,8 @@
 
 <h2>Conclusion</h2>
 <p>Mint Flavored Markdown is my first custom specification, and it's already proven to be quite useful in making my blog posts more concise. I don't honestly expect anybody else to use MFM, but maybe some of its syntax could be of inspiration. It goes without saying that you can use and adapt MFM however you like.</p>
-<p>~Ethan</p>
-</article>
-</main>
-<ethan-footer></ethan-footer>
-</body>
+<p>~Ethan</p></article>
+        </main>
+        <ethan-footer></ethan-footer>
+    </body>
 </html>

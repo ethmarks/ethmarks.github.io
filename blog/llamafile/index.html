@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llamafile</title>
-    <meta name="description" content="An explanation of llamafile, a file type that lets you run LLMs from a single file">
-    <link rel="canonical" href="https://colourlessspearmint.github.io/blog/llamafile/">
-    <meta property="og:title" content="Llamafile">
-    <meta property="og:description" content="An explanation of llamafile, a file type that lets you run LLMs from a single file">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://colourlessspearmint.github.io/blog/llamafile/">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="/static/codehilite.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-    <script src="/common.js"></script>
-</head>
-<body>
-<ethan-header></ethan-header>
-<main>
-<h1 class="animated">Llamafile</h1>
-<time class="animated" datetime="2025-06-24">June 24, 2025</time>
-
-<div class="post-tags">
-  
-    <a class="post-tag animated" href="/tag/curios">#curios</a> 
-  
-    <a class="post-tag animated" href="/tag/programming">#programming</a> 
-  
-    <a class="post-tag animated" href="/tag/ai">#ai</a>
-  
-</div>
-
-<div class="external-link-row">
-<a class="external-link" href="github.com/Mozilla-Ocho/llamafile">
-    <img src="/media/icons/github.svg" alt="github icon">
-    <span>GitHub Repo</span>
-</a>
-</div>
-
-<article class="animated">
-<img alt="llamafile banner" src="https://cdn-uploads.huggingface.co/production/uploads/64a523ba1ed90082dafde3d3/kJrkxofwOp-89uYFe0EBb.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Llamafile</title>
+        <meta name="description" content="An explanation of llamafile, a file type that lets you run LLMs from a single file" />
+        <link rel="canonical" href="https://colourlessspearmint.github.io/blog/llamafile/" />
+        <meta property="og:title" content="Llamafile" />
+        <meta property="og:description" content="An explanation of llamafile, a file type that lets you run LLMs from a single file" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://colourlessspearmint.github.io/blog/llamafile/" />
+        <link rel="stylesheet" href="/common.css" />
+        
+        <link rel="stylesheet" href="/static/codehilite.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <script src="/common.js"></script>
+    </head>
+    <body>
+        <ethan-header></ethan-header>
+        <main>
+            <h1 class="animated">Llamafile</h1>
+            <time class="animated" datetime="2025-06-24">June 24, 2025</time>
+            
+            <div class="post-tags">
+                
+                <a class="post-tag animated" href="/tag/curios"
+                    >#curios</a
+                >  
+                <a class="post-tag animated" href="/tag/programming"
+                    >#programming</a
+                >  
+                <a class="post-tag animated" href="/tag/ai"
+                    >#ai</a
+                > 
+            </div>
+            
+            <div class="external-link-row">
+                <a class="external-link" href="github.com/Mozilla-Ocho/llamafile">
+                    <img
+                        src="/media/icons/github.svg"
+                        alt="github icon"
+                    />
+                    <span
+                        >GitHub Repo</span
+                    >
+                </a>
+            </div>
+            
+            <article class="animated"><img alt="llamafile banner" src="https://cdn-uploads.huggingface.co/production/uploads/64a523ba1ed90082dafde3d3/kJrkxofwOp-89uYFe0EBb.png" />
 <p>Last week, I stumbled upon <a href="https://github.com/Mozilla-Ocho/llamafile" target="_blank">llamafile</a>. It's a file format developed by <a href="https://www.mozilla.org/en-US/" target="_blank">Mozilla</a> that stores the weights and code of <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">LLMs</a> as pre-compiled <a href="https://en.wikipedia.org/wiki/Binary_code" target="_blank">binary machine code</a>. What this means is that you can run a llamafile on <em>any</em> computer without installing <em>anything</em> else.</p>
 <p>Actually, I need to qualify the "run on any computer" statement a bit. Llamafiles can run on any computer running <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Windows</a>, <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">MacOS</a>, <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, <a href="https://en.wikipedia.org/wiki/FreeBSD" target="_blank">FreeBSD</a>, <a href="https://en.wikipedia.org/wiki/NetBSD" target="_blank">NetBSD</a>, or <a href="https://en.wikipedia.org/wiki/OpenBSD" target="_blank">OpenBSD</a>. The computer needs to have a <a href="https://en.wikipedia.org/wiki/AMD" target="_blank">64-bit AMD processor</a>, an <a href="https://en.wikipedia.org/wiki/List_of_Intel_processors" target="_blank">Intel processor newer than 2006</a>, a <a href="https://en.wikipedia.org/wiki/ARM_architecture_family" target="_blank">64-bit ARM processor</a>, or an <a href="https://en.wikipedia.org/wiki/Apple_silicon" target="_blank">Apple Silicon</a> processor. You'll also need a non-trivial amount of RAM: 4 gigabtyes at minimum. These requirements are very lax, and your computer probably meets those specifications if it was manufactured less than a decade ago.</p>
 <video class="video" src="/media/llamafile_demo.webm" controls alt="A video demonstration of the Gemma 3 llamafile running on the Nvidia 1650 in my Windows 11 laptop. It runs at 34.46 tokens per second, and gives complete answers including bullet points and comparison tables"></video>
@@ -129,9 +141,8 @@
 <h2>Conclusion</h2>
 <p>Recently, a few large tech companies have expressed an interest in tiny locally-hosted LLMs. Google released <a href="https://ai.google.dev/edge" target="_blank">AI Edge Gallery</a>, and Apple released <a href="https://developer.apple.com/documentation/foundationmodels" target="_blank">Foundation Models</a>. Both of these use tiny LLMs optimized for running on mobile processors. I'm just speculating here, but this might be an indicator that Google and Apple are starting to get sick of having to host AI inference for all of their AI-powered products and are trying to foist the computation onto consumer devices by making their models open-weight. This sounds like a mutually beneficial arrangement to me, and it's convenient that we already have a file format for storing LLMs in a single file: llamafile.</p>
 <p>Thanks for reading!</p>
-<p>~Ethan</p>
-</article>
-</main>
-<ethan-footer></ethan-footer>
-</body>
+<p>~Ethan</p></article>
+        </main>
+        <ethan-footer></ethan-footer>
+    </body>
 </html>

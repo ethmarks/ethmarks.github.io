@@ -1,22 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const messageInput = document.getElementById('message-input');
-    const sendButton = document.getElementById('send-button');
-    const chatMessages = document.getElementById('chat-messages');
+document.addEventListener("DOMContentLoaded", () => {
+    const messageInput = document.getElementById("message-input");
+    const sendButton = document.getElementById("send-button");
+    const chatMessages = document.getElementById("chat-messages");
 
     // Function to add a new message
     function addMessage(content, isUser) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `message ${
+            isUser ? "user-message" : "bot-message"
+        }`;
 
-        const avatar = document.createElement('div');
-        avatar.className = `avatar ${isUser ? 'user-avatar' : ''}`;
+        const avatar = document.createElement("div");
+        avatar.className = `avatar ${isUser ? "user-avatar" : ""}`;
 
-        const avatarIcon = document.createElement('span');
-        avatarIcon.className = 'avatar-icon';
-        avatarIcon.textContent = isUser ? 'U' : 'EI';
+        const avatarIcon = document.createElement("span");
+        avatarIcon.className = "avatar-icon";
+        avatarIcon.textContent = isUser ? "U" : "EI";
 
-        const messageContent = document.createElement('div');
-        messageContent.className = `message-content ${isUser ? 'user-content' : 'bot-content'}`;
+        const messageContent = document.createElement("div");
+        messageContent.className = `message-content ${
+            isUser ? "user-content" : "bot-content"
+        }`;
         messageContent.textContent = content;
 
         avatar.appendChild(avatarIcon);
@@ -37,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
             addMessage(message, true);
 
             // Clear input
-            messageInput.value = '';
+            messageInput.value = "";
 
             // Show "typing..." message
-            const typingIndicator = document.createElement('div');
-            typingIndicator.className = 'message bot-message typing-indicator';
+            const typingIndicator = document.createElement("div");
+            typingIndicator.className = "message bot-message typing-indicator";
             typingIndicator.innerHTML = `
                 <div class="avatar">
                     <span class="avatar-icon">EI</span>
@@ -54,28 +58,31 @@ document.addEventListener('DOMContentLoaded', () => {
             // Replace with actual bot response after a delay
             setTimeout(() => {
                 typingIndicator.remove(); // Remove the "..." indicator
-                addMessage("That's a great question/comment/whatever! Unfortunately, this is just a prewritten message. I couldn't be bothered to integrate an actual AI into this overproduced attempt at humor.", false);
+                addMessage(
+                    "That's a great question/comment/whatever! Unfortunately, this is just a prewritten message. I couldn't be bothered to integrate an actual AI into this overproduced attempt at humor.",
+                    false
+                );
             }, 1500);
         }
     }
 
     // Event listeners
-    sendButton.addEventListener('click', sendMessage);
+    sendButton.addEventListener("click", sendMessage);
 
-    messageInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+    messageInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
             sendMessage();
         }
     });
 
     // Fix for mobile virtual keyboard adjusting viewport height
     const originalHeight = window.innerHeight;
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
         if (window.innerHeight < originalHeight) {
             // Keyboard is likely open
-            document.body.style.height = originalHeight + 'px';
+            document.body.style.height = originalHeight + "px";
         } else {
-            document.body.style.height = '';
+            document.body.style.height = "";
         }
     });
 });

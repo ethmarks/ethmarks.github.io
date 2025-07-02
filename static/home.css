@@ -7,7 +7,8 @@
 }
 
 .headshot {
-    animation: circle-reveal 2.5s ease both, slide-right 2.5s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+    animation: circle-reveal 2.5s ease both,
+        slide-right 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
     animation-delay: 0.3s;
 }
 
@@ -29,7 +30,6 @@
     opacity: 0;
     animation: shadow-drift-down 2.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-
 
 .intro-container p {
     font-size: clamp(0.8rem, 1.7rem, 5vmin);
@@ -83,7 +83,7 @@ h1 .fall:nth-child(2) {
 }
 
 h1 .fall:nth-child(3) {
-    animation-delay: 1.0s;
+    animation-delay: 1s;
 }
 
 h1 .fall:nth-child(4) {
@@ -104,29 +104,22 @@ h1 .fall:nth-child(5) {
     0% {
         opacity: 0;
         transform: translate(0, -1.5em);
-        text-shadow:
-            0 0px 3px var(--color-accent, #00ffd0),
-            0 -20px 3px var(--color-accent, #00ffd0),
-            0 -40px 3px #00bfae,
+        text-shadow: 0 0px 3px var(--color-accent, #00ffd0),
+            0 -20px 3px var(--color-accent, #00ffd0), 0 -40px 3px #00bfae,
             0 -80px 3px #009e8e;
     }
 
     80% {
-        text-shadow:
-            0 0px 1px var(--color-accent, #8dffea),
-            0 -1px 1px var(--color-accent, #8cffea),
-            0 -2px 1px #5fb8b0,
+        text-shadow: 0 0px 1px var(--color-accent, #8dffea),
+            0 -1px 1px var(--color-accent, #8cffea), 0 -2px 1px #5fb8b0,
             0 -4px 1px #4e918a;
     }
 
     100% {
         opacity: 1;
         transform: translate(0, 0);
-        text-shadow:
-            0 0px 1px #8dffea00,
-            0 -1px 1px #8cffea00,
-            0 -2px 1px #5fb8b100,
-            0 -4px 1px #4e918a00;
+        text-shadow: 0 0px 1px #8dffea00, 0 -1px 1px #8cffea00,
+            0 -2px 1px #5fb8b100, 0 -4px 1px #4e918a00;
     }
 }
 
@@ -134,29 +127,22 @@ h1 .fall:nth-child(5) {
     0% {
         opacity: 0;
         transform: translateX(100px);
-        text-shadow:
-            0px 0 3px var(--color-accent, #00ffd0),
-            20px 0 3px var(--color-accent, #00ffd0),
-            40px 0 3px #00bfae,
+        text-shadow: 0px 0 3px var(--color-accent, #00ffd0),
+            20px 0 3px var(--color-accent, #00ffd0), 40px 0 3px #00bfae,
             80px 0 3px #009e8e;
     }
 
     60% {
-        text-shadow:
-            0px 0 1px var(--color-accent, #8dffea),
-            1px 0 1px var(--color-accent, #8cffea),
-            2px 0 1px #5fb8b0,
+        text-shadow: 0px 0 1px var(--color-accent, #8dffea),
+            1px 0 1px var(--color-accent, #8cffea), 2px 0 1px #5fb8b0,
             4px 0 1px #4e918a;
     }
 
     100% {
         opacity: 1;
         transform: translateX(0);
-        text-shadow:
-            0px 0 1px #8dffea00,
-            1px 0 1px #8cffea00,
-            2px 0 1px #5fb8b100,
-            4px 0 1px #4e918a00;
+        text-shadow: 0px 0 1px #8dffea00, 1px 0 1px #8cffea00,
+            2px 0 1px #5fb8b100, 4px 0 1px #4e918a00;
     }
 }
 
@@ -290,7 +276,7 @@ main {
     box-sizing: border-box;
 }
 
-.card-container>.tilt-card-anim {
+.card-container > .tilt-card-anim {
     flex: 1 1 0;
     display: flex;
 }
@@ -326,7 +312,7 @@ main {
 
 .tilt-card:hover {
     border-color: var(--color-accent, #00ffd0);
-    box-shadow: 0 8px 32px 0 rgba(0, 255, 208, 0.10);
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 208, 0.1);
     transform: perspective(1000px) scale(1.025);
 }
 
@@ -334,7 +320,7 @@ main {
 .tilt-card-desc {
     will-change: transform;
     transition: transform 0.2s, color 0.2s;
-    transform: translateZ(50px)
+    transform: translateZ(50px);
 }
 
 .tilt-card-title {
@@ -410,7 +396,6 @@ main {
 }
 
 @media (pointer: coarse) {
-
     .tilt-card:hover,
     .tilt-card:focus,
     .tilt-card *:hover,
