@@ -2,6 +2,7 @@ import os
 import markdown
 import yaml
 import re
+from itertools import groupby
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 import xml.etree.ElementTree as ET
@@ -80,93 +81,42 @@ def embed_media_tag(match):
 
 
 def parse_double_blockquote(body):
-    # This function finds consecutive lines starting with '>>' and wraps them in a centered blockquote
-    lines = body.split("\n")
-    new_lines = []
-    in_centered = False
-    centered_lines = []
-    in_code_block = False
+    """
+    Finds blocks of `>>` quoted text and converts them to centered blockquotes,
+    while ignoring any `>>` inside of ```code blocks```.
+    """
 
-    for line in lines:
-        # Detect start/end of code block
-        if line.strip().startswith("```"):
-            in_code_block = not in_code_block
-            if in_centered and not in_code_block:
-                # End any open centered block before code block starts
-                if centered_lines:
-                    stanzas = []
-                    stanza = []
-                    for l in centered_lines:
-                        if l.strip() == "":
-                            if stanza:
-                                stanzas.append(stanza)
-                                stanza = []
-                        else:
-                            stanza.append(l)
-                    if stanza:
-                        stanzas.append(stanza)
-                    html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
-                    new_lines.append(
-                        "<blockquote class='centered-blockquote'>\n"
-                        + "\n".join(html_lines)
-                        + "\n</blockquote>"
-                    )
-                centered_lines = []
-                in_centered = False
-            new_lines.append(line)
-            continue
+    # Define a helper function to process a matched `>>` block.
+    # This is where the stanza logic lives, now in one clean place.
+    def format_centered_block(match):
+        # Get the full matched block (e.g., ">> line1\n>> \n>> line2")
+        block_text = match.group(0)
+        # 1. Clean the lines: remove '>>' and leading space.
+        lines = [line[2:].lstrip() for line in block_text.strip().split("\n")]
+        # 2. Group lines into stanzas separated by empty lines.
+        stanzas = [
+            list(g) for k, g in groupby(lines, key=lambda x: x.strip() == "") if not k
+        ]
+        # 3. Format each stanza into a <p> tag with <br> for newlines.
+        html_stanzas = [f"<p>{'<br>\n'.join(stanza)}</p>\n" for stanza in stanzas]
+        # 4. Wrap the whole thing in the blockquote.
+        return f"<blockquote class='centered-blockquote'>\n{''.join(html_stanzas)}\n</blockquote>"
 
-        if in_code_block:
-            new_lines.append(line)
-            continue
+    # Split the body by code blocks to process non-code sections independently.
+    parts = body.split("```")
+    processed_parts = []
 
-        if line.strip().startswith(">>"):
-            centered_lines.append(line.lstrip()[2:].lstrip())
-            in_centered = True
+    for i, part in enumerate(parts):
+        if i % 2 == 0:  # This is a non-code part
+            # Use a regex to find all consecutive lines starting with '>>'
+            pattern = re.compile(r"^(?:>>.*(?:\n|$))+", re.MULTILINE)
+            processed_part = pattern.sub(format_centered_block, part)
+            processed_parts.append(processed_part)
         else:
-            if in_centered:
-                if centered_lines:
-                    # Group into stanzas separated by blank lines
-                    stanzas = []
-                    stanza = []
-                    for l in centered_lines:
-                        if l.strip() == "":
-                            if stanza:
-                                stanzas.append(stanza)
-                                stanza = []
-                        else:
-                            stanza.append(l)
-                    if stanza:
-                        stanzas.append(stanza)
-                    html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
-                    new_lines.append(
-                        "<blockquote class='centered-blockquote'>\n"
-                        + "\n".join(html_lines)
-                        + "\n</blockquote>"
-                    )
-                centered_lines = []
-                in_centered = False
-            new_lines.append(line)
-    # If file ends with a centered blockquote
-    if in_centered and centered_lines:
-        stanzas = []
-        stanza = []
-        for l in centered_lines:
-            if l.strip() == "":
-                if stanza:
-                    stanzas.append(stanza)
-                    stanza = []
-            else:
-                stanza.append(l)
-        if stanza:
-            stanzas.append(stanza)
-        html_lines = ["<p>" + "<br>\n".join(s) + "</p>" for s in stanzas]
-        new_lines.append(
-            "<blockquote class='centered-blockquote'>\n"
-            + "\n".join(html_lines)
-            + "\n</blockquote>"
-        )
-    return "\n".join(new_lines)
+            # Add it back unmodified, with the fences.
+            processed_parts.append(f"```{part}```")
+
+    return "".join(processed_parts)
 
 
 def parse_ascii_block(body):
