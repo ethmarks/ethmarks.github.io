@@ -527,6 +527,8 @@ table {
 
     @media (max-width: 1200px) {
         width: auto;
+        margin-left: -18px;
+        margin-right: -18px;
     }
 
     & pre {
