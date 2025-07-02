@@ -84,8 +84,7 @@ customElements.define(
         connectedCallback() {
             this.innerHTML = `
             <footer>
-                <span class="copyright">Ethan Marks, &copy;2025</span>
-                <span class="sitemap"><a href="/sitemap.html">Sitemap</a></span>
+                <span>Ethan Marks, &copy;2025</span>
             </footer>
             `;
             this.footer = this.querySelector("footer");

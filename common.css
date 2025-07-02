@@ -946,7 +946,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
-    padding: 10px 30px;
+    padding: 10px 30px 5px;
     box-sizing: border-box;
     color: #eee;
     z-index: 9999;
@@ -979,8 +979,8 @@ footer {
         font-style: italic;
     }
 
-    & .sitemap {
-        align-self: flex-end;
+    & span {
+        margin: auto;
     }
 }
 
