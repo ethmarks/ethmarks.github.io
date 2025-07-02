@@ -16,7 +16,7 @@ Well, allow me to introduce **ASCII-Globe**, a program I made that dynamically r
 ## Demo
 
 <figure>
-<img src="https://github.com/ColourlessSpearmint/ASCII-Globe/raw/main/media/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
+<img src="https://raw.githubusercontent.com/ColourlessSpearmint/ASCII-Globe/main/images/ascii_globe.gif" class="noborder bigimage" alt="A spinning globe rendered with text">
 </figure>
 
 Here's a flattened text version. Feel free to copy and paste it.
