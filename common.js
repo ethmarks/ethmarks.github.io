@@ -121,21 +121,29 @@ customElements.define(
 
 // Set background-attachment: fixed if scroll height is less than viewport height
 (function setBackgroundAttachmentFixedIfShortPage() {
-    window.addEventListener("DOMContentLoaded", function () {
+    function updateBackgroundAttachment() {
         if (document.documentElement.scrollHeight <= window.innerHeight) {
             document.body.style.backgroundAttachment = "fixed";
+        } else {
+            document.body.style.backgroundAttachment = "";
         }
-    });
+    }
+    window.addEventListener("DOMContentLoaded", updateBackgroundAttachment);
+    window.addEventListener("resize", updateBackgroundAttachment);
 })();
 
 // Add 'scroll' class to tables wider than 90vw
 (function addScrollClassToWideTables() {
-    window.addEventListener("DOMContentLoaded", function () {
+    function updateTableScrollClasses() {
         var vw90 = window.innerWidth * 0.9;
         document.querySelectorAll("table").forEach(function (table) {
             if (table.scrollWidth > vw90) {
                 table.classList.add("scroll");
+            } else {
+                table.classList.remove("scroll");
             }
         });
-    });
+    }
+    window.addEventListener("DOMContentLoaded", updateTableScrollClasses);
+    window.addEventListener("resize", updateTableScrollClasses);
 })();
