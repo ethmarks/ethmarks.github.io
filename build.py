@@ -198,6 +198,29 @@ def parse_iframe(body):
     return re.sub(pattern, replacement, body)
 
 
+def process_media_tags(html_content):
+    # Converts image tags to video/iframe tags where appropriate.
+    pattern = r'(<img[^>]*src=["\"]([^"\"]+)["\"][^>]*>)'
+    return re.sub(pattern, lambda m: embed_media_tag(m), html_content)
+
+
+def unwrap_media_elements(html_content):
+    # Removes paragraph tags from around media elements.
+    html_content = re.sub(
+        r"<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>",
+        r"\1",
+        html_content,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html_content = re.sub(
+        r"<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>",
+        r"\1",
+        html_content,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return html_content
+
+
 def add_target_blank_to_external_links(html_content):
     # Adds target="_blank" to external links.
     def replacer(match):
@@ -227,21 +250,8 @@ def render_content(item):
     html = md.convert(body)
 
     # --- Postprocessors ---
-    html = re.sub(
-        r'(<img[^>]*src=["\"]([^"\"]+)["\"][^>]*>)', lambda m: embed_media_tag(m), html
-    )
-    html = re.sub(
-        r"<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>",
-        r"\1",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-    html = re.sub(
-        r"<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>",
-        r"\1",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
+    html = process_media_tags(html)
+    html = unwrap_media_elements(html)
     html = add_target_blank_to_external_links(html)
 
     # Date handling
