@@ -35,7 +35,7 @@ def embed_media_tag(match):
     src = match.group(2).strip()
 
     # Extract alt text if present
-    alt_match = re.search(r'alt=["\']([^"\']*)["\']', img_tag)
+    alt_match = re.search(r'alt=["\\]([^"\\]*)["\\]', img_tag)
     # Store the original alt text for both the condition check and potential processing.
     original_alt_text = alt_match.group(1) if alt_match else ""
 
@@ -323,11 +323,8 @@ def get_url(item):
     return f"{WEBSITE_URL}/blog/{item['slug']}/"
 
 
-def main():
-    os.makedirs(BLOG_OUT_DIR, exist_ok=True)
-    os.makedirs(TAG_DIR, exist_ok=True)
-
-    # Parse all content
+def parse_all_content():
+    """Parse all content from the source directory."""
     content_items = []
     for fname in os.listdir(BLOG_SRC_DIR):
         if not fname.endswith(".md"):
@@ -348,8 +345,11 @@ def main():
                 "description": meta.get("description", "A post by Ethan."),
             }
         )
+    return content_items
 
-    # Render individual pages
+
+def render_individual_pages(content_items):
+    """Render individual pages for each content item."""
     for item in content_items:
         html = render_content(item)
         out_dir = get_out_dir(item)
@@ -359,7 +359,9 @@ def main():
             f.write(html)
         item["out_path"] = out_path
 
-    # Tag aggregation
+
+def aggregate_tags(content_items):
+    """Aggregate tags from all content items."""
     with open("tags.yaml", encoding="utf-8") as f:
         tag_data = yaml.safe_load(f)
     tag_posts = {tag: [] for tag in tag_data}
@@ -369,8 +371,11 @@ def main():
         for tag in item["tags"]:
             if tag in tag_posts:
                 tag_posts[tag].append(item)
+    return tag_posts, tag_data
 
-    # Render tag index pages
+
+def render_tag_index_pages(tag_posts, tag_data):
+    """Render index pages for each tag."""
     tag_template = env.get_template("tag.html")
     for tag, items in tag_posts.items():
         tag_info = tag_data.get(
@@ -396,7 +401,9 @@ def main():
                 )
             )
 
-    # Render blog index
+
+def render_blog_index(content_items, tag_data):
+    """Render the main blog index page."""
     blog_index_template = env.get_template("blog.html")
     tag_usage = {tag: 0 for tag in tag_data}
     for item in content_items:
@@ -437,13 +444,18 @@ def main():
                 recent_posts=recent_posts,
             )
         )
+    return tags_for_index
 
-    # Render all tags page
+
+def render_all_tags_page(tags_for_index):
+    """Render the page that lists all tags."""
     all_tags_template = env.get_template("tags.html")
     with open(os.path.join(TAG_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(all_tags_template.render(tags=tags_for_index))
 
-    # Sitemap and info.json
+
+def generate_sitemap_and_info_json(content_items, tag_posts, tag_data):
+    """Generate sitemap.xml and sitemap.json."""
     sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", sitemap_ns)
     urlset = ET.Element("{http://www.sitemaps.org/schemas/sitemap/0.9}urlset")
@@ -533,6 +545,19 @@ def main():
     ET.ElementTree(urlset).write("sitemap.xml", encoding="utf-8", xml_declaration=True)
     with open("sitemap.json", "w", encoding="utf-8") as f:
         json.dump(info_entries, f, indent=2, ensure_ascii=False)
+
+
+def main():
+    os.makedirs(BLOG_OUT_DIR, exist_ok=True)
+    os.makedirs(TAG_DIR, exist_ok=True)
+
+    content_items = parse_all_content()
+    render_individual_pages(content_items)
+    tag_posts, tag_data = aggregate_tags(content_items)
+    render_tag_index_pages(tag_posts, tag_data)
+    tags_for_index = render_blog_index(content_items, tag_data)
+    render_all_tags_page(tags_for_index)
+    generate_sitemap_and_info_json(content_items, tag_posts, tag_data)
 
 
 if __name__ == "__main__":
