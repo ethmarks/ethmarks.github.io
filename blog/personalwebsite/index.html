@@ -46,26 +46,26 @@
 <p>My personal website is my home on the web.</p>
 <iframe scrolling="no" title="homepage" src="/index.html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-<p>I made this site because I want to have an online presence, but I don't want to use social media (e.g. <a href="https://www.instagram.com/">Instagram</a>, <a href="https://twitter.com/">Twitter</a>), nor do I want to use someone else's premade blogging platform (e.g. <a href="https://www.blogger.com">Blogger</a>, <a href="https://www.tumblr.com/">Tumblr</a>, <a href="https://wordpress.com/">Wordpress</a>).</p>
+<p>I made this site because I want to have an online presence, but I don't want to use social media (e.g. <a href="https://www.instagram.com/" target="_blank">Instagram</a>, <a href="https://twitter.com/" target="_blank">Twitter</a>), nor do I want to use someone else's premade blogging platform (e.g. <a href="https://www.blogger.com" target="_blank">Blogger</a>, <a href="https://www.tumblr.com/" target="_blank">Tumblr</a>, <a href="https://wordpress.com/" target="_blank">Wordpress</a>).</p>
 <p>My solution was to code an entire site from scratch.</p>
 <h2>Tech</h2>
-<p>This site is completely static and is written entirely in pure vanilla HTML, CSS, and JavaScript. It uses a few unavoidable premade libraries and services, but it's completely free from major frameworks (e.g. <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://angular.io/">Angular</a>).</p>
+<p>This site is completely static and is written entirely in pure vanilla HTML, CSS, and JavaScript. It uses a few unavoidable premade libraries and services, but it's completely free from major frameworks (e.g. <a href="https://react.dev/" target="_blank">React</a>, <a href="https://vuejs.org/" target="_blank">Vue.js</a>, <a href="https://angular.io/" target="_blank">Angular</a>).</p>
 <h3>External Libraries</h3>
 <ul>
-<li><a href="https://micku7zu.github.io/vanilla-tilt.js/">vanilla-tilt.js</a>: Used to make the cards on the home page.</li>
-<li><a href="https://github.com/GoogleChromeLabs/quicklink">quicklink</a>: Used to improve loading times.</li>
-<li><a href="https://github.com/NUKnightLab/juxtapose">Juxtapose.js</a>: Used to make before/after comparisons (<a href="/blog/colourlesstransformer">Example</a>).</li>
+<li><a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_blank">vanilla-tilt.js</a>: Used to make the cards on the home page.</li>
+<li><a href="https://github.com/GoogleChromeLabs/quicklink" target="_blank">quicklink</a>: Used to improve loading times.</li>
+<li><a href="https://github.com/NUKnightLab/juxtapose" target="_blank">Juxtapose.js</a>: Used to make before/after comparisons (<a href="/blog/colourlesstransformer">Example</a>).</li>
 </ul>
 <h3>GitHub Pages</h3>
-<p>This site is hosted on <a href="https://pages.github.com/">GitHub Pages</a>. I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.</p>
+<p>This site is hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.</p>
 <img alt="My Github Pages deployment workflow" src="/media/ghpages.webp" />
 <h3>Build</h3>
-<p>Each blog post is stored as a <a href="/blog/mfm">Mint Flavoured Markdown</a> document, and is built into HTML by my custom <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a>. <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/build.py">My SSG</a> searches the blog_src directory for markdown files, reads the file contents, and applies it to a template to create the final HTML files that are sent to your browser. It also dynamically updates other pages (like the <a href="/tag">tag aggregators</a>) with links to each blog post. I also wrote a <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks">pre-commit hook</a> that runs build.py before each commit, ensuring I don't forget.</p>
+<p>Each blog post is stored as a <a href="/blog/mfm">Mint Flavoured Markdown</a> document, and is built into HTML by my custom <a href="https://en.wikipedia.org/wiki/Static_site_generator" target="_blank">static site generator</a>. <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/build.py" target="_blank">My SSG</a> searches the blog_src directory for markdown files, reads the file contents, and applies it to a template to create the final HTML files that are sent to your browser. It also dynamically updates other pages (like the <a href="/tag">tag aggregators</a>) with links to each blog post. I also wrote a <a href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks" target="_blank">pre-commit hook</a> that runs build.py before each commit, ensuring I don't forget.</p>
 <h3>Web Components</h3>
-<p>I've utilized <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">Web Components</a> for things like the header, footer, and buttons.</p>
-<p>This allows me to just quickly drop in an &lt;ethan-header&gt; element, and the header will be instantiated in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a>.</p>
+<p>I've utilized <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank">Web Components</a> for things like the header, footer, and buttons.</p>
+<p>This allows me to just quickly drop in an &lt;ethan-header&gt; element, and the header will be instantiated in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM" target="_blank">Shadow DOM</a>.</p>
 <h2>Style Guide</h2>
-<p>I had a moderately specific vision for what I wanted my website to look like, and I think I accomplished that well with <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/common.css">500+ lines of CSS</a>.</p>
+<p>I had a moderately specific vision for what I wanted my website to look like, and I think I accomplished that well with <a href="https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/common.css" target="_blank">500+ lines of CSS</a>.</p>
 <h3>Color Palette</h3>
 <ul>
 <li><strong>Primary</strong>: <span style="color: #ffffff; text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;">#ffffff</span>: White</li>
@@ -74,22 +74,22 @@
 </ul>
 <h3>Typography</h3>
 <ul>
-<li><strong>Body Font</strong>: I perused the <em>entire</em> <a href="https://fonts.google.com/">Google Fonts</a> catalogue to find a sleek <a href="https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque">neo-grotesque</a> font that supported <a href="https://en.wikipedia.org/wiki/Latin_script">Latin</a> and <a href="https://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic</a>. I finally settled on <a href="https://fonts.google.com/specimen/Nunito">Nunito</a>. (Заслужаваше си, защото вече мога да имам български текст!)</li>
-<li><strong>Header Font</strong>: I chose <a href="https://fonts.google.com/specimen/Sen">Sen</a> for the headers because it looks stylish, clean, and I like the look of the lowercase t.</li>
+<li><strong>Body Font</strong>: I perused the <em>entire</em> <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> catalogue to find a sleek <a href="https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque" target="_blank">neo-grotesque</a> font that supported <a href="https://en.wikipedia.org/wiki/Latin_script" target="_blank">Latin</a> and <a href="https://en.wikipedia.org/wiki/Cyrillic_script" target="_blank">Cyrillic</a>. I finally settled on <a href="https://fonts.google.com/specimen/Nunito" target="_blank">Nunito</a>. (Заслужаваше си, защото вече мога да имам български текст!)</li>
+<li><strong>Header Font</strong>: I chose <a href="https://fonts.google.com/specimen/Sen" target="_blank">Sen</a> for the headers because it looks stylish, clean, and I like the look of the lowercase t.</li>
 </ul>
 <h3>Special Effects</h3>
 <ul>
-<li><strong>Blur</strong>: I love <a href="https://css.glass/">glassmorphic</a> blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a <a href="https://en.wikipedia.org/wiki/Gaussian_blur">gaussian blur</a> over a large sample space, I want to be the first to know so I can add a subtle blur to the main panel without tanking performance.</li>
-<li><strong>Tilt</strong>: If you hover over the cards on my home page, they'll respond to the mouse by tilting in 3D. I used <a href="https://micku7zu.github.io/vanilla-tilt.js/">vanilla-tilt.js</a> for this </li>
+<li><strong>Blur</strong>: I love <a href="https://css.glass/" target="_blank">glassmorphic</a> blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a <a href="https://en.wikipedia.org/wiki/Gaussian_blur" target="_blank">gaussian blur</a> over a large sample space, I want to be the first to know so I can add a subtle blur to the main panel without tanking performance.</li>
+<li><strong>Tilt</strong>: If you hover over the cards on my home page, they'll respond to the mouse by tilting in 3D. I used <a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_blank">vanilla-tilt.js</a> for this </li>
 </ul>
 <h2>Lighthouse</h2>
-<p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop">June 9, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse">Lighthouse</a> score of 99.75.</p>
+<p>As of <a href="https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop" target="_blank">June 9, 2025</a>, the site earns an average <a href="https://developer.chrome.com/docs/lighthouse" target="_blank">Lighthouse</a> score of 99.75.</p>
 <img alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" src="/media/lighthouse.webp" />
 <p>It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.</p>
 <h2>Privacy</h2>
 <p>This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and harvesting it sounds complicated. Your data remains yours because I don't want it and can't figure out how to get it.</p>
 <h2>Accessibility</h2>
-<p>This site is designed to be accessible to as many users as possible. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text. Also, before each <a href="https://git-scm.com/docs/git-push">git push</a> I test every single page in Firefox's <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/">Responsive Design Mode</a> to ensure that the site remains functional on different devices and screens.</p>
+<p>This site is designed to be accessible to as many users as possible. I've done my best to follow best practices regarding meta tags, semantic markup, keyboard navigation, and alt text. Also, before each <a href="https://git-scm.com/docs/git-push" target="_blank">git push</a> I test every single page in Firefox's <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/" target="_blank">Responsive Design Mode</a> to ensure that the site remains functional on different devices and screens.</p>
 <h2>Conclusion</h2>
 <p>My personal website is one of my favorite projects I've ever made. It's aesthetically pleasing, serves a purpose, was fun to make, and forced me to learn new programming concepts.</p>
 <p>I'm proud of my little corner on the web, and I hope you enjoy it as much as I do. Thanks for reading.</p>

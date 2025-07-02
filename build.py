@@ -198,15 +198,35 @@ def parse_iframe(body):
     return re.sub(pattern, replacement, body)
 
 
+def add_target_blank_to_external_links(html_content):
+    # Adds target="_blank" to external links.
+    def replacer(match):
+        a_tag, href = match.groups()
+        is_external = (
+            href.startswith(("http://", "https://")) and WEBSITE_URL not in href
+        )
+        if is_external and "target=" not in a_tag:
+            return a_tag.replace(">", ' target="_blank">', 1)
+        return a_tag
+
+    pattern = r'(<a\s+[^>]*?href="([^"]*)"[^>]*?>)'
+    return re.sub(pattern, replacer, html_content, flags=re.IGNORECASE)
+
+
 def render_content(item):
     meta = item["meta"]
     body = item["body"]
-    # Preprocess body
+
+    # --- Preprocessors ---
     body = parse_double_blockquote(body)
     body = parse_ascii_block(body)
     body = parse_iframe(body)
+
+    # --- Main Markdown conversion ---
     md = markdown.Markdown(extensions=["extra", "codehilite", "tables", "sane_lists"])
     html = md.convert(body)
+
+    # --- Postprocessors ---
     html = re.sub(
         r'(<img[^>]*src=["\"]([^"\"]+)["\"][^>]*>)', lambda m: embed_media_tag(m), html
     )
@@ -222,6 +242,8 @@ def render_content(item):
         html,
         flags=re.IGNORECASE | re.DOTALL,
     )
+    html = add_target_blank_to_external_links(html)
+
     # Date handling
     date_val = meta.get("date")
     date_obj = None
