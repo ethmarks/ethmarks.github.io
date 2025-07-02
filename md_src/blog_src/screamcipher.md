@@ -4,9 +4,9 @@ date: 2025-06-06
 tags: [projects, programming, webdev, humor, cryptology, automation]
 slug: screamcipher
 description: An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'
-link: https://colourlessspearmint.github.io/screamcipher.html
-link_name: Webpage
-link_icon: link
+link: https://codepen.io/ColourlessSpearmint/full/XJbwKgo
+link_name: CodePen
+link_icon: codepen
 ---
 
 ![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](https://imgs.xkcd.com/comics/scream_cipher.png)
@@ -23,13 +23,13 @@ This is called a [Kerckhoffs-insecure](https://en.wikipedia.org/wiki/Kerckhoffs%
 
 ## Converter
 
-![a screenshot of the Scream Cipher Converter interface](/media/screamcipher_screenshot.webp)
+![[Scream Cipher Converter CodePen]](https://codepen.io/ColourlessSpearmint/embed/XJbwKgo?default-tab=result)
 
-Anyways, I built a [Scream Cipher converter webpage](https://colourlessspearmint.github.io/screamcipher.html) to automate the process of ciphering in Scream Cipher.
+Anyways, I made a [CodePen](https://codepen.io) to automate the process of ciphering in Scream Cipher.
 
 ## Usage
 
-1. **Go to the Scream Cipher Converter webpage**: [https://colourlessspearmint.github.io/screamcipher.html](https://colourlessspearmint.github.io/screamcipher.html)
+1. **Go to the Scream Cipher Converter CodePen**: <https://codepen.io/ColourlessSpearmint/full/XJbwKgo>
 2. **Input Text**: Type or paste the text you want to convert. It can be either plaintext or encrypted text; the program will detect it automatically. The conversion happens automatically.
 3. **Copy to Clipboard**: You can press the clipboard icon above the result area to copy the text to your clipboard.
 
