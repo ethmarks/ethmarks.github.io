@@ -31,7 +31,7 @@ customElements.define('ethan-header',
                     <a href="/tag/projects">Projects</a>
                 </nav>
             </header>
-        `;
+            `;
             // Get references to the header and nav elements
             const headerElement = this.querySelector('header');
             const navElement = this.querySelector('nav');
@@ -74,57 +74,11 @@ customElements.define('ethan-footer',
         }
         connectedCallback() {
             this.innerHTML = `
-            <style>
-                footer {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                    margin-top: 40px;
-                    background: rgba(255, 255, 255, 0.1);
-                    backdrop-filter: blur(10px);
-                    transform: translate3d(0,0,0); /* Force GPU rendering */
-                    border-top: 1px solid rgba(255, 255, 255, 0.18);
-                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                    border-radius: 0px;
-                    padding: 10px 30px;
-                    box-sizing: border-box;
-                    color: #eee;
-                    z-index: 9999;
-                    position: static;
-                    left: unset;
-                    bottom: unset;
-                    transition: position 0.2s;
-                }
-                footer.fixed-bottom {
-                    position: fixed;
-                    left: 0;
-                    bottom: 0;
-                    margin-top: 0;
-                    width: 100vw;
-                    max-width: 100vw;
-                }
-                footer a {
-                    color: inherit;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
-                footer a:hover {
-                    color: #fff;
-                    text-decoration: underline;
-                }
-                .copyright {
-                   font-style: italic;
-                }
-                .sitemap {
-                    align-self: flex-end;
-                }
-            </style>
             <footer>
                 <span class="copyright">Ethan Marks, &copy;2025</span>
                 <span class="sitemap"><a href="/sitemap.html">Sitemap</a></span>
             </footer>
-          `;
+            `;
             this.footer = this.querySelector('footer');
             this.updateFooterPosition = this.updateFooterPosition.bind(this);
             this._footerAnimationFrame = null;
@@ -158,7 +112,6 @@ customElements.define('ethan-footer',
 
 customElements.define('scroll-indicator',
     class ScrollIndicator extends HTMLElement {
-
         constructor() {
             super();
             this.attachShadow({ mode: 'open' });
