@@ -331,11 +331,9 @@ def main():
     with open("tags.yaml", encoding="utf-8") as f:
         tag_data = yaml.safe_load(f)
     tag_posts = {tag: [] for tag in tag_data}
-    tag_posts["all"] = []
     for item in content_items:
         if not item["index"]:
             continue
-        tag_posts["all"].append(item)
         for tag in item["tags"]:
             if tag in tag_posts:
                 tag_posts[tag].append(item)

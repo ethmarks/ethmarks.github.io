@@ -351,17 +351,6 @@
     "slug": "whitesands"
   },
   {
-    "url": "https://colourlessspearmint.github.io/blog/all/",
-    "title": "All",
-    "tags": [
-      "all"
-    ],
-    "date": null,
-    "description": "All posts",
-    "category": "tag",
-    "slug": "all"
-  },
-  {
     "url": "https://colourlessspearmint.github.io/blog/projects/",
     "title": "Projects",
     "tags": [
