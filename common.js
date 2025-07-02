@@ -15,151 +15,10 @@ customElements.define('ethan-header',
     class EthanHeader extends HTMLElement {
         constructor() {
             super();
-            const shadow = this.attachShadow({ mode: 'open' });
-            shadow.innerHTML = `
-            <style>
-            header {
-                position: fixed;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%) translateY(-20px) translate3d(0,0,0);
-                width: 100vw;
-                max-width: 1000px;
-                padding: 10px 15px;
-                background: rgba(30, 30, 30, 0.2);
-                border: 1.5px solid rgba(255, 255, 255, 0.03);
-                border-radius: 40px;
-                backdrop-filter: blur(20px) saturate(0.8);
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                color: white;
-                box-sizing: border-box;
-                z-index: 1000;
-                overflow: hidden;
-                /* Header itself still animates in */
-                animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-            }
+        }
 
-            @keyframes flyInFromTop {
-                to {
-                    transform: translateX(-50%) translateY(0) translate3d(0,0,0);
-                }
-            }
-
-            .title-container {
-                background: linear-gradient(135deg, #ffffff, #8fdfd4);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                flex-shrink: 1;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transform: translateX(-300px);
-                animation: flyInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-                opacity: 0.2;
-                cursor: pointer;
-                border: none;
-                outline: none;
-                text-decoration: none;
-                display: inline-block;
-            }
-
-            .title-container:focus-visible {
-                outline: 2px solid var(--color-focus-outline, #8fdfd4);
-                outline-offset: 2px;
-            }
-
-            .title-item:nth-child(2) { animation: increaseLeftMargin 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-            
-            @keyframes flyInFromLeft {
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes increaseLeftMargin {
-                from {
-                    margin-left: -20px;
-                }
-                to {
-                    margin-left: 10px;
-                }
-            }
-
-            .title-item {
-                font-family: "Sen", sans-serif;
-                font-size: clamp(1rem, 4vw, 2rem);
-            }
-            nav {
-                display: flex;
-                gap: 8px;
-                flex-shrink: 0;
-            }
-            nav a {
-                background: rgba(60, 60, 60, 0.1);
-                color: white;
-                border: 2px solid rgba(255, 255, 255, 0.03);
-                border-radius: 20px;
-                padding: 6px 12px;
-                font-family: "Sen", sans-serif;
-                font-size: clamp(0.75rem, 3vw, 1rem);
-                cursor: pointer;
-                transition: background-color 0.2s ease, transform 0.2s ease;
-                white-space: nowrap;
-                text-decoration: none;
-                transform: translateX(350px); /* Initial state for nav links */
-                opacity: 0; /* Initial state for nav links */
-                animation: flyInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-            }
-            
-            /* Staggered animation delays for each button */
-            nav a:nth-child(1) { animation-delay: 0.1s; }
-            nav a:nth-child(2) { animation-delay: 0.2s; }
-            nav a:nth-child(3) { animation-delay: 0.3s; }
-            nav a:nth-child(4) { animation-delay: 0.4s; }
-
-            @keyframes flyInFromRight {
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-            
-            nav a:hover {
-                background-color: rgba(80, 80, 80, 0.7);
-                transform: translateY(-1px) scale(1.02);
-            }
-
-            @media (max-width: 768px) {
-                header {
-                    max-width: 100vw;
-                    border-radius: 0;
-                    top: 0;
-                }
-                nav {
-                    gap: 4px;
-                }
-                .title-item:nth-child(2) {
-                    animation: none;
-                }
-            }
-
-            /* New styles to skip nav animations when the 'nav-animations-skipped' class is applied to header */
-            header.nav-animations-skipped {
-                animation-duration: 0s;
-                transform: translateX(-50%) translateY(0) translate3d(0,0,0);
-            }
-            header.nav-animations-skipped nav a {
-                animation-duration: 0s;
-                animation-delay: 0s; /* Crucial to override staggered delays */
-                /* Ensure they jump to their final state */
-                transform: translateX(0);
-                opacity: 1;
-            }
-            </style>
+        connectedCallback() {
+            this.innerHTML = `
             <header>
                 <a href="/" class="title-container" tabindex="0" aria-label="Home">
                     <span class="title-item">Ethan</span>
@@ -173,12 +32,9 @@ customElements.define('ethan-header',
                 </nav>
             </header>
         `;
-        }
-
-        connectedCallback() {
-            // Get references to the header and nav elements within the shadow DOM
-            const headerElement = this.shadowRoot.querySelector('header');
-            const navElement = this.shadowRoot.querySelector('nav');
+            // Get references to the header and nav elements
+            const headerElement = this.querySelector('header');
+            const navElement = this.querySelector('nav');
 
             if (headerElement && navElement) {
                 // Function to add the 'nav-animations-skipped' class and clean up listeners
@@ -215,9 +71,9 @@ customElements.define('ethan-footer',
     class EthanFooter extends HTMLElement {
         constructor() {
             super();
-            this.attachShadow({ mode: 'open' });
-
-            this.shadowRoot.innerHTML = `
+        }
+        connectedCallback() {
+            this.innerHTML = `
             <style>
                 footer {
                     display: flex;
@@ -248,12 +104,12 @@ customElements.define('ethan-footer',
                     width: 100vw;
                     max-width: 100vw;
                 }
-                a {
+                footer a {
                     color: inherit;
                     text-decoration: none;
                     transition: color 0.3s ease;
                 }
-                a:hover {
+                footer a:hover {
                     color: #fff;
                     text-decoration: underline;
                 }
@@ -269,9 +125,7 @@ customElements.define('ethan-footer',
                 <span class="sitemap"><a href="/sitemap.html">Sitemap</a></span>
             </footer>
           `;
-        }
-        connectedCallback() {
-            this.footer = this.shadowRoot.querySelector('footer');
+            this.footer = this.querySelector('footer');
             this.updateFooterPosition = this.updateFooterPosition.bind(this);
             this._footerAnimationFrame = null;
             this._footerLoop = () => {
