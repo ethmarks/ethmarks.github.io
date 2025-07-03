@@ -10,6 +10,10 @@
     animation: circle-reveal 2.5s ease both,
         slide-right 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
     animation-delay: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 .headshot img {
