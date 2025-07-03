@@ -313,7 +313,7 @@ video {
     height: auto;
     max-width: var(--max-media-width);
     max-height: var(--max-media-height);
-    border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
+    border-radius: var(--radius-xl);
     border: var(--border-standard);
 
     @media (max-width: 768px) {
