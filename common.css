@@ -300,8 +300,9 @@ a {
 }
 
 figure {
-    display: block;
-    margin: var(--spacing-lg) auto;
+    display: flex;
+    justify-content: center;
+    margin: 0;
     text-align: center;
     font-style: italic;
     color: var(--color-text-secondary);
@@ -309,14 +310,11 @@ figure {
 
 img,
 video {
-    display: block;
     height: auto;
     max-width: var(--max-media-width);
     max-height: var(--max-media-height);
     border-radius: clamp(var(--radius-md), 3vw, var(--radius-lg));
     border: var(--border-standard);
-    margin-left: auto;
-    margin-right: auto;
 
     @media (max-width: 768px) {
         max-width: 100%;

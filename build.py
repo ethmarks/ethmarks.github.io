@@ -37,7 +37,6 @@ def embed_media_tag(match):
 
     # Extract alt text if present
     alt_match = re.search(r'alt=["\\]([^"\\]*)["\\]', img_tag)
-    # Store the original alt text for both the condition check and potential processing.
     original_alt_text = alt_match.group(1) if alt_match else ""
 
     # 1. Handle YouTube links first. These are always iframes.
@@ -53,31 +52,17 @@ def embed_media_tag(match):
 
     # 3. Check if the src points to a direct video file.
     if src.lower().endswith(video_exts):
-        # Determine the alt text that will be used in the <video> tag's alt attribute.
         processed_alt_text = original_alt_text
         if original_alt_text.lower().startswith("gif"):
-            # If alt text starts with "GIF", omit "GIF" and any trailing spaces.
-            # re.sub(r'^[gG][iI][fF]\s*', '', original_alt_text) will remove "GIF" (case-insensitive)
-            # followed by zero or more spaces from the beginning of the string.
             processed_alt_text = re.sub(r"^[gG][iI][fF]\s*", "", original_alt_text)
-
-        # Create the alt attribute string for the <video> tag.
-        # Only add the alt="" attribute if there's content in processed_alt_text.
         alt_attribute_str = f' alt="{processed_alt_text}"' if processed_alt_text else ""
-
-        # Now, apply the playback logic based on the ORIGINAL alt text.
         if original_alt_text.lower().startswith("gif"):
-            # Apply autoplay, loop, muted, and playsinline tags, plus the processed alt attribute.
-            return f'<video class="gif" src="{src}" autoplay loop muted playsinline{alt_attribute_str}></video>'
+            return f'<figure><video class="gif" src="{src}" autoplay loop muted playsinline{alt_attribute_str}></video></figure>'
         else:
-            # Otherwise (alt text does NOT start with "GIF"), apply controls only, plus the processed alt attribute.
-            return (
-                f'<video class="video" src="{src}" controls{alt_attribute_str}></video>'
-            )
+            return f'<figure><video class="video" src="{src}" controls{alt_attribute_str}></video></figure>'
 
-    # 4. If it's not a YouTube link and not a direct video file, return the original <img> tag.
-    # This ensures that regular images (e.g., .jpg, .png) are not converted to <video> tags.
-    return img_tag
+    # 4. If it's not a YouTube link and not a direct video file, wrap the original <img> tag in <figure>.
+    return f"<figure>{img_tag}</figure>"
 
 
 def parse_double_blockquote(body):
@@ -157,13 +142,13 @@ def process_media_tags(html_content):
 def unwrap_media_elements(html_content):
     # Removes paragraph tags from around media elements.
     html_content = re.sub(
-        r"<p>\s*(<(?:img|video|iframe)[^>]*?>)\s*</p>",
+        r"<p>\s*(<(?:img|video|iframe|figure)[^>]*?>)\s*</p>",
         r"\1",
         html_content,
         flags=re.IGNORECASE | re.DOTALL,
     )
     html_content = re.sub(
-        r"<p>\s*(<(?:video|iframe).*?</(?:video|iframe)>)\s*</p>",
+        r"<p>\s*(<(?:video|iframe|figure).*?</(?:video|iframe|figure)>)\s*</p>",
         r"\1",
         html_content,
         flags=re.IGNORECASE | re.DOTALL,
