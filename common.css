@@ -868,8 +868,10 @@ header {
         top: 0;
     }
 
-    &:hover {
-        backdrop-filter: blur(5px) saturate(0.8);
+    @media (min-width: 768px) {
+        &:hover {
+            backdrop-filter: blur(5px) saturate(0.8);
+        }
     }
 
     & .title-container {
