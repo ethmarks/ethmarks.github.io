@@ -16,7 +16,7 @@ body {
 .page-container {
     padding-top: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 
 /* Entrance animations */
@@ -485,4 +485,11 @@ body {
     .chat-logo {
         font-size: 18px;
     }
+}
+
+.inspiration {
+    text-align: center;
+    color: #7f8adb;
+    font-size: 14px;
+    margin-top: 20px;
 }
