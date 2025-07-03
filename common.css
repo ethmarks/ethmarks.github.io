@@ -92,6 +92,19 @@
     --max-media-height-big: 70vh;
     --max-media-width-small: clamp(25vw, 30vw, 250px);
     --max-media-height-small: 30vh;
+
+    /* Misc */
+    --body-bg-gradient: radial-gradient(
+            circle at 10% 10%,
+            rgba(143, 223, 212, 0.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(143, 223, 212, 0.12),
+            transparent 50%
+        ),
+        var(--color-background);
 }
 
 html {
@@ -105,17 +118,7 @@ html {
 }
 
 body {
-    background: radial-gradient(
-            circle at 10% 10%,
-            rgba(143, 223, 212, 0.15),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(143, 223, 212, 0.12),
-            transparent 50%
-        ),
-        var(--color-background);
+    background: var(--body-bg-gradient);
     line-height: 1.4;
     font-family: var(--font-primary);
     color: var(--color-text);
@@ -805,7 +808,7 @@ header {
     max-width: 1000px;
     padding: 10px 15px;
     background: rgba(30, 30, 30, 0.2);
-    border: 1.5px solid rgba(255, 255, 255, 0.03);
+    border: var(--border-standard);
     border-radius: 40px;
     backdrop-filter: blur(20px) saturate(0.8);
     display: flex;
@@ -817,11 +820,16 @@ header {
     overflow: hidden;
     /* Header itself still animates in */
     animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transition: backdrop-filter 0.3s;
 
     @media (max-width: 768px) {
         max-width: 100vw;
         border-radius: 0;
         top: 0;
+    }
+
+    &:hover {
+        backdrop-filter: blur(5px) saturate(0.8);
     }
 
     & .title-container {
