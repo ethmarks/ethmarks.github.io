@@ -1,7 +1,7 @@
 ---
 title: ColourlessTransformer
 date: 2024-12-22
-tags: [projects, programming, webdev, automation]
+tags: [projects, programming, ai, webdev, automation]
 slug: colourlesstransformer
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
 link: https://github.com/ColourlessSpearmint/ColourlessTransformer
@@ -31,7 +31,7 @@ Because of how PaintTransformer works, the brush size gets smaller and smaller a
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 
-I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I took this opportunity to brush up on my interface coding skills and code a client. I decided to name it ColourlessTransformer because I was going through a phase of naming everything eponymously after my username.
+I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I instead decided to build a custom interface. I named it ColourlessTransformer because I was going through a phase of naming everything eponymously after [my username](/blog/username).
 
 ## Streamlit
 
