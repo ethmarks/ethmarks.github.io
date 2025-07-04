@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: Flood Fill Text
 date: 2025-06-30
 tags: [projects, programming, webdev, codepen]
