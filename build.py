@@ -39,6 +39,10 @@ def embed_media_tag(match):
     alt_match = re.search(r'alt=["\\]([^"\\]*)["\\]', img_tag)
     original_alt_text = alt_match.group(1) if alt_match else ""
 
+    # If the img tag already has the cocoen-img class, do not wrap in <figure>
+    if re.search(r'class=["\']?[^"\'>]*\bcocoen-img\b', img_tag):
+        return img_tag
+
     # 1. Handle YouTube links first. These are always iframes.
     youtube_match = re.match(
         r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]+)", src
@@ -63,6 +67,72 @@ def embed_media_tag(match):
 
     # 4. If it's not a YouTube link and not a direct video file, wrap the original <img> tag in <figure>.
     return f"<figure>{img_tag}</figure>"
+
+
+def group_cocoen_images(html_content):
+    """
+    Finds <img> tags whose alt text starts with 'JUXT', adds the 'cocoen-img' class, and groups adjacent ones into Cocoen sliders.
+    Groups are not broken by whitespace or HTML comments between images.
+    """
+    img_pattern = re.compile(
+        r'<img([^>]*?)alt=["\']JUXT([^"\']*)["\']([^>]*)>', re.IGNORECASE
+    )
+    # Tokenize: find all juxt-imgs and everything else
+    tokens = []
+    pos = 0
+    for m in img_pattern.finditer(html_content):
+        start, end = m.span()
+        if start > pos:
+            tokens.append(("text", html_content[pos:start]))
+        before = m.group(1)
+        alt_rest = m.group(2)
+        after = m.group(3)
+        alt_clean = alt_rest.lstrip()
+        class_match = re.search(r'class=["\']([^"\']*)["\']', before)
+        if class_match:
+            classes = class_match.group(1)
+            if "cocoen-img" not in classes.split():
+                new_classes = classes + " cocoen-img"
+                before = re.sub(
+                    r'class=["\'][^"\']*["\']', f'class="{new_classes}"', before
+                )
+        else:
+            before = before + ' class="cocoen-img"'
+        cocoen_img = f'<img{before} alt="{alt_clean}"{after}>'
+        tokens.append(("juxt", cocoen_img))
+        pos = end
+    if pos < len(html_content):
+        tokens.append(("text", html_content[pos:]))
+    # Group adjacent juxt tokens, allowing whitespace/comments between them
+    result = []
+    i = 0
+    while i < len(tokens):
+        if tokens[i][0] == "juxt":
+            juxt_imgs = [tokens[i][1]]
+            j = i + 1
+            while j < len(tokens):
+                if tokens[j][0] == "juxt":
+                    juxt_imgs.append(tokens[j][1])
+                    j += 1
+                elif tokens[j][0] == "text" and re.fullmatch(
+                    r"[\s\n\r\t]*|<!--.*?-->", tokens[j][1], re.DOTALL
+                ):
+                    # skip whitespace/comments between juxt images
+                    j += 1
+                else:
+                    break
+            cocoen_html = (
+                '<div class="cocoen-wrapper"><div class="cocoen">'
+                + "".join(juxt_imgs)
+                + "</div></div>"
+                + "<script>Cocoen.parse(document.body);</script>"
+            )
+            result.append(cocoen_html)
+            i = j
+        else:
+            result.append(tokens[i][1])
+            i += 1
+    return "".join(result)
 
 
 def parse_double_blockquote(body):
@@ -185,8 +255,9 @@ def render_content(item):
     html = md.convert(body)
 
     # --- Postprocessors ---
-    html = process_media_tags(html)
     html = unwrap_media_elements(html)
+    html = group_cocoen_images(html)
+    html = process_media_tags(html)
     html = add_target_blank_to_external_links(html)
 
     # Date handling

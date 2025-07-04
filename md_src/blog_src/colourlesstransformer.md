@@ -13,15 +13,9 @@ link_icon: github
 
 I like how this looks, and I'll sometimes just run random photos through it to see how they turn out.
 
-<figure>
-    <div class="juxtapose-container">
-        <div class="juxtapose long">
-            <img src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
-            <img src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.">
-        </div>
-    </div>
-    <figcaption>PaintTransformer applied to a photo I took at <a href="https://franklloydwright.org/taliesin-west/">Taliesin West</a></figcaption>
-</figure>
+![JUXT A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.](https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway.jpg)
+
+![JUXT A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.](https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway_painttransformer.jpg)
 
 Another cool thing you can do is save each step as a frame, which creates a cool animation similar to a [watercolor timelapse](https://youtu.be/1rc0qmqcqMY).
 

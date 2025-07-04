@@ -12,14 +12,7 @@
         <meta property="og:url" content="https://colourlessspearmint.github.io/blog/colourlesstransformer/" />
         <link rel="stylesheet" href="/common.css" />
         
-        <link
-            rel="stylesheet"
-            href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css"
-        />
-        <script
-            src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"
-            defer
-        ></script>
+        <script src="https://unpkg.com/cocoen/dist/cocoen.js"></script>
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,16 +62,7 @@
             
             <article class="animated"><p><a href="https://github.com/Huage001/PaintTransformer" target="_blank">PaintTransformer</a> is a neural network that approximates images using paint strokes. This gives it a very pretty and stylized watercolor/painterly aesthetic.</p>
 <p>I like how this looks, and I'll sometimes just run random photos through it to see how they turn out.</p>
-<figure>
-    <div class="juxtapose-container">
-        <div class="juxtapose long">
-            <figure><img src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway.jpg" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."></figure>
-            <figure><img src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway_painttransformer.jpg" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."></figure>
-        </div>
-    </div>
-    <figcaption>PaintTransformer applied to a photo I took at <a href="https://franklloydwright.org/taliesin-west/" target="_blank">Taliesin West</a></figcaption>
-</figure>
-
+<div class="cocoen-wrapper"><div class="cocoen"><img  class="cocoen-img" alt="A concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola." src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway.jpg" /><img  class="cocoen-img" alt="A highly stylized watercolor of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola." src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway_painttransformer.jpg" /></div></div><script>Cocoen.parse(document.body);</script>
 <p>Another cool thing you can do is save each step as a frame, which creates a cool animation similar to a <a href="https://youtu.be/1rc0qmqcqMY" target="_blank">watercolor timelapse</a>.</p>
 <p>Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: <em>how quickly can you guess what it's painting?</em></p>
 <figure><video class="video" src="https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway.webm" controls alt="A PaintTransformer timelapse of my Taliesin photo"></video></figure>

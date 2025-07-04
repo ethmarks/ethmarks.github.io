@@ -301,15 +301,18 @@ a {
     */
 }
 
-figure {
+figure,
+.cocoen-wrapper {
     display: flex;
     justify-content: center;
     margin: 0;
     text-align: center;
     font-style: italic;
+    max-height: var(--max-media-height);
     color: var(--color-text-secondary);
 }
 
+.cocoen-img,
 img,
 video {
     height: auto;
@@ -1044,25 +1047,6 @@ footer {
 
 .definition {
     font-size: 1.5rem;
-}
-
-.juxtapose-container {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.juxtapose {
-    max-width: 500px;
-
-    &.long {
-        max-width: 1000px;
-    }
-
-    & img {
-        max-height: clamp(20vh, 40vh, 50vh);
-        max-width: clamp(50vw, 60vw, 600px);
-    }
 }
 
 .noborder {
