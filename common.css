@@ -36,8 +36,10 @@
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
     --font-size-md: 1rem;
-    --font-size-ld: 1.2rem;
-    --font-size-lg: 1.4rem;
+    --font-size-h1: clamp(1.5rem, 8vw, 3rem);
+    --font-size-h2: 1.6rem;
+    --font-size-h3: 1.4rem;
+    --font-size-h4: 1.2rem;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -186,9 +188,15 @@ p {
     word-break: normal;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-secondary);
-    font-size: clamp(1.5rem, 8vw, 3rem);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
     flex-shrink: 1;
     text-align: center;
     overflow: hidden;
@@ -206,22 +214,16 @@ h1 {
     }
 }
 
-.nomint {
-    /* Disable mint background */
-    background: none;
-    background-clip: none;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: var(--color-text);
+h2 {
+    font-size: var(--font-size-h2);
 }
 
 h3 {
-    font-size: var(--font-size-lg);
-    font-family: var(--font-secondary);
+    font-size: var(--font-size-h3);
 }
 
 h4 {
-    font-size: var(--font-size-ld);
-    font-family: var(--font-secondary);
+    font-size: var(--font-size-h4);
 }
 
 .mint {
@@ -1031,6 +1033,14 @@ footer {
 //  ------------------------------------
 //
 */
+
+.nomint {
+    /* Disable mint background */
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: var(--color-text);
+}
 
 .definition {
     font-size: 1.5rem;
