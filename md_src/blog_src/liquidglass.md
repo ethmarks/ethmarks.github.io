@@ -66,7 +66,9 @@ Despite its aesthetic appeal, Liquid Glass does have a significant amount of pro
 
 ### …Performant
 
-Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that blurred frosted glass effect.
+Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that blurred frosted glass effect. 
+
+For example, in the photo of [Apple Park](https://en.wikipedia.org/wiki/Apple_Park) below, the left half is unmodified while the right half has been filtered through a Gaussian blur.
 
 ![A photo of Apple Park where the right half is heavily gaussian blurred](/media/applepark_gaussian_blur.webp)
 
@@ -98,7 +100,7 @@ I'm still delighted by Liquid Glass. It has its share of critical flaws, but it 
 
 Compared to Google's new design language, [Material 3 Expressive](https://design.google/library/expressive-material-design-google-research), I think that Liquid Glass looks far cooler. I still prefer the playful utility of Google's design philosophy, but Liquid Glass has an undeniable appeal that fits Apple's philosophy of 'you live in the future now; things just work'.
 
-This has been my longest blog post by far, and I've really enjoyed writing and researching it. It's been interesting to experience firsthand the amount of effort that goes into writing a technical blog like [Simon Willison's](https://simonwillison.net/): a lot.
+This has been my longest blog post by far, and I've really enjoyed writing and researching it. It's been interesting to experience firsthand the amount of effort that goes into writing a technical blog.
 
 I hope you found this post interesting!
 
