@@ -25,7 +25,6 @@ This site is completely static and is written entirely in pure vanilla HTML, CSS
 
 - [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/): Used to make the cards on the home page.
 - [quicklink](https://github.com/GoogleChromeLabs/quicklink): Used to improve loading times.
-- [cocoen](https://github.com/koenoe/cocoen): Used to make image comparison sliders ([Example](/blog/colourlesstransformer)).
 
 ### GitHub Pages
 
