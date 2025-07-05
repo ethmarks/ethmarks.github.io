@@ -870,7 +870,7 @@ header {
         top: 0;
     }
 
-    @media (min-width: 768px) {
+    @media (pointer: fine) {
         &:hover {
             backdrop-filter: blur(5px) saturate(0.8);
         }
