@@ -1,7 +1,6 @@
 ---
 noindex: True
 title: My Username
-date: 2025-06-07
 tags: []
 description: An explanation of my username, ColourlessSpearmint
 ---

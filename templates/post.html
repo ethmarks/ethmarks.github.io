@@ -27,8 +27,9 @@
         <ethan-header></ethan-header>
         <main>
             <h1 class="animated">{{ title }}</h1>
+            {% if date_human %}
             <time class="animated" datetime="{{ date }}">{{ date_human }}</time>
-            {% if tags %}
+            {% endif %} {% if tags %}
             <div class="post-tags">
                 {% for tag in tags %}
                 <a class="post-tag animated" href="/{{  tag_dir  }}/{{ tag }}"
