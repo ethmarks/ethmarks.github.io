@@ -39,6 +39,20 @@ def embed_media_tag(match):
     alt_match = re.search(r'alt=["\\]([^"\\]*)["\\]', img_tag)
     original_alt_text = alt_match.group(1) if alt_match else ""
 
+    # --- Handle GIF and NOFIG keywords (case-sensitive, must be allcaps) ---
+    contains_gif = "GIF" in original_alt_text
+    contains_nofig = "NOFIG" in original_alt_text
+    processed_alt_text = (
+        original_alt_text.replace("GIF", "").replace("NOFIG", "").strip()
+    )
+    # Remove GIF and NOFIG from the img_tag's alt attribute
+    if contains_gif or contains_nofig:
+        img_tag = re.sub(
+            r'(alt=["\\])([^"\\]*)(["\\])',
+            lambda m: f'{m.group(1)}{m.group(2).replace("GIF", "").replace("NOFIG", "").strip()}{m.group(3)}',
+            img_tag,
+        )
+
     # 1. Handle YouTube links first. These are always iframes.
     youtube_match = re.match(
         r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]+)", src
@@ -52,16 +66,15 @@ def embed_media_tag(match):
 
     # 3. Check if the src points to a direct video file.
     if src.lower().endswith(video_exts):
-        processed_alt_text = original_alt_text
-        if original_alt_text.lower().startswith("gif"):
-            processed_alt_text = re.sub(r"^[gG][iI][fF]\s*", "", original_alt_text)
         alt_attribute_str = f' alt="{processed_alt_text}"' if processed_alt_text else ""
-        if original_alt_text.lower().startswith("gif"):
+        if contains_gif:
             return f'<figure><video class="gif" src="{src}" autoplay loop muted playsinline{alt_attribute_str}></video></figure>'
         else:
             return f'<figure><video class="video" src="{src}" controls{alt_attribute_str}></video></figure>'
 
-    # 4. If it's not a YouTube link and not a direct video file, wrap the original <img> tag in <figure>.
+    # 4. If it's not a YouTube link and not a direct video file, wrap the original <img> tag in <figure>, unless NOFIG is present.
+    if contains_nofig:
+        return img_tag
     return f"<figure>{img_tag}</figure>"
 
 
