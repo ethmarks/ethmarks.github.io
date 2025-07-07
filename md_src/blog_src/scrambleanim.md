@@ -17,7 +17,7 @@ This effect is *awesome*, and I wanted to see how it would look on my website. I
 
 ## My Implementation
 
-So instead I just reverse engineered it. I wanted it to be a [CSS keyframe animation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) that I could call within a class, but this kind of content manipulation isn't possible in CSS, so I knew I'd have to use [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Here's the full JavaScript function I came up with. It's un-obfuscated because that's how normal developers publish code.
+So instead I just reverse engineered it. I wanted it to be a [CSS keyframe animation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) that I could call within a class, but this kind of content manipulation isn't really doable in CSS. Instead I used the "[animationstart](https://developer.mozilla.org/en-US/docs/Web/API/Element/animationstart_event)" event in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Here's the full JavaScript function I came up with. It's un-obfuscated because that's how *normal* developers publish code.
 
 ```javascript
 (function () {
@@ -126,6 +126,6 @@ I realize that you, dear reader, probably aren't invested enough to actually tes
 
 ## Conclusion
 
-I love this effect. It doesn't really fit my website's aesthetic (and I prefer the current animations anyways), but it was still really fun to build. Feel free to use it however you like.
+I love this effect. I added it to the "Ahoy!" heading on my [home page](/), and I think it looks really cool. Feel free to use my code however you like.
 
 ~Ethan
