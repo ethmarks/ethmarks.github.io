@@ -100,19 +100,3 @@ document.addEventListener("DOMContentLoaded", function () {
         runScrambleAnimation(element);
     });
 });
-
-// Article animations only start when they're in view
-document.addEventListener("DOMContentLoaded", () => {
-    const article = document.querySelector("main article");
-    if (!article) return;
-    new IntersectionObserver(
-        ([entry], observer) => {
-            if (entry.isIntersecting) {
-                article.classList.add("animate"); // Add the class to trigger the animation
-
-                observer.disconnect(); // Stop observing once the animation is triggered
-            }
-        },
-        { threshold: 0.15 } // Trigger when at least 15% of the element is visible
-    ).observe(article);
-});
