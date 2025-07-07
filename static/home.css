@@ -1,16 +1,21 @@
 main {
     overflow: hidden;
     margin-bottom: -40px;
+    padding: 0;
 
     article {
         z-index: 3;
         animation: slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
-        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        min-width: 90vw;
         margin-top: 0;
-        max-width: 100%;
         text-align: center;
         flex-shrink: 1;
-        min-width: 0;
+
+        @media (min-width: 1000px) {
+            width: 100%;
+            max-width: 100%;
+        }
 
         & h1 {
             text-transform: capitalize;
@@ -171,8 +176,7 @@ main {
     flex-direction: row;
     align-items: stretch;
     gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin: 0;
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
