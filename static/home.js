@@ -113,6 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.disconnect(); // Stop observing once the animation is triggered
             }
         },
-        { threshold: 0.1 } // Trigger when at least 10% of the element is visible
+        { threshold: 0.15 } // Trigger when at least 15% of the element is visible
     ).observe(article);
 });
