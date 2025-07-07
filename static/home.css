@@ -267,6 +267,39 @@ main {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    main article,
+    main article.animate h1 span,
+    main article.animate p,
+    main article.animate .card-container .tilt-card-wrapper,
+    .intro-container .headshot,
+    .intro-container .intro-text .intro-heading-wrapper,
+    .intro-container .intro-text .intro-heading-wrapper .intro-heading.scramble,
+    .intro-container .intro-text .intro-subheading p,
+    .tilt-card,
+    .tilt-card .tilt-card-title {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    main article h1 span,
+    main article p,
+    .tilt-card-wrapper,
+    .intro-subheading p {
+        opacity: 1;
+    }
+
+    .tilt-card:hover {
+        transform: none !important;
+    }
+
+    .tilt-card:hover .tilt-card-title {
+        transform: translateZ(50px);
+    }
+}
+
 @keyframes fall-and-tilt {
     0% {
         transform: translateX(-5rem) translateY(-0.5rem) rotate(-1deg);
