@@ -54,7 +54,6 @@ function runScrambleAnimation(element) {
             element.textContent = originalText;
             if (!finished) {
                 finished = true;
-                console.log("Scramble animation finished.");
             }
             return;
         }
