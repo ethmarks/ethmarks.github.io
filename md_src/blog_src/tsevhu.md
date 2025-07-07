@@ -2,7 +2,6 @@
 title: A language written in fish
 date: 2025-04-26
 tags: [curios, language]
-slug: tsevhu
 description: An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.
 ---
 

@@ -2,7 +2,6 @@
 title: Text Scramble Animation
 date: 2025-06-29
 tags: [programming, webdev, codepen]
-slug: scrambleanim
 description: A demonstration of my text scrambling JavaScript animation
 link: https://codepen.io/ColourlessSpearmint/pen/jEPRNXG
 link_name: CodePen

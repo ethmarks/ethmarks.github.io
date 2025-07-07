@@ -2,7 +2,6 @@
 title: The Last Satellite
 date: 2024-07-30
 tags: [figments, sci-fi, short-story]
-slug: lastsatellite
 description: A short story about the last satellite orbiting a post-human Earth and its final descent.
 ---
 

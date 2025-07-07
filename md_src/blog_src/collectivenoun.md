@@ -2,7 +2,6 @@
 title: Collective Nouns
 date: 2025-04-23
 tags: [language]
-slug: collectivenoun
 description: A collection of amusing and obscure collective nouns for animals.
 ---
 

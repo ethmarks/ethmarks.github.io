@@ -2,7 +2,6 @@
 title: Mint Flavoured Markdown
 date: 2025-06-30
 tags: [projects, programming, webdev, personalwebsite]
-slug: mfm
 description: a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG
 ---
 

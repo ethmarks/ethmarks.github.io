@@ -2,7 +2,6 @@
 title: Thoughts on Liquid Glass
 date: 2025-06-14
 tags: [tech, apple]
-slug: liquidglass
 description: My thoughts on Apple's new Liquid Glass design
 ---
 

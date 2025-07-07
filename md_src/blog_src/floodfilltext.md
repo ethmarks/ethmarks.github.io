@@ -3,7 +3,6 @@ noindex: true
 title: Flood Fill Text
 date: 2025-06-30
 tags: [projects, programming, webdev, codepen]
-slug: floodfilltext
 description: a codepen to generate meme-y gif animations where individual characters of text flood fill outwards
 link: https://codepen.io/ColourlessSpearmint/pen/YPXMvxg
 link_name: CodePen

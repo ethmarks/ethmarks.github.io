@@ -231,7 +231,7 @@ def render_content(item):
         content=html,
         tags=meta.get("tags", []),
         tag_dir=TAG_DIR,
-        slug=meta.get("slug", item.get("slug", "")),
+        slug=item.get("slug", ""),
         description=description,
         canonical_url=canonical_url,
     )
@@ -278,7 +278,7 @@ def parse_all_content():
         if not fname.endswith(".md"):
             continue
         meta, body = parse_markdown_with_frontmatter(os.path.join(BLOG_SRC_DIR, fname))
-        slug = meta.get("slug", os.path.splitext(fname)[0])
+        slug = os.path.splitext(fname)[0]
         date_val = parse_date(meta.get("date"))
         content_items.append(
             {

@@ -2,7 +2,6 @@
 title: Backronyms
 date: 2025-06-09
 tags: [humor, language]
-slug: backronyms
 description: A fun list of backronyms
 ---
 

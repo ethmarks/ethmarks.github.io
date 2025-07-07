@@ -2,7 +2,6 @@
 title: The Waterman Butterfly
 date: 2025-04-25
 tags: [curios, cartography]
-slug: waterman
 description: An exploration of the Waterman Butterfly map projection, its advantages, disadvantages, and visual appeal.
 link: https://en.wikipedia.org/wiki/Waterman_butterfly_projection
 link_name: Wikipedia Article

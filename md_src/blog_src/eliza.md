@@ -2,7 +2,6 @@
 title: Eliza
 date: 2024-12-17
 tags: [projects, programming, ai, history, colab]
-slug: eliza
 description: My implementation of the 1966 chatbot Eliza
 link: https://colab.research.google.com/drive/1RQ2-HzSdCBQfYQZu6OSrYlOgOHqbQpn_
 link_name: Colab Notebook
