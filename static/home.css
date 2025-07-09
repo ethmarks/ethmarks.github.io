@@ -5,7 +5,7 @@ main {
 
     article {
         z-index: 3;
-        animation: slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
+        animation: article-slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
         padding: var(--spacing-sm) var(--spacing-lg);
         min-width: 90vw;
         margin-top: 0;
@@ -192,6 +192,11 @@ main {
         justify-content: flex-end;
         height: 100%;
         z-index: 2;
+
+        @media (max-width: 768px) {
+            animation: circle-reveal 2.5s ease both,
+                img-slide-up 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+        }
 
         & img {
             width: 375px;
@@ -410,17 +415,29 @@ main {
 
 @keyframes circle-reveal {
     0% {
+        opacity: 0;
         clip-path: circle(0%);
     }
 
     100% {
+        opacity: 1;
         clip-path: circle(100%);
     }
 }
 
-@keyframes slide-up {
+@keyframes article-slide-up {
     from {
         transform: translate(0, 12rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes img-slide-up {
+    from {
+        transform: translate(0, 7rem);
     }
 
     to {
