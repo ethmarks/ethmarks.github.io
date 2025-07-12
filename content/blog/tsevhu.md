@@ -95,5 +95,3 @@ Translation:
 - [YouTube video](https://www.youtube.com/watch?v=bZJa-C3lsjg)
 - [Reddit post](https://www.reddit.com/r/conlangs/comments/gxgy6i/tsevhu_key_activity/)
 - [GitHub repo](https://github.com/GammaGames/koilang)
-
-~Ethan
