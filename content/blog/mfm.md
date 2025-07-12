@@ -5,7 +5,7 @@ tags: [projects, programming, webdev, personalwebsite]
 description: a specification of Mint Flavoured Markdown, a custom markdown flavour I developed for use in my custom SSG
 ---
 
-{{< figure src="/media/mfm-banner.webp" alt="The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks" >}}
+![The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks](/media/mfm-banner.webp)
 
 ***EDIT (2025-07-10):** I've decommissioned MFM from this site's build step. I'm using [Hugo](https://gohugo.io/) now. You can read more about my reasoning [here](/blog/hugoswitch).*
 

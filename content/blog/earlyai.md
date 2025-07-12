@@ -55,7 +55,7 @@ ELIZA, PARRY, and ALICE were all programmed to deflect questions when they didn'
 
 For example, when I was testing Cleverbot for the first time, it tried to convince me that *my* name was Cleverbot. I played along, and then regretted it. Cleverbot is weird.
 
-{{< figure src="/media/cleverbot.webp" alt="My first conversation with Cleverbot (Cleverbot in blue)" >}}
+![My first conversation with Cleverbot (Cleverbot in blue)](/media/cleverbot.webp)
 
 ## [Siri](https://en.wikipedia.org/wiki/Siri) (2010)
 

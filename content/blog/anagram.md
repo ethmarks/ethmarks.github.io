@@ -12,11 +12,11 @@ An [Anagram](https://en.wikipedia.org/wiki/Anagram) is a word created by rearran
 
 For example, my full name, 'Ethan Oliver Marks', is an anagram for 'Martin Kolver Shea'.
 
-{{< figure src="/media/example_anagram.gif" alt="Ethan Oliver Marks ↔ Martin Kolver Shea" >}}
+![Ethan Oliver Marks ↔ Martin Kolver Shea](/media/example_anagram.gif)
 
 I generated the above animation using [Anagram Animator](https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK), a Colab Notebook I wrote in a few hours.
 
-{{< figure src="/media/anagramcolab.webp" alt="A screenshot of Anagram Animator in Colab" >}}
+![A screenshot of Anagram Animator in Colab](/media/anagramcolab.webp)
 
 ## Usage
 

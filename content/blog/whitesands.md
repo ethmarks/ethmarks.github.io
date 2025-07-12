@@ -11,7 +11,7 @@ I've touched the arches at [Arches](https://www.nps.gov/arch/index.htm), touched
 
 But, out of all of them, my favorite National Park is [White Sands](https://www.nps.gov/whsa/index.htm).
 
-{{< figure src="/media/whitesands_1.webp" alt="A photo I took at White Sands" >}}
+![A photo I took at White Sands](/media/whitesands_1.webp)
 
 ## Sand
 
@@ -30,7 +30,7 @@ During my trip to White Sands, I occupied myself by:
 - Sandwriting on dunes (pictured below).
 - Sneaking onto a movie set.
 
-{{< figure src="/media/whitesands_writing.webp" alt="You can kind of make out the ETHAN" >}}
+![You can kind of make out the ETHAN](/media/whitesands_writing.webp)
 
 There isn't much else in the way of activities, but that just makes it an even more tranquil and peaceful experience.
 
@@ -42,7 +42,7 @@ For example, the day that I went (Jan 26, 2024) happened to be the same day that
 
 You can watch the episode [here](https://youtu.be/9Xunff0lpug?si=Jsiu7DaV8Q50Lvu9), and can vaguely see me on a sand dune in the background at 0:33 in [this behind-the-scenes video](https://youtu.be/ljLrg-yUaJw?si=Hgbc8rsJbtbXo0N9&t=33).
 
-{{< figure src="/media/whitesands_filming.webp" alt="My picture of \"A Thousand Suns\" being filmed" >}}
+![My picture of \](/media/whitesands_filming.webp)
 
 ## Missile Testing
 
@@ -52,7 +52,7 @@ If you like seeing military aircraft, this is the place to do it. I saw **six** 
 
 Rule #2 on the official safety sign outside the park is "DO NOT TOUCH ANY STRANGE OBJECTS; Sometimes military planes drop dangerous objects on our dunes".
 
-{{< figure src="/media/whitesands_sign.webp" alt="The fact that it needed to be a rule implies that there is precedent" >}}
+![The fact that it needed to be a rule implies that there is precedent](/media/whitesands_sign.webp)
 
 I burst out laughing when I first read that sign. Then I stopped laughing when I considered the implication that ocassionally fighter jets just drop ordanance on a National Park. Then I compromised between these two emotions by quietly giggling.
 
@@ -62,6 +62,6 @@ This is the place where the problems caused by the military are amusing, the mov
 
 This is White Sands National Park.
 
-{{< figure src="/media/whitesands_focus.webp" alt="Sunset over White Sands" >}}
+![Sunset over White Sands](/media/whitesands_focus.webp)
 
 ~Ethan
