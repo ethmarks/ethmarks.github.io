@@ -231,6 +231,10 @@ h1 {
     &.animated {
         animation: slideInFromTop 1s var(--transition-timing) both;
     }
+
+    &.blog-title {
+        max-width: clamp(300px, 80vw, 1200px);
+    }
 }
 
 h2 {
