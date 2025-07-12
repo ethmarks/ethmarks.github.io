@@ -8,6 +8,7 @@
     --color-accent-medium: #8dd4cc;
     --color-accent-light: #9ce3d9;
     --color-accent-dark: #7db8b0;
+    --color-h1: #a8e4dd;
     --color-link: var(--color-accent-light);
     --color-link-hover: white;
     --color-article-bg: rgba(30, 30, 30, 0.7);
@@ -212,12 +213,20 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
-    /* Add bottom margin */
     font-weight: var(--font-weight-bold);
-    background: linear-gradient(135deg, var(--color-text), var(--color-accent));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-h1);
+
+    @-moz-document url-prefix() {
+        /* Add a cool gradient on Firefox; other browsers don't support it :( */
+        background: linear-gradient(
+            135deg,
+            var(--color-text),
+            var(--color-accent)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
     &.animated {
         animation: slideInFromTop 1s var(--transition-timing) both;
