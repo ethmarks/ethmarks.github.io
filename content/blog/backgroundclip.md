@@ -5,13 +5,15 @@ tags: [programming, webdev, personalwebsite]
 description: I discovered the compatibility issues of the CSS background-clip attribute
 ---
 
-My laptop is fairly powerful, which means that it's heavy and has a short battery life. Because of this, I use a [laptop dock](https://www.youtube.com/watch?v=Pc31L3zJiaU) to turn it into effectively a desktop with a built-in keyboard. I like being able to code from places other than my desk, so I've been looking into buying a lightweight portable laptop with just barely enough processing power to run a browser, and just using a [remote tunnel](https://code.visualstudio.com/docs/remote/tunnels) to puppeteer my main laptop that has all of my files on it. The best way to do this seems to be [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev), so I decided to try it out and see if that was a viable solution. I booted up the webpage in Firefox, aaaaand it doesn't work.
+Earlier today, I opened my [personal website](/blog/personalwebsite) in the Google Chrome for the first time and had to work around a browser compatibility bug that's older than I am.
+
+My laptop is fairly powerful, which means that it's heavy and has a short battery life. Because of this, I use a [laptop dock](https://www.youtube.com/watch?v=Pc31L3zJiaU) to effectively turn it into a desktop with a built-in keyboard. I like being able to code from places other than my desk though, so I've been considering buying a cheap portable laptop with just barely enough processing power to run a browser, and using a [remote tunnel](https://code.visualstudio.com/docs/remote/tunnels) to puppeteer my main laptop that has all of my files on it. The best way to do this seems to be [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev), so I decided to try it out and see if that was a viable solution. I booted up the webpage in Firefox, aaaaand it doesn't work.
 
 ![when vscode.dev runs in Firefox, all of the icons are replaced with empty boxes](/media/vscode-dot-dev-icon-font.webp)
 
 [Firefox has trouble with icon fonts](https://support.mozilla.org/en-US/questions/1016919), so all of the interface buttons were replaced with empty boxes. After an hour of trying to fix it, I just gave up and used another browser. Much as I dislike it, Google Chrome is less buggy than Firefox and has more support for new browser technologies (like [CSS carousels](https://chrome.dev/carousel/)), so I grudgingly conceded that it's fine for just running a web app. I installed Chrome, navigated to vscode.dev, and it worked perfectly. I'm still very impressed that Microsoft managed to make a browser port of an entire code editor.
 
-I logged into my GitHub account, did some configuration, and started coding. I started up my [personal website's](/blog/personalwebsite) [Hugo](/blog/hugoswitch) [server](https://gohugo.io/commands/hugo_server/) and opened it in a new Chrome tab. At that point, I discovered that portions of my website were invisible.
+I logged into my GitHub account, did some configuration, and started coding. I started up my personal website's [Hugo](/blog/hugoswitch) [server](https://gohugo.io/commands/hugo_server/) and opened it in a new Chrome tab. At that point, I discovered that portions of my website were invisible.
 
 ![The mint gradient is visible on Firefox but not on Chrome](/media/background-clip-firefox-chrome.webm)
 
@@ -49,9 +51,9 @@ The solid colour isn't too noticeable, but it definitely doesn't look quite as n
 
 Then I checked to see if anyone else had noticed this. I found a [Stack Overflow post](https://stackoverflow.com/questions/55198363/webkit-background-clip-text-working-on-mozilla-but-not-on-chrome). The author of the post, [Paul Stephen Davis](https://stackoverflow.com/users/5925418/paul-stephen-davis), noticed the background-clip inconsistency while working on his photography website and asked for help. A user named [Jason](https://stackoverflow.com/users/4243228/jason) suggested changing the display type to inline (which doesn't fix it) and then gave up. 
 
-This was over 6 years ago.
+This was over 6 years ago. background-clip was [first introduced by WebKit in 2008](https://www.css3.info/webkit-introduces-background-cliptext/), and has been supported by Chrome since 2010. It has been a standard CSS property for a decade and a half, and the Stack Overflow post proves that this bug has been known since at least 2019.
 
-I think that Firefox's implementation of background-clip is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 6 years being wrong.
+I think that Firefox's implementation of background-clip is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 15 years being wrong.
 
 Please fix it, Google.
 
