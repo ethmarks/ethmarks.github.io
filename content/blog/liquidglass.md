@@ -5,7 +5,7 @@ tags: [tech, apple]
 description: My thoughts on Apple's new Liquid Glass design
 ---
 
-{{< figure src="/media/liquid_glass_banner.webp" alt="Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass" >}}
+![Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass](/media/liquid_glass_banner.webp)
 
 As part of [WWDC25](https://developer.apple.com/wwdc25/) on June 9, 2025, Apple unveiled their new [Liquid Glass](https://en.wikipedia.org/wiki/Liquid_Glass) material and incorporated it into the design of the iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision.
 
@@ -17,7 +17,7 @@ That being said, I absolutely love Liquid Glass. At no other point in time has m
 
 Liquid Glass is just the Applelogism (A portmanteau of [Apple](https://en.wikipedia.org/wiki/Apple_Inc.) and [neologism](https://en.wiktionary.org/wiki/neologism) coined by me to describe Apple's tendency to take popular existing concepts and rebrand them under a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator): a design philosophy that uses translucent blur effects to emulate [frosted glass](https://en.wikipedia.org/wiki/Frosted_glass).
 
-{{< figure src="https://img.sysnettechsolutions.com/What-is-Windows-Vista-Nedir-01.webp" alt="Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds" >}}
+![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](https://img.sysnettechsolutions.com/What-is-Windows-Vista-Nedir-01.webp)
 
 As [many](https://www.instagram.com/reel/DKvIXjChU0L/?hl=en) [other](https://www.pcmag.com/news/did-apple-liquid-glass-design-steal-from-windows-vista-wwdc-2025) [people](https://www.reddit.com/r/windows/comments/1l7eqia/apple_liquid_glass_be_like/) [have](https://www.engadget.com/computing/apples-liquid-glass-is-windows-vista-done-well-181954910.html) [pointed](https://www.windowscentral.com/apple/apple-liquid-glass-wwdc-sorry-imitation-of-windows-vista-aero) [out](https://www.reddit.com/r/MacOS/comments/1l8pvm7/is_it_just_me_or_liquid_glass_reminds_frutiger/), Apple absolutely did not invent glassmorphism. Frosted glass designs were first popularized by [Windows Aero](https://en.wikipedia.org/wiki/Windows_Aero) in 2007, and [lots](https://css.glass/) [of](https://tricks-glassmorphism.webflow.io/) [other](https://reflect.app/) [designers](https://hype4.academy/tools/glassmorphism-generator) [have](https://www.reflectorai.app/) [used](https://www.behance.net/gallery/113924121/Kit-UI-Glassmorphism-trend#) [it](https://leanrada.com/) [since](https://jetgirl.art/), including me!
 
@@ -29,7 +29,7 @@ At its core, the only thing that Liquid Glass does is make the iPhone look prett
 
 ### …Novel
 
-{{< figure src="https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg" alt="Liquid Glass promotional material with the text \"Introducing Liquid Glass\" in chromatic type, next to six colourful pieces of glass, visibly refracting light and demonstrating additive color mixing" >}}
+![Liquid Glass promotional material with the text \](https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg)
 
 Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
 
@@ -37,11 +37,11 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 ### …Futuristic
 
-{{< figure src="https://cdn.macstories.net/screenshot-02-04-2024-19-35-44-1707094523402.png" alt="Two VisionOS panels using Liquid Glass displaying information about the weather" >}}
+![Two VisionOS panels using Liquid Glass displaying information about the weather](https://cdn.macstories.net/screenshot-02-04-2024-19-35-44-1707094523402.png)
 
 Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
-{{< figure src="/media/android_ios18_ios26.webp" alt="Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons." >}}
+![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](/media/android_ios18_ios26.webp)
 
 For example, consider the image above. On the left is a screenshot of [my phone](https://q1.cricketwireless.com/product/motorola-moto-g-5g-2023/) running [Android 14](https://www.android.com/android-14/), in the middle is a phone running [iOS 18](https://www.apple.com/ios/ios-18/), and on the right is a phone running [iOS 26](https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/). Of these three, which one looks most like something you'd find in a sci-fi movie? The answer is unambiguously the phone on the right. However you feel about Liquid Glass, you can't deny that it looks straight out of Black Mirror. In a good way.
 
@@ -69,7 +69,7 @@ Liquid Glass is composed of many different effects, but the most important is th
 
 For example, in the photo of [Apple Park](https://en.wikipedia.org/wiki/Apple_Park) below, the left half is unmodified while the right half has been filtered through a Gaussian blur.
 
-{{< figure src="/media/applepark_gaussian_blur.webp" alt="A photo of Apple Park where the right half is heavily gaussian blurred" >}}
+![A photo of Apple Park where the right half is heavily gaussian blurred](/media/applepark_gaussian_blur.webp)
 
 From a technical perspective, a Gaussian blur is a method of making each pixel have an influence on the pixels around it, which causes the colours to average out into a blurry definitionless blob. What this means is that the computer needs to perform a mathematical function dozens or hundreds (eyeballing it, Liquid Glass has a blur radius of 6 pixels, meaning it has pi*6^2 ≈ 113 pixels around it) of times for every single pixel, of which there are millions (iPhone 16 has a 2556x1179 screen, so 3,013,524 total pixels), and you need to do this once per frame, of which there are ideally 60 per second on the iPhone 16. This adds up to a huge amount of computation, and it doesn't help that the [2D Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function#Two-dimensional_Gaussian_function) isn't exactly simple.
 

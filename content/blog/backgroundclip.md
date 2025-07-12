@@ -7,7 +7,7 @@ description: I discovered the compatibility issues of the CSS background-clip at
 
 My laptop is fairly powerful, which means that it's heavy and has a short battery life. Because of this, I use a [laptop dock](https://www.youtube.com/watch?v=Pc31L3zJiaU) to turn it into effectively a desktop with a built-in keyboard. I like being able to code from places other than my desk, so I've been looking into buying a lightweight portable laptop with just barely enough processing power to run a browser, and just using a [remote tunnel](https://code.visualstudio.com/docs/remote/tunnels) to puppeteer my main laptop that has all of my files on it. The best way to do this seems to be [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev), so I decided to try it out and see if that was a viable solution. I booted up the webpage in Firefox, aaaaand it doesn't work.
 
-{{< figure src="/media/vscode-dot-dev-icon-font.webp" alt="when vscode.dev runs in Firefox, all of the icons are replaced with empty boxes" >}}
+![when vscode.dev runs in Firefox, all of the icons are replaced with empty boxes](/media/vscode-dot-dev-icon-font.webp)
 
 [Firefox has trouble with icon fonts](https://support.mozilla.org/en-US/questions/1016919), so all of the interface buttons were replaced with empty boxes. After an hour of trying to fix it, I just gave up and used another browser. Much as I dislike it, Google Chrome is less buggy than Firefox and has more support for new browser technologies (like [CSS carousels](https://chrome.dev/carousel/)), so I grudgingly conceded that it's fine for just running a web app. I installed Chrome, navigated to vscode.dev, and it worked perfectly. I'm still very impressed that Microsoft managed to make a browser port of an entire code editor.
 
@@ -45,7 +45,7 @@ h1 {
 
 The solid colour isn't too noticeable, but it definitely doesn't look quite as nice on Chrome or Edge as it does on Firefox.
 
-{{< figure src="/media/mint-headings-firefox-chrome-edge.webp" alt="headings have the mint gradient on Firefox, but are solid teal on Chrome and Edge" >}}
+![headings have the mint gradient on Firefox, but are solid teal on Chrome and Edge](/media/mint-headings-firefox-chrome-edge.webp)
 
 Then I checked to see if anyone else had noticed this. I found a [Stack Overflow post](https://stackoverflow.com/questions/55198363/webkit-background-clip-text-working-on-mozilla-but-not-on-chrome). The author of the post, [Paul Stephen Davis](https://stackoverflow.com/users/5925418/paul-stephen-davis), noticed the background-clip inconsistency while working on his photography website and asked for help. A user named [Jason](https://stackoverflow.com/users/4243228/jason) suggested changing the display type to inline (which doesn't fix it) and then gave up. 
 

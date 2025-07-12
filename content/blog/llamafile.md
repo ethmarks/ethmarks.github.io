@@ -8,7 +8,7 @@ link_name: GitHub Repo
 link_icon: github
 ---
 
-{{< figure src="https://cdn-uploads.huggingface.co/production/uploads/64a523ba1ed90082dafde3d3/kJrkxofwOp-89uYFe0EBb.png" alt="llamafile banner" >}}
+![llamafile banner](https://cdn-uploads.huggingface.co/production/uploads/64a523ba1ed90082dafde3d3/kJrkxofwOp-89uYFe0EBb.png)
 
 Last week, I stumbled upon [llamafile](https://github.com/Mozilla-Ocho/llamafile). It's a file format developed by [Mozilla](https://www.mozilla.org/en-US/) that stores the weights and code of [LLMs](https://en.wikipedia.org/wiki/Large_language_model) as pre-compiled [binary machine code](https://en.wikipedia.org/wiki/Binary_code). What this means is that you can run a llamafile on *any* computer without installing *anything* else.
 

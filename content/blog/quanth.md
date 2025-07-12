@@ -11,7 +11,7 @@ On the one hand, Metric is the international standard, it scales better than Imp
 
 But on the other hand, Feet are simply a more convenient length than Meters. Also, I'm American, so the vast majority of the people I interact with use Imperial, making it more useful.
 
-[{{< figure src="/media/distance_xkcd.webp" alt="Original: https://xkcd.com/1643" >}}](https://xkcd.com/1643)
+[![Original: https://xkcd.com/1643](/media/distance_xkcd.webp)](https://xkcd.com/1643)
 
 I prefer Metric and use it whenever possible, but I'm aware that using it has the unfortunate side effect of making me seem like a contrarian elitist.
 
@@ -23,7 +23,7 @@ For the rest of the article to make sense, you'll need a basic understanding of 
 
 The smaller something is, the less it's affected by **general gravity** and the more it starts to be affected by **quantum gravity**. We don't yet know how to accurately model the effects of quantum gravity, so the more influencial quantum gravity is the less accurately we're able to measure things. Even perfectly flat surfaces look wavy and foamy due to quantum uncertainty. 
 
-{{< figure src="https://miro.medium.com/v2/resize:fit:1400/1*CXYYAJUS14Q_8nXCx2i5Gg.png" alt="The Planck Length" >}}
+![The Planck Length](https://miro.medium.com/v2/resize:fit:1400/1*CXYYAJUS14Q_8nXCx2i5Gg.png)
 
 The length where general and quantum gravity are equal is called a **Planck Length**. It's the smallest length we can measure with any amount of accuracy, so it's commonly described as the pixel size of the universe.
 

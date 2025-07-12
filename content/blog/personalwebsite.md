@@ -24,7 +24,7 @@ This site is completely static and was programmed from scratch in pure vanilla [
 
 This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.
 
-{{< figure src="/media/ghpages.webp" alt="My Github Pages deployment workflow" >}}
+![My Github Pages deployment workflow](/media/ghpages.webp)
 
 ### Build
 
@@ -58,7 +58,7 @@ This site uses a dark theme with a spearmint teal accent colour.
 
 As of [June 9, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 99.75.
 
-{{< figure src="/media/lighthouse.webp" alt="A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO" >}}
+![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](/media/lighthouse.webp)
 
 It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.
 
