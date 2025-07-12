@@ -21,7 +21,9 @@ What "background-clip: text;" does is makes it so that the background of an elem
 
 On Firefox, all text contained within a background-clipped element is considered part of the background clip. It doesn't matter if that text is the direct content of the element or it's inside some nestled [spans](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span): it's all considered part of the parent element. On Chrome (and Edge, Opera, Brave, Vivaldi, etc), this is not the case. The text *must* be the direct content of the element, otherwise it isn't counted. The text in my "Welcome To My Personal Website" heading was contained in nestled spans, so Firefox counted it as part of the background-clip while Chrome did not.
 
-I looked into ways to fix this, but all of them either ruined the effect or just didn't work. In the end, I settled on just using a solid mint colour by default, and only adding the mint gradient if the page was loaded in Firefox.
+I looked into ways to fix this, but all of them either ruined the effect or just didn't work. Each word *must* be in a separate span for the staggered animation to work, and setting the gradient effect at the span level would cause the gradient to only cover that one word rather than smoothly transitioning across the whole element. 
+
+In the end, I settled on just using a solid mint colour by default, and adding a bit of code that will only work in Firefox that adds the mint gradient. This way, Chromium browsers get solid colour and Firefox gets the gradient.
 
 ```css
 h1 {
@@ -49,7 +51,7 @@ Then I checked to see if anyone else had noticed this. I found a [Stack Overflow
 
 This was over 6 years ago.
 
-I think that Firefox's implementation is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 6 years being wrong.
+I think that Firefox's implementation of background-clip is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 6 years being wrong.
 
 Please fix it, Google.
 
