@@ -41,6 +41,10 @@ h1 {
 }
 ```
 
+The solid colour isn't too noticeable, but it definitely doesn't look quite as nice on Chrome or Edge as it does on Firefox.
+
+{{< figure src="/media/mint-headings-firefox-chrome-edge.webp" alt="headings have the mint gradient on Firefox, but are solid teal on Chrome and Edge" >}}
+
 Then I checked to see if anyone else had noticed this. I found a [Stack Overflow post](https://stackoverflow.com/questions/55198363/webkit-background-clip-text-working-on-mozilla-but-not-on-chrome). The author of the post, [Paul Stephen Davis](https://stackoverflow.com/users/5925418/paul-stephen-davis), noticed the background-clip inconsistency while working on his photography website and asked for help. A user named [Jason](https://stackoverflow.com/users/4243228/jason) suggested changing the display type to inline (which doesn't fix it) and then gave up. 
 
 This was over 6 years ago.
