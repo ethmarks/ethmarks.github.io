@@ -1,6 +1,30 @@
+{{ $src := .Destination | safeURL }} {{ $alt := .PlainText }} {{ $is_gif :=
+findRE "GIF" $alt }} {{ $alt_processed := replace $alt "GIF" "" |
+strings.TrimSpace }}
+
 <figure>
-  <img src="{{ .Destination | safeURL }}"
-    {{- with .PlainText }} alt="{{ . }}"{{ end -}}
-  >
-  {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+    {{ if or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4")
+    (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }} {{ if
+    $is_gif }}
+    <video
+        class="gif"
+        src="{{ $src }}"
+        autoplay
+        loop
+        muted
+        playsinline
+        alt="{{ $alt_processed }}"
+    ></video>
+    {{ else }}
+    <video
+        class="video"
+        src="{{ $src }}"
+        controls
+        alt="{{ $alt_processed }}"
+    ></video>
+    {{ end }} {{ else }}
+    <img src="{{ $src }}" alt="{{ $alt_processed }}" />
+    {{ end }} {{- with .Title }}
+    <figcaption>{{ . }}</figcaption>
+    {{ end -}}
 </figure>
