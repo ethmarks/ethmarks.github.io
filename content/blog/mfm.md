@@ -13,13 +13,13 @@ When I started designing and prototyping my [personal website](/blog/personalweb
 
 This made a lot of sense to me, as I really didn't want to have to learn Jekyll (in fact, I wanted to [Hyde](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde) from it entirely). So for a couple months, I authored each and every blog post in pure HTML.
 
-As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each blog post's file had to contain a bunch of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) that was the same on every page, like where the site [favicon](https://en.wikipedia.org/wiki/Favicon) is located. It also meant that I had to do a bunch of things manually, like adding new blog posts to their aggregator page (There were three: Curios, Figments, and Elsewise. Nowadays I use [tags](/tag) for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious blog-authoring tasks.
+As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each blog post's file had to contain a bunch of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) that was the same on every page, like where the site [favicon](https://en.wikipedia.org/wiki/Favicon) is located. It also meant that I had to do a bunch of things manually, like adding new blog posts to their aggregator page (there were three: Curios, Figments, and Elsewise; nowadays I use [tags](/tag) for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious blog-authoring tasks.
 
 To solve this, On June 6th, I [made my own SSG](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/commit/81e2247227d1a9d3dddd4f9173da3d1602e9e405) that parsed Markdown into HTML. This was a much better solution, and it's allowed me to add a bunch more functionality to my site, like tags, by expanding the SSG over the past three weeks. 
 
-The only problem was that a few of my blog posts used elements that didn't exist in Markdown, like image comparison sliders, videos, and poems. My solution was to just [embed HTML](https://css-tricks.com/embedded-content-in-markdown/) into the markdown files. This *worked*, but it felt like a messy compromise the kind of defeated the point of using Markdown in the first place. I decided that I should use another Markdown flavour (which is the technical term, by the way) that supported the features I wanted natively.
+The only problem was that a few of my blog posts used elements that didn't exist in Markdown, like image comparison sliders, videos, and poems. My solution was to just [embed HTML](https://css-tricks.com/embedded-content-in-markdown/) into the markdown files. This *worked*, but it felt like a messy compromise that kind of defeated the point of using Markdown in the first place. I decided that I should use another Markdown flavour (which is the technical term, by the way) that supported the features I wanted natively.
 
-There are a few different flavours of Markdown. The default flavour is [CommonMark](https://commonmark.org/). Probably the most-used flavour is [Github Flavored Markdown](https://github.github.com/gfm/) (GFM). There's also [ExtraMark](https://github.com/vimtaai/extramark), [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), and [lots of others](https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f). Neither of these have support for iframes or centered text, so I knew I had to make my own flavour.
+There are a few different flavours of Markdown. The default flavour is [CommonMark](https://commonmark.org/). Probably the most-used flavour is [Github Flavored Markdown](https://github.github.com/gfm/) (GFM). There's also [ExtraMark](https://github.com/vimtaai/extramark), [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), and [lots of others](https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f). None of these have support for iframes or centered text, so I knew I had to make my own flavour.
 
 ## MFM
 
@@ -33,7 +33,7 @@ I'm pretty sure that I'll be adding more features at some point in the future, s
 
 ### iFrames
 
-[HTML Inline Frames](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe) (iFrames) can be declared in MFM by using double square brackets that contain the iFrame title, followed by single parenthesis that contains the iFrame src. It was inspired by Obsidian Flavored Markdown's [note embedding syntax](https://help.obsidian.md/embeds).
+[HTML Inline Frames](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe) (iFrames) can be declared in MFM by using double square brackets that contain the iFrame title, followed by a parenthetical that contains the iFrame source. It was inspired by Obsidian Flavored Markdown's [note embedding syntax](https://help.obsidian.md/embeds).
 
 For example, the following Markdown...
 
@@ -108,7 +108,7 @@ The MFM animation syntax is an override of the video syntax. The difference is t
 </video>
 ```
 
-The usage of the term "GIF" is obviously derived from the [GIF image format](https://en.wikipedia.org/wiki/GIF), even though GIFs aren't in the list of supported video formats. GIFs are extremely bad at storing videos and are inferior in every way to [WebM AV1](https://en.wikipedia.org/wiki/AV1), so developers are discouraged for using them. "GIF" has just become the colloquial term for a short, looping, muted animation, so I decided to just roll with it and use that as the reserved syntax. MFM media animations are related only in spirit to GIF images.
+The usage of the term "GIF" is obviously derived from the [GIF image format](https://en.wikipedia.org/wiki/GIF), even though GIFs aren't in the list of supported video formats. GIFs are extremely bad at storing videos and are inferior in every way to [WebM AV1](https://en.wikipedia.org/wiki/AV1), so developers are discouraged from using them. "GIF" has just become the colloquial term for a short, looping, muted animation, so I decided to just roll with it and use that as the reserved syntax. MFM media animations are related only in spirit to GIF images.
 
 #### YouTube
 
