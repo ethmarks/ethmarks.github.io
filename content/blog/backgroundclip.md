@@ -13,7 +13,7 @@ My laptop is fairly powerful, which means that it's heavy and has a short batter
 
 I logged into my GitHub account, did some configuration, and started coding. I started up my [personal website's](/blog/personalwebsite) [Hugo](/blog/hugoswitch) [server](https://gohugo.io/commands/hugo_server/) and opened it in a new Chrome tab. At that point, I discovered that portions of my website were invisible.
 
-{{< figure src="/media/background-clip-firefox-chrome.webm" alt="The mint gradient is visible on Firefox but not on Chrome" >}}
+![The mint gradient is visible on Firefox but not on Chrome](/media/background-clip-firefox-chrome.webm)
 
 I opened the page on Firefox, and it looked fine, so the problem was browser-specific. I started troubleshooting the problem. I disabled likely-looking CSS styles at random until something changed, and eventually realized that I could make the text visible by unchecking the "[webkit-text-fill-color](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-fill-color): transparent;" style. The resulting text was pure white rather than my mint gradient, so I continued troubleshooting. I discovered that the blog titles still showed up on Chrome despite using -webkit-text-fill-color style. I eventually realized that the problem was in how the two browsers handled the "[background-clip](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip): text;" style.
 

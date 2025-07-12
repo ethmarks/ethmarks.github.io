@@ -18,7 +18,7 @@ Another cool thing you can do is save each step as a frame, which creates a cool
 
 Because of how PaintTransformer works, the brush size gets smaller and smaller as times goes on (so that it can add details), but this makes for a fun charades-like game: *how quickly can you guess what it's painting?*
 
-{{< figure src="/media/painttransformer_abbey_road.webm" alt="A PaintTransformer timelapse of the album cover of Abbey Road by the Beatles. It starts off as an unrecognizable blob of colour, but gradually becomes discernible as detail is added" >}}
+![A PaintTransformer timelapse of the album cover of Abbey Road by the Beatles. It starts off as an unrecognizable blob of colour, but gradually becomes discernible as detail is added](/media/painttransformer_abbey_road.webm)
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 

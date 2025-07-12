@@ -10,7 +10,7 @@ link_icon: codepen
 
 Earlier today, [Brad Woods Digital Garden](https://garden.bradwoods.io/) made it to the [front page of HN](https://news.ycombinator.com/item?id=44393920). I had never heard of this website before, so I clicked on the link and explored it. As it turns out, it's the web development blog of [Brad Woods](https://bradwoods.io/). It's also one of the most detailed and high-effort webpages I've seen in quite a while, and the [blog content](https://garden.bradwoods.io/notes/svg/scroll-driven-draw-animation) is high-quality and very interesting. But what really stood out to me was how most of the text on the page initially appears scrambled, and then gets "solved" in a quirky scramble animation.
 
-{{< figure src="/media/bradwoods_scramble.webm" alt="GIF text scramble entrance animations of Brad Woods' website" >}}
+![GIF text scramble entrance animations of Brad Woods' website](/media/bradwoods_scramble.webm)
 
 This effect is *awesome*, and I wanted to see how it would look on my website. I initially planned to just steal Woods' animation by nabbing the code from my Firefox cache, but [he's minified and obfuscated](https://garden.bradwoods.io/_next/static/chunks/7843-1c596a964b00992a.js) it in a way that would take more effort to unravel than I'm willing to expend.
 

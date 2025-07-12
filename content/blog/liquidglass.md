@@ -47,13 +47,13 @@ For example, consider the image above. On the left is a screenshot of [my phone]
 
 ### …Animated
 
-{{< figure src="/media/liquid_glass_coalescence.webm" alt="GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar" >}}
+![GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](/media/liquid_glass_coalescence.webm)
 
 Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalesce [like real blobs of liquid](https://youtu.be/Aq5ydeWWr4A) (the way the blobs merge reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching)). Because Liquid Glass imitates real-life fluid dynamics that we understand intuitively, it feels responsive and dynamic in a way that is pleasing to use.
 
 ### …Light Bending
 
-{{< figure src="https://pbs.twimg.com/media/GtPwHs4WcAAegfa?format=jpg&name=900x900" alt="A Liquid Glass overlay on a starry sky backdrop. The overlay is bending and refracting the light of a star into a rainbow, similarly to how a real-life prism behaves" >}}
+![A Liquid Glass overlay on a starry sky backdrop. The overlay is bending and refracting the light of a star into a rainbow, similarly to how a real-life prism behaves](https://pbs.twimg.com/media/GtPwHs4WcAAegfa?format=jpg&name=900x900)
 
 Liquid Glass bends light like a prism. I find it difficult to describe how cool this is to me. 
 
@@ -85,7 +85,7 @@ Something you almost never notice is that, no matter the format, the text you re
 
 This isn't a problem for subtle transparency (for example, the background behind my site text is actually only 70% opaque), but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible. 
 
-{{< figure src="https://preview.redd.it/apples-liquid-glass-with-a-white-background-new-find-the-v0-1n1r4io5026f1.jpeg?width=640&crop=smart&auto=webp&s=da5f097e22749a3a59d4732e27199e7c1478e867" alt="iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'" >}}
+![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](https://preview.redd.it/apples-liquid-glass-with-a-white-background-new-find-the-v0-1n1r4io5026f1.jpeg?width=640&crop=smart&auto=webp&s=da5f097e22749a3a59d4732e27199e7c1478e867)
 
 For example, try to read the text at the bottom of the iOS 26 screenshot above. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
 
@@ -93,7 +93,7 @@ Apple claims that Liquid Glass dynamically adapts to the content behind it, but 
 
 ## Conclusion
 
-{{< figure src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/liquidglassmain2.jpg?quality=90&strip=all&crop=0,0,100,100" alt="Four Apple devices: A Macbook, an iPad, an iPhone, and an Apple Watch, all lined up in a row and using a glassmorphic Liquid Glass interface with frosted glass buttons and widgets" >}}
+![Four Apple devices: A Macbook, an iPad, an iPhone, and an Apple Watch, all lined up in a row and using a glassmorphic Liquid Glass interface with frosted glass buttons and widgets](https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/liquidglassmain2.jpg?quality=90&strip=all&crop=0,0,100,100)
 
 I'm still delighted by Liquid Glass. It has its share of critical flaws, but it still remains a stunningly sleek modern design. It's unique, futuristic, reactive, and *bends light like a prism*. Apple still needs to fix the adaptive text and also invent [computronium](https://en.wikipedia.org/wiki/Computronium) to solve their readability and performance issues, but I'm sure they're working on it.
 
