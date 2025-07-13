@@ -994,7 +994,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(var(--font-size-base) + 15px);
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -1030,10 +1029,14 @@ footer {
         &.copyright {
             z-index: 4;
             font-style: italic;
-            position: absolute;
-            right: 30px;
-            width: 100%;
-            text-align: center;
+            margin: auto;
+
+            @media (min-width: 768px) {
+                position: absolute;
+                right: 30px;
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &.repo,
