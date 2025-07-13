@@ -1025,6 +1025,7 @@ footer {
         }
 
         &.copyright {
+            z-index: 4;
             font-style: italic;
             position: absolute;
             right: 30px;
@@ -1034,6 +1035,7 @@ footer {
 
         &.repo,
         &.contact {
+            z-index: 5;
             @media (max-width: 768px) {
                 display: none;
             }
