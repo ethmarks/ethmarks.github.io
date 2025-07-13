@@ -1025,8 +1025,11 @@ footer {
         }
 
         &.copyright {
-            margin: auto;
             font-style: italic;
+            position: absolute;
+            right: 30px;
+            width: 100%;
+            text-align: center;
         }
 
         &.repo,
