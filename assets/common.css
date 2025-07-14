@@ -893,7 +893,7 @@ header {
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%) translateY(-20px) translate3d(0, 0, 0);
+    transform: translateX(-50%) translate3d(0, 0, 0);
     width: 100vw;
     max-width: 1000px;
     padding: 10px 15px;
@@ -1153,6 +1153,39 @@ code {
     display: block;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .animated,
+    h1.animated,
+    article.animated,
+    .post-frontmatter .post-info time.animated,
+    .post-tags .post-tag.animated,
+    .random-blog-btn-container.animated {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    header .title,
+    header nav a {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    header {
+        animation: none !important;
+        transform: translateX(-50%) translateY(0) translate3d(0, 0, 0) !important;
+    }
+
+    table:hover {
+        box-shadow: var(--shadow-table) !important;
+    }
+
+    .button-link:hover {
+        transform: none;
+    }
+}
+
 /*
 //
 //  KEYFRAMES
@@ -1226,6 +1259,9 @@ code {
 }
 
 @keyframes flyInFromTop {
+    from {
+        transform: translateX(-50%) translateY(-20px) translate3d(0, 0, 0);
+    }
     to {
         transform: translateX(-50%) translateY(0) translate3d(0, 0, 0);
     }
