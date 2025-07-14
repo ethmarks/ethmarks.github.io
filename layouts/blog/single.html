@@ -1,12 +1,15 @@
 {{ define "main" }}
 {{ $page := . }}
+{{ $minRead := math.Ceil (div (countwords $page.Content) 200.0) }}
 <div class="post-frontmatter">
 <h1 class="animated blog-title">{{ .Title }}</h1>
 {{ with .Date }}
 <div class="post-info animated">
     <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+    {{ if gt $minRead 1 }}
     <span class="separator"> · </span>
-    <span class="read-time">{{ math.Ceil (div (countwords $page.Content) 200.0) }} min read</span>
+    <span class="read-time">{{ $minRead }} min read</span>
+    {{ end }}
 </div>
 {{ end }}
 {{ with .Params.tags }}
