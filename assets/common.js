@@ -17,8 +17,10 @@
         const body = document.body;
         const footer = document.querySelector("footer");
         const article = document.querySelector("article");
+        const tolerance = 4;
         const isShortPage =
-            document.documentElement.scrollHeight <= window.innerHeight;
+            document.documentElement.scrollHeight <=
+            window.innerHeight + tolerance;
 
         // Update footer position
         if (footer) {
@@ -49,6 +51,7 @@
     }
 
     window.addEventListener("DOMContentLoaded", updateShortPageElements);
+    window.addEventListener("load", updateShortPageElements);
     window.addEventListener("resize", updateShortPageElements);
 })();
 
