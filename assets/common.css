@@ -26,6 +26,11 @@
     --color-chat-sender-bg: #3a3a3a;
     --color-chat-recipient-bg: #124161;
     --color-focus-outline: var(--color-accent-light);
+    --color-gradient-mint: linear-gradient(
+        135deg,
+        var(--color-text),
+        var(--color-accent)
+    );
 
     /* Fonts */
     --font-primary: "Nunito", sans-serif;
@@ -219,11 +224,7 @@ h1 {
 
     @-moz-document url-prefix() {
         /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: linear-gradient(
-            135deg,
-            var(--color-text),
-            var(--color-accent)
-        );
+        background: var(--color-gradient-mint);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -247,7 +248,7 @@ h4 {
 }
 
 .mint {
-    background: linear-gradient(135deg, var(--color-text), var(--color-accent));
+    background: var(--color-gradient-mint);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -926,11 +927,7 @@ header {
     & .title {
         font-weight: var(--font-weight-light) !important;
         display: inline-block;
-        background: linear-gradient(
-            135deg,
-            var(--color-text),
-            var(--color-accent)
-        );
+        background: var(--color-gradient-mint);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
