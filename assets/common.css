@@ -37,7 +37,7 @@
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
     --font-size-md: 1rem;
-    --font-size-h1: clamp(1.5rem, 8vw, 3rem);
+    --font-size-h1: clamp(1rem, 7vw, 3rem);
     --font-size-h2: 1.6rem;
     --font-size-h3: 1.4rem;
     --font-size-h4: 1.2rem;
@@ -49,7 +49,7 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
     --main-margin-top: 5rem;
-    --main-margin-top-mobile: 3rem;
+    --main-margin-top-mobile: 3.5rem;
     --article-margin-top: 1.875rem;
     --chat-padding-y: 0.625rem;
     --chat-padding-x: 1rem;
@@ -209,10 +209,10 @@ h4 {
 h1 {
     font-size: var(--font-size-h1);
     flex-shrink: 1;
-    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: var(--font-weight-bold);
     color: var(--color-h1);
 
@@ -230,10 +230,6 @@ h1 {
 
     &.animated {
         animation: slideInFromTop 1s var(--transition-timing) both;
-    }
-
-    &.blog-title {
-        max-width: clamp(300px, 80vw, 1200px);
     }
 }
 
@@ -286,19 +282,6 @@ article {
 
     &.animated {
         animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
-    }
-}
-
-time {
-    font-family: var(--font-secondary);
-    font-size: clamp(0.75rem, 4vw, 1.25rem);
-    font-style: italic;
-    color: var(--color-accent-medium);
-    display: block;
-    margin-bottom: var(--spacing-sm);
-
-    &.animated {
-        animation: timeSlideInFromLeft 0.8s var(--transition-timing) both;
     }
 }
 
@@ -486,7 +469,7 @@ table {
 }
 
 .external-link-row {
-    margin: var(--spacing-md) 0 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -507,7 +490,6 @@ table {
         border-radius: var(--radius-xl);
         font-size: var(--font-size-md);
         display: inline-flex;
-        align-items: center;
         gap: var(--spacing-sm);
         box-shadow: var(--shadow-button);
         position: relative;
@@ -612,8 +594,79 @@ pre {
     }
 }
 
-.post-tags {
-    margin: auto;
+.post-frontmatter {
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--spacing-lg);
+
+    @media (min-width: 768px) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .blog-title {
+        @media (min-width: 768px) {
+            text-align: center;
+            max-width: clamp(300px, 80vw, 1200px);
+        }
+
+        &.animated {
+            @media (max-width: 768px) {
+                animation: slideInFromLeft 0.5s 0.1s var(--transition-timing)
+                    both;
+            }
+        }
+    }
+
+    & .post-info time {
+        font-family: var(--font-secondary);
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--color-accent-medium);
+        display: block;
+        margin-bottom: var(--spacing-sm);
+
+        &.animated {
+            animation: slideInFromLeft 0.8s var(--transition-timing) both;
+            @media (max-width: 768px) {
+                animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
+                    both;
+            }
+        }
+    }
+
+    & .post-tags {
+        @media (max-width: 768px) {
+            margin: 0;
+            align-items: left;
+            justify-content: left;
+        }
+
+        & .post-tag {
+            @media (max-width: 768px) {
+                animation: slideInFromLeft 0.5s
+                    calc(var(--post-tag-animation-delay) + 0.3s)
+                    var(--transition-timing) both !important;
+            }
+        }
+    }
+
+    & .external-link-row {
+        @media (max-width: 768px) {
+            justify-content: left;
+            align-self: start;
+            margin-top: var(--spacing-md);
+        }
+
+        & a.external-link {
+            @media (max-width: 768px) {
+                padding: 0.8em 1.2em;
+            }
+        }
+    }
+}
+
+& .post-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
@@ -621,10 +674,6 @@ pre {
     align-items: center;
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
-
-    @media (min-width: 768px) {
-        width: 80%;
-    }
 
     & .post-tag {
         display: inline-block;
@@ -649,88 +698,88 @@ pre {
         &.animated {
             opacity: 0;
             transform: translateX(60px);
-            animation: postTagSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-                forwards;
+            animation: postTagSlideIn 0.6s var(--post-tag-animation-delay)
+                cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
 
-            &:nth-child(1) {
-                animation-delay: 0.05s;
-            }
+        &:nth-child(1) {
+            --post-tag-animation-delay: 0.05s;
+        }
 
-            &:nth-child(2) {
-                animation-delay: 0.1s;
-            }
+        &:nth-child(2) {
+            --post-tag-animation-delay: 0.1s;
+        }
 
-            &:nth-child(3) {
-                animation-delay: 0.15s;
-            }
+        &:nth-child(3) {
+            --post-tag-animation-delay: 0.15s;
+        }
 
-            &:nth-child(4) {
-                animation-delay: 0.2s;
-            }
+        &:nth-child(4) {
+            --post-tag-animation-delay: 0.2s;
+        }
 
-            &:nth-child(5) {
-                animation-delay: 0.25s;
-            }
+        &:nth-child(5) {
+            --post-tag-animation-delay: 0.25s;
+        }
 
-            &:nth-child(6) {
-                animation-delay: 0.3s;
-            }
+        &:nth-child(6) {
+            --post-tag-animation-delay: 0.3s;
+        }
 
-            &:nth-child(7) {
-                animation-delay: 0.35s;
-            }
+        &:nth-child(7) {
+            --post-tag-animation-delay: 0.35s;
+        }
 
-            &:nth-child(8) {
-                animation-delay: 0.4s;
-            }
+        &:nth-child(8) {
+            --post-tag-animation-delay: 0.4s;
+        }
 
-            &:nth-child(9) {
-                animation-delay: 0.45s;
-            }
+        &:nth-child(9) {
+            --post-tag-animation-delay: 0.45s;
+        }
 
-            &:nth-child(10) {
-                animation-delay: 0.5s;
-            }
+        &:nth-child(10) {
+            --post-tag-animation-delay: 0.5s;
+        }
 
-            &:nth-child(11) {
-                animation-delay: 0.55s;
-            }
+        &:nth-child(11) {
+            --post-tag-animation-delay: 0.55s;
+        }
 
-            &:nth-child(12) {
-                animation-delay: 0.6s;
-            }
+        &:nth-child(12) {
+            --post-tag-animation-delay: 0.6s;
+        }
 
-            &:nth-child(13) {
-                animation-delay: 0.65s;
-            }
+        &:nth-child(13) {
+            --post-tag-animation-delay: 0.65s;
+        }
 
-            &:nth-child(14) {
-                animation-delay: 0.7s;
-            }
+        &:nth-child(14) {
+            --post-tag-animation-delay: 0.7s;
+        }
 
-            &:nth-child(15) {
-                animation-delay: 0.75s;
-            }
+        &:nth-child(15) {
+            --post-tag-animation-delay: 0.75s;
+        }
 
-            &:nth-child(16) {
-                animation-delay: 0.8s;
-            }
+        &:nth-child(16) {
+            --post-tag-animation-delay: 0.8s;
+        }
 
-            &:nth-child(17) {
-                animation-delay: 0.85s;
-            }
+        &:nth-child(17) {
+            --post-tag-animation-delay: 0.85s;
+        }
 
-            &:nth-child(18) {
-                animation-delay: 0.9s;
-            }
+        &:nth-child(18) {
+            --post-tag-animation-delay: 0.9s;
+        }
 
-            &:nth-child(19) {
-                animation-delay: 0.95s;
-            }
+        &:nth-child(19) {
+            --post-tag-animation-delay: 0.95s;
+        }
 
-            &:nth-child(20) {
-                animation-delay: 1s;
-            }
+        &:nth-child(20) {
+            --post-tag-animation-delay: 1s;
         }
     }
 }
@@ -1164,15 +1213,15 @@ code {
     }
 }
 
-@keyframes timeSlideInFromLeft {
+@keyframes slideInFromLeft {
     from {
         opacity: 0;
-        transform: translateX(-40px) scale(0.9);
+        transform: translateX(-40px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0) scale(1);
+        transform: translateX(0);
     }
 }
 
