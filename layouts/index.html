@@ -1,10 +1,13 @@
 {{ define "resources" }}
 
-{{ $homeCss := resources.Get "home.css"|
-minify }}
+{{ $homeCss := resources.Get "home.css"| minify }}
 <link rel="stylesheet" href="{{ $homeCss.Permalink }}" />
+
 {{ $homeJs := resources.Get "home.js" | minify }}
 <script src="{{ $homeJs.Permalink }}"></script>
+
+{{ $tiltJs := resources.Get "vanilla-tilt.js" | minify }}
+<script src="{{ $tiltJs.Permalink }}" defer></script>
 
 {{ end }}
 {{ define "main" }}
