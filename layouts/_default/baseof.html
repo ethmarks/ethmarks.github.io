@@ -18,13 +18,70 @@
         <meta property="og:url" content="{{ .Permalink }}" />
         {{ $commonCss := resources.Get "common.css" | minify }}
         <link rel="stylesheet" href="{{ $commonCss.Permalink }}" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap"
-            rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link
+            rel="preload"
+            href="/fonts/Fira_Code.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-cyrillic-italic.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-cyrillic.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-latin-ext-italic.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-latin-ext.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Nunito-latin-italic.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Sen-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Sen-latin-ext.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
         {{ block "resources" . }}{{ end }}
