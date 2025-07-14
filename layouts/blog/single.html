@@ -5,7 +5,7 @@
 {{ with .Date }}
 <div class="post-info animated">
     <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
-    <span class="seperator"> · </span>
+    <span class="separator"> · </span>
     <span class="read-time">{{ math.Ceil (div (countwords $page.Content) 200.0) }} min read</span>
 </div>
 {{ end }}
