@@ -909,8 +909,6 @@ header {
     box-sizing: border-box;
     z-index: 1000;
     overflow: hidden;
-    /* Header itself still animates in */
-    animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     transition: backdrop-filter 0.3s;
 
     @media (max-width: 768px) {
@@ -942,10 +940,6 @@ header {
         border: none;
         outline: none;
         text-decoration: none;
-        transform: translateX(-300px);
-        animation: flyInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-            forwards;
-        opacity: 0.2;
 
         &:focus-visible {
             outline: 2px solid var(--color-focus-outline, var(--color-accent));
@@ -975,12 +969,6 @@ header {
             transition: background-color 0.2s ease, transform 0.2s ease;
             white-space: nowrap;
             text-decoration: none;
-            transform: translateX(350px);
-            /* Initial state for nav links */
-            opacity: 0;
-            /* Initial state for nav links */
-            animation: flyInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-                forwards;
 
             &:hover {
                 background-color: rgba(80, 80, 80, 0.7);
