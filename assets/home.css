@@ -28,6 +28,10 @@ main {
             width: 100%;
             text-align: center;
             text-transform: capitalize;
+
+            @media (max-width: 1000px) {
+                width: 90%;
+            }
             & span {
                 display: inline-block;
                 position: relative;
