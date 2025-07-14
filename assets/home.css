@@ -38,31 +38,32 @@ main {
             & h1 span {
                 animation: fall-and-tilt 1s cubic-bezier(0, 0.8, 0.2, 1)
                     forwards;
+                animation-delay: calc(var(--h1-span-animation-delay) + 0.5s);
 
                 &:nth-child(1) {
-                    animation-delay: 0s;
+                    --h1-span-animation-delay: 0s;
                 }
 
                 &:nth-child(2) {
-                    animation-delay: 0.1s;
+                    --h1-span-animation-delay: 0.1s;
                 }
 
                 &:nth-child(3) {
-                    animation-delay: 0.2s;
+                    --h1-span-animation-delay: 0.2s;
                 }
 
                 &:nth-child(4) {
-                    animation-delay: 0.3s;
+                    --h1-span-animation-delay: 0.3s;
                 }
 
                 &:nth-child(5) {
-                    animation-delay: 0.4s;
+                    --h1-span-animation-delay: 0.4s;
                 }
             }
 
             & p {
                 animation: fade-in-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-                animation-delay: 0.5s;
+                animation-delay: 1s;
             }
 
             & .card-container .tilt-card-wrapper {
@@ -70,15 +71,15 @@ main {
                     forwards;
 
                 &:nth-child(1) {
-                    animation-delay: 0.7s;
+                    animation-delay: 1.2s;
                 }
 
                 &:nth-child(2) {
-                    animation-delay: 0.8s;
+                    animation-delay: 1.3s;
                 }
 
                 &:nth-child(3) {
-                    animation-delay: 0.9s;
+                    animation-delay: 1.4s;
                 }
             }
         }
