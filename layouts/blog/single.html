@@ -1,9 +1,12 @@
 {{ define "main" }}
+{{ $page := . }}
 <div class="post-frontmatter">
 <h1 class="animated blog-title">{{ .Title }}</h1>
 {{ with .Date }}
-<div class="post-info">
-    <time class="animated" datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+<div class="post-info animated">
+    <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+    <span class="seperator"> · </span>
+    <span class="read-time">{{ math.Ceil (div (countwords $page.Content) 200.0) }} min read</span>
 </div>
 {{ end }}
 {{ with .Params.tags }}

@@ -610,21 +610,22 @@ pre {
     }
 
     & .post-info {
-        & time {
-            font-family: var(--font-secondary);
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--color-accent-medium);
-            display: block;
-            margin-bottom: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+        font-family: var(--font-secondary);
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--color-accent-medium);
 
-            &.animated {
-                animation: slideInFromLeft 0.8s var(--transition-timing) both;
-                @media (max-width: 768px) {
-                    animation: slideInFromLeft 0.5s 0.2s
-                        var(--transition-timing) both;
-                }
+        &.animated {
+            animation: slideInFromLeft 0.8s var(--transition-timing) both;
+            @media (max-width: 768px) {
+                animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
+                    both;
             }
+        }
+
+        & .seperator {
+            font-style: normal;
         }
     }
 

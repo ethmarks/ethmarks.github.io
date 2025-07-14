@@ -39,10 +39,11 @@
 
     <nav class="button-links">
         {{ range (where .Pages "Params.unlisted" "ne" true).ByDate.Reverse }}
+        {{ $post := . }}
         <a class="button-link" href="{{ .Permalink | relURL }}">
             <span class="content">
                 <span class="title">{{ .Title }}</span>
-                <span class="description">{{ .Date.Format "January 2, 2006" }}</span>
+                <span class="description">{{ .Date.Format "January 2, 2006" }} · {{ math.Ceil (div (countwords $post.Content) 200.0) }} min read</span>
             </span>
             <span class="tags">
                 {{ range .Params.tags }}
