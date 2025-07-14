@@ -54,10 +54,6 @@ physics:
   description: "Physics"
   definition: "Physics (noun) - the natural science that studies matter, its motion and behavior through space and energy"
   text: "Posts tagged as Physics are related to physics"
-quanth:
-  description: "The Quanth unit of measurement"
-  definition: "Quanth (noun) - a unit of length equal to 10^34 Planck Lengths"
-  text: "Posts tagged as Quanth are related to my new unit of measurement, the <a href='/blog/quanth'>Quanth</a>"
 personalwebsite:
   description: "Personal Website"
   definition: "Personal website (noun) - a website created and maintained by an individual"
