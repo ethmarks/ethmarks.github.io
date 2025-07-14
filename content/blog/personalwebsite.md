@@ -56,15 +56,17 @@ This site uses a dark theme with a spearmint teal accent colour.
 
 ## Lighthouse
 
-As of [June 9, 2025](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/uxk33xj1o8?form_factor=desktop), the site earns an average [Lighthouse](https://developer.chrome.com/docs/lighthouse) score of 99.75.
+As of July 14, 2025, the site earns a perfect 100 on [Google Lighthouse](https://developer.chrome.com/docs/lighthouse).
 
-![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](/media/lighthouse.webp)
+[![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](/media/lighthouse-2025-07-14.webp)](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/hhcjywik6m?form_factor=desktop)
 
-It's very close to a perfect score, but I lost one point in performance because of the 520 milliseconds (half a second) it takes to download the font.
+To quote the [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring): "A perfect score of 100 is extremely challenging to achieve and not expected".
+
+My site's exceptional performance is largely a consequence of my aversion to web frameworks. [Frameworks like React tend to be very heavy and slow](https://nuejs.org/blog/large-scale-apps/), so by using hand-written JavaScript and CSS, fewer bytes need to be transferred to load the page. I also use [WebP](https://en.wikipedia.org/wiki/WebP) and [WebM-AV1](https://en.wikipedia.org/wiki/AV1), the objectively best and most efficient formats for images and videos.
 
 ## Privacy
 
-This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and harvesting it sounds complicated. Your data remains yours because I don't want it and can't figure out how to get it.
+This site does not use cookies, trackers, analytics, or any external telemetry tools. This is partially because I care about your privacy, but mostly because I don't care about your personal information and collecting it sounds complicated. Your data remains yours because I don't want it and can't be bothered to harvest it.
 
 ## Accessibility
 
