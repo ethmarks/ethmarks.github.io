@@ -94,9 +94,11 @@ function runScrambleAnimation(element) {
     requestAnimationFrame(update);
 }
 
-// Apply scramble animation to all elements with .scramble class
+// Run scramble animation to all elements with .scramble class
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".scramble").forEach((element) => {
-        runScrambleAnimation(element);
-    });
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".scramble").forEach((element) => {
+            runScrambleAnimation(element);
+        });
+    }
 });

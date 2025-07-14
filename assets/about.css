@@ -3,10 +3,19 @@ h2 {
     font-size: 2rem;
 }
 
-article {
+h1 {
+    width: 100%;
+    text-align: center;
+
+    &.animated {
+        animation: slideInFromTop 1s var(--transition-timing) both !important;
+    }
+}
+
+main {
     @media (min-width: 768px) {
-        max-width: 85vw;
-        width: 85vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 }
 
