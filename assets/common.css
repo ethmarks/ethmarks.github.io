@@ -1095,20 +1095,6 @@ header {
             }
         }
     }
-
-    & .nav-animations-skipped {
-        animation-duration: 0s;
-        transform: translateX(-50%) translateY(0) translate3d(0, 0, 0);
-
-        & nav a {
-            animation-duration: 0s;
-            animation-delay: 0s;
-            /* Crucial to override staggered delays */
-            /* Ensure they jump to their final state */
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
 }
 
 footer {
