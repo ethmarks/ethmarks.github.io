@@ -29,7 +29,7 @@ At its core, the only thing that Liquid Glass does is make the iPhone look prett
 
 ### …Novel
 
-![Liquid Glass promotional material with the text \](https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg)
+![Liquid Glass promotional material with the text 'Introducing Liquid Glass'](https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg)
 
 Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
 
