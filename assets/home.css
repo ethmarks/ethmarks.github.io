@@ -1,6 +1,13 @@
 main {
     overflow: hidden;
     padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1000px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     article {
         z-index: 3;
@@ -12,11 +19,14 @@ main {
         flex-shrink: 1;
 
         @media (min-width: 1000px) {
-            width: 100%;
-            max-width: 100%;
+            border-radius: 0 !important;
+            border-left: none;
+            border-right: none;
         }
 
         & h1 {
+            width: 100%;
+            text-align: center;
             text-transform: capitalize;
             & span {
                 display: inline-block;

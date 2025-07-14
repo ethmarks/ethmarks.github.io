@@ -50,7 +50,10 @@
     --spacing-xl: 2rem;
     --main-margin-top: 5rem;
     --main-margin-top-mobile: 3.5rem;
-    --article-margin-top: 1.875rem;
+    --main-width: 100vw;
+    --main-width-mobile: 98vw;
+    --frontmatter-margin-left: var(--spacing-sm);
+    --article-margin-top: clamp(1rem, 4vw, 1.875rem);
     --chat-padding-y: 0.625rem;
     --chat-padding-x: 1rem;
     --chat-margin-bottom: 0.2rem;
@@ -178,18 +181,16 @@ body {
 }
 
 main {
-    width: 100%;
-    margin: var(--main-margin-top) 0 0;
+    max-width: var(--main-width);
+    box-sizing: border-box;
+    margin: var(--main-margin-top) 12vw 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     padding: 0;
-    /* Add some horizontal padding */
-    overflow-x: hidden;
 
     @media (max-width: 768px) {
-        margin: var(--main-margin-top-mobile) 0 0;
+        margin: var(--main-margin-top-mobile) auto 0;
+        max-width: var(--main-width-mobile);
     }
 }
 
@@ -207,12 +208,12 @@ h4 {
 }
 
 h1 {
+    width: fit-content;
     font-size: var(--font-size-h1);
     flex-shrink: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 0 0 var(--frontmatter-margin-left);
     font-weight: var(--font-weight-bold);
     color: var(--color-h1);
 
@@ -229,7 +230,7 @@ h1 {
     }
 
     &.animated {
-        animation: slideInFromTop 1s var(--transition-timing) both;
+        animation: slideInFromLeft 0.5s 0.1s var(--transition-timing) both;
     }
 }
 
@@ -254,8 +255,9 @@ h4 {
 
 article {
     margin: var(--article-margin-top) 0 0;
-    width: 75%;
-    max-width: 95%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: var(--spacing-md) var(--spacing-lg);
     background: var(--color-article-bg);
     border-radius: var(--radius-xl);
@@ -276,7 +278,6 @@ article {
     }
 
     @media (max-width: 768px) {
-        width: 90%;
         padding: var(--spacing-sm);
     }
 
@@ -495,7 +496,7 @@ table {
         position: relative;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-        animation: externalLinkReveal 1s var(--transition-timing) forwards;
+        animation: slideInFromLeft 0.5s 0.4s var(--transition-timing) both;
 
         &::after {
             /* Shimmer effect */
@@ -597,71 +598,54 @@ pre {
 .post-frontmatter {
     display: flex;
     flex-direction: column;
-    margin: 0 var(--spacing-lg);
-
-    @media (min-width: 768px) {
-        align-items: center;
-        justify-content: center;
-    }
+    margin: 0 0 0 var(--frontmatter-margin-left);
+    align-self: flex-start;
 
     & .blog-title {
+        margin-left: 0;
         @media (min-width: 768px) {
-            text-align: center;
             max-width: clamp(300px, 80vw, 1200px);
-        }
-
-        &.animated {
-            @media (max-width: 768px) {
-                animation: slideInFromLeft 0.5s 0.1s var(--transition-timing)
-                    both;
-            }
         }
     }
 
-    & .post-info time {
-        font-family: var(--font-secondary);
-        font-size: 1.2rem;
-        font-style: italic;
-        color: var(--color-accent-medium);
-        display: block;
-        margin-bottom: var(--spacing-sm);
+    & .post-info {
+        & time {
+            font-family: var(--font-secondary);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--color-accent-medium);
+            display: block;
+            margin-bottom: var(--spacing-sm);
 
-        &.animated {
-            animation: slideInFromLeft 0.8s var(--transition-timing) both;
-            @media (max-width: 768px) {
-                animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
-                    both;
+            &.animated {
+                animation: slideInFromLeft 0.8s var(--transition-timing) both;
+                @media (max-width: 768px) {
+                    animation: slideInFromLeft 0.5s 0.2s
+                        var(--transition-timing) both;
+                }
             }
         }
     }
 
     & .post-tags {
-        @media (max-width: 768px) {
-            margin: 0;
-            align-items: left;
-            justify-content: left;
-        }
+        margin: 0;
+        align-items: left;
+        justify-content: left;
 
         & .post-tag {
-            @media (max-width: 768px) {
-                animation: slideInFromLeft 0.5s
-                    calc(var(--post-tag-animation-delay) + 0.3s)
-                    var(--transition-timing) both !important;
-            }
+            animation: slideInFromLeft 0.5s
+                calc(var(--post-tag-animation-delay) + 0.3s)
+                var(--transition-timing) both !important;
         }
     }
 
     & .external-link-row {
-        @media (max-width: 768px) {
-            justify-content: left;
-            align-self: start;
-            margin-top: var(--spacing-md);
-        }
+        justify-content: left;
+        align-self: start;
+        margin-top: var(--spacing-md);
 
         & a.external-link {
-            @media (max-width: 768px) {
-                padding: 0.8em 1.2em;
-            }
+            padding: 0.8em 1.2em;
         }
     }
 }
@@ -1222,18 +1206,6 @@ code {
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes externalLinkReveal {
-    from {
-        transform: translateX(-30px) scale(0.9);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0) scale(1);
-        opacity: 1;
     }
 }
 
