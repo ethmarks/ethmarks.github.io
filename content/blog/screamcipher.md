@@ -8,7 +8,7 @@ link_name: CodePen
 link_icon: codepen
 ---
 
-![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](https://imgs.xkcd.com/comics/scream_cipher.png)
+![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](/media/xkcd_scream_cipher.webp)
 
 This is one of my favorite [xkcd](https://xkcd.com/) comics. It proposes the [Scream Cipher](https://xkcd.com/3054/), a creative, amusing, and not *completely* useless [cipher](https://en.wikipedia.org/wiki/Cipher).
 

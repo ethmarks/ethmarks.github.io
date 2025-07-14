@@ -12,7 +12,7 @@ link_icon: github
 
 I like how this looks, and I'll sometimes just run random photos through it to see how they turn out.
 
-![A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.](https://raw.githubusercontent.com/ColourlessSpearmint/ColourlessTransformer/main/images/walkway_painttransformer.jpg)
+![A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.](/media/painttransformer_walkway.webp)
 
 Another cool thing you can do is save each step as a frame, which creates a cool animation similar to a [watercolor timelapse](https://youtu.be/1rc0qmqcqMY).
 

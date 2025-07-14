@@ -10,7 +10,7 @@ link_icon: colab
 
 [ELIZA](https://en.wikipedia.org/wiki/ELIZA) was the first computer chatbot. Think of it as the great-great-great-grandparent of ChatGPT.
 
-![An example conversation with ELIZA](https://miro.medium.com/v2/resize:fit:1200/1*l_OiRGmLi-8yCrdjg5bfig.png)
+![An example conversation with ELIZA](/media/eliza_example.webp)
 
 ELIZA's source code was written by Joseph Weizenbaum in 1966 in the [SLIP](https://en.wikipedia.org/wiki/SLIP_(programming_language)) programming language, which is a fork of [MAD](https://en.wikipedia.org/wiki/MAD_(programming_language)). My computer obviously doesn't run a 66-year-old programming language written for the [UNIVAC 1107](https://en.wikipedia.org/wiki/UNIVAC_1100/2200_series#1107).
 

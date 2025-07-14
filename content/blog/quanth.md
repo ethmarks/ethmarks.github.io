@@ -23,7 +23,7 @@ For the rest of the article to make sense, you'll need a basic understanding of 
 
 The smaller something is, the less it's affected by **general gravity** and the more it starts to be affected by **quantum gravity**. We don't yet know how to accurately model the effects of quantum gravity, so the more influencial quantum gravity is the less accurately we're able to measure things. Even perfectly flat surfaces look wavy and foamy due to quantum uncertainty. 
 
-![The Planck Length](https://miro.medium.com/v2/resize:fit:1400/1*CXYYAJUS14Q_8nXCx2i5Gg.png)
+![The Planck Length](/media/plancklengthfoam.webp)
 
 The length where general and quantum gravity are equal is called a **Planck Length**. It's the smallest length we can measure with any amount of accuracy, so it's commonly described as the pixel size of the universe.
 

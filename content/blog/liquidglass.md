@@ -17,7 +17,7 @@ That being said, I absolutely love Liquid Glass. At no other point in time has m
 
 Liquid Glass is just the Applelogism (A portmanteau of [Apple](https://en.wikipedia.org/wiki/Apple_Inc.) and [neologism](https://en.wiktionary.org/wiki/neologism) coined by me to describe Apple's tendency to take popular existing concepts and rebrand them under a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator): a design philosophy that uses translucent blur effects to emulate [frosted glass](https://en.wikipedia.org/wiki/Frosted_glass).
 
-![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](https://img.sysnettechsolutions.com/What-is-Windows-Vista-Nedir-01.webp)
+![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](/media/windows_vista.webp)
 
 As [many](https://www.instagram.com/reel/DKvIXjChU0L/?hl=en) [other](https://www.pcmag.com/news/did-apple-liquid-glass-design-steal-from-windows-vista-wwdc-2025) [people](https://www.reddit.com/r/windows/comments/1l7eqia/apple_liquid_glass_be_like/) [have](https://www.engadget.com/computing/apples-liquid-glass-is-windows-vista-done-well-181954910.html) [pointed](https://www.windowscentral.com/apple/apple-liquid-glass-wwdc-sorry-imitation-of-windows-vista-aero) [out](https://www.reddit.com/r/MacOS/comments/1l8pvm7/is_it_just_me_or_liquid_glass_reminds_frutiger/), Apple absolutely did not invent glassmorphism. Frosted glass designs were first popularized by [Windows Aero](https://en.wikipedia.org/wiki/Windows_Aero) in 2007, and [lots](https://css.glass/) [of](https://tricks-glassmorphism.webflow.io/) [other](https://reflect.app/) [designers](https://hype4.academy/tools/glassmorphism-generator) [have](https://www.reflectorai.app/) [used](https://www.behance.net/gallery/113924121/Kit-UI-Glassmorphism-trend#) [it](https://leanrada.com/) [since](https://jetgirl.art/), including me!
 
@@ -29,7 +29,7 @@ At its core, the only thing that Liquid Glass does is make the iPhone look prett
 
 ### …Novel
 
-![Liquid Glass promotional material with the text 'Introducing Liquid Glass'](https://i.ytimg.com/vi/jGztGfRujSE/maxresdefault.jpg)
+![Liquid Glass promotional material with the text 'Introducing Liquid Glass'](/media/introducing_liquid_glass.webp)
 
 Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
 
@@ -37,7 +37,7 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 ### …Futuristic
 
-![Two VisionOS panels using Liquid Glass displaying information about the weather](https://cdn.macstories.net/screenshot-02-04-2024-19-35-44-1707094523402.png)
+![Two VisionOS panels using Liquid Glass displaying information about the weather](/media/vision_os.webp)
 
 Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
@@ -53,7 +53,7 @@ Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and rea
 
 ### …Light Bending
 
-![A Liquid Glass overlay on a starry sky backdrop. The overlay is bending and refracting the light of a star into a rainbow, similarly to how a real-life prism behaves](https://pbs.twimg.com/media/GtPwHs4WcAAegfa?format=jpg&name=900x900)
+![A Liquid Glass overlay on a starry sky backdrop. The overlay is bending and refracting the light of a star into a rainbow, similarly to how a real-life prism behaves](/media/liquid_glass_prism.webp)
 
 Liquid Glass bends light like a prism. I find it difficult to describe how cool this is to me. 
 
@@ -85,7 +85,7 @@ Something you almost never notice is that, no matter the format, the text you re
 
 This isn't a problem for subtle transparency (for example, the background behind my site text is actually only 70% opaque), but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible. 
 
-![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](https://preview.redd.it/apples-liquid-glass-with-a-white-background-new-find-the-v0-1n1r4io5026f1.jpeg?width=640&crop=smart&auto=webp&s=da5f097e22749a3a59d4732e27199e7c1478e867)
+![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](/media/liquid_glass_contrast.webp)
 
 For example, try to read the text at the bottom of the iOS 26 screenshot above. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
 
@@ -93,7 +93,7 @@ Apple claims that Liquid Glass dynamically adapts to the content behind it, but 
 
 ## Conclusion
 
-![Four Apple devices: A Macbook, an iPad, an iPhone, and an Apple Watch, all lined up in a row and using a glassmorphic Liquid Glass interface with frosted glass buttons and widgets](https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/liquidglassmain2.jpg?quality=90&strip=all&crop=0,0,100,100)
+![Four Apple devices: A Macbook, an iPad, an iPhone, and an Apple Watch, all lined up in a row and using a glassmorphic Liquid Glass interface with frosted glass buttons and widgets](/media/liquid_glass_lineup.webp)
 
 I'm still delighted by Liquid Glass. It has its share of critical flaws, but it still remains a stunningly sleek modern design. It's unique, futuristic, reactive, and *bends light like a prism*. Apple still needs to fix the adaptive text and also invent [computronium](https://en.wikipedia.org/wiki/Computronium) to solve their readability and performance issues, but I'm sure they're working on it.
 
