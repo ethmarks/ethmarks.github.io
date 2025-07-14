@@ -1,14 +1,7 @@
 (function loadQuicklink() {
-    if (typeof quicklink === "undefined") {
-        const script = document.createElement("script");
-        script.src = "https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js";
-        script.onload = () => {
-            quicklink.listen();
-        };
-        document.head.appendChild(script);
-    } else {
+    window.addEventListener("load", () => {
         quicklink.listen();
-    }
+    });
 })();
 
 // Handle short pages: fix footer, background, and anchor article

@@ -16,9 +16,10 @@
         <meta property="og:type" content="website" />
         {{ end }}
         <meta property="og:url" content="{{ .Permalink }}" />
-        {{ $commonCss := resources.Get "common.css" | minify }}
-        <link rel="stylesheet" href="{{ $commonCss.Permalink }}" />
+
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Font Preloads -->
         <link
             rel="preload"
             href="/fonts/Fira_Code.woff2"
@@ -82,8 +83,16 @@
             type="font/woff2"
             crossorigin
         />
+
+        {{ $commonCss := resources.Get "common.css" | minify }}
+        <link rel="stylesheet" href="{{ $commonCss.Permalink }}" />
+
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
+
+        {{ $quicklinkJs := resources.Get "quicklink.js" | minify }}
+        <script src="{{ $quicklinkJs.Permalink }}" defer></script>
+
         {{ block "resources" . }}{{ end }}
     </head>
     <body>
