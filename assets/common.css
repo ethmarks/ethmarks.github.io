@@ -367,6 +367,7 @@ article {
     border: var(--border-standard);
     transform: translateY(0);
     transition: var(--transition-transform-shadow);
+    overflow-x: hidden;
 
     & > :first-child {
         @media (max-width: 768px) {
