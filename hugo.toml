@@ -1,6 +1,6 @@
 baseURL = "https://colourlessspearmint.github.io"
 languageCode = "en-us"
-title = "Ethan's Personal Website"
+title = "Ethan Marks"
 
 [taxonomies]
   tag = "tags"
