@@ -1,9 +1,9 @@
 {{ define "main" }}
-<h1 class="animated">{{ .Title }}</h1>
+<h1 class="animated">
+    {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
+</h1>
 <article class="animated">
-    {{ with index .Site.Data.tags (.Title | urlize) }} {{ if .definition }}
-    <p class="definition">{{ .definition }}</p>
-    {{ end }} {{ if .text }}
+    {{ with index .Site.Data.tags (.Title | urlize) }} {{ if .text }}
     <p>{{ .text | safeHTML }}</p>
     {{ end }} {{ end }} {{ partial "post-links.html" .Pages }}
 </article>
