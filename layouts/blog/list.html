@@ -37,26 +37,7 @@
         </button>
     </div>
 
-    <nav class="post-links">
-        {{ range (where .Pages "Params.unlisted" "ne" true).ByDate.Reverse }}
-        {{ $post := . }}
-        {{ $minRead := math.Ceil (div (countwords $post.Content) 200.0) }}
-        <a class="post-link" href="{{ .Permalink | relURL }}">
-            <span class="content">
-                <span class="title">{{ .Title }}</span>
-                <span class="description">
-                    {{ .Date.Format "January 2, 2006" }}
-                    {{ if gt $minRead 1 }} · {{ $minRead }} min read{{ end }}
-                </span>
-            </span>
-            <span class="tags">
-                {{ range .Params.tags }}
-                <span class="tag">{{ . }}</span>
-                {{ end }}
-            </span>
-        </a>
-        {{ end }}
-    </nav>
+    {{ partial "post-links.html" .Pages }}
 </article>
 {{ end }}
 
