@@ -22,9 +22,9 @@
 
     <div class="post-tags">
         {{ range first 10 .Site.Taxonomies.tags.ByCount }}
-        <a class="post-tag animated" href="{{ .Page.Permalink | relURL }}">#{{ .Page.Title }}</a>
+        <a class="post-tag animated staggered" href="{{ .Page.Permalink | relURL }}">#{{ .Page.Title }}</a>
         {{ end }}
-        <a class="post-tag animated" href="{{ "/tags/" | relURL }}">...</a>
+        <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
     </div>
 
     <div class="random-blog-btn-container animated">

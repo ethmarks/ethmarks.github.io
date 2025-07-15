@@ -15,7 +15,7 @@
 {{ with .Params.tags }}
 <div class="post-tags">
     {{ range . }}
-    <a class="post-tag animated" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+    <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
     {{ end }}
 </div>
 {{ end }}

@@ -221,6 +221,7 @@
             transparent 50%
         ),
         var(--color-background);
+    --child-animation-delay: 0s;
 }
 
 .lightmode {
@@ -763,7 +764,7 @@ code {
 
         & .post-tag {
             animation: slideInFromLeft 0.5s
-                calc(var(--post-tag-animation-delay) + 0.3s)
+                calc(var(--child-animation-delay) + 0.3s)
                 var(--transition-timing) both !important;
         }
     }
@@ -811,89 +812,91 @@ code {
         &.animated {
             opacity: 0;
             transform: translateX(60px);
-            animation: postTagSlideIn 0.6s var(--post-tag-animation-delay)
+            animation: postTagSlideIn 0.6s var(--child-animation-delay)
                 cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         }
+    }
+}
 
-        &:nth-child(1) {
-            --post-tag-animation-delay: 0.05s;
-        }
+.staggered {
+    &:nth-child(1) {
+        --child-animation-delay: 0.05s;
+    }
 
-        &:nth-child(2) {
-            --post-tag-animation-delay: 0.1s;
-        }
+    &:nth-child(2) {
+        --child-animation-delay: 0.1s;
+    }
 
-        &:nth-child(3) {
-            --post-tag-animation-delay: 0.15s;
-        }
+    &:nth-child(3) {
+        --child-animation-delay: 0.15s;
+    }
 
-        &:nth-child(4) {
-            --post-tag-animation-delay: 0.2s;
-        }
+    &:nth-child(4) {
+        --child-animation-delay: 0.2s;
+    }
 
-        &:nth-child(5) {
-            --post-tag-animation-delay: 0.25s;
-        }
+    &:nth-child(5) {
+        --child-animation-delay: 0.25s;
+    }
 
-        &:nth-child(6) {
-            --post-tag-animation-delay: 0.3s;
-        }
+    &:nth-child(6) {
+        --child-animation-delay: 0.3s;
+    }
 
-        &:nth-child(7) {
-            --post-tag-animation-delay: 0.35s;
-        }
+    &:nth-child(7) {
+        --child-animation-delay: 0.35s;
+    }
 
-        &:nth-child(8) {
-            --post-tag-animation-delay: 0.4s;
-        }
+    &:nth-child(8) {
+        --child-animation-delay: 0.4s;
+    }
 
-        &:nth-child(9) {
-            --post-tag-animation-delay: 0.45s;
-        }
+    &:nth-child(9) {
+        --child-animation-delay: 0.45s;
+    }
 
-        &:nth-child(10) {
-            --post-tag-animation-delay: 0.5s;
-        }
+    &:nth-child(10) {
+        --child-animation-delay: 0.5s;
+    }
 
-        &:nth-child(11) {
-            --post-tag-animation-delay: 0.55s;
-        }
+    &:nth-child(11) {
+        --child-animation-delay: 0.55s;
+    }
 
-        &:nth-child(12) {
-            --post-tag-animation-delay: 0.6s;
-        }
+    &:nth-child(12) {
+        --child-animation-delay: 0.6s;
+    }
 
-        &:nth-child(13) {
-            --post-tag-animation-delay: 0.65s;
-        }
+    &:nth-child(13) {
+        --child-animation-delay: 0.65s;
+    }
 
-        &:nth-child(14) {
-            --post-tag-animation-delay: 0.7s;
-        }
+    &:nth-child(14) {
+        --child-animation-delay: 0.7s;
+    }
 
-        &:nth-child(15) {
-            --post-tag-animation-delay: 0.75s;
-        }
+    &:nth-child(15) {
+        --child-animation-delay: 0.75s;
+    }
 
-        &:nth-child(16) {
-            --post-tag-animation-delay: 0.8s;
-        }
+    &:nth-child(16) {
+        --child-animation-delay: 0.8s;
+    }
 
-        &:nth-child(17) {
-            --post-tag-animation-delay: 0.85s;
-        }
+    &:nth-child(17) {
+        --child-animation-delay: 0.85s;
+    }
 
-        &:nth-child(18) {
-            --post-tag-animation-delay: 0.9s;
-        }
+    &:nth-child(18) {
+        --child-animation-delay: 0.9s;
+    }
 
-        &:nth-child(19) {
-            --post-tag-animation-delay: 0.95s;
-        }
+    &:nth-child(19) {
+        --child-animation-delay: 0.95s;
+    }
 
-        &:nth-child(20) {
-            --post-tag-animation-delay: 1s;
-        }
+    &:nth-child(20) {
+        --child-animation-delay: 1s;
     }
 }
 
@@ -950,6 +953,26 @@ code {
     margin-bottom: 1rem;
     cursor: pointer;
 
+    &.animated {
+        animation: postLinkAnim 1s
+            calc(var(--child-animation-delay) * 2 + 0.05s)
+            var(--transition-timing) both;
+
+        @media (min-width: 768px) {
+            transform: translateY(-10px);
+        }
+
+        @media (max-width: 768px) {
+            &:nth-child(odd) {
+                transform: translateX(50px);
+            }
+
+            &:nth-child(even) {
+                transform: translateX(-50px);
+            }
+        }
+    }
+
     &:hover,
     &:focus {
         text-decoration: none;
@@ -976,7 +999,7 @@ code {
         flex-shrink: 0;
         margin-left: 1em;
 
-        @media (max-width: 600px) {
+        @media (max-width: 1000px) {
             display: none;
         }
     }
@@ -1331,6 +1354,16 @@ iframe {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes postLinkAnim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
     }
 }
 
