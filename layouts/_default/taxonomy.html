@@ -6,11 +6,11 @@
     {{ end }} {{ if .text }}
     <p>{{ .text | safeHTML }}</p>
     {{ end }} {{ end }}
-    <nav class="button-links">
+    <nav class="post-links">
         {{ range (where .Pages "Params.unlisted" "ne" true).ByDate.Reverse }} {{
         $post := . }} {{ $minRead := math.Ceil (div (countwords $post.Content)
         200.0) }}
-        <a class="button-link" href="{{ .Permalink | relURL }}">
+        <a class="post-link" href="{{ .Permalink | relURL }}">
             <span class="content">
                 <span class="title">{{ .Title }}</span>
                 <span class="description">

@@ -1,5 +1,5 @@
 function redirectToRandomBlog() {
-    const links = document.querySelectorAll("a.button-link[href]");
+    const links = document.querySelectorAll("a.post-link[href]");
     if (!links.length) {
         document.body.innerText = "No blog posts found.";
         return;

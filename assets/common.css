@@ -932,7 +932,7 @@ code {
     }
 }
 
-.button-link {
+.post-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1276,7 +1276,7 @@ iframe {
         box-shadow: var(--shadow-table) !important;
     }
 
-    .button-link:hover {
+    .post-link:hover {
         transform: none;
     }
 }
