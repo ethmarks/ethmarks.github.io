@@ -1,11 +1,11 @@
 ---
 title: Firefox is the only browser that handles background-clip correctly
 date: 2025-07-11
-tags: [programming, webdev, personalwebsite]
+tags: [programming, webdev, personal website]
 description: I discovered the compatibility issues of the CSS background-clip attribute
 ---
 
-Earlier today, I opened my [personal website](/blog/personalwebsite) in Google Chrome for the first time and had to work around a browser compatibility bug that's older than I am.
+Earlier today, I opened my [personal website](/blog/personal website) in Google Chrome for the first time and had to work around a browser compatibility bug that's older than I am.
 
 As a long-time Firefox user, I'd never even thought to test my site in another browser. The only reason I was using Chrome was because I was trying to work around *another* compatibility bug. It all started with my laptop. My laptop is fairly powerful, which means that it's heavy and has an abysmal battery life. Because of this, I use a [laptop dock](https://www.youtube.com/watch?v=Pc31L3zJiaU) to effectively turn it into a desktop with a built-in keyboard. I'd like to be able to code from places other than my desk, so I've been considering buying a cheap portable laptop with just barely enough processing power to run a browser, and using a [remote tunnel](https://code.visualstudio.com/docs/remote/tunnels) to puppeteer my main laptop that has all of my files on it. The best way to do this seems to be [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev), so I decided to try it out and see if it was viable. I booted up the webpage in Firefox, aaaaand it doesn't work.
 
