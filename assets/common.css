@@ -723,20 +723,20 @@ code {
     }
 }
 
-.post-frontmatter {
+.frontmatter {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 var(--frontmatter-margin-left);
     align-self: flex-start;
 
-    & .blog-title {
+    & .title {
         margin-left: 0;
         @media (min-width: 768px) {
             max-width: clamp(300px, 80vw, 1200px);
         }
     }
 
-    & .post-info {
+    & .info {
         margin-bottom: var(--spacing-sm);
         font-family: var(--font-secondary);
         font-size: 1.2rem;
@@ -1252,7 +1252,7 @@ iframe {
     .animated,
     h1.animated,
     article.animated,
-    .post-frontmatter .post-info time.animated,
+    .frontmatter .info time.animated,
     .post-tags .post-tag.animated,
     .random-blog-btn-container.animated {
         animation: none !important;
