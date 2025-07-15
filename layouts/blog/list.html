@@ -1,9 +1,6 @@
 {{ define "main" }}
-<h1 class="animated">Blog</h1>
+<h1 class="animated">Blog ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
 <article class="animated">
-    <p class="definition">
-        Blog (noun) - an online journal of thoughts
-    </p>
     <p>
         This is my blog. I use it to share things that I've written,
         usually essays about things that I've made or that interest
