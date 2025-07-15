@@ -8,13 +8,13 @@ link_name: GitHub Repo
 link_icon: github
 ---
 
-![llamafile banner](/media/llamafile_banner.webp)
+![llamafile banner](~/llamafile_banner.webp)
 
 Last week, I stumbled upon [llamafile](https://github.com/Mozilla-Ocho/llamafile). It's a file format developed by [Mozilla](https://www.mozilla.org/en-US/) that stores the weights and code of [LLMs](https://en.wikipedia.org/wiki/Large_language_model) as pre-compiled [binary machine code](https://en.wikipedia.org/wiki/Binary_code). What this means is that you can run a llamafile on *any* computer without installing *anything* else.
 
 Actually, I need to qualify the "run on any computer" statement a bit. Llamafiles can run on any computer running [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows), [MacOS](https://en.wikipedia.org/wiki/MacOS), [Linux](https://en.wikipedia.org/wiki/Linux), [FreeBSD](https://en.wikipedia.org/wiki/FreeBSD), [NetBSD](https://en.wikipedia.org/wiki/NetBSD), or [OpenBSD](https://en.wikipedia.org/wiki/OpenBSD). The computer needs to have a [64-bit AMD processor](https://en.wikipedia.org/wiki/AMD), an [Intel processor newer than 2006](https://en.wikipedia.org/wiki/List_of_Intel_processors), a [64-bit ARM processor](https://en.wikipedia.org/wiki/ARM_architecture_family), or an [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon) processor. You'll also need a non-trivial amount of RAM: 4 gigabtyes at minimum. These requirements are very lax, and your computer probably meets those specifications if it was manufactured less than a decade ago.
 
-![A video demonstration of the Gemma 3 llamafile running on the Nvidia 1650 in my Windows 11 laptop. It runs at 34.46 tokens per second, and gives complete answers including bullet points and comparison tables](/media/llamafile_demo.webm)
+![A video demonstration of the Gemma 3 llamafile running on the Nvidia 1650 in my Windows 11 laptop. It runs at 34.46 tokens per second, and gives complete answers including bullet points and comparison tables](~/llamafile_demo.webm)
 
 I *don't* need to qualify the "without installing anything" statement, though. You really can just download a llamafile and run it. Above is a demonstration with a freshly-downloaded llamafile of a [distilled](https://developers.google.com/machine-learning/glossary#distillation) and [quantized](https://developers.google.com/machine-learning/glossary#quantization) version of [Google Gemma 3](https://deepmind.google/models/gemma/gemma-3/) running on my Windows 11 laptop.
 

@@ -6,7 +6,7 @@ tags: [figments, poetry]
 description: A poem about a world with a fragmented moon
 ---
 
-![A watercolour painting of a shattered, broken moon hanging in the sky above craggy mountains, generated with Imagen 4](/media/shattered_moon.webp)
+![A watercolour painting of a shattered, broken moon hanging in the sky above craggy mountains, generated with Imagen 4](~/shattered_moon.webp)
 
 {{< blockquote >}}
 The shattered orb, a crown askew,  

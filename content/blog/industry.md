@@ -5,7 +5,7 @@ tags: [figments, poetry, automation]
 description: A poem and reflection on the sights and sounds of industrial progress and machinery.
 ---
 
-![A complex and massive industrial chamber robotic arms, an assembly line, and welding sparks, all doused in cold blue light; generated with Imagen 3](/media/industry.webp)
+![A complex and massive industrial chamber robotic arms, an assembly line, and welding sparks, all doused in cold blue light; generated with Imagen 3](~/industry.webp)
 
 {{< blockquote >}}
 The dawn's first light, a furnace glow,  

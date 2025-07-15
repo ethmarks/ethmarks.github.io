@@ -24,7 +24,7 @@ This site is completely static and was programmed from scratch in pure vanilla [
 
 This site is hosted on [GitHub Pages](https://pages.github.com/). I chose GitHub Pages because it's free, seems reputable, and I was already going to use GitHub for source control.
 
-![My Github Pages deployment workflow](/media/ghpages.webp)
+![My Github Pages deployment workflow](~/ghpages.webp)
 
 ### Build
 
@@ -58,7 +58,7 @@ This site uses a dark theme with a spearmint teal accent colour.
 
 As of July 14, 2025, the site earns a perfect 100 on [Google Lighthouse](https://developer.chrome.com/docs/lighthouse).
 
-[![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](/media/lighthouse-2025-07-14.webp)](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/hhcjywik6m?form_factor=desktop)
+[![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-07-14.webp)](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/hhcjywik6m?form_factor=desktop)
 
 To quote the [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring): "A perfect score of 100 is extremely challenging to achieve and not expected".
 

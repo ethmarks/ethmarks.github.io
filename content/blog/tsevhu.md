@@ -5,7 +5,7 @@ tags: [curios, language]
 description: An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.
 ---
 
-![A poem written in Tsevhu](/media/tsevhu_poem.svg)
+![A poem written in Tsevhu](~/tsevhu_poem.svg)
 
 [Tsevhu](https://conlang.fandom.com/wiki/Tsevhu) is a [constructed language](https://en.wikipedia.org/wiki/Constructed_language) which is written with fish-like glyphs rather than Latin letters.
 
@@ -34,7 +34,7 @@ This is a lovely little poem, but what's interesting is how it's encoded with fi
 
 ## Grammar
 
-![A Tsevhu grammar chart](/media/tsevhu_grammar.webp)
+![A Tsevhu grammar chart](~/tsevhu_grammar.webp)
 
 ### Clauses
 
@@ -77,7 +77,7 @@ This is obviously too many for me to put in this blog post, so I'll just provide
 
 Tsevhu is a cool little language. I'm glad I stumbled upon this corner of the internet; conlang linguists are really creative.
 
-![A Tsevhu poem written on parchment that translates to a thank you poem](/media/tsevhu_thanks.webp)
+![A Tsevhu poem written on parchment that translates to a thank you poem](~/tsevhu_thanks.webp)
 
 Translation:
 

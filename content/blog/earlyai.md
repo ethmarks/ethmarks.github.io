@@ -25,7 +25,7 @@ I got into AI about 7 months before the rest of the world did. This foresight ma
 
 ELIZA is widely considered to be the first chatbot. It was developed by Joseph Weizenbaum as an experiment in natural language processing. ELIZA was designed to be a Rogerian Psychotherapist, which in a nutshell means it mostly just echoes whatever the patient says but in question form (e.g. "I am having an uaygwdkiajwhbd day" gets the response "why are you having an uaygwdkiajwhbd day?").
 
-Behind the scenes, ELIZA was a fairly rudimentary pattern-matching algorithm with a medium-sized list of responses. This is the simplest form of chatbot and the first solution most people think of; I independently invented it when I was 10 years old when I made [my own pattern-matching chatbot in Scratch](/media/aurumassistant.webp).
+Behind the scenes, ELIZA was a fairly rudimentary pattern-matching algorithm with a medium-sized list of responses. This is the simplest form of chatbot and the first solution most people think of; I independently invented it when I was 10 years old when I made [my own pattern-matching chatbot in Scratch](~/aurumassistant.webp).
 
 Despite its basic implementation, ELIZA proved to be quite convincing. Even when Weizenbaum explained ELIZA's protocolic reasoning, many users insisted that it was intelligent and understood what they were telling it. Reportedly, Weizenbaum's secretary insisted that he leave the room so that she could speak privately with ELIZA. The word Weizenbaum chose to describe people's reaction to his program was "delusion".
 
@@ -55,7 +55,7 @@ ELIZA, PARRY, and ALICE were all programmed to deflect questions when they didn'
 
 For example, when I was testing Cleverbot for the first time, it tried to convince me that *my* name was Cleverbot. I played along, and then regretted it. Cleverbot is weird.
 
-![My first conversation with Cleverbot (Cleverbot in blue)](/media/cleverbot.webp)
+![My first conversation with Cleverbot (Cleverbot in blue)](~/cleverbot.webp)
 
 ## [Siri](https://en.wikipedia.org/wiki/Siri) (2010)
 

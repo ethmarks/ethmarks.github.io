@@ -5,7 +5,7 @@ tags: [programming, webdev, personalwebsite]
 description: I switched from using my custom Python SSG to using Hugo
 ---
 
-![A faithful replication of the official Hugo banner used in their documentation, with the text modified to read 'Switching to Hugo'](/media/hugo-banner.webp)
+![A faithful replication of the official Hugo banner used in their documentation, with the text modified to read 'Switching to Hugo'](~/hugo-banner.webp)
 
 Up until yesterday, I wrote all of my blog posts in [Mint Flavoured Markdown](/blog/mfm) and rendered them into [HTML](https://en.wikipedia.org/wiki/HTML) with a [Python](https://www.python.org/) script I wrote called build.py. Build.py was very helpful in simplifying the process of writing new blog posts. The final version of build.py is archived [here](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py).
 
@@ -19,11 +19,11 @@ Many of my [projects](/tags/projects) were developed in an effort to solve a cur
 
 Hugo is blazingly fast. As of today (July 10), a full Hugo build of my site takes 125 milliseconds. 
 
-![My Hugo site takes 125 milliseconds to build 85 pages and 60 static files](/media/hugo-build-screenshot.webp)
+![My Hugo site takes 125 milliseconds to build 85 pages and 60 static files](~/hugo-build-screenshot.webp)
 
 To put that in perspective, let's imagine that I connected my laptop to a train horn and rigged Hugo such that the instant the site build started, it would trigger the train horn. Now let's imagine that you're standing only 42.9 meters (one and a half basketball courts) away. Hugo would finish its build *before* the sound from the train horn reached you. And that's only counting the time for the sound wave to reach your location! In the time it would take for you to actually process the sound and react to it, Hugo could have built the site two and a half additional times.
 
-![Pictogram illustrating a laptop wired up to a train horn, generated with Imagen 4](/media/laptop-train-horn.webp)
+![Pictogram illustrating a laptop wired up to a train horn, generated with Imagen 4](~/laptop-train-horn.webp)
 
 And this is only for a *full* build. If I only re-build a single page, it takes as little as 9 milliseconds (I've seen it at 3ms a few times, but it averages closer to 7-10). To expand on the train horn analogy, if my laptop-train-horn apparatus was at the foot of a king-sized bed while you were at the other end, the Hugo build would complete *before* you went deaf from the train horn 3 meters away from your ears.
 

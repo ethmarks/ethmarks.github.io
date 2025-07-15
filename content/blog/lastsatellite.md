@@ -5,7 +5,7 @@ tags: [figments, sci-fi, short-story]
 description: A short story about the last satellite orbiting a post-human Earth and its final descent.
 ---
 
-![A watercolor painting of a satellite burning up on re-entry; generated with Imagen 3](/media/satellite.webp)
+![A watercolor painting of a satellite burning up on re-entry; generated with Imagen 3](~/satellite.webp)
 
 In the silence of a world reclaimed, Earth had become a quiet sanctuary. The ruins of its past, once mighty citadels of steel and glass, lay sprawled across the land like relics in a forgotten tomb. Forests, thick with the grandeur of untouched wilderness, swathed their roots through crumbled streets, while vines coiled and flourished around the remnants of shattered skyscrapers. The rivers, once brackish with the filth of industry, now flowed pure, like veins of crystal through valleys, unspoiled for centuries. The ghostly remnants of human folly, plutonium waste entombed in concrete sarcophagi, had long laid inert and depleted, their dreaded potency diluted into insignificance by the patient caress of time.
 

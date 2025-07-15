@@ -1,6 +1,6 @@
-{{ $src := .Destination | safeURL }} {{ $alt := .PlainText }} {{ $is_gif :=
-findRE "GIF" $alt }} {{ $alt_processed := replace $alt "GIF" "" |
-strings.TrimSpace }}
+{{ $src := replace (.Destination | safeURL) "~/" "/media/" }} {{ $alt :=
+.PlainText }} {{ $is_gif := findRE "GIF" $alt }} {{ $alt_processed := replace
+$alt "GIF" "" | strings.TrimSpace }}
 
 <figure>
     {{ if or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4")
