@@ -4,6 +4,7 @@ h2 {
 }
 
 main {
+    overflow: hidden;
     @media (min-width: 768px) {
         margin-left: 5vw;
         margin-right: 5vw;
