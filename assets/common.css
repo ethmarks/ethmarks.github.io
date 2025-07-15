@@ -1227,7 +1227,10 @@ code {
     font-family: var(--font-monospace);
     white-space: pre;
     overflow-x: auto;
-    display: block;
+
+    &.language-ascii {
+        display: block;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
