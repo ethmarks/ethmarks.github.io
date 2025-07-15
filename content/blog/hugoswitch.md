@@ -1,7 +1,7 @@
 ---
 title: Switching to Hugo
 date: 2025-07-10
-tags: [programming, webdev, personalwebsite]
+tags: [programming, webdev, personal website]
 description: I switched from using my custom Python SSG to using Hugo
 ---
 
@@ -71,7 +71,7 @@ There are a few consequences of switching to Hugo, though.
 
 ### Reduces Charm
 
-There's a certain air to being able to say "I made this without any prebuilt libraries" on my [personal website's project page](/blog/personalwebsite) gives. I'm going to call it "charm", but it's probably closer to "smugness". Anyways, using a prebuilt SSG like Hugo means that I can't honestly claim that this site is built using only my own tools. I think that this significantly reduces the overall charm and impressiveness of the site. 
+There's a certain air to being able to say "I made this without any prebuilt libraries" on my [personal website's project page](/blog/personal website) gives. I'm going to call it "charm", but it's probably closer to "smugness". Anyways, using a prebuilt SSG like Hugo means that I can't honestly claim that this site is built using only my own tools. I think that this significantly reduces the overall charm and impressiveness of the site. 
 
 There are a few asterisks to this...
 
