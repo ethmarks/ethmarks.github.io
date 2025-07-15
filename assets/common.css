@@ -698,6 +698,7 @@ code {
     background-color: var(--color-code-bg);
     font-family: var(--font-monospace);
     font-weight: var(--font-weight-code);
+    font-size: 1rem;
     white-space: pre;
     overflow-x: auto;
 
