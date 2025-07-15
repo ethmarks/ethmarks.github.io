@@ -17,15 +17,15 @@ I logged into my GitHub account, did some configuration, and started coding. I s
 
 ![The mint gradient is visible on Firefox but not on Chrome](/media/background-clip-firefox-chrome.webm)
 
-I opened the page on Firefox, and it looked fine, so the problem was browser-specific. I started troubleshooting the problem. I disabled likely-looking CSS styles at random until something changed, and eventually realized that I could make the text visible by unchecking the "[webkit-text-fill-color](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-fill-color): transparent;" style. The resulting text was pure white rather than my mint gradient, so I continued troubleshooting. I discovered that the blog titles still showed up on Chrome despite using -webkit-text-fill-color style. I eventually realized that the problem was in how the two browsers handled the "[background-clip](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip): text;" style.
+I opened the page on Firefox, and it looked fine, so I deduced that the problem was browser-specific. I started troubleshooting. I disabled likely-looking CSS styles at random until something changed, and eventually realized that I could make the text visible by unchecking the `webkit-text-fill-color: transparent;` style. Although this made the text visible, the resulting text was pure white rather than my mint gradient. I eventually realized that the problem was in how the two browsers handled the `background-clip: text;` style.
 
-What "background-clip: text;" does is makes it so that the background of an element (in this case, the background is the mint gradient) is only visible in places where the text is. It's as though there was masking tape everywhere except for the text.
+What `background-clip: text;` does is makes it so that the background of an element (in this case, the background is the mint gradient) is only visible in places where the text is. It's as though there was masking tape everywhere except for the text.
 
-On Firefox, all text contained within a background-clipped element is considered part of the background clip. It doesn't matter if that text is the direct content of the element or it's inside some nestled [spans](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span): it's all considered part of the parent element. On Chrome (and Edge, Opera, Brave, Vivaldi, etc), this is not the case. The text *must* be the direct content of the element; otherwise, it isn't counted. The text in my "Welcome To My Personal Website" heading was contained in nestled spans, so Firefox counted it as part of the background-clip while Chrome did not.
+On Firefox, all text contained within a background-clipped element is considered part of the background clip. It doesn't matter if that text is the direct content of the element or it's inside some nestled [spans](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span): it's all considered part of the parent element. On Chrome (and Edge, Opera, Brave, Vivaldi, etc), this is not the case. The text *must* be the direct content of the element; otherwise, it isn't counted. Each word in the text "Welcome To My Personal Website" heading was contained in a separate span, so Firefox counted the text as part of the parent element while Chrome did not.
 
-I looked into ways to fix this, but all of them either ruined the effect or just didn't work. Each word *must* be in a separate span for the staggered animation to work, and setting the gradient effect at the span level would cause the gradient to only cover that one word rather than smoothly transitioning across the whole element. 
+I looked into ways to fix this, but all of them either ruined the effect or just didn't work. Each word has be in a separate span for the staggered animation to work, and setting the gradient effect at the span level would cause the gradient to only cover that one span and then start over for the next one; what I want is for the gradient to smoothly fade across the whole element.
 
-In the end, I settled on just using a solid mint colour by default, and adding a bit of code that will only work in Firefox that adds the mint gradient. This way, Chromium browsers get solid colour and Firefox gets the gradient.
+In the end, I settled on just using a solid mint colour by default, and adding a `-moz-document` class (which only works on Firefox) that sets the mint gradient. This way, Chromium browsers ignore the code inside the `-moz-document` and get solid colour, while Firefox reads it and gets the gradient.
 
 ```css
 h1 {
@@ -33,11 +33,7 @@ h1 {
     
     @-moz-document url-prefix() {
         /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: linear-gradient(
-            135deg,
-            var(--color-text),
-            var(--color-accent)
-        );
+        background: var(--color-gradient-mint);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -49,11 +45,11 @@ The solid colour isn't too noticeable, but it definitely doesn't look quite as n
 
 ![headings have the mint gradient on Firefox, but are solid teal on Chrome and Edge](/media/mint-headings-firefox-chrome-edge.webp)
 
-Then I checked to see if anyone else had noticed this. I found a [Stack Overflow post](https://stackoverflow.com/questions/55198363/webkit-background-clip-text-working-on-mozilla-but-not-on-chrome). The author of the post, [Paul Stephen Davis](https://stackoverflow.com/users/5925418/paul-stephen-davis), noticed the background-clip inconsistency while working on his photography website and asked for help. A user named [Jason](https://stackoverflow.com/users/4243228/jason) suggested changing the display type to inline (which doesn't fix it) and then gave up. 
+Then I checked to see if anyone else had noticed this. I found a [Stack Overflow post](https://stackoverflow.com/questions/55198363/webkit-background-clip-text-working-on-mozilla-but-not-on-chrome). The author of the post, [Paul Stephen Davis](https://stackoverflow.com/users/5925418/paul-stephen-davis), noticed the background-clip inconsistency while working on his photography website and asked for help. A user named [Jason](https://stackoverflow.com/users/4243228/jason) suggested using `display: inline;` (which doesn't fix the bug) and then gave up. 
 
-This was over 6 years ago. background-clip was [first introduced by WebKit in 2008](https://www.css3.info/webkit-introduces-background-cliptext/), and has been supported by Chrome since 2010. It has been a standard CSS property for a decade and a half, and the Stack Overflow post proves that this bug has been known since at least 2019.
+This was over 6 years ago. `background-clip` was [first introduced by WebKit in 2008](https://www.css3.info/webkit-introduces-background-cliptext/), and has been supported by Chrome since 2010. It has been a standard CSS property for a decade and a half, and the Stack Overflow post proves that this bug has been known since at least 2019.
 
-I think that Firefox's implementation of background-clip is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 15 years being wrong.
+I think that Firefox's implementation of `background-clip` is much better, both in principle and in what it allows you to do. Chrome apparently doesn't agree, and has spent the last 15 years being wrong.
 
 Please fix it, Google.
 
