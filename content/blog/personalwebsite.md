@@ -46,8 +46,11 @@ This site uses a dark theme with a spearmint teal accent colour.
 
 ### Typography
 
-- **Primary Font**: I perused the *entire* [Google Fonts](https://fonts.google.com/) catalogue to find a [neo-grotesque](https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque) font that I liked the look of and that supported both [Latin](https://en.wikipedia.org/wiki/Latin_script) and [Cyrillic](https://en.wikipedia.org/wiki/Cyrillic_script) glyphs. I finally settled on [Nunito](https://fonts.google.com/specimen/Nunito), and it's the default font that most text on the site uses.
-- **Secondary Font**: For the headings, I used [Sen](https://fonts.google.com/specimen/Sen). There are many subtle differences between Sen and Nunito, but the most noticable is the lack of rounded strokes. Sen looks sharper and more angular than Nunito.
+I self-host this site's fonts using variable [woff2](https://github.com/google/woff2) files. Variable fonts significantly cut down on the file size, allowing the site to load faster. I sourced the fonts from the [Variable Font Helper](https://variable-font-helper.web.app/) app, which sources them from [Google Fonts](https://fonts.google.com/).
+
+- **Primary Font**: I use [Nunito](https://fonts.google.com/specimen/Nunito) as the primary font, for its sleek [neo-grotesque](https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque) design and its support for both [Latin](https://en.wikipedia.org/wiki/Latin_script) and [Cyrillic](https://en.wikipedia.org/wiki/Cyrillic_script) glyphs.
+- **Secondary Font**: I use [Sen](https://fonts.google.com/specimen/Sen) as the font for headings. There are many subtle differences between Sen and Nunito, but the most noticeable is the lack of rounded strokes. Sen looks sharper and more angular than Nunito.
+- **Monospace Font**: I use [Fira Code](https://fonts.google.com/specimen/Fira+Code) for all [monospace](https://fonts.google.com/knowledge/glossary/monospaced) text, like code blocks, ASCII art, or inline code spans.
 
 ### Special Effects
 
