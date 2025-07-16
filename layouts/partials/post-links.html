@@ -1,7 +1,7 @@
 <nav class="post-links">
     {{ range (where . "Params.unlisted" "ne" true).ByDate.Reverse }} {{ $post :=
     . }} {{ $minRead := math.Ceil (div (countwords $post.Content) 200.0) }}
-    <a class="post-link animated staggered" href="{{ .Permalink | relURL }}">
+    <a class="post-link" href="{{ .Permalink | relURL }}">
         <span class="content">
             <span class="title">{{ .Title }}</span>
             <span class="description">
