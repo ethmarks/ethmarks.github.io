@@ -61,7 +61,7 @@ I self-host this site's fonts using variable [woff2](https://github.com/google/w
 
 As of July 14, 2025, the site earns a perfect 100 on [Google Lighthouse](https://developer.chrome.com/docs/lighthouse).
 
-[![A Lighthouse analytic page showing 99 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-07-14.webp)](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/hhcjywik6m?form_factor=desktop)
+[![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-07-14.webp)](https://pagespeed.web.dev/analysis/https-colourlessspearmint-github-io/hhcjywik6m?form_factor=desktop)
 
 To quote the [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring): "A perfect score of 100 is extremely challenging to achieve and not expected".
 
