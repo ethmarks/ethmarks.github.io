@@ -34,7 +34,7 @@ Before [switching to Hugo](/blog/hugoswitch), this site used a custom SSG I wrot
 
 ## Style Guide
 
-I had a moderately specific vision for what I wanted my website to look like, and I think I accomplished that well with my site's CSS styles. The primary stylesheet, [common.css](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/common.css), contains 1215 lines of code. [The auxilary stylesheets](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/static/) add another 2040 lines. I utilized [nestled CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) to create reusable and readable styles.
+I had a moderately specific vision for what I wanted my website to look like, and I think I accomplished that well with my site's CSS styles. The primary stylesheet, [common.css](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/common.css), contains 1215 lines of code. [The auxiliary stylesheets](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/static/) add another 2040 lines. I utilized [nestled CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) to create reusable and readable styles.
 
 ### Color Palette
 
