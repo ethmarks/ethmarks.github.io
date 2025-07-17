@@ -7,7 +7,7 @@
 <script src="{{ $homeJs.Permalink }}"></script>
 
 {{ $tiltJs := resources.Get "vanilla-tilt.js" | minify }}
-<script src="{{ $tiltJs.Permalink }}" defer></script>
+<script src="{{ $tiltJs.Permalink }}"></script>
 
 {{ end }}
 {{ define "main" }}

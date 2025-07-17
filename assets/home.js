@@ -88,4 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
             runScrambleAnimation(element);
         });
     }
+
+    if (window.matchMedia("(pointer: fine)").matches && window.VanillaTilt) {
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"));
+    }
 });
