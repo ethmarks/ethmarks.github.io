@@ -428,7 +428,8 @@ figure {
 }
 
 img,
-video {
+video,
+iframe {
     height: auto;
     max-width: var(--max-media-width);
     max-height: var(--max-media-height);
@@ -1258,10 +1259,8 @@ ul {
 iframe {
     display: block;
     border: none;
-    width: 100%;
+    width: var(--max-media-width);
     height: 500px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-article);
     margin-left: auto;
     margin-right: auto;
 
