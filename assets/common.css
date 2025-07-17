@@ -112,7 +112,7 @@
     --color-h1: #a8e4dd;
     --color-link: var(--color-accent-light);
     --color-link-hover: white;
-    --color-article-bg: rgba(30, 30, 30, 0.7);
+    --color-article-bg: rgba(30, 30, 30);
     --color-article-border: rgba(255, 255, 255, 0.1);
     --color-article-border-light: rgba(255, 255, 255, 0.05);
     --color-table-header-bg: rgba(20, 20, 20, 0.8);
