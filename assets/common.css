@@ -130,6 +130,11 @@
     --color-focus-outline: var(--color-accent-light);
     --color-gradient-mint: linear-gradient(
         135deg,
+        var(--color-accent),
+        var(--color-text)
+    );
+    --color-gradient-mint-inverse: linear-gradient(
+        135deg,
         var(--color-text),
         var(--color-accent)
     );
