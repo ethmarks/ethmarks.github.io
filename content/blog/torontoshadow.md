@@ -15,28 +15,32 @@ The photo above was taken by me on May 24, 2024, at 9:26 AM, standing in [this l
 
 ![A spotlight shining in the dark through a cloud of smoke, casting a volumetric light in the smoke](~/spotlight_in_smoke.webp)
 
-Think about a spotlight for a moment. Normally, you only see the illuminated area where the beam lands. However, if the spotlight shines through a cloud of smoke or steam, the light scatters off the particles, making the beam visible in the air. This effect is known as [volumetric lighting](https://en.wikipedia.org/wiki/Volumetric_lighting), and it only appears when the air is filled with particles.
+To understand what causes volumetric shadows, consult the photo above. It's the same thing, but exactly the opposite.
+
+Normally, the only visible part of a spotlight is the spot (so that's why the call it that) where the beam hits a surface. However, if there are particles in the air (like the mist/smoke in the photo), the light from the spotlights scatters off of the particles, making the beam visible. This effect is called [volumetric lighting](https://en.wikipedia.org/wiki/Volumetric_lighting), and it only occurs when the air is filled with particles to scatter the light.
+
+Volumetric shadows occur under the same conditions as volumetric light, but when an object (like a 553 meter tall concrete spire) occludes the path of the light source. Because the rest of the air is volumetrically lit, the space that isn't appears to be in shade.
 
 ![Beams of volumetric light over a lake](~/crepuscular_rays.webp)
 
-If we substitute the spotlight for the sun and introduce an object that blocks the light, like a cloud, we get [crepuscular rays](https://en.wikipedia.org/wiki/Crepuscular_rays): a form of natural volumetric lighting. Crepuscular rays are *awesome*, and I completely understand why they're colloquially referred to as "God rays". 
+When the light source is the sun, a volumetric light is called a [crepuscular ray](https://en.wikipedia.org/wiki/Crepuscular_rays): a form of natural volumetric lighting. Crepuscular rays are *awesome*. They look like shafts of light emanating from the sky; there's a reason they're colloquially referred to as "God rays".
 
-![Orbital view of clouds blocking sunlight and creating crepuscular rays](~/crepuscular_rays_orbital.webp)
-
-Crepuscular rays occur when the sun is at an oblique angle (so during during dawn or dusk) and the air is filled with particles. Any airborne panicles will do, but the most common ones are smoke and mist.
-
-## Air Pollution
-
-The airborne particles in my CN tower photo were caused by the air pollution in Toronto. Toronto has remarkably clean air for a city of 3 million people (Toronto has an [AQI](https://www.iqair.com/) of only [23](https://www.iqair.com/us/canada/ontario/toronto)), but it still evidently has enough airborne particulates to cause their giant tower to cast a volumetric shadow.
-
-My photo was the most pretty and photogenic demonstration of air pollution I've seen, but it's not even close to the most interesting. For example, the air in China is thick enough to [cast rainbow lasers over the highway to keep drivers awake](https://www.drive.com.au/news/video-china-testing-anti-sleep-laser-display-on-highway/).
-
-![bright flashing colourful lasers over a Chinese highway](~/highway_lasers.webm)
+Crepuscular rays only occur when the sun is at an oblique angle (dawn or dusk) and the air contains particulate matter. The particulate matter in my CN tower photo was almost certainly air pollution. Toronto has remarkably clean air for a city of 3 million people (Toronto has an [AQI](https://www.iqair.com/) of only [23](https://www.iqair.com/us/canada/ontario/toronto)), but it still evidently has enough airborne particles to cause their giant tower to cast a volumetric shadow.
 
 ## Conclusion
 
-As it turns out, I wasn't the first person to notice this. 10 years ago, the [Canadian Broadcasting Corporation](https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation) published [a story about a very similar photo](https://www.cbc.ca/news/canada/toronto/what-was-this-beam-radiating-from-the-cn-tower-1.3242665) of the CN Tower casting a volumetric shadow. 
+10 years ago, the [Canadian Broadcasting Corporation](https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation) published [a story about a very similar photo of the CN Tower casting a volumetric shadow](https://www.cbc.ca/news/canada/toronto/what-was-this-beam-radiating-from-the-cn-tower-1.3242665). The article is 136 words in total, makes multiple inexplicable Star Trek references, doesn't offer any kind of explanation as to why the shadow was volumetric, misuses the word "exude", and mostly focuses on debunking the claim that the CN Tower is secretly a giant shadow flashlight.
 
-Where's the news article for *my* photo, CBC?
+The comments on the article seem to share my disdain:
+
+> "The fact that a cbc reporter was perplexed by something that a 10 year old learns says a lot about the capabilities of people working there. Will tomorrow's article highlight the strange mysteries of water falling from the sky?"
+
+> "if people need a scientific explanation as to how it occurred then maybe they need to go back to grade 6 science."
+
+> "durrrr. Thanks, CBC."
+
+Based entirely on the fact that over half of the comments on the CBC's article are deriding their competency, whereas this blog post has zero such comments (which may or may not be influenced by the fact that I haven't implemented a comment system), I'm forced to conclude that I'm better at writing articles than the CBC.
+
+If the CBC would like to fire its entire editorial staff and replace them with me, I would be amenable to that.
 
 ~Ethan
