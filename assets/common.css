@@ -1243,11 +1243,33 @@ footer {
     max-height: var(--max-media-height-small);
 }
 
-blockquote.centered-blockquote {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.15rem;
+blockquote {
+    font-style: italic;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        margin: 0 -1em 0;
+        background: var(--color-accent-dark);
+        border-radius: 2px;
+        float: left;
+    }
+
+    &.centered-blockquote {
+        font-style: normal;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+
+        &::before {
+            display: none;
+        }
+    }
 }
 
 ul {
