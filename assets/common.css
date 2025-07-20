@@ -1195,7 +1195,8 @@ footer {
             @media (min-width: 768px) {
                 position: absolute;
                 right: 30px;
-                width: 100%;
+                left: 30px;
+                width: calc(100% - 60px);
                 text-align: center;
             }
         }
