@@ -145,8 +145,8 @@
     --font-monospace: "Fira Mono", monospace;
     --font-weight-light: 400;
     --font-weight-code: 400;
-    --font-weight-normal: 600;
-    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
     --font-size-md: 1rem;
