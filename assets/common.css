@@ -120,7 +120,7 @@
     --color-table-bg-zebra: rgb(29, 29, 29);
     --color-table-row-hover: rgba(50, 50, 50, 0.5);
     --color-snippet-bg: #1f1f1f;
-    --color-code-bg: #1b1b1b;
+    --color-code-bg: #1f1f1f;
     --color-accent-transparent-10: rgba(143, 223, 212, 0.1);
     --color-accent-transparent-15: rgba(143, 223, 212, 0.15);
     --color-accent-transparent-20: rgba(143, 223, 212, 0.2);
@@ -271,6 +271,17 @@
             transparent 50%
         ),
         var(--color-background);
+
+    --color-gradient-mint: linear-gradient(
+        135deg,
+        var(--color-accent),
+        var(--color-text)
+    );
+    --color-gradient-mint-inverse: linear-gradient(
+        135deg,
+        var(--color-text),
+        var(--color-accent)
+    );
 }
 
 html {
@@ -674,8 +685,8 @@ pre {
     overflow-x: auto;
     display: block;
     line-height: 1.4;
-    background-color: var(--color-snippet-bg) !important;
-    color: var(--color-text);
+    background-color: var(--color-code-bg) !important;
+    color: white;
     padding: 18px;
     border-radius: var(--radius-xl);
     border: var(--border-standard);
@@ -702,7 +713,7 @@ code {
     padding: 0.1em 0.3em;
     border: var(--border-standard);
     border-radius: var(--radius-md);
-    background-color: var(--color-code-bg);
+    background-color: var(--color-snippet-bg);
     font-family: var(--font-monospace);
     font-weight: var(--font-weight-code);
     font-size: 1rem;
