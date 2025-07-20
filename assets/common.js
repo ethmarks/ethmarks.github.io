@@ -48,12 +48,16 @@
     window.addEventListener("resize", updateShortPageElements);
 })();
 
-// Add 'scroll' class to tables wider than 90vw
-(function addScrollClassToWideTables() {
+// Add 'scroll' class to tables that overflow their parent container
+(function addScrollClassToOverflowingTables() {
     function updateTableScrollClasses() {
-        var vw90 = window.innerWidth * 0.9;
         document.querySelectorAll("table").forEach(function (table) {
-            if (table.scrollWidth > vw90) {
+            // Use the parent element's width, or fallback to window width
+            const parent = table.parentElement;
+            const containerWidth = parent
+                ? parent.clientWidth
+                : window.innerWidth;
+            if (table.scrollWidth > containerWidth) {
                 table.classList.add("scroll");
             } else {
                 table.classList.remove("scroll");
@@ -62,6 +66,25 @@
     }
     window.addEventListener("DOMContentLoaded", updateTableScrollClasses);
     window.addEventListener("resize", updateTableScrollClasses);
+})();
+
+// Add 'scroll' class to pre elements that overflow their parent container
+(function addScrollClassToOverflowingPre() {
+    function updatePreScrollClasses() {
+        document.querySelectorAll("pre").forEach(function (pre) {
+            const parent = pre.parentElement;
+            const containerWidth = parent
+                ? parent.clientWidth
+                : window.innerWidth;
+            if (pre.scrollWidth > containerWidth) {
+                pre.classList.add("scroll");
+            } else {
+                pre.classList.remove("scroll");
+            }
+        });
+    }
+    window.addEventListener("DOMContentLoaded", updatePreScrollClasses);
+    window.addEventListener("resize", updatePreScrollClasses);
 })();
 
 // add 'lightmode' class to body if user prefers light color scheme

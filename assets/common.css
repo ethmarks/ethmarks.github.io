@@ -682,7 +682,7 @@ pre {
     box-shadow: var(--shadow-table);
     transition: var(--transition-transform-shadow);
 
-    @media (max-width: 1200px) {
+    &.scroll {
         width: auto;
     }
 
