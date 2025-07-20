@@ -48,44 +48,28 @@
     window.addEventListener("resize", updateShortPageElements);
 })();
 
-// Add 'scroll' class to tables that overflow their parent container
-(function addScrollClassToOverflowingTables() {
-    function updateTableScrollClasses() {
-        document.querySelectorAll("table").forEach(function (table) {
-            // Use the parent element's width, or fallback to window width
-            const parent = table.parentElement;
+// Generic function to add 'scroll' class to overflowing elements
+function addScrollClassOnOverflow(selector) {
+    function updateScrollClasses() {
+        document.querySelectorAll(selector).forEach(function (el) {
+            const parent = el.parentElement;
             const containerWidth = parent
                 ? parent.clientWidth
                 : window.innerWidth;
-            if (table.scrollWidth > containerWidth) {
-                table.classList.add("scroll");
+            if (el.scrollWidth > containerWidth) {
+                el.classList.add("scroll");
             } else {
-                table.classList.remove("scroll");
+                el.classList.remove("scroll");
             }
         });
     }
-    window.addEventListener("DOMContentLoaded", updateTableScrollClasses);
-    window.addEventListener("resize", updateTableScrollClasses);
-})();
+    window.addEventListener("DOMContentLoaded", updateScrollClasses);
+    window.addEventListener("resize", updateScrollClasses);
+}
 
-// Add 'scroll' class to pre elements that overflow their parent container
-(function addScrollClassToOverflowingPre() {
-    function updatePreScrollClasses() {
-        document.querySelectorAll("pre").forEach(function (pre) {
-            const parent = pre.parentElement;
-            const containerWidth = parent
-                ? parent.clientWidth
-                : window.innerWidth;
-            if (pre.scrollWidth > containerWidth) {
-                pre.classList.add("scroll");
-            } else {
-                pre.classList.remove("scroll");
-            }
-        });
-    }
-    window.addEventListener("DOMContentLoaded", updatePreScrollClasses);
-    window.addEventListener("resize", updatePreScrollClasses);
-})();
+// Use the generic function for tables and pre elements
+addScrollClassOnOverflow("table");
+addScrollClassOnOverflow("pre");
 
 // add 'lightmode' class to body if user prefers light color scheme
 const allowLightMode = false;
