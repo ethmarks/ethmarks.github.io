@@ -54,13 +54,13 @@ If you'd like to compare them, here's the same demo but using Yorha.
 If you'd like to use ClasslessSpearmint yourself, just include this snippet in your HTML head.
 
 ```html
-<link rel="stylesheet" href="https://colourlessspearmint.github.io/classlessspearmint.css">`
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css">
 ```
 
 Or, if you're using CodePen, include this snippet in the CSS.
 
 ```css
-@import url("https://colourlessspearmint.github.io/classlessspearmint.css")
+@import url("https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css");
 ```
 
 ## Conclusion
