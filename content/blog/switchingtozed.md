@@ -37,8 +37,8 @@ From what I've seen so far, Zed has several distinct advantages, such as its [Ru
 
 It definitely isn't perfect, though. For example, installing Zed on Windows with Scoop is pretty much as easy as it gets, but it's still a hacky solution that breaks things like auto-update. Similarly, the interface lacks polish and can feel unfriendly and overwhelming (which is almost impressive for such a minimalist editor). The only way to change settings is by [editing a JSON file](https://zed.dev/docs/configuring-zed). This is fine, I guess, but it's significantly worse for UX than a [normal settings dialogue](https://code.visualstudio.com/docs/configure/settings). Zed doesn't feel as welcoming and batteries-included as VS Code.
 
-However, it's important to remember that Zed is new and still under development. It takes a while to build a fully-functional, polished, and stable code editor. The developers are (wisely) focusing their efforts on more important things before Zed 1.0 releases later this year. Even if I decide that Zed isn't in an acceptable state *now*, [they have a bunch of features planned](https://zed.dev/roadmap), such as a [vscode.dev](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev) competitor, which they call "Zed on the Web".
+However, it's important to remember that Zed is new and still under development. It takes a while to build a fully-functional, polished, and stable code editor. The developers are (wisely) focusing their efforts on more important things before [Zed 1.0 releases later this year](https://zed.dev/roadmap). From what I've seen, Zed is already in an acceptable state, and it will only get better as time goes on.
 
-I'll probably write a follow-up post at some point that details my experience with Zed and whether or not I   abandoned it and switched back to VS Code. See you then!
+I'll probably write a follow-up post at some point that details my experience with Zed and whether or not I abandoned it and switched back to VS Code. See you then!
 
 ~Ethan
