@@ -15,9 +15,9 @@ Based on the title of this post, guess how that went.
 
 ## I totally know what I'm doing
 
-I have experience in [flashing operating systems](https://medium.com/@llillydpritchard/mastering-the-art-of-flashing-an-operating-system-onto-your-laptop-56b69003dcca). I run a small personal business which involves flashing [Chrome OS Flex](https://chromeos.google/products/chromeos-flex/) onto old laptops. I guess this technically makes me a professional operating system flasher. Also, I used to dual-boot Ubuntu and Windows on my old Lenovo laptop.
+I have experience in [flashing operating systems](https://medium.com/@llillydpritchard/mastering-the-art-of-flashing-an-operating-system-onto-your-laptop-56b69003dcca). I run a small personal business which involves flashing [Chrome OS Flex](https://chromeos.google/products/chromeos-flex/) onto old laptops. This technically makes me a professional operating system flasher. Also, I used to dual-boot Ubuntu and Windows on my old Lenovo laptop a few years ago.
 
-And yet, despite this experience, I completely messed up this simple task.
+And yet, despite my experience, I still managed to completely mess up this simple partitioning.
 
 After deciding to switch to Linux, I spent a few hours researching Linux distros and eventually settled on [Kubuntu](https://kubuntu.org/). I downloaded the Kubuntu [ISO](https://en.wikipedia.org/wiki/Optical_disc_image) and loaded it to my USB drive with [Balena Etcher](https://etcher.balena.io/). I rebooted my computer, interrupted [BIOS](https://en.wikipedia.org/wiki/BIOS), and had BIOS boot from USB. Once Kubuntu loaded, I set it up, ran some tests, and decided it was acceptable. All good so far.
 
@@ -25,9 +25,10 @@ I considered making backups of any important data that I had on my drive, but de
 
 So I opened up the KDE Partition Manager, selected my 1 terabyte SSD, selected my Windows partition, selected "Resize/Move", entered my desired partition size, and clicked "Apply".
 
+About 15 minutes passed, during which the program successfully resized my partition and was performing the final steps to finish the resizing.
+
 ![KDE Partition Manager showing the partition being resized](~/kdepartitionmanager.webp)
 
-About 15 minutes passed, during which the program successfully resized my partition and was performing the final steps to finish the resizing.
 
 Then Linux crashed.
 
@@ -65,7 +66,7 @@ I spent the next hour looking through my file system and copying any irreplaceab
 
 I couldn't use Google Drive because it would take 6-7 hours to upload and I can't rely on Windows staying operational for that long. This meant I had to transfer the files to a local device. My brother has a multi-terabyte hard drive on his desktop that he very kindly offered to let me store my backup on. I couldn't send it via Bluetooth because 21 gigabytes is too big for Quick Share. I couldn't use a removable storage medium because my only working USB drive was the one that caused Linux to crash. I couldn't use a USB cable because for some reason Windows doesn't support file transfer over USB.
 
-My solution was to cannibalize an Ethernet cable from my Xbox and use it to connect my laptop to my brother's desktop. I then spent 15 minutes setting up an [FTP server](https://en.wikipedia.org/wiki/File_Transfer_Protocol) (seriously Microsoft, why did you make this so complicated), and transferred the files onto his hard drive.
+My solution was to cannibalize an Ethernet cable from my Xbox and use it to connect my laptop to my brother's desktop. I then spent 15 minutes setting up an [FTP server](https://en.wikipedia.org/wiki/File_Transfer_Protocol) (seriously Microsoft, why did you make this so complicated), and copied my backup onto his hard drive.
 
 With my backup secure, I shifted focus to fixing my drive.
 
