@@ -14,10 +14,10 @@
     font-weight: 200 1000;
     font-display: swap;
     src: url(/fonts/Nunito-latin-ext-italic.woff2) format("woff2");
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
-        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
-        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
-        U+A720-A7FF;
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
@@ -26,9 +26,10 @@
     font-weight: 200 1000;
     font-display: swap;
     src: url(/fonts/Nunito-latin-italic.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic */
 @font-face {
@@ -46,10 +47,10 @@
     font-weight: 200 1000;
     font-display: swap;
     src: url(/fonts/Nunito-latin-ext.woff2) format("woff2");
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
-        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
-        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
-        U+A720-A7FF;
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
@@ -58,9 +59,10 @@
     font-weight: 200 1000;
     font-display: swap;
     src: url(/fonts/Nunito-latin.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin-ext */
@@ -70,10 +72,10 @@
     font-weight: 400 800;
     font-display: swap;
     src: url(/fonts/Sen-latin-ext.woff2) format("woff2");
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
-        U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
-        U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
-        U+A720-A7FF;
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
@@ -82,9 +84,10 @@
     font-weight: 400 800;
     font-display: swap;
     src: url(/fonts/Sen-latin.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* latin */
@@ -94,9 +97,10 @@
     font-weight: 300 700;
     font-display: swap;
     src: url(/fonts/Fira_Code.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
@@ -198,8 +202,8 @@
     --transition-timing: ease;
     --transition-default: all var(--transition-duration-fast)
         var(--transition-timing);
-    --transition-transform-shadow: transform var(--transition-duration)
-            var(--transition-timing),
+    --transition-transform-shadow:
+        transform var(--transition-duration) var(--transition-timing),
         box-shadow var(--transition-duration) var(--transition-timing);
     --transition-transform: transform var(--transition-duration)
         var(--transition-timing);
@@ -219,7 +223,8 @@
     }
 
     /* Misc */
-    --body-bg-gradient: radial-gradient(
+    --body-bg-gradient:
+        radial-gradient(
             circle at 10% 10%,
             rgba(143, 223, 212, 0.15),
             transparent 40%
@@ -260,7 +265,8 @@
     --color-chat-recipient-bg: #0b93f6;
     --color-focus-outline: var(--color-accent-dark);
 
-    --body-bg-gradient: radial-gradient(
+    --body-bg-gradient:
+        radial-gradient(
             circle at 10% 10%,
             rgba(0, 128, 128, 0.15),
             transparent 40%
@@ -618,7 +624,10 @@ table {
         box-shadow: var(--shadow-button);
         position: relative;
         overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            color 0.3s ease;
         animation: slideInFromLeft 0.5s 0.4s var(--transition-timing) both;
 
         &::after {
@@ -655,7 +664,9 @@ table {
             & img {
                 transform: rotate(10deg) scale(1.1);
                 filter: invert(1) brightness(2);
-                transition: transform 0.3s ease, filter 0.3s ease;
+                transition:
+                    transform 0.3s ease,
+                    filter 0.3s ease;
                 border: none;
             }
         }
@@ -667,7 +678,9 @@ table {
         }
 
         & img {
-            transition: var(--transition-transform), filter 0.3s ease;
+            transition:
+                var(--transition-transform),
+                filter 0.3s ease;
             width: 1.5em;
             height: 1.5em;
             border-radius: 0;
@@ -797,14 +810,13 @@ code {
     }
 }
 
-& .post-tags {
+.post-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
     justify-content: center;
     align-items: center;
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    margin: var(--spacing-md) var(--spacing-xs) var(--spacing-lg);
 
     & .post-tag {
         display: inline-block;
@@ -816,7 +828,10 @@ code {
         font-size: 0.95em;
         font-family: var(--font-secondary);
         text-decoration: none;
-        transition: background 0.2s, color 0.2s, border 0.2s;
+        transition:
+            background 0.2s,
+            color 0.2s,
+            border 0.2s;
 
         &:hover,
         &:focus {
@@ -939,7 +954,10 @@ code {
         font-weight: var(--font-weight-bold);
         box-shadow: none;
         cursor: pointer;
-        transition: background 0.2s, color 0.2s, border 0.2s;
+        transition:
+            background 0.2s,
+            color 0.2s,
+            border 0.2s;
 
         &:hover,
         &:focus {
@@ -1034,7 +1052,9 @@ code {
         letter-spacing: 0.01em;
         user-select: none;
         pointer-events: none;
-        transition: background 0.2s, color 0.2s;
+        transition:
+            background 0.2s,
+            color 0.2s;
     }
 
     & .title {
@@ -1133,7 +1153,9 @@ header {
             font-size: clamp(0.75rem, 3vw, 1rem);
             font-weight: var(--font-weight-light) !important;
             cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.2s ease;
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
             white-space: nowrap;
             text-decoration: none;
 
