@@ -1,13 +1,8 @@
 {{ define "main" }}
-<h1 class="animated">All Tags</h1>
+<h1 class="animated">
+    Tags ({{ len (where .Pages "Params.unlisted" "ne" true) }})
+</h1>
 <article class="animated">
-    <p class="definition">
-        Tag (noun) - a descriptive label used for categorization
-    </p>
-    <p>
-        This page lists all tags used on the site. Click a tag to see all posts
-        and projects with that tag.
-    </p>
     <div class="post-tags">
         {{ range .Data.Terms.Alphabetical }} {{ $pages := where .Pages
         "Params.unlisted" "!=" true }} {{ if gt (len $pages) 0 }}
