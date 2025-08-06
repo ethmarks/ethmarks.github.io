@@ -1,5 +1,5 @@
 ---
-title: Switching to Hugo
+title: This site uses Hugo now
 date: 2025-07-10
 tags: [programming, webdev, personal website]
 description: I switched from using my custom Python SSG to using Hugo
