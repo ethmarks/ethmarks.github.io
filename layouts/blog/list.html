@@ -1,22 +1,6 @@
 {{ define "main" }}
 <h1 class="animated">Blog ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
 <article class="animated">
-    <p>
-        This is my blog. I use it to share things that I've written,
-        usually essays about things that I've made or that interest
-        me.
-    </p>
-    <p>
-        I've published <b>{{ len (where .Pages "Params.unlisted" "ne" true) }}</b> posts so
-        far. Each post is tagged with any of
-        <b>{{ len .Site.Taxonomies.tags }}</b> descriptive
-        <a href="{{ "/tags/" | relURL }}">tags</a>. Clicking on a tag will link you to
-        that tag's aggregator page, which links to all blog posts
-        and projects with that tag. You can view a full list of tags
-        in the <a href="{{ "/tags/" | relURL }}">tag index</a>.
-    </p>
-    <p>~Ethan</p>
-
     <div class="post-tags">
         {{ range first 10 .Site.Taxonomies.tags.ByCount }}
         <a class="post-tag animated staggered" href="{{ .Page.Permalink | relURL }}">#{{ .Page.Title }}</a>
