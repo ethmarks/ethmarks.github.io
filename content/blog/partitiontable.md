@@ -94,8 +94,8 @@ I learned my lesson about using the KDE Partition Manager and did the partitioni
 
 I couldn't trust my old USB drive, so I went out and bought a new one. I downloaded the Kubuntu ISO and Balena Etcher to my brother's computer, then flashed it to my new USB drive. I booted it up on my computer, installed Kubuntu onto the new partition, and spent the rest of the day messing around with settings and installing stuff.
 
-![A screenshot of my computer running Kubuntu](~/kubuntu.webp)
-
 ## Conclusion
+
+![A screenshot of my computer running Kubuntu](~/kubuntu.webp)
 
 I'm pretty happy with Kubuntu. It's faster, nicer, and more customizable than Windows. I've only had to switch back to Windows twice so far, once to move over some files that I forgot to include in my backup and once to respond to an email in Outlook. I've very much enjoyed using Kubuntu and setting it up. I did *not* enjoy the installation process, though.
