@@ -99,3 +99,5 @@ I couldn't trust my old USB drive, so I went out and bought a new one. I downloa
 ![A screenshot of my computer running Kubuntu](~/kubuntu.webp)
 
 I'm pretty happy with Kubuntu. It's faster, nicer, and more customizable than Windows. I've only had to switch back to Windows twice so far, once to move over some files that I forgot to include in my backup and once to respond to an email in Outlook. I've very much enjoyed using Kubuntu and setting it up. I did *not* enjoy the installation process, though.
+
+~Ethan
