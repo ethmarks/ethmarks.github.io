@@ -1,7 +1,7 @@
 ---
 title: I'm switching to Zed, maybe
 date: 2025-07-23
-tags: [programming]
+tags: [programming, zed]
 description: I'm switching from VS Code to the Zed code editor
 ---
 
