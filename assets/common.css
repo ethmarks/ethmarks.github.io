@@ -961,6 +961,7 @@ code {
 
         &:hover,
         &:focus {
+            text-decoration: none;
             background: var(--color-accent-dark);
             color: var(--color-accent);
             border-color: var(--color-accent);

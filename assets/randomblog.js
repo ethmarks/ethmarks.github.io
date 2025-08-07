@@ -1,9 +1,26 @@
-function redirectToRandomBlog() {
-    const links = document.querySelectorAll("a.post-link[href]");
-    if (!links.length) {
-        document.body.innerText = "No blog posts found.";
-        return;
+/**
+ * A function to find all post links on the page and set the 'href'
+ * of our "random post" link.
+ */
+function setRandomPostLink() {
+  const randomPostLink = document.getElementById("random-post-link");
+
+  const postLinks = document.querySelectorAll("a.post-link[href]");
+
+  if (!randomPostLink || !postLinks.length) {
+    if (randomPostLink) {
+      randomPostLink.style.display = "none";
     }
-    const random = links[Math.floor(Math.random() * links.length)];
-    window.location.href = random.getAttribute("href");
+    return;
+  }
+
+  const randomPost = postLinks[Math.floor(Math.random() * postLinks.length)];
+
+  randomPostLink.href = randomPost.getAttribute("href");
 }
+document.addEventListener("DOMContentLoaded", setRandomPostLink);
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    setRandomPostLink();
+  }
+});

@@ -9,13 +9,14 @@
     </div>
 
     <div class="random-blog-btn-container animated">
-        <button
-            onclick="redirectToRandomBlog()"
+        <a
+            href="#"
+            id="random-post-link"
             class="random-blog-btn"
             title="Go to a random blog post"
         >
             🎲 Random Post
-        </button>
+        </a>
     </div>
 
     {{ partial "post-links.html" .Pages }}
