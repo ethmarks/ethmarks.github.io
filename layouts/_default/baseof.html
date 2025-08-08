@@ -85,7 +85,11 @@
         />
 
         {{ $commonCss := resources.Get "common.css" | minify }}
-        <link rel="stylesheet" href="{{ $commonCss.Permalink }}" />
+        {{ $fontsCss := resources.Get "fonts.css" | minify }}
+
+        {{ $bundleCss := slice $commonCss $fontsCss | resources.Concat "bundle.css" }}
+
+        <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
