@@ -87,7 +87,10 @@
         {{ $commonCss := resources.Get "common.css" | minify }}
         {{ $fontsCss := resources.Get "fonts.css" | minify }}
 
-        {{ $bundleCss := slice $commonCss $fontsCss | resources.Concat "bundle.css" }}
+        {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css" | minify }}
+
+        {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" }}
+
 
         <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 

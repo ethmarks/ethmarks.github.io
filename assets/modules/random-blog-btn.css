@@ -1,0 +1,38 @@
+.random-blog-btn-container {
+    margin: 1.5rem;
+    text-align: center;
+
+    &.animated {
+        animation: randomBtnSlideInFromLeft 0.8s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+
+    & .random-blog-btn {
+        background: var(--color-accent-transparent-15);
+        color: var(--color-accent-dark);
+        border: 1px solid var(--color-accent-dark);
+        border-radius: var(--radius-round);
+        padding: 0.5em 1.5em;
+        font-size: 1.1rem;
+        font-family: var(--font-secondary);
+        font-weight: var(--font-weight-bold);
+        box-shadow: none;
+        cursor: pointer;
+        transition:
+            background 0.2s,
+            color 0.2s,
+            border 0.2s;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background: var(--color-accent-dark);
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+            box-shadow: none;
+            outline: 2px solid var(--color-accent-dark);
+        }
+    }
+}

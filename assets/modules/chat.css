@@ -1,0 +1,55 @@
+.chat {
+    display: block;
+    width: 100%;
+    margin-top: var(--spacing-lg);
+
+    & p {
+        clear: both;
+        padding: var(--chat-padding-y) var(--chat-padding-x);
+        box-shadow: var(--shadow-chat);
+        margin-top: 0;
+        margin-bottom: var(--chat-margin-bottom);
+        max-width: 80%;
+        word-wrap: break-word;
+        line-height: 1.5;
+        position: relative;
+
+        &.a {
+            /* Sender messages (left side) */
+            float: left;
+            background-color: var(--color-chat-sender-bg);
+            border-radius: var(--radius-round) var(--radius-round)
+                var(--radius-round) var(--radius-sm);
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        &.b {
+            /* Recipient messages (right side) */
+            float: right;
+            background-color: var(--color-chat-recipient-bg);
+            border-radius: var(--radius-round) var(--radius-round)
+                var(--radius-sm) var(--radius-round);
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    & img {
+        max-height: none;
+        /* Override global img max-height */
+        height: auto;
+        margin-top: var(--spacing-xs);
+        border-radius: var(--radius-md);
+        display: block;
+        box-shadow: none;
+        border: none;
+    }
+
+    &::after {
+        /* Clear the float after messages */
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
