@@ -42,7 +42,7 @@ For example, the day that I went (Jan 26, 2024) happened to be the same day that
 
 You can watch the episode [here](https://youtu.be/9Xunff0lpug?si=Jsiu7DaV8Q50Lvu9), and can vaguely see me on a sand dune in the background at 0:33 in [this behind-the-scenes video](https://youtu.be/ljLrg-yUaJw?si=Hgbc8rsJbtbXo0N9&t=33).
 
-![My picture of \](~/whitesands_filming.webp)
+![My picture of 'A Thousand Suns' being filmed](~/whitesands_filming.webp)
 
 ## Missile Testing
 
