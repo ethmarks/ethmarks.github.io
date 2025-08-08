@@ -84,12 +84,12 @@
             crossorigin
         />
 
-        {{ $commonCss := resources.Get "common.css" | minify }}
-        {{ $fontsCss := resources.Get "fonts.css" | minify }}
+        {{ $commonCss := resources.Get "common.css"}}
+        {{ $fontsCss := resources.Get "fonts.css"}}
 
-        {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css" | minify }}
+        {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css"}}
 
-        {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" }}
+        {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" | minify }}
 
 
         <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
