@@ -84,8 +84,15 @@
             crossorigin
         />
 
-        {{ $commonCss := resources.Get "common.css" | minify }}
-        <link rel="stylesheet" href="{{ $commonCss.Permalink }}" />
+        {{ $commonCss := resources.Get "common.css"}}
+        {{ $fontsCss := resources.Get "fonts.css"}}
+
+        {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css"}}
+
+        {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" | minify }}
+
+
+        <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
