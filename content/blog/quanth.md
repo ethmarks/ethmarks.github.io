@@ -11,7 +11,7 @@ On the one hand, Metric is the international standard, it scales better than Imp
 
 But on the other hand, Feet are simply a more convenient length than Meters. Also, I'm American, so the vast majority of the people I interact with use Imperial, making it more useful.
 
-[![Original: https://xkcd.com/1643](~/distance_xkcd.webp)](https://xkcd.com/1643)
+![A comic strip with four panels. In the first panel, a character asks, 'Hey, how far is it to the store?'. Another character wonders whether they should respond in kilometers or miles. The second panel lists advantages of using kilometers: international standard, helps reduce America's isolationism, scales by powers of 10, 1 km ≈ 10 minutes walking time, highway speed is 100 km/h, and more syllables. The third panel lists advantages of using miles: used on all U.S. road signs, unit-aware computing makes imperial less annoying, SI prefixes less relevant for medium distances, miles likely more clear in this context, and valuing unit standardization over being helpful possibly makes one a bad friend. The fourth panel shows the character hesitating, saying, 'Gotta pick something... uhh... 16.678 light-microseconds,' to which the first character responds, 'I'll just go check myself.'](~/distance_xkcd.webp "Original: https://xkcd.com/1643")
 
 I prefer Metric and use it whenever possible, but I'm aware that using it has the unfortunate side effect of making me seem like a contrarian elitist.
 
@@ -21,9 +21,9 @@ So imagine my delight when I had an idea for a completely new system that nobody
 
 For the rest of the article to make sense, you'll need a basic understanding of why the Planck Length is so important, so here's a brief wildly oversimplified quantum metaphysics lesson.
 
-The smaller something is, the less it's affected by **general gravity** and the more it starts to be affected by **quantum gravity**. We don't yet know how to accurately model the effects of quantum gravity, so the more influencial quantum gravity is the less accurately we're able to measure things. Even perfectly flat surfaces look wavy and foamy due to quantum uncertainty. 
+The smaller something is, the less it's affected by **general gravity** and the more it starts to be affected by **quantum gravity**. We don't yet know how to accurately model the effects of quantum gravity, so the more influencial quantum gravity is the less accurately we're able to measure things. Even perfectly flat surfaces look wavy and foamy due to quantum uncertainty.
 
-![The Planck Length](~/plancklengthfoam.webp)
+!["An illustration showing three layers representing different scales of length. The top layer is smooth and labeled as 10^-12 cm, the middle layer shows a textured surface labeled as 10^-30 cm, and the bottom layer depicts a highly irregular, fractal-like structure labeled as 10^-33 cm."](~/plancklengthfoam.webp "The Planck Length")
 
 The length where general and quantum gravity are equal is called a **Planck Length**. It's the smallest length we can measure with any amount of accuracy, so it's commonly described as the pixel size of the universe.
 
@@ -80,7 +80,7 @@ To describe distances other than ~6.3 inches, we apply SI prefixes to Quanth, ju
 | **Myriaquanth**| 10^38 ℓP       | 10,000 Q         | 1 Mile            | 1.61 Kilometers   |
 | **Megaquanth** | 10^41 ℓP       | 1,000,000 Q      | 1,000 Miles       | 161 Kilometers    |
 
-I suggest that we abbreviate 'Myriaquanth' (~1 mile) as 'Myr' (pronounced like in '**mir**ror') in common usage. So you would say "The road is 5 Myr long". 
+I suggest that we abbreviate 'Myriaquanth' (~1 mile) as 'Myr' (pronounced like in '**mir**ror') in common usage. So you would say "The road is 5 Myr long".
 
 ## Conclusion
 
