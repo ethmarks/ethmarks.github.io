@@ -17,7 +17,7 @@ That being said, I absolutely love Liquid Glass. At no other point in time has m
 
 Liquid Glass is just the Applelogism (A portmanteau of [Apple](https://en.wikipedia.org/wiki/Apple_Inc.) and [neologism](https://en.wiktionary.org/wiki/neologism) coined by me to describe Apple's tendency to take popular existing concepts and rebrand them under a really generic Apple-ey name; see also Microsoft Excel and Apple Numbers) for [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator): a design philosophy that uses translucent blur effects to emulate [frosted glass](https://en.wikipedia.org/wiki/Frosted_glass).
 
-![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](~/windows_vista.webp)
+![Windows Aero's glassmorphic interface, featuring transparent blurred backgrounds](~/windows_vista.webp "Say what you will about Vista, it sure looked nice")
 
 As [many](https://www.instagram.com/reel/DKvIXjChU0L/?hl=en) [other](https://www.pcmag.com/news/did-apple-liquid-glass-design-steal-from-windows-vista-wwdc-2025) [people](https://www.reddit.com/r/windows/comments/1l7eqia/apple_liquid_glass_be_like/) [have](https://www.engadget.com/computing/apples-liquid-glass-is-windows-vista-done-well-181954910.html) [pointed](https://www.windowscentral.com/apple/apple-liquid-glass-wwdc-sorry-imitation-of-windows-vista-aero) [out](https://www.reddit.com/r/MacOS/comments/1l8pvm7/is_it_just_me_or_liquid_glass_reminds_frutiger/), Apple absolutely did not invent glassmorphism. Frosted glass designs were first popularized by [Windows Aero](https://en.wikipedia.org/wiki/Windows_Aero) in 2007, and [lots](https://css.glass/) [of](https://tricks-glassmorphism.webflow.io/) [other](https://reflect.app/) [designers](https://hype4.academy/tools/glassmorphism-generator) [have](https://www.reflectorai.app/) [used](https://www.behance.net/gallery/113924121/Kit-UI-Glassmorphism-trend#) [it](https://leanrada.com/) [since](https://jetgirl.art/), including me!
 
@@ -31,7 +31,7 @@ At its core, the only thing that Liquid Glass does is make the iPhone look prett
 
 ![Liquid Glass promotional material with the text 'Introducing Liquid Glass'](~/introducing_liquid_glass.webp)
 
-Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses. 
+Liquid Glass is unique. Despite Windows Vista featuring glassmorphism more than 18 years ago, current versions of Windows use [Fluent Design](https://en.wikipedia.org/wiki/Fluent_Design_System), which is the same boring [Flat design language](https://en.wikipedia.org/wiki/Flat_design) that pretty much every other interface uses.
 
 Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalism.
 
@@ -41,13 +41,13 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
-![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](~/android_ios18_ios26.webp)
+![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](~/android_ios18_ios26.webp "Android 14 (left), iOS 18 (middle), iOS 26 (right)")
 
 For example, consider the image above. On the left is a screenshot of [my phone](https://q1.cricketwireless.com/product/motorola-moto-g-5g-2023/) running [Android 14](https://www.android.com/android-14/), in the middle is a phone running [iOS 18](https://www.apple.com/ios/ios-18/), and on the right is a phone running [iOS 26](https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/). Of these three, which one looks most like something you'd find in a sci-fi movie? The answer is unambiguously the phone on the right. However you feel about Liquid Glass, you can't deny that it looks straight out of Black Mirror. In a good way.
 
 ### …Animated
 
-![GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](~/liquid_glass_coalescence.webm)
+![GIF Liquid Glass widgets morphing between a simple blob, a navigation bar, a context menu, and a browser control bar](~/liquid_glass_coalescence.webm "Blobs of Liquid Glass morphing into different panels")
 
 Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and realistically. For example, if two buttons made of Liquid Glass merge into one, they coalesce [like real blobs of liquid](https://youtu.be/Aq5ydeWWr4A) (the way the blobs merge reminds me of [object blending via ray marching](https://youtu.be/Cp5WWtMoeKg&t=198), although apparently Apple actually used [signed distance field interpolation](https://en.wikipedia.org/wiki/Signed_distance_function) for the [Fluid Morph](https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass) effect, not [ray marching](https://en.wikipedia.org/wiki/Ray_marching)). Because Liquid Glass imitates real-life fluid dynamics that we understand intuitively, it feels responsive and dynamic in a way that is pleasing to use.
 
@@ -55,9 +55,9 @@ Third, Liquid Glass is, well, *liquid*. It moves and behaves organically and rea
 
 ![A Liquid Glass overlay on a starry sky backdrop. The overlay is bending and refracting the light of a star into a rainbow, similarly to how a real-life prism behaves](~/liquid_glass_prism.webp)
 
-Liquid Glass bends light like a prism. I find it difficult to describe how cool this is to me. 
+Liquid Glass bends light like a prism. I find it difficult to describe how cool this is to me.
 
-I understand how Apple did this from a technical perspective. I understand their [colour dispersion](https://en.wikipedia.org/wiki/Dispersion_(optics)) and [luminal refraction](https://en.wikipedia.org/wiki/Refraction) techniques. This is still one of the most impressive and coolest interface effects I've ever seen. Even if Apple had just straight-up lifted Windows Aero without making any modifications (to be clear, they absolutely didn't do this) except for adding this prism effect, I would still think that Liquid Glass was awesome.
+I understand how Apple did this from a technical perspective. I understand their [colour dispersion](https://en.wikipedia.org/wiki/Dispersion_(optics)) and [luminal refraction](https://en.wikipedia.org/wiki/Refraction) techniques. This is still one of the most impressive and coolest interface effects I've ever seen. Even if Apple had just straight-up lifted Windows Aero without making any modifications except for adding this prism effect (to be clear, they absolutely didn't do this), I would still think that Liquid Glass was awesome.
 
 ## Liquid Glass is Problematically…
 
@@ -65,11 +65,11 @@ Despite its aesthetic appeal, Liquid Glass does have a significant amount of pro
 
 ### …Performant
 
-Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that blurred frosted glass effect. 
+Liquid Glass is composed of many different effects, but the most important is the [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) that gives it that blurred frosted glass effect.
 
 For example, in the photo of [Apple Park](https://en.wikipedia.org/wiki/Apple_Park) below, the left half is unmodified while the right half has been filtered through a Gaussian blur.
 
-![A photo of Apple Park where the right half is heavily gaussian blurred](~/applepark_gaussian_blur.webp)
+![A photo of Apple Park where the right half is heavily gaussian blurred](~/applepark_gaussian_blur.webp "Original photo (left), Gaussian blur (right)")
 
 From a technical perspective, a Gaussian blur is a method of making each pixel have an influence on the pixels around it, which causes the colours to average out into a blurry definitionless blob. What this means is that the computer needs to perform a mathematical function dozens or hundreds (eyeballing it, Liquid Glass has a blur radius of 6 pixels, meaning it has pi*6^2 ≈ 113 pixels around it) of times for every single pixel, of which there are millions (iPhone 16 has a 2556x1179 screen, so 3,013,524 total pixels), and you need to do this once per frame, of which there are ideally 60 per second on the iPhone 16. This adds up to a huge amount of computation, and it doesn't help that the [2D Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function#Two-dimensional_Gaussian_function) isn't exactly simple.
 
@@ -83,9 +83,9 @@ Even with Apple's optimization, Liquid Glass still uses a significant chunk of a
 
 Something you almost never notice is that, no matter the format, the text you read always contrasts with its background. This site uses a dark theme, so the text is white. Paper books are made of white paper, so the text is dark. Contrast is one of the most important qualities of a usable design: without enough contrast, our brains' visual system has to expend extra effort to detect the edges of each letter, something not ideal in an activity like reading where you have to parse hundreds of tiny glyphs almost instantly in order to allow sufficient time for your brain to actually process what it's read. If you want people to be able to read text, you have to make sure that the text contrasts with its background. So why in the world would you make the background transparent!?
 
-This isn't a problem for subtle transparency, but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible. 
+This isn't a problem for subtle transparency, but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible.
 
-![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](~/liquid_glass_contrast.webp)
+![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](~/liquid_glass_contrast.webp "A valuable lesson on the importance of text contrast")
 
 For example, try to read the text at the bottom of the iOS 26 screenshot above. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
 
