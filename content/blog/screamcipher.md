@@ -8,7 +8,7 @@ link_name: CodePen
 link_icon: codepen
 ---
 
-![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](~/xkcd_scream_cipher.webp)
+![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](~/xkcd_scream_cipher.webp "Original: https://xkcd.com/3054/")
 
 This is one of my favorite [xkcd](https://xkcd.com/) comics. It proposes the [Scream Cipher](https://xkcd.com/3054/), a creative, amusing, and not *completely* useless [cipher](https://en.wikipedia.org/wiki/Cipher).
 
@@ -42,6 +42,6 @@ For the sake of simplicity and thoroughness, my converter has a few quirks.
 
 ## Conclusion
 
-ȀA̰ẢĂÁ ẢĀ ÅȦÀẢÅÄÃĂA̦ ẢÃÂ'Ā ÀÁȂA̦ A̯ȂAA̧ĀẢA̧AĂ, Ả A̮ẢÂA̱ ĀA̰Á ÃA̧ȂÁAǍ A̧ẢA̯A̰ÁȂ A̱ÁĂẢA̋A̰ĀA̮ÄĂ AÂA̱ ÁÂA̓ÅA̦ÁA̱ ǍAẠẢÂA̋ ĀA̰ẢÃ A̧ÅÂÀÁȂĀÁȂ. ĀA̰Á ÅÂĂA̦ ÄÃÁ A̧AÃÁ Ả A̧AÂ ĀA̰ẢÂẠ ÅA̮ ẢÃ ÃÁÂA̱ẢÂA̋ ĂÅȀ-ÃÁA̧ÄȂẢĀA̦ A̯ȂẢÀAĀÁ ǍÁÃÃAA̋ÁÃ ÅÀÁȂ A̧ÅǍǍÄÂẢA̧AĀẢÅÂ A̧A̰AÂÂÁĂÃ ȀA̰ÁȂÁ ÂÅȦÅA̱A̦ ÁĂÃÁ ȂÁAA̱Ã A̽ẠA̧A̱, ȦÄĀ ĀA̰AĀ'Ã A A̯ȂÁĀĀA̦ A̮ÄÂÂA̦ ÄÃÁ A̧AÃÁ.
+<p aria-label="While it obviously isn't very practical, I find the scream cipher delightful and enjoyed making this converter. The only use case I can think of is sending low security private messages over communication channels where nobody else reads xkcd, but that's a pretty funny use case.">ȀA̰ẢĂÁ ẢĀ ÅȦÀẢÅÄÃĂA̦ ẢÃÂ'Ā ÀÁȂA̦ A̯ȂAA̧ĀẢA̧AĂ, Ả A̮ẢÂA̱ ĀA̰Á ÃA̧ȂÁAǍ A̧ẢA̯A̰ÁȂ A̱ÁĂẢA̋A̰ĀA̮ÄĂ AÂA̱ ÁÂA̓ÅA̦ÁA̱ ǍAẠẢÂA̋ ĀA̰ẢÃ A̧ÅÂÀÁȂĀÁȂ. ĀA̰Á ÅÂĂA̦ ÄÃÁ A̧AÃÁ Ả A̧AÂ ĀA̰ẢÂẠ ÅA̮ ẢÃ ÃÁÂA̱ẢÂA̋ ĂÅȀ-ÃÁA̧ÄȂẢĀA̦ A̯ȂẢÀAĀÁ ǍÁÃÃAA̋ÁÃ ÅÀÁȂ A̧ÅǍǍÄÂẢA̧AĀẢÅÂ A̧A̰AÂÂÁĂÃ ȀA̰ÁȂÁ ÂÅȦÅA̱A̦ ÁĂÃÁ ȂÁAA̱Ã A̽ẠA̧A̱, ȦÄĀ ĀA̰AĀ'Ã A A̯ȂÁĀĀA̦ A̮ÄÂÂA̦ ÄÃÁ A̧AÃÁ.</p>
 
-~ÁĀA̰AÂ
+<p aria-label="~Ethan">~ÁĀA̰AÂ</p>
