@@ -9,7 +9,7 @@ A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word tha
 
 For reasons unbeknownst to me, people really love coming up with ridiculous and silly collective nouns for animals. For example, a 'business' is the collective noun for ferrets.
 
-![The collective noun for ferrets is a business](~/business_of_ferrets.webp)
+![Five anthropomorphic ferrets wearing suits sitting around an office table in a meeting, generated with Imagen 3](~/business_of_ferrets.webp "The collective noun for ferrets is a business")
 
 Below is my collection.
 
