@@ -41,7 +41,7 @@ Liquid Glass is a splash of colour (or lack thereof) in a sea of bland minimalis
 
 Liquid Glass feels futuristic. See-through displays are featured so prominently in sci-fi settings like [Avatar](https://uxdesign.cc/why-all-of-hollywood-ui-looks-the-same-2ae1d3143350) that we tend to associate transparent displays with futuristic technology. A smart phone with Liquid Glass feels much closer to [Tony Stark's phone](https://i.pcmag.com/imagery/articles/017E1zlg5U6WhbK1R9iJKv0-21..v1619617955.png) than a smart phone without it.
 
-![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](~/android_ios18_ios26.webp "Android 14 (left), iOS 18 (middle), iOS 26 (right)")
+![Three smartphone screens display distinct aesthetics: Android 14 (left) features a clean, minimalist home screen with circular icons; iOS 18 (middle) shows a vibrant home screen with distinct, dark app icons; and iOS 26 (right) presents a futuristic home screen with transparent, frosted glass app icons.](~/android_ios18_ios26.webp "Android 14 (left) vs iOS 18 (middle) vs iOS 26 (right)")
 
 For example, consider the image above. On the left is a screenshot of [my phone](https://q1.cricketwireless.com/product/motorola-moto-g-5g-2023/) running [Android 14](https://www.android.com/android-14/), in the middle is a phone running [iOS 18](https://www.apple.com/ios/ios-18/), and on the right is a phone running [iOS 26](https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/). Of these three, which one looks most like something you'd find in a sci-fi movie? The answer is unambiguously the phone on the right. However you feel about Liquid Glass, you can't deny that it looks straight out of Black Mirror. In a good way.
 
@@ -69,7 +69,7 @@ Liquid Glass is composed of many different effects, but the most important is th
 
 For example, in the photo of [Apple Park](https://en.wikipedia.org/wiki/Apple_Park) below, the left half is unmodified while the right half has been filtered through a Gaussian blur.
 
-![A photo of Apple Park where the right half is heavily gaussian blurred](~/applepark_gaussian_blur.webp "Original photo (left), Gaussian blur (right)")
+![A photo of Apple Park where the right half is heavily gaussian blurred](~/applepark_gaussian_blur.webp "Original photo (left) vs Gaussian blur (right)")
 
 From a technical perspective, a Gaussian blur is a method of making each pixel have an influence on the pixels around it, which causes the colours to average out into a blurry definitionless blob. What this means is that the computer needs to perform a mathematical function dozens or hundreds (eyeballing it, Liquid Glass has a blur radius of 6 pixels, meaning it has pi*6^2 ≈ 113 pixels around it) of times for every single pixel, of which there are millions (iPhone 16 has a 2556x1179 screen, so 3,013,524 total pixels), and you need to do this once per frame, of which there are ideally 60 per second on the iPhone 16. This adds up to a huge amount of computation, and it doesn't help that the [2D Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function#Two-dimensional_Gaussian_function) isn't exactly simple.
 
