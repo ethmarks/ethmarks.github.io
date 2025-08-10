@@ -5,7 +5,7 @@ tags: [programming, zed]
 description: I'm switching from VS Code to the Zed code editor
 ---
 
-![VS Code (left) and Zed (right) each displaying this post's Markdown source, including this text. How did I do that?!](~/vscode_zed_comparison.webp)
+![VS Code (left) and Zed (right) each displaying this post's Markdown source, including this text. How did I do that?!](~/vscode_zed_comparison.webp "VS Code (left) vs Zed (right)")
 
 I've been using [VS Code](https://code.visualstudio.com/) for pretty much all of my serious coding.
 
