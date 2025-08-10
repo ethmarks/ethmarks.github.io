@@ -27,8 +27,7 @@ So I opened up the KDE Partition Manager, selected my 1 terabyte SSD, selected m
 
 About 15 minutes passed, during which the program successfully resized my partition and was performing the final steps to finish the resizing.
 
-![KDE Partition Manager showing the partition being resized](~/kdepartitionmanager.webp)
-
+![KDE Partition Manager showing the partition being resized](~/kdepartitionmanager.webp "Sorry for the low-quality photos in this post; most of them were taken when my computer wasn't in a state to take screenshots")
 
 Then Linux crashed.
 
@@ -46,7 +45,7 @@ The Desktop Environment crashed. The Linux kernel was still running, so I could 
 
 My first instinct was to get to a terminal. I pressed CTRL + ALT + F2. Rather than a terminal as I expected, I got a non-interactive wall of text filled with SQUASHFS errors. Same with the CTRL + ALT + F3, F4, F5, and F6 terminals.
 
-![A terminal full of SQUASHFS errors](~/squashfs.webp)
+![A terminal full of SQUASHFS errors](~/squashfs.webp "It was at this moment that I knew that this was going to be whole big ordeal")
 
 There was clearly nothing to be done from the failing Kubuntu instance, so I shut down my computer. It was quite late, so I decided to go to sleep and deal with it in the morning. I made sure to physically unplug the power cable so that my laptop wouldn't auto-start while I was sleeping.
 
@@ -56,9 +55,9 @@ In the morning, I made a plan. If Windows was bootable, then I would try to exfi
 
 I took a deep breath and started up my laptop. To my surprise and delight, Windows booted up normally. Well, not quite normally. Everything was fine at first glance, but it soon became clear that something was deeply wrong.
 
-![GParted showing the C: partition with 930.77 gigabytes of size, 494.76 gigabytes used, and 191.87 gigabytes unused](~/gparted.webp)
+![GParted showing the C: partition with 930.77 gigabytes of size, 494.76 gigabytes used, and 191.87 gigabytes unused](~/gparted.webp "The time my computer failed at basic addition")
 
-Different programs disagreed on how big my partition was. The ones that read from the partition table said it was around 930.77 gigabytes, while the ones that actually looked at the partition said it was 686.63 gigabytes. There were also some weird cases like GParted, which claimed that my partition was 930.77 gigabytes in total, 494.76 gigabytes of which were used, leaving 191.87 gigabytes remaining. Those numbers don't add up, so clearly it was pulling some data from the partition table and some from the partition itself. Also, every drive-related command that I ran came back with errors.
+Different programs disagreed on how big my partition was. The ones that read from the partition table said it was around 930.77 gigabytes, while the ones that actually looked at the partition said it was 686.63 gigabytes. There were also some weird cases like GParted, which claimed that my partition was 930.77 gigabytes in total, 494.76 gigabytes of which were used, leaving 191.87 gigabytes remaining. Those numbers don't add up. Also, every drive-related command that I ran came back with errors. The whole thing was uncanny.
 
 Using this seemingly healthy but subtly "wrong" operating system was unnerving and unsettling. It's like liminal horror for developers. I did not enjoy it.
 
@@ -70,13 +69,13 @@ My solution was to cannibalize an Ethernet cable from my Xbox and use it to conn
 
 With my backup secure, I shifted focus to fixing my drive.
 
-![A PowerShell terminal showing errors from the command `chkdsk /scan`](~/chkdsk.webp)
+![A PowerShell terminal showing errors from the command `chkdsk /scan`](~/chkdsk.webp "The scan command didn't just say 'this drive has problems', it errored out and failed to scan the drive")
 
 I did a lot of research, read a lot of discussions and tutorials, ran a lot of diagnostics, and tried a lot of commands. Half an hour later, I had successfully managed to ruin my drive so badly that Windows forcibly shut itself down.
 
 When I tried to turn it back on, Windows refused to boot.
 
-![The Windows Disk Repair Utility fixing the C: drive](~/diskrepair.webp)
+![The Windows Disk Repair Utility fixing the C: drive](~/diskrepair.webp "Deus ex machina is just lazy writing")
 
 But then, unexpectedly, the Windows Disk Repair Utility activated, noticed my ruined drive, and fixed it for me. I have no idea what it did, but when it finished, Windows booted normally, all programs agreed on partition size, and all diagnostics reported a healthy drive.
 
@@ -96,7 +95,7 @@ I couldn't trust my old USB drive, so I went out and bought a new one. I downloa
 
 ## Conclusion
 
-![A screenshot of my computer running Kubuntu](~/kubuntu.webp)
+![A screenshot of my computer running Kubuntu](~/kubuntu.webp "But the real treasure was the Kubuntu I installed along the way")
 
 I'm pretty happy with Kubuntu. It's faster, nicer, and more customizable than Windows. I've only had to switch back to Windows twice so far, once to move over some files that I forgot to include in my backup and once to respond to an email in Outlook. I've very much enjoyed using Kubuntu and setting it up. I did *not* enjoy the installation process, though.
 
