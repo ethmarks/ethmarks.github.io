@@ -13,11 +13,11 @@ The photo above was taken by me on May 24, 2024, at 9:26 AM, standing in [this l
 
 ## Volumetric Light and Shadow
 
-![A spotlight shining in the dark through a cloud of smoke, casting a volumetric light in the smoke](~/spotlight_in_smoke.webp)
+![A spotlight shining in the dark through a cloud of mist, casting a volumetric light in the mist](~/spotlight_in_smoke.webp)
 
 To understand what causes volumetric shadows, consult the photo above. It's the same thing, but exactly the opposite.
 
-Normally, the only visible part of a spotlight is the spot (so that's why the call it that) where the beam hits a surface. However, if there are particles in the air (like the mist/smoke in the photo), the light from the spotlights scatters off of the particles, making the beam visible. This effect is called [volumetric lighting](https://en.wikipedia.org/wiki/Volumetric_lighting), and it only occurs when the air is filled with particles to scatter the light.
+Normally, the only visible part of a spotlight is the spot where the beam hits a surface. However, if there are particles in the air (like the mist in the photo), the light from the spotlights scatters off of the particles, making the beam visible. This effect is called [volumetric lighting](https://en.wikipedia.org/wiki/Volumetric_lighting), and it only occurs when the air is filled with particles to scatter the light.
 
 Volumetric shadows occur under the same conditions as volumetric light, but when an object (like a 553 meter tall concrete spire) occludes the path of the light source. Because the rest of the air is volumetrically lit, the space that isn't appears to be in shade.
 
