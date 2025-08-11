@@ -5,7 +5,7 @@ tags: [curios, language]
 description: An introduction to Tsevhu, a constructed language written with fish symbols, and its unique grammar.
 ---
 
-![A poem written in Tsevhu](~/tsevhu_poem.svg)
+![An example of Tsevhu writing, with a multitude of koi fish shapes engraved with symbols with tails and heads all contorted in specific directions](~/tsevhu_poem.svg "A poem written in Tsevhu")
 
 [Tsevhu](https://conlang.fandom.com/wiki/Tsevhu) is a [constructed language](https://en.wikipedia.org/wiki/Constructed_language) which is written with fish-like glyphs rather than Latin letters.
 
@@ -15,26 +15,26 @@ description: An introduction to Tsevhu, a constructed language written with fish
 
 According to the inventor of Tsevhu, Koa Vhukva, the fishes in the image above translate to:
 
-> *When I traveled the world,*  
-> *I traveled lonely.*  
-> *A desolate landscape*  
-> *scraped my view,*  
-> *A dead thing to keep me company.*  
-> *I wandered because*  
-> *it was the only thing left to do.*  
-> *When I found you,*  
-> *you were in stasis,*  
-> *frozen for more*  
-> *than a century*  
-> *asleep, delicate in all your graces,*  
-> *and I felt all my years*  
-> *telling me to wake you.*  
+> *When I traveled the world,*
+> *I traveled lonely.*
+> *A desolate landscape*
+> *scraped my view,*
+> *A dead thing to keep me company.*
+> *I wandered because*
+> *it was the only thing left to do.*
+> *When I found you,*
+> *you were in stasis,*
+> *frozen for more*
+> *than a century*
+> *asleep, delicate in all your graces,*
+> *and I felt all my years*
+> *telling me to wake you.*
 
 This is a lovely little poem, but what's interesting is how it's encoded with fish.
 
 ## Grammar
 
-![A Tsevhu grammar chart](~/tsevhu_grammar.webp)
+![A chart describing Tsevhu grammar](~/tsevhu_grammar.webp "A Tsevhu grammar chart")
 
 ### Clauses
 
@@ -81,11 +81,11 @@ Tsevhu is a cool little language. I'm glad I stumbled upon this corner of the in
 
 Translation:
 
-> *I'm glad*  
-> *To have met you all.*  
-> *I feel grateful for*  
-> *The interest you have shown in Tsevhu.*  
-> *I wish to thank you all.*  
+> *I'm glad*
+> *To have met you all.*
+> *I feel grateful for*
+> *The interest you have shown in Tsevhu.*
+> *I wish to thank you all.*
 
 ~Ethan
 

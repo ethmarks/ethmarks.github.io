@@ -355,11 +355,17 @@ a {
 
 figure {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: 0;
     text-align: center;
     font-style: italic;
     color: var(--color-text-secondary);
+
+    figcaption {
+        width: fit-content;
+    }
 }
 
 img,

@@ -9,27 +9,27 @@ link_name: Website
 
 Salt is my favorite mineral. It's easily the most delicious (Sitenote: despite its name, [Cinnabar](https://en.wikipedia.org/wiki/Cinnabar) is actually not tasty at all), it [looks awesome under an electron microscope](https://salinity.oceansciences.org/media/ed_image_81_salt_crystal.jpg), and it's so abundant that it forms colossal salt caverns and vast salt flats.
 
-![A large, textured salt flat with polygonal patterns stretches to a distant mountain range under a vibrant orange and blue sunset sky](~/salt_flat.webp)
+![A large, textured salt flat with polygonal patterns stretches to a distant mountain range under a vibrant orange and blue sunset sky](~/salt_flat.webp "A scenic and tasty-looking salt flat")
 
 Yesterday (June 10, 2025), I discovered that the top result on Google Images for ["Salt Flat"](https://www.google.com/search?q=salt+flat&udm=2) is this beautiful photo of the [Uyuni Salt Flat](https://en.wikipedia.org/wiki/Salar_de_Uyuni). It is currently set as my desktop wallpaper.
 
 Although the image content is interesting, what interested me even more was the image source: a website called "The Salt Association". Intrigued, I clicked on the link.
 
-I'm not sure what I was else expecting, but I was delighted to find [an entire multi-page website devoted entirely to salt](https://saltassociation.co.uk/). 
+I'm not sure what I was else expecting, but I was delighted to find [an entire multi-page website devoted entirely to salt](https://saltassociation.co.uk/).
 
 ## The Salt Association
 
-![The word 'SALT' is spelled out using four different types of salt on a dark background: coarse white salt for 'S', pink Himalayan salt for 'A', black salt for 'L', and fine white salt for 'T'](~/salt_text.webp)
+![The word 'SALT' is spelled out using four different types of salt on a dark background: coarse white salt for 'S', pink Himalayan salt for 'A', black salt for 'L', and fine white salt for 'T'](~/salt_text.webp "The Salt Association must have amazing designers; this header is awesome")
 
 The Salt Association's website explores a variety of topics, including [the basic properties of salt](https://saltassociation.co.uk/education/what-is-salt-and-its-properties/), its [applications in de-icing roads](https://saltassociation.co.uk/de-icing/), its [culinary use as table salt](https://saltassociation.co.uk/white-salt/), its [history as a valuable commodity](https://saltassociation.co.uk/education/salt-history/early-history/) that soldiers were paid in (the word 'salary' comes from the Latin word for salt, 'sal'), and much more.
 
 It explains [how salt is mined](https://saltassociation.co.uk/education/make-salt/), where the [biggest salt reserves are](https://saltassociation.co.uk/education/physical-geography/), and the [different types of salt](https://saltassociation.co.uk/education/chemistry-salt/) other than Sodium Chloride.
 
-![Several enormous piles of gleaming white salt surround an industrial yellow salt elevator](~/salt_mining.webp)
+![Several enormous piles of gleaming white salt surround an industrial yellow salt elevator](~/salt_mining.webp "I wonder if salt piles are good for sledding on")
 
 It covers various [famous geological salt formations](https://saltassociation.co.uk/education/physical-geography/), like the salt flats that brought me to this website in the first place.
 
-It even covers [salt controversies](https://saltassociation.co.uk/position-statement-government-salt-reduction-strategy/) and combats [salt misinformation](https://saltassociation.co.uk/salt-the-facts/).
+It even covers [salt controversies](https://saltassociation.co.uk/position-statement-government-salt-reduction-strategy/) and combats [salt misinformation](https://saltassociation.co.uk/salt-the-facts/) with what it calls the [Salt Sense Campaign](https://saltassociation.co.uk/news/saltsense/).
 
 ![A 404 page with the header '404 Error' in large red text, and below it the subheader 'You’ve found a lost salt crystal!' in smaller blue text. To the right is a photo of a salt crystal.](~/salt_404.webp)
 
