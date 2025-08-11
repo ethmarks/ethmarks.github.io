@@ -92,3 +92,34 @@ const forceLightMode = false;
         darkQuery.addEventListener("change", updateLightMode);
     });
 })();
+
+// Add 'tall' class to media elements exceeding --max-media-height
+(function handleTallMedia() {
+    function getMaxMediaHeight() {
+        // Get the value of --max-media-height from the root element (in px)
+        const root = document.documentElement;
+        const value = getComputedStyle(root).getPropertyValue('--max-media-height').trim();
+        // Parse value (assume px, fallback to 0 if not found)
+        if (value.endsWith('px')) {
+            return parseFloat(value);
+        }
+        return 0;
+    }
+
+    function updateTallMediaClasses() {
+        const maxHeight = getMaxMediaHeight();
+        if (!maxHeight) return;
+        document.querySelectorAll('img, video, iframe').forEach(function (el) {
+            // Use offsetHeight for rendered height
+            if (el.offsetHeight > maxHeight) {
+                el.classList.add('media-tall');
+            } else {
+                el.classList.remove('media-tall');
+            }
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", updateTallMediaClasses);
+    window.addEventListener("load", updateTallMediaClasses);
+    window.addEventListener("resize", updateTallMediaClasses);
+})();
