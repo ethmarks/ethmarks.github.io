@@ -34,16 +34,8 @@
     --color-chat-sender-bg: #3a3a3a;
     --color-chat-recipient-bg: #124161;
     --color-focus-outline: var(--color-accent-light);
-    --color-gradient-mint: linear-gradient(
-        135deg,
-        var(--color-accent),
-        var(--color-text)
-    );
-    --color-gradient-mint-inverse: linear-gradient(
-        135deg,
-        var(--color-text),
-        var(--color-accent)
-    );
+    --color-gradient-mint: linear-gradient(135deg, var(--color-accent), var(--color-text));
+    --color-gradient-mint-inverse: linear-gradient(135deg, var(--color-text), var(--color-accent));
 
     /* Fonts */
     --font-primary: "Nunito", sans-serif;
@@ -102,15 +94,10 @@
     --transition-duration: 0.3s;
     --transition-duration-fast: 0.2s;
     --transition-timing: ease;
-    --transition-default: all var(--transition-duration-fast)
-        var(--transition-timing);
-    --transition-transform-shadow:
-        transform var(--transition-duration) var(--transition-timing),
-        box-shadow var(--transition-duration) var(--transition-timing);
-    --transition-transform: transform var(--transition-duration)
-        var(--transition-timing);
-    --transition-background: background-color var(--transition-duration-fast)
-        var(--transition-timing);
+    --transition-default: all var(--transition-duration-fast) var(--transition-timing);
+    --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
+    --transition-transform: transform var(--transition-duration) var(--transition-timing);
+    --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
 
     /* Media Sizes */
     --media-width: clamp(300px, 60vw, 1000px);
@@ -125,18 +112,7 @@
     }
 
     /* Misc */
-    --body-bg-gradient:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(143, 223, 212, 0.15),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(143, 223, 212, 0.12),
-            transparent 50%
-        ),
-        var(--color-background);
+    --body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), var(--color-background);
     --child-animation-delay: 0s;
 }
 
@@ -167,29 +143,10 @@
     --color-chat-recipient-bg: #0b93f6;
     --color-focus-outline: var(--color-accent-dark);
 
-    --body-bg-gradient:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(0, 128, 128, 0.15),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(0, 128, 128, 0.12),
-            transparent 50%
-        ),
-        var(--color-background);
+    --body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(0, 128, 128, 0.15), transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 128, 128, 0.12), transparent 50%), var(--color-background);
 
-    --color-gradient-mint: linear-gradient(
-        135deg,
-        var(--color-accent),
-        var(--color-text)
-    );
-    --color-gradient-mint-inverse: linear-gradient(
-        135deg,
-        var(--color-text),
-        var(--color-accent)
-    );
+    --color-gradient-mint: linear-gradient(135deg, var(--color-accent), var(--color-text));
+    --color-gradient-mint-inverse: linear-gradient(135deg, var(--color-text), var(--color-accent));
 }
 
 /*
