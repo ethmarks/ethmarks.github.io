@@ -1,8 +1,13 @@
-{{ $src := replace (.Destination | safeURL) "~/" "/media/" }}
-{{ $img := resources.Get $src }}
+{{ $destination := replace (.Destination | safeURL) "~/" "/media/" }}
+{{ $img := resources.Get $destination }}
+{{ $src := $img.RelPermalink }}
 
-{{ $width := $img.Width }}
-{{ $height := $img.Height }}
+{{ $width := "" }}
+{{ $height := "" }}
+{{ if and $img (eq $img.MediaType.MainType "image") (ne $img.MediaType.SubType "svg") }}
+    {{ $width = $img.Width }}
+    {{ $height = $img.Height }}
+{{ end }}
 
 {{ $alt := .PlainText }}
 {{ $is_gif := findRE "GIF" $alt }}
@@ -15,8 +20,8 @@
         class="gif"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
+        {{ if $width }}width="{{ $width }}"{{ end }}
+        {{ if $height }}height="{{ $height }}"{{ end }}
         autoplay
         loop
         muted
@@ -27,8 +32,8 @@
         class="video"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
+        {{ if $width }}width="{{ $width }}"{{ end }}
+        {{ if $height }}height="{{ $height }}"{{ end }}
         controls
     ></video>
     {{ end }}
@@ -36,8 +41,8 @@
     <img
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
+        {{ if $width }}width="{{ $width }}"{{ end }}
+        {{ if $height }}height="{{ $height }}"{{ end }}
     />
     {{ end }}
     {{- with .Title }}
