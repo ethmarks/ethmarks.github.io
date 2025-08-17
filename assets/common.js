@@ -1,9 +1,3 @@
-(function loadQuicklink() {
-    window.addEventListener("load", () => {
-        quicklink.listen();
-    });
-})();
-
 // Handle short pages: fix footer, background, and anchor article
 (function handleShortPage() {
     function updateShortPageElements() {
