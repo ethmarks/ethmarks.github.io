@@ -19,87 +19,27 @@
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-        <!-- Font Preloads -->
-        <link
-            rel="preload"
-            href="/fonts/Fira_Code.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-cyrillic-italic.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-cyrillic.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-latin-ext-italic.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-latin-ext.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Nunito-latin-italic.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Sen-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="/fonts/Sen-latin-ext.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
+        {{/* Preload most ubiquitous woff2 files */}}
+        {{ partial "font-preload.html" . }}
 
-        {{ $commonCss := resources.Get "common.css"}}
+        {{/* Concat all CSS into one bundle */}}
         {{ $fontsCss := resources.Get "fonts.css"}}
-
+        {{ $commonCss := resources.Get "common.css"}}
         {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css"}}
-
-        {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" | minify }}
-
-
+        {{ $bundleCss := slice $fontsCss $commonCss $moduleCss | resources.Concat "bundle.css" | minify }}
         <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
 
+        {{/* Load Quicklink */}}
         {{ $quicklinkJs := resources.Get "quicklink.js" | minify }}
         <script src="{{ $quicklinkJs.Permalink }}" defer></script>
 
+        {{/* Publish all media, even unreferenced files */}}
+        {{ partial "publish-all-media.html" . }}
+
+        {{/* Page-specific CSS and JS assets */}}
         {{ block "resources" . }}{{ end }}
     </head>
     <body>
