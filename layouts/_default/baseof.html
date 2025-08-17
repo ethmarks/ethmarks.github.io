@@ -84,25 +84,24 @@
             crossorigin
         />
 
+        {{/* Concat all CSS into one bundle */}}
         {{ $commonCss := resources.Get "common.css"}}
         {{ $fontsCss := resources.Get "fonts.css"}}
-
         {{ $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css"}}
-
         {{ $bundleCss := slice $commonCss $fontsCss $moduleCss | resources.Concat "bundle.css" | minify }}
-
-
         <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 
         {{ $commonJs := resources.Get "common.js" | minify }}
         <script src="{{ $commonJs.Permalink }}"></script>
 
+        {{/* Load Quicklink */}}
         {{ $quicklinkJs := resources.Get "quicklink.js" | minify }}
         <script src="{{ $quicklinkJs.Permalink }}" defer></script>
 
         {{/* Publish all media, even unreferenced files */}}
         {{ partial "publish-all-media.html" . }}
 
+        {{/* Page-specific CSS and JS assets */}}
         {{ block "resources" . }}{{ end }}
     </head>
     <body>
