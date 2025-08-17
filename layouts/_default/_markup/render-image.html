@@ -1,4 +1,9 @@
 {{ $src := replace (.Destination | safeURL) "~/" "/media/" }}
+{{ $img := resources.Get $src }}
+
+{{ $width := $img.Width }}
+{{ $height := $img.Height }}
+
 {{ $alt := .PlainText }}
 {{ $is_gif := findRE "GIF" $alt }}
 {{ $alt_processed := replace $alt "GIF" "" | trim " " }}
@@ -9,22 +14,31 @@
     <video
         class="gif"
         src="{{ $src }}"
+        alt="{{ $alt_processed }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
         autoplay
         loop
         muted
         playsinline
-        alt="{{ $alt_processed }}"
     ></video>
     {{ else }}
     <video
         class="video"
         src="{{ $src }}"
-        controls
         alt="{{ $alt_processed }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        controls
     ></video>
     {{ end }}
     {{ else }}
-    <img src="{{ $src }}" alt="{{ $alt_processed }}" />
+    <img
+        src="{{ $src }}"
+        alt="{{ $alt_processed }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+    />
     {{ end }}
     {{- with .Title }}
     <figcaption>{{ . }}</figcaption>
