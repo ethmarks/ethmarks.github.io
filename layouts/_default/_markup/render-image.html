@@ -1,11 +1,11 @@
-{{ $src := replace (.Destination | safeURL) "~/" "/media/" }} {{ $alt :=
-.PlainText }} {{ $is_gif := findRE "GIF" $alt }} {{ $alt_processed := replace
-$alt "GIF" "" | trim " " }}
+{{ $src := replace (.Destination | safeURL) "~/" "/media/" }}
+{{ $alt := .PlainText }}
+{{ $is_gif := findRE "GIF" $alt }}
+{{ $alt_processed := replace $alt "GIF" "" | trim " " }}
 
 <figure>
-    {{ if or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4")
-    (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }} {{ if
-    $is_gif }}
+    {{ if or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }}
+    {{ if $is_gif }}
     <video
         class="gif"
         src="{{ $src }}"
@@ -22,9 +22,11 @@ $alt "GIF" "" | trim " " }}
         controls
         alt="{{ $alt_processed }}"
     ></video>
-    {{ end }} {{ else }}
+    {{ end }}
+    {{ else }}
     <img src="{{ $src }}" alt="{{ $alt_processed }}" />
-    {{ end }} {{- with .Title }}
+    {{ end }}
+    {{- with .Title }}
     <figcaption>{{ . }}</figcaption>
     {{ end -}}
 </figure>
