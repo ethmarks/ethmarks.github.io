@@ -20,8 +20,6 @@
         class="gif"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
-        {{ if $width }}width="{{ $width }}"{{ end }}
-        {{ if $height }}height="{{ $height }}"{{ end }}
         autoplay
         loop
         muted
@@ -32,8 +30,6 @@
         class="video"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
-        {{ if $width }}width="{{ $width }}"{{ end }}
-        {{ if $height }}height="{{ $height }}"{{ end }}
         controls
     ></video>
     {{ end }}
