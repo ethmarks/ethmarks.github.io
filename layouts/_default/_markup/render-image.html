@@ -12,7 +12,7 @@
 {{ $alt := .PlainText }}
 {{ $is_video := or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }}
 {{ $is_gif := findRE "GIF" $alt }}
-{{ $alt_processed := replace $alt "GIF" "" | trim " " }}
+{{ $alt_processed := replace $alt "GIF" ""}}
 
 <figure>
     {{ if $is_video }}
