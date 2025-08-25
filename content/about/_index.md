@@ -90,13 +90,13 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 ## Skills
 
 {{< compact-table >}}
-| Subject | Skills |
-|---------|--------|
-| General Purpose Language | [Python](https://www.python.org/) |
-| Version Control | [Git](https://git-scm.com/), [GitHub](https://github.com/) |
-| Web Development | [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JavaScript](https://en.wikipedia.org/wiki/JavaScript) |
-| Game Engine | [Unity](https://unity.com/), [Godot](https://godotengine.org/) |
-| Image Editing Software | [Photoshop](https://www.adobe.com/products/photoshop.html), [GIMP](https://www.gimp.org/), [Inkscape](https://inkscape.org/) |
+| Category | Skills |
+|----------|--------|
+| General Purpose Language | Python |
+| Web Development | HTML, CSS, JavaScript |
+| Version Control | Git, GitHub |
+| Game Engine | Unity, Godot |
+| Image Editing Software | Photoshop, GIMP, Inkscape |
 {{< /compact-table >}}
 {{< /column >}}
 
