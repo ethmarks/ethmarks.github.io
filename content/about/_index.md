@@ -7,6 +7,7 @@ layout: about/list
 
 {{< row >}}
 {{< column >}}
+
 ## Bio
 
 My name is **Ethan Marks**
@@ -19,6 +20,7 @@ I'm **14** years old
 
 {{< row >}}
 {{< column >}}
+
 ## Interests
 
 {{< table class="compact" >}}
@@ -34,6 +36,7 @@ I'm **14** years old
 {{< /column >}}
 
 {{< column >}}
+
 ## Likes
 
 {{< table class="compact" >}}
@@ -49,37 +52,41 @@ I'm **14** years old
 {{< /column >}}
 
 {{< column >}}
+
 ## Hobbies
 
 {{< table class="compact" >}}
 | Hobbies |
 |---------|
 | Coding [things](/tags/projects/) |
-| Reading [novels](https://www.goodreads.com/author/show/3618.Philip_Pullman) and [sci-fi short stories](https://www.goodreads.com/author/show/8352985.Sam_Hughes?from_search=true&from_srp=true) |
-| Playing [Factorio](https://en.wikipedia.org/wiki/Factorio) |
-| [Wikipedia Roulette](https://en.wikipedia.org/wiki/Wikipedia:Random) |
+| Reading, especially sci-fi |
+| Playing [Astroneer](https://store.steampowered.com/app/361420/ASTRONEER/) |
+| Browsing random Wikipedia articles |
 | Memorizing every [xkcd](https://xkcd.com/) comic |
-| Visiting [National Parks](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States) (I've been to 34 so far) |
+| Traveling around the country (I've been to 48 states) |
 {{< /table >}}
 {{< /column >}}
 {{< /row >}}
 
 {{< row >}}
 {{< column >}}
+
 ## Education
 
-I'm a homeschooled high school student, and I'm also dual-enrolled at my local college with a 4.0 GPA.
+I'm a homeschooled high school student currently in my third semester of [dual-enrollment](https://en.wikipedia.org/wiki/Dual_enrollment) at my local community college.
 {{< /column >}}
 
 {{< column >}}
+
 ## Job
 
-I run a small side business flipping old laptops. I buy them in bulk at auction, purchase and install new parts, flash the [ChromeOS Flex](https://chromeos.google/products/chromeos-flex/) operating system, and resell them for profit
+I run a small personal business flipping old laptops. I bought 30 old laptops at auction, and I repair them and install [ChromeOS Flex](https://chromeos.google/products/chromeos-flex/) in order to resell them for profit.
 {{< /column >}}
 {{< /row >}}
 
 {{< row >}}
 {{< column >}}
+
 ## Skills
 
 {{< table class="compact" >}}
