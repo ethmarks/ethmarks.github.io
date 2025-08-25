@@ -12,13 +12,26 @@
 {{ $alt := .PlainText }}
 {{ $is_video := or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }}
 {{ $is_gif := findRE "GIF" $alt }}
-{{ $alt_processed := replace $alt "GIF" ""}}
+{{ $is_verytall := findRE "TALL" $alt }}
+{{ $alt_processed := $alt }}
+{{ $alt_processed = replace $alt_processed "GIF" ""}}
+{{ $alt_processed = replace $alt_processed "TALL" ""}}
+
+{{ $verytall := "" }}
+{{ if $is_verytall }}
+{{ $verytall = "media-verytall" }}
+{{ end }}
+
+{{ $tall := "" }}
+{{ if gt $height $width }}
+{{ $tall = "media-tall" }}
+{{ end }}
 
 <figure>
     {{ if $is_video }}
     {{ if $is_gif }}
     <video
-        class="gif"
+        class="gif {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         autoplay
@@ -28,7 +41,7 @@
     ></video>
     {{ else }}
     <video
-        class="video"
+        class="video {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         controls
@@ -36,6 +49,7 @@
     {{ end }}
     {{ else }}
     <img
+        class="{{ $tall }} {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $width }}width="{{ $width }}"{{ end }}

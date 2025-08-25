@@ -87,25 +87,15 @@ const forceLightMode = false;
     });
 })();
 
-// Add 'tall' class to media elements exceeding --max-media-height
+// Add 'tall' class to media elements where height is greater than width
 (function handleTallMedia() {
-    function getMaxMediaHeight() {
-        // Get the value of --max-media-height from the root element (in px)
-        const root = document.documentElement;
-        const value = getComputedStyle(root).getPropertyValue('--max-media-height').trim();
-        // Parse value (assume px, fallback to 0 if not found)
-        if (value.endsWith('px')) {
-            return parseFloat(value);
-        }
-        return 0;
-    }
-
     function updateTallMediaClasses() {
-        const maxHeight = getMaxMediaHeight();
-        if (!maxHeight) return;
         document.querySelectorAll('img, video, iframe').forEach(function (el) {
-            // Use offsetHeight for rendered height
-            if (el.offsetHeight > maxHeight) {
+            // Prefer width/height attributes, fallback to offsetWidth/offsetHeight
+            const width = el.getAttribute('width') ? parseInt(el.getAttribute('width')) : el.offsetWidth;
+            const height = el.getAttribute('height') ? parseInt(el.getAttribute('height')) : el.offsetHeight;
+
+            if (height > width) {
                 el.classList.add('media-tall');
             } else {
                 el.classList.remove('media-tall');

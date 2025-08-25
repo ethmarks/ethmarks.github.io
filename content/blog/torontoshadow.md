@@ -5,7 +5,7 @@ tags: [travel, curio, physics]
 description: A neat photo I took that demonstrates the air quality of Toronto via the volumetric shadow cast by the CN Tower
 ---
 
-![A photo of the CN Tower in Toronto, taken in early morning, where the tower casts a visible volumetric shadow in the air itself](~/cn_tower_shadow.webp)
+![TALL A photo of the CN Tower in Toronto, taken in early morning, where the tower casts a visible volumetric shadow in the air itself](~/cn_tower_shadow.webp)
 
 Early in the morning, from certain viewpoints, the [CN Tower](https://en.wikipedia.org/wiki/CN_Tower) in [Toronto](https://en.wikipedia.org/wiki/Toronto) casts a volumetric shadow in the air.
 

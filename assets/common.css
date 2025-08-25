@@ -101,7 +101,7 @@
 
     /* Media Sizes */
     --media-width: clamp(300px, 60vw, 1000px);
-    --max-media-height: 1200px;
+    --max-media-height: 600px;
     --max-media-width-big: clamp(70vw, 80vw, 800px);
     --max-media-height-big: 70vh;
     --max-media-width-small: clamp(25vw, 30vw, 250px);
@@ -330,12 +330,17 @@ video,
 iframe {
     height: auto;
     width: var(--media-width);
+    max-height: var(--max-media-height);
     border-radius: var(--radius-xl);
     border: var(--border-standard);
 
     &.media-tall {
         width: auto;
         height: var(--max-media-height);
+    }
+
+    &.media-verytall {
+        --max-media-height: 1000px;
     }
 }
 
