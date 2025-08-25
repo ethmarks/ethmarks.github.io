@@ -28,10 +28,10 @@ I'm **14** years old
 |-----------|
 | [Programming](/tags/programming) |
 | [Automation](/tags/automation) |
-| Logistics |
 | Mathematics |
 | [Cryptology](/tags/cryptology) |
 | [Linguistics](/tags/language/) |
+| [Cartography](/tags/cartography) |
 {{< /compact-table >}}
 {{< /column >}}
 
