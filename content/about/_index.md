@@ -23,7 +23,7 @@ I'm **14** years old
 
 ## Interests
 
-{{< table class="compact" >}}
+{{< compact-table >}}
 | Interests |
 |-----------|
 | [Programming](/tags/programming) |
@@ -32,14 +32,14 @@ I'm **14** years old
 | Mathematics |
 | [Cryptology](/tags/cryptology) |
 | [Linguistics](/tags/language/) |
-{{< /table >}}
+{{< /compact-table >}}
 {{< /column >}}
 
 {{< column >}}
 
 ## Likes
 
-{{< table class="compact" >}}
+{{< compact-table >}}
 | Category | My Favorite |
 |----------|-------------|
 | Colour | <span class="mint"><b>Spearmint Teal</b></span> |
@@ -48,14 +48,14 @@ I'm **14** years old
 | Bird | [Starling](https://en.wikipedia.org/wiki/Starling) |
 | Foreign Language | [Bulgarian](https://en.wikipedia.org/wiki/Bulgarian_language) |
 | Logical Operator | [XOR](https://en.wikipedia.org/wiki/Exclusive_or) |
-{{< /table >}}
+{{< /compact-table >}}
 {{< /column >}}
 
 {{< column >}}
 
 ## Hobbies
 
-{{< table class="compact" >}}
+{{< compact-table >}}
 | Hobbies |
 |---------|
 | Coding [things](/tags/projects/) |
@@ -64,7 +64,7 @@ I'm **14** years old
 | Browsing random Wikipedia articles |
 | Memorizing every [xkcd](https://xkcd.com/) comic |
 | Traveling around the country (I've been to 48 states) |
-{{< /table >}}
+{{< /compact-table >}}
 {{< /column >}}
 {{< /row >}}
 
@@ -89,7 +89,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 
 ## Skills
 
-{{< table class="compact" >}}
+{{< compact-table >}}
 | Subject | Skills |
 |---------|--------|
 | General Purpose Language | [Python](https://www.python.org/) |
@@ -97,14 +97,14 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Web Development | [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/CSS), [JavaScript](https://en.wikipedia.org/wiki/JavaScript) |
 | Game Engine | [Unity](https://unity.com/), [Godot](https://godotengine.org/) |
 | Image Editing Software | [Photoshop](https://www.adobe.com/products/photoshop.html), [GIMP](https://www.gimp.org/), [Inkscape](https://inkscape.org/) |
-{{< /table >}}
+{{< /compact-table >}}
 {{< /column >}}
 
 {{< column >}}
 
 ## Experience
 
-{{< table class="compact" >}}
+{{< compact-table >}}
 | Experience |
 |------------|
 | Coding since I was 7 years old |
@@ -112,7 +112,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Designed and built my [personal website](/blog/personalwebsite) from scratch |
 | Created [Thessa](/blog/thessa), an AI-powered thesaurus |
 | Created [ASCII-Globe](/blog/asciiglobe), a text-based cartographic rendering engine |
-{{< /table >}}
+{{< /compact-table >}}
 {{< /column >}}
 {{< /row >}}
 

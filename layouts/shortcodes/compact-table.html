@@ -1,0 +1,3 @@
+{{ $content := .Inner | markdownify }}
+{{ $content = replace $content "<table>" "<table class=\"compact\">" }}
+{{ $content | safeHTML }}
