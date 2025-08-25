@@ -22,16 +22,11 @@
 {{ $verytall = "media-verytall" }}
 {{ end }}
 
-{{ $tall := "" }}
-{{ if gt $height $width }}
-{{ $tall = "media-tall" }}
-{{ end }}
-
 <figure>
     {{ if $is_video }}
     {{ if $is_gif }}
     <video
-        class="gif {{ $verytall }}"
+        class="content-media gif {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         autoplay
@@ -41,7 +36,7 @@
     ></video>
     {{ else }}
     <video
-        class="video {{ $verytall }}"
+        class="content-media video {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         controls
@@ -49,7 +44,7 @@
     {{ end }}
     {{ else }}
     <img
-        class="{{ $tall }} {{ $verytall }}"
+        class="content-media {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $width }}width="{{ $width }}"{{ end }}
