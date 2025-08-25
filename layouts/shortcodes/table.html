@@ -1,0 +1,6 @@
+{{ $class := .Get "class" }}
+{{ $content := .Inner | markdownify }}
+{{ if $class }}
+  {{ $content = replace $content "<table>" (printf "<table class=\"%s\">" $class) }}
+{{ end }}
+{{ $content | safeHTML }}
