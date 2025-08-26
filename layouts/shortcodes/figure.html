@@ -1,22 +1,22 @@
-
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" }}
+{{ $class := .Get "class" }}
 {{ $is_gif := findRE "GIF" $alt }}
 {{ $is_nofig := findRE "NOFIG" $alt }}
-{{ $alt_processed := replace (replace $alt "GIF" "") "NOFIG" "" | strings.TrimSpace }}
+{{ $alt_processed := replace (replace $alt "GIF" "") "NOFIG" "" | trim " " }}
 
 {{ if $is_nofig }}
-    <img src="{{ $src }}" alt="{{ $alt_processed }}" />
+    <img src="{{ $src }}" alt="{{ $alt_processed }}"{{ if $class }} class="{{ $class }}"{{ end }} />
 {{ else }}
 <figure>
     {{ if strings.HasSuffix $src ".webm" }}
         {{ if $is_gif }}
-            <video class="gif" src="{{ $src }}" autoplay loop muted playsinline alt="{{ $alt_processed }}"></video>
+            <video class="gif{{ if $class }} {{ $class }}{{ end }}" src="{{ $src }}" autoplay loop muted playsinline alt="{{ $alt_processed }}"></video>
         {{ else }}
-            <video class="video" src="{{ $src }}" controls alt="{{ $alt_processed }}"></video>
+            <video class="video{{ if $class }} {{ $class }}{{ end }}" src="{{ $src }}" controls alt="{{ $alt_processed }}"></video>
         {{ end }}
     {{ else }}
-        <img src="{{ $src }}" alt="{{ $alt_processed }}" />
+        <img src="{{ $src }}" alt="{{ $alt_processed }}"{{ if $class }} class="{{ $class }}"{{ end }} />
     {{ end }}
 </figure>
 {{ end }}

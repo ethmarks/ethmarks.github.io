@@ -1,6 +1,11 @@
 {{ $destination := replace (.Destination | safeURL) "~/" "/media/" }}
 {{ $img := resources.Get $destination }}
-{{ $src := $img.RelPermalink }}
+{{ $src := "" }}
+{{ if $img }}
+    {{ $src = $img.RelPermalink }}
+{{ else }}
+    {{ $src = $destination }}
+{{ end }}
 
 {{ $width := "" }}
 {{ $height := "" }}
