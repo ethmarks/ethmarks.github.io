@@ -1,7 +1,11 @@
-{{ define "resources" }} {{ $aboutCss := resources.Get "about.css" | minify }}
+{{ define "resources" }}
+{{ $aboutCss := resources.Get "about.css" | minify }}
 <link rel="stylesheet" href="{{ $aboutCss.Permalink }}" />
+{{ $gitstatsJS := resources.Get "gitstats.js" | minify }}
+<script src="{{ $gitstatsJS.Permalink }}" defer></script>
+{{ end }}
 
-{{ end }} {{ define "main" }}
+{{ define "main" }}
 <h1 class="animated">{{ .Title }}</h1>
 <article class="animated">
     {{ .Content }}

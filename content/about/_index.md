@@ -148,7 +148,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Stat | Count |
 |------|-------|
 | Public GitHub Repos | 6 |
-| Git Commits | ~700 |
+| Git Commits | <span id="commitcount">~700</span> |
 | States Visited | 48 |
 {{< /compact-table >}}
 {{< /column >}}
