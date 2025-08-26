@@ -70,7 +70,7 @@ I'm **14** years old
 | Playing [Astroneer](https://store.steampowered.com/app/361420/ASTRONEER/) |
 | Browsing random Wikipedia articles |
 | Memorizing every [xkcd](https://xkcd.com/) comic |
-| Traveling around the country (I've been to 48 states) |
+| Traveling and visiting National Parks |
 {{< /compact-table >}}
 {{< /column >}}
 {{< /row >}}
@@ -121,6 +121,38 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Created [ASCII-Globe](/blog/asciiglobe), a text-based cartographic rendering engine |
 {{< /compact-table >}}
 {{< /column >}}
+{{< /row >}}
+
+{{< row >}}
+
+{{< column >}}
+
+## Setup
+
+{{< compact-table >}}
+| Category | Setup |
+|----------|--------|
+| Primary Computer | HP Victus 15 (Kubuntu Linux) |
+| Secondary Computer | Surface Laptop 3 (Windows 11) |
+| Code Editors | Zed, WebStorm, Google Colab |
+| Notes & Organization | Obsidian |
+| Browser | Firefox |
+{{< /compact-table >}}
+{{< /column >}}
+
+{{< column >}}
+
+## Stats
+
+{{< compact-table >}}
+| Stat | Count |
+|------|-------|
+| Public GitHub Repos | 6 |
+| Git Commits | ~700 |
+| States Visited | 48 |
+{{< /compact-table >}}
+{{< /column >}}
+
 {{< /row >}}
 
 {{< row >}}
