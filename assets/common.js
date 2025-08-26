@@ -113,6 +113,8 @@ const forceLightMode = false;
             const maxWidthValue = computedStyle.getPropertyValue('max-width');
             const maxHeightValue = computedStyle.getPropertyValue('max-height');
 
+            if (maxWidthValue === '100%') return;
+
             // Parse CSS values (handle clamp, calc, etc.)
             const tempDiv = document.createElement('div');
             tempDiv.style.width = maxWidthValue;
