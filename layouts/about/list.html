@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="{{ $aboutCss.Permalink }}" />
 {{ $gitstatsJS := resources.Get "gitstats.js" | minify }}
 <script src="{{ $gitstatsJS.Permalink }}" defer></script>
+{{ $daysaliveJS := resources.Get "daysalive.js" | minify }}
+<script src="{{ $daysaliveJS.Permalink }}" defer></script>
 {{ end }}
 
 {{ define "main" }}

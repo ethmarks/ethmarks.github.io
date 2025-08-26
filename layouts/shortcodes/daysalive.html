@@ -1,5 +1,0 @@
-{{- $birthDate := time "2010-09-13T06:00:00Z" -}}
-{{- $now := now -}}
-{{- $daysSince := div ($now.Sub $birthDate).Hours 24 | int -}}
-{{- $isBirthday := and (eq $now.Month 9) (eq $now.Day 13) -}}
-<span id="daysalive"{{- if $isBirthday }} class="birthday"{{- end }}>{{ $daysSince }}</span>

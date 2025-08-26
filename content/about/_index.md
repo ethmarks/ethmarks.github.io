@@ -151,7 +151,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | GitHub Repos | <span id="repocount">~6</span> |
 | Git Commits | <span id="commitcount">~700</span> |
 | Blog Posts | {{< postcount >}} |
-| Days Alive | {{< daysalive >}} |
+| Days Alive | <span id="daysalive">~5400</span> |
 {{< /compact-table >}}
 {{< /column >}}
 
