@@ -147,9 +147,9 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 {{< compact-table >}}
 | Stat | Count |
 |------|-------|
-| Public GitHub Repos | 6 |
-| Git Commits | <span id="commitcount">~700</span> |
 | States Visited | 48 |
+| GitHub Repos | <span id="repocount">~6</span> |
+| Git Commits | <span id="commitcount">~700</span> |
 {{< /compact-table >}}
 {{< /column >}}
 

@@ -1,4 +1,4 @@
-async function getTotalCommits(username) {
+async function getGitStats(username) {
     try {
         const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
 
@@ -32,17 +32,27 @@ async function getTotalCommits(username) {
             })
         );
 
-        return commitCounts.reduce((sum, count) => sum + count, 0);
+        const totalCommits = commitCounts.reduce((sum, count) => sum + count, 0);
+
+        return {
+            commitCount: totalCommits,
+            repoCount: repos.length
+        };
     } catch (error) {
-        throw new Error(`Error fetching commits: ${error.message}`);
+        throw new Error(`Error fetching git stats: ${error.message}`);
     }
 }
 
-getTotalCommits('ColourlessSpearmint').then(count => {
-    const elem = document.getElementById('commitcount');
-    if (elem) {
-        elem.textContent = count;
+getGitStats('ColourlessSpearmint').then(stats => {
+    const commitElem = document.getElementById('commitcount');
+    if (commitElem) {
+        commitElem.textContent = stats.commitCount;
+    }
+    
+    const repoElem = document.getElementById('repocount');
+    if (repoElem) {
+        repoElem.textContent = stats.repoCount;
     }
 }).catch(error => {
-    console.error('Failed to fetch commit count:', error);
+    console.error('Failed to fetch git stats:', error);
 });
