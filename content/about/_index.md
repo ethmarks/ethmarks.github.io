@@ -150,7 +150,8 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | States Visited | 48 |
 | GitHub Repos | <span id="repocount">~6</span> |
 | Git Commits | <span id="commitcount">~700</span> |
-| Blog Posts | {{< postcount >}}
+| Blog Posts | {{< postcount >}} |
+| Days Alive | {{< daysalive >}} |
 {{< /compact-table >}}
 {{< /column >}}
 
