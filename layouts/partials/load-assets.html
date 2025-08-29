@@ -6,7 +6,11 @@
     {{- if eq $ext ".css" }}
 <link rel="stylesheet" href="{{ $processed.Permalink }}" />
     {{- else if eq $ext ".js" }}
+      {{- if strings.HasSuffix . ".sync.js" }}
 <script src="{{ $processed.Permalink }}"></script>
+      {{- else }}
+<script src="{{ $processed.Permalink }}" defer></script>
+      {{- end -}}
     {{- end -}}
   {{- else -}}
     {{- errorf "Asset not found: %s" . -}}
