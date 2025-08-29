@@ -1,10 +1,5 @@
 {{ define "resources" }}
-{{ $aboutCss := resources.Get "about.css" | minify }}
-<link rel="stylesheet" href="{{ $aboutCss.Permalink }}" />
-{{ $gitstatsJS := resources.Get "gitstats.js" | minify }}
-<script src="{{ $gitstatsJS.Permalink }}" defer></script>
-{{ $daysaliveJS := resources.Get "daysalive.js" | minify }}
-<script src="{{ $daysaliveJS.Permalink }}" defer></script>
+{{- partial "load-assets.html" (slice "about.css" "gitstats.js" "daysalive.js") -}}
 {{ end }}
 
 {{ define "main" }}
