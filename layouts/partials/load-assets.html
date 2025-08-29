@@ -1,0 +1,14 @@
+{{- range . -}}
+  {{- $ext := path.Ext . -}}
+  {{- $asset := resources.Get . -}}
+  {{- if $asset -}}
+    {{- $processed := $asset | minify -}}
+    {{- if eq $ext ".css" }}
+<link rel="stylesheet" href="{{ $processed.Permalink }}" />
+    {{- else if eq $ext ".js" }}
+<script src="{{ $processed.Permalink }}"></script>
+    {{- end -}}
+  {{- else -}}
+    {{- errorf "Asset not found: %s" . -}}
+  {{- end -}}
+{{- end -}}
