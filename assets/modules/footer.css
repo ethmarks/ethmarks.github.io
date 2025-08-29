@@ -34,7 +34,7 @@ footer {
             color: var(--color-text);
         }
 
-        &.copyright {
+        &#copyright {
             z-index: 4;
             font-style: italic;
             margin: auto;
@@ -48,8 +48,8 @@ footer {
             }
         }
 
-        &.repo,
-        &.contact {
+        &#repo,
+        &#contact {
             z-index: 5;
             @media (max-width: 768px) {
                 display: none;
