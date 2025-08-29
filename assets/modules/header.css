@@ -31,7 +31,7 @@ header {
         }
     }
 
-    & .title {
+    #title {
         font-weight: var(--font-weight-light) !important;
         display: inline-block;
         background: var(--color-gradient-mint);
@@ -55,7 +55,7 @@ header {
         }
     }
 
-    & nav {
+    nav {
         display: flex;
         gap: 8px;
         flex-shrink: 0;
@@ -64,7 +64,7 @@ header {
             gap: 4px;
         }
 
-        & a {
+        a {
             background: rgba(60, 60, 60, 0.1);
             color: var(--color-text);
             border: 2px solid rgba(255, 255, 255, 0.03);
