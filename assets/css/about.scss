@@ -1,6 +1,6 @@
-@use 'global';
-@use 'components/table';
-@use 'components/external-link';
+@import 'global';
+@import 'components/table';
+@import 'components/external-link';
 
 h2 {
     margin: 0;
