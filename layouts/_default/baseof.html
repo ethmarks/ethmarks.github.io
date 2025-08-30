@@ -20,8 +20,10 @@
 {{- /* Preload woff2 files */}}
 {{ partial "font-preload.html" . }}
 {{- partial "publish-all-media.html" . -}}
-{{- block "resources" . -}}
-{{- end }}
+{{- block "default-resources" . -}}
+{{- partial "load-assets.html" (slice "js/common.sync.js" "js/vendor/quicklink.async.js") -}}
+{{- end -}}
+{{- block "resources" . }}{{ end }}
 </head>
 <body>
 {{ partial "header.html" . }}
