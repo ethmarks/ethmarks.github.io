@@ -2,7 +2,11 @@
   {{- $ext := path.Ext . -}}
   {{- $asset := resources.Get . -}}
   {{- if $asset -}}
-    {{- $processed := $asset | minify -}}
+    {{- $processed := $asset -}}
+    {{- if eq $ext ".scss" -}}
+        {{- $processed = $processed | toCSS -}}
+    {{- end -}}
+    {{- $processed = $processed | minify -}}
     {{- if eq $ext ".css" }}
 <link rel="stylesheet" href="{{ $processed.Permalink }}" />
     {{- else if eq $ext ".js" }}
