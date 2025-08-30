@@ -1,8 +1,8 @@
-@use './animations';
-@use './constants';
-@use './fonts';
-@use './layout';
-@use './media';
-@use './text';
-@use './components/header';
-@use './components/footer';
+@use 'base/animations';
+@use 'base/constants';
+@use 'base/fonts';
+@use 'base/layout';
+@use 'base/media';
+@use 'base/text';
+@use 'components/header';
+@use 'components/footer';
