@@ -1,8 +1,8 @@
-@use 'animations.scss';
-@use 'constants.scss';
-@use 'fonts.scss';
-@use 'layout.scss';
-@use 'media.scss';
-@use 'text.scss';
-@use 'components/header.scss';
-@use 'components/footer.scss';
+@use './animations';
+@use './constants';
+@use './fonts';
+@use './layout';
+@use './media';
+@use './text';
+@use './components/header';
+@use './components/footer';
