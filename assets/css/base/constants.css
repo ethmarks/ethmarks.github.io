@@ -1,0 +1,144 @@
+:root {
+    /* Colors */
+    --color-background: #121212;
+    --color-footer: #eeeeee;
+    --color-text: white;
+    --color-text-secondary: #c0c0c0;
+    --color-accent: #8fdfd4;
+    --color-accent-medium: #8dd4cc;
+    --color-accent-light: #9ce3d9;
+    --color-accent-dark: #7db8b0;
+    --color-h1: #a8e4dd;
+    --color-link: var(--color-accent-light);
+    --color-link-hover: white;
+    --color-article-bg: rgba(30, 30, 30);
+    --color-article-border: rgba(255, 255, 255, 0.1);
+    --color-article-border-light: rgba(255, 255, 255, 0.05);
+    --color-table-header-bg: rgba(20, 20, 20, 0.8);
+    --color-table-bg: rgb(31, 31, 31);
+    --color-table-bg-zebra: rgb(29, 29, 29);
+    --color-table-row-hover: rgba(50, 50, 50, 0.5);
+    --color-snippet-bg: #1f1f1f;
+    --color-code-bg: #1f1f1f;
+    --color-accent-transparent-10: rgba(143, 223, 212, 0.1);
+    --color-accent-transparent-15: rgba(143, 223, 212, 0.15);
+    --color-accent-transparent-20: rgba(143, 223, 212, 0.2);
+    --color-button-text: #111;
+    --color-chat-sender-bg: #3a3a3a;
+    --color-chat-recipient-bg: #124161;
+    --color-focus-outline: var(--color-accent-light);
+    --color-gradient-mint: linear-gradient(135deg, var(--color-accent), var(--color-text));
+    --color-gradient-mint-inverse: linear-gradient(135deg, var(--color-text), var(--color-accent));
+
+    /* Fonts */
+    --font-primary: "Nunito", sans-serif;
+    --font-secondary: "Sen", sans-serif;
+    --font-monospace: "Fira Code", monospace;
+    --font-weight-light: 400;
+    --font-weight-code: 400;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-size-base: 1.07rem;
+    --font-size-sm: 0.9rem;
+    --font-size-md: 1rem;
+    --font-size-h1: clamp(1rem, 7vw, 3rem);
+    --font-size-h2: 1.6rem;
+    --font-size-h3: 1.4rem;
+    --font-size-h4: 1.2rem;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --main-margin-top: 5rem;
+    --main-margin-top-mobile: 3.5rem;
+    --main-width: 100vw;
+    --main-width-mobile: 98vw;
+    --frontmatter-margin-left: var(--spacing-sm);
+    --article-margin-top: clamp(1rem, 4vw, 1.875rem);
+    --chat-padding-y: 0.625rem;
+    --chat-padding-x: 1rem;
+    --chat-margin-bottom: 0.2rem;
+
+    /* Borders & Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-round: 18px;
+    --border-standard: 1px solid var(--color-article-border);
+    --border-light: 1px solid var(--color-article-border-light);
+    --border-accent: 3px solid var(--color-accent);
+
+    /* Shadows */
+    --shadow-color-dark: rgba(0, 0, 0, 0.2);
+    --shadow-color-accent: rgba(143, 223, 212, 0.3);
+    --shadow-color-accent-hover: rgba(143, 223, 212, 0.4);
+    --shadow-article: 0 8px 32px var(--shadow-color-dark);
+    --shadow-button: 0 4px 12px var(--shadow-color-accent);
+    --shadow-button-hover: 0 8px 20px var(--shadow-color-accent-hover);
+    --shadow-table: var(--shadow-article);
+    --shadow-table-hover: 0 12px 40px var(--color-accent-transparent-20);
+    --shadow-chat: 0 1px 2px var(--shadow-color-dark);
+
+    /* Transitions */
+    --transition-duration: 0.3s;
+    --transition-duration-fast: 0.2s;
+    --transition-timing: ease;
+    --transition-default: all var(--transition-duration-fast) var(--transition-timing);
+    --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
+    --transition-transform: transform var(--transition-duration) var(--transition-timing);
+    --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
+
+    /* Media Sizes */
+    --media-width: clamp(300px, 60vw, 1000px);
+    --max-media-height: 800px;
+    --max-media-height-verytall: 1000px;
+    --max-media-width-big: clamp(70vw, 80vw, 800px);
+    --max-media-height-big: 70vh;
+    --max-media-width-small: clamp(25vw, 30vw, 250px);
+    --max-media-height-small: 30vh;
+
+    @media (max-width: 768px) {
+        --media-width: 100%;
+    }
+
+    /* Misc */
+    --body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), var(--color-background);
+    --child-animation-delay: 0s;
+}
+
+.lightmode {
+    --color-background: #fefefe;
+    --color-footer: black;
+    --color-text: #121212;
+    --color-text-secondary: #505050;
+    --color-accent: #00afaf;
+    --color-accent-medium: #008888;
+    --color-accent-light: #009999;
+    --color-accent-dark: #007070;
+    --color-link: var(--color-accent-dark);
+    --color-link-hover: black;
+    --color-article-bg: rgba(255, 255, 255, 0.7);
+    --color-article-border: rgba(0, 0, 0, 0.1);
+    --color-article-border-light: rgba(0, 0, 0, 0.05);
+    --color-table-header-bg: rgba(235, 235, 235, 0.8);
+    --color-table-bg: rgb(250, 250, 250);
+    --color-table-bg-zebra: rgb(245, 245, 245);
+    --color-table-row-hover: rgba(220, 220, 220, 0.5);
+    --color-snippet-bg: #f5f5f5;
+    --color-accent-transparent-10: rgba(0, 128, 128, 0.1);
+    --color-accent-transparent-15: rgba(0, 128, 128, 0.15);
+    --color-accent-transparent-20: rgba(0, 128, 128, 0.2);
+    --color-button-text: #fff;
+    --color-chat-sender-bg: #e5e5ea;
+    --color-chat-recipient-bg: #0b93f6;
+    --color-focus-outline: var(--color-accent-dark);
+
+    --body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(0, 128, 128, 0.15), transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 128, 128, 0.12), transparent 50%), var(--color-background);
+
+    --color-gradient-mint: linear-gradient(135deg, var(--color-accent), var(--color-text));
+    --color-gradient-mint-inverse: linear-gradient(135deg, var(--color-text), var(--color-accent));
+}

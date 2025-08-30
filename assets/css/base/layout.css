@@ -1,0 +1,72 @@
+html {
+    font-size: 100%;
+    /* Base for rem units (usually 16px) */
+    scroll-behavior: smooth;
+
+    @media (pointer: fine) {
+        overscroll-behavior: none;
+    }
+}
+
+body {
+    background: var(--body-bg-gradient);
+    line-height: 1.4;
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    margin: 0;
+    /* Reset default body margin */
+    font-size: var(--font-size-base);
+    overflow-wrap: break-word;
+
+    &.background-fixed {
+        background-attachment: fixed;
+    }
+}
+
+main {
+    max-width: var(--main-width);
+    box-sizing: border-box;
+    margin: var(--main-margin-top) 12vw 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @media (max-width: 768px) {
+        margin: var(--main-margin-top-mobile) auto 0;
+        max-width: var(--main-width-mobile);
+    }
+}
+
+article {
+    margin: var(--article-margin-top) 0 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-article-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-article);
+    border: var(--border-standard);
+    transform: translateY(0);
+    transition: var(--transition-transform-shadow);
+    overflow-x: hidden;
+
+    & > :first-child {
+        @media (max-width: 768px) {
+            margin-top: 6px;
+        }
+    }
+
+    &.anchored {
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-sm);
+    }
+
+    &.animated {
+        animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
+    }
+}

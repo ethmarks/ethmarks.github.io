@@ -1,0 +1,168 @@
+p,
+li {
+    font-weight: var(--font-weight-normal);
+    word-break: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-secondary);
+}
+
+h1 {
+    width: fit-content;
+    font-size: var(--font-size-h1);
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 0 var(--frontmatter-margin-left);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-h1);
+
+    @-moz-document url-prefix() {
+        /* Add a cool gradient on Firefox; other browsers don't support it :( */
+        background: var(--color-gradient-mint);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &.animated {
+        animation: slideInFromLeft 0.5s 0.1s var(--transition-timing) both;
+    }
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color var(--transition-duration-fast) var(--transition-timing);
+
+    &:hover {
+        color: var(--color-link-hover);
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-focus-outline);
+        text-decoration: none;
+    }
+
+    /* Adds a little arrow to external links
+    &[target="_blank"]::after {
+        content: "🡵";
+        display: inline-block;
+        vertical-align: super;
+        font-size: 50%;
+        line-height: 1em;
+    }
+    */
+
+    blockquote {
+        font-style: italic;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            margin: 0 -1em 0;
+            background: var(--color-accent-dark);
+            border-radius: 2px;
+            float: left;
+        }
+
+        &.centered-blockquote {
+            font-style: normal;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.15rem;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    ul {
+        list-style: disc inside;
+        padding-left: var(--spacing-lg);
+
+        & li {
+            line-height: 1.6;
+            transition: color var(--transition-duration-fast)
+                var(--transition-timing);
+        }
+    }
+}
+
+blockquote {
+    font-style: italic;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        margin: 0 -1em 0;
+        background: var(--color-accent-dark);
+        border-radius: 2px;
+        float: left;
+    }
+
+    &.centered-blockquote {
+        font-style: normal;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+ul {
+    list-style: disc inside;
+    padding-left: var(--spacing-lg);
+
+    & li {
+        line-height: 1.6;
+        transition: color var(--transition-duration-fast)
+            var(--transition-timing);
+    }
+}
+
+.mint {
+    background: var(--color-gradient-mint);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nomint {
+    /* Disable mint background */
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: var(--color-text);
+}
