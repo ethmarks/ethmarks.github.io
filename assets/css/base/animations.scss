@@ -1,24 +1,9 @@
 .staggered {
-    &:nth-child(1) {--child-animation-delay: 0.05s;}
-    &:nth-child(2) {--child-animation-delay: 0.10s;}
-    &:nth-child(3) {--child-animation-delay: 0.15s;}
-    &:nth-child(4) {--child-animation-delay: 0.20s;}
-    &:nth-child(5) {--child-animation-delay: 0.25s;}
-    &:nth-child(6) {--child-animation-delay: 0.30s;}
-    &:nth-child(7) {--child-animation-delay: 0.35s;}
-    &:nth-child(8) {--child-animation-delay: 0.40s;}
-    &:nth-child(9) {--child-animation-delay: 0.45s;}
-    &:nth-child(10) {--child-animation-delay: 0.50s;}
-    &:nth-child(11) {--child-animation-delay: 0.55s;}
-    &:nth-child(12) {--child-animation-delay: 0.60s;}
-    &:nth-child(13) {--child-animation-delay: 0.65s;}
-    &:nth-child(14) {--child-animation-delay: 0.70s;}
-    &:nth-child(15) {--child-animation-delay: 0.75s;}
-    &:nth-child(16) {--child-animation-delay: 0.80s;}
-    &:nth-child(17) {--child-animation-delay: 0.85s;}
-    &:nth-child(18) {--child-animation-delay: 0.90s;}
-    &:nth-child(19) {--child-animation-delay: 0.95s;}
-    &:nth-child(20) {--child-animation-delay: 1.00s;}
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            --child-animation-delay: #{$i * 0.05}s;
+        }
+    }
 }
 
 @keyframes fadeIn {
