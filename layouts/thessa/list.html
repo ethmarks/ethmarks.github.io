@@ -1,8 +1,8 @@
-{{ define "resources" }} {{ $thessaCss := resources.Get "thessa.css" | minify }}
-<link rel="stylesheet" href="{{ $thessaCss.Permalink }}" />
-{{ $thessaJs := resources.Get "thessa.js" | minify }}
-<script src="{{ $thessaJs.Permalink }}"></script>
-{{ end }} {{ define "main" }}
+{{ define "resources" }}
+<!-- (slice "thessa.css" "thessa.js") -->
+{{ end }}
+
+{{ define "main" }}
 <div class="header-title">
     <h1>Thessa</h1>
     <svg

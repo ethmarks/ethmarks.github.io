@@ -19,14 +19,6 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 {{- /* Preload woff2 files */}}
 {{ partial "font-preload.html" . }}
-{{- /* Concat all CSS into one bundle */ -}}
-{{- $fontsCss := resources.Get "fonts.css" -}}
-{{- $commonCss := resources.Get "common.css" -}}
-{{- $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css" -}}
-{{- $bundleCss := slice $fontsCss $commonCss $moduleCss | resources.Concat "bundle.css" | minify }}
-<link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
-
-{{- partial "load-assets.html" (slice "common.sync.js" "quicklink.async.js") -}}
 {{- partial "publish-all-media.html" . -}}
 {{- block "resources" . -}}
 {{- end }}

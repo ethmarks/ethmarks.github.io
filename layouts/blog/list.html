@@ -24,6 +24,5 @@
 {{ end }}
 
 {{ define "resources" }}
-{{ $randomblogJs := resources.Get "randomblog.js"| minify }}
-<script src="{{ $randomblogJs.Permalink }}"></script>
+<!-- (slice "randomblog.js") -->
 {{ end }}
