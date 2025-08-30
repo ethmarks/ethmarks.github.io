@@ -1,3 +1,7 @@
+{{ define "resources" }}
+{{- partial "load-assets.html" (slice "css/tags.scss") -}}
+{{ end }}
+
 {{ define "main" }}
 <h1 class="animated">
     Tags ({{ len (where .Pages "Params.unlisted" "ne" true) }})
