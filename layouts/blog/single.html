@@ -1,3 +1,7 @@
+{{ define "resources" }}
+{{- partial "load-assets.html" (slice "css/post.scss") -}}
+{{ end }}
+
 {{ define "main" }}
 {{ $page := . }}
 {{ $minRead := math.Ceil (div (countwords $page.Content) 200.0) }}
