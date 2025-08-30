@@ -1,5 +1,5 @@
 {{ define "resources" }}
-<!-- (slice "about.css" "gitstats.js" "daysalive.js") -->
+{{- partial "load-assets.html" (slice "css/about.scss" "js/components/gitstats.js" "js/components/daysalive.js") -}}
 {{ end }}
 
 {{ define "main" }}
