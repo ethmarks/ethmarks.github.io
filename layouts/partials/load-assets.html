@@ -4,7 +4,7 @@
   {{- if $asset -}}
     {{- $processed := $asset -}}
     {{- if eq $ext ".scss" -}}
-        {{- $processed = $processed | toCSS -}}
+        {{- $processed = $processed | toCSS (dict "transpiler" "dartsass") -}}
     {{- end -}}
     {{- $processed = $processed | minify -}}
     {{- if or (eq $ext ".css") (eq $ext ".scss") }}
