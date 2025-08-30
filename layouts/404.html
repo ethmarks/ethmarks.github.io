@@ -1,6 +1,6 @@
 {{ define "resources" }}
 <link rel="preload" href="/fonts/Kenia.woff2" as="font" type="font/woff2" crossorigin />
-<!-- (slice "404.css" "404.sync.js") -->
+{{- partial "load-assets.html" (slice "css/404.scss" "js/pages/404.sync.js") -}}
 {{ end }}
 
 {{ define "main" }}
