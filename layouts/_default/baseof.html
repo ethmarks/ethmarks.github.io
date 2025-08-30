@@ -26,7 +26,7 @@
 {{- $bundleCss := slice $fontsCss $commonCss $moduleCss | resources.Concat "bundle.css" | minify }}
 <link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
 
-{{- partial "load-assets.html" (slice "common.js" "quicklink.js") -}}
+{{- partial "load-assets.html" (slice "common.js" "quicklink.async.js") -}}
 {{- partial "publish-all-media.html" . -}}
 {{- block "resources" . -}}
 {{- end }}

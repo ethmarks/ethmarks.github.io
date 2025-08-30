@@ -8,6 +8,8 @@
     {{- else if eq $ext ".js" }}
       {{- if strings.HasSuffix . ".sync.js" }}
 <script src="{{ $processed.Permalink }}"></script>
+      {{- else if strings.HasSuffix . ".async.js" }}
+<script src="{{ $processed.Permalink }}" async></script>
       {{- else }}
 <script src="{{ $processed.Permalink }}" defer></script>
       {{- end -}}
