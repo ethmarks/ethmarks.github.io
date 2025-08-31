@@ -81,29 +81,6 @@
     }
 }
 
-@keyframes flyInFromTop {
-    from {
-        transform: translateX(-50%) translateY(-20px) translate3d(0, 0, 0);
-    }
-    to {
-        transform: translateX(-50%) translateY(0) translate3d(0, 0, 0);
-    }
-}
-
-@keyframes flyInFromLeft {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes flyInFromRight {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .animated,
     h1.animated,

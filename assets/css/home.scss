@@ -1,4 +1,5 @@
 @import 'global';
+@import 'components/header-anim';
 
 main {
     padding: 0;
@@ -288,24 +289,6 @@ main {
                 }
             }
         }
-    }
-}
-
-header {
-    animation: flyInFromTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-
-    #title {
-        opacity: 0.2;
-        transform: translateX(-300px);
-        animation: flyInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-            forwards;
-    }
-
-    a {
-        transform: translateX(350px);
-        opacity: 0;
-        animation: flyInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-            forwards;
     }
 }
 
