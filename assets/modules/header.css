@@ -101,6 +101,42 @@ header {
             &:nth-child(4) {
                 animation-delay: 0.4s;
             }
+
         }
     }
+
+    /* Birthday mode - subtle party effects */
+    &.birthday-mode {
+        box-shadow: 0 0 20px rgba(255, 107, 107, 0.3), 0 0 40px rgba(78, 205, 196, 0.2), 0 0 60px rgba(69, 183, 209, 0.1);
+
+        & .title {
+            transition: background 0.4s ease-out;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3);
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: birthday-rainbow 3s ease-in-out infinite;
+
+            &::after {
+                content: "🎂🎉";
+                margin-left: 0.3em;
+                background: none;
+                -webkit-text-fill-color: initial;
+                animation: none;
+            }
+        }
+    }
+
+    &.birthday-mode-delayed {
+        transition: box-shadow 0.4s ease-out;
+
+        & .title::after {
+            animation: fade-in-up 0.4s ease-in-out forwards !important;
+        }
+    }
+}
+
+@keyframes birthday-rainbow {
+    0%, 100% { opacity: 1; transform: none; background-position: 0% 50%; }
+    50% { opacity: 1; transform: none; background-position: 100% 50%; }
 }
