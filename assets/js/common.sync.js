@@ -65,28 +65,6 @@ function addScrollClassOnOverflow(selector) {
 addScrollClassOnOverflow("table");
 addScrollClassOnOverflow("pre");
 
-// add 'lightmode' class to body if user prefers light color scheme
-const allowLightMode = false;
-const forceLightMode = false;
-(function handleLightMode() {
-    const lightQuery = window.matchMedia("(prefers-color-scheme: light)");
-    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function updateLightMode() {
-        if ((lightQuery.matches && allowLightMode) || forceLightMode) {
-            document.body.classList.add("lightmode");
-        } else {
-            document.body.classList.remove("lightmode");
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        updateLightMode();
-        lightQuery.addEventListener("change", updateLightMode);
-        darkQuery.addEventListener("change", updateLightMode);
-    });
-})();
-
 // Properly size media elements according to sizing rules
 (function handleMediaSizing() {
     function resizeMedia() {
