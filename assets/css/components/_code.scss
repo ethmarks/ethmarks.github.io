@@ -14,7 +14,7 @@ pre {
     box-shadow: var(--shadow-table);
     transition: var(--transition-transform-shadow);
 
-    &.scroll {
+    &.width-overflow {
         width: auto;
     }
 

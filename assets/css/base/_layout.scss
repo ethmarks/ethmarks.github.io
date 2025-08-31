@@ -17,9 +17,10 @@ body {
     /* Reset default body margin */
     font-size: var(--font-size-base);
     overflow-wrap: break-word;
+    background-attachment: fixed;
 
-    &.background-fixed {
-        background-attachment: fixed;
+    &.height-overflow {
+        background-attachment: scroll;
     }
 }
 
@@ -56,7 +57,7 @@ article {
         }
     }
 
-    &.anchored {
+    body.height-overflow & {
         border-radius: var(--radius-xl) var(--radius-xl) 0 0;
         border-bottom: none;
     }

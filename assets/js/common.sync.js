@@ -1,145 +1,100 @@
-// Handle short pages: fix footer, background, and anchor article
-(function handleShortPage() {
-    function updateShortPageElements() {
-        const body = document.body;
-        const footer = document.querySelector("footer");
-        const article = document.querySelector("article");
-        const tolerance = 4;
-        const isShortPage =
-            document.documentElement.scrollHeight <=
-            window.innerHeight + tolerance;
+(function handleOverflow() {
+  function updateOverflowClasses() {
+    const widthOverflowClass = "width-overflow";
+    const heightOverflowClass = "height-overflow";
 
-        // Update footer position
-        if (footer) {
-            if (isShortPage) {
-                footer.classList.add("fixed-bottom");
-            } else {
-                footer.classList.remove("fixed-bottom");
-            }
-        }
+    const tolerance = 0;
 
-        // Update background attachment via class
-        if (body) {
-            if (isShortPage) {
-                body.classList.add("background-fixed");
-            } else {
-                body.classList.remove("background-fixed");
-            }
-        }
+    const selectors = ["body", "pre", "table"]
 
-        // Add or remove 'anchored' class to article
-        if (article) {
-            if (!isShortPage) {
-                article.classList.add("anchored");
-            } else {
-                article.classList.remove("anchored");
-            }
-        }
-    }
+    document.querySelectorAll(selectors).forEach(function (el) {
+      const parent = el.parentElement;
+      const contentWidth = el.scrollWidth;
+      const contentHeight = el.scrollHeight;
+      const containerWidth = parent
+        ? parent.clientWidth
+        : window.innerWidth;
+      const containerHeight = parent
+        ? parent.clientHeight
+        : window.innerHeight
 
-    window.addEventListener("DOMContentLoaded", updateShortPageElements);
-    window.addEventListener("load", updateShortPageElements);
-    window.addEventListener("resize", updateShortPageElements);
+      if (contentHeight == 0 || contentWidth == 0 || el.tagName === "HTML") {
+        return;
+      }
+
+      if (contentWidth > containerWidth) {
+        el.classList.add(widthOverflowClass);
+      } else {
+        el.classList.remove(widthOverflowClass);
+      }
+      if (contentHeight > containerHeight) {
+        el.classList.add(heightOverflowClass);
+      } else {
+        el.classList.remove(heightOverflowClass);
+      }
+    });
+  }
+  window.addEventListener("DOMContentLoaded", updateOverflowClasses);
+  window.addEventListener("resize", updateOverflowClasses);
 })();
 
-// Generic function to add 'scroll' class to overflowing elements
-function addScrollClassOnOverflow(selector) {
-    function updateScrollClasses() {
-        document.querySelectorAll(selector).forEach(function (el) {
-            const parent = el.parentElement;
-            const containerWidth = parent
-                ? parent.clientWidth
-                : window.innerWidth;
-            if (el.scrollWidth > containerWidth) {
-                el.classList.add("scroll");
-            } else {
-                el.classList.remove("scroll");
-            }
-        });
-    }
-    window.addEventListener("DOMContentLoaded", updateScrollClasses);
-    window.addEventListener("resize", updateScrollClasses);
-}
-
-// Use the generic function for tables and pre elements
-addScrollClassOnOverflow("table");
-addScrollClassOnOverflow("pre");
-
-// Properly size media elements according to sizing rules
 (function handleMediaSizing() {
-    function resizeMedia() {
-        document.querySelectorAll('img.content-media, video.content-media').forEach(function(el) {
-            // Get natural dimensions
-            let naturalWidth, naturalHeight;
+  function resizeMedia() {
+    document.querySelectorAll('img.content-media, video.content-media').forEach(function (el) {
+      let naturalWidth, naturalHeight;
 
-            if (el.tagName.toLowerCase() === 'img') {
-                naturalWidth = el.naturalWidth || parseInt(el.getAttribute('width')) || 0;
-                naturalHeight = el.naturalHeight || parseInt(el.getAttribute('height')) || 0;
-            } else if (el.tagName.toLowerCase() === 'video') {
-                naturalWidth = el.videoWidth || parseInt(el.getAttribute('width')) || 0;
-                naturalHeight = el.videoHeight || parseInt(el.getAttribute('height')) || 0;
-            } else {
-                // For iframes, use attribute dimensions or defaults
-                naturalWidth = parseInt(el.getAttribute('width')) || 800;
-                naturalHeight = parseInt(el.getAttribute('height')) || 600;
-            }
+      if (el.tagName.toLowerCase() === 'img') {
+        naturalWidth = el.naturalWidth || parseInt(el.getAttribute('width')) || 0;
+        naturalHeight = el.naturalHeight || parseInt(el.getAttribute('height')) || 0;
+      } else if (el.tagName.toLowerCase() === 'video') {
+        naturalWidth = el.videoWidth || parseInt(el.getAttribute('width')) || 0;
+        naturalHeight = el.videoHeight || parseInt(el.getAttribute('height')) || 0;
+      } else {
+        naturalWidth = parseInt(el.getAttribute('width')) || 800;
+        naturalHeight = parseInt(el.getAttribute('height')) || 600;
+      }
 
-            if (naturalWidth === 0 || naturalHeight === 0) return;
+      if (naturalWidth === 0 || naturalHeight === 0) return;
 
-            // Get CSS variables
-            const computedStyle = getComputedStyle(el);
-            const maxWidthValue = computedStyle.getPropertyValue('max-width');
-            const maxHeightValue = computedStyle.getPropertyValue('max-height');
+      const computedStyle = getComputedStyle(el);
+      const maxWidthValue = computedStyle.getPropertyValue('max-width');
+      const maxHeightValue = computedStyle.getPropertyValue('max-height');
 
-            if (maxWidthValue === '100%') return;
+      if (maxWidthValue === '100%') return;
 
-            // Parse CSS values (handle clamp, calc, etc.)
-            const tempDiv = document.createElement('div');
-            tempDiv.style.width = maxWidthValue;
-            tempDiv.style.height = maxHeightValue;
-            tempDiv.style.position = 'absolute';
-            tempDiv.style.visibility = 'hidden';
-            document.body.appendChild(tempDiv);
+      const tempDiv = document.createElement('div');
+      tempDiv.style.width = maxWidthValue;
+      tempDiv.style.height = maxHeightValue;
+      tempDiv.style.position = 'absolute';
+      tempDiv.style.visibility = 'hidden';
+      document.body.appendChild(tempDiv);
+      const maxWidth = tempDiv.offsetWidth;
+      const maxHeight = tempDiv.offsetHeight;
+      document.body.removeChild(tempDiv);
 
-            const maxWidth = tempDiv.offsetWidth;
-            const maxHeight = tempDiv.offsetHeight;
+      const aspectRatio = naturalWidth / naturalHeight;
 
-            document.body.removeChild(tempDiv);
+      let targetWidth = maxWidth;
+      let targetHeight = targetWidth / aspectRatio;
 
-            // Calculate aspect ratio
-            const aspectRatio = naturalWidth / naturalHeight;
+      if (targetHeight > maxHeight) {
+        targetHeight = maxHeight;
+        targetWidth = targetHeight * aspectRatio;
+      }
 
-            // Rule 3: Try to make width equal to max-width (preferred width)
-            let targetWidth = maxWidth;
-            let targetHeight = targetWidth / aspectRatio;
+      el.style.width = Math.round(targetWidth) + 'px';
+      el.style.height = Math.round(targetHeight) + 'px';
+    });
+  }
 
-            // Rule 2: Check if height exceeds max-height
-            if (targetHeight > maxHeight) {
-                // Scale based on height instead
-                targetHeight = maxHeight;
-                targetWidth = targetHeight * aspectRatio;
-            }
+  function handleMediaLoad() {setTimeout(resizeMedia, 10);}
 
-            // Apply the calculated dimensions
-            el.style.width = Math.round(targetWidth) + 'px';
-            el.style.height = Math.round(targetHeight) + 'px';
-        });
+  window.addEventListener('DOMContentLoaded', resizeMedia);
+  window.addEventListener('load', resizeMedia);
+  window.addEventListener('resize', resizeMedia);
+  document.addEventListener('load', function (e) {
+    if (e.target.tagName && ['IMG', 'VIDEO', 'IFRAME'].includes(e.target.tagName.toUpperCase())) {
+      handleMediaLoad();
     }
-
-    // Run on DOM ready and when images load
-    function handleMediaLoad() {
-        // Wait a bit for images to load their natural dimensions
-        setTimeout(resizeMedia, 10);
-    }
-
-    window.addEventListener('DOMContentLoaded', resizeMedia);
-    window.addEventListener('load', resizeMedia);
-    window.addEventListener('resize', resizeMedia);
-
-    // Also listen for image load events
-    document.addEventListener('load', function(e) {
-        if (e.target.tagName && ['IMG', 'VIDEO', 'IFRAME'].includes(e.target.tagName.toUpperCase())) {
-            handleMediaLoad();
-        }
-    }, true);
+  }, true);
 })();
