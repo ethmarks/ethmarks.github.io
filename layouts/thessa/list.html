@@ -1,5 +1,5 @@
 {{ define "resources" }}
-<!-- (slice "thessa.css" "thessa.js") -->
+{{- partial "load-assets.html" (slice "css/thessa.scss" "js/pages/thessa.js") -}}
 {{ end }}
 
 {{ define "main" }}
