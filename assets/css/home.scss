@@ -104,7 +104,7 @@ main {
             flex-wrap: nowrap;
             margin: 2rem;
 
-            @media (max-width: 1200px) {
+            @include notDesktop {
                 flex-direction: column;
             }
 
@@ -135,7 +135,7 @@ main {
                     min-height: 200px;
                     box-sizing: border-box;
 
-                    @media (max-width: 1200px) {
+                    @include notDesktop {
                         height: clamp(90px, 10vh, 120px);
                         padding: 0.7rem 1rem;
                         box-shadow: none;
@@ -177,7 +177,7 @@ main {
                         font-weight: 700;
                         color: var(--color-accent, #00ffd0);
 
-                        @media (max-width: 1200px) {
+                        @include notDesktop {
                             font-size: 1.5rem;
                             transform: none !important;
                         }
