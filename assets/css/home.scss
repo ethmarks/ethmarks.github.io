@@ -1,5 +1,6 @@
 @import 'global';
 @import 'components/header-anim';
+@import 'base/mixins';
 
 main {
     padding: 0;
@@ -194,7 +195,7 @@ main {
     gap: 20px;
     margin: 0;
 
-    @media (max-width: 768px) {
+    @include mobile {
         flex-direction: column-reverse;
         justify-content: flex-end;
     }
@@ -209,7 +210,7 @@ main {
         height: 100%;
         z-index: 2;
 
-        @media (max-width: 768px) {
+        @include mobile {
             animation: circle-reveal 2.5s ease both,
                 img-slide-up 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
         }
@@ -232,7 +233,7 @@ main {
         flex-grow: 1;
         z-index: 1;
 
-        @media (max-width: 768px) {
+        @include mobile {
             padding: 0;
             align-items: center;
             text-align: center;
@@ -248,7 +249,7 @@ main {
             margin-bottom: var(--intro-heading-size);
             animation: drift-down-transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
 
-            @media (max-width: 768px) {
+            @include mobile {
                 margin-bottom: 0;
             }
 

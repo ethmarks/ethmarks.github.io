@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 html {
     font-size: 100%;
     /* Base for rem units (usually 16px) */
@@ -32,7 +34,7 @@ main {
     flex-direction: column;
     padding: 0;
 
-    @media (max-width: 768px) {
+    @include mobile {
         margin: var(--main-margin-top-mobile) auto 0;
         max-width: var(--main-width-mobile);
     }
@@ -52,7 +54,7 @@ article {
     overflow-x: hidden;
 
     & > :first-child {
-        @media (max-width: 768px) {
+        @include mobile {
             margin-top: 6px;
         }
     }
@@ -62,7 +64,7 @@ article {
         border-bottom: none;
     }
 
-    @media (max-width: 768px) {
+    @include mobile {
         padding: var(--spacing-sm);
     }
 

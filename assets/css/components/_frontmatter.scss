@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 .frontmatter {
     display: flex;
     flex-direction: column;
@@ -18,7 +20,7 @@
 
         &.animated {
             animation: slideInFromLeft 0.8s var(--transition-timing) both;
-            @media (max-width: 768px) {
+            @include mobile {
                 animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
                     both;
             }

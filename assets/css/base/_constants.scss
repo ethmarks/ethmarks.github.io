@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 :root {
     /* Colors */
     --color-background: #121212;
@@ -100,7 +102,7 @@
     --max-media-width-small: clamp(25vw, 30vw, 250px);
     --max-media-height-small: 30vh;
 
-    @media (max-width: 768px) {
+    @include mobile {
         --media-width: 100%;
     }
 

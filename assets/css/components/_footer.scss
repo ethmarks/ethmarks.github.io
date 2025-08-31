@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -43,7 +45,7 @@ footer {
         &#repo,
         &#contact {
             z-index: 5;
-            @media (max-width: 768px) {
+            @include mobile {
                 display: none;
             }
         }
