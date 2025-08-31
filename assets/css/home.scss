@@ -7,7 +7,7 @@ main {
     align-items: center;
     justify-content: center;
 
-    @media (min-width: 1000px) {
+    @include desktop {
         margin-left: 0;
         margin-right: 0;
     }
@@ -21,7 +21,7 @@ main {
         text-align: center;
         flex-shrink: 1;
 
-        @media (min-width: 1000px) {
+        @include desktop {
             border-radius: 0 !important;
             border-left: none;
             border-right: none;
@@ -32,9 +32,10 @@ main {
             text-align: center;
             text-transform: capitalize;
 
-            @media (max-width: 1000px) {
+            @include notDesktop {
                 width: 90%;
             }
+
             & span {
                 display: inline-block;
                 position: relative;
