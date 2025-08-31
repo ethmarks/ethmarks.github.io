@@ -33,7 +33,7 @@ footer {
             font-style: italic;
             margin: auto;
 
-            @media (min-width: 768px) {
+            @include notMobile {
                 position: absolute;
                 right: 30px;
                 left: 30px;

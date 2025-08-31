@@ -273,7 +273,7 @@ main {
                 margin: 0;
                 font-size: clamp(0.5rem, calc(1.5vw + 1rem), 2rem);
 
-                @media (min-width: 768px) {
+                @include notMobile {
                     /* No wrapping on large screens */
                     white-space: nowrap;
                 }
