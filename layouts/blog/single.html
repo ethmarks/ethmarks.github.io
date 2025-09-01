@@ -3,27 +3,27 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $page := . }}
-{{ $minRead := math.Ceil (div (countwords $page.Content) 200.0) }}
+{{ $page := . -}}
+{{- $minRead := math.Ceil (div (countwords $page.Content) 200.0) -}}
 <div class="frontmatter">
 <h1 class="animated title">{{ .Title }}</h1>
-{{ with .Date }}
+{{- with .Date }}
 <div class="info animated">
     <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
-    {{ if gt $minRead 1 }}
+    {{- if gt $minRead 1 }}
     <span class="separator"> · </span>
     <span class="read-time">{{ $minRead }} min read</span>
-    {{ end }}
+    {{- end }}
 </div>
 {{ end }}
-{{ with .Params.tags }}
+{{- with .Params.tags }}
 <div class="post-tags">
-    {{ range . }}
+    {{- range . }}
     <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-    {{ end }}
+    {{- end }}
 </div>
 {{ end }}
-{{ if .Params.link }}
+{{- if .Params.link }}
 <div class="external-link-row">
     <a class="external-link" href="{{ .Params.link }}">
         <img src="/media/icons/{{ .Params.link_icon | default "link" }}.svg" alt="{{ .Params.link_icon | default "link" }} icon" />
