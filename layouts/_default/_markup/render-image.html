@@ -1,62 +1,66 @@
-{{ $destination := replace (.Destination | safeURL) "~/" "/media/" }}
-{{ $img := resources.Get $destination }}
-{{ $src := "" }}
-{{ if $img }}
-    {{ $src = $img.RelPermalink }}
-{{ else }}
-    {{ $src = $destination }}
-{{ end }}
-
-{{ $width := "" }}
-{{ $height := "" }}
-{{ if and $img (eq $img.MediaType.MainType "image") (ne $img.MediaType.SubType "svg") }}
-    {{ $width = $img.Width }}
-    {{ $height = $img.Height }}
-{{ end }}
-
-{{ $alt := .PlainText }}
-{{ $is_video := or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") }}
-{{ $is_gif := findRE "GIF" $alt }}
-{{ $is_verytall := findRE "TALL" $alt }}
-{{ $alt_processed := $alt }}
-{{ $alt_processed = replace $alt_processed "GIF" ""}}
-{{ $alt_processed = replace $alt_processed "TALL" ""}}
-
-{{ $verytall := "" }}
-{{ if $is_verytall }}
-{{ $verytall = "media-verytall" }}
-{{ end }}
-
+{{ $destination := replace (.Destination | safeURL) "~/" "/media/" -}}
+{{- $img := resources.Get $destination -}}
+{{- $src := "" -}}
+{{- if $img -}}
+    {{- $src = $img.RelPermalink -}}
+{{- else -}}
+    {{- $src = $destination -}}
+{{- end -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+{{- if and $img (eq $img.MediaType.MainType "image") (ne $img.MediaType.SubType "svg") -}}
+    {{ $width = $img.Width -}}
+    {{ $height = $img.Height -}}
+{{- end -}}
+{{- $alt := .PlainText -}}
+{{- $is_video := or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") -}}
+{{- $is_gif := findRE "GIF" $alt -}}
+{{- $is_verytall := findRE "TALL" $alt -}}
+{{- $verytall := "" -}}
+{{- if $is_verytall -}}
+{{- $verytall = "media-verytall" -}}
+{{- end -}}
+{{- $alt_processed := $alt -}}
+{{- $alt_processed = replace $alt_processed "GIF" "" -}}
+{{- $alt_processed = replace $alt_processed "TALL" "" -}}
+{{- $caption := .Title -}}
+{{- $title := $alt_processed -}}
+{{- if $caption -}}
+    {{- $title = $caption -}}
+{{- end -}}
 <figure>
-    {{ if $is_video }}
-    {{ if $is_gif }}
+    {{ if $is_video -}}
+    {{- if $is_gif -}}
     <video
         class="content-media gif {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
+        {{ if $title }}title="{{ $title }}"{{ end }}
         autoplay
         loop
         muted
         playsinline
     ></video>
-    {{ else }}
+    {{- else -}}
     <video
         class="content-media video {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
+        {{ if $title }}title="{{ $title }}"{{ end }}
         controls
     ></video>
-    {{ end }}
-    {{ else }}
+    {{- end -}}
+    {{- else -}}
     <img
         class="content-media {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $width }}width="{{ $width }}"{{ end }}
         {{ if $height }}height="{{ $height }}"{{ end }}
+        {{- if $title }}
+        title="{{ $title }}"{{- end }}
     />
-    {{ end }}
-    {{- with .Title }}
-    <figcaption>{{ . }}</figcaption>
-    {{ end -}}
+    {{- end }}
+    {{- if $caption }}
+    <figcaption>{{ $caption }}</figcaption>{{ end }}
 </figure>
