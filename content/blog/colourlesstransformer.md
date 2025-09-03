@@ -22,7 +22,7 @@ PaintTransformer starts by adding with broad, vague brush strokes and ends with 
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 
-I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I instead decided to build a custom interface. I named it ColourlessTransformer because I was going through a phase of naming everything eponymously after [my username](/blog/username).
+I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I instead decided to build a custom interface. I named it ColourlessTransformer because I was going through a phase of naming everything eponymously after my old username, ColourlessSpearmint.
 
 ## Streamlit
 

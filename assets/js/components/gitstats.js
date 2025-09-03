@@ -43,12 +43,12 @@ async function getGitStats(username) {
     }
 }
 
-getGitStats('ColourlessSpearmint').then(stats => {
+getGitStats('ethmarks').then(stats => {
     const commitElem = document.getElementById('commitcount');
     if (commitElem) {
         commitElem.textContent = stats.commitCount;
     }
-    
+
     const repoElem = document.getElementById('repocount');
     if (repoElem) {
         repoElem.textContent = stats.repoCount;

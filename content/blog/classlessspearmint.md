@@ -31,7 +31,7 @@ In the spirit of Classless CSS (i.e. laziness), I fed my site's main CSS file, `
 
 > I'm providing you with two CSS files. One, Yorha, is classless and has a beige theme. The other, Spearmint, is not classless and has a sleek teal theme. I want you to make a new CSS file: a classless sleek teal theme. In other words, follow the format of Yorha but the aesthetic of Spearmint. Make sure that all elements styled in Yorha show up in your CSS.
 
-It spat out 383 lines of CSS. I call it `classlessspearmint.css` (a fairly obvious wordplay on 'classless' and 'colourlessspearmint').
+It spat out 383 lines of CSS. I call it `classlessspearmint.css`.
 
 I was impressed by how good of a job Gemini did. It followed my site's aesthetic pretty well, and also added support for a bunch of HTML features that I never use and didn't implement, like the `<mark>` tag that highlights text.
 

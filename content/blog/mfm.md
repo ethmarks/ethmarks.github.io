@@ -25,7 +25,7 @@ There are a few different flavours of Markdown. The default flavour is [CommonMa
 
 I present: **Mint Flavoured Markdown**. It's a superset of CommonMark, but with a few extra features specifically tailored to my use case.
 
-The name is obviously a reference to my username, ColourlessSpearmint. It would probably make more sense to call it "Spearmint Flavoured Markdown", but then it wouldn't be evocative of toothpaste, which is a critical feature in software design. Also it uses the British English spelling because I'm the one who developed it and I prefer that spelling and you can spell it however you like in *your* Markdown flavour.
+The name is obviously a reference to my favorite colour: spearmint teal. It would probably make more sense to call it "Spearmint Flavoured Markdown", but then it wouldn't be evocative of toothpaste, which is a critical feature in software design. Also it uses the British English spelling because that's the spelling that I prefer.
 
 I'm pretty sure that I'll be adding more features at some point in the future, so I'll be a responsible developer and use versioning. This blog post was first published on June 30, coinciding exactly with the release of MFM v1. I'll edit this post if I release a new version.
 
