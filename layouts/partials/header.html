@@ -1,38 +1,9 @@
 <header>
     <a href="/" id="title" tabindex="0" aria-label="Home">Ethan Marks</a>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <a href="/tags/projects/">Projects</a>
+        <a class="staggered" href="/">Home</a>
+        <a class="staggered" href="/about/">About</a>
+        <a class="staggered" href="/blog/">Blog</a>
+        <a class="staggered" href="/tags/projects/">Projects</a>
     </nav>
 </header>
-
-<script>
-(function() {
-    const today = new Date();
-    if (today.getMonth() === 8 && today.getDate() === 13) { // September 13th
-        const header = document.querySelector('header');
-        const title = header.querySelector('.title');
-
-        function applyBirthdayMode() {
-            header.classList.add('birthday-mode');
-        }
-
-        function applyBirthdayModeDelayed() {
-            applyBirthdayMode();
-            header.classList.add('birthday-mode-delayed');
-        }
-
-        // Check if title is visible (not still animating in)
-        const titleStyles = getComputedStyle(title);
-        const isVisible = titleStyles.opacity !== '0' && titleStyles.opacity !== '0.2';
-
-        if (isVisible) {
-            applyBirthdayMode();
-        } else {
-            setTimeout(applyBirthdayModeDelayed, 1000);
-        }
-    }
-})();
-</script>

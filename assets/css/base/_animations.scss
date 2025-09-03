@@ -1,0 +1,115 @@
+.staggered {
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            --child-animation-delay: #{$i * 0.05}s;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes articleSlideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes postLinkAnim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes postTagSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes randomBtnSlideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animated,
+    h1.animated,
+    article.animated,
+    .frontmatter .info time.animated,
+    .post-tags .post-tag.animated,
+    .random-blog-btn-container.animated {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    header .title,
+    header nav a {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    header {
+        animation: none !important;
+        transform: translateX(-50%) translateY(0) translate3d(0, 0, 0) !important;
+    }
+
+    table:hover {
+        box-shadow: var(--shadow-table) !important;
+    }
+
+    .post-link:hover {
+        transform: none;
+    }
+}

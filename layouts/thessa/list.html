@@ -1,8 +1,8 @@
-{{ define "resources" }} {{ $thessaCss := resources.Get "thessa.css" | minify }}
-<link rel="stylesheet" href="{{ $thessaCss.Permalink }}" />
-{{ $thessaJs := resources.Get "thessa.js" | minify }}
-<script src="{{ $thessaJs.Permalink }}"></script>
-{{ end }} {{ define "main" }}
+{{ define "resources" }}
+{{- partial "load-assets.html" (slice "css/thessa.scss" "js/pages/thessa.js") -}}
+{{ end }}
+
+{{ define "main" }}
 <div class="header-title">
     <h1>Thessa</h1>
     <svg
@@ -76,6 +76,27 @@
     <p id="message-box" class="message-box" style="display: none"></p>
 </div>
 
+<!-- Definition Popover -->
+<div id="definition-popover" class="definition-popover">
+    <h4 id="popover-word">Word</h4>
+    <div
+        id="popover-definition-loader"
+        class="loading-spinner"
+        style="display: none"
+    ></div>
+    <p id="popover-definition"></p>
+    <p
+        id="popover-error"
+        class="message-box error-message"
+        style="display: none"
+    ></p>
+</div>
+
+<!-- Copy Notification -->
+<div id="copy-notification" class="copy-notification">Copied to clipboard!</div>
+{{ end }}
+
+{{ define "after_main" }}
 <!-- About Thessa Modal -->
 <div id="about-thessa-modal" class="modal-overlay">
     <div class="modal-content">
@@ -160,23 +181,4 @@
         ></p>
     </div>
 </div>
-
-<!-- Definition Popover -->
-<div id="definition-popover" class="definition-popover">
-    <h4 id="popover-word">Word</h4>
-    <div
-        id="popover-definition-loader"
-        class="loading-spinner"
-        style="display: none"
-    ></div>
-    <p id="popover-definition"></p>
-    <p
-        id="popover-error"
-        class="message-box error-message"
-        style="display: none"
-    ></p>
-</div>
-
-<!-- Copy Notification -->
-<div id="copy-notification" class="copy-notification">Copied to clipboard!</div>
 {{ end }}

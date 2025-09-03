@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 .post-link {
     display: flex;
     align-items: center;
@@ -21,11 +23,11 @@
             calc(var(--child-animation-delay) * 2 + 0.05s)
             var(--transition-timing) both;
 
-        @media (min-width: 768px) {
+        @include notMobile {
             transform: translateY(-10px);
         }
 
-        @media (max-width: 768px) {
+        @include mobile {
             &:nth-child(odd) {
                 transform: translateX(50px);
             }
@@ -65,7 +67,7 @@
         padding: 0;
         margin: 0;
 
-        @media (max-width: 1000px) {
+        @include mobile {
             display: none;
         }
     }

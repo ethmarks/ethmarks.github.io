@@ -1,3 +1,5 @@
+@import 'base/mixins';
+
 table {
     width: 100%;
     border-collapse: separate;
@@ -31,12 +33,12 @@ table {
             letter-spacing: 0.5px;
         }
 
-        @media (max-width: 768px) {
+        @include mobile {
             font-size: 0.88em;
         }
     }
 
-    &.scroll {
+    &.width-overflow {
         display: block;
         overflow-x: auto;
     }

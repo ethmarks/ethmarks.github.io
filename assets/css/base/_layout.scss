@@ -1,0 +1,74 @@
+@import 'base/mixins';
+
+html {
+    font-size: 100%;
+    /* Base for rem units (usually 16px) */
+    scroll-behavior: smooth;
+
+    @media (pointer: fine) {
+        overscroll-behavior: none;
+    }
+}
+
+body {
+    background: var(--body-bg-gradient);
+    line-height: 1.4;
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    margin: 0;
+    /* Reset default body margin */
+    font-size: var(--font-size-base);
+    overflow-wrap: break-word;
+    background-attachment: fixed;
+
+    &.height-overflow {
+        background-attachment: scroll;
+    }
+}
+
+main {
+    max-width: var(--main-width);
+    box-sizing: border-box;
+    margin: var(--main-margin-top) 12vw 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @include mobile {
+        margin: var(--main-margin-top-mobile) auto 0;
+        max-width: var(--main-width-mobile);
+    }
+}
+
+article {
+    margin: var(--article-margin-top) 0 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-article-bg);
+    border-radius: var(--radius-xl);
+    border: var(--border-standard);
+    transform: translateY(0);
+    transition: var(--transition-transform-shadow);
+    overflow-x: hidden;
+
+    & > :first-child {
+        @include mobile {
+            margin-top: 6px;
+        }
+    }
+
+    body.height-overflow & {
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        border-bottom: none;
+    }
+
+    @include mobile {
+        padding: var(--spacing-sm);
+    }
+
+    &.animated {
+        animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
+    }
+}

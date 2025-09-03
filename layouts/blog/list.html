@@ -1,3 +1,7 @@
+{{ define "resources" }}
+{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randomblog.js") -}}
+{{ end }}
+
 {{ define "main" }}
 <h1 class="animated">Blog ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
 <article class="animated">
@@ -21,9 +25,4 @@
 
     {{ partial "post-links.html" .Pages }}
 </article>
-{{ end }}
-
-{{ define "resources" }}
-{{ $randomblogJs := resources.Get "randomblog.js"| minify }}
-<script src="{{ $randomblogJs.Permalink }}"></script>
 {{ end }}

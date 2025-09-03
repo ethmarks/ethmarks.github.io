@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ .Title }}</title>
-<meta name="description" content="{{ .Description }}" />
-<link rel="canonical" href="{{ .Permalink }}" />
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ .Description }}" />
-{{ if eq .Section "about" -}}
-<meta property="og:type" content="profile" />
-{{- else if eq .Section "blog" -}}
-<meta property="og:type" content="article" />
-{{- else -}}
-<meta property="og:type" content="website" />
-{{- end }}
-<meta property="og:url" content="{{ .Permalink }}" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-{{- /* Preload woff2 files */}}
+{{ partial "metadata.html" . -}}
 {{ partial "font-preload.html" . }}
-{{- /* Concat all CSS into one bundle */ -}}
-{{- $fontsCss := resources.Get "fonts.css" -}}
-{{- $commonCss := resources.Get "common.css" -}}
-{{- $moduleCss := resources.Match "modules/*.css" | resources.Concat "modules.css" -}}
-{{- $bundleCss := slice $fontsCss $commonCss $moduleCss | resources.Concat "bundle.css" | minify }}
-<link rel="stylesheet" href="{{ $bundleCss.Permalink }}" />
-
-{{- partial "load-assets.html" (slice "common.sync.js" "quicklink.async.js") -}}
 {{- partial "publish-all-media.html" . -}}
-{{- block "resources" . -}}
-{{- end }}
+{{- block "default-resources" . -}}
+{{- partial "load-assets.html" (slice "js/common.sync.js" "js/vendor/quicklink.async.js") -}}
+{{- end -}}
+{{- block "resources" . }}{{ end }}
 </head>
 <body>
 {{ partial "header.html" . }}
