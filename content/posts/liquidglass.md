@@ -99,7 +99,7 @@ I'm still delighted by Liquid Glass. It has its share of critical flaws, but it 
 
 Compared to Google's new design language, [Material 3 Expressive](https://design.google/library/expressive-material-design-google-research), I think that Liquid Glass looks far cooler. I still prefer the playful utility of Google's design philosophy, but Liquid Glass has an undeniable appeal that fits Apple's philosophy of 'you live in the future now; things just work'.
 
-This has been my longest blog post by far, and I've really enjoyed writing and researching it. It's been interesting to experience firsthand the amount of effort that goes into writing a technical blog.
+This has been my longest post by far, and I've really enjoyed writing and researching it. It's been interesting to experience firsthand the amount of effort that goes into writing a technical post.
 
 I hope you found this post interesting!
 

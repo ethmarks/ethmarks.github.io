@@ -18,13 +18,13 @@ I decided that it would be more interesting to start from scratch, so I designed
 
 ## Build
 
-This site uses [Hugo](/blog/hugoswitch) to render my [Markdown](https://en.wikipedia.org/wiki/Markdown) content to my [HTML](https://en.wikipedia.org/wiki/HTML) templates. I also use Hugo for things like [asset minification](https://gohugo.io/functions/resources/minify/) and [Sass transpiling](https://gohugo.io/hugo-pipes/transpile-sass-to-css/). I love Hugo because it's feature-rich, extremely fast (it takes less than a tenth of a second for a full build), and does exactly what I want it to.
+This site uses [Hugo](/posts/hugoswitch) to render my [Markdown](https://en.wikipedia.org/wiki/Markdown) content to my [HTML](https://en.wikipedia.org/wiki/HTML) templates. I also use Hugo for things like [asset minification](https://gohugo.io/functions/resources/minify/) and [Sass transpiling](https://gohugo.io/hugo-pipes/transpile-sass-to-css/). I love Hugo because it's feature-rich, extremely fast (it takes less than a tenth of a second for a full build), and does exactly what I want it to.
 
 ### History
 
-In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few blog posts like this.
+In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few posts like this.
 
-On June 6, 2025, I switched to [build.py](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
+On June 6, 2025, I switched to [build.py](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/posts/hugoswitch).
 
 ## Hosting
 
@@ -42,7 +42,7 @@ This site is styled with [Sass](https://en.wikipedia.org/wiki/Sass_(style_sheet_
 
 This site's Sass is transpiled using [LibSass](https://sass-lang.com/libsass/). LibSass is an old Sass transpiler that's been deprecated since 2020. The only reason I use LibSass is that I was having trouble setting Hugo up with [Dart Sass](https://sass-lang.com/dart-sass/) (the modern and recommended transpiler), because it kept causing timeout errors that were inconsistent and very difficult to debug. I eventually just gave up and switched to LibSass. This means that I can't use any of the new Dart Sass features like [@use](https://sass-lang.com/documentation/at-rules/use/), so I use [@import](https://sass-lang.com/documentation/at-rules/import/) instead.
 
-Every page layout has its own Sass file that imports the modules that page needs. For example, here's the annotated Sass file for [my blog page](/blog).
+Every page layout has its own Sass file that imports the modules that page needs. For example, here's the annotated Sass file for [my posts page](/posts/).
 
 ```scss
 /* Import global styles used by every page */
@@ -59,7 +59,7 @@ Every page layout has its own Sass file that imports the modules that page needs
 @import 'components/random-blog-btn';
 ```
 
-These Sass files are then transpiled into normal CSS and imported into the page using my custom `load-assets` [partial](https://gohugo.io/functions/partials/include/) that allows me to just input a list of assets, and have the partial automatically generate the HTML imports. For example, here's the code that the blog page uses.
+These Sass files are then transpiled into normal CSS and imported into the page using my custom `load-assets` [partial](https://gohugo.io/functions/partials/include/) that allows me to just input a list of assets, and have the partial automatically generate the HTML imports. For example, here's the code that the posts page uses.
 
 ```go-html-template
 {{ define "resources" }}

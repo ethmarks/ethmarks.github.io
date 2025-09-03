@@ -14,7 +14,7 @@ link_icon: colab
 
 ELIZA's source code was written by Joseph Weizenbaum in 1966 in the [SLIP](https://en.wikipedia.org/wiki/SLIP_(programming_language)) programming language, which is a fork of [MAD](https://en.wikipedia.org/wiki/MAD_(programming_language)). My computer obviously doesn't run a 66-year-old programming language originally written for the [UNIVAC 1107](https://en.wikipedia.org/wiki/UNIVAC_1100/2200_series#1107).
 
-I still wanted to test ELIZA as part of my [research on early AI](/blog/earlyai), so I was left no other choice but to re-implement ELIZA for modern computers in Python.
+I still wanted to test ELIZA as part of my [research on early AI](/posts/earlyai), so I was left no other choice but to re-implement ELIZA for modern computers in Python.
 
 ![An example conversation with ELIZA running in my Colab notebook](~/eliza_colab.webp "ELIZA running in Google Colab")
 

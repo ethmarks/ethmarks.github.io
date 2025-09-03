@@ -99,7 +99,7 @@ I disagree.
 
 ## Conclusion
 
-First of all, yes, these aliens use the Metric system. I figured that using [my absolute measurement system](/blog/quanth) would be detrimental to readability.
+First of all, yes, these aliens use the Metric system. I figured that using [my absolute measurement system](/posts/quanth) would be detrimental to readability.
 
 In case it wasn't obvious, this was heavily inspired by [*They're Made Out of Meat*](https://en.wikipedia.org/wiki/They%27re_Made_Out_of_Meat) by Terry Bisson and [*Strange Planet*](https://en.wikipedia.org/wiki/Nathan_W._Pyle#Strange_Planet_series) by Nathan W Pyle.
 

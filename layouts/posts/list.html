@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-<h1 class="animated">Blog ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
+<h1 class="animated">Posts ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
 <article class="animated">
     <div class="post-tags">
         {{ range first 10 .Site.Taxonomies.tags.ByCount }}
@@ -17,7 +17,7 @@
             href="#"
             id="random-post-link"
             class="random-blog-btn"
-            title="Go to a random blog post"
+            title="Go to a random post"
         >
             🎲 Random Post
         </a>

@@ -40,6 +40,6 @@ I looked into incorporating a way to natively record GIFs in the webpage, but fr
 
 ## Conclusion
 
-I hope you enjoyed this silly little blog post. I look forward to a future where all information is communicated via flood fill text animations.
+I hope you enjoyed this silly little post. I look forward to a future where all information is communicated via flood fill text animations.
 
 ~Ethan

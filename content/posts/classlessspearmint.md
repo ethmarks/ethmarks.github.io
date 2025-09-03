@@ -5,7 +5,7 @@ tags: [webdev, programming, ai, codepen]
 description: ClasslessSpearmint is a Classless CSS style that aesthetically styles raw HTML with my website's theme without needing to assign HTML classes
 ---
 
-Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/blog/scrambleanim)), I usually include this single line of code.
+Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/posts/scrambleanim)), I usually include this single line of code.
 
 ```css
 @import url("https://cdn.jsdelivr.net/npm/yorha@1.2.0/dist/yorha.min.css")
@@ -39,7 +39,7 @@ I was impressed by how good of a job Gemini did. It followed my site's aesthetic
 
 I wanted to test ClasslessSpearmint out, but I think that the HTML demo on cssbed.com is a bit lackluster.
 
-So I went back to Gemini and asked for a Classless CSS test suite. After several rounds of feedback ("Why are you using classes? That completely subverts the entire point of this exercise. Try again."), it responded with a nice HTML page that does a good job demoing lots of different HTML elements. Also, at my request, all of the [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text is [centered around salt](/blog/saltassociation).
+So I went back to Gemini and asked for a Classless CSS test suite. After several rounds of feedback ("Why are you using classes? That completely subverts the entire point of this exercise. Try again."), it responded with a nice HTML page that does a good job demoing lots of different HTML elements. Also, at my request, all of the [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text is [centered around salt](/posts/saltassociation).
 
 Here's what the test suite looks like with ClasslessSpearmint applied.
 
