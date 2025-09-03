@@ -51,7 +51,7 @@ I'm **14** years old
 |----------|-------------|
 | Colour | <span class="mint"><b>Spearmint Teal</b></span> |
 | Novel | [The Golden Compass](https://www.goodreads.com/book/show/119322.The_Golden_Compass) |
-| Map Projection | [Waterman Butterfly](https://colourlessspearmint.github.io/blog/waterman) |
+| Map Projection | [Waterman Butterfly](/blog/waterman) |
 | Bird | [Starling](https://en.wikipedia.org/wiki/Starling) |
 | Foreign Language | [Bulgarian](https://en.wikipedia.org/wiki/Bulgarian_language) |
 | Logical Operator | [XOR](https://en.wikipedia.org/wiki/Exclusive_or) |

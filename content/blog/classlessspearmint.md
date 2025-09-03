@@ -11,7 +11,7 @@ Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.
 @import url("https://cdn.jsdelivr.net/npm/yorha@1.2.0/dist/yorha.min.css")
 ```
 
-What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://ubershmekel.medium.com/the-next-css-frontier-classless-5e66f3f25fdd) theme. 
+What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://ubershmekel.medium.com/the-next-css-frontier-classless-5e66f3f25fdd) theme.
 
 ## What is Classless CSS?
 
@@ -37,7 +37,7 @@ I was impressed by how good of a job Gemini did. It followed my site's aesthetic
 
 ## Demo
 
-I wanted to test ClasslessSpearmint out, but I think that the HTML demo on cssbed.com is a bit lackluster. 
+I wanted to test ClasslessSpearmint out, but I think that the HTML demo on cssbed.com is a bit lackluster.
 
 So I went back to Gemini and asked for a Classless CSS test suite. After several rounds of feedback ("Why are you using classes? That completely subverts the entire point of this exercise. Try again."), it responded with a nice HTML page that does a good job demoing lots of different HTML elements. Also, at my request, all of the [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text is [centered around salt](/blog/saltassociation).
 
@@ -54,13 +54,13 @@ If you'd like to compare them, here's the same demo but using Yorha.
 If you'd like to use ClasslessSpearmint yourself, just include this snippet in your HTML head.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ColourlessSpearmint/ethmarks.github.io@latest/static/classlessspearmint.css">
 ```
 
 Or, if you're using CodePen, include this snippet in the CSS.
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css");
+@import url("https://cdn.jsdelivr.net/gh/ColourlessSpearmint/ethmarks.github.io@latest/static/classlessspearmint.css");
 ```
 
 ## Conclusion

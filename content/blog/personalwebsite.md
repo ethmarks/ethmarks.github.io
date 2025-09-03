@@ -3,7 +3,7 @@ title: Personal Website
 date: 2025-05-14
 tags: [projects, programming, webdev, personal website]
 description: The website you're reading right now
-link: https://github.com/ColourlessSpearmint/colourlessspearmint.github.io
+link: https://github.com/ColourlessSpearmint/ethmarks.github.io
 link_name: GitHub Repo
 link_icon: github
 ---
@@ -24,13 +24,13 @@ This site uses [Hugo](/blog/hugoswitch) to render my [Markdown](https://en.wikip
 
 In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few blog posts like this.
 
-On June 6, 2025, I switched to [build.py](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
+On June 6, 2025, I switched to [build.py](https://github.com/ColourlessSpearmint/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
 
 ## Hosting
 
 ![A screenshot of the GitHub Actions tab, showing a successful job titled 'Deploy Hugo site to Pages'. The job took 28 seconds. The job has a build step and a deploy step. The job produced a 13.4 megabyte artifact titled 'github-pages'.](~/gh_pages_workflow.webp)
 
-To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
+To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ColourlessSpearmint/ethmarks.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
 
 ## Styling
 
@@ -105,7 +105,7 @@ I self-host this site's fonts using [variable](https://fonts.google.com/knowledg
 
 As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://developer.chrome.com/docs/lighthouse). Lighthouse is a tool developed by Google that audits web pages for performance and accessibility. A higher score means that the page loads more quickly and is more accessible. According to [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring): "A perfect score of 100 is extremely challenging to achieve and not expected".
 
-[![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-08-31.webp)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fcolourlessspearmint.github.io%2F)
+[![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-08-31.webp)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fethmarks.github.io%2F)
 
 My site's performance is largely due to it being lightweight and carefully optimized.
 - **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use [JSX](https://react.dev/learn/writing-markup-with-jsx) and [client-side rendering](https://developer.mozilla.org/en-US/docs/Glossary/CSR) to dynamically [hydrate](https://en.wikipedia.org/wiki/Hydration_(web_development)) their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.

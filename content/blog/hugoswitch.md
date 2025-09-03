@@ -7,7 +7,7 @@ description: I switched from using my custom Python SSG to using Hugo
 
 ![A faithful replication of the official Hugo banner used in their documentation, with the text modified to read 'Switching to Hugo'](~/hugo-banner.webp)
 
-Up until yesterday, I wrote all of my blog posts in [Mint Flavoured Markdown](/blog/mfm) and rendered them into [HTML](https://en.wikipedia.org/wiki/HTML) with a [Python](https://www.python.org/) script I wrote called build.py. Build.py was very helpful in simplifying the process of writing new blog posts. The final version of build.py is archived [here](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py).
+Up until yesterday, I wrote all of my blog posts in [Mint Flavoured Markdown](/blog/mfm) and rendered them into [HTML](https://en.wikipedia.org/wiki/HTML) with a [Python](https://www.python.org/) script I wrote called build.py. Build.py was very helpful in simplifying the process of writing new blog posts. The final version of build.py is archived [here](https://github.com/ColourlessSpearmint/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py).
 
 I spent nearly a month developing build.py, so the speed at which I completely abandoned it in favour of [Hugo](https://gohugo.io/) is noteworthy.
 
