@@ -98,3 +98,32 @@
     }
   }, true);
 })();
+
+(function handleBirthdayMode() {
+  window.addEventListener('DOMContentLoaded', function () {
+    const today = new Date();
+    if (today.getMonth() === 8 && today.getDate() === 3) { // September 13th
+      const header = document.querySelector('header');
+      const title = header.querySelector('#title');
+
+      function applyBirthdayMode() {
+        header.classList.add('birthday-mode');
+      }
+
+      function applyBirthdayModeDelayed() {
+        applyBirthdayMode();
+        header.classList.add('birthday-mode-delayed');
+      }
+
+      // Check if title is visible (not still animating in)
+      const titleStyles = getComputedStyle(title);
+      const isVisible = titleStyles.opacity !== '0' && titleStyles.opacity !== '0.2';
+
+      if (isVisible) {
+        applyBirthdayMode();
+      } else {
+        setTimeout(applyBirthdayModeDelayed, 1000);
+      }
+    }
+  });
+})();
