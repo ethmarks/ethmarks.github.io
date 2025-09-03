@@ -43,11 +43,11 @@ So I went back to Gemini and asked for a Classless CSS test suite. After several
 
 Here's what the test suite looks like with ClasslessSpearmint applied.
 
-{{< iframe src="https://codepen.io/ColourlessSpearmint/embed/XJmXBNO?default-tab=result" title="ClasslessSpearmint Test Suite" >}}
+{{< iframe src="https://codepen.io/ethmarks/embed/XJmXBNO?default-tab=result" title="ClasslessSpearmint Test Suite" >}}
 
 If you'd like to compare them, here's the same demo but using Yorha.
 
-{{< iframe src="https://codepen.io/ColourlessSpearmint/embed/jEbWvVo?default-tab=result" title="Yorha Test Suite" >}}
+{{< iframe src="https://codepen.io/ethmarks/embed/jEbWvVo?default-tab=result" title="Yorha Test Suite" >}}
 
 ## Usage
 

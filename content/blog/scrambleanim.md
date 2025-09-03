@@ -3,7 +3,7 @@ title: Text Scramble Animation
 date: 2025-06-29
 tags: [programming, webdev, codepen]
 description: A demonstration of my text scrambling JavaScript animation
-link: https://codepen.io/ColourlessSpearmint/pen/jEPRNXG
+link: https://codepen.io/ethmarks/pen/jEPRNXG
 link_name: CodePen
 link_icon: codepen
 ---
@@ -121,7 +121,7 @@ You use it by defining a CSS keyframe named scramble-text that doesn't do anythi
 
 I realize that you, dear reader, probably aren't invested enough to actually test out my code, so I've made a little demo with [CodePen](https://codepen.io).
 
-{{< iframe src="https://codepen.io/ColourlessSpearmint/embed/jEPRNXG?default-tab=result" title="Scramble Text Demo" >}}
+{{< iframe src="https://codepen.io/ethmarks/embed/jEPRNXG?default-tab=result" title="Scramble Text Demo" >}}
 
 ## Conclusion
 
