@@ -115,7 +115,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Experience |
 |------------|
 | Coding since I was 7 years old |
-| Developed and published [Soaring Squirrel Shipment](https://colourlessspearmint.itch.io/soaring-squirrel-shipment), a game about flying squirrels |
+| Developed and published [Soaring Squirrel Shipment](https://ethmarks.itch.io/soaring-squirrel-shipment), a game about flying squirrels |
 | Designed and built my [personal website](/blog/personalwebsite) from scratch |
 | Created [Thessa](/blog/thessa), an AI-powered thesaurus |
 | Created [ASCII-Globe](/blog/asciiglobe), a text-based cartographic rendering engine |
