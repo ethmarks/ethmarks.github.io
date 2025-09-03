@@ -3,7 +3,7 @@ title: ColourlessTransformer
 date: 2024-12-22
 tags: [projects, programming, ai, webdev, automation]
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
-link: https://github.com/ColourlessSpearmint/ColourlessTransformer
+link: https://github.com/ethmarks/ColourlessTransformer
 link_name: GitHub Repo
 link_icon: github
 ---
@@ -22,7 +22,7 @@ PaintTransformer starts by adding with broad, vague brush strokes and ends with 
 
 PaintTransformer was developed in [this paper](https://arxiv.org/abs/2108.03798) by a team of researchers. It was later [implemented in PyTorch](https://github.com/Huage001/PaintTransformer) by [Huage001](https://github.com/Huage001)
 
-I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I instead decided to build a custom interface. I named it ColourlessTransformer because I was going through a phase of naming everything eponymously after [my username](/blog/username).
+I wanted to use PaintTransformer, but my makeshift solution of uploading files to a Colab runtime was too clunky to be used at scale. So I instead decided to build a custom interface. I named it ColourlessTransformer because I was going through a phase of naming everything eponymously after my old username, ColourlessSpearmint.
 
 ## Streamlit
 
@@ -32,7 +32,7 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 ## Usage
 
-If you want to try this out on your own, follow the [instructions in the README](https://github.com/ColourlessSpearmint/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and some familiarity with the terminal.
+If you want to try this out on your own, follow the [instructions in the README](https://github.com/ethmarks/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and some familiarity with the terminal.
 
 ## Conclusion
 

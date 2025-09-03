@@ -33,7 +33,7 @@ Anyways, once I had Zed installed, I did a bit of coding, decided after a couple
 
 Until today, that is. I've decided to give Zed another shot. I'm using it to write the post you're reading right now. I've spent the last couple hours configuring it and trying to learn its idiosyncrasies.
 
-From what I've seen so far, Zed has several distinct advantages, such as its [Rust-powered and incredibly fast rendering engine](https://zed.dev/blog/fastest-ai-code-editor) and excellent [out-of-your-face AI](https://zed.dev/blog/disable-ai-features) integration.
+From what I've seen so far, Zed has several distinct advantages, such as its [Rust-powered and incredibly fast rendering engine](https://zed.dev/posts/fastest-ai-code-editor) and excellent [out-of-your-face AI](https://zed.dev/posts/disable-ai-features) integration.
 
 It definitely isn't perfect, though. For example, installing Zed on Windows with Scoop is pretty much as easy as it gets, but it's still a hacky solution that breaks things like auto-update. Similarly, the interface lacks polish and can feel unfriendly and overwhelming (which is almost impressive for such a minimalist editor). The only way to change settings is by [editing a JSON file](https://zed.dev/docs/configuring-zed). This is fine, I guess, but it's significantly worse for UX than a [normal settings dialogue](https://code.visualstudio.com/docs/configure/settings). Zed doesn't feel as welcoming and batteries-included as VS Code.
 

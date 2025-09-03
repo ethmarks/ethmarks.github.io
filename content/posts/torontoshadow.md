@@ -39,7 +39,7 @@ The comments on the article seem to share my disdain:
 
 > "durrrr. Thanks, CBC."
 
-Based entirely on the fact that over half of the comments on the CBC's article are deriding their competency, whereas this blog post has zero such comments (which may or may not be influenced by the fact that I haven't implemented a comment system), I'm forced to conclude that I'm better at writing articles than the CBC.
+Based entirely on the fact that over half of the comments on the CBC's article are deriding their competency, whereas this post has zero such comments (which may or may not be influenced by the fact that I haven't implemented a comment system), I'm forced to conclude that I'm better at writing articles than the CBC.
 
 If the CBC would like to fire its entire editorial staff and replace them with me, I would be amenable to that.
 

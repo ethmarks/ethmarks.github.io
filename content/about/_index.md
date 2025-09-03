@@ -12,7 +12,7 @@ layout: about/list
 
 My name is **Ethan Marks**
 
-I'm a **software engineer**
+I'm an aspiring **software engineer**
 
 I'm **14** years old
 {{< /column >}}
@@ -51,7 +51,7 @@ I'm **14** years old
 |----------|-------------|
 | Colour | <span class="mint"><b>Spearmint Teal</b></span> |
 | Novel | [The Golden Compass](https://www.goodreads.com/book/show/119322.The_Golden_Compass) |
-| Map Projection | [Waterman Butterfly](https://colourlessspearmint.github.io/blog/waterman) |
+| Map Projection | [Waterman Butterfly](/posts/waterman) |
 | Bird | [Starling](https://en.wikipedia.org/wiki/Starling) |
 | Foreign Language | [Bulgarian](https://en.wikipedia.org/wiki/Bulgarian_language) |
 | Logical Operator | [XOR](https://en.wikipedia.org/wiki/Exclusive_or) |
@@ -115,10 +115,10 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Experience |
 |------------|
 | Coding since I was 7 years old |
-| Developed and published [Soaring Squirrel Shipment](https://colourlessspearmint.itch.io/soaring-squirrel-shipment), a game about flying squirrels |
-| Designed and built my [personal website](/blog/personalwebsite) from scratch |
-| Created [Thessa](/blog/thessa), an AI-powered thesaurus |
-| Created [ASCII-Globe](/blog/asciiglobe), a text-based cartographic rendering engine |
+| Developed and published [Soaring Squirrel Shipment](https://ethmarks.itch.io/soaring-squirrel-shipment), a game about flying squirrels |
+| Designed and built my [personal website](/posts/personalwebsite) from scratch |
+| Created [Thessa](/posts/thessa), an AI-powered thesaurus |
+| Created [ASCII-Globe](/posts/asciiglobe), a text-based cartographic rendering engine |
 {{< /compact-table >}}
 {{< /column >}}
 {{< /row >}}
@@ -150,7 +150,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | States Visited | 48 |
 | GitHub Repos | <span id="repocount">~6</span> |
 | Git Commits | <span id="commitcount">~700</span> |
-| Blog Posts | {{< postcount >}} |
+| Posts | {{< postcount >}} |
 | Days Alive | <span id="daysalive">~5400</span> |
 {{< /compact-table >}}
 {{< /column >}}

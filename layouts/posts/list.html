@@ -1,9 +1,9 @@
 {{ define "resources" }}
-{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randomblog.js") -}}
+{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randompost.js") -}}
 {{ end }}
 
 {{ define "main" }}
-<h1 class="animated">Blog ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
+<h1 class="animated">Posts ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
 <article class="animated">
     <div class="post-tags">
         {{ range first 10 .Site.Taxonomies.tags.ByCount }}
@@ -12,12 +12,12 @@
         <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
     </div>
 
-    <div class="random-blog-btn-container animated">
+    <div class="random-post-btn-container animated">
         <a
             href="#"
             id="random-post-link"
-            class="random-blog-btn"
-            title="Go to a random blog post"
+            class="random-post-btn"
+            title="Go to a random post"
         >
             🎲 Random Post
         </a>

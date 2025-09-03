@@ -7,7 +7,7 @@ description: I switched from using my custom Python SSG to using Hugo
 
 ![A faithful replication of the official Hugo banner used in their documentation, with the text modified to read 'Switching to Hugo'](~/hugo-banner.webp)
 
-Up until yesterday, I wrote all of my blog posts in [Mint Flavoured Markdown](/blog/mfm) and rendered them into [HTML](https://en.wikipedia.org/wiki/HTML) with a [Python](https://www.python.org/) script I wrote called build.py. Build.py was very helpful in simplifying the process of writing new blog posts. The final version of build.py is archived [here](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py).
+Up until yesterday, I wrote all of my posts in [Mint Flavoured Markdown](/posts/mfm) and rendered them into [HTML](https://en.wikipedia.org/wiki/HTML) with a [Python](https://www.python.org/) script I wrote called build.py. Build.py was very helpful in simplifying the process of writing new posts. The final version of build.py is archived [here](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py).
 
 I spent nearly a month developing build.py, so the speed at which I completely abandoned it in favour of [Hugo](https://gohugo.io/) is noteworthy.
 
@@ -37,7 +37,7 @@ Hugo has a lot of features, and all of them are built-in, meaning I didn't have 
 
 ### Modularity
 
-Hugo strongly encourages [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) code. For example, each page's [head](https://developer.mozilla.org/en-US/docs/Web/API/Document/head) section (that defines things like the [favicon](https://developer.mozilla.org/en-US/docs/Glossary/Favicon) and and page title) is defined exactly once in the entire codebase: in layouts/_default/baseof.html. Every single layout (including blog posts like this one, taxonomy pages, etc.) is rendered from the same basic template.
+Hugo strongly encourages [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) code. For example, each page's [head](https://developer.mozilla.org/en-US/docs/Web/API/Document/head) section (that defines things like the [favicon](https://developer.mozilla.org/en-US/docs/Glossary/Favicon) and and page title) is defined exactly once in the entire codebase: in layouts/_default/baseof.html. Every single layout (including posts like this one, taxonomy pages, etc.) is rendered from the same basic template.
 
 I could have implemented something like this in build.py (at the expense of performance and complexity), but I didn't, so each template had to redefine things like the head section. This approach gave me slightly more flexibility, but came at the cost of adding a bunch of repetitive definitions I had to manually synchronize across templates.
 
@@ -55,7 +55,7 @@ There are a few consequences of switching to Hugo, though.
 
 ### Reduces Charm
 
-There's a certain air to being able to say "I made this without any prebuilt libraries" on my [personal website's project page](/blog/personalwebsite) gives. I'm going to call it "charm", but it's probably closer to "smugness". Anyways, using a prebuilt SSG like Hugo means that I can't honestly claim that this site is built using only my own tools. I think that this significantly reduces the overall charm and impressiveness of the site.
+There's a certain air to being able to say "I made this without any prebuilt libraries" on my [personal website's project page](/posts/personalwebsite) gives. I'm going to call it "charm", but it's probably closer to "smugness". Anyways, using a prebuilt SSG like Hugo means that I can't honestly claim that this site is built using only my own tools. I think that this significantly reduces the overall charm and impressiveness of the site.
 
 There are a few asterisks to this...
 
@@ -67,7 +67,7 @@ There are a few asterisks to this...
 
 ### Less Flexible
 
-Hugo has a fairly rigid project structure. Each type of content (e.g. blog post) is allowed to have a [single template](https://gohugo.io/templates/types/#single) (individual blog post) and a [list template](https://gohugo.io/templates/types/#list) (all blog posts). Same goes for tags: I can have a [taxonomy template](https://gohugo.io/templates/types/#taxonomy) (individual tag) and a [term template](https://gohugo.io/templates/types/#term) (all tags).
+Hugo has a fairly rigid project structure. Each type of content (e.g. posts) is allowed to have a [single template](https://gohugo.io/templates/types/#single) (individual post) and a [list template](https://gohugo.io/templates/types/#list) (all posts). Same goes for tags: I can have a [taxonomy template](https://gohugo.io/templates/types/#taxonomy) (individual tag) and a [term template](https://gohugo.io/templates/types/#term) (all tags).
 
 There are ways to add custom layouts, but implementing custom layouts is far more complicated than just using the ones in Hugo's default structure. Once you venture outside of the Hugo-idiomatic architecture, you start having to fight Hugo to produce the desired output.
 
@@ -77,7 +77,7 @@ Hugo's default structure happened to line up almost exactly with that of build.p
 
 To process and render templates, build.py used a combination of [Python](https://www.python.org/) and [Jinja](https://jinja.palletsprojects.com/en/stable/), both of which are languages which I'm familiar with. Hugo, on the other hand, uses the [Go templating language](https://pkg.go.dev/html/template) for layouts and shortcodes, which I didn't even know existed until I started using Hugo. It's similar in concept to Jinja, but uses different syntax and has a few other differences.
 
-For example, here's the original Python implementation of the [MFM](/blog/mfm) media tag from build.py.
+For example, here's the original Python implementation of the [MFM](/posts/mfm) media tag from build.py.
 
 ```python
 def embed_media_tag(match):

@@ -3,7 +3,7 @@ title: ASCII-Globe
 date: 2025-01-18
 tags: [projects, programming, cartography]
 description: A text-based cartographic rendering engine that uses NASA satellite data
-link: https://github.com/ColourlessSpearmint/ASCII-Globe
+link: https://github.com/ethmarks/ASCII-Globe
 link_name: GitHub Repo
 link_icon: github
 ---
@@ -114,7 +114,7 @@ ASCII-Globe also supports features such as rotation, tilt, scale, and a day-nigh
 
 ## Texture Generation
 
-ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the [documentation](https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md)) is to download [this image](https://eoimages.gsfc.nasa.gov/media/imagerecords/74000/74218/world.200412.3x5400x2700.jpg) taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.
+ASCII-Globe works with any 202x80 character .txt file, but for the people who don't want to manually design a 16,160 character texture, it also comes with some image-to-txt code. The texture generator's default behavior (as described in the [documentation](https://github.com/ethmarks/ASCII-Globe/blob/main/README.md)) is to download [this image](https://eoimages.gsfc.nasa.gov/media/imagerecords/74000/74218/world.200412.3x5400x2700.jpg) taken by NASA satellites and convert it into text. However, it'll work on any image; it doesn't even have to be a map.
 
 ## Animation
 
@@ -122,7 +122,7 @@ ASCII-Globe also comes with code to generate animated GIFs from a list of frames
 
 ## Installation
 
-If you want to use ASCII-Globe yourself, follow the [installation instructions](https://github.com/ColourlessSpearmint/ASCII-Globe/blob/main/README.md#installation) in the documentation.
+If you want to use ASCII-Globe yourself, follow the [installation instructions](https://github.com/ethmarks/ASCII-Globe/blob/main/README.md#installation) in the documentation.
 
 ## Conclusion
 

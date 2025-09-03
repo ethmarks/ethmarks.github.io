@@ -5,13 +5,13 @@ tags: [webdev, programming, ai, codepen]
 description: ClasslessSpearmint is a Classless CSS style that aesthetically styles raw HTML with my website's theme without needing to assign HTML classes
 ---
 
-Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/blog/scrambleanim)), I usually include this single line of code.
+Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/posts/scrambleanim)), I usually include this single line of code.
 
 ```css
 @import url("https://cdn.jsdelivr.net/npm/yorha@1.2.0/dist/yorha.min.css")
 ```
 
-What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://ubershmekel.medium.com/the-next-css-frontier-classless-5e66f3f25fdd) theme. 
+What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://ubershmekel.medium.com/the-next-css-frontier-classless-5e66f3f25fdd) theme.
 
 ## What is Classless CSS?
 
@@ -31,36 +31,36 @@ In the spirit of Classless CSS (i.e. laziness), I fed my site's main CSS file, `
 
 > I'm providing you with two CSS files. One, Yorha, is classless and has a beige theme. The other, Spearmint, is not classless and has a sleek teal theme. I want you to make a new CSS file: a classless sleek teal theme. In other words, follow the format of Yorha but the aesthetic of Spearmint. Make sure that all elements styled in Yorha show up in your CSS.
 
-It spat out 383 lines of CSS. I call it `classlessspearmint.css` (a fairly obvious wordplay on 'classless' and 'colourlessspearmint').
+It spat out 383 lines of CSS. I call it `classlessspearmint.css`.
 
 I was impressed by how good of a job Gemini did. It followed my site's aesthetic pretty well, and also added support for a bunch of HTML features that I never use and didn't implement, like the `<mark>` tag that highlights text.
 
 ## Demo
 
-I wanted to test ClasslessSpearmint out, but I think that the HTML demo on cssbed.com is a bit lackluster. 
+I wanted to test ClasslessSpearmint out, but I think that the HTML demo on cssbed.com is a bit lackluster.
 
-So I went back to Gemini and asked for a Classless CSS test suite. After several rounds of feedback ("Why are you using classes? That completely subverts the entire point of this exercise. Try again."), it responded with a nice HTML page that does a good job demoing lots of different HTML elements. Also, at my request, all of the [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text is [centered around salt](/blog/saltassociation).
+So I went back to Gemini and asked for a Classless CSS test suite. After several rounds of feedback ("Why are you using classes? That completely subverts the entire point of this exercise. Try again."), it responded with a nice HTML page that does a good job demoing lots of different HTML elements. Also, at my request, all of the [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) text is [centered around salt](/posts/saltassociation).
 
 Here's what the test suite looks like with ClasslessSpearmint applied.
 
-{{< iframe src="https://codepen.io/ColourlessSpearmint/embed/XJmXBNO?default-tab=result" title="ClasslessSpearmint Test Suite" >}}
+{{< iframe src="https://codepen.io/ethmarks/embed/XJmXBNO?default-tab=result" title="ClasslessSpearmint Test Suite" >}}
 
 If you'd like to compare them, here's the same demo but using Yorha.
 
-{{< iframe src="https://codepen.io/ColourlessSpearmint/embed/jEbWvVo?default-tab=result" title="Yorha Test Suite" >}}
+{{< iframe src="https://codepen.io/ethmarks/embed/jEbWvVo?default-tab=result" title="Yorha Test Suite" >}}
 
 ## Usage
 
 If you'd like to use ClasslessSpearmint yourself, just include this snippet in your HTML head.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ethmarks/ethmarks.github.io@latest/static/classlessspearmint.css">
 ```
 
 Or, if you're using CodePen, include this snippet in the CSS.
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/ColourlessSpearmint/colourlessspearmint.github.io@latest/static/classlessspearmint.css");
+@import url("https://cdn.jsdelivr.net/gh/ethmarks/ethmarks.github.io@latest/static/classlessspearmint.css");
 ```
 
 ## Conclusion

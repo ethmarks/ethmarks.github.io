@@ -71,7 +71,7 @@ Proximate ripples combine to form words.
 
 Tsevhu has 3429 official words so far.
 
-This is obviously too many for me to put in this blog post, so I'll just provide a [link to the official dictionary](https://docs.google.com/spreadsheets/d/1Z3GgLvUsjAupx9l_Zo0lBfozFwRk_K_gE6kCBJmuU3Y).
+This is obviously too many for me to put in this post, so I'll just provide a [link to the official dictionary](https://docs.google.com/spreadsheets/d/1Z3GgLvUsjAupx9l_Zo0lBfozFwRk_K_gE6kCBJmuU3Y).
 
 ## Conclusion
 

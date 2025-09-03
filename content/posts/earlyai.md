@@ -13,11 +13,11 @@ But how did we get here?
 
 It's early April, 2022. 11-year-old me is fascinated by the concept of [Artificial Super Intelligence](https://en.wikipedia.org/wiki/Superintelligence). I read about Roko's Basilisk (link intentionally omitted; don't Google it, trust me), watched the Black Mirror episode with the time-dilated slave cookies, started reading [Superintelligence](https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies), etc.
 
-On April 29, at the height of my fascination and existential dread, Google Deepmind publishes [Flamingo](https://arxiv.org/abs/2204.14198), an image description AI that uses Google's new [Transformer architecture](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/) they originally developed to improve Google Translate. The architecture is so powerful that Flamingo outperforms the state-of-the-art systems despite using three orders of magnitude less computing power and training data. I recognize the significance of this and spend weeks reading articles about it. I ramble about Flamingo and how 'advances in machine learning will revolutionize technology' to my all friends until they collectively decide that I'm crazy.
+On April 29, at the height of my fascination and existential dread, Google Deepmind publishes [Flamingo](https://arxiv.org/abs/2204.14198), an image description AI that uses Google's new [Transformer architecture](https://research.google/posts/transformer-a-novel-neural-network-architecture-for-language-understanding/) they originally developed to improve Google Translate. The architecture is so powerful that Flamingo outperforms the state-of-the-art systems despite using three orders of magnitude less computing power and training data. I recognize the significance of this and spend weeks reading articles about it. I ramble about Flamingo and how 'advances in machine learning will revolutionize technology' to my all friends until they collectively decide that I'm crazy.
 
 On November 30, a startup called OpenAI [releases ChatGPT](https://openai.com/index/chatgpt/), a chatbot based on a first-of-its-kind LLM that uses Google's Transformer architecture. ChatGPT takes the world by storm as tens of millions of people have the same "this is a computer; there isn't a human on the other side" moment as they ask ChatGPT to convert its last response to a limerick. I smugly read news articles about how 'advances in machine learning have revolutionized technology' aloud to my friends.
 
-Fast forward to 2025 where students are using AI to pass law school and Google is [using AI to communicate with dolphins](https://blog.google/technology/ai/dolphingemma/).
+Fast forward to 2025 where students are using AI to pass law school and Google is [using AI to communicate with dolphins](https://posts/.google/technology/ai/dolphingemma/).
 
 I got into AI about 7 months before the rest of the world did. This foresight made me seem prophetic, but I hadn't been in the field long enough to understand how far chatbots had come. In December of 2024, I decided to remedy that and went on a quest to learn as much as I could about early chatbots.
 
@@ -29,7 +29,7 @@ Behind the scenes, ELIZA was a fairly rudimentary pattern-matching algorithm wit
 
 Despite its basic implementation, ELIZA proved to be quite convincing. Even when Weizenbaum explained ELIZA's protocolic reasoning, many users insisted that it was intelligent and understood what they were telling it. Reportedly, Weizenbaum's secretary insisted that he leave the room so that she could speak privately with ELIZA. The word Weizenbaum chose to describe people's reaction to his program was "delusion".
 
-If you'd like to try it out, I made an [ELIZA emulator](https://colourlessspearmint.github.io/blog/eliza) that runs on modern computers.
+If you'd like to try it out, I made an [ELIZA emulator](/posts/eliza) that runs on modern computers.
 
 ## [PARRY](https://en.wikipedia.org/wiki/PARRY) (1972)
 

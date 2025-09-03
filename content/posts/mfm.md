@@ -7,27 +7,27 @@ description: a specification of Mint Flavoured Markdown, a custom markdown flavo
 
 ![The Mint Flavoured Markdown logo, a capital 'M' covered in minty vegetation and adjacent to an arrow pointing down. Designed by Imagen 4, edited by Ethan Marks](~/mfm-banner.webp)
 
-***EDIT (2025-07-10):** I've decommissioned MFM from this site's build step. I'm using [Hugo](https://gohugo.io/) now. You can read more about my reasoning [here](/blog/hugoswitch).*
+***EDIT (2025-07-10):** I've decommissioned MFM from this site's build step. I'm using [Hugo](https://gohugo.io/) now. You can read more about my reasoning [here](/posts/hugoswitch).*
 
-When I started designing and prototyping my [personal website](/blog/personalwebsite), I was very much inspired by [this blog post](https://leanrada.com/notes/vanilla-web-rewrite/) by [Lean Rada](https://leanrada.com/). Basically, it advocates for authoring blog content in pure [HTML](https://en.wikipedia.org/wiki/HTML), rather than using a [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) like [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)) that converts [Markdown](https://en.wikipedia.org/wiki/Markdown) into HTML.
+When I started designing and prototyping my [personal website](/posts/personalwebsite), I was very much inspired by [this blog post](https://leanrada.com/notes/vanilla-web-rewrite/) by [Lean Rada](https://leanrada.com/). Basically, it advocates for authoring blog content in pure [HTML](https://en.wikipedia.org/wiki/HTML), rather than using a [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) like [Jekyll](https://en.wikipedia.org/wiki/Jekyll_(software)) that converts [Markdown](https://en.wikipedia.org/wiki/Markdown) into HTML.
 
-This made a lot of sense to me, as I really didn't want to have to learn Jekyll (in fact, I wanted to [Hyde](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde) from it entirely). So for a couple months, I authored each and every blog post in pure HTML.
+This made a lot of sense to me, as I really didn't want to have to learn Jekyll (in fact, I wanted to [Hyde](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde) from it entirely). So for a couple months, I authored each and every post in pure HTML.
 
-As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each blog post's file had to contain a bunch of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) that was the same on every page, like where the site [favicon](https://en.wikipedia.org/wiki/Favicon) is located. It also meant that I had to do a bunch of things manually, like adding new blog posts to their aggregator page (there were three: Curios, Figments, and Elsewise; nowadays I use [tags](/tag) for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious blog-authoring tasks.
+As I quickly learned, the problem with this approach is that it's extremely verbose. Rather than just containing the words I wanted to say, each post's file had to contain a bunch of [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) that was the same on every page, like where the site [favicon](https://en.wikipedia.org/wiki/Favicon) is located. It also meant that I had to do a bunch of things manually, like adding new posts to their aggregator page (there were three: Curios, Figments, and Elsewise; nowadays I use [tags](/tag) for this). I dislike doing things manually (one of my early programming projects, when I was 11 years old, was a quadratic formula calculator that I built because I loved math but hated manual arithmetic), and it really bugged me that I couldn't automate the tedious post-authoring tasks.
 
-To solve this, On June 6th, I [made my own SSG](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/commit/81e2247227d1a9d3dddd4f9173da3d1602e9e405) that parsed Markdown into HTML. This was a much better solution, and it's allowed me to add a bunch more functionality to my site, like tags, by expanding the SSG over the past three weeks. 
+To solve this, On June 6th, I [made my own SSG](https://github.com/ethmarks/ethmarks.github.io/commit/81e2247227d1a9d3dddd4f9173da3d1602e9e405) that parsed Markdown into HTML. This was a much better solution, and it's allowed me to add a bunch more functionality to my site, like tags, by expanding the SSG over the past three weeks.
 
-The only problem was that a few of my blog posts used elements that didn't exist in Markdown, like image comparison sliders, videos, and poems. My solution was to just [embed HTML](https://css-tricks.com/embedded-content-in-markdown/) into the markdown files. This *worked*, but it felt like a messy compromise that kind of defeated the point of using Markdown in the first place. I decided that I should use another Markdown flavour (which is the technical term, by the way) that supported the features I wanted natively.
+The only problem was that a few of my posts used elements that didn't exist in Markdown, like image comparison sliders, videos, and poems. My solution was to just [embed HTML](https://css-tricks.com/embedded-content-in-markdown/) into the markdown files. This *worked*, but it felt like a messy compromise that kind of defeated the point of using Markdown in the first place. I decided that I should use another Markdown flavour (which is the technical term, by the way) that supported the features I wanted natively.
 
 There are a few different flavours of Markdown. The default flavour is [CommonMark](https://commonmark.org/). Probably the most-used flavour is [Github Flavored Markdown](https://github.github.com/gfm/) (GFM). There's also [ExtraMark](https://github.com/vimtaai/extramark), [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), and [lots of others](https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f). None of these have support for iframes or centered text, so I knew I had to make my own flavour.
 
 ## MFM
 
-I present: **Mint Flavoured Markdown**. It's a superset of CommonMark, but with a few extra features specifically tailored to my use case. 
+I present: **Mint Flavoured Markdown**. It's a superset of CommonMark, but with a few extra features specifically tailored to my use case.
 
-The name is obviously a reference to my username, ColourlessSpearmint. It would probably make more sense to call it "Spearmint Flavoured Markdown", but then it wouldn't be evocative of toothpaste, which is a critical feature in software design. Also it uses the British English spelling because I'm the one who developed it and I prefer that spelling and you can spell it however you like in *your* Markdown flavour.
+The name is obviously a reference to my favorite colour: spearmint teal. It would probably make more sense to call it "Spearmint Flavoured Markdown", but then it wouldn't be evocative of toothpaste, which is a critical feature in software design. Also it uses the British English spelling because that's the spelling that I prefer.
 
-I'm pretty sure that I'll be adding more features at some point in the future, so I'll be a responsible developer and use versioning. This blog post was first published on June 30, coinciding exactly with the release of MFM v1. I'll edit this post if I release a new version.
+I'm pretty sure that I'll be adding more features at some point in the future, so I'll be a responsible developer and use versioning. This post was first published on June 30, coinciding exactly with the release of MFM v1. I'll edit this post if I release a new version.
 
 ## MFM v1
 
@@ -38,19 +38,19 @@ I'm pretty sure that I'll be adding more features at some point in the future, s
 For example, the following Markdown...
 
 ```markdown
-![[Test]](https://colourlessspearmint.github.io)
+![[Test]](https://ethmarks.github.io)
 ```
 
 ...parses into the following HTML.
 
 ```html
-<iframe 
-    scrolling="no" 
-    title="Test" 
-    src="https://colourlessspearmint.github.io" 
-    frameborder="no" 
-    loading="lazy" 
-    allowtransparency="true" 
+<iframe
+    scrolling="no"
+    title="Test"
+    src="https://ethmarks.github.io"
+    frameborder="no"
+    loading="lazy"
+    allowtransparency="true"
     allowfullscreen="true">
 </iframe>
 ```
@@ -72,15 +72,15 @@ If the file extension of the media src is an [MP4](https://en.wikipedia.org/wiki
 The default behavior is for it to be parsed into a video element that does not loop, is not muted, and requires user input to start playback. For example, the following Markdown...
 
 ```markdown
-![Test](https://colourlessspearmint.github.io/media/example.webm)
+![Test](https://ethmarks.github.io/media/example.webm)
 ```
 
 ...parses into the following HTML.
 
 ```html
-<video 
-    class="video" 
-    src="https://colourlessspearmint.github.io/media/example.webm" 
+<video
+    class="video"
+    src="https://ethmarks.github.io/media/example.webm"
     controls
     alt="Test">
 </video>
@@ -91,15 +91,15 @@ The default behavior is for it to be parsed into a video element that does not l
 The MFM animation syntax is an override of the video syntax. The difference is that the text in the square brackets is prefixed with "GIF ". The "GIF" prefix will be removed from the final alt text. It is then parsed into a video element that loops, is muted, and autoplays. For example, the following Markdown...
 
 ```markdown
-![GIF Test](https://colourlessspearmint.github.io/media/example.webm)
+![GIF Test](https://ethmarks.github.io/media/example.webm)
 ```
 
 ...parses into the following HTML.
 
 ```html
-<video 
-    class="gif" 
-    src="https://colourlessspearmint.github.io/media/example.webm" 
+<video
+    class="gif"
+    src="https://ethmarks.github.io/media/example.webm"
     autoplay
     loop
     muted
@@ -121,12 +121,12 @@ In MFM, a media element is parsed into a [YouTube embedded player](https://devel
 ...parses into the following HTML.
 
 ```html
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/hS_AXRRnIzM" 
-    frameborder="0" 
-    allow="autoplay; encrypted-media" 
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/hS_AXRRnIzM"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
     allowfullscreen>
 </iframe>
 ```
@@ -174,6 +174,6 @@ blockquote.centered-blockquote {
 
 ## Conclusion
 
-Mint Flavored Markdown is my first custom specification, and it's already proven to be quite useful in making my blog posts more concise. I don't honestly expect anybody else to use MFM, but maybe some of its syntax could be of inspiration. It goes without saying that you can use and adapt MFM however you like.
+Mint Flavored Markdown is my first custom specification, and it's already proven to be quite useful in making my posts more concise. I don't honestly expect anybody else to use MFM, but maybe some of its syntax could be of inspiration. It goes without saying that you can use and adapt MFM however you like.
 
 ~Ethan

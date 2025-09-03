@@ -3,7 +3,7 @@ title: Thessa
 date: 2025-05-21
 tags: [projects, programming, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
-link: https://colourlessspearmint.github.io/thessa
+link: https://ethmarks.github.io/thessa
 link_name: Thessa Webpage
 link_icon: link
 ---
@@ -20,7 +20,7 @@ Yesterday (May 21, 2025), I decided to make a web interface for my custom-instru
 
 ## Usage
 
-1. **Go to Thessa webpage**: [https://colourlessspearmint.github.io/thessa](https://colourlessspearmint.github.io/thessa)
+1. **Go to Thessa webpage**: [https://ethmarks.github.io/thessa](https://ethmarks.github.io/thessa)
 2. **Set Gemini API key**: Thessa requires an API key to function. You can acquire an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 3. **Input a Word**: This is the word that Thessa wil synonymize. Any word will do.
 4. **Press the Generate Button**: Thessa will take your word, construct a prompt, and send it to Gemini.
