@@ -18,25 +18,61 @@ I decided that it would be more interesting to start from scratch, so I designed
 
 ## Build
 
-### Hugo
+This site uses [Hugo](/blog/hugoswitch) to render my [Markdown](https://en.wikipedia.org/wiki/Markdown) content to my [HTML](https://en.wikipedia.org/wiki/HTML) templates. I also use Hugo for things like [asset minification](https://gohugo.io/functions/resources/minify/) and [Sass transpiling](https://gohugo.io/hugo-pipes/transpile-sass-to-css/). I love Hugo because it's feature-rich, extremely fast (it takes less than a tenth of a second for a full build), and does exactly what I want it to.
 
-This site is built using [Hugo](https://gohugo.io/), a [static site generator](https://en.wikipedia.org/wiki/Static_site_generator) that renders [Markdown](https://en.wikipedia.org/wiki/Markdown) text (like this blog post) to [HTML](https://en.wikipedia.org/wiki/HTML) templates. Hugo also handles things like [asset minification](https://gohugo.io/functions/resources/minify/) and [Sass transpiling](https://gohugo.io/hugo-pipes/transpile-sass-to-css/).
+### History
 
-Before I [switched to Hugo](/blog/hugoswitch), this site used [build.py](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was a mostly functional solution, but it was slow, complex, and nowhere near as powerful as Hugo.
+In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few blog posts like this.
 
-Before build.py, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few blog posts like this.
+On June 6, 2025, I switched to [build.py](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
 
-### GitHub Pages
+## Hosting
 
 ![A screenshot of the GitHub Actions tab, showing a successful job titled 'Deploy Hugo site to Pages'. The job took 28 seconds. The job has a build step and a deploy step. The job produced a 13.4 megabyte artifact titled 'github-pages'.](~/gh_pages_workflow.webp)
 
-This site is hosted on [GitHub Pages](https://pages.github.com/), a free service provided by GitHub that hosts static sites. It's why the site url includes ".github.io". The full GitHub Action I used to render the site and deploy to GitHub Pages is available [here](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/.github/workflows/hugo.yaml). GitHub Pages is convenient for me because I'm already using GitHub for source control. [Neocities](https://neocities.org/) would probably have been my second choice if I couldn't use GitHub Pages.
+To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ColourlessSpearmint/colourlessspearmint.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
 
 ## Styling
 
+My site has a very specific aesthetic that I find quite pleasing. The aesthetic is the culmination of my [spearmint colour palette](#colour-palette), modern [typography](#typography), and careful use of [effects](#special-effects), all brought together with thousands of lines of [Sass](#sass) code.
+
+### Sass
+
 This site is styled with [Sass](https://en.wikipedia.org/wiki/Sass_(style_sheet_language)), a CSS preprocessor that adds useful features to CSS, like [mixins](https://sass-lang.com/documentation/at-rules/mixin/), [variables](https://sass-lang.com/documentation/variables/), and [build-time imports](https://sass-lang.com/documentation/at-rules/import/).
 
-This site's Sass is transpiled using [LibSass](https://sass-lang.com/libsass/). LibSass is an old Sass transpiler that's been deprecated since 2020. The only reason I use LibSass is that I couldn't figure out how to set Hugo up with [Dart Sass](https://sass-lang.com/dart-sass/) (the modern and recommended transpiler), as it kept causing timeout errors that were inconsistent and very difficult to debug. I eventually just gave up and switched to the lightning-fast and consistent LibSass. This means that I can't use any of the new Dart Sass features like [@use](https://sass-lang.com/documentation/at-rules/use/), so I use [@import](https://sass-lang.com/documentation/at-rules/import/) instead.
+This site's Sass is transpiled using [LibSass](https://sass-lang.com/libsass/). LibSass is an old Sass transpiler that's been deprecated since 2020. The only reason I use LibSass is that I was having trouble setting Hugo up with [Dart Sass](https://sass-lang.com/dart-sass/) (the modern and recommended transpiler), because it kept causing timeout errors that were inconsistent and very difficult to debug. I eventually just gave up and switched to LibSass. This means that I can't use any of the new Dart Sass features like [@use](https://sass-lang.com/documentation/at-rules/use/), so I use [@import](https://sass-lang.com/documentation/at-rules/import/) instead.
+
+Every page layout has its own Sass file that imports the modules that page needs. For example, here's the annotated Sass file for [my blog page](/blog).
+
+```scss
+/* Import global styles used by every page */
+/* This includes things like fonts, the header, and the backdrop */
+@import 'global';
+
+/* Import the post-link component */
+@import 'components/post-link';
+
+/* Import the post-tag component */
+@import 'components/post-tags';
+
+/* Import the random blog button component */
+@import 'components/random-blog-btn';
+```
+
+These Sass files are then transpiled into normal CSS and imported into the page using my custom `load-assets` [partial](https://gohugo.io/functions/partials/include/) that allows me to just input a list of assets, and have the partial automatically generate the HTML imports. For example, here's the code that the blog page uses.
+
+```go-html-template
+{{ define "resources" }}
+{{ partial "load-assets.html" (slice "css/posts.scss" "js/components/randomblog.js") }}
+{{ end }}
+```
+
+And here's the HTML that the partial generates.
+
+```html
+<link rel="stylesheet" href="/css/posts.min.css" />
+<script src="/js/components/randomblog.min.js" defer></script>
+```
 
 ### Responsive Design
 
@@ -72,9 +108,9 @@ As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://deve
 [![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-08-31.webp)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fcolourlessspearmint.github.io%2F)
 
 My site's performance is largely due to it being lightweight and carefully optimized.
-- All of my site's content is present in the HTML. Unlike some sites that use [JSX](https://react.dev/learn/writing-markup-with-jsx) and [client-side rendering](https://developer.mozilla.org/en-US/docs/Glossary/CSR) to dynamically [hydrate](https://en.wikipedia.org/wiki/Hydration_(web_development)) their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
-- Each page on my site only loads the resources that it needs. This was a pain to set up with Hugo, but the result is that each page layout has a list of resources that it uses, and Hugo automatically generates a layout-specific asset for the page that only includes the necessary styles or scripts. This minimizes the data that needs to be downloaded, uses less cellular data, and allows the page to load faster.
-- The images, videos, and animations on my website use the [WebP](https://en.wikipedia.org/wiki/WebP) and [WebM](https://en.wikipedia.org/wiki/WebM) formats, which allows them to load faster and use less data.
+- **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use [JSX](https://react.dev/learn/writing-markup-with-jsx) and [client-side rendering](https://developer.mozilla.org/en-US/docs/Glossary/CSR) to dynamically [hydrate](https://en.wikipedia.org/wiki/Hydration_(web_development)) their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
+- **Optimized CSS and JS**: Each page on my site only loads the resources that it needs, and the resources that it does import are minified. I used my custom `load-assets` partial to automate this process slightly. I discussed `load-assets` in more detail in the [Sass](#sass) section. This per-page approach minimizes the data that needs to be downloaded and allows the page to load faster.
+- **Optimized Images and Videos**: The images, videos, and animations on my website use the [WebP](https://en.wikipedia.org/wiki/WebP) and [WebM](https://en.wikipedia.org/wiki/WebM) formats, which allows them to load faster and use less data.
 
 ## Privacy
 
@@ -86,9 +122,9 @@ This site is designed to be accessible to as many users as possible. I've done m
 
 ## Authoring
 
-Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) for things like iFrames.
+Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) for things like iFrames, but I mostly stick with plain Markdown syntax.
 
-I use the [Zed editor](~/switchingtozed) for all of my coding and most of my writing, but I write the longer and more heavily-researched posts in Obsidian.
+I use the [Zed editor](~/switchingtozed) for all of my coding and most of my post writing, but I write the longer and more heavily-researched posts in [Obsidian](https://obsidian.md/).
 
 I use [Hugo's live server](https://gohugo.io/commands/hugo_server/) to instantly (I've never seen it take longer than 100 milliseconds for a refresh) render the site locally so that I can see the changes I make in real time.
 
