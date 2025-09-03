@@ -5,7 +5,7 @@ tags: []
 description: An explanation of my username, ColourlessSpearmint
 ---
 
-This site's URL is ["ethmarks.github.io"](https://ethmarks.github.io/). The ".github.io" part is because it's hosted via [GitHub Pages](https://pages.github.com/), and the "colourlessspearmint" comes from my username, [ColourlessSpearmint](https://github.com/ColourlessSpearmint).
+This site's URL is ["ethmarks.github.io"](https://ethmarks.github.io/). The ".github.io" part is because it's hosted via [GitHub Pages](https://pages.github.com/), and the "colourlessspearmint" comes from my username, [ColourlessSpearmint](https://github.com/ethmarks).
 
 My username is primarily a reference to a novel called [*There Is No Antimemetics Division*](https://qntm.org/scp) by [Sam Hughes](https://www.goodreads.com/author/show/8352985.Sam_Hughes), one of my favorite authors. One of the chapters is titled "[CASE COLOURLESS GREEN](https://scp-wiki.wikidot.com/case-colourless-green)". I thought that sounded interesting and [oxymoronic](https://en.wiktionary.org/wiki/oxymoron), so I decided to shamelessly steal it.
 

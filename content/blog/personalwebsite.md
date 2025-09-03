@@ -3,7 +3,7 @@ title: Personal Website
 date: 2025-05-14
 tags: [projects, programming, webdev, personal website]
 description: The website you're reading right now
-link: https://github.com/ColourlessSpearmint/ethmarks.github.io
+link: https://github.com/ethmarks/ethmarks.github.io
 link_name: GitHub Repo
 link_icon: github
 ---
@@ -24,13 +24,13 @@ This site uses [Hugo](/blog/hugoswitch) to render my [Markdown](https://en.wikip
 
 In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few blog posts like this.
 
-On June 6, 2025, I switched to [build.py](https://github.com/ColourlessSpearmint/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
+On June 6, 2025, I switched to [build.py](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/blog/hugoswitch).
 
 ## Hosting
 
 ![A screenshot of the GitHub Actions tab, showing a successful job titled 'Deploy Hugo site to Pages'. The job took 28 seconds. The job has a build step and a deploy step. The job produced a 13.4 megabyte artifact titled 'github-pages'.](~/gh_pages_workflow.webp)
 
-To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ColourlessSpearmint/ethmarks.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
+To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ethmarks/ethmarks.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
 
 ## Styling
 

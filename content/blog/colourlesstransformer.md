@@ -3,7 +3,7 @@ title: ColourlessTransformer
 date: 2024-12-22
 tags: [projects, programming, ai, webdev, automation]
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
-link: https://github.com/ColourlessSpearmint/ColourlessTransformer
+link: https://github.com/ethmarks/ColourlessTransformer
 link_name: GitHub Repo
 link_icon: github
 ---
@@ -32,7 +32,7 @@ This was my first time working with [Streamlit](https://streamlit.io/). I origin
 
 ## Usage
 
-If you want to try this out on your own, follow the [instructions in the README](https://github.com/ColourlessSpearmint/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and some familiarity with the terminal.
+If you want to try this out on your own, follow the [instructions in the README](https://github.com/ethmarks/ColourlessTransformer?tab=readme-ov-file#usage). You'll need Git, Python, a GPU, and some familiarity with the terminal.
 
 ## Conclusion
 
