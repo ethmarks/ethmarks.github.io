@@ -55,15 +55,15 @@ Every page layout has its own Sass file that imports the modules that page needs
 /* Import the post-tag component */
 @import 'components/post-tags';
 
-/* Import the random blog button component */
-@import 'components/random-blog-btn';
+/* Import the random post button component */
+@import 'components/random-post-btn';
 ```
 
 These Sass files are then transpiled into normal CSS and imported into the page using my custom `load-assets` [partial](https://gohugo.io/functions/partials/include/) that allows me to just input a list of assets, and have the partial automatically generate the HTML imports. For example, here's the code that the posts page uses.
 
 ```go-html-template
 {{ define "resources" }}
-{{ partial "load-assets.html" (slice "css/posts.scss" "js/components/randomblog.js") }}
+{{ partial "load-assets.html" (slice "css/posts.scss" "js/components/randompost.js") }}
 {{ end }}
 ```
 
@@ -71,7 +71,7 @@ And here's the HTML that the partial generates.
 
 ```html
 <link rel="stylesheet" href="/css/posts.min.css" />
-<script src="/js/components/randomblog.min.js" defer></script>
+<script src="/js/components/randompost.min.js" defer></script>
 ```
 
 ### Responsive Design

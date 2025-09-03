@@ -1,5 +1,5 @@
 {{ define "resources" }}
-{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randomblog.js") -}}
+{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randompost.js") -}}
 {{ end }}
 
 {{ define "main" }}
@@ -12,11 +12,11 @@
         <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
     </div>
 
-    <div class="random-blog-btn-container animated">
+    <div class="random-post-btn-container animated">
         <a
             href="#"
             id="random-post-link"
-            class="random-blog-btn"
+            class="random-post-btn"
             title="Go to a random post"
         >
             🎲 Random Post
