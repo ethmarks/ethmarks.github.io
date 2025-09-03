@@ -102,7 +102,7 @@
 (function handleBirthdayMode() {
   window.addEventListener('DOMContentLoaded', function () {
     const today = new Date();
-    if (today.getMonth() === 8 && today.getDate() === 3) { // September 13th
+    if (today.getMonth() === 8 && today.getDate() === 13) { // September 13th
       const header = document.querySelector('header');
       const title = header.querySelector('#title');
 
