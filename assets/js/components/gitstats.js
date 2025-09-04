@@ -8,31 +8,14 @@ async function getGitStats(username) {
 
         const repos = await reposResponse.json();
 
-        // Use Promise.all to make requests in parallel
-        const commitCounts = await Promise.all(
-            repos.map(async (repo) => {
-                try {
-                    const response = await fetch(`https://api.github.com/repos/${username}/${repo.name}/commits?author=${username}&per_page=1`);
+        const commitsResponse = await fetch(`https://api.github.com/search/commits?q=author:${username}&per_page=1`);
 
-                    if (response.ok) {
-                        const linkHeader = response.headers.get('link');
-                        if (linkHeader) {
-                            const match = linkHeader.match(/page=(\d+)>; rel="last"/);
-                            return match ? parseInt(match[1]) : 1;
-                        } else {
-                            const commits = await response.json();
-                            return commits.length;
-                        }
-                    }
-                    return 0;
-                } catch (error) {
-                    console.warn(`Failed to fetch commits for ${repo.name}:`, error);
-                    return 0;
-                }
-            })
-        );
+        if (!commitsResponse.ok) {
+            throw new Error(`Failed to fetch commits: ${commitsResponse.status}`);
+        }
 
-        const totalCommits = commitCounts.reduce((sum, count) => sum + count, 0);
+        const commitsData = await commitsResponse.json();
+        const totalCommits = commitsData.total_count;
 
         return {
             commitCount: totalCommits,
