@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 {{ partial "metadata.html" . -}}
-{{ partial "font-preload.html" . }}
-{{- partial "publish-all-media.html" . -}}
+{{- block "resources" . }}{{ end }}
 {{- block "default-resources" . -}}
 {{- partial "load-assets.html" (slice "js/common.sync.js" "js/vendor/quicklink.async.js") -}}
 {{- end -}}
-{{- block "resources" . }}{{ end }}
+{{ partial "font-preload.html" . }}
 </head>
 <body>
 {{ partial "header.html" . }}
@@ -18,3 +17,4 @@
 {{ partial "footer.html" . }}
 </body>
 </html>
+{{- partial "publish-all-media.html" . -}}
