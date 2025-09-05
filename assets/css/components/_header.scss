@@ -9,7 +9,7 @@ header {
     max-width: 1000px;
     padding: 10px 15px;
     background: rgba(30, 30, 30, 0.2);
-    border: var(--border-standard);
+    border: $border-standard;
     border-radius: 40px;
     backdrop-filter: blur(20px) saturate(0.8);
     display: flex;
@@ -71,7 +71,7 @@ header {
         a {
             background: rgba(60, 60, 60, 0.1);
             color: $color-text;
-            border: 2px solid rgba(255, 255, 255, 0.03);
+            border: $border-standard;
             border-radius: 20px;
             padding: 6px 12px;
             font-family: var(--font-secondary);

@@ -124,7 +124,7 @@ main {
                     cursor: pointer;
                     transition: border-color 0.2s, box-shadow 0.3s;
                     text-align: center;
-                    border: 2px solid rgba(255, 255, 255, 0.08);
+                    border: $border-standard-2px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;

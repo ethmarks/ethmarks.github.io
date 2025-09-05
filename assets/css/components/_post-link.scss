@@ -8,7 +8,7 @@
     background: var(--color-table-bg);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: var(--border-standard);
+    border: $border-standard;
     text-decoration: none;
     color: $color-text;
     transition: all 0.3s ease;

@@ -8,7 +8,7 @@ table {
     border-radius: var(--radius-lg);
     background: var(--color-table-bg-zebra);
     box-shadow: var(--shadow-table);
-    border: var(--border-standard);
+    border: $border-standard;
     transition: var(--transition-transform-shadow);
     overflow: hidden;
 
@@ -76,7 +76,7 @@ table {
 
     td {
         padding: var(--spacing-md) var(--spacing-lg);
-        border-bottom: var(--border-light);
+        border-bottom: $border-light;
         transition: var(--transition-background);
     }
 }

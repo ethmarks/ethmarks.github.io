@@ -10,7 +10,7 @@ pre {
     color: white;
     padding: 18px;
     border-radius: var(--radius-xl);
-    border: var(--border-standard);
+    border: $border-standard;
     box-shadow: var(--shadow-table);
     transition: var(--transition-transform-shadow);
 
@@ -32,7 +32,7 @@ pre {
 
 code {
     padding: 0.1em 0.3em;
-    border: var(--border-standard);
+    border: $border-standard;
     border-radius: var(--radius-md);
     background-color: var(--color-snippet-bg);
     font-family: var(--font-monospace);

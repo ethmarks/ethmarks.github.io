@@ -1,6 +1,7 @@
 @import 'base/mixins';
 
 $body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), $color-background;
+$color-article-bg: rgb(30, 30, 30);
 
 html {
     font-size: 100%;
@@ -43,14 +44,14 @@ main {
 }
 
 article {
+    background: $color-article-bg;
     margin: var(--article-margin-top) 0 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--color-article-bg);
     border-radius: var(--radius-xl);
-    border: var(--border-standard);
+    border: $border-standard;
     transform: translateY(0);
     transition: var(--transition-transform-shadow);
     overflow-x: hidden;
