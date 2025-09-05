@@ -55,7 +55,7 @@ table {
         &:hover td {
             @media (pointer: fine) {
                 background-color: var(--color-table-row-hover);
-                color: var(--color-text);
+                color: $color-text;
             }
         }
     }
@@ -69,7 +69,7 @@ table {
         font-family: var(--font-secondary);
         font-weight: var(--font-weight-bold);
         padding: var(--spacing-md) var(--spacing-lg);
-        color: var(--color-accent);
+        color: $color-accent;
         text-transform: uppercase;
         font-size: var(--font-size-sm);
     }

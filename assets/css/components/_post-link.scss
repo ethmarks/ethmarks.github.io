@@ -10,7 +10,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: var(--border-standard);
     text-decoration: none;
-    color: var(--color-text);
+    color: $color-text;
     transition: all 0.3s ease;
     width: 100%;
     box-sizing: border-box;
@@ -47,7 +47,7 @@
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 
         & .title {
-            color: var(--color-accent);
+            color: $color-accent;
         }
     }
 
@@ -74,7 +74,7 @@
 
     & .tag {
         background: rgba(143, 223, 212, 0.15);
-        color: var(--color-accent);
+        color: $color-accent;
         font-family: var(--font-primary);
         font-size: 0.8rem;
         font-weight: 600;
@@ -95,7 +95,7 @@
         font-size: 1.1rem;
         font-weight: 700;
         display: block;
-        color: var(--color-text);
+        color: $color-text;
         margin: 0;
         transition: color 0.3s ease;
     }
@@ -103,7 +103,7 @@
     & .description {
         font-family: var(--font-primary);
         font-size: 0.9rem;
-        color: var(--color-text-secondary);
+        color: $color-text-secondary;
         line-height: 1.4;
         display: block;
         margin: 0.25rem 0 0 0;

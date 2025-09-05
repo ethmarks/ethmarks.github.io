@@ -11,8 +11,8 @@
         padding: 1.2em;
         background: linear-gradient(
             135deg,
-            var(--color-accent-light),
-            var(--color-accent)
+            $color-accent-light,
+            $color-accent
         );
         color: var(--color-button-text);
         font-weight: var(--font-weight-semibold);
@@ -55,7 +55,7 @@
         &:focus {
             transform: translateY(-3px);
             box-shadow: var(--shadow-button-hover);
-            color: var(--color-link-hover);
+            color: $color-link-hover;
 
             &::after {
                 transform: translateX(250%) skewX(-20deg);

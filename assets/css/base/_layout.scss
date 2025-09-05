@@ -16,7 +16,7 @@ body {
     background: $body-bg-gradient;
     line-height: 1.4;
     font-family: var(--font-primary);
-    color: var(--color-text);
+    color: $color-text;
     margin: 0;
     /* Reset default body margin */
     font-size: var(--font-size-base);

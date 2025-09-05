@@ -2,17 +2,20 @@
 
 $color-background: #121212;
 
+$color-accent: #8fdfd4;
+$color-accent-light: lighten($color-accent, 5%);
+$color-accent-dark: darken($color-accent, 10%);
+
+$color-text: white;
+$color-text-secondary: darken($color-text, 30%);
+$color-link: $color-accent-light;
+$color-link-hover: $color-text;
+
+$mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
+$mint-blend: mix($color-accent, $color-text, 75%);
+
 :root {
     /* Colors */
-    --color-text: white;
-    --color-text-secondary: #c0c0c0;
-    --color-accent: #8fdfd4;
-    --color-accent-medium: #8dd4cc;
-    --color-accent-light: #9ce3d9;
-    --color-accent-dark: #7db8b0;
-    --color-h1: #a8e4dd;
-    --color-link: var(--color-accent-light);
-    --color-link-hover: white;
     --color-article-bg: rgba(30, 30, 30);
     --color-article-border: rgba(255, 255, 255, 0.1);
     --color-article-border-light: rgba(255, 255, 255, 0.05);
@@ -26,9 +29,7 @@ $color-background: #121212;
     --color-accent-transparent-15: rgba(143, 223, 212, 0.15);
     --color-accent-transparent-20: rgba(143, 223, 212, 0.2);
     --color-button-text: #111;
-    --color-focus-outline: var(--color-accent-light);
-    --color-gradient-mint: linear-gradient(135deg, var(--color-accent), var(--color-text));
-    --color-gradient-mint-inverse: linear-gradient(135deg, var(--color-text), var(--color-accent));
+    --color-focus-outline: $color-accent-light;
 
     /* Fonts */
     --font-primary: "Nunito", sans-serif;
@@ -70,7 +71,7 @@ $color-background: #121212;
     --radius-round: 18px;
     --border-standard: 1px solid var(--color-article-border);
     --border-light: 1px solid var(--color-article-border-light);
-    --border-accent: 3px solid var(--color-accent);
+    --border-accent: 3px solid $color-accent;
 
     /* Shadows */
     --shadow-color-dark: rgba(0, 0, 0, 0.2);

@@ -33,7 +33,7 @@ h1 {
 
     @-moz-document url-prefix() {
         /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: var(--color-gradient-mint);
+        background: $mint-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

@@ -11,8 +11,8 @@
 
     & .random-post-btn {
         background: var(--color-accent-transparent-15);
-        color: var(--color-accent-dark);
-        border: 1px solid var(--color-accent-dark);
+        color: $color-accent;
+        border: 1px solid $color-accent;
         border-radius: var(--radius-round);
         padding: 0.5em 1.5em;
         font-size: 1.1rem;
@@ -28,11 +28,11 @@
         &:hover,
         &:focus {
             text-decoration: none;
-            background: var(--color-accent-dark);
-            color: var(--color-accent);
-            border-color: var(--color-accent);
+            background: $color-accent;
+            color: $color-accent;
+            border-color: $color-accent;
             box-shadow: none;
-            outline: 2px solid var(--color-accent-dark);
+            outline: 2px solid $color-accent;
         }
     }
 }

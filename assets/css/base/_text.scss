@@ -19,11 +19,11 @@ h1 {
     text-overflow: ellipsis;
     margin: 0 0 0 var(--frontmatter-margin-left);
     font-weight: var(--font-weight-bold);
-    color: var(--color-h1);
+    color: $mint-blend;
 
     @-moz-document url-prefix() {
         /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: var(--color-gradient-mint);
+        background: $mint-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -47,12 +47,12 @@ h4 {
 }
 
 a {
-    color: var(--color-link);
+    color: $color-link;
     text-decoration: none;
     transition: color var(--transition-duration-fast) var(--transition-timing);
 
     &:hover {
-        color: var(--color-link-hover);
+        color: $color-link-hover;
         text-decoration: underline;
     }
 
@@ -82,7 +82,7 @@ a {
             width: 3px;
             height: 100%;
             margin: 0 -1em 0;
-            background: var(--color-accent-dark);
+            background: $color-accent;
             border-radius: 2px;
             float: left;
         }
@@ -123,7 +123,7 @@ blockquote {
         width: 3px;
         height: 100%;
         margin: 0 -1em 0;
-        background: var(--color-accent-dark);
+        background: $color-accent;
         border-radius: 2px;
         float: left;
     }
@@ -153,7 +153,7 @@ ul {
 }
 
 .mint {
-    background: var(--color-gradient-mint);
+    background: $mint-gradient;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -164,5 +164,5 @@ ul {
     background: none;
     background-clip: none;
     -webkit-background-clip: none;
-    -webkit-text-fill-color: var(--color-text);
+    -webkit-text-fill-color: $color-text;
 }

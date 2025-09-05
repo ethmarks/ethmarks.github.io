@@ -21,7 +21,7 @@ footer {
     border-top: $footer-border;
     padding: $footer-padding-top $footer-padding-sides $footer-padding-bottom;
     box-sizing: border-box;
-    color: var(--color-text);
+    color: $color-text;
     z-index: 9999;
     transition: position 0.2s;
     position: fixed;
@@ -35,7 +35,7 @@ footer {
         font-size: var(--font-size-base);
 
         & a {
-            color: var(--color-text);
+            color: $color-text;
         }
 
         &#copyright {
