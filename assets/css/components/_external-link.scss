@@ -14,7 +14,7 @@
             $color-accent-light,
             $color-accent
         );
-        color: var(--color-button-text);
+        color: $color-background;
         font-weight: var(--font-weight-semibold);
         text-decoration: none;
         border-radius: var(--radius-xl);
@@ -72,7 +72,7 @@
         }
 
         &:focus-visible {
-            outline: 2px solid var(--color-focus-outline);
+            outline: 2px solid $color-focus-outline;
             outline-offset: 3px;
             box-shadow: var(--shadow-button-hover);
         }

@@ -57,7 +57,7 @@ a {
     }
 
     &:focus-visible {
-        outline: 2px solid var(--color-focus-outline);
+        outline: 2px solid $color-focus-outline;
         text-decoration: none;
     }
 

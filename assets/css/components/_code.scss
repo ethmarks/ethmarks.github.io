@@ -1,3 +1,5 @@
+$color-code-bg: #1f1f1f;
+
 pre {
     position: relative;
     font-family: var(--font-monospace);
@@ -6,7 +8,7 @@ pre {
     overflow-x: auto;
     display: block;
     line-height: 1.4;
-    background-color: var(--color-code-bg) !important;
+    background-color: $color-code-bg !important;
     color: white;
     padding: 18px;
     border-radius: var(--radius-xl);
@@ -34,7 +36,7 @@ code {
     padding: 0.1em 0.3em;
     border: $border-standard;
     border-radius: var(--radius-md);
-    background-color: var(--color-snippet-bg);
+    background-color: $color-code-bg;
     font-family: var(--font-monospace);
     font-weight: var(--font-weight-code);
     font-size: 1rem;

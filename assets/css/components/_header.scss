@@ -54,7 +54,7 @@ header {
         text-decoration: none;
 
         &:focus-visible {
-            outline: 2px solid var(--color-focus-outline, $color-accent);
+            outline: 2px solid $color-focus-outline;
             outline-offset: 2px;
         }
     }

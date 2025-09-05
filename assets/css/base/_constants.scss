@@ -9,11 +9,11 @@ $color-accent-transparent-10: rgba($color-accent, 0.10);
 $color-accent-transparent-15: rgba($color-accent, 0.15);
 $color-accent-transparent-20: rgba($color-accent, 0.20);
 
-
 $color-text: white;
 $color-text-secondary: darken($color-text, 30%);
 $color-link: $color-accent-light;
 $color-link-hover: $color-text;
+$color-focus-outline: $color-accent-light;
 
 $color-article: rgb(30, 30, 30);
 $color-panel: rgb(31, 31, 31);
@@ -43,12 +43,6 @@ $border-accent: border('accent', 1px);
 $border-accent-2px: border('accent', 2px);
 
 :root {
-    /* Colors */
-    --color-snippet-bg: #1f1f1f;
-    --color-code-bg: #1f1f1f;
-    --color-button-text: #111;
-    --color-focus-outline: $color-accent-light;
-
     /* Fonts */
     --font-primary: "Nunito", sans-serif;
     --font-secondary: "Sen", sans-serif;
