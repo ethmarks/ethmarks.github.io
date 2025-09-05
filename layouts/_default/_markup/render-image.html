@@ -34,7 +34,7 @@
     <video
         class="responsive gif {{ $verytall }}"
         src="{{ $src }}"
-        alt="{{ $alt_processed }}"
+        aria-label="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
         autoplay
         loop
@@ -45,7 +45,7 @@
     <video
         class="responsive video {{ $verytall }}"
         src="{{ $src }}"
-        alt="{{ $alt_processed }}"
+        aria-label="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
         controls
     ></video>
