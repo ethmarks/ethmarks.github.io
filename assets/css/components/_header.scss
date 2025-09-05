@@ -42,7 +42,7 @@ header {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: var(--font-secondary);
+        font-family: $font-secondary;
         font-size: clamp(1.1rem, 4vw, 2rem);
         flex-shrink: 1;
         white-space: nowrap;
@@ -74,7 +74,7 @@ header {
             border: $border-standard;
             border-radius: 20px;
             padding: 6px 12px;
-            font-family: var(--font-secondary);
+            font-family: $font-secondary;
             font-size: clamp(0.75rem, 3vw, 1rem);
             font-weight: var(--font-weight-light) !important;
             cursor: pointer;

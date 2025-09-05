@@ -42,11 +42,13 @@ $border-light-2px: border('light', 2px);
 $border-accent: border('accent', 1px);
 $border-accent-2px: border('accent', 2px);
 
+
+$font-primary: "Nunito", sans-serif;
+$font-secondary: "Sen", sans-serif;
+$font-monospace: "Fira Code", monospace;
+
 :root {
     /* Fonts */
-    --font-primary: "Nunito", sans-serif;
-    --font-secondary: "Sen", sans-serif;
-    --font-monospace: "Fira Code", monospace;
     --font-weight-light: 400;
     --font-weight-code: 400;
     --font-weight-normal: 400;

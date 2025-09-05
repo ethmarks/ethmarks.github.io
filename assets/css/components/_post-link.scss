@@ -75,7 +75,7 @@
     & .tag {
         background: rgba(143, 223, 212, 0.15);
         color: $color-accent;
-        font-family: var(--font-primary);
+        font-family: $font-primary;
         font-size: 0.8rem;
         font-weight: 600;
         border-radius: 999px;
@@ -91,7 +91,7 @@
     }
 
     & .title {
-        font-family: var(--font-secondary);
+        font-family: $font-secondary;
         font-size: 1.1rem;
         font-weight: 700;
         display: block;
@@ -101,7 +101,7 @@
     }
 
     & .description {
-        font-family: var(--font-primary);
+        font-family: $font-primary;
         font-size: 0.9rem;
         color: $color-text-secondary;
         line-height: 1.4;

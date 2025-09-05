@@ -13,7 +13,7 @@
 
     & .info {
         margin-bottom: var(--spacing-sm);
-        font-family: var(--font-secondary);
+        font-family: $font-secondary;
         font-size: 1.2rem;
         font-style: italic;
         color: $color-accent;

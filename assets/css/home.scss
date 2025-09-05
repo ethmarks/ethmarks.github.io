@@ -257,7 +257,7 @@ main {
             & .intro-heading {
                 font-weight: 700;
                 font-size: var(--intro-heading-size);
-                font-family: var(--font-monospace);
+                font-family: $font-monospace;
 
                 &.scramble {
                     will-change: contents;
