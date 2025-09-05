@@ -1,9 +1,9 @@
 @import 'base/mixins';
 
+$color-background: #121212;
+
 :root {
     /* Colors */
-    --color-background: #121212;
-    --color-footer: #eeeeee;
     --color-text: white;
     --color-text-secondary: #c0c0c0;
     --color-accent: #8fdfd4;
@@ -105,6 +105,5 @@
     }
 
     /* Misc */
-    --body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), var(--color-background);
     --child-animation-delay: 0s;
 }

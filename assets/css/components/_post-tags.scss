@@ -24,7 +24,7 @@
         &:hover,
         &:focus {
             background: var(--color-accent);
-            color: var(--color-background);
+            color: $color-background;
             border-color: var(--color-accent-light);
             text-decoration: none;
         }
