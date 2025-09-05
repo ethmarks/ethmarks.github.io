@@ -38,7 +38,7 @@ code {
     border-radius: var(--radius-md);
     background-color: $color-code-bg;
     font-family: $font-monospace;
-    font-weight: var(--font-weight-code);
+    font-weight: $font-weight-code;
     font-size: 1rem;
     white-space: pre;
     overflow-x: auto;

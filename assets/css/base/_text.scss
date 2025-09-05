@@ -1,6 +1,6 @@
 p,
 li {
-    font-weight: var(--font-weight-normal);
+    font-weight: $font-weight-normal;
     word-break: normal;
 }
 
@@ -18,7 +18,7 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 0 0 var(--frontmatter-margin-left);
-    font-weight: var(--font-weight-bold);
+    font-weight: $font-weight-bold;
     color: $mint-blend;
 
     @-moz-document url-prefix() {

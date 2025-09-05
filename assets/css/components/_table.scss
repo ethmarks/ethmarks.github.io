@@ -67,7 +67,7 @@ table {
 
     th {
         font-family: $font-secondary;
-        font-weight: var(--font-weight-bold);
+        font-weight: $font-weight-bold;
         padding: var(--spacing-md) var(--spacing-lg);
         color: $color-accent;
         text-transform: uppercase;

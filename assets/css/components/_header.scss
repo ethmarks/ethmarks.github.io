@@ -36,7 +36,7 @@ header {
     }
 
     #title {
-        font-weight: var(--font-weight-light) !important;
+        font-weight: $font-weight-light !important;
         display: inline-block;
         background: $mint-gradient;
         background-clip: text;
@@ -76,7 +76,7 @@ header {
             padding: 6px 12px;
             font-family: $font-secondary;
             font-size: clamp(0.75rem, 3vw, 1rem);
-            font-weight: var(--font-weight-light) !important;
+            font-weight: $font-weight-light !important;
             cursor: pointer;
             transition:
                 background-color 0.2s ease,

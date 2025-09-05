@@ -47,12 +47,13 @@ $font-primary: "Nunito", sans-serif;
 $font-secondary: "Sen", sans-serif;
 $font-monospace: "Fira Code", monospace;
 
+$font-weight-normal: 400;
+$font-weight-light: 300;
+$font-weight-bold: 600;
+$font-weight-code: 400;
+
 :root {
     /* Fonts */
-    --font-weight-light: 400;
-    --font-weight-code: 400;
-    --font-weight-normal: 400;
-    --font-weight-bold: 600;
     --font-size-base: 1.07rem;
     --font-size-sm: 0.9rem;
     --font-size-md: 1rem;
