@@ -1,15 +1,25 @@
 @import 'base/mixins';
 
+$footer-bg: rgba(255, 255, 255, 0.1);
+$footer-border-color: rgba(255, 255, 255, 0.18);
+$footer-border: 1px solid $footer-border-color;
+
+$footer-blur: 10px;
+
+$footer-padding-top: 10px;
+$footer-padding-sides: 30px;
+$footer-padding-bottom: 5px;
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: $footer-bg;
+    backdrop-filter: blur($footer-blur);
     transform: translate3d(0, 0, 0);
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 10px 30px 5px;
+    border-top: $footer-border;
+    padding: $footer-padding-top $footer-padding-sides $footer-padding-bottom;
     box-sizing: border-box;
     color: var(--color-text);
     z-index: 9999;
@@ -35,9 +45,8 @@ footer {
 
             @include notMobile {
                 position: absolute;
-                right: 30px;
-                left: 30px;
-                width: calc(100% - 60px);
+                left: 0;
+                right: 0;
                 text-align: center;
             }
         }
