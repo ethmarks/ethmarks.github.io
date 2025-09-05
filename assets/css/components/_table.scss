@@ -6,7 +6,7 @@ table {
     border-spacing: 0;
     margin: var(--spacing-xl) 0;
     border-radius: var(--radius-lg);
-    background: var(--color-table-bg-zebra);
+    background: $color-panel;
     box-shadow: var(--shadow-table);
     border: $border-standard;
     transition: var(--transition-transform-shadow);
@@ -44,17 +44,17 @@ table {
     }
 
     thead {
-        background: var(--color-table-header-bg);
+        background: $color-panel-dark;
     }
 
     tbody tr {
         &:nth-child(even) td {
-            background-color: var(--color-table-bg);
+            background-color: $color-panel-zebra;
         }
 
         &:hover td {
             @media (pointer: fine) {
-                background-color: var(--color-table-row-hover);
+                background-color: $color-panel-hover;
                 color: $color-text;
             }
         }

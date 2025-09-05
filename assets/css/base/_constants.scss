@@ -11,14 +11,20 @@ $color-text-secondary: darken($color-text, 30%);
 $color-link: $color-accent-light;
 $color-link-hover: $color-text;
 
-$color-border: rgba(white, 0.1);
-$color-border-light: transparentize($color-border, 0.5);
+$color-article: rgb(30, 30, 30);
+$color-panel: rgb(31, 31, 31);
+$color-panel-zebra: darken($color-panel, 1%);
+$color-panel-dark: darken($color-panel, 3%);
+$color-panel-hover: transparentize(lighten($color-panel, 7%), 0.5);
 
 $mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
 $mint-blend: mix($color-accent, $color-text, 75%);
 
+$color-border: white;
+$color-border-standard: rgba($color-border, 0.1);
+$color-border-light: rgba($color-border, 0.05);
 $border-colors: (
-  'standard': $color-border,
+  'standard': $color-border-standard,
   'light': $color-border-light,
   'accent': $color-accent
 );
@@ -34,13 +40,6 @@ $border-accent-2px: border('accent', 2px);
 
 :root {
     /* Colors */
-    --color-article-bg: rgba(30, 30, 30);
-    --color-article-border: rgba(255, 255, 255, 0.1);
-    --color-article-border-light: rgba(255, 255, 255, 0.05);
-    --color-table-header-bg: rgba(20, 20, 20, 0.8);
-    --color-table-bg: rgb(31, 31, 31);
-    --color-table-bg-zebra: rgb(29, 29, 29);
-    --color-table-row-hover: rgba(50, 50, 50, 0.5);
     --color-snippet-bg: #1f1f1f;
     --color-code-bg: #1f1f1f;
     --color-accent-transparent-10: rgba(143, 223, 212, 0.1);
