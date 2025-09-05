@@ -19,7 +19,7 @@ body {
     color: $color-text;
     margin: 0;
     /* Reset default body margin */
-    font-size: var(--font-size-base);
+    font-size: $font-size-base;
     overflow-wrap: break-word;
     background-attachment: fixed;
 

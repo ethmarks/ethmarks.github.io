@@ -32,7 +32,7 @@ footer {
     }
 
     & span {
-        font-size: var(--font-size-base);
+        font-size: $font-size-base;
 
         & a {
             color: $color-text;

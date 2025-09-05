@@ -52,16 +52,15 @@ $font-weight-light: 300;
 $font-weight-bold: 600;
 $font-weight-code: 400;
 
-:root {
-    /* Fonts */
-    --font-size-base: 1.07rem;
-    --font-size-sm: 0.9rem;
-    --font-size-md: 1rem;
-    --font-size-h1: clamp(1rem, 7vw, 3rem);
-    --font-size-h2: 1.6rem;
-    --font-size-h3: 1.4rem;
-    --font-size-h4: 1.2rem;
+$font-size-base: 1.07rem;
+$font-size-sm: 0.9rem;
+$font-size-md: 1rem;
+$font-size-h1: clamp(1rem, 7vw, 3rem);
+$font-size-h2: 1.6rem;
+$font-size-h3: 1.4rem;
+$font-size-h4: 1.2rem;
 
+:root {
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 0.75rem;
