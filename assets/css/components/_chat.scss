@@ -1,6 +1,10 @@
 $color-chat-sender-bg: #3a3a3a;
 $color-chat-recipient-bg: #124161;
 
+$chat-padding-y: 0.625rem;
+$chat-padding-x: 1rem;
+$chat-margin-bottom: 0.2rem;
+
 .chat {
     display: block;
     width: 100%;
@@ -8,10 +12,10 @@ $color-chat-recipient-bg: #124161;
 
     & p {
         clear: both;
-        padding: var(--chat-padding-y) var(--chat-padding-x);
+        padding: $chat-padding-y $chat-padding-x;
         box-shadow: var(--shadow-chat);
         margin-top: 0;
-        margin-bottom: var(--chat-margin-bottom);
+        margin-bottom: $chat-margin-bottom;
         max-width: 80%;
         word-wrap: break-word;
         line-height: 1.5;
