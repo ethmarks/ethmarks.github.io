@@ -5,6 +5,10 @@ $color-background: #121212;
 $color-accent: #8fdfd4;
 $color-accent-light: lighten($color-accent, 5%);
 $color-accent-dark: darken($color-accent, 10%);
+$color-accent-transparent-10: rgba($color-accent, 0.10);
+$color-accent-transparent-15: rgba($color-accent, 0.15);
+$color-accent-transparent-20: rgba($color-accent, 0.20);
+
 
 $color-text: white;
 $color-text-secondary: darken($color-text, 30%);
@@ -42,9 +46,6 @@ $border-accent-2px: border('accent', 2px);
     /* Colors */
     --color-snippet-bg: #1f1f1f;
     --color-code-bg: #1f1f1f;
-    --color-accent-transparent-10: rgba(143, 223, 212, 0.1);
-    --color-accent-transparent-15: rgba(143, 223, 212, 0.15);
-    --color-accent-transparent-20: rgba(143, 223, 212, 0.2);
     --color-button-text: #111;
     --color-focus-outline: $color-accent-light;
 

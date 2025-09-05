@@ -8,7 +8,7 @@
 
     & .post-tag {
         display: inline-block;
-        background: var(--color-accent-transparent-10);
+        background: $color-accent-transparent-10;
         color: $color-accent;
         border: $border-accent;
         border-radius: var(--radius-round);
