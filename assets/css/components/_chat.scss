@@ -25,8 +25,8 @@ $chat-margin-bottom: 0.2rem;
             /* Sender messages (left side) */
             float: left;
             background-color: $color-chat-sender-bg;
-            border-radius: var(--radius-round) var(--radius-round)
-                var(--radius-round) var(--radius-sm);
+            border-radius: $radius-round $radius-round
+                $radius-round $radius-sm;
             margin-right: auto;
             margin-left: 0;
         }
@@ -35,8 +35,8 @@ $chat-margin-bottom: 0.2rem;
             /* Recipient messages (right side) */
             float: right;
             background-color: $color-chat-recipient-bg;
-            border-radius: var(--radius-round) var(--radius-round)
-                var(--radius-sm) var(--radius-round);
+            border-radius: $radius-round $radius-round
+                $radius-sm $radius-round;
             margin-left: auto;
             margin-right: 0;
         }
@@ -47,7 +47,7 @@ $chat-margin-bottom: 0.2rem;
         /* Override global img max-height */
         height: auto;
         margin-top: $spacing-xs;
-        border-radius: var(--radius-md);
+        border-radius: $radius-md;
         display: block;
         box-shadow: none;
         border: none;

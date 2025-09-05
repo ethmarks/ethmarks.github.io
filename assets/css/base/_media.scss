@@ -18,7 +18,7 @@ figure {
     max-height: var(--max-media-height);
     width: auto;
     height: auto;
-    border-radius: var(--radius-xl);
+    border-radius: $radius-xl;
     border: $border-standard;
 
     &.media-verytall {

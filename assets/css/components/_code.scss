@@ -11,7 +11,7 @@ pre {
     background-color: $color-code-bg !important;
     color: white;
     padding: 18px;
-    border-radius: var(--radius-xl);
+    border-radius: $radius-xl;
     border: $border-standard;
     box-shadow: var(--shadow-table);
     transition: var(--transition-transform-shadow);
@@ -35,7 +35,7 @@ pre {
 code {
     padding: 0.1em 0.3em;
     border: $border-standard;
-    border-radius: var(--radius-md);
+    border-radius: $radius-md;
     background-color: $color-code-bg;
     font-family: $font-monospace;
     font-weight: $font-weight-code;

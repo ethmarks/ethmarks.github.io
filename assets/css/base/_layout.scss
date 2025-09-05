@@ -57,7 +57,7 @@ article {
     max-width: 100%;
     box-sizing: border-box;
     padding: $spacing-md $spacing-lg;
-    border-radius: var(--radius-xl);
+    border-radius: $radius-xl;
     border: $border-standard;
     transform: translateY(0);
     transition: var(--transition-transform-shadow);
@@ -70,7 +70,7 @@ article {
     }
 
     body.height-overflow & {
-        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        border-radius: $radius-xl $radius-xl 0 0;
         border-bottom: none;
     }
 
