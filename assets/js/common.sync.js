@@ -40,7 +40,7 @@
 
 (function handleMediaSizing() {
   function resizeMedia() {
-    document.querySelectorAll('img.content-media, video.content-media').forEach(function (el) {
+    document.querySelectorAll('.responsive').forEach(function (el) {
       let naturalWidth, naturalHeight;
 
       if (el.tagName.toLowerCase() === 'img') {

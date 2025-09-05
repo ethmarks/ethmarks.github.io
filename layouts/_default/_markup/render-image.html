@@ -32,7 +32,7 @@
     {{ if $is_video -}}
     {{- if $is_gif -}}
     <video
-        class="content-media gif {{ $verytall }}"
+        class="responsive gif {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
@@ -43,7 +43,7 @@
     ></video>
     {{- else -}}
     <video
-        class="content-media video {{ $verytall }}"
+        class="responsive video {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
@@ -52,7 +52,7 @@
     {{- end -}}
     {{- else -}}
     <img
-        class="content-media {{ $verytall }}"
+        class="responsive {{ $verytall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $width }}width="{{ $width }}"{{ end }}
