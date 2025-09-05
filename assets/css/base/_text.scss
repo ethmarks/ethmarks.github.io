@@ -102,7 +102,7 @@ a {
 
     ul {
         list-style: disc inside;
-        padding-left: var(--spacing-lg);
+        padding-left: $spacing-lg;
 
         & li {
             line-height: 1.6;
@@ -143,7 +143,7 @@ blockquote {
 
 ul {
     list-style: disc inside;
-    padding-left: var(--spacing-lg);
+    padding-left: $spacing-lg;
 
     & li {
         line-height: 1.6;

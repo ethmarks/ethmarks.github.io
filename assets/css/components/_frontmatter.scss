@@ -1,9 +1,11 @@
 @import 'base/mixins';
 
+$frontmatter-margin-left: $spacing-sm;
+
 .frontmatter {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 var(--frontmatter-margin-left);
+    margin: 0 0 0 $frontmatter-margin-left;
     align-self: flex-start;
 
     & .title {
@@ -12,7 +14,7 @@
     }
 
     & .info {
-        margin-bottom: var(--spacing-sm);
+        margin-bottom: $spacing-sm;
         font-family: $font-secondary;
         font-size: 1.2rem;
         font-style: italic;
@@ -46,7 +48,7 @@
     & .external-link-row {
         justify-content: left;
         align-self: start;
-        margin-top: var(--spacing-md);
+        margin-top: $spacing-md;
 
         & a.external-link {
             padding: 0.8em 1.2em;

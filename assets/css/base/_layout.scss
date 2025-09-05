@@ -48,7 +48,7 @@ article {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: $spacing-md $spacing-lg;
     border-radius: var(--radius-xl);
     border: $border-standard;
     transform: translateY(0);
@@ -67,7 +67,7 @@ article {
     }
 
     @include mobile {
-        padding: var(--spacing-sm);
+        padding: $spacing-sm;
     }
 
     &.animated {

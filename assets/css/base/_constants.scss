@@ -60,18 +60,20 @@ $font-size-h2: 1.6rem;
 $font-size-h3: 1.4rem;
 $font-size-h4: 1.2rem;
 
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
 :root {
     /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 0.75rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
     --main-margin-top: 5rem;
     --main-margin-top-mobile: 3.5rem;
     --main-width: 100vw;
     --main-width-mobile: 98vw;
-    --frontmatter-margin-left: var(--spacing-sm);
+    --frontmatter-margin-left: $spacing-sm;
     --article-margin-top: clamp(1rem, 4vw, 1.875rem);
     --chat-padding-y: 0.625rem;
     --chat-padding-x: 1rem;

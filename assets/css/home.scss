@@ -15,7 +15,7 @@ main {
     article {
         z-index: 3;
         animation: article-slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
-        padding: var(--spacing-sm) var(--spacing-lg);
+        padding: $spacing-sm $spacing-lg;
         min-width: 90vw;
         margin-top: 0;
         text-align: center;

@@ -4,7 +4,7 @@
     gap: 0.5em;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-md) var(--spacing-xs) var(--spacing-lg);
+    margin: $spacing-md $spacing-xs $spacing-lg;
 
     & .post-tag {
         display: inline-block;
