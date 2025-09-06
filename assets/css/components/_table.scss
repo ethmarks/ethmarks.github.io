@@ -1,32 +1,33 @@
 @import 'base/mixins';
 
+$shadow-table-hover: 0 12px 40px $color-accent-transparent-20;
+
 table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin: var(--spacing-xl) 0;
-    border-radius: var(--radius-lg);
-    background: var(--color-table-bg-zebra);
-    box-shadow: var(--shadow-table);
-    border: var(--border-standard);
-    transition: var(--transition-transform-shadow);
+    margin: $spacing-xl 0;
+    border-radius: $radius-lg;
+    background: $color-panel;
+    border: $border-standard;
+    transition: $transition-transform-shadow;
     overflow: hidden;
 
     &:hover {
         @media (pointer: fine) {
-            box-shadow: var(--shadow-table-hover);
+            box-shadow: $shadow-table-hover;
         }
     }
 
     &.compact {
         max-width: clamp(600px, 70vw, 1000px);
         font-size: 0.92em;
-        margin: var(--spacing-sm) 0;
+        margin: $spacing-sm 0;
         table-layout: fixed;
 
         th,
         td {
-            padding: var(--spacing-xs) var(--spacing-md);
+            padding: $spacing-xs $spacing-md;
         }
 
         th {
@@ -44,18 +45,18 @@ table {
     }
 
     thead {
-        background: var(--color-table-header-bg);
+        background: $color-panel-dark;
     }
 
     tbody tr {
         &:nth-child(even) td {
-            background-color: var(--color-table-bg);
+            background-color: $color-panel-zebra;
         }
 
         &:hover td {
             @media (pointer: fine) {
-                background-color: var(--color-table-row-hover);
-                color: var(--color-text);
+                background-color: $color-panel-hover;
+                color: $color-text;
             }
         }
     }
@@ -66,17 +67,17 @@ table {
     }
 
     th {
-        font-family: var(--font-secondary);
-        font-weight: var(--font-weight-bold);
-        padding: var(--spacing-md) var(--spacing-lg);
-        color: var(--color-accent);
+        font-family: $font-secondary;
+        font-weight: $font-weight-bold;
+        padding: $spacing-md $spacing-lg;
+        color: $color-accent;
         text-transform: uppercase;
-        font-size: var(--font-size-sm);
+        font-size: $font-size-sm;
     }
 
     td {
-        padding: var(--spacing-md) var(--spacing-lg);
-        border-bottom: var(--border-light);
-        transition: var(--transition-background);
+        padding: $spacing-md $spacing-lg;
+        border-bottom: $border-light;
+        transition: $transition-background;
     }
 }

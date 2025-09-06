@@ -15,7 +15,7 @@ main {
     article {
         z-index: 3;
         animation: article-slide-up 1.6s cubic-bezier(0, 0.8, 0.2, 1) both;
-        padding: var(--spacing-sm) var(--spacing-lg);
+        padding: $spacing-sm $spacing-lg;
         min-width: 90vw;
         margin-top: 0;
         text-align: center;
@@ -124,7 +124,7 @@ main {
                     cursor: pointer;
                     transition: border-color 0.2s, box-shadow 0.3s;
                     text-align: center;
-                    border: 2px solid rgba(255, 255, 255, 0.08);
+                    border: $border-standard-2px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -257,7 +257,7 @@ main {
             & .intro-heading {
                 font-weight: 700;
                 font-size: var(--intro-heading-size);
-                font-family: var(--font-monospace);
+                font-family: $font-monospace;
 
                 &.scramble {
                     will-change: contents;

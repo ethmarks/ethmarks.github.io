@@ -1,14 +1,20 @@
+$color-chat-sender-bg: #3a3a3a;
+$color-chat-recipient-bg: #124161;
+
+$chat-padding-y: 0.625rem;
+$chat-padding-x: 1rem;
+$chat-margin-bottom: 0.2rem;
+
 .chat {
     display: block;
     width: 100%;
-    margin-top: var(--spacing-lg);
+    margin-top: $spacing-lg;
 
     & p {
         clear: both;
-        padding: var(--chat-padding-y) var(--chat-padding-x);
-        box-shadow: var(--shadow-chat);
+        padding: $chat-padding-y $chat-padding-x;
         margin-top: 0;
-        margin-bottom: var(--chat-margin-bottom);
+        margin-bottom: $chat-margin-bottom;
         max-width: 80%;
         word-wrap: break-word;
         line-height: 1.5;
@@ -17,9 +23,9 @@
         &.a {
             /* Sender messages (left side) */
             float: left;
-            background-color: var(--color-chat-sender-bg);
-            border-radius: var(--radius-round) var(--radius-round)
-                var(--radius-round) var(--radius-sm);
+            background-color: $color-chat-sender-bg;
+            border-radius: $radius-round $radius-round
+                $radius-round $radius-sm;
             margin-right: auto;
             margin-left: 0;
         }
@@ -27,9 +33,9 @@
         &.b {
             /* Recipient messages (right side) */
             float: right;
-            background-color: var(--color-chat-recipient-bg);
-            border-radius: var(--radius-round) var(--radius-round)
-                var(--radius-sm) var(--radius-round);
+            background-color: $color-chat-recipient-bg;
+            border-radius: $radius-round $radius-round
+                $radius-sm $radius-round;
             margin-left: auto;
             margin-right: 0;
         }
@@ -39,8 +45,8 @@
         max-height: none;
         /* Override global img max-height */
         height: auto;
-        margin-top: var(--spacing-xs);
-        border-radius: var(--radius-md);
+        margin-top: $spacing-xs;
+        border-radius: $radius-md;
         display: block;
         box-shadow: none;
         border: none;

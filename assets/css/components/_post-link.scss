@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    background: var(--color-table-bg);
+    background: $color-panel;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: var(--border-standard);
+    border: $border-standard;
     text-decoration: none;
-    color: var(--color-text);
+    color: $color-text;
     transition: all 0.3s ease;
     width: 100%;
     box-sizing: border-box;
@@ -21,7 +21,7 @@
     &.animated {
         animation: postLinkAnim 1s
             calc(var(--child-animation-delay) * 2 + 0.05s)
-            var(--transition-timing) both;
+            $transition-timing both;
 
         @include notMobile {
             transform: translateY(-10px);
@@ -41,13 +41,13 @@
     &:hover,
     &:focus {
         text-decoration: none;
-        background: var(--color-table-row-hover);
+        background: $color-panel-hover;
         border-color: rgba(143, 223, 212, 0.3);
         transform: translateY(-3px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 
         & .title {
-            color: var(--color-accent);
+            color: $color-accent;
         }
     }
 
@@ -74,8 +74,8 @@
 
     & .tag {
         background: rgba(143, 223, 212, 0.15);
-        color: var(--color-accent);
-        font-family: var(--font-primary);
+        color: $color-accent;
+        font-family: $font-primary;
         font-size: 0.8rem;
         font-weight: 600;
         border-radius: 999px;
@@ -91,19 +91,19 @@
     }
 
     & .title {
-        font-family: var(--font-secondary);
+        font-family: $font-secondary;
         font-size: 1.1rem;
         font-weight: 700;
         display: block;
-        color: var(--color-text);
+        color: $color-text;
         margin: 0;
         transition: color 0.3s ease;
     }
 
     & .description {
-        font-family: var(--font-primary);
+        font-family: $font-primary;
         font-size: 0.9rem;
-        color: var(--color-text-secondary);
+        color: $color-text-secondary;
         line-height: 1.4;
         display: block;
         margin: 0.25rem 0 0 0;

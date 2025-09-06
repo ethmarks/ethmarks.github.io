@@ -6,7 +6,7 @@ figure {
     margin: 0;
     text-align: center;
     font-style: italic;
-    color: var(--color-text-secondary);
+    color: $color-text-secondary;
 
     figcaption {
         width: fit-content;
@@ -18,8 +18,8 @@ figure {
     max-height: var(--max-media-height);
     width: auto;
     height: auto;
-    border-radius: var(--radius-xl);
-    border: var(--border-standard);
+    border-radius: $radius-xl;
+    border: $border-standard;
 
     &.media-verytall {
         max-height: var(--max-media-height-verytall);
