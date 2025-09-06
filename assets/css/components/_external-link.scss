@@ -32,7 +32,7 @@ $shadow-external-link-hover: 0 8px 20px $color-shadow-accent;
             transform 0.3s ease,
             box-shadow 0.3s ease,
             color 0.3s ease;
-        animation: slideInFromLeft 0.5s 0.4s var(--transition-timing) both;
+        animation: slideInFromLeft 0.5s 0.4s $transition-timing both;
 
         &::after {
             /* Shimmer effect */
@@ -83,7 +83,7 @@ $shadow-external-link-hover: 0 8px 20px $color-shadow-accent;
 
         & img {
             transition:
-                var(--transition-transform),
+                $transition-transform,
                 filter 0.3s ease;
             width: 1.5em;
             height: 1.5em;

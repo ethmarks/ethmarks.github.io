@@ -14,7 +14,7 @@ pre {
     border-radius: $radius-xl;
     border: $border-standard;
     box-shadow: var(--shadow-table);
-    transition: var(--transition-transform-shadow);
+    transition: $transition-transform-shadow;
 
     &.width-overflow {
         width: auto;

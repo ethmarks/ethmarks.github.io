@@ -60,7 +60,7 @@ article {
     border-radius: $radius-xl;
     border: $border-standard;
     transform: translateY(0);
-    transition: var(--transition-transform-shadow);
+    transition: $transition-transform-shadow;
     overflow-x: hidden;
 
     & > :first-child {
@@ -79,6 +79,6 @@ article {
     }
 
     &.animated {
-        animation: articleSlideInFromBottom 0.8s var(--transition-timing) both;
+        animation: articleSlideInFromBottom 0.8s $transition-timing both;
     }
 }

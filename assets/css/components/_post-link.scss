@@ -21,7 +21,7 @@
     &.animated {
         animation: postLinkAnim 1s
             calc(var(--child-animation-delay) * 2 + 0.05s)
-            var(--transition-timing) both;
+            $transition-timing both;
 
         @include notMobile {
             transform: translateY(-10px);

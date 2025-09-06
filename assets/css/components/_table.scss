@@ -10,7 +10,7 @@ table {
     border-radius: $radius-lg;
     background: $color-panel;
     border: $border-standard;
-    transition: var(--transition-transform-shadow);
+    transition: $transition-transform-shadow;
     overflow: hidden;
 
     &:hover {
@@ -78,6 +78,6 @@ table {
     td {
         padding: $spacing-md $spacing-lg;
         border-bottom: $border-light;
-        transition: var(--transition-background);
+        transition: $transition-background;
     }
 }

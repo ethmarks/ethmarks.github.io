@@ -81,16 +81,16 @@ $color-shadow-standard: rgba(black, 0.2);
 $color-shadow-accent: $color-accent-transparent-30;
 $color-shadow-accent-hover: $color-accent-transparent-40;
 
-:root {
-    /* Transitions */
-    --transition-duration: 0.3s;
-    --transition-duration-fast: 0.2s;
-    --transition-timing: ease;
-    --transition-default: all var(--transition-duration-fast) var(--transition-timing);
-    --transition-transform-shadow: transform var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
-    --transition-transform: transform var(--transition-duration) var(--transition-timing);
-    --transition-background: background-color var(--transition-duration-fast) var(--transition-timing);
 
+$transition-duration: 0.3s;
+$transition-duration-fast: 0.2s;
+$transition-timing: ease;
+$transition-default: all $transition-duration-fast $transition-timing;
+$transition-transform-shadow: transform $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing;
+$transition-transform: transform $transition-duration $transition-timing;
+$transition-background: background-color $transition-duration-fast $transition-timing;
+
+:root {
     /* Media Sizes */
     --media-width: clamp(300px, 60vw, 1000px);
     --max-media-height: 800px;

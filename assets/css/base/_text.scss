@@ -30,7 +30,7 @@ h1 {
     }
 
     &.animated {
-        animation: slideInFromLeft 0.5s 0.1s var(--transition-timing) both;
+        animation: slideInFromLeft 0.5s 0.1s $transition-timing both;
     }
 }
 
@@ -49,7 +49,7 @@ h4 {
 a {
     color: $color-link;
     text-decoration: none;
-    transition: color var(--transition-duration-fast) var(--transition-timing);
+    transition: color $transition-duration-fast $transition-timing;
 
     &:hover {
         color: $color-link-hover;
@@ -106,8 +106,8 @@ a {
 
         & li {
             line-height: 1.6;
-            transition: color var(--transition-duration-fast)
-                var(--transition-timing);
+            transition: color $transition-duration-fast
+                $transition-timing;
         }
     }
 }
@@ -147,8 +147,8 @@ ul {
 
     & li {
         line-height: 1.6;
-        transition: color var(--transition-duration-fast)
-            var(--transition-timing);
+        transition: color $transition-duration-fast
+            $transition-timing;
     }
 }
 
