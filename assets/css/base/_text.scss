@@ -1,3 +1,10 @@
+@mixin nomint {
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: unset;
+}
+
 p,
 li {
     font-weight: $font-weight-normal;
@@ -20,13 +27,15 @@ h1 {
     margin: 0 0 0 var(--frontmatter-margin-left);
     font-weight: $font-weight-bold;
     color: $mint-blend;
+    background: $mint-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-    @-moz-document url-prefix() {
-        /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: $mint-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &.chromium-nomint {
+        @supports not (-moz-appearance: none) {
+            @include nomint;
+        }
     }
 
     &.animated {
@@ -160,9 +169,5 @@ ul {
 }
 
 .nomint {
-    /* Disable mint background */
-    background: none;
-    background-clip: none;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: $color-text;
+    @include nomint;
 }
