@@ -226,6 +226,7 @@ main {
     }
 
     & .intro-text {
+        font-family: var(--font-secondary);
         display: flex;
         flex-direction: column;
         padding: 10px 10px 10px 0;
@@ -234,61 +235,14 @@ main {
         flex-grow: 1;
         z-index: 1;
 
-        @include mobile {
-            padding: 0;
-            align-items: center;
-            text-align: center;
-            margin-bottom: -2.25rem;
-        }
-
-        & .intro-heading-wrapper {
-            --intro-heading-size: 5rem;
+        & .intro-text-middle {
             margin-top: 0;
             position: relative;
             height: fit-content;
             width: fit-content;
-            margin-bottom: var(--intro-heading-size);
-            animation: drift-down-transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
 
             @include mobile {
                 margin-bottom: 0;
-            }
-
-            & .intro-heading {
-                font-weight: 700;
-                font-size: var(--intro-heading-size);
-                font-family: $font-monospace;
-
-                &.scramble {
-                    will-change: contents;
-                    position: relative;
-                    animation: drift-down-shadow 2.5s
-                            cubic-bezier(0.22, 1, 0.36, 1),
-                        scramble-text 2.5s;
-                }
-            }
-        }
-
-        & .intro-subheading {
-            & p {
-                margin: 0;
-                font-size: clamp(0.5rem, calc(1.5vw + 1rem), 2rem);
-
-                @include notMobile {
-                    /* No wrapping on large screens */
-                    white-space: nowrap;
-                }
-                opacity: 0;
-                animation: shadow-drift-left 1.8s cubic-bezier(0.2, 0.8, 0.2, 1)
-                    forwards;
-
-                &:nth-child(1) {
-                    animation-delay: 0.2s;
-                }
-
-                &:nth-child(2) {
-                    animation-delay: 0.5s;
-                }
             }
         }
     }
@@ -300,9 +254,7 @@ main {
     main article.animate p,
     main article.animate .card-container .tilt-card-wrapper,
     .intro-container .headshot,
-    .intro-container .intro-text .intro-heading-wrapper,
-    .intro-container .intro-text .intro-heading-wrapper .intro-heading.scramble,
-    .intro-container .intro-text .intro-subheading p,
+    .intro-container .intro-text .intro-heading,
     .tilt-card,
     .tilt-card .tilt-card-title {
         opacity: 1 !important;
@@ -352,16 +304,6 @@ main {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes scramble-text {
-    from {
-        opacity: 0.99;
-    }
-
-    to {
-        opacity: 1;
     }
 }
 
