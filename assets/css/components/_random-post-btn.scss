@@ -12,7 +12,7 @@
     & .random-post-btn {
         background: $color-accent-transparent-10;
         color: $color-accent;
-        border: 1px solid $color-accent;
+        border: $border-accent;
         border-radius: $radius-round;
         padding: 0.5em 1.5em;
         font-size: 1.1rem;
@@ -29,10 +29,8 @@
         &:focus {
             text-decoration: none;
             background: $color-accent;
-            color: $color-accent;
-            border-color: $color-accent;
+            color: $color-background;
             box-shadow: none;
-            outline: 2px solid $color-accent;
         }
     }
 }
