@@ -1,5 +1,9 @@
 @import 'base/mixins';
 
+// =========================================================================
+// COLOR
+// =========================================================================
+
 $color-background: #121212;
 
 $color-accent: #8fdfd4;
@@ -26,6 +30,10 @@ $color-panel-hover: transparentize(lighten($color-panel, 7%), 0.5);
 $mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
 $mint-blend: mix($color-accent, $color-text, 75%);
 
+// =========================================================================
+// BORDER
+// =========================================================================
+
 $color-border: white;
 $color-border-standard: rgba($color-border, 0.1);
 $color-border-light: rgba($color-border, 0.05);
@@ -44,6 +52,9 @@ $border-light-2px: border('light', 2px);
 $border-accent: border('accent', 1px);
 $border-accent-2px: border('accent', 2px);
 
+// =========================================================================
+// FONT
+// =========================================================================
 
 $font-primary: "Nunito", sans-serif;
 $font-secondary: "Sen", sans-serif;
@@ -62,6 +73,9 @@ $font-size-h2: 1.6rem;
 $font-size-h3: 1.4rem;
 $font-size-h4: 1.2rem;
 
+// =========================================================================
+// SPACING
+// =========================================================================
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 0.75rem;
@@ -69,6 +83,9 @@ $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 
+// =========================================================================
+// RADIUS
+// =========================================================================
 
 $radius-sm: 4px;
 $radius-md: 8px;
@@ -76,11 +93,17 @@ $radius-lg: 12px;
 $radius-xl: 16px;
 $radius-round: 18px;
 
+// =========================================================================
+// SHADOW
+// =========================================================================
 
 $color-shadow-standard: rgba(black, 0.2);
 $color-shadow-accent: $color-accent-transparent-30;
 $color-shadow-accent-hover: $color-accent-transparent-40;
 
+// =========================================================================
+// TRANSITION
+// =========================================================================
 
 $transition-duration: 0.3s;
 $transition-duration-fast: 0.2s;
