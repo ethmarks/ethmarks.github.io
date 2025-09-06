@@ -99,8 +99,8 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 {{< compact-table >}}
 | Category | Skills |
 |----------|--------|
-| General Purpose Language | Python |
-| Web Development | HTML, CSS, JavaScript |
+| Languages | Python |
+| Web Development | Hugo, HTML, CSS, Sass, JavaScript |
 | Version Control | Git, GitHub |
 | Game Engine | Unity, Godot |
 | Image Editing Software | Photoshop, GIMP, Inkscape |
