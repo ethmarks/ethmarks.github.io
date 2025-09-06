@@ -8,6 +8,8 @@ $color-accent-dark: darken($color-accent, 10%);
 $color-accent-transparent-10: rgba($color-accent, 0.10);
 $color-accent-transparent-15: rgba($color-accent, 0.15);
 $color-accent-transparent-20: rgba($color-accent, 0.20);
+$color-accent-transparent-30: rgba($color-accent, 0.30);
+$color-accent-transparent-40: rgba($color-accent, 0.40);
 
 $color-text: white;
 $color-text-secondary: darken($color-text, 30%);
@@ -74,17 +76,12 @@ $radius-lg: 12px;
 $radius-xl: 16px;
 $radius-round: 18px;
 
-:root {
-    /* Shadows */
-    --shadow-color-dark: rgba(0, 0, 0, 0.2);
-    --shadow-color-accent: rgba(143, 223, 212, 0.3);
-    --shadow-color-accent-hover: rgba(143, 223, 212, 0.4);
-    --shadow-button: 0 4px 12px var(--shadow-color-accent);
-    --shadow-button-hover: 0 8px 20px var(--shadow-color-accent-hover);
-    --shadow-table: var(--shadow-article);
-    --shadow-table-hover: 0 12px 40px var(--color-accent-transparent-20);
-    --shadow-chat: 0 1px 2px var(--shadow-color-dark);
 
+$color-shadow-standard: rgba(black, 0.2);
+$color-shadow-accent: $color-accent-transparent-30;
+$color-shadow-accent-hover: $color-accent-transparent-40;
+
+:root {
     /* Transitions */
     --transition-duration: 0.3s;
     --transition-duration-fast: 0.2s;

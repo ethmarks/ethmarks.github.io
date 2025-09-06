@@ -13,7 +13,6 @@ $chat-margin-bottom: 0.2rem;
     & p {
         clear: both;
         padding: $chat-padding-y $chat-padding-x;
-        box-shadow: var(--shadow-chat);
         margin-top: 0;
         margin-bottom: $chat-margin-bottom;
         max-width: 80%;

@@ -1,3 +1,7 @@
+$shadow-external-link: 0 4px 12px $color-shadow-accent;
+$shadow-external-link-hover: 0 8px 20px $color-shadow-accent;
+
+
 .external-link-row {
     margin: 0;
     display: flex;
@@ -21,7 +25,7 @@
         font-size: $font-size-md;
         display: inline-flex;
         gap: $spacing-sm;
-        box-shadow: var(--shadow-button);
+        box-shadow: $shadow-external-link;
         position: relative;
         overflow: hidden;
         transition:
@@ -54,7 +58,7 @@
         &:hover,
         &:focus {
             transform: translateY(-3px);
-            box-shadow: var(--shadow-button-hover);
+            box-shadow: $shadow-external-link-hover;
             color: $color-link-hover;
 
             &::after {
@@ -74,7 +78,7 @@
         &:focus-visible {
             outline: 2px solid $color-focus-outline;
             outline-offset: 3px;
-            box-shadow: var(--shadow-button-hover);
+            box-shadow: $shadow-external-link-hover;
         }
 
         & img {

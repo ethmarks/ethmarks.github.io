@@ -1,5 +1,7 @@
 @import 'base/mixins';
 
+$shadow-table-hover: 0 12px 40px $color-accent-transparent-20;
+
 table {
     width: 100%;
     border-collapse: separate;
@@ -7,14 +9,13 @@ table {
     margin: $spacing-xl 0;
     border-radius: $radius-lg;
     background: $color-panel;
-    box-shadow: var(--shadow-table);
     border: $border-standard;
     transition: var(--transition-transform-shadow);
     overflow: hidden;
 
     &:hover {
         @media (pointer: fine) {
-            box-shadow: var(--shadow-table-hover);
+            box-shadow: $shadow-table-hover;
         }
     }
 
