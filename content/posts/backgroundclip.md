@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: Firefox is the only browser that handles background-clip correctly
 date: 2025-07-11
 tags: [programming, webdev, personal website]
