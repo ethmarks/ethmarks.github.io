@@ -20,6 +20,8 @@ $color-text-inverse: #121212;
 $color-text-secondary: darken($color-text, 30%);
 $color-link: $color-accent-light;
 $color-link-hover: $color-text;
+$color-link-underline: rgba($color-accent, 0.3);
+$color-link-underline-hover: $color-accent;
 $color-focus-outline: $color-accent-light;
 
 $color-article: rgb(30, 30, 30);

@@ -36,6 +36,11 @@ footer {
 
         & a {
             color: $color-text;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &#copyright {

@@ -57,12 +57,12 @@ h4 {
 
 a {
     color: $color-link;
-    text-decoration: none;
-    transition: color $transition-duration-fast $transition-timing;
+    text-decoration: underline;
+    text-decoration-color: $color-link-underline;
+    transition: text-decoration-color $transition-duration-fast $transition-timing;
 
     &:hover {
-        color: $color-link-hover;
-        text-decoration: underline;
+        text-decoration-color: $color-link-underline-hover;
     }
 
     &:focus-visible {
