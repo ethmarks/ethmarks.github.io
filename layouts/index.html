@@ -4,61 +4,10 @@
 
 {{ define "main" }}
 <div class="intro-container">
-    <div class="headshot">
-        <img
-            src="/media/ethan_home.webp"
-            alt="Ethan smiles pleasantly wearing a black suit and white shirt"
-        />
-    </div>
     <div class="intro-text">
         <span class="intro-text-top">Ahoy! I'm</span>
         <span class="intro-text-middle text-shimmer">Ethan Marks</span>
         <span class="intro-text-bottom">Software Developer</span>
     </div>
 </div>
-<article class="animate">
-    <h1 class="chromium-nomint">
-        <span>Welcome</span>
-        <span>To</span>
-        <span>My</span>
-        <span>Personal</span>
-        <span>Website</span>
-    </h1>
-    <p>This site represents my presence on the World Wide Web</p>
-    <div class="card-container">
-        <div class="tilt-card-wrapper">
-            <a
-                href="{{ "/about/" | relURL }}"
-                class="tilt-card"
-                data-tilt
-                data-tilt-reverse="true"
-                data-tilt-perspective="900"
-            >
-                <div class="tilt-card-title">About Me</div>
-            </a>
-        </div>
-        <div class="tilt-card-wrapper">
-            <a
-                href="{{ "/posts/" | relURL }}"
-                class="tilt-card"
-                data-tilt
-                data-tilt-reverse="true"
-                data-tilt-perspective="900"
-            >
-                <div class="tilt-card-title">Posts</div>
-            </a>
-        </div>
-        <div class="tilt-card-wrapper">
-            <a
-                href="{{ "/tags/projects/" | relURL }}"
-                class="tilt-card"
-                data-tilt
-                data-tilt-reverse="true"
-                data-tilt-perspective="900"
-            >
-                <div class="tilt-card-title">Projects</div>
-            </a>
-        </div>
-    </div>
-</article>
 {{ end }}
