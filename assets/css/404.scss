@@ -1,5 +1,8 @@
 @import 'global';
 
+$font-404: "Kenia", monospace;
+$font-size-404: clamp(5rem, 60vw, 20rem);
+
 body {
     margin: 0;
     overflow: hidden;
@@ -21,23 +24,24 @@ body {
 main {
     position: relative;
     z-index: 2;
+    margin: 0;
     text-align: center;
+    align-items: center;
 }
 
 h1 {
-    font-family: "Kenia", sans-serif;
-    color: $color-text;
+    font-family: $font-404;
+    font-size: $font-size-404;
     font-weight: 1;
-    font-size: 14rem;
-    margin: auto;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    line-height: 1em;
+    color: $color-text;
+    margin: 0;
 }
 
 p {
-    font-family: monospace, sans-serif;
-    font-size: 1.6rem;
-    margin: auto;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-family: $font-monospace;
+    font-size: $font-size-h2;
+    margin: 0;
 }
 
 footer {
