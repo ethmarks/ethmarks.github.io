@@ -1,8 +1,8 @@
-(function() {
-    'use strict';
+(function textShimmer() {
+  'use strict';
 
-    // Inject required styles
-    const styles = `
+  // Inject required styles
+  const styles = `
         .text-shimmer-char {
             display: inline-block;
             opacity: 0;
@@ -17,66 +17,53 @@
         }
     `;
 
-    function injectStyles() {
-        if (!document.getElementById('text-shimmer-styles')) {
-            const styleSheet = document.createElement('style');
-            styleSheet.id = 'text-shimmer-styles';
-            styleSheet.textContent = styles;
-            document.head.appendChild(styleSheet);
-        }
+  function injectStyles() {
+    if (!document.getElementById('text-shimmer-styles')) {
+      const styleSheet = document.createElement('style');
+      styleSheet.id = 'text-shimmer-styles';
+      styleSheet.textContent = styles;
+      document.head.appendChild(styleSheet);
+    }
+  }
+
+  function processElement(element) {
+    const text = element.textContent;
+    element.innerHTML = '';
+
+    // Create character spans
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const span = document.createElement('span');
+      span.className = 'text-shimmer-char';
+      span.innerHTML = char === ' ' ? '&nbsp;' : char;
+      element.appendChild(span);
     }
 
-    function processElement(element) {
-        const text = element.textContent;
-        element.innerHTML = '';
+    // Animate characters in sequence
+    const chars = element.querySelectorAll('.text-shimmer-char');
+    chars.forEach((char, index) => {
+      setTimeout(() => {
+        char.classList.add('in');
+      }, index * 50);
+    });
+  }
 
-        // Create character spans
-        for (let i = 0; i < text.length; i++) {
-            const char = text[i];
-            const span = document.createElement('span');
-            span.className = 'text-shimmer-char';
-            span.innerHTML = char === ' ' ? '&nbsp;' : char;
-            element.appendChild(span);
-        }
+  function init() {
+    injectStyles();
+    document.querySelectorAll('.text-shimmer').forEach(processElement);
+  }
 
-        // Animate characters in sequence
-        const chars = element.querySelectorAll('.text-shimmer-char');
-        chars.forEach((char, index) => {
-            setTimeout(() => {
-                char.classList.add('in');
-            }, index * 50);
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      init();
     }
-
-    function init() {
-        injectStyles();
-        document.querySelectorAll('.text-shimmer').forEach(processElement);
-    }
-
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () {
-          if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-              document.querySelectorAll(".scramble").forEach((element) => {
-                init
-              });
-          }
-        });
-    } else {
-        init();
-    }
-
+  });
 })();
 
-// Run scramble animation to all elements with .scramble class
-document.addEventListener("DOMContentLoaded", function () {
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.querySelectorAll(".scramble").forEach((element) => {
-            runScrambleAnimation(element);
-        });
-    }
-
+(function tiltCard() {
+  document.addEventListener("DOMContentLoaded", function () {
     if (window.matchMedia("(pointer: fine)").matches && window.VanillaTilt) {
-        VanillaTilt.init(document.querySelectorAll(".tilt-card"));
+      VanillaTilt.init(document.querySelectorAll(".tilt-card"));
     }
-});
+  });
+})();
