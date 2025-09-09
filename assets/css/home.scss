@@ -7,7 +7,7 @@ $color-name: $color-accent;
 $color-title: $color-text-secondary;
 
 $font-size-greeting: $font-size-h2;
-$font-size-name: $font-size-h1;
+$font-size-name: 3rem;
 $font-size-title: $font-size-h3;
 
 main {
@@ -17,25 +17,14 @@ main {
 }
 
 .intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding-top: 5rem;
-    width: 100%;
-
     align-items: center;
 
-
     .text {
-        justify-self: end;
-        text-align: right;
-        width: 50%;
-        padding-right: 2rem;
-
         font-family: $font-secondary;
         font-weight: $font-weight-bold;
         display: flex;
         flex-direction: column;
+        white-space: nowrap;
 
         .greeting {
             color: $color-greeting;
@@ -54,12 +43,39 @@ main {
     }
 
     .pfp-container {
-        width: 50%;
-        justify-content: flex-start;
-        padding-left: 2rem;
-
         img.pfp {
             width: 256px;
+        }
+    }
+}
+
+@include notMobile {
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 5rem;
+        width: 100%;
+        .text {
+            justify-self: end;
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        .pfp-container {
+            justify-content: flex-start;
+            padding-left: 2rem;
+        }
+    }
+}
+
+@include mobile {
+    .intro {
+        display: flex;
+        flex-direction: column;
+
+        .text {
+            text-align: center;
         }
     }
 }
