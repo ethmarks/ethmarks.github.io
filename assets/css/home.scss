@@ -59,6 +59,7 @@ main {
         grid-template-rows: 1fr;
         padding-top: 5rem;
         width: 100%;
+
         .text {
             justify-self: end;
             text-align: right;
@@ -78,7 +79,12 @@ main {
         flex-direction: column;
 
         .text {
+            margin-top: 1rem;
             text-align: center;
+        }
+
+        .pfp-container {
+            margin-top: 3rem;
         }
     }
 }
