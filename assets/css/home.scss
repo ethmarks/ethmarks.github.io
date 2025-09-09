@@ -2,13 +2,13 @@
 @import 'components/header-anim';
 @import 'base/mixins';
 
-$color-intro-text-top: $color-text;
-$color-intro-text-middle: $color-accent;
-$color-intro-text-bottom: $color-text-secondary;
+$color-greeting: $color-text;
+$color-name: $color-accent;
+$color-title: $color-text-secondary;
 
-$font-size-intro-text-top: $font-size-h2;
-$font-size-intro-text-middle: $font-size-h1;
-$font-size-intro-text-bottom: $font-size-h3;
+$font-size-greeting: $font-size-h2;
+$font-size-name: $font-size-h1;
+$font-size-title: $font-size-h3;
 
 main {
     padding: 0;
@@ -16,8 +16,8 @@ main {
     justify-content: center;
 }
 
-.intro-container {
-    .intro-text {
+.intro {
+    .text {
         font-family: $font-secondary;
         font-weight: $font-weight-bold;
         text-align: right;
@@ -27,19 +27,19 @@ main {
         overflow-wrap: break-word;
         z-index: 1;
 
-        .intro-text-top {
-            color: $color-intro-text-top;
-            font-size: $font-size-intro-text-top;
+        .greeting {
+            color: $color-greeting;
+            font-size: $font-size-greeting;
         }
 
-        .intro-text-middle {
-            color: $color-intro-text-middle;
-            font-size: $font-size-intro-text-middle;
+        .name {
+            color: $color-name;
+            font-size: $font-size-name;
         }
 
-        .intro-text-bottom {
-            color: $color-intro-text-bottom;
-            font-size: $font-size-intro-text-bottom;
+        .title {
+            color: $color-title;
+            font-size: $font-size-title;
         }
     }
 }
