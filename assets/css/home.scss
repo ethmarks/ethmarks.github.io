@@ -17,15 +17,25 @@ main {
 }
 
 .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 5rem;
+    width: 100%;
+
+    align-items: center;
+
+
     .text {
+        justify-self: end;
+        text-align: right;
+        width: 50%;
+        padding-right: 2rem;
+
         font-family: $font-secondary;
         font-weight: $font-weight-bold;
-        text-align: right;
         display: flex;
         flex-direction: column;
-        padding: 10px 10px 10px 0;
-        overflow-wrap: break-word;
-        z-index: 1;
 
         .greeting {
             color: $color-greeting;
@@ -40,6 +50,16 @@ main {
         .title {
             color: $color-title;
             font-size: $font-size-title;
+        }
+    }
+
+    .pfp-container {
+        width: 50%;
+        justify-content: flex-start;
+        padding-left: 2rem;
+
+        img.pfp {
+            width: 256px;
         }
     }
 }
