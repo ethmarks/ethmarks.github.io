@@ -3,15 +3,15 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="intro">
-    <div class="text">
-        <span class="greeting text-shimmer" data-shimmer-inverse data-shimmer-delay="200">Ahoy! I'm</span>
-        <span class="name text-shimmer">Ethan Marks</span>
-        <span class="title text-shimmer" data-shimmer-inverse data-shimmer-delay="350" data-shimmer-speed="35">Software Developer</span>
+<section id="intro">
+    <div id="text">
+        <span id="greeting" class="text-shimmer" data-shimmer-inverse data-shimmer-delay="200">Ahoy! I'm</span>
+        <span id="name" class="text-shimmer">Ethan Marks</span>
+        <span id="vocation" class="text-shimmer" data-shimmer-inverse data-shimmer-delay="350" data-shimmer-speed="35">Software Developer</span>
     </div>
-    <div class="pfp-container">
+    <div id="pfp-container">
         <img
-            class="pfp"
+            id="pfp"
             width=256
             height=256
             loading="lazy"
@@ -20,5 +20,5 @@
             style="background: #d6eddc; border-radius: 999px;"
         >
     </div>
-</div>
+</section>
 {{ end }}

@@ -4,11 +4,11 @@
 
 $color-greeting: $color-text;
 $color-name: $color-accent;
-$color-title: $color-text-secondary;
+$color-vocation: $color-text-secondary;
 
 $font-size-greeting: 2rem;
 $font-size-name: 4rem;
-$font-size-title: 1.8rem;
+$font-size-vocation: 1.8rem;
 
 $intro-top-margin: clamp(2px, 5rem, 20vh);
 
@@ -18,36 +18,36 @@ main {
     justify-content: center;
 }
 
-.intro {
+#intro {
     align-items: center;
 
-    .text {
+    #text {
         font-family: $font-secondary;
         font-weight: $font-weight-bold;
         display: flex;
         flex-direction: column;
         white-space: nowrap;
 
-        .greeting {
+        #greeting {
             color: $color-greeting;
             font-size: $font-size-greeting;
         }
 
-        .name {
+        #name {
             color: $color-name;
             font-size: $font-size-name;
             line-height: 1;
         }
 
-        .title {
-            color: $color-title;
-            font-size: $font-size-title;
+        #vocation {
+            color: $color-vocation;
+            font-size: $font-size-vocation;
             line-height: 1;
         }
     }
 
-    .pfp-container {
-        img.pfp {
+    #pfp-container {
+        img#pfp {
             width: 256px;
             height: 256px;
 
@@ -62,20 +62,20 @@ main {
 }
 
 @include notMobile {
-    .intro {
+    #intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         margin-top: $intro-top-margin;
         width: 100%;
 
-        .text {
+        #text {
             justify-self: end;
             text-align: right;
             padding-right: 2rem;
         }
 
-        .pfp-container {
+        #pfp-container {
             justify-content: flex-start;
             padding-left: 2rem;
         }
@@ -83,16 +83,16 @@ main {
 }
 
 @include mobile {
-    .intro {
+    #intro {
         display: flex;
         flex-direction: column;
 
-        .text {
+        #text {
             margin-top: 1rem;
             text-align: center;
         }
 
-        .pfp-container {
+        #pfp-container {
             margin-top: 3rem;
         }
     }
