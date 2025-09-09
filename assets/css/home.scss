@@ -34,11 +34,13 @@ main {
         .name {
             color: $color-name;
             font-size: $font-size-name;
+            line-height: 1;
         }
 
         .title {
             color: $color-title;
             font-size: $font-size-title;
+            line-height: 1;
         }
     }
 

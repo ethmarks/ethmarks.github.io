@@ -28,6 +28,10 @@
 
   function processElement(element) {
     const text = element.textContent;
+    const delay = parseInt(element.dataset.shimmerDelay || '0', 10);
+    const speed = parseInt(element.dataset.shimmerSpeed || '50', 10);
+    const inverse = element.dataset.shimmerInverse === '';
+
     element.innerHTML = '';
 
     // Create character spans
@@ -42,9 +46,10 @@
     // Animate characters in sequence
     const chars = element.querySelectorAll('.text-shimmer-char');
     chars.forEach((char, index) => {
+      const animationIndex = inverse ? chars.length - 1 - index : index;
       setTimeout(() => {
         char.classList.add('in');
-      }, index * 50);
+      }, delay + (animationIndex * speed));
     });
   }
 
