@@ -4,21 +4,27 @@ $footer-bg: rgba(255, 255, 255, 0.1);
 $footer-border-color: rgba(255, 255, 255, 0.18);
 $footer-border: 1px solid $footer-border-color;
 
+$footer-radius: $radius-lg;
+
 $footer-blur: 10px;
 
 $footer-padding-top: 10px;
-$footer-padding-sides: 30px;
+$footer-padding-sides: 25px;
 $footer-padding-bottom: 5px;
+
+$footer-margin-top: 0px;
+$footer-margin-sides: 10px;
+$footer-margin-bottom: 5px;
+
+$footer-width: 100vw;
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     background: $footer-bg;
     backdrop-filter: blur($footer-blur);
     transform: translate3d(0, 0, 0);
-    border-top: $footer-border;
     padding: $footer-padding-top $footer-padding-sides $footer-padding-bottom;
     box-sizing: border-box;
     color: $color-text;
@@ -26,6 +32,22 @@ footer {
     transition: position 0.2s;
     position: fixed;
     bottom: 0;
+
+    @include mobile {
+        width: $footer-width;
+        border-top: $footer-border;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    @include notMobile {
+        --footer-width: $footer-width;
+        --footer-margin-sides: $footer-margin-sides;
+        width: calc(var(--footer-width) - var(--footer-margin-sides) * 2);
+        border: $footer-border;
+        border-radius: $footer-radius;
+        margin: $footer-margin-top $footer-margin-sides $footer-margin-bottom;
+    }
 
     body.height-overflow & {
         position: static;

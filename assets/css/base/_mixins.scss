@@ -22,6 +22,29 @@
     }
 }
 
+@mixin motion {
+    @media (prefers-reduced-motion: no-preference) {
+        @content;
+    }
+}
+
+@mixin noMotion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+@mixin tall {
+    @media (min-height: 1200px) {
+        @content
+    }
+}
+
+@mixin notTall {
+    @media (max-height: 1200px) {
+        @content
+    }
+  
 @mixin nomint {
     background: none;
     background-clip: none;

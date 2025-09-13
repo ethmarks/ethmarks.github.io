@@ -1,95 +1,74 @@
-function runScrambleAnimation(element) {
-    const originalText = element.textContent;
-    if (!originalText) return;
+(function textShimmer() {
+  'use strict';
 
-    const SCRAMBLE_CHARS = "abcdefghijklmnopqrstuvwxyz0123456789";
-    const REVEAL_DELAY = 200;
-    const SOLVE_DELAY = 100;
-    const SCRAMBLE_SPEED = 50;
-    const HIDDEN_CHAR = "\u2007";
+  // Inject required styles
+  const styles = `
+        .text-shimmer-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(-3px);
+            filter: blur(2px);
+            transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        .text-shimmer-char.in {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    `;
 
-    let charStates = Array.from(originalText).map((char) => ({
-        final: char,
-        state: "hidden",
-    }));
+  function injectStyles() {
+    if (!document.getElementById('text-shimmer-styles')) {
+      const styleSheet = document.createElement('style');
+      styleSheet.id = 'text-shimmer-styles';
+      styleSheet.textContent = styles;
+      document.head.appendChild(styleSheet);
+    }
+  }
 
-    element.textContent = Array(originalText.length + 1).join(HIDDEN_CHAR);
+  function processElement(element) {
+    const text = element.textContent;
+    const delay = parseInt(element.dataset.shimmerDelay || '0', 10);
+    const speed = parseInt(element.dataset.shimmerSpeed || '50', 10);
+    const inverse = element.dataset.shimmerInverse === '';
 
-    const totalRevealTime = (charStates.length - 1) * REVEAL_DELAY;
-    const totalAnimationDuration =
-        totalRevealTime + (charStates.length - 1) * SOLVE_DELAY;
-    const startTime = performance.now();
+    element.innerHTML = '';
 
-    charStates.forEach((charState, i) => {
-        setTimeout(() => {
-            charState.state =
-                charState.final.trim() === "" ? "solved" : "scrambled";
-        }, i * REVEAL_DELAY);
-        setTimeout(() => {
-            charState.state = "solved";
-        }, totalRevealTime + i * SOLVE_DELAY);
+    // Create character spans
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const span = document.createElement('span');
+      span.className = 'text-shimmer-char';
+      span.innerHTML = char === ' ' ? '&nbsp;' : char;
+      element.appendChild(span);
+    }
+
+    // Animate characters in sequence
+    const chars = element.querySelectorAll('.text-shimmer-char');
+    chars.forEach((char, index) => {
+      const animationIndex = inverse ? chars.length - 1 - index : index;
+      setTimeout(() => {
+        char.classList.add('in');
+      }, delay + (animationIndex * speed));
     });
+  }
 
-    let lastScrambleUpdate = 0;
-    let prevOutput = [];
-    let finished = false;
+  function init() {
+    injectStyles();
+    document.querySelectorAll('.text-shimmer').forEach(processElement);
+  }
 
-    const update = (currentTime) => {
-        const elapsed = currentTime - startTime;
-
-        if (elapsed >= totalAnimationDuration + SOLVE_DELAY) {
-            element.textContent = originalText;
-            if (!finished) {
-                finished = true;
-            }
-            return;
-        }
-
-        const scrambleIntervalPassed =
-            currentTime - lastScrambleUpdate >= SCRAMBLE_SPEED;
-
-        let currentOutput = [];
-        for (let i = 0; i < charStates.length; i++) {
-            const charState = charStates[i];
-            switch (charState.state) {
-                case "hidden":
-                    currentOutput[i] = HIDDEN_CHAR;
-                    break;
-                case "scrambled":
-                    currentOutput[i] = scrambleIntervalPassed
-                        ? SCRAMBLE_CHARS[
-                              Math.floor(Math.random() * SCRAMBLE_CHARS.length)
-                          ]
-                        : prevOutput[i];
-                    break;
-                case "solved":
-                    currentOutput[i] = charState.final;
-                    break;
-            }
-        }
-
-        if (scrambleIntervalPassed) {
-            lastScrambleUpdate = currentTime;
-        }
-
-        element.textContent = currentOutput.join("");
-        prevOutput = currentOutput;
-
-        requestAnimationFrame(update);
-    };
-
-    requestAnimationFrame(update);
-}
-
-// Run scramble animation to all elements with .scramble class
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.querySelectorAll(".scramble").forEach((element) => {
-            runScrambleAnimation(element);
-        });
+      init();
     }
+  });
+})();
 
+(function tiltCard() {
+  document.addEventListener("DOMContentLoaded", function () {
     if (window.matchMedia("(pointer: fine)").matches && window.VanillaTilt) {
-        VanillaTilt.init(document.querySelectorAll(".tilt-card"));
+      VanillaTilt.init(document.querySelectorAll(".tilt-card"));
     }
-});
+  });
+})();
