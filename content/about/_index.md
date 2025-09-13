@@ -14,7 +14,7 @@ My name is **Ethan Marks**
 
 I'm a **software developer**
 
-I'm **14** years old
+I'm **15** years old
 {{< /column >}}
 {{< /row >}}
 
