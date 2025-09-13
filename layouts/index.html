@@ -31,9 +31,45 @@
     <p>I enjoy writing software and automating things with code. I've been programming for the majority of my life, and I spend most of my free time working on my various projects, including the website you're on right now.</p>
     <div id="projects">
         <h3>Featured Projects</h3>
-        <div><a href="/posts/asciiglobe/">ASCII-Globe</a></div>
-        <div><a href="/posts/thessa/">Thessa</a></div>
-        <div><a href="/posts/colourlesstransformer/">ColourlessTransformer</a></div>
+        <div class="cards-grid">
+            <div class="card">
+                <a href="/posts/asciiglobe/" class="card-link">
+                    <img
+                        src="/media/ascii_globe_frame.webp"
+                        alt="A spinning globe rendered with text"
+                        class="card-image"
+                    >
+                    <h4>ASCII-Globe</h4>
+                    <p>A text-based cartographic rendering engine that uses NASA satellite data</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/posts/thessa/" class="card-link">
+                    <img
+                        src="/media/thessascreenshot.webp"
+                        alt="A screenshot of the Thessa interface showing synonyms for the word &lsquo;screenshot&rsquo;"
+                        width="1869"
+                        height="964"
+                        class="card-image"
+                    >
+                    <h4>Thessa</h4>
+                    <p>An AI-powered thesaurus that uses the Gemini API</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/posts/colourlesstransformer/" class="card-link">
+                    <img
+                        src="/media/painttransformer_walkway.webp"
+                        alt="A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
+                        width="1366"
+                        height="614"
+                        class="card-image"
+                    >
+                    <h4>ColourlessTransformer</h4>
+                    <p>A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes</p>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 <section id="write">
@@ -41,9 +77,47 @@
     <p>I love to write, and I publish some of my more coherent pieces here on my personal website as posts. I've written technical articles, word collections, poems, short stories, and more.</p>
     <div id="posts">
         <h3>Featured Posts</h3>
-        <div><a href="/posts/liquidglass/">Thoughts on Liquid Glass</a></div>
-        <div><a href="/posts/waterman/">The Waterman Butterfly</a></div>
-        <div><a href="/posts/quanth/">I have invented a new measurement system</a></div>
+        <div class="cards-grid">
+            <div class="card">
+                <a href="/posts/liquidglass/" class="card-link">
+                    <img
+                        src="/media/liquid_glass_banner.webp"
+                        alt="Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass"
+                        width="1199"
+                        height="663"
+                        class="card-image"
+                    >
+                    <h4>Thoughts on Liquid Glass</h4>
+                    <p>My thoughts on Apple's new Liquid Glass design</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/posts/waterman/" class="card-link">
+                    <img
+                        src="/media/waterman_poster.webp"
+                        alt="An unusual world map in a butterfly shape, showing the continents arranged in eight connected lobes"
+                        width="550"
+                        height="550"
+                        class="card-image"
+                    >
+                    <h4>The Waterman Butterfly</h4>
+                    <p>An exploration of the Waterman Butterfly map projection</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/posts/quanth/" class="card-link">
+                    <img
+                        src="/media/plancklengthfoam.webp"
+                        alt="An illustrated graphic depicting quantum foam"
+                        width="1186"
+                        height="687"
+                        class="card-image"
+                    >
+                    <h4>I have invented a new measurement system</h4>
+                    <p>A proposal for a new measurement system based on Planck lengths and quantum physics</p>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 {{ end }}

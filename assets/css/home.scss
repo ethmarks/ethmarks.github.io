@@ -11,6 +11,18 @@ $font-size-name: 4rem;
 $font-size-vocation: 1.8rem;
 
 $intro-top-margin: clamp(2px, 5rem, 20vh);
+$section-margin-top: clamp(3rem, 8vw, 5rem);
+$subsection-margin-top: $spacing-lg;
+
+// Section-specific variables
+$section-padding: $spacing-xl;
+$section-padding-mobile: $spacing-lg;
+$section-border-radius: $radius-xl;
+
+// Card variables
+$card-gap: $spacing-lg;
+$card-padding: $spacing-lg;
+$cards-per-row: 3;
 
 #intro {
     align-items: center;
@@ -97,5 +109,161 @@ $intro-top-margin: clamp(2px, 5rem, 20vh);
         opacity: 1;
         transform: scale(1) rotate(0deg);
         filter: blur(0)
+    }
+}
+
+// Content sections styling
+section:not(#intro) {
+    margin-top: $section-margin-top;
+    padding: $section-padding;
+    border-radius: $section-border-radius;
+    border: $border-light;
+    transition: $transition-transform-shadow;
+
+    @include mobile {
+        padding: $section-padding-mobile;
+        border-radius: $radius-lg;
+    }
+
+    h2 {
+        margin-bottom: $spacing-md;
+        color: $color-text;
+    }
+
+    p {
+        margin-bottom: $spacing-md;
+        color: $color-text-secondary;
+        line-height: 1.6;
+    }
+
+    > a {
+        display: inline-block;
+        margin-top: $spacing-sm;
+        padding: $spacing-xs $spacing-md;
+        background: $color-accent-transparent-10;
+        border: $border-accent;
+        border-radius: $radius-round;
+        transition: $transition-default;
+        font-weight: $font-weight-normal;
+
+        &:hover {
+            background: $color-accent-transparent-20;
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+    }
+}
+
+// Distinctive section backgrounds
+#about {
+    background: linear-gradient(135deg, $color-panel, rgba($color-panel, 0.8));
+    box-shadow: $shadow-card;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-card-hover;
+    }
+}
+
+#build {
+    background: linear-gradient(135deg, rgba($color-accent, 0.08), rgba($color-panel, 0.9));
+    border-color: $color-accent-transparent-20;
+    box-shadow: 0 4px 12px rgba($color-accent, 0.1);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($color-accent, 0.15);
+    }
+}
+
+#write {
+    background: linear-gradient(135deg, rgba($color-text, 0.05), rgba($color-panel, 0.85));
+    box-shadow: $shadow-card;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-card-hover;
+    }
+}
+
+// Cards styling
+#projects, #posts {
+    margin-top: $subsection-margin-top;
+
+    h3 {
+        margin-bottom: $spacing-md;
+        color: $color-text;
+        font-size: $font-size-h4;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat($cards-per-row, 1fr);
+        gap: $card-gap;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: $spacing-md;
+        }
+
+        .card {
+            background: $color-card;
+            border-radius: $radius-lg;
+            border: $border-light;
+            transition: $transition-transform-shadow;
+            overflow: hidden;
+
+            &:hover {
+                transform: translateY(-3px) scale(1.02);
+                box-shadow: $shadow-card-hover;
+                border-color: $color-accent-transparent-30;
+            }
+
+            .card-link {
+                display: block;
+                color: $color-text;
+                text-decoration: none;
+                height: 100%;
+                box-sizing: border-box;
+
+                .card-image {
+                    width: 100%;
+                    height: 160px;
+                    object-fit: cover;
+                    border-radius: $radius-lg $radius-lg 0 0;
+                    transition: $transition-default;
+                }
+
+                h4 {
+                    margin: 0 0 $spacing-xs 0;
+                    padding: 0 $card-padding;
+                    padding-top: $spacing-md;
+                    font-size: $font-size-h4;
+                    font-family: $font-secondary;
+                    color: $color-link;
+                    line-height: 1.3;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0 $card-padding $card-padding;
+                    font-size: $font-size-sm;
+                    color: $color-text-secondary;
+                    line-height: 1.5;
+                }
+
+                &:hover {
+                    text-decoration: none;
+
+                    .card-image {
+                        transform: scale(1.05);
+                    }
+
+                    h4 {
+                        color: $color-accent-light;
+                    }
+                }
+            }
+        }
     }
 }

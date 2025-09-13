@@ -27,6 +27,9 @@ $color-panel-zebra: darken($color-panel, 1%);
 $color-panel-dark: darken($color-panel, 3%);
 $color-panel-hover: transparentize(lighten($color-panel, 7%), 0.5);
 
+$color-card: rgba(40, 40, 40, 0.8);
+$color-card-hover: rgba(50, 50, 50, 0.9);
+
 $mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
 $mint-blend: mix($color-accent, $color-text, 75%);
 
@@ -102,6 +105,8 @@ $radius-round: 18px;
 $color-shadow-standard: rgba(black, 0.2);
 $color-shadow-accent: $color-accent-transparent-30;
 $color-shadow-accent-hover: $color-accent-transparent-40;
+$shadow-card: 0 4px 12px rgba(black, 0.15);
+$shadow-card-hover: 0 8px 24px rgba(black, 0.25);
 
 // =========================================================================
 // TRANSITION
