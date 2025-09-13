@@ -18,6 +18,7 @@ $subsection-margin-top: $spacing-lg;
 $section-padding: $spacing-xl;
 $section-padding-mobile: $spacing-lg;
 $section-border-radius: $radius-xl;
+$section-entrance-offset: 35px;
 
 // Card variables
 $card-gap: $spacing-lg;
@@ -112,6 +113,13 @@ $cards-per-row: 3;
     }
 }
 
+@keyframes sectionEntrance {
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 // Content sections styling
 section:not(#intro) {
     margin-top: $section-margin-top;
@@ -119,6 +127,26 @@ section:not(#intro) {
     border-radius: $section-border-radius;
     border: $border-light;
     transition: $transition-transform-shadow;
+
+    @include motion {
+        opacity: 0;
+
+        @include tall {
+            &:nth-child(even) {
+                transform: translateX($section-entrance-offset * -1);
+            }
+            &:nth-child(odd) {
+                transform: translateX($section-entrance-offset);
+            }
+        }
+
+        @include notTall {
+            transform: translateY($section-entrance-offset);
+        }
+
+        animation: sectionEntrance 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        animation-delay: calc(0.2s + var(--child-animation-delay));
+    }
 
     @include mobile {
         padding: $section-padding-mobile;
