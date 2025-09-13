@@ -12,7 +12,7 @@ layout: about/list
 
 My name is **Ethan Marks**
 
-I'm an aspiring **software engineer**
+I'm a **software developer**
 
 I'm **14** years old
 {{< /column >}}
