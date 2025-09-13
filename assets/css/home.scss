@@ -293,4 +293,8 @@ section:not(#intro) {
 
 main {
     margin-bottom: $card-gap;
+
+    @include mobile {
+        max-width: 92vw;
+    }
 }
