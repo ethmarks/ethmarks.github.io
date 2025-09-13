@@ -164,7 +164,7 @@ section:not(#intro) {
         line-height: 1.6;
     }
 
-    > a {
+    .link-capsule {
         display: inline-block;
         margin-top: $spacing-sm;
         padding: $spacing-xs $spacing-md;
