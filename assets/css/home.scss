@@ -214,6 +214,17 @@ section:not(#intro) {
     }
 }
 
+#contact {
+    background: linear-gradient(135deg, rgba($color-accent, 0.12), rgba($color-panel, 0.9));
+    border-color: $color-accent-transparent-30;
+    box-shadow: 0 4px 12px rgba($color-accent, 0.1);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($color-accent, 0.15);
+    }
+}
+
 // Cards styling
 #projects, #posts {
     margin-top: $subsection-margin-top;
