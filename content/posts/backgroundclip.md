@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: Firefox is the only browser that handles background-clip correctly
 date: 2025-07-11
 tags: [programming, webdev, personal website]
@@ -25,18 +26,14 @@ On Firefox, all text contained within a background-clipped element is considered
 
 I looked into ways to fix this, but all of them either ruined the effect or just didn't work. Each word has be in a separate span for the staggered animation to work, and setting the gradient effect at the span level would cause the gradient to only cover that one span and then start over for the next one; what I want is for the gradient to smoothly fade across the whole element.
 
-In the end, I settled on just using a solid mint colour by default, and adding a `@supports (-moz-appearance: none)` selector (which only works on Firefox) that sets the mint gradient. This way, Chromium browsers ignore the code and get solid colour, while Firefox reads it and gets the gradient.
+In the end, I settled on using the mint gradient by default, but adding a bit of code that removes the gradient if the browser is *not* running in Firefox.
 
-```css
+```scss
 h1 {
-    color: var(--color-h1);
-
-    @supports (-moz-appearance: none) {
-        /* Add a cool gradient on Firefox; other browsers don't support it :( */
-        background: $mint-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    @include mint;
+    @supports not (-moz-appearance: none) {
+            @include nomint;
+        }
     }
 }
 ```

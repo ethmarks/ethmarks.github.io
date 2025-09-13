@@ -32,10 +32,7 @@ header {
     #title {
         font-weight: $font-weight-light !important;
         display: inline-block;
-        background: $mint-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include mint;
         font-family: $font-secondary;
         font-size: clamp(1.1rem, 4vw, 2rem);
         flex-shrink: 1;

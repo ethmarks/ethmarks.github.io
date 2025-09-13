@@ -44,4 +44,17 @@
     @media (max-height: 1200px) {
         @content
     }
+  
+@mixin nomint {
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: unset;
+}
+
+@mixin mint {
+    background: $mint-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

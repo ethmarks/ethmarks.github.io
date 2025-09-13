@@ -1,10 +1,3 @@
-@mixin nomint {
-    background: none;
-    background-clip: none;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: unset;
-}
-
 p,
 li {
     font-weight: $font-weight-normal;
@@ -27,10 +20,7 @@ h1 {
     margin: 0 0 0 $frontmatter-margin-left;
     font-weight: $font-weight-bold;
     color: $mint-blend;
-    background: $mint-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include mint;
 
     &.chromium-nomint {
         @supports not (-moz-appearance: none) {
@@ -57,12 +47,12 @@ h4 {
 
 a {
     color: $color-link;
-    text-decoration: none;
-    transition: color $transition-duration-fast $transition-timing;
+    text-decoration: underline;
+    text-decoration-color: $color-link-underline;
+    transition: text-decoration-color $transition-duration-fast $transition-timing;
 
     &:hover {
-        color: $color-link-hover;
-        text-decoration: underline;
+        text-decoration-color: $color-link-underline-hover;
     }
 
     &:focus-visible {
@@ -79,46 +69,6 @@ a {
         line-height: 1em;
     }
     */
-
-    blockquote {
-        font-style: italic;
-        position: relative;
-
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 3px;
-            height: 100%;
-            margin: 0 -1em 0;
-            background: $color-accent;
-            border-radius: 2px;
-            float: left;
-        }
-
-        &.centered-blockquote {
-            font-style: normal;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.15rem;
-
-            &::before {
-                display: none;
-            }
-        }
-    }
-
-    ul {
-        list-style: disc inside;
-        padding-left: $spacing-lg;
-
-        & li {
-            line-height: 1.6;
-            transition: color $transition-duration-fast
-                $transition-timing;
-        }
-    }
 }
 
 blockquote {
@@ -162,10 +112,7 @@ ul {
 }
 
 .mint {
-    background: $mint-gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include mint;
 }
 
 .nomint {
