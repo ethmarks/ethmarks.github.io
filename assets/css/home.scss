@@ -125,7 +125,7 @@ section:not(#intro) {
     margin-top: $section-margin-top;
     padding: $section-padding;
     border-radius: $section-border-radius;
-    border: $border-light;
+    border: $border-light-2px;
     transition: $transition-transform-shadow;
 
     @include motion {
@@ -181,49 +181,32 @@ section:not(#intro) {
             text-decoration: none;
         }
     }
+
+    @media (pointer: fine) {
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba($color-accent, 0.15);
+        }
+    }
 }
 
 // Distinctive section backgrounds
 #about {
     background: linear-gradient(135deg, $color-panel, rgba($color-panel, 0.8));
-    box-shadow: $shadow-card;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: $shadow-card-hover;
-    }
 }
 
 #build {
     background: linear-gradient(135deg, rgba($color-accent, 0.08), rgba($color-panel, 0.9));
     border-color: $color-accent-transparent-20;
-    box-shadow: 0 4px 12px rgba($color-accent, 0.1);
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba($color-accent, 0.15);
-    }
 }
 
 #write {
     background: linear-gradient(135deg, rgba($color-text, 0.05), rgba($color-panel, 0.85));
-    box-shadow: $shadow-card;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: $shadow-card-hover;
-    }
 }
 
 #contact {
     background: linear-gradient(135deg, rgba($color-accent, 0.12), rgba($color-panel, 0.9));
     border-color: $color-accent-transparent-30;
-    box-shadow: 0 4px 12px rgba($color-accent, 0.1);
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba($color-accent, 0.15);
-    }
 }
 
 // Cards styling
