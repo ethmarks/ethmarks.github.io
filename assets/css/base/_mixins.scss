@@ -44,7 +44,8 @@
     @media (max-height: 1200px) {
         @content
     }
-  
+}
+
 @mixin nomint {
     background: none;
     background-clip: none;
