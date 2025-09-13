@@ -173,6 +173,7 @@ section:not(#intro) {
         border-radius: $radius-round;
         transition: $transition-default;
         font-weight: $font-weight-normal;
+        text-decoration: none;
 
         &:hover {
             background: $color-accent-transparent-20;
