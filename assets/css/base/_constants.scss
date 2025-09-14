@@ -110,6 +110,8 @@ $color-shadow-accent: $color-accent-transparent-30;
 $color-shadow-accent-hover: $color-accent-transparent-40;
 $shadow-card: 0 4px 12px rgba(black, 0.15);
 $shadow-card-hover: 0 8px 24px rgba(black, 0.25);
+$shadow-accent: 0 4px 12px $color-shadow-accent;
+$shadow-accent-hover: 0 0 16px $color-shadow-accent-hover;
 
 // =========================================================================
 // TRANSITION
