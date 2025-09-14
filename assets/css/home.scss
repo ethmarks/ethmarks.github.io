@@ -181,13 +181,6 @@ section:not(#intro) {
             text-decoration: none;
         }
     }
-
-    @media (pointer: fine) {
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba($color-accent, 0.15);
-        }
-    }
 }
 
 // Distinctive section backgrounds
@@ -234,11 +227,12 @@ section:not(#intro) {
             border-radius: $radius-lg;
             border: $border-light;
             transition: $transition-transform-shadow;
+            box-shadow: $shadow-standard;
             overflow: hidden;
 
             &:hover {
                 transform: translateY(-3px) scale(1.02);
-                box-shadow: $shadow-card-hover;
+                box-shadow: $shadow-standard-hover;
                 border-color: $color-accent-transparent-30;
             }
 

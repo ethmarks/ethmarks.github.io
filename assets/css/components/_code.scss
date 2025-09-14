@@ -13,7 +13,6 @@ pre {
     padding: 18px;
     border-radius: $radius-xl;
     border: $border-standard;
-    box-shadow: var(--shadow-table);
     transition: $transition-transform-shadow;
 
     &.width-overflow {
@@ -21,7 +20,7 @@ pre {
     }
 
     &:hover {
-        box-shadow: var(--shadow-table-hover);
+        box-shadow: $shadow-accent-hover;
     }
 
     & code {
