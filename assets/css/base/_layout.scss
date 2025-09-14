@@ -15,7 +15,7 @@ html {
     /* Base for rem units (usually 16px) */
     scroll-behavior: smooth;
 
-    @media (pointer: fine) {
+    @include fine {
         overscroll-behavior: none;
     }
 }

@@ -11,8 +11,8 @@ table {
     transition: $transition-transform-shadow;
     overflow: hidden;
 
-    &:hover {
-        @media (pointer: fine) {
+    @include fine {
+        &:hover {
             box-shadow: $shadow-accent-hover;
         }
     }
@@ -52,7 +52,7 @@ table {
         }
 
         &:hover td {
-            @media (pointer: fine) {
+            @include fine {
                 background-color: $color-panel-hover;
                 color: $color-text;
             }

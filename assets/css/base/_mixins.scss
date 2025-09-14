@@ -1,36 +1,42 @@
 @mixin mobile {
   @media (max-width: 768px) {
-    @content;
+    @content
   }
 }
 
 @mixin notMobile {
     @media (min-width: 768px) {
-      @content;
+      @content
     }
 }
 
 @mixin desktop {
     @media (min-width: 1200px) {
-        @content;
+        @content
     }
 }
 
 @mixin notDesktop {
     @media (max-width: 1200px) {
-        @content;
+        @content
+    }
+}
+
+@mixin fine {
+    @media (pointer: fine) {
+        @content
     }
 }
 
 @mixin motion {
     @media (prefers-reduced-motion: no-preference) {
-        @content;
+        @content
     }
 }
 
 @mixin noMotion {
     @media (prefers-reduced-motion: reduce) {
-        @content;
+        @content
     }
 }
 
