@@ -16,8 +16,6 @@ $footer-margin-top: 0px;
 $footer-margin-sides: 10px;
 $footer-margin-bottom: 5px;
 
-$footer-width: 100vw;
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -34,16 +32,15 @@ footer {
     bottom: 0;
 
     @include mobile {
-        width: $footer-width;
+        width: 100vw;
         border-top: $footer-border;
         border-radius: 0;
         margin: 0;
     }
 
     @include notMobile {
-        --footer-width: $footer-width;
         --footer-margin-sides: $footer-margin-sides;
-        width: calc(var(--footer-width) - var(--footer-margin-sides) * 2);
+        width: calc(100vw - 20px);
         border: $footer-border;
         border-radius: $footer-radius;
         margin: $footer-margin-top $footer-margin-sides $footer-margin-bottom;
