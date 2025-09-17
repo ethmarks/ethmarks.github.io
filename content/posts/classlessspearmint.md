@@ -3,6 +3,9 @@ title: ClasslessSpearmint
 date: 2025-07-20
 tags: [webdev, programming, ai, codepen]
 description: ClasslessSpearmint is a Classless CSS style that aesthetically styles raw HTML with my website's theme without needing to assign HTML classes
+link: https://github.com/ethmarks/ClasslessSpearmint
+link_name: GitHub Repo
+link_icon: github
 ---
 
 Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/posts/scrambleanim)), I usually include this single line of code.
@@ -11,7 +14,7 @@ Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.
 @import url("https://cdn.jsdelivr.net/npm/yorha@1.2.0/dist/yorha.min.css")
 ```
 
-What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://ubershmekel.medium.com/the-next-css-frontier-classless-5e66f3f25fdd) theme.
+What this snippet does is import [Yorha](https://www.cssbed.com/yorha/), a [Classless CSS](https://css-tricks.com/no-class-css-frameworks/) theme.
 
 ## What is Classless CSS?
 
@@ -43,24 +46,24 @@ So I went back to Gemini and asked for a Classless CSS test suite. After several
 
 Here's what the test suite looks like with ClasslessSpearmint applied.
 
-{{< iframe src="https://codepen.io/ethmarks/embed/XJmXBNO?default-tab=result" title="ClasslessSpearmint Test Suite" >}}
+{{< iframe src="https://ethmarks.github.io/ClasslessSpearmint/spearmint_demo.html" title="ClasslessSpearmint Test Suite" >}}
 
 If you'd like to compare them, here's the same demo but using Yorha.
 
-{{< iframe src="https://codepen.io/ethmarks/embed/jEbWvVo?default-tab=result" title="Yorha Test Suite" >}}
+{{< iframe src="https://ethmarks.github.io/ClasslessSpearmint/yorha_demo.html" title="Yorha Test Suite" >}}
 
 ## Usage
 
-If you'd like to use ClasslessSpearmint yourself, just include this snippet in your HTML head.
+If you'd like to use ClasslessSpearmint yourself, just include this line in your HTML head.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ethmarks/ethmarks.github.io@latest/static/classlessspearmint.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ethmarks/ClasslessSpearmint@main/classlessspearmint.css">
 ```
 
-Or, if you're using CodePen, include this snippet in the CSS.
+Or you can include this line at the top of a CSS stylesheet.
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/ethmarks/ethmarks.github.io@latest/static/classlessspearmint.css");
+@import url("https://cdn.jsdelivr.net/gh/ethmarks/ClasslessSpearmint@main/classlessspearmint.css");
 ```
 
 ## Conclusion
