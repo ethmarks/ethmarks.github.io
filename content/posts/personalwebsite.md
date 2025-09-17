@@ -122,7 +122,7 @@ This site is designed to be accessible to as many users as possible. I've done m
 
 ## Authoring
 
-Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) for things like iFrames, but I mostly stick with plain Markdown syntax.
+Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) for things like iframes, but I mostly stick with plain Markdown syntax.
 
 I use the [Zed editor](~/switchingtozed) for all of my coding and most of my post writing, but I write the longer and more heavily-researched posts in [Obsidian](https://obsidian.md/).
 

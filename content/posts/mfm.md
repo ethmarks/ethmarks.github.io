@@ -31,9 +31,9 @@ I'm pretty sure that I'll be adding more features at some point in the future, s
 
 ## MFM v1
 
-### iFrames
+### iframes
 
-[HTML Inline Frames](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe) (iFrames) can be declared in MFM by using double square brackets that contain the iFrame title, followed by a parenthetical that contains the iFrame source. It was inspired by Obsidian Flavored Markdown's [note embedding syntax](https://help.obsidian.md/embeds).
+[HTML Inline Frames](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe) (iframes) can be declared in MFM by using double square brackets that contain the iframe title, followed by a parenthetical that contains the iframe source. It was inspired by Obsidian Flavored Markdown's [note embedding syntax](https://help.obsidian.md/embeds).
 
 For example, the following Markdown...
 
@@ -55,7 +55,7 @@ For example, the following Markdown...
 </iframe>
 ```
 
-I suggest the following [regular expression](https://en.wikipedia.org/wiki/Regular_expression) for capturing the content of iFrame declarations.
+I suggest the following [regular expression](https://en.wikipedia.org/wiki/Regular_expression) for capturing the content of iframe declarations.
 
 ```regex
 r"!\[\[(.*?)\]\]\((.*?)\)"
@@ -112,7 +112,7 @@ The usage of the term "GIF" is obviously derived from the [GIF image format](htt
 
 #### YouTube
 
-In MFM, a media element is parsed into a [YouTube embedded player](https://developers.google.com/youtube/player_parameters) via an iFrame if the address of the media src starts with "https://www.youtube.com" or similar. For example, the following Markdown...
+In MFM, a media element is parsed into a [YouTube embedded player](https://developers.google.com/youtube/player_parameters) via an iframe if the address of the media src starts with "https://www.youtube.com" or similar. For example, the following Markdown...
 
 ```markdown
 ![Test](https://www.youtube.com/watch?v=hS_AXRRnIzM)

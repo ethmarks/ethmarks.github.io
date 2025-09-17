@@ -53,7 +53,7 @@ There are a few consequences of switching to Hugo, though.
 
 ### Less Powerful
 
-To process and render templates, build.py used hardcoded Python functions that searched for text that matched a regex, extracted it, processed it, and injected the result back in. For example, there was one function, `parse_iframe()`, that implemented the [MFM iFrame tag](/posts/mfm#iframes).
+To process and render templates, build.py used hardcoded Python functions that searched for text that matched a regex, extracted it, processed it, and injected the result back in. For example, there was one function, `parse_iframe()`, that implemented the [MFM iframe tag](/posts/mfm#iframes).
 
 ```python
 def parse_iframe(body):
