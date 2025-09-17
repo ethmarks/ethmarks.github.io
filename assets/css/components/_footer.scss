@@ -1,17 +1,12 @@
 @import 'base/mixins';
 
-$footer-bg: rgba(255, 255, 255, 0.1);
+$footer-bg: mix(white, $color-background, 10%);
 $footer-border-color: rgba(255, 255, 255, 0.18);
 $footer-border: 1px solid $footer-border-color;
-
 $footer-radius: $radius-lg;
-
-$footer-blur: 10px;
-
 $footer-padding-top: 10px;
 $footer-padding-sides: 25px;
 $footer-padding-bottom: 5px;
-
 $footer-margin-top: 0px;
 $footer-margin-sides: 10px;
 $footer-margin-bottom: 5px;
@@ -21,12 +16,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     background: $footer-bg;
-    backdrop-filter: blur($footer-blur);
-    transform: translate3d(0, 0, 0);
     padding: $footer-padding-top $footer-padding-sides $footer-padding-bottom;
     box-sizing: border-box;
     color: $color-text;
     z-index: 9999;
+    isolation: isolate;
     transition: position 0.2s;
     position: fixed;
     bottom: 0;
@@ -39,7 +33,6 @@ footer {
     }
 
     @include notMobile {
-        --footer-margin-sides: $footer-margin-sides;
         width: calc(100vw - 20px);
         border: $footer-border;
         border-radius: $footer-radius;
