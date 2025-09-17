@@ -20,7 +20,7 @@ I'm **15** years old
 
 {{< row >}}
 {{< column >}}
-![Ethan, a fair-skinned brown-haired teenager, sitting on a boulder and smiling pleasantly underneath a tree](~/ethan_bio.webp)
+![Ethan, a fair-skinned brown-haired teenager, wearing a white-collared button-up shirt, gently smiling at the camera while leaning against a railing. A vibrant, slightly blurred forest is visible in the background](~/ethan_about.webp)
 
 {{< /column >}}
 {{< /row >}}
