@@ -15,14 +15,14 @@ figure {
 
 .responsive {
     max-width: var(--media-width);
-    max-height: var(--max-media-height);
+    max-height: $max-media-height;
     width: auto;
     height: auto;
     border-radius: $radius-xl;
     border: $border-standard;
 
     &.media-verytall {
-        max-height: var(--max-media-height-verytall);
+        max-height: $max-media-height-verytall;
     }
 }
 
@@ -36,11 +36,11 @@ iframe {
 }
 
 .bigimage {
-    max-width: var(--max-media-width-big);
-    max-height: var(--max-media-height-big);
+    max-width: $max-media-width-big;
+    max-height: $max-media-height-big;
 }
 
 .smallimage {
-    max-width: var(--max-media-width-small);
-    max-height: var(--max-media-height-small);
+    max-width: $max-media-width-small;
+    max-height: $max-media-height-small;
 }

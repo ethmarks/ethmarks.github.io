@@ -1,17 +1,7 @@
+@import 'constants';
+
 :root {
-    /* Media Sizes */
     --media-width: clamp(300px, 60vw, 1000px);
-    --max-media-height: 800px;
-    --max-media-height-verytall: 1000px;
-    --max-media-width-big: clamp(70vw, 80vw, 800px);
-    --max-media-height-big: 70vh;
-    --max-media-width-small: clamp(25vw, 30vw, 250px);
-    --max-media-height-small: 30vh;
-
-    @include mobile {
-        --media-width: 100%;
-    }
-
-    /* Misc */
+    @include mobile {--media-width: 100%;}
     --child-animation-delay: 0s;
 }
