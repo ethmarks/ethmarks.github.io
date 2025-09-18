@@ -1,0 +1,19 @@
+{{- with (. | printf "js/%s") -}}
+{{- $ext := path.Ext . -}}
+{{- $asset := resources.Get . -}}
+{{- if not $asset -}}
+    {{- errorf "Asset not found: %s" . -}}
+{{- end -}}
+{{- if not (eq $ext ".js") }}
+    {{- errorf "Non-script asset used with js partial: %s" . -}}
+{{- end -}}
+{{- $processed := $asset -}}
+{{- $processed = $processed | minify -}}
+{{- $attr := "defer" -}}
+{{- if strings.HasSuffix . ".sync.js" }}
+{{- $attr = ""  -}}
+{{- else if strings.HasSuffix . ".async.js" }}
+{{- $attr = "async"  -}}
+{{- end -}}
+<script src="{{ $processed.Permalink }} {{ $attr }}"></script>
+{{- end -}}
