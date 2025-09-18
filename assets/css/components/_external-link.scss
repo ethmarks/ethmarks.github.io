@@ -15,7 +15,7 @@
             $color-accent
         );
         color: $color-text-inverse;
-        font-weight: var(--font-weight-semibold);
+        font-weight: $font-weight-semibold;
         text-decoration: none;
         border-radius: $radius-xl;
         font-size: $font-size-md;
