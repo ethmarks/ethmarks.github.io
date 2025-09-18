@@ -59,15 +59,14 @@ Every page layout has its own Sass file that imports the modules that page needs
 @import 'components/random-post-btn';
 ```
 
-These Sass files are then transpiled into normal CSS and imported into the page using my custom `load-assets` [partial](https://gohugo.io/functions/partials/include/) that allows me to just input a list of assets, and have the partial automatically generate the HTML imports. For example, here's the code that the posts page uses.
+These Sass files are then transpiled into normal CSS and imported into the page using some custom [partials](https://gohugo.io/functions/partials/include/) I wrote that take a file name as an input and automatically minifies and transpiles the asset, and then generates the HTML import for that file. For example, here's the code at the top of [the posts index page](/posts).
 
 ```go-html-template
-{{ define "resources" }}
-{{ partial "load-assets.html" (slice "css/posts.scss" "js/components/randompost.js") }}
-{{ end }}
+{{ partial "css.html" "posts.scss" }}
+{{ partial "js.html" "components/randompost.js" }}
 ```
 
-And here's the HTML that the partial generates.
+And here's the HTML that the partial generates. Note that it transpiled the SCSS into CSS, minified both assets, and added `defer` to the script.
 
 ```html
 <link rel="stylesheet" href="/css/posts.min.css" />
@@ -109,7 +108,7 @@ As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://deve
 
 My site's performance is largely due to it being lightweight and carefully optimized.
 - **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use [JSX](https://react.dev/learn/writing-markup-with-jsx) and [client-side rendering](https://developer.mozilla.org/en-US/docs/Glossary/CSR) to dynamically [hydrate](https://en.wikipedia.org/wiki/Hydration_(web_development)) their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
-- **Optimized CSS and JS**: Each page on my site only loads the resources that it needs, and the resources that it does import are minified. I used my custom `load-assets` partial to automate this process slightly. I discussed `load-assets` in more detail in the [Sass](#sass) section. This per-page approach minimizes the data that needs to be downloaded and allows the page to load faster.
+- **Optimized CSS and JS**: Each page on my site only loads the resources that it needs, and the resources that it does import are minified. I used custom partials to automate this process slightly, as discussed in the [Sass section](#sass). This per-page approach minimizes the data that needs to be downloaded and allows the page to load faster.
 - **Optimized Images and Videos**: The images, videos, and animations on my website use the [WebP](https://en.wikipedia.org/wiki/WebP) and [WebM](https://en.wikipedia.org/wiki/WebM) formats, which allows them to load faster and use less data.
 
 ## Privacy
