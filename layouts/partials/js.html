@@ -15,5 +15,5 @@
 {{- else if strings.HasSuffix . ".async.js" }}
 {{- $attr = "async"  -}}
 {{- end -}}
-<script src="{{ $processed.Permalink }} {{ $attr }}"></script>
+<script src="{{ $processed.Permalink }}" {{ $attr }}></script>
 {{- end -}}
