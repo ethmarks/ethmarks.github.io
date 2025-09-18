@@ -4,7 +4,8 @@
 {{ partial "metadata.html" . -}}
 {{- block "resources" . }}{{ end }}
 {{- block "default-resources" . -}}
-{{- partial "load-assets.html" (slice "js/common.sync.js" "js/vendor/quicklink.async.js") -}}
+{{ partial "js.html" "common.sync.js" }}
+{{ partial "js.html" "vendor/quicklink.async.js" }}
 {{- end -}}
 {{ partial "font-preload.html" . }}
 </head>

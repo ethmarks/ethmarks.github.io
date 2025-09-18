@@ -1,5 +1,6 @@
 {{ define "resources" }}
-{{- partial "load-assets.html" (slice "css/posts.scss" "js/components/randompost.js") -}}
+{{ partial "css.html" "posts.scss" }}
+{{ partial "js.html" "components/randompost.js" }}
 {{ end }}
 
 {{ define "main" }}
