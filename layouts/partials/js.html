@@ -11,9 +11,9 @@
 {{- $processed = $processed | minify -}}
 {{- $attr := "defer" -}}
 {{- if strings.HasSuffix . ".sync.js" }}
-{{- $attr = ""  -}}
+{{- $attr = "" -}}
 {{- else if strings.HasSuffix . ".async.js" }}
-{{- $attr = "async"  -}}
+{{- $attr = "async" -}}
 {{- end -}}
-<script src="{{ $processed.Permalink }}" {{ $attr }}></script>
+<script src="{{ $processed.Permalink }}" {{ $attr | safeHTMLAttr }}></script>
 {{- end -}}
