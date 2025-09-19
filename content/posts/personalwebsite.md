@@ -96,8 +96,19 @@ I self-host this site's fonts using [variable](https://fonts.google.com/knowledg
 
 ### Special Effects
 
-- **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a [gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) over a large sample space, I want to be the first to know so I can add a subtle blur to the main panel without tanking performance.
-- **404 Page Rings**: [The 404 page](/404) features a rotating grid of concentric rings of dots that also reacts to your mouse. I was inspired by [GitHub's 404 page](https://github.com/404) that cheekily says "this is not the web page you're looking for". Getting a 404 on GitHub is always delightful, and I tried to emulate that with my own 404 page.
+**404 Page Rings**: [My 404 page](/404) features a rotating grid of concentric rings of dots that also reacts to your mouse. I was inspired by [GitHub's 404 page](https://github.com/404) that cheekily says "this is not the web page you're looking for" with an Octocat dressed as Obi-Wan Kenobi. Getting a 404 on GitHub is always delightful, and I tried to emulate that with my own 404 page by adding a fun visual effect.
+
+**Mint Gradient**: All `<h1>` elements have a mint gradient applied to them. This gradient starts off at the standard **<span class="mint">spearmint teal</span>** accent color, and then fades into the standard white text color. This also applies to the title on the left side of my site header. This adds polish and branding.
+
+**Header Blur**: I love [glassmorphic](https://css.glass/) blur effects, so I added a 20 pixel gaussian blur effect to my site header. For performance reasons, the header is the *only* element on the site that has a significant gaussian blur. When I was first designing this site, I put blurs everywhere, including on the article background. Turns out, this makes the page really, really, really slow. Blurring the header adds polish, and *not* blurring anything else adds frames per second.
+
+**Header Nav Indicator**: The nav links in my site header glow when the current page is on their domain. Currently, the "Posts" nav link is glowing because you're on a post ([/posts/personalwebsite](/posts/personalwebsite)). On [my About page](/about), the "About" nav link glows. On [my Home page](/), the "Home" nav link glows. On my Projects page(/tags/projects), the "Projects" nav link glows. This helps with readability and polish.
+
+**Header Birthday Mode**: On my birthday (September 13), my site header glows pinkish-orange, the title on the left side strobes between pastel red, cyan, blue, sage, orange, and pink, and the cake and party emojis (🎂🎉) are appended to the title. This helps with "yay its my birthday".
+
+**Home Page Intro Text**: When [my Home page](/) first loads, the intro text starts off blurred and slightly floating, but then each character blurs and drops into place in sequence. This entrance animation adds polish.
+
+**Home Page Profile Picture Click**: If you click on my profile picture (the spearmint crystal thing) on [my Home page](/), the intro text expands (by adjusting the letter spacing) and activates several animations. The "Ahoy! I'm" flips 180 degrees in 3D space, the "Ethan Marks" glows and has a subtle 3D tilt, and the "Software Developer" turns teal. I added this because people kept trying to click on my profile picture and being disappointed that nothing happened, so I made something happen. This adds a fun bit of interactivity.
 
 ## Lighthouse
 

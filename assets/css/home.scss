@@ -73,7 +73,7 @@ $cards-per-row: 3;
             }
             #name .expand-char {
                 margin-right: 0.12em;
-                transform: perspective(200px) rotateY(20deg) scale(1.1) !important;
+                transform: perspective(200px) rotateY(15deg) scale(1.1) !important;
                 text-shadow: 0 0 15px $color-accent-transparent-30;
             }
             #vocation .expand-char {
