@@ -72,16 +72,30 @@ header {
             font-weight: $font-weight-light !important;
             cursor: pointer;
             transition:
-                background-color 0.2s ease,
-                transform 0.2s ease;
+                color 0.15s ease,
+                background-color 0.15s ease,
+                transform 0.2s ease,
+                border-bottom-color 0.3s ease;
             white-space: nowrap;
             text-decoration: none;
 
             &:hover {
+                color: $color-accent;
+                border-bottom-color: $color-accent-dark;
                 background-color: rgba(80, 80, 80, 0.7);
                 transform: translateY(-1px) scale(1.02);
                 text-decoration: none;
             }
+
+            &.active {
+                color: $color-accent;
+                border-bottom-color: $color-accent-dark;
+            }
+        }
+
+        &:hover a.active:not(:hover) {
+            color: $color-accent-transparent-40;
+            border-bottom-color: $color-accent-transparent-40;
         }
     }
 

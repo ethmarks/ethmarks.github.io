@@ -1,9 +1,9 @@
 <header>
     <a href="/" id="title" tabindex="0" aria-label="Home">Ethan Marks</a>
     <nav>
-        <a class="staggered" href="/">Home</a>
-        <a class="staggered" href="/about/">About</a>
-        <a class="staggered" href="/posts/">Posts</a>
-        <a class="staggered" href="/tags/projects/">Projects</a>
+        <a class="staggered{{ if .IsHome }} active{{ end }}" href="/">Home</a>
+        <a class="staggered{{ if eq .Section "about" }} active{{ end }}" href="/about/">About</a>
+        <a class="staggered{{ if eq .Section "posts" }} active{{ end }}" href="/posts/">Posts</a>
+        <a class="staggered{{ if eq .RelPermalink "/tags/projects/" }} active{{ end }}" href="/tags/projects/">Projects</a>
     </nav>
 </header>
