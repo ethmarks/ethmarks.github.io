@@ -71,6 +71,7 @@ $font-monospace: "Fira Code", monospace;
 
 $font-weight-normal: 400;
 $font-weight-light: 300;
+$font-weight-semibold: 500;
 $font-weight-bold: 600;
 $font-weight-code: 400;
 
@@ -128,20 +129,13 @@ $transition-transform-shadow: transform $transition-duration $transition-timing,
 $transition-transform: transform $transition-duration $transition-timing;
 $transition-background: background-color $transition-duration-fast $transition-timing;
 
-:root {
-    /* Media Sizes */
-    --media-width: clamp(300px, 60vw, 1000px);
-    --max-media-height: 800px;
-    --max-media-height-verytall: 1000px;
-    --max-media-width-big: clamp(70vw, 80vw, 800px);
-    --max-media-height-big: 70vh;
-    --max-media-width-small: clamp(25vw, 30vw, 250px);
-    --max-media-height-small: 30vh;
+// =========================================================================
+// MEDIA SIZES
+// =========================================================================
 
-    @include mobile {
-        --media-width: 100%;
-    }
-
-    /* Misc */
-    --child-animation-delay: 0s;
-}
+$max-media-height: 800px;
+$max-media-height-verytall: 1000px;
+$max-media-width-big: clamp(70vw, 80vw, 800px);
+$max-media-height-big: 70vh;
+$max-media-width-small: clamp(25vw, 30vw, 250px);
+$max-media-height-small: 30vh;

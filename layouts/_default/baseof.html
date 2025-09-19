@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 {{ partial "metadata.html" . -}}
-{{- block "resources" . }}{{ end }}
 {{- block "default-resources" . -}}
+{{ partial "css.html" "_global.scss" }}
 {{ partial "js.html" "common.sync.js" }}
 {{ partial "js.html" "vendor/quicklink.async.js" }}
 {{- end -}}
+{{- block "resources" . }}{{ end }}
 {{ partial "font-preload.html" . }}
 </head>
 <body>
