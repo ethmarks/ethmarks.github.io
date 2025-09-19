@@ -8,7 +8,7 @@
     {{- errorf "Non-script asset used with js partial: %s" . -}}
 {{- end -}}
 {{- $processed := $asset -}}
-{{- $processed = $processed | minify -}}
+{{- $processed = $processed | minify | fingerprint "md5" -}}
 {{- $attr := "defer" -}}
 {{- if strings.HasSuffix . ".sync.js" }}
 {{- $attr = "" -}}

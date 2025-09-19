@@ -11,6 +11,6 @@
 {{- if eq $ext ".scss" -}}
     {{- $processed = $processed | toCSS -}}
 {{- end -}}
-{{- $processed = $processed | minify -}}
+{{- $processed = $processed | minify | fingerprint "md5" -}}
 <link rel="stylesheet" href="{{ $processed.Permalink }}" />
 {{- end -}}
