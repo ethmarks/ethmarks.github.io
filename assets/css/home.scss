@@ -125,7 +125,6 @@ section:not(#intro) {
     margin-top: $section-margin-top;
     padding: $section-padding;
     border-radius: $section-border-radius;
-    border: $border-light-2px;
     transition: $transition-transform-shadow;
 
     @include motion {
@@ -186,20 +185,22 @@ section:not(#intro) {
 // Distinctive section backgrounds
 #about {
     background: linear-gradient(135deg, $color-panel, mix($color-panel, $color-background, 8%));
+    border: $border-standard-2px;
 }
 
 #build {
     background: linear-gradient(135deg, mix($color-accent, $color-background, 15%), mix($color-panel, $color-background, 9%));
-    border-color: $color-accent-transparent-20;
+    border: $border-accent-t-2px;
 }
 
 #write {
     background: linear-gradient(135deg, mix($color-text, $color-background, 5%), mix($color-panel, $color-background, 85%));
+    border: $border-light-2px;
 }
 
 #contact {
     background: linear-gradient(-45deg, mix($color-accent, $color-background, 12%), mix($color-panel, $color-background, 50%));
-    border-color: $color-accent-transparent-30;
+    border: $border-accent-t-2px;
 }
 
 // Cards styling

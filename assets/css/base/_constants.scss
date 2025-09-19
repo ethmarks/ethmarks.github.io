@@ -46,7 +46,8 @@ $color-border-light: rgba($color-border, 0.05);
 $border-colors: (
   'standard': $color-border-standard,
   'light': $color-border-light,
-  'accent': $color-accent
+  'accent': $color-accent,
+  'accent-t': $color-accent-transparent-30
 );
 @function border($type: 'standard', $width: 1px) {
   @return $width solid map-get($border-colors, $type);
@@ -57,6 +58,8 @@ $border-light: border('light', 1px);
 $border-light-2px: border('light', 2px);
 $border-accent: border('accent', 1px);
 $border-accent-2px: border('accent', 2px);
+$border-accent-t: border('accent-t', 1px);
+$border-accent-t-2px: border('accent-t', 2px);
 
 // =========================================================================
 // FONT
