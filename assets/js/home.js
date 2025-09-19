@@ -72,11 +72,3 @@
   }
   document.addEventListener('DOMContentLoaded', init);
 })();
-
-(function tiltCard() {
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.matchMedia("(pointer: fine)").matches && window.VanillaTilt) {
-      VanillaTilt.init(document.querySelectorAll(".tilt-card"));
-    }
-  });
-})();

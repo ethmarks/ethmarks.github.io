@@ -97,7 +97,6 @@ I self-host this site's fonts using [variable](https://fonts.google.com/knowledg
 ### Special Effects
 
 - **Blur**: I love [glassmorphic](https://css.glass/) blur effects, but due to performance concerns, I've only used it in the header and footer. If some mathematician figures out how to cheaply perform a [gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) over a large sample space, I want to be the first to know so I can add a subtle blur to the main panel without tanking performance.
-- **Tilt Cards**: The cards on the [home page](/) respond to the mouse by tilting in 3D. I used the [vanilla-tilt.js](https://micku7zu.github.io/vanilla-tilt.js/) library for this.
 - **404 Page Rings**: [The 404 page](/404) features a rotating grid of concentric rings of dots that also reacts to your mouse. I was inspired by [GitHub's 404 page](https://github.com/404) that cheekily says "this is not the web page you're looking for". Getting a 404 on GitHub is always delightful, and I tried to emulate that with my own 404 page.
 
 ## Lighthouse
