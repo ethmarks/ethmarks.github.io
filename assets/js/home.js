@@ -1,31 +1,6 @@
 (function textShimmer() {
   'use strict';
 
-  // Inject required styles
-  const styles = `
-        .text-shimmer-char {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-3px);
-            filter: blur(2px);
-            transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
-        }
-        .text-shimmer-char.in {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-        }
-    `;
-
-  function injectStyles() {
-    if (!document.getElementById('text-shimmer-styles')) {
-      const styleSheet = document.createElement('style');
-      styleSheet.id = 'text-shimmer-styles';
-      styleSheet.textContent = styles;
-      document.head.appendChild(styleSheet);
-    }
-  }
-
   function processElement(element) {
     const text = element.textContent;
     const delay = parseInt(element.dataset.shimmerDelay || '0', 10);
@@ -54,7 +29,6 @@
   }
 
   function init() {
-    injectStyles();
     document.querySelectorAll('.text-shimmer').forEach(processElement);
   }
 
@@ -63,6 +37,40 @@
       init();
     }
   });
+})();
+
+(function expandChatClick() {
+  'use strict';
+
+  let charExpanded = false;
+
+  function toggleExpandChar() {
+    const textElements = document.querySelectorAll('#intro #text .text-shimmer');
+
+    textElements.forEach(element => {
+      const chars = element.querySelectorAll('.text-shimmer-char');
+
+      chars.forEach((char, index) => {
+        setTimeout(() => {
+          if (!charExpanded) {
+            char.classList.remove('expand-char');
+          } else {
+            char.classList.add('expand-char');
+          }
+        }, index * 15);
+      });
+    });
+
+    charExpanded = !charExpanded;
+  }
+
+  function init() {
+    const pfp = document.getElementById('pfp');
+    if (pfp) {
+      pfp.addEventListener('click', toggleExpandChar);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', init);
 })();
 
 (function tiltCard() {
