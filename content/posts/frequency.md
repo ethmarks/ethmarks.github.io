@@ -37,53 +37,57 @@ At the bottom, Michael panned the flashlight across the vast room. Shelves lined
 
 Michael picked up the journal and started flipping through the pages. His breathing grew faster as he skimmed over Alfred's notes.
 
-> #### March 12, 2023
-> I wasn't supposed to be in the lab today. Rob had asked me to help with his experiments, but I was just passing the time. He left me alone with the equipment for a while, and I couldn't resist. The piezoelectric resonator--top of the line, a lot fancier than anything I've used before. I started playing around with it. I spun the dial and watched as the crystal buzzed. The dial happened to stop at 8.7539319 hertz, and something strange happened. The output was slightly lower than the estimate. It was subtle, barely noticeable, but my curiosity kicked in. To check if it was consistent in all frequencies, I tuned it slightly higher, to 8.7539320 hertz. The output was exactly as the instrument estimated. Then I tried 8.7539318--same thing, perfect. But when I went back to 8.7539319, the output dropped again.
-> 
-> I don't know what to make of it. No logical explanation comes to mind. Maybe an anomaly in the equipment? Or maybe... something else.
->
-> #### March 14, 2023
-> I spent the last two days trying to find an explanation. I scoured every academic paper I could find on piezoelectric resonance. Nothing. Nobody has encountered this phenomenon before. So today I went back to the lab under the pretense of helping Rob again, but my real interest was that resonator. The same thing happened. Exact same frequency--8.7539319--and the output dipped. I'm not imagining it. Something's happening, and I'm going to figure out what.
-> 
-> I used the oscilloscope and a few other instruments to measure the resonance more carefully. I can't let this go.
->
-> #### March 20, 2023
-> I'm in too deep now. I've spent almost every spare moment analyzing the phenomenon, and I still haven't told anyone. My home office is filling up with instruments I've bought online--expensive stuff, piezoelectric resonators, oscilloscopes, and frequency analyzers. But none of it feels like enough. I need better tools, more precision.
-> 
-> Something's happening at that frequency. I've tried shining different wavelengths of light through the crystal, and the energy is disappearing. It just doesn't come out the other side in a way that it doesn't with other crystal resonances. Perhaps there's some sort of reaction occurring where the light is being absorbed at that specific frequency. It's the only explanation.
->
-> #### April 2, 2023
-> I've kept this to myself for almost a month now. I can't stop. The crystal--it's not absorbing the light. It's transporting it somewhere. I'm convinced. The amount of energy I'm shooting into the crystal should be enough to vaporize it. It must be passing through the crystal somehow.
-> 
-> If it isn't being absorbed and it isn't coming out the other side, where is it going? The answer scares me as much as it excites me.
-> 
-> I'm onto something big. Bigger than I could have imagined.
->
-> #### April 17, 2023
-> Today was the breakthrough. I synthesized a special piezoelectric crystal, barium titanite trioxide, that is completely transparent to visible light. I wanted to see what's happening inside when I hit the right frequency. When I shone a light through it while tuned to 8.7539319, I saw it--something unbelievable.
-> 
-> There was a window. Not just a distortion, not a trick of the light. I saw another world. It looked like ours--sky, trees, land--but different. I can't describe how, but I know it's not here. It's somewhere else. Another dimension, maybe?
-> 
-> I'm still shaking. If this is real, it changes everything.
->
-> #### May 3, 2023
-> I've crossed a line. Last night, I broke into the university's chemical storage and stole everything I needed to synthesize lead zirconate titanate, one of the few piezoelectric materials that retains its properties in a fluid state. It was the only way. The crystal alone wasn't enough--it's solid, and I couldn't pass anything through it. But the fluid? It worked.
-> 
-> I tuned the resonator, dipped a screwdriver into the liquid, and… it passed through. And then I pulled it back out. It was untouched, unburnt, unscratched, and perfectly normal, but for a second, it had been somewhere else.
-> 
-> I'm preparing for something bigger.
->
-> #### June 15, 2023
-> The portal works. It's not just a theory anymore. I built it in my underground lab, keeping it stable with a static field generator. It's large enough for a person to pass through now.
-> 
-> Tomorrow, I'll make the journey. I've spent months preparing: collecting machines, materials, plants, and tools. I'll bring them through the portal to keep my alive in that alien world. No one will know, and no one can stop me.
-> 
-> The world beyond the crystal... it's mine now.
->
-> #### June 16, 2023
-> This is it. The final entry before I step through. The portal is humming, stable. I've already brought my supplies through. I'll leave my laboratory intact so I can make a return journey if I need to. I don't think I will, though.
-> 
-> There's more out there than anyone could imagine.
+{{< document >}}
+
+#### March 12, 2023
+I wasn't supposed to be in the lab today. Rob had asked me to help with his experiments, but I was just passing the time. He left me alone with the equipment for a while, and I couldn't resist. The piezoelectric resonator--top of the line, a lot fancier than anything I've used before. I started playing around with it. I spun the dial and watched as the crystal buzzed. The dial happened to stop at 8.7539319 hertz, and something strange happened. The output was slightly lower than the estimate. It was subtle, barely noticeable, but my curiosity kicked in. To check if it was consistent in all frequencies, I tuned it slightly higher, to 8.7539320 hertz. The output was exactly as the instrument estimated. Then I tried 8.7539318--same thing, perfect. But when I went back to 8.7539319, the output dropped again.
+
+I don't know what to make of it. No logical explanation comes to mind. Maybe an anomaly in the equipment? Or maybe... something else.
+
+#### March 14, 2023
+I spent the last two days trying to find an explanation. I scoured every academic paper I could find on piezoelectric resonance. Nothing. Nobody has encountered this phenomenon before. So today I went back to the lab under the pretense of helping Rob again, but my real interest was that resonator. The same thing happened. Exact same frequency--8.7539319--and the output dipped. I'm not imagining it. Something's happening, and I'm going to figure out what.
+
+I used the oscilloscope and a few other instruments to measure the resonance more carefully. I can't let this go.
+
+#### March 20, 2023
+I'm in too deep now. I've spent almost every spare moment analyzing the phenomenon, and I still haven't told anyone. My home office is filling up with instruments I've bought online--expensive stuff, piezoelectric resonators, oscilloscopes, and frequency analyzers. But none of it feels like enough. I need better tools, more precision.
+
+Something's happening at that frequency. I've tried shining different wavelengths of light through the crystal, and the energy is disappearing. It just doesn't come out the other side in a way that it doesn't with other crystal resonances. Perhaps there's some sort of reaction occurring where the light is being absorbed at that specific frequency. It's the only explanation.
+
+#### April 2, 2023
+I've kept this to myself for almost a month now. I can't stop. The crystal--it's not absorbing the light. It's transporting it somewhere. I'm convinced. The amount of energy I'm shooting into the crystal should be enough to vaporize it. It must be passing through the crystal somehow.
+
+If it isn't being absorbed and it isn't coming out the other side, where is it going? The answer scares me as much as it excites me.
+
+I'm onto something big. Bigger than I could have imagined.
+
+#### April 17, 2023
+Today was the breakthrough. I synthesized a special piezoelectric crystal, barium titanite trioxide, that is completely transparent to visible light. I wanted to see what's happening inside when I hit the right frequency. When I shone a light through it while tuned to 8.7539319, I saw it--something unbelievable.
+
+There was a window. Not just a distortion, not a trick of the light. I saw another world. It looked like ours--sky, trees, land--but different. I can't describe how, but I know it's not here. It's somewhere else. Another dimension, maybe?
+
+I'm still shaking. If this is real, it changes everything.
+
+#### May 3, 2023
+I've crossed a line. Last night, I broke into the university's chemical storage and stole everything I needed to synthesize lead zirconate titanate, one of the few piezoelectric materials that retains its properties in a fluid state. It was the only way. The crystal alone wasn't enough--it's solid, and I couldn't pass anything through it. But the fluid? It worked.
+
+I tuned the resonator, dipped a screwdriver into the liquid, and… it passed through. And then I pulled it back out. It was untouched, unburnt, unscratched, and perfectly normal, but for a second, it had been somewhere else.
+
+I'm preparing for something bigger.
+
+#### June 15, 2023
+The portal works. It's not just a theory anymore. I built it in my underground lab, keeping it stable with a static field generator. It's large enough for a person to pass through now.
+
+Tomorrow, I'll make the journey. I've spent months preparing: collecting machines, materials, plants, and tools. I'll bring them through the portal to keep my alive in that alien world. No one will know, and no one can stop me.
+
+The world beyond the crystal... it's mine now.
+
+#### June 16, 2023
+This is it. The final entry before I step through. The portal is humming, stable. I've already brought my supplies through. I'll leave my laboratory intact so I can make a return journey if I need to. I don't think I will, though.
+
+There's more out there than anyone could imagine.
+
+{{< /document >}}
 
 The camera captured the tremor in Michael's hand as he set the journal down. He pulled out his walkie-talkie, but couldn't get a signal. He began to turn to climb back up the ladder, but he stopped mid-turn, for there, before him, was Alfred Vanston.
 

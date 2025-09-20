@@ -15,20 +15,22 @@ description: An introduction to Tsevhu, a constructed language written with fish
 
 According to the inventor of Tsevhu, Koa Vhukva, the fishes in the image above translate to:
 
-> *When I traveled the world,*
-> *I traveled lonely.*
-> *A desolate landscape*
-> *scraped my view,*
-> *A dead thing to keep me company.*
-> *I wandered because*
-> *it was the only thing left to do.*
-> *When I found you,*
-> *you were in stasis,*
-> *frozen for more*
-> *than a century*
-> *asleep, delicate in all your graces,*
-> *and I felt all my years*
-> *telling me to wake you.*
+{{< document >}}
+When I traveled the world,\
+I traveled lonely.\
+A desolate landscape\
+scraped my view,\
+A dead thing to keep me company.\
+I wandered because\
+it was the only thing left to do.\
+When I found you,\
+you were in stasis,\
+frozen for more\
+than a century\
+asleep, delicate in all your graces,\
+and I felt all my years\
+telling me to wake you.
+{{< /document >}}
 
 This is a lovely little poem, but what's interesting is how it's encoded with fish.
 
@@ -81,11 +83,13 @@ Tsevhu is a cool little language. I'm glad I stumbled upon this corner of the in
 
 Translation:
 
-> *I'm glad*
-> *To have met you all.*
-> *I feel grateful for*
-> *The interest you have shown in Tsevhu.*
-> *I wish to thank you all.*
+{{< document >}}
+I'm glad\
+To have met you all.\
+I feel grateful for\
+The interest you have shown in Tsevhu.\
+I wish to thank you all.
+{{< /document >}}
 
 ~Ethan
 

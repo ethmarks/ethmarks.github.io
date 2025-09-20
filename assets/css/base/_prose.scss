@@ -27,7 +27,7 @@ blockquote {
     }
 }
 
-article > article {
+.document {
     font-style: italic;
     position: relative;
     margin: $spacing-md $margin-indent $spacing-md $margin-indent;
