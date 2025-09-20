@@ -13,22 +13,9 @@ blockquote {
         border-radius: 2px;
         float: left;
     }
-
-    .centered-blockquote {
-        font-style: normal;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.15rem;
-
-        &::before {
-            display: none;
-        }
-    }
 }
 
-.document {
-    font-style: italic;
+.document, .poem {
     position: relative;
     margin: $spacing-md $margin-indent $spacing-md $margin-indent;
 
