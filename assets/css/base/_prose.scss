@@ -1,0 +1,53 @@
+blockquote {
+    font-style: italic;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        margin: 0 -1em 0;
+        background: $color-accent;
+        border-radius: 2px;
+        float: left;
+    }
+
+    .centered-blockquote {
+        font-style: normal;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+article > article {
+    font-style: italic;
+    position: relative;
+    margin: $spacing-md $margin-indent $spacing-md $margin-indent;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        margin: 0 -1em 0;
+        background: $color-accent;
+        border-radius: 2px;
+        float: left;
+    }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, $color-accent-transparent-10, $color-accent, $color-accent-transparent-10);
+  margin: 2rem 0;
+}

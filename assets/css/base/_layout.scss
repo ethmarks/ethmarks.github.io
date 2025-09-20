@@ -50,7 +50,7 @@ main {
     }
 }
 
-article {
+main > article {
     background: $color-article;
     margin: $article-margin-top 0 0;
     width: 100%;
