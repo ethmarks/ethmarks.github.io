@@ -1,21 +1,21 @@
+{{- $stanzas := split .Inner "\n\n" }}
+{{- $processedPoem := "" }}
+{{- range $i, $stanza := $stanzas }}
+    {{- $lines := split (trim $stanza "\n") "\n" }}
+    {{- $numLines := len $lines }}
+    {{- range $j, $line := $lines }}
+        {{- $processedPoem = printf "%s%s" $processedPoem $line }}
+        {{- if and (lt $j (sub $numLines 1)) (gt $numLines 1) }}
+            {{- $processedPoem = printf "%s \\" $processedPoem }}
+        {{- end }}
+        {{- if lt (add $j 1) $numLines }}
+            {{- $processedPoem = printf "%s\n" $processedPoem }}
+        {{- end }}
+    {{- end }}
+    {{- if lt (add $i 1) (len $stanzas) }}
+        {{- $processedPoem = printf "%s\n\n" $processedPoem }}
+    {{- end }}
+{{- end }}
 <div class="poem">
-    {{ $stanzas := split .Inner "\n\n" }}
-    {{ $processedPoem := "" }}
-    {{ range $i, $stanza := $stanzas }}
-        {{ $lines := split (trim $stanza "\n") "\n" }}
-        {{ $numLines := len $lines }}
-        {{ range $j, $line := $lines }}
-            {{ $processedPoem = printf "%s%s" $processedPoem $line }}
-            {{ if and (lt $j (sub $numLines 1)) (gt $numLines 1) }}
-                {{ $processedPoem = printf "%s \\" $processedPoem }}
-            {{ end }}
-            {{ if lt (add $j 1) $numLines }}
-                {{ $processedPoem = printf "%s\n" $processedPoem }}
-            {{ end }}
-        {{ end }}
-        {{ if lt (add $i 1) (len $stanzas) }}
-            {{ $processedPoem = printf "%s\n\n" $processedPoem }}
-        {{ end }}
-    {{ end }}
-    {{ $processedPoem | markdownify }}
+{{ $processedPoem | markdownify }}
 </div>
