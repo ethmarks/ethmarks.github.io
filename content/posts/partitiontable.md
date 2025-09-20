@@ -81,7 +81,7 @@ But then, unexpectedly, the Windows Disk Repair Utility activated, noticed my ru
 
 According to the [Wikipedia article on deus ex machina](https://en.wikipedia.org/wiki/Deus_ex_machina):
 
-> "Deus ex machina is a plot device whereby a seemingly unsolvable problem in a story is suddenly or abruptly resolved by an unexpected and unlikely occurrence"
+> Deus ex machina is a plot device whereby a seemingly unsolvable problem in a story is suddenly or abruptly resolved by an unexpected and unlikely occurrence.
 
 This pretty much perfectly describes my interaction with the Windows Disk Repair Utility. It just unexpectedly swooped in to save the day.
 

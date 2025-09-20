@@ -33,11 +33,11 @@ Crepuscular rays only occur when the sun is at an oblique angle (dawn or dusk) a
 
 The comments on the article seem to share my disdain:
 
-> "The fact that a cbc reporter was perplexed by something that a 10 year old learns says a lot about the capabilities of people working there. Will tomorrow's article highlight the strange mysteries of water falling from the sky?"
+> The fact that a cbc reporter was perplexed by something that a 10 year old learns says a lot about the capabilities of people working there. Will tomorrow's article highlight the strange mysteries of water falling from the sky?
 
-> "if people need a scientific explanation as to how it occurred then maybe they need to go back to grade 6 science."
+> if people need a scientific explanation as to how it occurred then maybe they need to go back to grade 6 science.
 
-> "durrrr. Thanks, CBC."
+> durrrr. Thanks, CBC.
 
 Based entirely on the fact that over half of the comments on the CBC's article are deriding their competency, whereas this post has zero such comments (which may or may not be influenced by the fact that I haven't implemented a comment system), I'm forced to conclude that I'm better at writing articles than the CBC.
 
