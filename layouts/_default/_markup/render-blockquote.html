@@ -1,0 +1,32 @@
+{{- $text := .Text -}}
+{{- $content := $text -}}
+{{- $cite := "" -}}
+
+{{- $dashPatterns := slice "—" "– " "- " "~ " -}}
+{{- $citationLengthLimit := 2048 -}}
+
+{{- range $dashPattern := $dashPatterns -}}
+    {{- if and (not $cite) (in $text $dashPattern) -}}
+        {{- $parts := split $text $dashPattern -}}
+        {{- if gt (len $parts) 1 -}}
+            {{- $lastPart := index $parts (sub (len $parts) 1) -}}
+            {{- $lastPart = replace $lastPart "</p>" "" -}}
+            {{- $lastPart = trim $lastPart " \t\r\n" -}}
+            {{- if and $lastPart (lt (len $lastPart) $citationLengthLimit) -}}
+                {{- $cite = $lastPart -}}
+                {{- $contentParts := first (sub (len $parts) 1) $parts -}}
+                {{- $content = delimit $contentParts $dashPattern -}}
+                {{- if not (hasSuffix $content "</p>") -}}
+                    {{- $content = printf "%s</p>" $content -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+<blockquote>
+  {{- $content | safeHTML -}}
+  {{- if $cite -}}
+  <cite>{{ $cite | safeHTML }}</cite>
+  {{- end -}}
+</blockquote>
