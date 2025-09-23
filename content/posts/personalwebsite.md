@@ -12,35 +12,35 @@ My personal website is my home on the web.
 
 {{< iframe src="/index.html" alt="homepage" >}}
 
-I made this site because I want to have an online presence, but I didn't want to use social media or a premade blogging platform (e.g. [Blogger](https://www.blogger.com) or [Tumblr](https://www.tumblr.com/)).
+I made this site because I want to have an online presence, but I didn't want to use social media or a premade blogging platform (e.g. [Blogger](https://www.blogger.com), [Tumblr](https://www.tumblr.com/), or [Bearblog](https://bearblog.dev/)).
 
 I decided that it would be more interesting to start from scratch, so I designed, built, and published a site of my own.
 
 ## Build
 
-This site uses [Hugo](/posts/hugoswitch) to render my [Markdown](https://en.wikipedia.org/wiki/Markdown) content to my [HTML](https://en.wikipedia.org/wiki/HTML) templates. I also use Hugo for things like [asset minification](https://gohugo.io/functions/resources/minify/) and [Sass transpiling](https://gohugo.io/hugo-pipes/transpile-sass-to-css/). I love Hugo because it's feature-rich, extremely fast (it takes less than a tenth of a second for a full build), and does exactly what I want it to.
+This site uses [Hugo](/posts/hugoswitch) to render my Markdown content to my HTML templates. I also use Hugo for things like asset minification and Sass transpiling. I love Hugo because it's feature-rich, extremely fast (it takes less than a tenth of a second for a full build), and does exactly what I want it to.
 
-### History
+### Build History
 
-In the beginning, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few posts like this.
+At the start, this site didn't have *any* build step, and I wrote every line of HTML, CSS, and JavaScript by hand. This approach was extremely tedious, so I only wrote a few posts like this.
 
-On June 6, 2025, I switched to [build.py](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in [Python](https://en.wikipedia.org/wiki/Python_(programming_language)). Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/posts/hugoswitch).
+On June 6, 2025, I switched to [build.py](https://github.com/ethmarks/ethmarks.github.io/blob/b194fe064cbbc43dc714fbde7b27d47dfcad262f/build.py), a custom SSG I wrote in Python. Build.py was an acceptable solution, but it was slow, complex, and was very limited in what it could do. I eventually solved this on July 10 by [switching to Hugo](/posts/hugoswitch).
 
 ## Hosting
 
 ![A screenshot of the GitHub Actions tab, showing a successful job titled 'Merge pull request #16 from ethmarks/load-asset-refactor #83'. The job took 36 seconds. The job has a build step and a deploy step. The job produced a 13.4 megabyte artifact titled 'github-pages'.](~/gh_pages_workflow_2025-09-18.webp)
 
-To host the site on the World Wide Web, I use [GitHub Pages](https://pages.github.com/). This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ethmarks/ethmarks.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
+To host the site on the World Wide Web, I use GitHub Pages. This is why the site url includes ".github.io". Every time I push new code, GitHub automatically redeploys this site. The main reason I'm using GitHub Pages is convenient: I'm already using GitHub for source control, so it was easy to just add a [GitHub Action to deploy the site](https://github.com/ethmarks/ethmarks.github.io/blob/main/.github/workflows/hugo.yaml). My second choice would probably have been [Neocities](https://neocities.org/) for hosting.
 
 ## Styling
 
-My site has a very specific aesthetic that I find quite pleasing. The aesthetic is the culmination of my [spearmint colour palette](#colour-palette), modern [typography](#typography), and careful use of [effects](#special-effects), all brought together with thousands of lines of [Sass](#sass) code.
+My site has a very specific aesthetic that I find quite pleasing. The aesthetic is the culmination of my spearmint colour palette, modern typography, and careful use of effects, all brought together with thousands of lines of Sass code.
 
 ### Sass
 
-This site is styled with [Sass](https://en.wikipedia.org/wiki/Sass_(style_sheet_language)), a CSS preprocessor that adds useful features to CSS, like [mixins](https://sass-lang.com/documentation/at-rules/mixin/), [variables](https://sass-lang.com/documentation/variables/), and [build-time imports](https://sass-lang.com/documentation/at-rules/import/).
+This site is styled with Sass, a CSS preprocessor that adds useful features to CSS, like mixins, variables, and build-time imports.
 
-This site's Sass is transpiled using [LibSass](https://sass-lang.com/libsass/). LibSass is an old Sass transpiler that's been deprecated since 2020. The only reason I use LibSass is that I was having trouble setting Hugo up with [Dart Sass](https://sass-lang.com/dart-sass/) (the modern and recommended transpiler), because it kept causing timeout errors that were inconsistent and very difficult to debug. I eventually just gave up and switched to LibSass. This means that I can't use any of the new Dart Sass features like [@use](https://sass-lang.com/documentation/at-rules/use/), so I use [@import](https://sass-lang.com/documentation/at-rules/import/) instead.
+This site's Sass is transpiled using LibSass. LibSass is an old Sass transpiler that's been deprecated since 2020. The only reason I use LibSass is that I was having trouble setting Hugo up with Dart Sass (the modern and recommended transpiler), because it kept causing timeout errors that were inconsistent and very difficult to debug. I eventually just gave up and switched to LibSass. This means that I can't use any of the new Dart Sass features like `@use`, so I use `@import` instead.
 
 Every page layout has its own Sass file that imports the modules that page needs. For example, here's the annotated Sass file for [my posts page](/posts/).
 
@@ -59,7 +59,7 @@ Every page layout has its own Sass file that imports the modules that page needs
 @import 'components/random-post-btn';
 ```
 
-These Sass files are then transpiled into normal CSS and imported into the page using some custom [partials](https://gohugo.io/functions/partials/include/) I wrote that take a file name as an input and automatically minifies and transpiles the asset, and then generates the HTML import for that file. For example, here's the code at the top of [the posts index page](/posts).
+These Sass files are then transpiled into normal CSS and imported into the page using some custom partials I wrote that take a file name as an input and automatically minifies and transpiles the asset, and then generates the HTML import for that file. For example, here's the code at the top of [the posts index page](/posts).
 
 ```go-html-template
 {{ partial "css.html" "posts.scss" }}
@@ -87,11 +87,11 @@ This site uses a dark theme with a spearmint teal accent colour.
 
 ### Typography
 
-I self-host this site's fonts using [variable](https://fonts.google.com/knowledge/using_variable_fonts_on_the_web) [woff2](https://github.com/google/woff2) files. Variable fonts significantly cut down on the file size, allowing the site to load faster. I sourced the fonts from the [Variable Font Helper](https://variable-font-helper.web.app/) app, which sources them from [Google Fonts](https://fonts.google.com/).
+I self-host this site's fonts using [variable](https://fonts.google.com/knowledge/using_variable_fonts_on_the_web) woff2 files. Variable fonts significantly cut down on the file size, allowing the site to load faster. I sourced the fonts from the [Variable Font Helper](https://variable-font-helper.web.app/) app, which sources them from Google Fonts.
 
-- **Primary Font**: I use [Nunito](https://fonts.google.com/specimen/Nunito) as the primary font, for its sleek [neo-grotesque](https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque) design and its support for both [Latin](https://en.wikipedia.org/wiki/Latin_script) and [Cyrillic](https://en.wikipedia.org/wiki/Cyrillic_script) glyphs.
+- **Primary Font**: I use [Nunito](https://fonts.google.com/specimen/Nunito) as the primary font, for its sleek neo-grotesque design and its support for both Latin and Cyrillic glyphs.
 - **Secondary Font**: I use [Sen](https://fonts.google.com/specimen/Sen) as the font for headings. There are many subtle differences between Sen and Nunito, but the most noticeable is the lack of rounded strokes. Sen looks sharper and more angular than Nunito.
-- **Monospace Font**: I use [Fira Code](https://fonts.google.com/specimen/Fira+Code) for all [monospace](https://fonts.google.com/knowledge/glossary/monospaced) text, like code blocks, ASCII art, or inline code spans.
+- **Monospace Font**: I use [Fira Code](https://fonts.google.com/specimen/Fira+Code) for all monospace text, like code blocks, ASCII art, or inline code spans.
 - **Display Font**: I use [Kenia](https://fonts.google.com/specimen/Kenia) for the "404" numerals on [this site's 404 page](/404).
 
 ### Special Effects
@@ -100,9 +100,9 @@ I self-host this site's fonts using [variable](https://fonts.google.com/knowledg
 
 **Mint Gradient**: All `<h1>` elements have a mint gradient applied to them. This gradient starts off at the standard **<span class="mint">spearmint teal</span>** accent color, and then fades into the standard white text color. This also applies to the title on the left side of my site header. This adds polish and branding.
 
-**Header Blur**: I love [glassmorphic](https://css.glass/) blur effects, so I added a 20 pixel gaussian blur effect to my site header. For performance reasons, the header is the *only* element on the site that has a significant gaussian blur. When I was first designing this site, I put blurs everywhere, including on the article background. Turns out, this makes the page really, really, really slow. Blurring the header adds polish, and *not* blurring anything else adds frames per second.
+**Header Blur**: [I love glassmorphic blur effects](/posts/liquidglass), so I added a 20 pixel gaussian blur effect to my site header. For performance reasons, the header is the *only* element on the site that has a significant gaussian blur. When I was first designing this site, I put blurs everywhere, including on the article background. Turns out, this makes the page really, really, really slow. Blurring the header adds polish, and *not* blurring anything else adds frames per second.
 
-**Header Nav Indicator**: The nav links in my site header glow when the current page is on their domain. Currently, the "Posts" nav link is glowing because you're on a post ([/posts/personalwebsite](/posts/personalwebsite)). On [my About page](/about), the "About" nav link glows. On [my Home page](/), the "Home" nav link glows. On my Projects page(/tags/projects), the "Projects" nav link glows. This helps with readability and polish.
+**Header Nav Indicator**: The nav links in my site header glow when the current page is on their domain. Currently, the "Posts" nav link is glowing because you're on a post right now. On [my About page](/about), the "About" nav link glows. On [my Home page](/), the "Home" nav link glows. On my [Projects page](/tags/projects), the "Projects" nav link glows. This helps with readability and polish.
 
 **Header Birthday Mode**: On my birthday (September 13), my site header glows pinkish-orange, the title on the left side strobes between pastel red, cyan, blue, sage, orange, and pink, and the cake and party emojis (🎂🎉) are appended to the title. This helps with "yay its my birthday".
 
@@ -117,9 +117,9 @@ As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://deve
 [![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-09-19.webp)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fethmarks.github.io%2F)
 
 My site's performance is largely due to it being lightweight and carefully optimized.
-- **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use [JSX](https://react.dev/learn/writing-markup-with-jsx) and [client-side rendering](https://developer.mozilla.org/en-US/docs/Glossary/CSR) to dynamically [hydrate](https://en.wikipedia.org/wiki/Hydration_(web_development)) their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
+- **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use JSX and client-side rendering to dynamically hydrate their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
 - **Optimized CSS and JS**: Each page on my site only loads the resources that it needs, and the resources that it does import are minified. I used custom partials to automate this process slightly, as discussed in the [Sass section](#sass). This per-page approach minimizes the data that needs to be downloaded and allows the page to load faster.
-- **Optimized Images and Videos**: The images, videos, and animations on my website use the [WebP](https://en.wikipedia.org/wiki/WebP) and [WebM](https://en.wikipedia.org/wiki/WebM) formats, which allows them to load faster and use less data.
+- **Optimized Images and Videos**: The images, videos, and animations on my website use the WebP and WebM formats, which allows them to load faster and use less data.
 
 ## Privacy
 
@@ -131,11 +131,11 @@ This site is designed to be accessible to as many users as possible. I've done m
 
 ## Authoring
 
-Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) for things like iframes, but I mostly stick with plain Markdown syntax.
+Each post (including the words you're reading right now) is written in Markdown. I occasionally use custom Hugo shortcodes (inline templates) for things like iframes, but I mostly stick with plain Markdown syntax.
 
-I use the [Zed editor](~/switchingtozed) for all of my coding and most of my post writing, but I write the longer and more heavily-researched posts in [Obsidian](https://obsidian.md/).
+I use the [Zed editor](~/switchingtozed) for all of my coding and most of my writing, but I write the longer and more heavily-researched posts using [Obsidian](https://obsidian.md/).
 
-I use [Hugo's live server](https://gohugo.io/commands/hugo_server/) to instantly (I've never seen it take longer than 100 milliseconds for a refresh) render the site locally so that I can see the changes I make in real time.
+I use Hugo's [live development server](https://gohugo.io/commands/hugo_server/) to instantly (I've never seen it take longer than 100 milliseconds for a rebuild) render the site locally so that I can see the changes I make in real time.
 
 ## Conclusion
 
