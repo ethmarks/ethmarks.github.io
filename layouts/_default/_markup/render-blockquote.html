@@ -11,7 +11,7 @@
             {{- $lastPart := index $parts (sub (len $parts) 1) -}}
             {{- $lastPart = replace $lastPart "</p>" "" -}}
             {{- $lastPart = trim $lastPart " \t\r\n" -}}
-            {{- if and $lastPart (lt (len $lastPart) 80) (not (in $lastPart "<")) -}}
+            {{- if and $lastPart (lt (len $lastPart) 200) -}}
                 {{- $cite = $lastPart -}}
                 {{- $contentParts := first (sub (len $parts) 1) $parts -}}
                 {{- $content = delimit $contentParts $dashPattern -}}
