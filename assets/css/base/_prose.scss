@@ -7,7 +7,6 @@ blockquote {
     border: $border-standard;
     border-left: solid 3px $color-accent;
     position: relative;
-    font-style: italic;
     font-family: $font-primary;
     color: $color-text;
     transition: $transition-transform-shadow;
@@ -15,6 +14,7 @@ blockquote {
     &::before, &::after {
         content: '"';
         font-size: 2.5rem;
+        font-style: italic;
         color: $color-accent;
         position: absolute;
         font-family: $font-secondary;
@@ -32,17 +32,19 @@ blockquote {
         right: 0.75rem;
     }
 
-    .cite {
-        font-style: normal;
+    cite {
         font-size: $font-size-sm;
         color: $color-text-secondary;
-        margin-top: 0.75rem;
-        text-align: right;
+        margin-left: $spacing-md;
 
         &::before {
-        content: '— ';
-        color: $color-accent;
+            content: '— ';
+            color: $color-accent;
         }
+    }
+
+    &:has(cite) p:last-of-type {
+        margin-bottom: 0;
     }
 
     @include mobile {
