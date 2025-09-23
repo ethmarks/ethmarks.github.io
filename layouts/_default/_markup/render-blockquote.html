@@ -2,7 +2,7 @@
 {{- $content := $text -}}
 {{- $cite := "" -}}
 
-{{- $dashPatterns := slice "—" "– " "- " -}}
+{{- $dashPatterns := slice "—" "– " "- " "~ " -}}
 
 {{- range $dashPattern := $dashPatterns -}}
     {{- if and (not $cite) (in $text $dashPattern) -}}

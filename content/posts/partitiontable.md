@@ -80,7 +80,7 @@ When I tried to turn it back on, Windows refused to boot.
 But then, unexpectedly, the Windows Disk Repair Utility activated, noticed my ruined drive, and fixed it for me. I have no idea what it did, but when it finished, Windows booted normally, all programs agreed on partition size, and all diagnostics reported a healthy drive.
 
 > Deus ex machina is a plot device whereby a seemingly unsolvable problem in a story is suddenly or abruptly resolved by an unexpected and unlikely occurrence.
-> – ["deus ex machina" on Wikipedia](https://en.wikipedia.org/wiki/Deus_ex_machina)
+> ~ ["deus ex machina" on Wikipedia](https://en.wikipedia.org/wiki/Deus_ex_machina)
 
 This pretty much perfectly describes my interaction with the Windows Disk Repair Utility. It just unexpectedly swooped in to save the day.
 
