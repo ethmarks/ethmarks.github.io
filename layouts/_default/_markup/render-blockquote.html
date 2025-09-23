@@ -3,6 +3,7 @@
 {{- $cite := "" -}}
 
 {{- $dashPatterns := slice "—" "– " "- " "~ " -}}
+{{- $citationLengthLimit := 2048 -}}
 
 {{- range $dashPattern := $dashPatterns -}}
     {{- if and (not $cite) (in $text $dashPattern) -}}
@@ -11,7 +12,7 @@
             {{- $lastPart := index $parts (sub (len $parts) 1) -}}
             {{- $lastPart = replace $lastPart "</p>" "" -}}
             {{- $lastPart = trim $lastPart " \t\r\n" -}}
-            {{- if and $lastPart (lt (len $lastPart) 200) -}}
+            {{- if and $lastPart (lt (len $lastPart) $citationLengthLimit) -}}
                 {{- $cite = $lastPart -}}
                 {{- $contentParts := first (sub (len $parts) 1) $parts -}}
                 {{- $content = delimit $contentParts $dashPattern -}}
