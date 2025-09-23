@@ -112,9 +112,12 @@ I self-host this site's fonts using [variable](https://fonts.google.com/knowledg
 
 ## Lighthouse
 
-As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://developer.chrome.com/docs/lighthouse). Lighthouse is a tool developed by Google that audits web pages for performance and accessibility. A higher score means that the page loads more quickly and is more accessible. According to [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring): "A perfect score of 100 is extremely challenging to achieve and not expected".
-
 [![A Lighthouse analytic page showing 100 performance, 100 accessibility, 100 best practices, 100 SEO](~/lighthouse-2025-09-19.webp)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fethmarks.github.io%2F)
+
+As of August 31, 2025, the site earns a perfect 100 on [Lighthouse](https://developer.chrome.com/docs/lighthouse). Lighthouse is a tool developed by Google that audits web pages for performance and accessibility. A higher score means that the page loads more quickly and is more accessible.
+
+> To provide a good user experience, sites should strive to have a good score (90-100). **A "perfect" score of 100 is extremely challenging to achieve and not expected**. For example, taking a score from 99 to 100 needs about the same amount of metric improvement that would take a 90 to 94.
+> – [official Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring#:~:text=A%20%22perfect%22,expected)
 
 My site's performance is largely due to it being lightweight and carefully optimized.
 - **Static Rendering**: All of my site's content is present in the HTML. Unlike some sites that use JSX and client-side rendering to dynamically hydrate their pages using JavaScript, my site render all content at build time. This uses much less processing power on your device and makes the page load much faster.
