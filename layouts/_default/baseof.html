@@ -3,11 +3,11 @@
 <head>
 {{ partial "metadata.html" . -}}
 {{- block "default-resources" . -}}
-{{ partial "css.html" "_global.scss" }}
+{{ partial "css.html" "global.scss" }}
 {{ partial "js.html" "common.js" }}
 {{ partial "js.html" "vendor/quicklink.js" }}
 {{- end -}}
-{{- block "resources" . }}{{ end }}
+{{- block "resources" . }}{{ end -}}
 {{ partial "font-preload.html" . }}
 </head>
 <body>
@@ -19,4 +19,4 @@
 {{ partial "footer.html" . }}
 </body>
 </html>
-{{- partial "publish-all-media.html" . -}}
+{{- partial "publish.html" . -}}

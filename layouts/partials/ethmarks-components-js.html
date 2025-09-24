@@ -1,0 +1,23 @@
+{{- $header := partial "header.html" . | jsonify -}}
+{{- $footer := partial "footer.html" . | jsonify -}}
+{{- $js := printf `// Ethmarks Web Components
+// Generated automatically from Hugo partials
+
+class EthmarksHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = %s;
+  }
+}
+
+class EthmarksFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = %s;
+  }
+}
+
+// Register the custom elements
+customElements.define('ethmarks-header', EthmarksHeader);
+customElements.define('ethmarks-footer', EthmarksFooter);
+` $header $footer -}}
+{{- $resource := resources.FromString "js/ethmarks-components.js" $js -}}
+{{- $resource.Publish -}}
