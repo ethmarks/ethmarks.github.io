@@ -5,6 +5,16 @@ title = "Ethan Marks"
 [taxonomies]
   tag = "tags"
 
+[mediaTypes]
+  [mediaTypes."application/javascript"]
+    suffixes = ["js"]
+
+[outputFormats]
+  [outputFormats.js]
+    mediaType = "application/javascript"
+    isPlainText = true
+    notAlternative = true
+
 [markup.goldmark.renderer]
   unsafe = true
 
