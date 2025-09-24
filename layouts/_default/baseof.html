@@ -7,7 +7,7 @@
 {{ partial "js.html" "common.js" }}
 {{ partial "js.html" "vendor/quicklink.js" }}
 {{- end -}}
-{{- block "resources" . }}{{ end }}
+{{- block "resources" . }}{{ end -}}
 {{ partial "font-preload.html" . }}
 </head>
 <body>
@@ -19,5 +19,4 @@
 {{ partial "footer.html" . }}
 </body>
 </html>
-{{- partial "ethmarks-components-js.html" . -}}
-{{- partial "publish-all-media.html" . -}}
+{{- partial "publish.html" . -}}
