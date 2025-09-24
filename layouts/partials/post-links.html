@@ -12,7 +12,7 @@
             </p>
         </div>
         <ul class="tags">
-            {{ range .Params.tags }}
+            {{ range .Params.tags | sort }}
             <li class="tag">{{ . }}</li>
             {{ end }}
         </ul>
