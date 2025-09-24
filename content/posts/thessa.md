@@ -3,12 +3,12 @@ title: Thessa
 date: 2025-05-21
 tags: [projects, programming, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
-link: https://ethmarks.github.io/thessa
-link_name: Thessa Webpage
-link_icon: link
+link: https://github.com/ethmarks/thessa
+link_name: GitHub Repo
+link_icon: github
 ---
 
-![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessascreenshot.webp)
+[![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessascreenshot.webp)](https://ethmarks.github.io/thessa/)
 
 A while ago, I [configured my instance of ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt) to "respond with a [Dale-Chall readability level](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula) of 9.1". This is a precise way of telling it to 'use big words'.
 
