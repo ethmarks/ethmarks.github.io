@@ -1,7 +1,7 @@
 ---
 title: Personal Website
 date: 2025-05-14
-tags: [projects, programming, webdev, personal website]
+tags: [projects, programming, github, webdev, personal website]
 description: The website you're reading right now
 link: https://github.com/ethmarks/ethmarks.github.io
 link_name: GitHub Repo

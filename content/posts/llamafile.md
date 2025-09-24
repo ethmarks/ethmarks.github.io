@@ -2,10 +2,7 @@
 title: Llamafile
 date: 2025-06-24
 tags: [curios, programming, ai]
-description: An explanation of llamafile, a file type that lets you run LLMs from a single file 
-link: https://github.com/Mozilla-Ocho/llamafile
-link_name: GitHub Repo
-link_icon: github
+description: An explanation of llamafile, a file type that lets you run LLMs from a single file
 ---
 
 ![llamafile banner](~/llamafile_banner.webp)
@@ -57,13 +54,13 @@ function Get-HnCommentText($comments) {
     foreach ($comment in $comments) {
         # If the current comment object has a 'text' property and it's not null,
         # output its value. This will be collected by the calling expression.
-        if ($null -ne $comment.text) { 
-            $comment.text 
+        if ($null -ne $comment.text) {
+            $comment.text
         }
-        
+
         # If the current comment object has children (replies),
         # recursively call this function extract their text.
-        if ($null -ne $comment.children) { 
+        if ($null -ne $comment.children) {
             Get-HnCommentText -comments $comment.children
         }
     }

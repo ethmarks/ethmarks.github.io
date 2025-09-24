@@ -1,7 +1,7 @@
 ---
 title: ColourlessTransformer
 date: 2024-12-22
-tags: [projects, programming, ai, webdev, automation]
+tags: [projects, programming, github, ai, webdev, automation]
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
 link: https://github.com/ethmarks/ColourlessTransformer
 link_name: GitHub Repo
