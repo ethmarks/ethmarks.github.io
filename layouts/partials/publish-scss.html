@@ -1,0 +1,6 @@
+{{- range resources.Match "css/*.scss" -}}
+  {{- $css := . | toCSS -}}
+  {{- $cssMin := $css | minify -}}
+  {{- $css.Publish -}}
+  {{- $cssMin.Publish -}}
+{{- end -}}

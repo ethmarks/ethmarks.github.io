@@ -1,3 +1,0 @@
-{{ $globalCSS := resources.Get "css/global.scss" | toCSS }}
-{{ $global := $globalCSS.RelPermalink}}
-{{ $globalMin := ($globalCSS | minify).RelPermalink}}
