@@ -73,7 +73,7 @@ There are a few ways of dynamically inserting HTML into a page.
 
 ### Just Copy-Paste it
 
-One approach is to just copy-paste the full HTML snippet into each page.
+One approach is to just copy-paste the full HTML snippet into each page. This is by far the simplest solution, but it violates DRY.
 
 The header and footer combined are a mere 18 lines of HTML. This is well within "why even bother with DRY" territory.
 
