@@ -5,6 +5,13 @@ tags: [personal website, programming, webdev, zed, ai, automation]
 description: "I used Hugo's resources.FromString to dynamically convert my site's header and footer into Web Components"
 ---
 
+It's been quite a while since my last post here. I've been pretty busy with school stuff, but I've still found time to make several major changes to this site. Highlights include:
+
+- Switching from CSS to Sass
+- Completely redesigning my home page
+- Self-hosting all assets including fonts
+- Making lots of improvements to DX by abusing Hugo templates
+
 As a developer who cares very deeply about DRY (Don't Repeat Yourself) and also understands the value of brand consistency, I've spent a substantial amount of time trying to come up with ways to reuse the exact same assets and styles across different projects.
 
 For example, I created [ClasslessSpearmint](/posts/classlessspearmint) so that rather than duplicating the same styles across many different projects, I can just [add a single line of HTML](/posts/classlessspearmint#usage) to any page, and as if by magic the page will have my site's styles and aesthetic.
@@ -21,6 +28,18 @@ Inserting styles into a webpage is easy: I just need to include a link to the CS
 /* components.scss */
 @import 'components/header';
 @import 'components/footer';
+```
+
+Normally I'd need to publish `components.scss` in order to use it, but I created a Hugo template a while ago that automatically transpiles and publishes all SCSS files. Here's what it looks like, if you're curious.
+
+```go-html-template
+<!-- publish-scss.html -->
+{{ range resources.Match "css/*.scss" }}
+  {{ $css := . | toCSS }}
+  {{ $cssMin := $css | minify }}
+  {{ $css.Publish }}
+  {{ $cssMin.Publish }}
+{{ end }}
 ```
 
 So all I need to do to import the component styles into another project is include this line of HTML:
