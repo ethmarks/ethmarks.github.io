@@ -15,7 +15,7 @@ In order to recreate the header and footer, I need two things: the layout (HTML)
 
 ## Styles
 
-Inserting styles into a webpage is easy; I just need to include a link to the CSS. I created a new file in my personal website, `components.scss`, that imports the header and footer styles to combine them into one SCSS file:
+Inserting styles into a webpage is easy: I just need to include a link to the CSS. I created a new file in my personal website, `components.scss`, that imports the header and footer styles to combine them into one SCSS file:
 
 ```scss
 /* components.scss */
@@ -23,19 +23,7 @@ Inserting styles into a webpage is easy; I just need to include a link to the CS
 @import 'components/footer';
 ```
 
-One of the "improvements to DX by abusing Hugo's templating system" I mentioned was setting up a partial that automatically transpiles all SCSS files into CSS and then publishes the minified and unminified stylesheets. Here's what that looks like, if you're curious.
-
-```go-html-template
-<!-- publish-scss.html -->
-{{ range resources.Match "css/*.scss" }}
-  {{ $css := . | toCSS }}
-  {{ $cssMin := $css | minify }}
-  {{ $css.Publish }}
-  {{ $cssMin.Publish }}
-{{ end }}
-```
-
-So all I need to do to import `components.scss` into another project is include this line of HTML:
+So all I need to do to import the component styles into another project is include this line of HTML:
 
 ```html
 <link rel="stylesheet" href="https://ethmarks.github.io/css/components.min.css">
@@ -47,7 +35,7 @@ These component styles combined with ClasslessSpearmint provide all the styles n
 
 Now for the tricky part, the HTML layout.
 
-Here's what the HTML for my footer looks like as of the time of writing. The header is a little bit more complicated, but not by much.
+Here's what the HTML for my footer looks like as of the time of writing. The header's HTML is a little bit more complicated, but not by much.
 
 ```html
 <!-- footer.html -->
@@ -62,15 +50,13 @@ Here's what the HTML for my footer looks like as of the time of writing. The hea
 </footer>
 ```
 
-In order for the rendered footer to appear on a page, we need to somehow get the HTML of the footer into the HTML of the page.
-
-There are a few ways of doing this.
+There are a few ways of dynamically inserting HTML into a page.
 
 ### Just Copy-Paste it
 
-One approach is to just copy-paste the HTML so that whenever I need to insert my header into a new page, I would just copy-paste the full HTML snippet.
+One approach is to just copy-paste the full HTML snippet into each page.
 
-Combined, the header and footer are only 18 lines of HTML. This is well within "why even bother with DRY" territory.
+The header and footer combined are a mere 18 lines of HTML. This is well within "why even bother with DRY" territory.
 
 The reason I'm going to bother anyways is that I really, really care about DRY. I don't really have a rational justification for caring as much as I do, it's just that the idea of copy-pasting the exact same code in multiple places makes me uncomfortable.
 
@@ -78,13 +64,13 @@ So copy-pasting is out of the question. We'll need a clever way to insert the HT
 
 ### Web Components
 
-This site uses Hugo partials that insert the header and footer HTML into the rendered page at build time, but they don't work without Hugo. The best way to dynamically insert a snippet of HTML into a page is to use JavaScript Web Components. [Web Components are supported by basically every browser](https://caniuse.com/custom-elementsv1) and only use JavaScript, meaning they'll work on every device and with every build process.
+The way that this site inserts HTML is by using Hugo partials, but this only works with Hugo. The best universal solution is to use JavaScript Web Components. Web Components are [supported by basically every browser](https://caniuse.com/custom-elementsv1) and only use JavaScript, meaning they'll work on every device and with every build process.
 
 The only question is how to get the data from the HTML partials into a JavaScript file.
 
 ### Zed Agent
 
-I was curious to see how the [Zed Agent](https://zed.dev/agentic) would approach this problem. I had no intention of using the code that it came up with, but I thought that this would be a good opportunity to experiment with vibe coding. I set Zed to use Claude Sonnet 4 and gave it the following prompt.
+I was curious to see how the [Zed Agent](https://zed.dev/agentic) would approach this problem without any supervision. I had no intention of using the code that it came up with, but I thought that this would be a good opportunity to experiment with vibe coding. I set Zed to use Claude Sonnet 4 and gave it the following prompt.
 
 > **User**  \
 > I want a script, accessible at `/js/ethmarks-components.js`, that defines two Web Components whose content is the same as @header.html and @footer.html. It is absolutely cardinally important that the code be DRY, so you can't just copy the HTMl. Instead, you'll have to do something clever with Hugo that dynamically creates a JS file and publishes it.
@@ -103,44 +89,7 @@ Its solution was *really* dumb.
 
 It ignored my instruction to create the JS file dynamically and opted instead to make a static JS file that fetches the HTML content from a pseudo-dynamic API that it also created.
 
-Here's its Hugo template to create a JSON file containing the header and footer HTML.
-
-```go-html-template
-<!-- list.API.json -->
-{{ $data := dict
-      "header" (partial "header.html" .)
-      "footer" (partial "footer.html" .)
-}}
-{{ $data | jsonify (dict "indent" "  ") }}
-```
-
-Here's its markdown index file to force Hugo to render the JSON template.
-
-```md
----
-title: API
-outputs:
-  - API
----
-```
-
-Here's the changes it made to my Hugo config to create the "API" output format.
-
-```toml
-# hugo.toml
-[mediaTypes]
-  [mediaTypes."application/json"]
-    suffixes = ["json"]
-
-[outputFormats]
-  [outputFormats.API]
-    mediaType = "application/json"
-    baseName = "index"
-    isPlainText = true
-    notAlternative = true
-```
-
-And here's its JS script to fetch that API data.
+Here's the JS script it created to fetch that API data.
 
 ```js
 // components.js
@@ -176,9 +125,46 @@ customElements.define('site-header', SiteHeader);
 customElements.define('site-footer', SiteFooter);
 ```
 
+Here's its Hugo template to create a JSON file containing the header and footer HTML.
+
+```go-html-template
+<!-- list.API.json -->
+{{ $data := dict
+      "header" (partial "header.html" .)
+      "footer" (partial "footer.html" .)
+}}
+{{ $data | jsonify (dict "indent" "  ") }}
+```
+
+Here's its markdown index file to force Hugo to render the JSON template.
+
+```md
+---
+title: API
+outputs:
+  - API
+---
+```
+
+And here are the changes it made to my Hugo config to create the "API" output format.
+
+```toml
+# hugo.toml
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
+
+[outputFormats]
+  [outputFormats.API]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+```
+
 This solution is bad for two reasons.
 
-First, it's hideously overcomplicated; as you'll see later, I managed to accomplish the same thing with *far* less code and without messing with the Hugo config.
+First, it's hideously overcomplicated; as you'll see later, I managed to accomplish the same thing in a single file, with *far* less code, and without messing with the Hugo config.
 
 Second, the JS script fetches the data from an API. This introduces an extra network request, slows down the page load, and possibly causes CORS issues.
 
