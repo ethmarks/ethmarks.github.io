@@ -1,0 +1,4 @@
+{{ $wordCount := .WordCount }}
+{{ $readingSpeed := 200 }}
+{{ $minutes := div $wordCount $readingSpeed }}
+{{ return $minutes }}

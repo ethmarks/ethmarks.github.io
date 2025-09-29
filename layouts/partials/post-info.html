@@ -1,0 +1,10 @@
+<div class="info animated">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+    </time>
+    {{ $readTime := (partial "read-time.html" .) }}
+    {{- if gt $readTime 1 }}
+    <span class="separator"> · </span>
+    <span class="read-time">{{ $readTime }} min read</span>
+    {{- end }}
+</div>
