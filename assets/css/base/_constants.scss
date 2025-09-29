@@ -28,7 +28,8 @@ $color-article: rgb(30, 30, 30);
 $color-panel: rgb(31, 31, 31);
 $color-panel-zebra: darken($color-panel, 1%);
 $color-panel-dark: darken($color-panel, 3%);
-$color-panel-hover: transparentize(lighten($color-panel, 7%), 0.5);
+$color-panel-hover: lighten($color-panel, 4%);
+$color-panel-hover-subtle: lighten($color-panel, 1%);
 
 $color-card: rgba(40, 40, 40, 0.8);
 $color-card-hover: rgba(50, 50, 50, 0.9);
@@ -76,8 +77,10 @@ $font-weight-bold: 600;
 $font-weight-code: 400;
 
 $font-size-base: 1.07rem;
+$font-size-xs: 0.8rem;
 $font-size-sm: 0.9rem;
 $font-size-md: 1rem;
+$font-size-lg: 1.1rem;
 $font-size-h1: clamp(1rem, 7vw, 3rem);
 $font-size-h2: 1.6rem;
 $font-size-h3: 1.4rem;

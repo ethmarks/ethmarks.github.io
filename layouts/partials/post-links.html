@@ -1,21 +1,13 @@
 <nav class="post-links">
-    {{ range (where . "Params.unlisted" "ne" true).ByDate.Reverse }} {{ $post :=
-    . }} {{ $minRead := math.Ceil (div (countwords $post.Content) 200.0) }}
+    {{ range (where . "Params.unlisted" "ne" true).ByDate.Reverse }}
     <a class="post-link" href="{{ .Permalink | relURL }}">
-        <div class="content">
-            <h3 class="title">{{ .Title }}</h3>
-            <p class="description">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">
-                    {{ .Date.Format "January 2, 2006" }}
-                </time>
-                {{ if gt $minRead 1 }} · {{ $minRead }} min read{{ end }}
-            </p>
-        </div>
-        <ul class="tags">
+        <h3 class="title">{{ .Title }}</h3>
+        {{ partial "post-info.html" . }}
+        <div class="tags">
             {{ range .Params.tags | sort }}
-            <li class="tag">{{ . }}</li>
+            <span class="tag">{{ . }}</span>
             {{ end }}
-        </ul>
+        </div>
     </a>
     {{ end }}
 </nav>

@@ -9,11 +9,11 @@
         opacity: 0;
     }
 
-    & .random-post-btn {
+    .random-post-btn {
         background: $color-accent-transparent-10;
         color: $color-accent;
         text-decoration: none;
-        border: $border-accent;
+        border: $border-accent-t;
         border-radius: $radius-round;
         padding: 0.5em 1.5em;
         font-size: 1.1rem;
