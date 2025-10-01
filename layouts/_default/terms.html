@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 <h1 class="animated">
-    Tags ({{ len (where .Pages "Params.unlisted" "ne" true) }})
+    {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
 </h1>
 <article class="animated">
     <div class="post-tags">
