@@ -3,8 +3,6 @@
     const widthOverflowClass = "width-overflow";
     const heightOverflowClass = "height-overflow";
 
-    const tolerance = 0;
-
     const selectors = ["body", "pre", "table"]
 
     document.querySelectorAll(selectors).forEach(function (el) {

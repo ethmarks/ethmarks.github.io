@@ -8,7 +8,7 @@ $main-margin-top-mobile: 3.5rem;
 $main-width: 100vw;
 $main-width-mobile: 98vw;
 
-$article-margin-top: clamp(1rem, 4vw, 1.875rem);
+$article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
 
 html {
     font-size: 100%;
@@ -26,13 +26,18 @@ body {
     font-family: $font-primary;
     color: $color-text;
     margin: 0;
-    /* Reset default body margin */
     font-size: $font-size-base;
     overflow-wrap: break-word;
+
     background-attachment: fixed;
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
 
     &.height-overflow {
         background-attachment: scroll;
+        position: relative;
+        margin-bottom: 0;
     }
 }
 
