@@ -1,6 +1,8 @@
 <div class="info animated">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "January 2, 2006" }}
+    {{- $timeString := default .Date .Params.created }}
+    {{- $time := time.AsTime $timeString }}
+    <time datetime="{{ $time.Format "2006-01-02" }}">
+        {{ $time.Format "January 2, 2006" }}
     </time>
     {{ $readTime := (partial "read-time.html" .) }}
     {{- if gt $readTime 1 }}
