@@ -52,7 +52,7 @@ main {
 
 main > article {
     background: $color-article;
-    margin: $article-margin-top 0 0;
+    margin: $article-margin-vertical 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -67,11 +67,6 @@ main > article {
         @include mobile {
             margin-top: 6px;
         }
-    }
-
-    body.height-overflow & {
-        border-radius: $radius-xl $radius-xl 0 0;
-        border-bottom: none;
     }
 
     @include mobile {
