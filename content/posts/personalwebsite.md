@@ -1,6 +1,7 @@
 ---
 title: Personal Website
 published: 2025-05-14
+created: 2025-04-03
 tags: [projects, programming, github, webdev, personal website]
 description: The website you're reading right now
 link: https://github.com/ethmarks/ethmarks.github.io
