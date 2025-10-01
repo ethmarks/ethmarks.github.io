@@ -2,3 +2,5 @@ curios:
   text: "Curios are short essays about interesting things I've found. They're similar to a TIL (Today I Learned)."
 figments:
   text: "Figments are creative writing pieces, such as short stories or poems."
+zed:
+  text: "Zed is my preferred code editor. \n\n I use Zed because it's lightning fast, minimalist, has great AI integration, allows for instant native collaboration, and is constantly evolving and adding new features. \n\n Here's a link to the [Zed website](https://zed.dev/)."
