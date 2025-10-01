@@ -3,20 +3,28 @@
     const widthOverflowClass = "width-overflow";
     const heightOverflowClass = "height-overflow";
 
-    const selectors = ["body", "pre", "table"]
+    const selectors = ["body", "pre", "table"];
 
     document.querySelectorAll(selectors).forEach(function (el) {
-      const parent = el.parentElement;
       const contentWidth = el.scrollWidth;
-      const contentHeight = el.scrollHeight;
-      const containerWidth = parent
-        ? parent.clientWidth
-        : window.innerWidth;
-      const containerHeight = parent
-        ? parent.clientHeight
-        : window.innerHeight
+      let contentHeight = el.scrollHeight;
 
-      if (contentHeight == 0 || contentWidth == 0 || el.tagName === "HTML") {
+      let containerWidth, containerHeight;
+
+      if (el.tagName.toLowerCase() === "body") {
+        containerWidth = window.innerWidth;
+        containerHeight = window.innerHeight;
+        contentHeight = Math.max(
+          document.documentElement.scrollHeight,
+          document.body.scrollHeight
+        );
+      } else {
+        const parent = el.parentElement;
+        containerWidth = parent ? parent.clientWidth : window.innerWidth;
+        containerHeight = parent ? parent.clientHeight : window.innerHeight;
+      }
+
+      if (contentHeight === 0 || contentWidth === 0) {
         return;
       }
 
