@@ -1,6 +1,6 @@
 ---
 title: Llamafile
-date: 2025-06-24
+published: 2025-06-24
 tags: [curios, programming, ai]
 description: An explanation of llamafile, a file type that lets you run LLMs from a single file
 ---

@@ -1,6 +1,7 @@
 ---
 title: Anagram Animator
-date: 2025-04-18
+published: 2025-05-12
+created: 2025-04-18
 tags: [projects, programming, language, colab]
 description: A simple little Jupyter notebook to create anagram GIFs
 link: https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK

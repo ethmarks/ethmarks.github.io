@@ -1,6 +1,6 @@
 ---
 title: Thessa
-date: 2025-05-21
+published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
 link: https://github.com/ethmarks/thessa

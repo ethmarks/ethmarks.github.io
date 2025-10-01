@@ -1,6 +1,6 @@
 ---
 title: Text Scramble Animation
-date: 2025-06-29
+published: 2025-06-29
 tags: [programming, webdev, codepen]
 description: A demonstration of my text scrambling JavaScript animation
 link: https://codepen.io/ethmarks/pen/jEPRNXG

@@ -1,6 +1,6 @@
 ---
 title: I have invented a new measurement system
-date: 2025-04-24
+published: 2025-04-24
 tags: [physics]
 description: A whimsical proposal for a new measurement system based on Planck lengths and quantum physics.
 ---

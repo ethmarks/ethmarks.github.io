@@ -1,6 +1,7 @@
 ---
 title: "8.7539319"
-date: 2024-09-14
+published: 2025-05-14
+created: 2024-09-14
 tags: [figments, sci-fi, short-story]
 description: A fictional police report and investigation into a mysterious frequency and a missing scientist.
 ---
