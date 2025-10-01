@@ -8,7 +8,7 @@
 </h1>
 <article class="animated">
     {{ with index .Site.Data.tags (.Title | urlize) }} {{ if .text }}
-    <p>{{ .text | safeHTML }}</p>
+    <p id="tag-text">{{ .text | markdownify }}</p>
     {{ end }} {{ end }} {{ partial "post-links.html" .Pages }}
 </article>
 {{ end }}
