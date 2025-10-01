@@ -5,7 +5,7 @@
         {{ $time.Format "January 2, 2006" }}
     </time>
     {{- if and .Params.created .Params.published }}
-    <span title="Published {{ (time.AsTime .Params.published).Format "January 2, 2006" }}"> (published later)</span>
+    <span class="published-note" title="Published {{ (time.AsTime .Params.published).Format "January 2, 2006" }}"> (published later)</span>
     {{- end }}
     {{ $readTime := (partial "read-time.html" .) }}
     {{- if gt $readTime 1 }}
