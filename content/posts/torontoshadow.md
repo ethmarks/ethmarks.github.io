@@ -1,6 +1,6 @@
 ---
 title: Volumetric Shadows in Toronto
-date: 2025-07-17
+published: 2025-07-17
 tags: [travel, curio, physics]
 description: A neat photo I took that demonstrates the air quality of Toronto via the volumetric shadow cast by the CN Tower
 ---

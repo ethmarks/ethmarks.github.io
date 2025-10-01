@@ -1,6 +1,6 @@
 ---
 title: Fish swim in WHAT?!
-date: 2025-04-28
+published: 2025-04-28
 tags: [figments, sci-fi, humor]
 description: A humorous sci-fi take on Earth's naming conventions and the prevalence of water and aquatic life.
 ---

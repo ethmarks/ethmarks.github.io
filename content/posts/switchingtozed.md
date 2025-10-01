@@ -1,6 +1,6 @@
 ---
 title: I'm switching to Zed, maybe
-date: 2025-07-23
+published: 2025-07-23
 tags: [programming, zed]
 description: I'm switching from VS Code to the Zed code editor
 ---

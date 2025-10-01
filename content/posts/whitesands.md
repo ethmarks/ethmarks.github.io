@@ -1,6 +1,6 @@
 ---
 title: White Sands National Park
-date: 2025-05-01
+published: 2025-05-01
 tags: [travel]
 description: A personal travelogue and review of White Sands National Park, its unique gypsum dunes, activities, and quirks.
 ---

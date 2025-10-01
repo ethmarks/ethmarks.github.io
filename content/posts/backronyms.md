@@ -1,6 +1,6 @@
 ---
 title: Backronyms
-date: 2025-06-09
+published: 2025-06-09
 tags: [humor, language]
 description: A fun list of backronyms
 ---

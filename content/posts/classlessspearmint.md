@@ -1,6 +1,6 @@
 ---
 title: ClasslessSpearmint
-date: 2025-07-20
+published: 2025-07-20
 tags: [projects, webdev, programming, github, ai, codepen]
 description: ClasslessSpearmint is a Classless CSS style that aesthetically styles raw HTML with my website's theme without needing to assign HTML classes
 link: https://github.com/ethmarks/ClasslessSpearmint

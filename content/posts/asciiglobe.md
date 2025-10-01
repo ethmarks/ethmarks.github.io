@@ -1,6 +1,7 @@
 ---
 title: ASCII-Globe
-date: 2025-01-18
+published: 2025-05-09
+created: 2025-01-18
 tags: [projects, programming, github, cartography]
 description: A text-based cartographic rendering engine that uses NASA satellite data
 link: https://github.com/ethmarks/ASCII-Globe

@@ -1,6 +1,7 @@
 ---
 title: Symphony of Industry
-date: 2024-04-29
+published: 2025-05-13
+created: 2024-04-29
 tags: [figments, poetry, automation]
 description: A poem and reflection on the sights and sounds of industrial progress and machinery.
 ---

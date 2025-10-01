@@ -1,6 +1,6 @@
 ---
 title: I accidentally corrupted my hard drive partition table
-date: 2025-08-05
+published: 2025-08-05
 tags: [tech, linux]
 description: Due to a catastrophic failure during a disk partitioning job, my hard drive's partition table became corrupted and I had to fix it
 ---

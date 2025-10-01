@@ -1,7 +1,7 @@
 ---
 unlisted: true
 title: Shattered Moon
-date: 2024-04-18
+published: 2024-04-18
 tags: [figments, poetry]
 description: A poem about a world with a fragmented moon
 ---

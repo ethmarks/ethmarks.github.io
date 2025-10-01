@@ -1,6 +1,6 @@
 ---
 title: "Dynamically converting a Hugo partial into a Web Component"
-date: 2025-09-24
+published: 2025-09-24
 tags: [personal website, programming, webdev, zed, ai, automation]
 description: "I used Hugo's resources.FromString to dynamically convert my site's header and footer into Web Components"
 ---

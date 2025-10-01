@@ -1,6 +1,6 @@
 ---
 title: A website about Salt
-date: 2025-06-11
+published: 2025-06-11
 tags: [curios]
 description: A description of https://saltassociation.co.uk/, a website devoted entirely to salt
 link: https://saltassociation.co.uk/

@@ -1,7 +1,12 @@
 <div class="info animated">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "January 2, 2006" }}
+    {{- $timeString := default .Date .Params.created }}
+    {{- $time := time.AsTime $timeString }}
+    <time datetime="{{ $time.Format "2006-01-02" }}">
+        {{ $time.Format "January 2, 2006" }}
     </time>
+    {{- if and .Params.created .Params.published }}
+    <span class="published-note" title="Published {{ (time.AsTime .Params.published).Format "January 2, 2006" }}"> (published later)</span>
+    {{- end }}
     {{ $readTime := (partial "read-time.html" .) }}
     {{- if gt $readTime 1 }}
     <span class="separator"> · </span>
