@@ -1,37 +1,32 @@
-.random-post-btn-container {
-    margin: 1.5rem;
-    text-align: center;
+.random-post-btn {
+    background: $color-accent-transparent-10;
+    color: $color-accent;
+    text-decoration: none;
+    border: $border-accent-t;
+    border-radius: $radius-round;
+    padding: 0.5em 1.5em;
+    font-size: 1.1rem;
+    font-family: $font-secondary;
+    font-weight: $font-weight-bold;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border 0.2s;
 
     &.animated {
-        animation: randomBtnSlideInFromLeft 0.8s
-            cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        animation-delay: 0.4s;
         opacity: 0;
+        transform: translateX(60px);
+        animation: postTagSlideIn 0.6s var(--child-animation-delay)
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
 
-    .random-post-btn {
-        background: $color-accent-transparent-10;
-        color: $color-accent;
+    &:hover,
+    &:focus {
         text-decoration: none;
-        border: $border-accent-t;
-        border-radius: $radius-round;
-        padding: 0.5em 1.5em;
-        font-size: 1.1rem;
-        font-family: $font-secondary;
-        font-weight: $font-weight-bold;
+        background: $color-accent;
+        color: $color-text-inverse;
         box-shadow: none;
-        cursor: pointer;
-        transition:
-            background 0.2s,
-            color 0.2s,
-            border 0.2s;
-
-        &:hover,
-        &:focus {
-            text-decoration: none;
-            background: $color-accent;
-            color: $color-text-inverse;
-            box-shadow: none;
-        }
     }
 }

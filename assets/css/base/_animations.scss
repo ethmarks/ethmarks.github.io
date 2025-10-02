@@ -1,5 +1,5 @@
 .staggered {
-    @for $i from 1 through 20 {
+    @for $i from 1 through 25 {
         &:nth-child(#{$i}) {
             --child-animation-delay: #{$i * 0.05}s;
         }
@@ -32,18 +32,6 @@
     from {
         opacity: 0;
         transform: translateX(-40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes randomBtnSlideInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-60px);
     }
 
     to {
