@@ -11,6 +11,8 @@ title = "Ethan Marks"
 [markup]
   [markup.highlight]
     style = "github-dark"
+    lineNos = true
+    lineNumbersInTable = false
 
 [caches]
   [caches.images]
