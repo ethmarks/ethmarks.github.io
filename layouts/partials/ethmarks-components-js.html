@@ -12,6 +12,32 @@ class EthmarksHeader extends HTMLElement {
 class EthmarksFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = %s;
+
+    // Add overflow detection functionality
+    function updateOverflowClasses() {
+      const heightOverflowClass = "height-overflow";
+      const body = document.body;
+      const containerHeight = window.innerHeight;
+      const contentHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+
+      if (contentHeight === 0) { return; }
+
+      if (contentHeight > containerHeight) {
+        body.classList.add(heightOverflowClass);
+      } else {
+        body.classList.remove(heightOverflowClass);
+      }
+    }
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateOverflowClasses();
+    });
+
+    resizeObserver.observe(document.body);
+    updateOverflowClasses();
   }
 }
 
