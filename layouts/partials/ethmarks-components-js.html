@@ -6,6 +6,19 @@
 class EthmarksHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = %s;
+
+    const activeLink = this.getAttribute('active');
+    if (activeLink) {
+      // Remove any existing active classes
+      const navLinks = this.querySelectorAll('nav a');
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      // Add active class to the specified link by ID
+      const targetLink = this.querySelector('#nav-' + activeLink.toLowerCase());
+      if (targetLink) {
+        targetLink.classList.add('active');
+      }
+    }
   }
 }
 
