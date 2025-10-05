@@ -3,6 +3,7 @@
 @import 'components/table';
 @import 'components/external-link';
 
+
 h2 {
     margin: 0;
     font-size: 2rem;
@@ -11,8 +12,7 @@ h2 {
 main {
     overflow: hidden;
     @include notMobile {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        --main-margin-sides: 5vw;
     }
 }
 

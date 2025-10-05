@@ -2,11 +2,12 @@
 
 $body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), $color-background;
 
-$main-margin-top: 5rem;
-$main-margin-top-mobile: 3.5rem;
-
 $main-width: 100vw;
 $main-width-mobile: 98vw;
+$main-margin-top: 5rem;
+$main-margin-top-mobile: 3.5rem;
+$main-margin-sides: 12vw;
+$main-margin-sides-mobile: auto;
 
 $article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
 
@@ -36,16 +37,20 @@ body {
 }
 
 main {
+    --main-width: #{$main-width};
+    --main-margin-sides: #{$main-margin-sides};
+    --main-margin-top: #{$main-margin-top};
     max-width: $main-width;
+    margin: var(--main-margin-top) var(--main-margin-sides) 0;
     box-sizing: border-box;
-    margin: $main-margin-top 12vw 0;
     display: flex;
     flex-direction: column;
     padding: 0;
 
     @include mobile {
-        margin: $main-margin-top-mobile auto 0;
-        max-width: $main-width-mobile;
+        --main-margin-sides: #{$main-margin-sides-mobile};
+        --main-margin-top: #{$main-margin-top-mobile};
+        --main-width: #{$main-width-mobile};
     }
 }
 
