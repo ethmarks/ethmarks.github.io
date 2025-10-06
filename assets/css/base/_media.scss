@@ -1,3 +1,8 @@
+:root {
+    --media-width: clamp(300px, 60vw, 1000px);
+    @include mobile {--media-width: 100%;}
+}
+
 figure {
     display: flex;
     flex-direction: column;

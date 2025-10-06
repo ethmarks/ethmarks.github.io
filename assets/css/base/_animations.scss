@@ -1,3 +1,7 @@
+:root {
+    --child-animation-delay: 0s;
+}
+
 .staggered {
     @for $i from 1 through 20 {
         &:nth-child(#{$i}) {
