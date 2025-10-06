@@ -33,49 +33,32 @@
     <div id="projects">
         <h3>Featured Projects</h3>
         <div class="cards-grid">
-            <div class="card">
-                <a href="/posts/asciiglobe/" class="card-link">
-                    <img
-                        src="/media/ascii_globe_frame.webp"
-                        alt="A spinning globe rendered with text"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: transparent";
-                    >
-                    <h4>ASCII-Globe</h4>
-                    <p>A text-based cartographic rendering engine that uses NASA satellite data</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/posts/thessa/" class="card-link">
-                    <img
-                        src="/media/thessa_2025-09-23.webp"
-                        alt="A screenshot of the Thessa interface showing synonyms for the word &lsquo;screenshot&rsquo;"
-                        width="1869"
-                        height="964"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: #171919";
-                    >
-                    <h4>Thessa</h4>
-                    <p>An AI-powered thesaurus that uses the Gemini API</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/posts/colourlesstransformer/" class="card-link">
-                    <img
-                        src="/media/painttransformer_walkway.webp"
-                        alt="A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
-                        width="1366"
-                        height="614"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: #a96764";
-                    >
-                    <h4>ColourlessTransformer</h4>
-                    <p>A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes</p>
-                </a>
-            </div>
+            {{ partial "home-card.html" (dict
+            "href" "/posts/asciiglobe/"
+            "src" "media/ascii_globe_frame.png"
+            "alt" "A spinning globe rendered with text"
+            "style" "background: transparent;"
+            "title" "ASCII-Globe"
+            "desc" "A text-based cartographic rendering engine that uses NASA satellite data"
+            ) }}
+
+            {{ partial "home-card.html" (dict
+            "href" "/posts/thessa/"
+            "src" "media/thessa_2025-09-23.webp"
+            "alt" "A screenshot of the Thessa interface showing synonyms for the word &lsquo;screenshot&rsquo;"
+            "style" "background: #171919;"
+            "title" "Thessa"
+            "desc" "An AI-powered thesaurus that uses the Gemini API"
+            ) }}
+
+            {{ partial "home-card.html" (dict
+            "href" "/posts/colourlesstransformer/"
+            "src" "media/painttransformer_walkway.webp"
+            "alt" "A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
+            "style" "background: #a96764;"
+            "title" "ColourlessTransformer"
+            "desc" "A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes"
+            ) }}
         </div>
         <a href="/tags/projects/" class="link-capsule">All projects →</a>
     </div>
@@ -86,51 +69,32 @@
     <div id="posts">
         <h3>Featured Posts</h3>
         <div class="cards-grid">
-            <div class="card">
-                <a href="/posts/liquidglass/" class="card-link">
-                    <img
-                        src="/media/liquid_glass_banner.webp"
-                        alt="Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass"
-                        width="1199"
-                        height="663"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: #a6acb3";
-                    >
-                    <h4>Thoughts on Liquid Glass</h4>
-                    <p>My thoughts on Apple's new Liquid Glass design</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/posts/waterman/" class="card-link">
-                    <img
-                        src="/media/waterman_poster.webp"
-                        alt="An unusual world map in a butterfly shape, showing the continents arranged in eight connected lobes"
-                        width="550"
-                        height="550"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: #124f7f";
-                    >
-                    <h4>The Waterman Butterfly</h4>
-                    <p>An exploration of the Waterman Butterfly map projection</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/posts/quanth/" class="card-link">
-                    <img
-                        src="/media/plancklengthfoam.webp"
-                        alt="An illustrated graphic depicting quantum foam"
-                        width="1186"
-                        height="687"
-                        class="card-image"
-                        loading="lazy"
-                        style="background: #2f246c";
-                    >
-                    <h4>I have invented a new measurement system</h4>
-                    <p>A proposal for a new measurement system based on Planck lengths and quantum physics</p>
-                </a>
-            </div>
+            {{ partial "home-card.html" (dict
+            "href" "/posts/liquidglass/"
+            "src" "media/liquid_glass_banner.webp"
+            "alt" "Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass"
+            "style" "background: #a6acb3;"
+            "title" "Thoughts on Liquid Glass"
+            "desc" "My thoughts on Apple's new Liquid Glass design"
+            ) }}
+
+            {{ partial "home-card.html" (dict
+            "href" "/posts/waterman/"
+            "src" "media/waterman_poster.webp"
+            "alt" "An unusual world map in a butterfly shape, showing the continents arranged in eight connected lobes"
+            "style" "background: #124f7f;"
+            "title" "The Waterman Butterfly"
+            "desc" "An exploration of the Waterman Butterfly map projection"
+            ) }}
+
+            {{ partial "home-card.html" (dict
+            "href" "/posts/quanth/"
+            "src" "media/plancklengthfoam.webp"
+            "alt" "An illustrated graphic depicting quantum foam"
+            "style" "background: #2f246c;"
+            "title" "I have invented a new measurement system"
+            "desc" "A proposal for a new measurement system based on Planck lengths and quantum physics"
+            ) }}
         </div>
         <a href="/posts/" class="link-capsule">All posts →</a>
     </div>
