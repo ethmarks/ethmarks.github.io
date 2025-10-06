@@ -2,4 +2,6 @@
 @import 'base/prose';
 @import 'components/code';
 
---color-accent-dark: #{$color-accent-dark};
+:root {
+    --color-accent-dark: #{$color-accent-dark};
+}
