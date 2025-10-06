@@ -76,10 +76,3 @@ blockquote {
         float: left;
     }
 }
-
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, $color-accent-transparent-10, $color-accent, $color-accent-transparent-10);
-  margin: 2rem 0;
-}
