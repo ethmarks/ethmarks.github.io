@@ -1,16 +1,13 @@
 <div class="card">
-    {{- $original := resources.Get .src -}}
-    {{- $small := $original.Resize "400x webp q90 MitchellNetravali" -}}
-    {{- $large := $original.Resize "800x webp q100 MitchellNetravali" -}}
+    {{- $image := resources.Get .src -}}
     <a href="{{ .href }}" class="card-link">
         <img
-            src="{{ $small.RelPermalink }}"
-            srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
+            src="{{ $image.RelPermalink }}"
             alt="{{ .alt }}"
             class="card-image"
             loading="lazy"
-            width="{{ $small.Width }}"
-            height="{{ $small.Height }}"
+            width="{{ $image.Width }}"
+            height="{{ $image.Height }}"
             {{ with .style }}style="{{ . }}"{{ end }}
         >
         <h4>{{ .title }}</h4>
