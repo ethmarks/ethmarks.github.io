@@ -28,9 +28,9 @@ First, let's see what the Mercator map actually looks like.
 
 You could just use Google Images or whatever, but those images are going to be pretty low-quality. For a world map, we want a high resolution image so that we can zoom in.
 
-The highest-resolution images of the 1569 Mercator World Map that are freely available were taken by a German secondary school teacher named Wilhelm Kruecken. He took 18 high-resolution photos, each of a different section of the original map. I composited these photos together into one 5,433 by 3,450 pixel image. I then upscaled the composition with a [Nomos8k neural upscaler](https://huggingface.co/Phips/4xNomos8kDAT) to create a 10,866 by 6,900 pixel image. This makes it one of the highest-resolution images of the original Mercator map available on the public web.
+The highest-resolution images of the 1569 Mercator World Map that are freely available were taken by a German secondary school teacher named Wilhelm Kruecken. He took 18 high-resolution photos, each of a different section of the original map. I composited these photos together into one 5,433 by 3,450 pixel image. I then upscaled the composition with a [Nomos8k neural upscaler](https://huggingface.co/Phips/4xNomos8kDAT) to create a 10,866 by 6,900 pixel image. This makes it one of the highest-resolution images of the original Mercator map available on the public web. It can be downloaded [here](https://media.githubusercontent.com/media/ethmarks/mercator/refs/heads/main/seadragon-viewer/mercator-world-map.webp).
 
-I coded an interactive demo so you can explore the map. The source code is available [here](https://github.com/ethmarks/mercator/tree/main/seadragon-viewer).
+I coded an interactive demo so you can explore the map. Zoom in to see all of the detail. The source code is available [here](https://github.com/ethmarks/mercator/tree/main/seadragon-viewer).
 
 {{< iframe src="https://ethmarks.github.io/mercator/seadragon-viewer/" title="Mercator World Map">}}
 
