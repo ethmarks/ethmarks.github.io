@@ -45,7 +45,7 @@ But it gets so much worse.
 
 ### That's not what the Americas are shaped like
 
-The Americas are the most obviously wrong part here. Canada is monstrous, the area that would eventually become the United States is squished, and South America is shaped kind of like a piece of toast.
+The Americas are the most obviously wrong part here. Canada is enormous, the area that would eventually become the United States is squished, and South America is shaped kind of like a piece of toast.
 
 The reason the Americas are so hilariously misshapen is that nobody knew what they looked like at this point. This map was created barely a century after Christopher Columbus landed, so the vast majority of the New World was still unexplored to Europeans. Surveying unknown land is difficult, and it's even harder the land is a continent-sized rainforest with jaguars and venomous snakes. It's understandable that they didn't have a great idea of what South America looked like.
 
@@ -113,7 +113,7 @@ However, the Mercator Projection that his map used was genuinely revolutionary. 
 
 In order to understand why the Mercator Projection was such a big deal, you need to understand why straight rhumb lines were such a big deal. In order to do *that*, you need to understand what rhumb lines are in the first place.
 
-Essentially, rhumb lines, also called constant bearings, are just straight lines relative to a direction on a compass. If you follow a specific compass direction (e.g. 30 degrees north of west) in a straight line, you're travelling along a rhumb line. On anything other than a Mercator projection (including, you know, the actual Earth), rhumb lines aren't straight. They're curves that spiral towards either the North or South pole.
+Essentially, rhumb lines, also called constant bearings, are just straight lines relative to a direction on a compass. If you follow a specific compass direction (e.g. 30 degrees north of west) in a straight line, you're traveling along a rhumb line. On anything other than a Mercator projection (including, you know, the actual Earth), rhumb lines aren't straight. They're curves that spiral towards either the North or South pole.
 
 But the Mercator projection is designed so that all rhumb lines appear straight. This is what makes the Mercator projection special.
 
