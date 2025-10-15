@@ -2,7 +2,7 @@
 title: Mercator's World Map was useless
 published: 2025-10-15
 tags: [history, cartography]
-description: Meractor's 1569 World Map was useless for navigation because of its numerous errors
+description: Mercator's 1569 World Map was useless for navigation because of its numerous errors
 ---
 
 *Note: This was written as a project for my English class. I didn't intend to publish it, but after spending days iterating on it and also writing over 300 lines of code for the web demos, I decided that I spent too much effort on this not to publish it.*
@@ -44,7 +44,7 @@ But it gets so much worse.
 
 ### That's not what the Americas are shaped like
 
-The Americas are the most obviously wrong part here. Canada is monstrous, the United States (which was the Thirteen Colonies at the time) is squished, and South America is shaped kind of like a piece of toast.
+The Americas are the most obviously wrong part here. Canada is monstrous, the area that would eventually become the United States is squished, and South America is shaped kind of like a piece of toast.
 
 The reason the Americas are so hilariously misshapen is that nobody knew what they looked like at this point. This map was created barely a century after Christopher Columbus landed, so the vast majority of the New World was still unexplored to Europeans. Surveying unknown land is difficult, and it's even harder the land is a continent-sized rainforest with jaguars and poisonous snakes. It's understandable that they didn't have a great idea of what South America looked like.
 
@@ -130,7 +130,7 @@ That being said, the Mercator Projection has its share of flaws.
 
 The most well-known downside of the Mercator Projection is the "Greenland Problem". If you look at Greenland on a Mercator map, you'd get the impression that it's about the same size as Africa. Maybe a bit bigger.
 
-In reality, Greenland is 14 times smaller than Africa. This is because the Mercator Projection makes things bigger based on how far they are from the equator. Africa is pretty close to the equator, so it's more or less normally sized. Greenland is pretty far from the equator, so it looks absolutely enormous, when in reality it really isn't.
+In reality, Greenland is 14 times smaller than Africa. This is because the Mercator Projection makes things bigger based on how far they are from the equator. Africa is pretty close to the equator, so it's more or less normally sized. Greenland is pretty far from the equator, so it looks absolutely enormous.
 
 Here's another demo I coded. Drag the Greenland around and see how much smaller it gets when you bring it close to the equator? The source code for this one is [here](https://github.com/ethmarks/mercator/tree/main/greenland).
 
@@ -156,7 +156,7 @@ Mercator's projection was genuinely revolutionary (at least, for a few hundred y
 
 ## Conclusion
 
-Gerardus Mercators is a kind of a paradox.
+Gerardus Mercator is kind of a paradox.
 
 One the one hand, he was a brilliant mathematician who designed a map projection that revolutionized navigation and would be used for centuries to come.
 
