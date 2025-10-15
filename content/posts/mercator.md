@@ -117,7 +117,7 @@ Essentially, rhumb lines, also called constant bearings, are just straight lines
 
 But the Mercator projection is designed so that all rhumb lines appear straight. This is what makes the Mercator projection special.
 
-The way to do construct a straight-rhumb-line map with modern mathematics is to set the apparent latitude as the integral of the inverse of the cosine of the true latitude. In other words, calculus stuff. Calculus hadn't been invented yet, so Mercator must have done something else. Unfortunately, we'll never know for sure exactly how he did it because Mercator was extremely secretive about his method. Nobody else even knew how the Mercator Projection worked until Edward Wright reverse-engineered it 30 years later.
+The way to construct a map with straight rhumb lines using modern mathematics is to set the apparent latitude as the integral of the inverse of the cosine of the true latitude. In other words, calculus stuff. Calculus hadn't been invented yet, so Mercator must have done something else. Unfortunately, we'll never know for sure exactly how he did it because Mercator was extremely secretive about his method. Nobody else even knew how the Mercator Projection worked until Edward Wright reverse-engineered it 30 years later.
 
 Anyways, straight rhumb lines are useful because they make navigation by compass *way* easier. With a Mercator map, navigation is as easy as drawing a straight line between your current position and your destination, measuring the angle of this line relative to North, and sailing in the direction your compass points when set to the angle you measured. And that's it! This was much more simple than the complicated geometry that navigators used to have to do in order to plot a course.
 
@@ -135,7 +135,7 @@ The most well-known downside of the Mercator Projection is the "Greenland Proble
 
 In reality, Greenland is 14 times smaller than Africa. This is because the Mercator Projection makes things bigger based on how far they are from the equator. Africa is pretty close to the equator, so it's more or less normally sized. Greenland is pretty far from the equator, so it looks absolutely enormous.
 
-Here's another demo I coded. Drag the Greenland around and see how much smaller it gets when you bring it close to the equator? The source code for this one is [here](https://github.com/ethmarks/mercator/tree/main/greenland).
+Here's another demo I coded. Drag Greenland around. See how much smaller it gets when you bring it close to the equator? The source code for this one is [here](https://github.com/ethmarks/mercator/tree/main/greenland).
 
 <figure>
 <iframe class="responsive" src="https://ethmarks.github.io/mercator/greenland/" title="The True Size of Greenland" ></iframe>
