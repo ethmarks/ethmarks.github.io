@@ -37,7 +37,7 @@ I coded an interactive demo so you can explore the map. Zoom in to see all of th
 
 {{< iframe src="https://ethmarks.github.io/mercator/seadragon-viewer/" title="Mercator World Map">}}
 
-Obviously, the map is very very wrong. It looks like something you might draw if you were really fastidious with Europe and Africa but then outsourced the rest of the map to a seven-year-old. At a glance, you might assume that this a map from a fantasy novel rather than a map of Earth.
+Obviously, this map is very very wrong. It looks like something you might draw if you were really fastidious with Europe and Africa but then outsourced the rest of the map to a seven-year-old. At a glance, you might assume that this a map from a fantasy novel rather than a map of Earth.
 
 But it gets so much worse.
 
@@ -47,7 +47,7 @@ But it gets so much worse.
 
 The Americas are the most obviously wrong part here. Canada is monstrous, the area that would eventually become the United States is squished, and South America is shaped kind of like a piece of toast.
 
-The reason the Americas are so hilariously misshapen is that nobody knew what they looked like at this point. This map was created barely a century after Christopher Columbus landed, so the vast majority of the New World was still unexplored to Europeans. Surveying unknown land is difficult, and it's even harder the land is a continent-sized rainforest with jaguars and poisonous snakes. It's understandable that they didn't have a great idea of what South America looked like.
+The reason the Americas are so hilariously misshapen is that nobody knew what they looked like at this point. This map was created barely a century after Christopher Columbus landed, so the vast majority of the New World was still unexplored to Europeans. Surveying unknown land is difficult, and it's even harder the land is a continent-sized rainforest with jaguars and venomous snakes. It's understandable that they didn't have a great idea of what South America looked like.
 
 ### r/mapswithoutaustralia
 
