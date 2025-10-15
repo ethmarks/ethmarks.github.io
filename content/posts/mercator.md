@@ -126,9 +126,15 @@ This why the Mercator Projection was so popular. To 16th-century sailors, it was
 
 That being said, the Mercator Projection has its share of flaws.
 
-The most well-known downside of the Mercator Projection is the "Greenland Problem". If you look at Greenland on a Mercator map, you'd get the impression that it's about the same size as Africa. Maybe a bit bigger. In reality, Greenland is *14* times smaller than Africa. This is because the Mercator Projection makes things bigger based on how far they are from the equator. Africa is pretty close to the equator, so it's pretty normally sized. Greenland is pretty far from the equator, so it looks absolutely monstrous.
+The most well-known downside of the Mercator Projection is the "Greenland Problem". If you look at Greenland on a Mercator map, you'd get the impression that it's about the same size as Africa. Maybe a bit bigger.
 
-{An interactive demo showing Mercator size distortion}
+In reality, Greenland is 14 times smaller than Africa. This is because the Mercator Projection makes things bigger based on how far they are from the equator. Africa is pretty close to the equator, so it's more or less normally sized. Greenland is pretty far from the equator, so it looks absolutely enormous, when in reality it really isn't.
+
+Here's another demo I coded. Drag the Greenland around and see how much smaller it gets when you bring it close to the equator? The source code for this one is [here](https://github.com/ethmarks/mercator/tree/main/greenland).
+
+<figure>
+<iframe class="responsive" src="https://ethmarks.github.io/mercator/greenland/" title="The True Size of Greenland" ></iframe>
+</figure>
 
 ### The North Pole isn't infinitely large
 
