@@ -19,8 +19,8 @@ I use a few different terms that include the word 'Mercator', so just to clear u
 
 - "Mercator": the guy who made the things I'm talking about
 - "Mercator Projection": the special way of drawing maps that Gerardus Mercator invented
-- "*the* Mercator map / Mercator's map": the map made by Gerardus Mercator in 1569 that used the Mercator Projection
-- "*a* Mercator map / Mercator maps": any map that uses the Mercator Projection; this includes the Mercator map, but it also includes the map in your second grade classroom
+- "**the** Mercator map / Mercator's map": the map made by Gerardus Mercator in 1569 that used the Mercator Projection
+- "**a** Mercator map / Mercator maps": any map that uses the Mercator Projection; this includes the Mercator map, but it also includes the map in your second grade classroom
 
 ## The map
 
@@ -40,7 +40,7 @@ But it gets so much worse.
 
 ## Stuff he just made up
 
-### The Americas blob
+### That's not what the Americas are shaped like
 
 The Americas are the most obviously wrong part here. Canada is monstrous, the United States (which was the Thirteen Colonies at the time) is squished, and South America is shaped kind of like a piece of toast.
 
@@ -148,7 +148,7 @@ This is a pretty big disadvantage for something like polar exploration or intern
 
 The problem with Mercator's map is that the Mercator Projection cleverness relies on the map being accurate in the first place. As you're aware, 'accurate' is not a very good descriptor of Mercator's map.
 
-It doesn't matter that you can draw a straight rhumb line between, say, England and Bermuda if the map was wrong about where Bermuda was by hundreds of miles.
+It doesn't matter that you can draw a straight rhumb line between, say, England and Bermuda if the map is wrong about where Bermuda was by hundreds of miles.
 
 Mercator's projection was genuinely revolutionary (at least, for a few hundred years until we started using great circle routes), but his map was never really useful for navigation.
 
