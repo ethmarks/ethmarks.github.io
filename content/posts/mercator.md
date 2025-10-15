@@ -174,3 +174,7 @@ Mercator was a visionary mathematician who sucked at implementing his ideas in p
 His map was not useful for navigation.
 
 ~Ethan
+
+## Sources
+
+- [*Revisiting the Mercator World Map of 1569: an Assessment of Navigational Accuracy*](https://doi.org/10.1017/S0373463316000291) by Joaquim Gaspar.
