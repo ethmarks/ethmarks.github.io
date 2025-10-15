@@ -61,7 +61,7 @@ Even though this wasn't strictly Mercator's fault, 'leaving out an entire contin
 
 You might be wondering 'Since Antarctica was discovered after Australia, and this map predates the discovery of Australia, how come Mercator put Antarctica on this map?'. That's a very astute question. The answer is: 'that isn't Antarctica'.
 
-The massive continent on the bottom of the map is called Terra Australis. You haven't heard of it because it doesn't exist.
+The massive continent on the bottom of the map is called [Terra Australis](https://en.wikipedia.org/wiki/Terra_Australis). You haven't heard of it because it doesn't exist.
 
 Let me explain.
 
@@ -77,13 +77,13 @@ I take it back. Leaving out a continent isn't the worst map-making mistake; incl
 
 Not satisfied with including a made-up continent, Mercator also included several imaginary islands in the Atlantic Ocean.
 
-These are examples of phantom islands. Phantom islands were a pretty common occurrence. When "Bob said he saw an island" was sufficient evidence for putting that island on every map, there were quite a few times where sailors claimed to have seen islands that don't actually exist.
+These are examples of [phantom islands](https://en.wikipedia.org/wiki/Phantom_island). Phantom islands were a pretty common occurrence. When "Bob said he saw an island" was sufficient evidence for putting that island on every map, there were quite a few times where sailors claimed to have seen islands that don't actually exist.
 
 ## What is "North", anyways?
 
 There are *lots* of different ways to define North. There's Magnetic North, Geographic North, Grid North, Geomagnetic North, Astronomic North, and a bunch more, but the two big ones are Magnetic North and Geographic North.
 
-Magnetic North is the North that a compass points to. It's basically just the average polarity of the iron atoms in Earth's mantle. Because Earth's mantle is a constantly-shifting sea of molten metal, the average polarity can change pretty quickly, even on a human timescale. This causes Magnetic North to move. ([link to North Pole's travel since 1590](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fposition-of-the-north-magnetic-pole-since-1590-v0-yk5aqz7jtqz91.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D669ab66a0555b8e893ad12dc1d4371f9ef60ad0a)). In 2025, Magnetic North is pretty close to Geographic North, but in 1569 it was in the Canadian Arctic Archipelago, hundreds of miles away from its current location.
+Magnetic North is the North that a compass points to. It's basically just the average polarity of the iron atoms in Earth's mantle. Because Earth's mantle is a constantly-shifting sea of molten metal, the average polarity can change pretty quickly, even on a human timescale. This causes Magnetic North to move. In 2025, Magnetic North is pretty close to Geographic North, but in 1569 it was in the Canadian Arctic Archipelago, hundreds of miles away from its current location.
 
 ![A map of the position of Magnetic North over time. In 1590 it is slightly north of Victoria Island. In 1600 it is inside Melville Island. In 1800 it is to the east of Victoria Island. In 1900 it is slightly north of King William Island. In 2000 it is far west of Ellesmere Island. In 2020 it is slightly west of the Geographic North Pole](~/north-magnetic-pole-travel.webp "A map of how Magnetic North has moved over the years")
 
@@ -107,7 +107,7 @@ This is the biggest problem with Mercator's map. The charts he used weren't accu
 
 Hopefully I've now convinced you that Mercator was bad at making maps. His world map was pretty bad for its time, but it's even worse when compared to modern satellite imagery.
 
-However, the Mercator Projection that his map used was genuinely revolutionary. This is because it was the first map in the world to make all **rhumb lines** appear straight. This is something that nobody else in the world was able to do before Mercator.
+However, the Mercator Projection that his map used was genuinely revolutionary. This is because it was the first map in the world to make all [rhumb lines](https://en.wikipedia.org/wiki/Rhumb_line) appear straight. This is something that nobody else in the world was able to do before Mercator.
 
 ### Why are straight rhumb lines so important?
 
@@ -117,7 +117,7 @@ Essentially, rhumb lines, also called constant bearings, are just straight lines
 
 But the Mercator projection is designed so that all rhumb lines appear straight. This is what makes the Mercator projection special.
 
-The way to do this with modern mathematics is to take the integral of the inverse of the cosine of the latitude. In other words, calculus stuff. Calculus hadn't been invented yet, so Mercator must have done something else. Unfortunately, we'll never know for sure exactly how he did it because Mercator was extremely secretive about his method. Nobody else even knew how the Mercator Projection worked until Edward Wright reverse-engineered it 30 years later.
+The way to do construct a straight-rhumb-line map with modern mathematics is to set the apparent latitude as the integral of the inverse of the cosine of the true latitude. In other words, calculus stuff. Calculus hadn't been invented yet, so Mercator must have done something else. Unfortunately, we'll never know for sure exactly how he did it because Mercator was extremely secretive about his method. Nobody else even knew how the Mercator Projection worked until Edward Wright reverse-engineered it 30 years later.
 
 Anyways, straight rhumb lines are useful because they make navigation by compass *way* easier. With a Mercator map, navigation is as easy as drawing a straight line between your current position and your destination, measuring the angle of this line relative to North, and sailing in the direction your compass points when set to the angle you measured. And that's it! This was much more simple than the complicated geometry that navigators used to have to do in order to plot a course.
 
@@ -151,11 +151,11 @@ This is a pretty big disadvantage for something like polar exploration or intern
 
 ### It's not even a good tech demo
 
-The problem with Mercator's map is that the Mercator Projection cleverness relies on the map being accurate in the first place. As you're aware, 'accurate' is not a very good descriptor of Mercator's map.
+The problem with Mercator's map is that the Mercator Projection's cleverness relies on the map being accurate in the first place. As you're aware, 'accurate' is not a very good descriptor of Mercator's map.
 
 It doesn't matter that you can draw a straight rhumb line between, say, England and Bermuda if the map is wrong about where Bermuda was by hundreds of miles.
 
-Mercator's projection was genuinely revolutionary (at least, for a few hundred years until we started using great circle routes), but his map was never really useful for navigation.
+Mercator's projection was genuinely revolutionary (at least, for a few hundred years until we started using great circle routes), but his map was too riddled with errors to properly showcase it.
 
 ## Conclusion
 
@@ -165,7 +165,7 @@ One the one hand, he was a brilliant mathematician who designed a map projection
 
 But on the other hand, he was a terrible mapmaker who left out a continent, made up a new one, used the wrong type of North, and failed to properly use the charts he based his map off of.
 
-Though the Mercator Projection revolutionized navigation, it didn't do so until 1599, 30 years after it was published and 5 years after Mercator died, when Edward Wright published the Wright–Molyneux Map. This map used the Mercator Projection but it also used much more accurate data. *This* is the map that navigators used, not Mercator's map.
+Though the Mercator Projection revolutionized navigation, it didn't do so until 1599, 30 years after it was published and 5 years after Mercator died, when Edward Wright published the [Wright–Molyneux Map](https://commons.wikimedia.org/wiki/File:Wright%E2%80%93Molyneux_Map.png). This map also used the Mercator Projection, but its data was much more accurate. *This* is the map that navigators used, not Mercator's map.
 
 Given the choice between using Mercator's map and manually plotting route geometry across the Atlantic Ocean, they chose the latter. This is because it was a bad map.
 
