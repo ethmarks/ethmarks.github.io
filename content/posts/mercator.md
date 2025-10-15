@@ -5,6 +5,8 @@ tags: [history, cartography]
 description: Meractor's 1569 World Map was useless for navigation because of its numerous errors
 ---
 
+*Note: This was written as a project for my English class. I didn't intend to publish it, but after spending days iterating on it and also writing over 300 lines of code for the web demos, I decided that I spent too much effort on this not to publish it.*
+
 ## Introduction
 
 Most maps these days use the Mercator Projection. It's pretty much the default map projection. Google Maps uses it, for example.
