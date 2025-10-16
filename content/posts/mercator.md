@@ -71,7 +71,7 @@ Even though nobody had ever surveyed this continent, seen it, heard about it, or
 
 They sketched a coastline based on what it looked like in their imaginations, then told everyone that there was a lush, forested mega-continent below South America.
 
-I take it back. Leaving out a continent isn't the worst map-making mistake; including a made-up a continent is even worse.
+I take it back. Leaving out a continent isn't the worst map-making mistake; including a made-up continent is even worse.
 
 ### Ah yes, the island of "Frisland"
 
@@ -87,7 +87,7 @@ Magnetic North is the North that a compass points to. It's basically just the av
 
 ![A map of the position of Magnetic North over time. In 1590 it is slightly north of Victoria Island. In 1600 it is inside Melville Island. In 1800 it is to the east of Victoria Island. In 1900 it is slightly north of King William Island. In 2000 it is far west of Ellesmere Island. In 2020 it is slightly west of the Geographic North Pole](~/north-magnetic-pole-travel.webp "A map of how Magnetic North has moved over the years")
 
-In the modern day, it's trivial to figure out exactly which direction Geographic North is by using your phone, but that's only because your phone can interface with GPS and has built-in accelerometers and gyroscopes. When all you had is a compass, the only North that you knew how to find was Magnetic North. This means that most actually useful navigation maps set the 'up' direction as Magnetic North. Instead, Mercator's map was oriented to Geographic North. This alone made it basically useless for sailors of the time.
+In the modern day, it's trivial to figure out exactly which direction Geographic North is by using your phone, but that's only because your phone can interface with GPS and has built-in accelerometers and gyroscopes. When all you had was a compass, the only North that you knew how to find was Magnetic North. This means that most actually useful navigation maps set the 'up' direction as Magnetic North. Instead, Mercator's map was oriented to Geographic North. This alone made it basically useless for sailors of the time.
 
 ## Where exactly did he get this data?
 
@@ -145,7 +145,7 @@ Here's another demo I coded. Drag Greenland around. See how much smaller it gets
 
 The Mercator Projection also can't show the North or South poles. I said "things get bigger when they're further from the equator", but a more technically precise way to describe it is 'things get bigger when they're closer to the poles'. This might not sound like a big difference, but it is. The consequence of doing this is that the North and South poles would have to be infinitely large (a distance of zero means size approaches infinity), and the area immediately around them would be hundreds to thousands of times larger than the rest of the map.
 
-This obviously isn't practical or possible to show, so most maps using the Mercator Projection just omit 5-10 degrees of latitude from the top and bottom of the map. This means that about 1/25 of the Earth isn't even shown at all on Mercator maps.
+This obviously isn't practical or possible to show, so most maps using the Mercator Projection just omit 5-10 degrees of latitude from the top and bottom of the map. This means that about 1/25 of the Earth's surface are isn't even shown at all on Mercator maps.
 
 This is a pretty big disadvantage for something like polar exploration or international flights that pass over one of the poles.
 
@@ -161,7 +161,7 @@ Mercator's projection was genuinely revolutionary (at least, for a few hundred y
 
 Gerardus Mercator is kind of a paradox.
 
-One the one hand, he was a brilliant mathematician who designed a map projection that revolutionized navigation and would be used for centuries to come.
+On the one hand, he was a brilliant mathematician who designed a map projection that revolutionized navigation and would be used for centuries to come.
 
 But on the other hand, he was a terrible mapmaker who left out a continent, made up a new one, used the wrong type of North, and failed to properly use the charts he based his map off of.
 
