@@ -125,7 +125,7 @@ Rhumb line courses aren't the *shortest* path between two points on a globe. Pla
 
 But for a ship at sea, being able to plot a course in a few minutes and being able to keep that course by just following a certain direction on your compass was *invaluable*. Fewer steps in the plotting process means less room for error, and error in your plot means starving to death on the open ocean: not ideal.
 
-This why the Mercator Projection was so popular. To 16th-century sailors, it was literally life-saving.
+This is why the Mercator Projection was so popular. To 16th-century sailors, it was literally life-saving.
 
 ### The Greenland Problem
 
