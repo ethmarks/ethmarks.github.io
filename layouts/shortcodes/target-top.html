@@ -1,0 +1,17 @@
+<script>
+// Add target="_top" to all internal links
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a');
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    const isRelative = !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('//');
+    const isYourDomain = href.includes('ethmarks.github.io');
+
+    if (isRelative || isYourDomain) {
+      link.setAttribute('target', '_top');
+    }
+  });
+});
+</script>

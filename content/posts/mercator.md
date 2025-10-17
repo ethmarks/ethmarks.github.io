@@ -178,3 +178,5 @@ His map was not useful for navigation.
 ## Sources
 
 - [*Revisiting the Mercator World Map of 1569: an Assessment of Navigational Accuracy*](https://doi.org/10.1017/S0373463316000291) by Joaquim Gaspar.
+
+{{< target-top >}}
