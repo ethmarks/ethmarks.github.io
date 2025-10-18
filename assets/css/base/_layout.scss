@@ -19,6 +19,8 @@ html {
     @include fine {
         overscroll-behavior: none;
     }
+
+    overflow-x: hidden;
 }
 
 body {
