@@ -3,8 +3,12 @@
 .frontmatter {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 $frontmatter-margin-left;
+    margin: 0;
     align-self: flex-start;
+
+    @include mobile {
+        margin-left: $frontmatter-margin-left;
+    }
 
     & .title {
         margin-left: 0;
