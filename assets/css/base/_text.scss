@@ -19,7 +19,7 @@ h1 {
     flex-shrink: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 0 0 $frontmatter-margin-left;
+    margin: 0;
     font-weight: $font-weight-bold;
     color: $mint-blend;
     @include mint;
