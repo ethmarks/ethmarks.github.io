@@ -1,4 +1,4 @@
-$color-code-bg: #1f1f1f;
+@import 'components/_chroma.scss';
 
 pre {
     position: relative;
@@ -8,7 +8,7 @@ pre {
     overflow-x: auto;
     display: block;
     line-height: 1.4;
-    background-color: $color-code-bg !important;
+    background-color: $color-code-bg;
     color: white;
     padding: 18px;
     border-radius: $radius-xl;

@@ -34,6 +34,8 @@ $color-panel-hover-subtle: lighten($color-panel, 1%);
 $color-card: rgba(40, 40, 40, 0.8);
 $color-card-hover: rgba(50, 50, 50, 0.9);
 
+$color-code-bg: #191a1c;
+
 $mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
 $mint-blend: mix($color-accent, $color-text, 75%);
 

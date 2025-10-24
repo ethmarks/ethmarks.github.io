@@ -1,0 +1,485 @@
+/* Generated using: hugo gen chromastyles --style=github-dark */
+/* Refactored with SCSS variables by Claude Sonnet 4 */
+
+// Color palette
+$chroma-bg: $color-code-bg;
+$chroma-fg: #e6edf3;
+$chroma-red: #ff7b72;
+$chroma-blue: #79c0ff;
+$chroma-light-blue: #a5d6ff;
+$chroma-purple: #d2a8ff;
+$chroma-orange: #f0883e;
+$chroma-orange-alt: #ffa657;
+$chroma-green: #7ee787;
+$chroma-green-alt: #56d364;
+$chroma-gray: #8b949e;
+$chroma-gray-dark: #6e7681;
+$chroma-gray-darker: #737679;
+$chroma-pink: #ffa198;
+$chroma-error: #f85149;
+
+// Background colors
+$chroma-bg-red: #490202;
+$chroma-bg-green: #0f5323;
+
+// Common properties
+$chroma-bold: bold;
+$chroma-italic: italic;
+$chroma-no-select: none;
+$chroma-pre: pre;
+$chroma-line-padding: 0 0.4em 0 0.4em;
+$chroma-line-margin: 0.4em;
+
+/* Background */
+.bg {
+  color: $chroma-fg;
+  background-color: $chroma-bg;
+}
+
+/* PreWrapper */
+.chroma {
+  color: $chroma-fg;
+  background-color: $chroma-bg;
+}
+
+/* Other */
+.chroma .x { }
+
+/* Error */
+.chroma .err {
+  color: $chroma-error;
+}
+
+/* CodeLine */
+.chroma .cl { }
+
+/* LineLink */
+.chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineHighlight */
+.chroma .hl {
+  background-color: $chroma-gray-dark;
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+  white-space: $chroma-pre;
+  -webkit-user-select: $chroma-no-select;
+  user-select: $chroma-no-select;
+  margin-right: $chroma-line-margin;
+  padding: $chroma-line-padding;
+  color: $chroma-gray-darker;
+}
+
+/* LineNumbers */
+.chroma .ln {
+  white-space: $chroma-pre;
+  -webkit-user-select: $chroma-no-select;
+  user-select: $chroma-no-select;
+  margin-right: $chroma-line-margin;
+  padding: $chroma-line-padding;
+  color: $chroma-gray-dark;
+}
+
+/* Line */
+.chroma .line {
+  display: flex;
+}
+
+/* Keyword */
+.chroma .k {
+  color: $chroma-red;
+}
+
+/* KeywordConstant */
+.chroma .kc {
+  color: $chroma-blue;
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+  color: $chroma-red;
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+  color: $chroma-red;
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+  color: $chroma-blue;
+}
+
+/* KeywordReserved */
+.chroma .kr {
+  color: $chroma-red;
+}
+
+/* KeywordType */
+.chroma .kt {
+  color: $chroma-red;
+}
+
+/* Name */
+.chroma .n { }
+
+/* NameAttribute */
+.chroma .na { }
+
+/* NameClass */
+.chroma .nc {
+  color: $chroma-orange;
+  font-weight: $chroma-bold;
+}
+
+/* NameConstant */
+.chroma .no {
+  color: $chroma-blue;
+  font-weight: $chroma-bold;
+}
+
+/* NameDecorator */
+.chroma .nd {
+  color: $chroma-purple;
+  font-weight: $chroma-bold;
+}
+
+/* NameEntity */
+.chroma .ni {
+  color: $chroma-orange-alt;
+}
+
+/* NameException */
+.chroma .ne {
+  color: $chroma-orange;
+  font-weight: $chroma-bold;
+}
+
+/* NameLabel */
+.chroma .nl {
+  color: $chroma-blue;
+  font-weight: $chroma-bold;
+}
+
+/* NameNamespace */
+.chroma .nn {
+  color: $chroma-red;
+}
+
+/* NameOther */
+.chroma .nx { }
+
+/* NameProperty */
+.chroma .py {
+  color: $chroma-blue;
+}
+
+/* NameTag */
+.chroma .nt {
+  color: $chroma-green;
+}
+
+/* NameBuiltin */
+.chroma .nb { }
+
+/* NameBuiltinPseudo */
+.chroma .bp { }
+
+/* NameVariable */
+.chroma .nv {
+  color: $chroma-blue;
+}
+
+/* NameVariableClass */
+.chroma .vc {
+  color: $chroma-blue;
+}
+
+/* NameVariableGlobal */
+.chroma .vg {
+  color: $chroma-blue;
+}
+
+/* NameVariableInstance */
+.chroma .vi {
+  color: $chroma-blue;
+}
+
+/* NameVariableMagic */
+.chroma .vm {
+  color: $chroma-blue;
+}
+
+/* NameFunction */
+.chroma .nf {
+  color: $chroma-purple;
+  font-weight: $chroma-bold;
+}
+
+/* NameFunctionMagic */
+.chroma .fm {
+  color: $chroma-purple;
+  font-weight: $chroma-bold;
+}
+
+/* Literal */
+.chroma .l {
+  color: $chroma-light-blue;
+}
+
+/* LiteralDate */
+.chroma .ld {
+  color: $chroma-blue;
+}
+
+/* LiteralString */
+.chroma .s {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+  color: $chroma-blue;
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: $chroma-blue;
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+  color: $chroma-blue;
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: $chroma-blue;
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+  color: $chroma-blue;
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: $chroma-light-blue;
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumber */
+.chroma .m {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+  color: $chroma-light-blue;
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+  color: $chroma-light-blue;
+}
+
+/* Operator */
+.chroma .o {
+  color: $chroma-red;
+  font-weight: $chroma-bold;
+}
+
+/* OperatorWord */
+.chroma .ow {
+  color: $chroma-red;
+  font-weight: $chroma-bold;
+}
+
+/* Punctuation */
+.chroma .p { }
+
+/* Comment */
+.chroma .c {
+  color: $chroma-gray;
+  font-style: $chroma-italic;
+}
+
+/* CommentHashbang */
+.chroma .ch {
+  color: $chroma-gray;
+  font-style: $chroma-italic;
+}
+
+/* CommentMultiline */
+.chroma .cm {
+  color: $chroma-gray;
+  font-style: $chroma-italic;
+}
+
+/* CommentSingle */
+.chroma .c1 {
+  color: $chroma-gray;
+  font-style: $chroma-italic;
+}
+
+/* CommentSpecial */
+.chroma .cs {
+  color: $chroma-gray;
+  font-weight: $chroma-bold;
+  font-style: $chroma-italic;
+}
+
+/* CommentPreproc */
+.chroma .cp {
+  color: $chroma-gray;
+  font-weight: $chroma-bold;
+  font-style: $chroma-italic;
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: $chroma-gray;
+  font-weight: $chroma-bold;
+  font-style: $chroma-italic;
+}
+
+/* Generic */
+.chroma .g { }
+
+/* GenericDeleted */
+.chroma .gd {
+  color: $chroma-pink;
+  background-color: $chroma-bg-red;
+}
+
+/* GenericEmph */
+.chroma .ge {
+  font-style: $chroma-italic;
+}
+
+/* GenericError */
+.chroma .gr {
+  color: $chroma-pink;
+}
+
+/* GenericHeading */
+.chroma .gh {
+  color: $chroma-blue;
+  font-weight: $chroma-bold;
+}
+
+/* GenericInserted */
+.chroma .gi {
+  color: $chroma-green-alt;
+  background-color: $chroma-bg-green;
+}
+
+/* GenericOutput */
+.chroma .go {
+  color: $chroma-gray;
+}
+
+/* GenericPrompt */
+.chroma .gp {
+  color: $chroma-gray;
+}
+
+/* GenericStrong */
+.chroma .gs {
+  font-weight: $chroma-bold;
+}
+
+/* GenericSubheading */
+.chroma .gu {
+  color: $chroma-blue;
+}
+
+/* GenericTraceback */
+.chroma .gt {
+  color: $chroma-red;
+}
+
+/* GenericUnderline */
+.chroma .gl {
+  text-decoration: underline;
+}
+
+/* TextWhitespace */
+.chroma .w {
+  color: $chroma-gray-dark;
+}
