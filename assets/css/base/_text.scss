@@ -24,6 +24,10 @@ h1 {
     color: $mint-blend;
     @include mint;
 
+    @include mobile {
+        margin-left: $frontmatter-margin-left;
+    }
+
     &.chromium-nomint {
         @supports not (-moz-appearance: none) {
             @include nomint;

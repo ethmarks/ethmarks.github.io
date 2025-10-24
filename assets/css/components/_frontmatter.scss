@@ -6,6 +6,10 @@
     margin: 0;
     align-self: flex-start;
 
+    @include mobile {
+        margin-left: $frontmatter-margin-left;
+    }
+
     & .title {
         margin-left: 0;
         max-width: clamp(300px, 80vw, 800px);
