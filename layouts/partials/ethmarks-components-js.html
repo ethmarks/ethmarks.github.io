@@ -26,7 +26,14 @@ class EthmarksFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = %s;
 
-    // Add overflow detection functionality
+    const sourceLink = this.getAttribute('source');
+    if (sourceLink) {
+      const sourceAnchor = this.querySelector('a#sourcelink');
+      if (sourceAnchor) {
+        sourceAnchor.href = sourceLink;
+      }
+    }
+
     function updateOverflowClasses() {
       const heightOverflowClass = "height-overflow";
       const body = document.body;
