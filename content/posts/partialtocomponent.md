@@ -64,7 +64,7 @@ Here's what the HTML for my footer looks like as of the time of writing. The hea
     </span>
     <span id="copyright"><a href="/about/">Ethan Marks</a>, &copy;2025</span>
     <span id="email">
-        <a href="mailto:colourlessspearmint@gmail.com" target="_blank">Contact</a>
+        <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
     </span>
 </footer>
 ```
@@ -243,7 +243,7 @@ class EthmarksHeader extends HTMLElement {
 
 class EthmarksFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\u003cfooter\u003e\n    \u003cspan id=\"repo\"\u003e\n        \u003ca href=\"https://github.com/ethmarks/ethmarks.github.io\" target=\"_blank\"\u003eWebsite Source\u003c/a\u003e\n    \u003c/span\u003e\n    \u003cspan id=\"copyright\"\u003e\u003ca href=\"/about/\"\u003eEthan Marks\u003c/a\u003e, \u0026copy;2025\u003c/span\u003e\n    \u003cspan id=\"email\"\u003e\n        \u003ca href=\"mailto:colourlessspearmint@gmail.com\" target=\"_blank\"\u003eContact\u003c/a\u003e\n    \u003c/span\u003e\n\u003c/footer\u003e\n";
+    this.innerHTML = "\u003cfooter\u003e\n    \u003cspan id=\"repo\"\u003e\n        \u003ca href=\"https://github.com/ethmarks/ethmarks.github.io\" target=\"_blank\"\u003eWebsite Source\u003c/a\u003e\n    \u003c/span\u003e\n    \u003cspan id=\"copyright\"\u003e\u003ca href=\"/about/\"\u003eEthan Marks\u003c/a\u003e, \u0026copy;2025\u003c/span\u003e\n    \u003cspan id=\"email\"\u003e\n        \u003ca href=\"mailto:ethmarks.dev@gmail.com\" target=\"_blank\"\u003eContact\u003c/a\u003e\n    \u003c/span\u003e\n\u003c/footer\u003e\n";
   }
 }
 
