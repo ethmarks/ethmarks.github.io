@@ -1,5 +1,4 @@
 ---
-unlisted: true
 title: Mercator's World Map was useless
 published: 2025-10-15
 tags: [history, cartography]
