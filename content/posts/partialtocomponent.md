@@ -5,13 +5,6 @@ tags: [personal website, programming, webdev, zed, ai, automation]
 description: "I used Hugo's resources.FromString to dynamically convert my site's header and footer into Web Components"
 ---
 
-It's been quite a while since my last post here. I've been pretty busy with school stuff, but I've still found time to make several major changes to this site. Highlights include:
-
-- Switching from CSS to Sass
-- Completely redesigning my home page
-- Self-hosting all assets including fonts
-- Making lots of improvements to DX by abusing Hugo templates
-
 As a developer who cares very deeply about DRY (Don't Repeat Yourself) and also understands the value of brand consistency, I've spent a substantial amount of time trying to come up with ways to reuse the exact same assets and styles across different projects.
 
 For example, I created [ClasslessSpearmint](/posts/classlessspearmint) so that rather than duplicating the same styles across many different projects, I can just [add a single line of HTML](/posts/classlessspearmint#usage) to any page, and as if by magic the page will have my site's styles and aesthetic.
