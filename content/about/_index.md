@@ -148,10 +148,10 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 | Stat | Count |
 |------|-------|
 | States Visited | 48 |
-| GitHub Repos | <span id="repocount">~6</span> |
-| Git Commits | <span id="commitcount">~700</span> |
+| GitHub Repos | <span id="repocount">~11</span> |
+| Git Commits | <span id="commitcount">~1100</span> |
 | Posts | {{< postcount >}} |
-| Days Alive | <span id="daysalive">~5400</span> |
+| Days Alive | <span id="daysalive">~5500</span> |
 {{< /compact-table >}}
 {{< /column >}}
 
