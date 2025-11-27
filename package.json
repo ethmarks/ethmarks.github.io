@@ -1,0 +1,17 @@
+{
+  "name": "ethmarks.github.io",
+  "version": "1.0.0",
+  "description": "Personal website, built with Hugo and hosted on GitHub Pages",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo",
+    "preview": "hugo server --buildDrafts"
+  },
+  "author": "Ethan Marks",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethmarks/ethmarks.github.io.git"
+  }
+}
