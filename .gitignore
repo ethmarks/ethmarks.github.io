@@ -1,3 +1,4 @@
 # Hugo output directory
 public/
 resources/_gen/
+.hugo_build.lock
