@@ -184,34 +184,17 @@ I have a cat named Toby. He is 17 years old and blind.
     </a>
     <a
         class="external-link"
-        href="https://ethmarks.itch.io/"
-        target="_blank"
-    >
-        <img src="/media/icons/itchio.svg" alt="Itch.io icon" />
-    </a>
-    <a
-        class="external-link"
-        href="https://codepen.io/ethmarks"
-        target="_blank"
-    >
-        <img src="/media/icons/codepen.svg" alt="CodePen icon" />
-    </a>
-    <a
-        class="external-link"
-        href="https://en.wikipedia.org/wiki/User:ethmarks"
-        target="_blank"
-    >
-        <img
-            src="/media/icons/wikipedia.svg"
-            alt="Wikipedia icon"
-        />
-    </a>
-    <a
-        class="external-link"
         href="https://news.ycombinator.com/user?id=ethmarks"
         target="_blank"
     >
         <img src="/media/icons/hn.svg" alt="Hacker News icon" />
+    </a>
+    <a
+        class="external-link"
+        href="https://ethmarks.itch.io/"
+        target="_blank"
+    >
+        <img src="/media/icons/itchio.svg" alt="Itch.io icon" />
     </a>
     <a
         class="external-link"
