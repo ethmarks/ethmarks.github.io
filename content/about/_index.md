@@ -67,7 +67,7 @@ I'm **15** years old
 |---------|
 | Coding [things](/tags/projects/) |
 | Reading, especially sci-fi |
-| Playing [Astroneer](https://store.steampowered.com/app/361420/ASTRONEER/) |
+| Playing [Dyson Sphere Program](https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/) |
 | Browsing random Wikipedia articles |
 | Memorizing every [xkcd](https://xkcd.com/) comic |
 | Traveling and visiting National Parks |
@@ -134,7 +134,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 |----------|--------|
 | Primary Computer | HP Victus 15 (Kubuntu Linux) |
 | Secondary Computer | Surface Laptop 3 (Windows 11) |
-| Code Editors | Zed, WebStorm, Google Colab |
+| Code Editor | Zed |
 | Notes & Organization | Obsidian |
 | Browser | Firefox |
 {{< /compact-table >}}
@@ -149,7 +149,7 @@ I run a small personal business flipping old laptops. I bought 30 old laptops at
 |------|-------|
 | States Visited | 48 |
 | GitHub Repos | <span id="repocount">~11</span> |
-| Git Commits | <span id="commitcount">~1100</span> |
+| Git Commits | <span id="commitcount">~1200</span> |
 | Posts | {{< postcount >}} |
 | Days Alive | <span id="daysalive">~5500</span> |
 {{< /compact-table >}}
