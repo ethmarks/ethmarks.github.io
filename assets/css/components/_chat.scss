@@ -1,20 +1,22 @@
-$color-chat-sender-bg: #3a3a3a;
-$color-chat-recipient-bg: #124161;
+:root {
+    --color-chat-sender-bg: #3a3a3a;
+    --color-chat-recipient-bg: #124161;
 
-$chat-padding-y: 0.625rem;
-$chat-padding-x: 1rem;
-$chat-margin-bottom: 0.2rem;
+    --chat-padding-y: 0.625rem;
+    --chat-padding-x: 1rem;
+    --chat-margin-bottom: 0.2rem;
+}
 
 .chat {
     display: block;
     width: 100%;
-    margin-top: $spacing-lg;
+    margin-top: var(--spacing-lg);
 
     & p {
         clear: both;
-        padding: $chat-padding-y $chat-padding-x;
+        padding: var(--chat-padding-y) var(--chat-padding-x);
         margin-top: 0;
-        margin-bottom: $chat-margin-bottom;
+        margin-bottom: var(--chat-margin-bottom);
         max-width: 80%;
         word-wrap: break-word;
         line-height: 1.5;
@@ -23,9 +25,9 @@ $chat-margin-bottom: 0.2rem;
         &.a {
             /* Sender messages (left side) */
             float: left;
-            background-color: $color-chat-sender-bg;
-            border-radius: $radius-round $radius-round
-                $radius-round $radius-sm;
+            background-color: var(--color-chat-sender-bg);
+            border-radius: var(--radius-round) var(--radius-round)
+                var(--radius-round) var(--radius-sm);
             margin-right: auto;
             margin-left: 0;
         }
@@ -33,9 +35,9 @@ $chat-margin-bottom: 0.2rem;
         &.b {
             /* Recipient messages (right side) */
             float: right;
-            background-color: $color-chat-recipient-bg;
-            border-radius: $radius-round $radius-round
-                $radius-sm $radius-round;
+            background-color: var(--color-chat-recipient-bg);
+            border-radius: var(--radius-round) var(--radius-round)
+                var(--radius-sm) var(--radius-round);
             margin-left: auto;
             margin-right: 0;
         }
@@ -45,8 +47,8 @@ $chat-margin-bottom: 0.2rem;
         max-height: none;
         /* Override global img max-height */
         height: auto;
-        margin-top: $spacing-xs;
-        border-radius: $radius-md;
+        margin-top: var(--spacing-xs);
+        border-radius: var(--radius-md);
         display: block;
         box-shadow: none;
         border: none;

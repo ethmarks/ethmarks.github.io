@@ -1,147 +1,189 @@
-@import 'base/mixins';
+@import "base/mixins";
 
-// =========================================================================
-// COLOR
-// =========================================================================
+:root {
+    // =========================================================================
+    // COLOR
+    // =========================================================================
 
-$color-background: #121212;
+    --color-background: #121212;
 
-$color-accent: #8fdfd4;
-$color-accent-light: lighten($color-accent, 5%);
-$color-accent-dark: darken($color-accent, 10%);
-$color-accent-transparent-10: rgba($color-accent, 0.10);
-$color-accent-transparent-15: rgba($color-accent, 0.15);
-$color-accent-transparent-20: rgba($color-accent, 0.20);
-$color-accent-transparent-30: rgba($color-accent, 0.30);
-$color-accent-transparent-40: rgba($color-accent, 0.40);
+    --color-accent: #8fdfd4;
+    --color-accent-light: color-mix(in srgb, var(--color-accent) 95%, white);
+    --color-accent-dark: color-mix(in srgb, var(--color-accent) 90%, black);
+    --color-accent-transparent-10: color-mix(
+        in srgb,
+        var(--color-accent) 10%,
+        transparent
+    );
+    --color-accent-transparent-15: color-mix(
+        in srgb,
+        var(--color-accent) 15%,
+        transparent
+    );
+    --color-accent-transparent-20: color-mix(
+        in srgb,
+        var(--color-accent) 20%,
+        transparent
+    );
+    --color-accent-transparent-30: color-mix(
+        in srgb,
+        var(--color-accent) 30%,
+        transparent
+    );
+    --color-accent-transparent-40: color-mix(
+        in srgb,
+        var(--color-accent) 40%,
+        transparent
+    );
 
-$color-text: white;
-$color-text-inverse: #121212;
-$color-text-secondary: darken($color-text, 30%);
-$color-link: $color-accent-light;
-$color-link-hover: $color-text;
-$color-link-underline: rgba($color-accent, 0.3);
-$color-link-underline-hover: $color-accent;
-$color-focus-outline: $color-accent-light;
+    --color-text: white;
+    --color-text-inverse: #121212;
+    --color-text-secondary: color-mix(in srgb, var(--color-text) 70%, black);
+    --color-link: var(--color-accent-light);
+    --color-link-hover: var(--color-text);
+    --color-link-underline: color-mix(
+        in srgb,
+        var(--color-accent) 30%,
+        transparent
+    );
+    --color-link-underline-hover: var(--color-accent);
+    --color-focus-outline: var(--color-accent-light);
 
-$color-article: rgb(30, 30, 30);
-$color-panel: rgb(31, 31, 31);
-$color-panel-zebra: darken($color-panel, 1%);
-$color-panel-dark: darken($color-panel, 3%);
-$color-panel-hover: lighten($color-panel, 4%);
-$color-panel-hover-subtle: lighten($color-panel, 1%);
+    --color-article: rgb(30, 30, 30);
+    --color-panel: rgb(31, 31, 31);
+    --color-panel-zebra: color-mix(in srgb, var(--color-panel) 99%, black);
+    --color-panel-dark: color-mix(in srgb, var(--color-panel) 97%, black);
+    --color-panel-hover: color-mix(in srgb, var(--color-panel) 96%, white);
+    --color-panel-hover-subtle: color-mix(
+        in srgb,
+        var(--color-panel) 99%,
+        white
+    );
 
-$color-card: rgba(40, 40, 40, 0.8);
-$color-card-hover: rgba(50, 50, 50, 0.9);
+    --color-card: rgba(40, 40, 40, 0.8);
+    --color-card-hover: rgba(50, 50, 50, 0.9);
 
-$color-code-bg: #191a1c;
+    --color-code-bg: #191a1c;
 
-$mint-gradient: linear-gradient(135deg, $color-accent, $color-text);
-$mint-blend: mix($color-accent, $color-text, 75%);
+    --mint-gradient: linear-gradient(
+        135deg,
+        var(--color-accent),
+        var(--color-text)
+    );
+    --mint-blend: color-mix(
+        in srgb,
+        var(--color-accent) 75%,
+        var(--color-text)
+    );
 
-// =========================================================================
-// BORDER
-// =========================================================================
+    // =========================================================================
+    // BORDER
+    // =========================================================================
 
-$color-border: white;
-$color-border-standard: rgba($color-border, 0.1);
-$color-border-light: rgba($color-border, 0.05);
-$border-colors: (
-  'standard': $color-border-standard,
-  'light': $color-border-light,
-  'accent': $color-accent,
-  'accent-t': $color-accent-transparent-30
-);
-@function border($type: 'standard', $width: 1px) {
-  @return $width solid map-get($border-colors, $type);
+    --color-border: white;
+    --color-border-standard: color-mix(
+        in srgb,
+        var(--color-border) 10%,
+        transparent
+    );
+    --color-border-light: color-mix(
+        in srgb,
+        var(--color-border) 5%,
+        transparent
+    );
+    --border-standard: 1px solid var(--color-border-standard);
+    --border-standard-2px: 2px solid var(--color-border-standard);
+    --border-light: 1px solid var(--color-border-light);
+    --border-light-2px: 2px solid var(--color-border-light);
+    --border-accent: 1px solid var(--color-accent);
+    --border-accent-2px: 2px solid var(--color-accent);
+    --border-accent-t: 1px solid var(--color-accent-transparent-30);
+    --border-accent-t-2px: 2px solid var(--color-accent-transparent-30);
+
+    // =========================================================================
+    // FONT
+    // =========================================================================
+
+    --font-primary: "Nunito", sans-serif;
+    --font-secondary: "Sen", sans-serif;
+    --font-monospace: "Fira Code", monospace;
+
+    --font-weight-normal: 400;
+    --font-weight-light: 300;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+    --font-weight-code: 400;
+
+    --font-size-base: 1.07rem;
+    --font-size-xs: 0.8rem;
+    --font-size-sm: 0.9rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.1rem;
+    --font-size-h1: clamp(1rem, 7vw, 3rem);
+    --font-size-h2: 1.6rem;
+    --font-size-h3: 1.4rem;
+    --font-size-h4: 1.2rem;
+
+    // =========================================================================
+    // SPACING
+    // =========================================================================
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    --frontmatter-margin-left: var(--spacing-xs);
+    --margin-indent: 40px;
+
+    // =========================================================================
+    // RADIUS
+    // =========================================================================
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-round: 18px;
+
+    // =========================================================================
+    // SHADOW
+    // =========================================================================
+
+    --color-shadow-standard: rgba(0, 0, 0, 0.2);
+    --color-shadow-accent: var(--color-accent-transparent-30);
+    --color-shadow-accent-hover: var(--color-accent-transparent-40);
+    --shadow-standard: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --shadow-standard-hover: 0 4px 30px rgba(0, 0, 0, 0.3);
+    --shadow-accent: 0 4px 12px var(--color-shadow-accent);
+    --shadow-accent-hover: 0 0 16px var(--color-shadow-accent-hover);
+
+    // =========================================================================
+    // TRANSITION
+    // =========================================================================
+
+    --transition-duration: 0.3s;
+    --transition-duration-fast: 0.2s;
+    --transition-timing: ease;
+    --transition-default: all var(--transition-duration-fast)
+        var(--transition-timing);
+    --transition-transform-shadow:
+        transform var(--transition-duration) var(--transition-timing),
+        box-shadow var(--transition-duration) var(--transition-timing);
+    --transition-transform: transform var(--transition-duration)
+        var(--transition-timing);
+    --transition-background: background-color var(--transition-duration-fast)
+        var(--transition-timing);
+
+    // =========================================================================
+    // MEDIA SIZES
+    // =========================================================================
+
+    --max-media-height: 800px;
+    --max-media-height-verytall: 1000px;
+    --max-media-width-big: clamp(70vw, 80vw, 800px);
+    --max-media-height-big: 70vh;
+    --max-media-width-small: clamp(25vw, 30vw, 250px);
+    --max-media-height-small: 30vh;
 }
-$border-standard: border('standard', 1px);
-$border-standard-2px: border('standard', 2px);
-$border-light: border('light', 1px);
-$border-light-2px: border('light', 2px);
-$border-accent: border('accent', 1px);
-$border-accent-2px: border('accent', 2px);
-$border-accent-t: border('accent-t', 1px);
-$border-accent-t-2px: border('accent-t', 2px);
-
-// =========================================================================
-// FONT
-// =========================================================================
-
-$font-primary: "Nunito", sans-serif;
-$font-secondary: "Sen", sans-serif;
-$font-monospace: "Fira Code", monospace;
-
-$font-weight-normal: 400;
-$font-weight-light: 300;
-$font-weight-semibold: 500;
-$font-weight-bold: 600;
-$font-weight-code: 400;
-
-$font-size-base: 1.07rem;
-$font-size-xs: 0.8rem;
-$font-size-sm: 0.9rem;
-$font-size-md: 1rem;
-$font-size-lg: 1.1rem;
-$font-size-h1: clamp(1rem, 7vw, 3rem);
-$font-size-h2: 1.6rem;
-$font-size-h3: 1.4rem;
-$font-size-h4: 1.2rem;
-
-// =========================================================================
-// SPACING
-// =========================================================================
-
-$spacing-xs: 0.5rem;
-$spacing-sm: 0.75rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-
-$frontmatter-margin-left: $spacing-xs;
-$margin-indent: 40px;
-
-// =========================================================================
-// RADIUS
-// =========================================================================
-
-$radius-sm: 4px;
-$radius-md: 8px;
-$radius-lg: 12px;
-$radius-xl: 16px;
-$radius-round: 18px;
-
-// =========================================================================
-// SHADOW
-// =========================================================================
-
-$color-shadow-standard: rgba(black, 0.2);
-$color-shadow-accent: $color-accent-transparent-30;
-$color-shadow-accent-hover: $color-accent-transparent-40;
-$shadow-standard: 0 4px 15px rgba(black, 0.2);
-$shadow-standard-hover: 0 4px 30px rgba(black, 0.3);
-$shadow-accent: 0 4px 12px $color-shadow-accent;
-$shadow-accent-hover: 0 0 16px $color-shadow-accent-hover;
-
-// =========================================================================
-// TRANSITION
-// =========================================================================
-
-$transition-duration: 0.3s;
-$transition-duration-fast: 0.2s;
-$transition-timing: ease;
-$transition-default: all $transition-duration-fast $transition-timing;
-$transition-transform-shadow: transform $transition-duration $transition-timing, box-shadow $transition-duration $transition-timing;
-$transition-transform: transform $transition-duration $transition-timing;
-$transition-background: background-color $transition-duration-fast $transition-timing;
-
-// =========================================================================
-// MEDIA SIZES
-// =========================================================================
-
-$max-media-height: 800px;
-$max-media-height-verytall: 1000px;
-$max-media-width-big: clamp(70vw, 80vw, 800px);
-$max-media-height-big: 70vh;
-$max-media-width-small: clamp(25vw, 30vw, 250px);
-$max-media-height-small: 30vh;

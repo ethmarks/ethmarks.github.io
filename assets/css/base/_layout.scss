@@ -1,15 +1,28 @@
-@import 'base/mixins';
+@import "base/mixins";
 
-$body-bg-gradient: radial-gradient(circle at 10% 10%, rgba(143, 223, 212, 0.15), transparent 40%), radial-gradient( circle at 90% 80%, rgba(143, 223, 212, 0.12), transparent 50%), $color-background;
+:root {
+    --body-bg-gradient:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(143, 223, 212, 0.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(143, 223, 212, 0.12),
+            transparent 50%
+        ),
+        var(--color-background);
 
-$main-width: 100vw;
-$main-width-mobile: 98vw;
-$main-margin-top: 5rem;
-$main-margin-top-mobile: 3.5rem;
-$main-margin-sides: 12vw;
-$main-margin-sides-mobile: auto;
+    --main-width: 100vw;
+    --main-width-mobile: 98vw;
+    --main-margin-top: 5rem;
+    --main-margin-top-mobile: 3.5rem;
+    --main-margin-sides: 12vw;
+    --main-margin-sides-mobile: auto;
 
-$article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
+    --article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
+}
 
 html {
     font-size: 100%;
@@ -24,12 +37,12 @@ html {
 }
 
 body {
-    background: $body-bg-gradient;
+    background: var(--body-bg-gradient);
     line-height: 1.4;
-    font-family: $font-primary;
-    color: $color-text;
+    font-family: var(--font-primary);
+    color: var(--color-text);
     margin: 0;
-    font-size: $font-size-base;
+    font-size: var(--font-size-base);
     overflow-wrap: break-word;
     background-attachment: fixed;
 
@@ -39,9 +52,6 @@ body {
 }
 
 main {
-    --main-width: #{$main-width};
-    --main-margin-sides: #{$main-margin-sides};
-    --main-margin-top: #{$main-margin-top};
     max-width: var(--main-width);
     margin: var(--main-margin-top) var(--main-margin-sides) 0;
     box-sizing: border-box;
@@ -50,21 +60,21 @@ main {
     padding: 0;
 
     @include mobile {
-        --main-margin-sides: #{$main-margin-sides-mobile};
-        --main-margin-top: #{$main-margin-top-mobile};
-        --main-width: #{$main-width-mobile};
+        --main-margin-sides: var(--main-margin-sides-mobile);
+        --main-margin-top: var(--main-margin-top-mobile);
+        --main-width: var(--main-width-mobile);
     }
 }
 
 main > article {
-    background: $color-article;
-    margin: $article-margin-vertical 0;
+    background: var(--color-article);
+    margin: var(--article-margin-vertical) 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: $spacing-md $spacing-lg;
-    border-radius: $radius-xl;
-    border: $border-standard;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    border: var(--border-standard);
     overflow-x: hidden;
 
     & > :first-child {
@@ -74,11 +84,11 @@ main > article {
     }
 
     @include mobile {
-        padding: $spacing-sm;
+        padding: var(--spacing-sm);
     }
 
     &.animated {
-        animation: articleEntrance 0.6s $transition-timing;
+        animation: articleEntrance 0.6s var(--transition-timing);
     }
 }
 

@@ -1,8 +1,8 @@
-@import 'constants';
+@import "constants";
 
 p,
 li {
-    font-weight: $font-weight-normal;
+    font-weight: var(--font-weight-normal);
     word-break: normal;
 }
 
@@ -10,22 +10,22 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: $font-secondary;
+    font-family: var(--font-secondary);
 }
 
 h1 {
     width: fit-content;
-    font-size: $font-size-h1;
+    font-size: var(--font-size-h1);
     flex-shrink: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
-    font-weight: $font-weight-bold;
-    color: $mint-blend;
+    font-weight: var(--font-weight-bold);
+    color: var(--mint-blend);
     @include mint;
 
     @include mobile {
-        margin-left: $frontmatter-margin-left;
+        margin-left: var(--frontmatter-margin-left);
     }
 
     &.chromium-nomint {
@@ -35,35 +35,36 @@ h1 {
     }
 
     &.animated {
-        animation: slideInFromLeft 0.5s 0.1s $transition-timing both;
+        animation: slideInFromLeft 0.5s 0.1s var(--transition-timing) both;
     }
 }
 
 h2 {
-    font-size: $font-size-h2;
+    font-size: var(--font-size-h2);
 }
 
 h3 {
-    font-size: $font-size-h3;
+    font-size: var(--font-size-h3);
 }
 
 h4 {
-    font-size: $font-size-h4;
+    font-size: var(--font-size-h4);
 }
 
 a {
-    color: $color-link;
+    color: var(--color-link);
     text-decoration: underline;
-    text-decoration-color: $color-link-underline;
-    transition: text-decoration-color $transition-duration-fast $transition-timing;
+    text-decoration-color: var(--color-link-underline);
+    transition: text-decoration-color var(--transition-duration-fast)
+        var(--transition-timing);
 
     &:hover {
-        text-decoration-color: $color-link-underline-hover;
+        text-decoration-color: var(--color-link-underline-hover);
     }
 
     &:focus-visible {
-        outline: 2px solid $color-focus-outline;
-        text-decoration-color: $color-link-underline-hover;
+        outline: 2px solid var(--color-focus-outline);
+        text-decoration-color: var(--color-link-underline-hover);
     }
 
     /* Adds a little arrow to external links
@@ -79,12 +80,12 @@ a {
 
 ul {
     list-style: disc inside;
-    padding-left: $spacing-lg;
+    padding-left: var(--spacing-lg);
 
     & li {
         line-height: 1.6;
-        transition: color $transition-duration-fast
-            $transition-timing;
+        transition: color var(--transition-duration-fast)
+            var(--transition-timing);
     }
 }
 
