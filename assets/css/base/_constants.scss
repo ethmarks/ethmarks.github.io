@@ -51,8 +51,8 @@
 
     --color-article: rgb(30, 30, 30);
     --color-panel: rgb(31, 31, 31);
-    --color-panel-zebra: color-mix(in srgb, var(--color-panel) 99%, black);
-    --color-panel-dark: color-mix(in srgb, var(--color-panel) 97%, black);
+    --color-panel-zebra: color-mix(in srgb, var(--color-panel) 90%, black);
+    --color-panel-dark: color-mix(in srgb, var(--color-panel) 75%, black);
     --color-panel-hover: color-mix(in srgb, var(--color-panel) 96%, white);
     --color-panel-hover-subtle: color-mix(
         in srgb,
