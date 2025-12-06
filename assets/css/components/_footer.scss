@@ -1,5 +1,3 @@
-@import "base/mixins";
-
 :root {
     --footer-bg: color-mix(in srgb, white 10%, var(--color-background));
     --footer-border-color: rgba(255, 255, 255, 0.18);
@@ -28,14 +26,14 @@ footer {
     position: fixed;
     bottom: 0;
 
-    @include mobile {
+    @media (max-width: 768px) {
         width: 100vw;
         border-top: var(--footer-border);
         border-radius: 0;
         margin: 0;
     }
 
-    @include notMobile {
+    @media (min-width: 768px) {
         width: calc(100vw - 20px);
         border: var(--footer-border);
         border-radius: var(--footer-radius);
@@ -64,7 +62,7 @@ footer {
             font-style: italic;
             margin: auto;
 
-            @include notMobile {
+            @media (min-width: 768px) {
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -75,7 +73,7 @@ footer {
         &#source,
         &#email {
             z-index: 5;
-            @include mobile {
+            @media (max-width: 768px) {
                 display: none;
             }
         }

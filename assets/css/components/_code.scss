@@ -1,5 +1,4 @@
 @import "components/_chroma.scss";
-@import "base/mixins";
 
 pre {
     position: relative;
@@ -20,7 +19,7 @@ pre {
         width: auto;
     }
 
-    @include fine {
+    @media (pointer: fine) {
         &:hover {
             box-shadow: var(--shadow-accent-hover);
         }
@@ -54,7 +53,7 @@ code {
         margin-left: auto;
         margin-right: auto;
 
-        @include notDesktop {
+        @media (max-width: 1200px) {
             font-size: 0.8rem;
             width: auto;
             margin-left: 0;

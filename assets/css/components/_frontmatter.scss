@@ -1,12 +1,10 @@
-@import "base/mixins";
-
 .frontmatter {
     display: flex;
     flex-direction: column;
     margin: 0;
     align-self: flex-start;
 
-    @include mobile {
+    @media (max-width: 768px) {
         margin-left: var(--frontmatter-margin-left);
     }
 
@@ -24,7 +22,7 @@
 
         &.animated {
             animation: slideInFromLeft 0.8s var(--transition-timing) both;
-            @include mobile {
+            @media (max-width: 768px) {
                 animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
                     both;
             }

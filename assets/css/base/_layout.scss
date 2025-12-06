@@ -1,4 +1,4 @@
-@import "base/mixins";
+@import "base/constants";
 
 :root {
     --body-bg-gradient:
@@ -29,7 +29,7 @@ html {
     /* Base for rem units (usually 16px) */
     scroll-behavior: smooth;
 
-    @include fine {
+    @media (pointer: fine) {
         overscroll-behavior: none;
     }
 
@@ -59,7 +59,7 @@ main {
     flex-direction: column;
     padding: 0;
 
-    @include mobile {
+    @media (max-width: 768px) {
         --main-margin-sides: var(--main-margin-sides-mobile);
         --main-margin-top: var(--main-margin-top-mobile);
         --main-width: var(--main-width-mobile);
@@ -78,12 +78,12 @@ main > article {
     overflow-x: hidden;
 
     & > :first-child {
-        @include mobile {
+        @media (max-width: 768px) {
             margin-top: 6px;
         }
     }
 
-    @include mobile {
+    @media (max-width: 768px) {
         padding: var(--spacing-sm);
     }
 

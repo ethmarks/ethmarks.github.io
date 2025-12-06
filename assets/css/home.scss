@@ -1,6 +1,5 @@
 @import "base/constants";
 @import "components/header-anim";
-@import "base/mixins";
 
 :root {
     --color-greeting: var(--color-text);
@@ -67,7 +66,7 @@
             }
         }
 
-        @include desktop {
+        @media (min-width: 1200px) {
             #greeting .expand-char {
                 margin-right: 0.17em;
                 transform: perspective(200px) rotateY(-180deg) scale(1.1) !important;
@@ -89,11 +88,11 @@
             width: 256px;
             height: 256px;
 
-            @include desktop {
+            @media (min-width: 1200px) {
                 cursor: pointer;
             }
 
-            @include motion {
+            @media (prefers-reduced-motion: no-preference) {
                 opacity: 0;
                 transform: scale(0.3) rotate(180deg);
                 filter: blur(20px);
@@ -104,7 +103,7 @@
     }
 }
 
-@include notMobile {
+@media (min-width: 768px) {
     #intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -125,7 +124,7 @@
     }
 }
 
-@include mobile {
+@media (max-width: 768px) {
     #intro {
         display: flex;
         flex-direction: column;
@@ -163,10 +162,10 @@ section:not(#intro) {
     border-radius: var(--section-border-radius);
     transition: var(--transition-transform-shadow);
 
-    @include motion {
+    @media (prefers-reduced-motion: no-preference) {
         opacity: 0;
 
-        @include tall {
+        @media (min-height: 1200px) {
             &:nth-child(even) {
                 transform: translateX(
                     calc(var(--section-entrance-offset) * -1)
@@ -177,7 +176,7 @@ section:not(#intro) {
             }
         }
 
-        @include notTall {
+        @media (max-height: 1200px) {
             transform: translateY(var(--section-entrance-offset));
         }
 
@@ -186,7 +185,7 @@ section:not(#intro) {
         animation-delay: calc(0.2s + var(--child-animation-delay));
     }
 
-    @include mobile {
+    @media (max-width: 768px) {
         padding: var(--section-padding-mobile);
         border-radius: var(--radius-lg);
     }
@@ -274,7 +273,7 @@ section:not(#intro) {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--card-gap);
 
-        @include mobile {
+        @media (max-width: 768px) {
             grid-template-columns: 1fr;
             gap: var(--spacing-md);
         }
@@ -345,7 +344,7 @@ section:not(#intro) {
 main {
     margin-bottom: var(--card-gap);
 
-    @include mobile {
+    @media (max-width: 768px) {
         max-width: 92vw;
     }
 }

@@ -1,8 +1,6 @@
-@import "base/mixins";
-
 :root {
     --media-width: clamp(300px, 60vw, 1000px);
-    @include mobile {
+    @media (max-width: 768px) {
         --media-width: 100%;
     }
 }

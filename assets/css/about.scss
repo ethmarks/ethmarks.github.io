@@ -1,4 +1,3 @@
-@import "base/mixins";
 @import "base/constants";
 @import "base/media";
 @import "components/table";
@@ -11,7 +10,7 @@ h2 {
 
 main {
     overflow: hidden;
-    @include notMobile {
+    @media (min-width: 768px) {
         --main-margin-sides: 5vw;
     }
 }
@@ -37,7 +36,7 @@ section > div {
     align-items: center;
 }
 
-@include mobile {
+@media (max-width: 768px) {
     section {
         display: block;
         align-items: normal;
