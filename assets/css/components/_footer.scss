@@ -1,16 +1,3 @@
-:root {
-    --footer-bg: color-mix(in srgb, white 10%, var(--color-background));
-    --footer-border-color: rgba(255, 255, 255, 0.18);
-    --footer-border: 1px solid var(--footer-border-color);
-    --footer-radius: var(--radius-lg);
-    --footer-padding-top: 10px;
-    --footer-padding-sides: 25px;
-    --footer-padding-bottom: 5px;
-    --footer-margin-top: 0px;
-    --footer-margin-sides: 10px;
-    --footer-margin-bottom: 5px;
-}
-
 footer {
     display: flex;
     justify-content: space-between;

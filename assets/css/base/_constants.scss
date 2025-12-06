@@ -156,6 +156,9 @@
     --shadow-standard-hover: 0 4px 30px rgba(0, 0, 0, 0.3);
     --shadow-accent: 0 4px 12px var(--color-shadow-accent);
     --shadow-accent-hover: 0 0 16px var(--color-shadow-accent-hover);
+    --shadow-birthday:
+        0 0 20px rgba(255, 107, 107, 0.3), 0 0 40px rgba(78, 205, 196, 0.2),
+        0 0 60px rgba(69, 183, 209, 0.1);
 
     // =========================================================================
     // TRANSITION
@@ -173,6 +176,7 @@
         var(--transition-timing);
     --transition-background: background-color var(--transition-duration-fast)
         var(--transition-timing);
+    --child-animation-delay: 0s;
 
     // =========================================================================
     // MEDIA SIZES
@@ -184,4 +188,45 @@
     --max-media-height-big: 70vh;
     --max-media-width-small: clamp(25vw, 30vw, 250px);
     --max-media-height-small: 30vh;
+
+    // =========================================================================
+    // LAYOUT
+    // =========================================================================
+
+    --body-bg-gradient:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(143, 223, 212, 0.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(143, 223, 212, 0.12),
+            transparent 50%
+        ),
+        var(--color-background);
+
+    --main-width: 100vw;
+    --main-width-mobile: 98vw;
+    --main-margin-top: 5rem;
+    --main-margin-top-mobile: 3.5rem;
+    --main-margin-sides: 12vw;
+    --main-margin-sides-mobile: auto;
+
+    --article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
+
+    // =========================================================================
+    // FOOTER
+    // =========================================================================
+
+    --footer-bg: color-mix(in srgb, white 10%, var(--color-background));
+    --footer-border-color: rgba(255, 255, 255, 0.18);
+    --footer-border: 1px solid var(--footer-border-color);
+    --footer-radius: var(--radius-lg);
+    --footer-padding-top: 10px;
+    --footer-padding-sides: 25px;
+    --footer-padding-bottom: 5px;
+    --footer-margin-top: 0px;
+    --footer-margin-sides: 10px;
+    --footer-margin-bottom: 5px;
 }
