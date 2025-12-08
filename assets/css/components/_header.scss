@@ -1,7 +1,3 @@
-@import 'base/mixins';
-
-$shadow-birthday: 0 0 20px rgba(255, 107, 107, 0.3), 0 0 40px rgba(78, 205, 196, 0.2), 0 0 60px rgba(69, 183, 209, 0.1);
-
 header {
     position: fixed;
     top: 20px;
@@ -11,19 +7,19 @@ header {
     max-width: 1000px;
     padding: 10px 15px;
     background: rgba(30, 30, 30, 0.2);
-    border: $border-standard;
+    border: var(--border-standard);
     border-radius: 40px;
     backdrop-filter: blur(20px) saturate(0.8);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: $color-text;
+    color: var(--color-text);
     box-sizing: border-box;
     z-index: 1000;
     overflow: hidden;
     transition: backdrop-filter 0.3s;
 
-    @include mobile {
+    @media (max-width: 768px) {
         max-width: 100vw;
         border-radius: 0;
         top: 0;
@@ -32,10 +28,13 @@ header {
     }
 
     #title {
-        font-weight: $font-weight-light !important;
+        font-weight: var(--font-weight-light) !important;
         display: inline-block;
-        @include mint;
-        font-family: $font-secondary;
+        background: var(--mint-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--font-secondary);
         font-size: clamp(1.1rem, 4vw, 2rem);
         flex-shrink: 1;
         white-space: nowrap;
@@ -47,11 +46,11 @@ header {
         text-decoration: none;
 
         &:focus-visible {
-            outline: 2px solid $color-focus-outline;
+            outline: 2px solid var(--color-focus-outline);
             outline-offset: 2px;
         }
 
-        @include mobile {
+        @media (max-width: 768px) {
             display: none;
         }
     }
@@ -61,7 +60,7 @@ header {
         gap: 8px;
         flex-shrink: 0;
 
-        @include mobile {
+        @media (max-width: 768px) {
             justify-content: space-evenly;
             width: 100%;
             gap: 0px;
@@ -69,13 +68,13 @@ header {
 
         a {
             background: rgba(60, 60, 60, 0.1);
-            color: $color-text;
-            border: $border-standard;
+            color: var(--color-text);
+            border: var(--border-standard);
             border-radius: 20px;
             padding: 6px 12px;
-            font-family: $font-secondary;
+            font-family: var(--font-secondary);
             font-size: clamp(0.75rem, 3vw, 1rem);
-            font-weight: $font-weight-light !important;
+            font-weight: var(--font-weight-light) !important;
             cursor: pointer;
             transition:
                 color 0.15s ease,
@@ -86,32 +85,40 @@ header {
             text-decoration: none;
 
             &:hover {
-                color: $color-accent;
-                border-bottom-color: $color-accent-dark;
+                color: var(--color-accent);
+                border-bottom-color: var(--color-accent-dark);
                 background-color: rgba(80, 80, 80, 0.7);
                 transform: translateY(-1px) scale(1.02);
                 text-decoration: none;
             }
 
             &.active {
-                color: $color-accent;
-                border-bottom-color: $color-accent-dark;
+                color: var(--color-accent);
+                border-bottom-color: var(--color-accent-dark);
             }
         }
 
         &:hover a.active:not(:hover) {
-            color: $color-accent-transparent-40;
-            border-bottom-color: $color-accent-transparent-40;
+            color: var(--color-accent-transparent-40);
+            border-bottom-color: var(--color-accent-transparent-40);
         }
     }
 
     /* Birthday mode - subtle party effects */
     &.birthday-mode {
-        box-shadow: $shadow-birthday;
+        box-shadow: var(--shadow-birthday);
 
         & #title {
             transition: background 0.4s ease-out;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3);
+            background: linear-gradient(
+                45deg,
+                #ff6b6b,
+                #4ecdc4,
+                #45b7d1,
+                #96ceb4,
+                #feca57,
+                #ff9ff3
+            );
             background-size: 300% 300%;
             background-clip: text;
             -webkit-background-clip: text;
@@ -137,6 +144,15 @@ header {
 }
 
 @keyframes birthday-rainbow {
-    0%, 100% { opacity: 1; transform: none; background-position: 0% 50%; }
-    50% { opacity: 1; transform: none; background-position: 100% 50%; }
+    0%,
+    100% {
+        opacity: 1;
+        transform: none;
+        background-position: 0% 50%;
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+        background-position: 100% 50%;
+    }
 }

@@ -1,20 +1,18 @@
-@import 'base/mixins';
-
 .post-links {
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: var(--spacing-sm);
 }
 
 .post-link {
     display: flex;
     flex-direction: column;
-    gap: $spacing-xs;
-    padding: $spacing-md $spacing-lg;
-    background: $color-panel;
-    border-radius: $radius-lg;
-    box-shadow: $shadow-standard;
-    border: $border-standard;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-panel);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-standard);
+    border: var(--border-standard);
     text-decoration: none;
     transition:
         background 0.3s ease,
@@ -26,18 +24,20 @@
     overflow: hidden;
     cursor: pointer;
 
-    &:hover, &:focus {
-        background: $color-panel-hover-subtle;
-        border-color: $color-accent-transparent-30;
-        box-shadow: $shadow-standard-hover;
+    &:hover,
+    &:focus {
+        background: var(--color-panel-hover-subtle);
+        border-color: var(--color-accent-transparent-30);
+        box-shadow: var(--shadow-standard-hover);
 
         .title {
-            color: $color-accent;
+            color: var(--color-accent);
         }
     }
 
-    @include motion {
-        &:hover, &:focus {
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover,
+        &:focus {
             .info {
                 letter-spacing: 0.2px;
             }
@@ -67,28 +67,28 @@
     }
 
     .tag {
-        background: $color-accent-transparent-10;
-        color: $color-accent;
-        font-family: $font-secondary;
-        font-size: $font-size-xs;
-        border-radius: $radius-round;
+        background: var(--color-accent-transparent-10);
+        color: var(--color-accent);
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-xs);
+        border-radius: var(--radius-round);
         padding: 0.2em 0.8em;
-        border: $border-accent-t;
+        border: var(--border-accent-t);
         transition:
             background 0.2s,
             color 0.2s;
     }
 
     .title {
-        color: $color-text;
+        color: var(--color-text);
         margin: 0;
         transition: color 0.2s ease;
     }
 
     .info {
-        font-family: $font-primary;
-        font-size: $font-size-sm;
-        color: $color-text-secondary;
+        font-family: var(--font-primary);
+        font-size: var(--font-size-sm);
+        color: var(--color-text-secondary);
         transition: letter-spacing 0.3s ease;
     }
 }

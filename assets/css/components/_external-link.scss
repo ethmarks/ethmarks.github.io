@@ -11,23 +11,23 @@
         padding: 1.2em;
         background: linear-gradient(
             135deg,
-            $color-accent-light,
-            $color-accent
+            var(--color-accent-light),
+            var(--color-accent)
         );
-        color: $color-text-inverse;
-        font-weight: $font-weight-semibold;
+        color: var(--color-text-inverse);
+        font-weight: var(--font-weight-semibold);
         text-decoration: none;
-        border-radius: $radius-xl;
-        font-size: $font-size-md;
+        border-radius: var(--radius-xl);
+        font-size: var(--font-size-md);
         display: inline-flex;
-        gap: $spacing-sm;
+        gap: var(--spacing-sm);
         position: relative;
         overflow: hidden;
         transition:
             transform 0.3s ease,
             box-shadow 0.3s ease,
             color 0.3s ease;
-        animation: slideInFromLeft 0.5s 0.4s $transition-timing both;
+        animation: slideInFromLeft 0.5s 0.4s var(--transition-timing) both;
 
         &::after {
             /* Shimmer effect */
@@ -53,8 +53,8 @@
         &:hover,
         &:focus {
             transform: translateY(-3px);
-            box-shadow: $shadow-accent-hover;
-            color: $color-link-hover;
+            box-shadow: var(--shadow-accent-hover);
+            color: var(--color-link-hover);
 
             &::after {
                 transform: translateX(250%) skewX(-20deg);
@@ -71,14 +71,14 @@
         }
 
         &:focus-visible {
-            outline: 2px solid $color-focus-outline;
+            outline: 2px solid var(--color-focus-outline);
             outline-offset: 3px;
-            box-shadow: $shadow-accent-hover;
+            box-shadow: var(--shadow-accent-hover);
         }
 
         & img {
             transition:
-                $transition-transform,
+                var(--transition-transform),
                 filter 0.3s ease;
             width: 1.5em;
             height: 1.5em;

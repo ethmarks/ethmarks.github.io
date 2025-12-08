@@ -1,6 +1,8 @@
 :root {
     --media-width: clamp(300px, 60vw, 1000px);
-    @include mobile {--media-width: 100%;}
+    @media (max-width: 768px) {
+        --media-width: 100%;
+    }
 }
 
 figure {
@@ -11,7 +13,7 @@ figure {
     margin: 0;
     text-align: center;
     font-style: italic;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
 
     figcaption {
         width: fit-content;
@@ -20,14 +22,14 @@ figure {
 
 .responsive {
     max-width: var(--media-width);
-    max-height: $max-media-height;
+    max-height: var(--max-media-height);
     width: auto;
     height: auto;
-    border-radius: $radius-xl;
-    border: $border-standard;
+    border-radius: var(--radius-xl);
+    border: var(--border-standard);
 
     &.media-verytall {
-        max-height: $max-media-height-verytall;
+        max-height: var(--max-media-height-verytall);
     }
 }
 
@@ -41,11 +43,11 @@ iframe {
 }
 
 .bigimage {
-    max-width: $max-media-width-big;
-    max-height: $max-media-height-big;
+    max-width: var(--max-media-width-big);
+    max-height: var(--max-media-height-big);
 }
 
 .smallimage {
-    max-width: $max-media-width-small;
-    max-height: $max-media-height-small;
+    max-width: var(--max-media-width-small);
+    max-height: var(--max-media-height-small);
 }

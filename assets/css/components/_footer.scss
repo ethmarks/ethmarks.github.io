@@ -1,42 +1,31 @@
-@import 'base/mixins';
-
-$footer-bg: mix(white, $color-background, 10%);
-$footer-border-color: rgba(255, 255, 255, 0.18);
-$footer-border: 1px solid $footer-border-color;
-$footer-radius: $radius-lg;
-$footer-padding-top: 10px;
-$footer-padding-sides: 25px;
-$footer-padding-bottom: 5px;
-$footer-margin-top: 0px;
-$footer-margin-sides: 10px;
-$footer-margin-bottom: 5px;
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $footer-bg;
-    padding: $footer-padding-top $footer-padding-sides $footer-padding-bottom;
+    background: var(--footer-bg);
+    padding: var(--footer-padding-top) var(--footer-padding-sides)
+        var(--footer-padding-bottom);
     box-sizing: border-box;
-    color: $color-text;
+    color: var(--color-text);
     z-index: 9999;
     isolation: isolate;
     transition: position 0.2s;
     position: fixed;
     bottom: 0;
 
-    @include mobile {
+    @media (max-width: 768px) {
         width: 100vw;
-        border-top: $footer-border;
+        border-top: var(--footer-border);
         border-radius: 0;
         margin: 0;
     }
 
-    @include notMobile {
+    @media (min-width: 768px) {
         width: calc(100vw - 20px);
-        border: $footer-border;
-        border-radius: $footer-radius;
-        margin: $footer-margin-top $footer-margin-sides $footer-margin-bottom;
+        border: var(--footer-border);
+        border-radius: var(--footer-radius);
+        margin: var(--footer-margin-top) var(--footer-margin-sides)
+            var(--footer-margin-bottom);
     }
 
     body.height-overflow & {
@@ -44,10 +33,10 @@ footer {
     }
 
     & span {
-        font-size: $font-size-base;
+        font-size: var(--font-size-base);
 
         & a {
-            color: $color-text;
+            color: var(--color-text);
             text-decoration: none;
 
             &:hover {
@@ -60,7 +49,7 @@ footer {
             font-style: italic;
             margin: auto;
 
-            @include notMobile {
+            @media (min-width: 768px) {
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -71,7 +60,7 @@ footer {
         &#source,
         &#email {
             z-index: 5;
-            @include mobile {
+            @media (max-width: 768px) {
                 display: none;
             }
         }

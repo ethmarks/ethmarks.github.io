@@ -1,7 +1,7 @@
-@import 'base/constants';
-
-$font-404: "Kenia", monospace;
-$font-size-404: clamp(5rem, 60vw, 20rem);
+:root {
+    --font-404: "Kenia", monospace;
+    --font-size-404: clamp(5rem, 60vw, 20rem);
+}
 
 body {
     margin: 0;
@@ -30,17 +30,17 @@ main {
 }
 
 h1 {
-    font-family: $font-404;
-    font-size: $font-size-404;
+    font-family: var(--font-404);
+    font-size: var(--font-size-404);
     font-weight: 1;
     line-height: 1em;
-    color: $color-text;
+    color: var(--color-text);
     margin: 0;
 }
 
 p {
-    font-family: $font-monospace;
-    font-size: $font-size-h2;
+    font-family: var(--font-monospace);
+    font-size: var(--font-size-h2);
     margin: 0;
 }
 

@@ -1,13 +1,11 @@
-@import 'base/mixins';
-
 .frontmatter {
     display: flex;
     flex-direction: column;
     margin: 0;
     align-self: flex-start;
 
-    @include mobile {
-        margin-left: $frontmatter-margin-left;
+    @media (max-width: 768px) {
+        margin-left: var(--frontmatter-margin-left);
     }
 
     & .title {
@@ -16,16 +14,16 @@
     }
 
     & .info {
-        margin-bottom: $spacing-sm;
-        font-family: $font-secondary;
+        margin-bottom: var(--spacing-sm);
+        font-family: var(--font-secondary);
         font-size: 1.2rem;
         font-style: italic;
-        color: $color-accent;
+        color: var(--color-accent);
 
         &.animated {
-            animation: slideInFromLeft 0.8s $transition-timing both;
-            @include mobile {
-                animation: slideInFromLeft 0.5s 0.2s $transition-timing
+            animation: slideInFromLeft 0.8s var(--transition-timing) both;
+            @media (max-width: 768px) {
+                animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
                     both;
             }
         }
@@ -43,14 +41,14 @@
         & .post-tag {
             animation: slideInFromLeft 0.5s
                 calc(var(--child-animation-delay) + 0.3s)
-                $transition-timing both !important;
+                var(--transition-timing) both !important;
         }
     }
 
     & .external-link-row {
         justify-content: left;
         align-self: start;
-        margin-top: $spacing-md;
+        margin-top: var(--spacing-md);
 
         & a.external-link {
             padding: 0.8em 1.2em;

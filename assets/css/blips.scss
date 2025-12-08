@@ -1,7 +1,2 @@
-@import 'base/constants';
-@import 'base/prose';
-@import 'components/code';
-
-:root {
-    --color-accent-dark: #{$color-accent-dark};
-}
+@import "base/prose";
+@import "components/code";
