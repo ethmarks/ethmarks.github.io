@@ -1,8 +1,7 @@
 {{- with (. | printf "css/%s") -}}
-{{- $newfilename := replaceRE "\\.scss$" ".css" . -}}
 {{- $content := partial "css-content.html" . -}}
 {{- $content = htmlUnescape $content -}}
-{{- $resource := resources.FromString $newfilename $content -}}
+{{- $resource := resources.FromString . $content -}}
 {{- $resource = $resource | minify | fingerprint "md5" -}}
 <link rel="stylesheet" href="{{ $resource.Permalink }}" />
 {{- end -}}

@@ -1,5 +1,5 @@
-{{ range resources.Match "css/*.scss" }}
-  {{ $css := . | toCSS }}
+{{ range resources.Match "css/*.css" }}
+  {{ $css := . }}
   {{ $cssMin := $css | minify }}
   {{ $css.Publish }}
   {{ $cssMin.Publish }}
