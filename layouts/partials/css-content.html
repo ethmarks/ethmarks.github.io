@@ -1,0 +1,13 @@
+{{- $ext := path.Ext . -}}
+{{- $asset := resources.Get . -}}
+{{- if not $asset -}}
+    {{- errorf "Asset not found: %s" . -}}
+{{- end -}}
+{{- if not (or (eq $ext ".css") (eq $ext ".scss")) }}
+    {{- errorf "Non-style asset used with css partial: %s" . -}}
+{{- end -}}
+{{- $processed := $asset -}}
+{{- if eq $ext ".scss" -}}
+    {{- $processed = $processed | toCSS -}}
+{{- end -}}
+{{- $processed.Content -}}
