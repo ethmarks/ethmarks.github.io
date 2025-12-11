@@ -1,7 +1,54 @@
-{{- $ext := path.Ext . -}}
-{{- $asset := resources.Get . -}}
+{{- $path := . -}}
+{{- $asset := resources.Get $path -}}
 {{- if not $asset -}}
-    {{- errorf "Asset not found: %s" . -}}
+    {{- errorf "Asset not found: %s" $path -}}
 {{- end -}}
-{{- $processed := $asset -}}
-{{- $processed.Content -}}
+
+{{- /* Use scratch for mutable state */ -}}
+{{- $scratch := newScratch -}}
+{{- $scratch.Set "content" $asset.Content -}}
+
+{{- /* Regex to match @import "path" or @import 'path' statements */ -}}
+{{- $importRegex := `@import\s*["']([^"']+)["']\s*;?` -}}
+
+{{- /* Find all @import matches */ -}}
+{{- $matches := findRE $importRegex ($scratch.Get "content") -}}
+
+{{- /* Process each @import statement */ -}}
+{{- range $match := $matches -}}
+    {{- /* Extract the path from the @import statement */ -}}
+    {{- $importPath := replaceRE $importRegex "$1" $match -}}
+
+    {{- /* Build the full path: css/ + importPath + .css */ -}}
+    {{- /* Handle paths that may or may not start with underscore */ -}}
+    {{- $dir := path.Dir $importPath -}}
+    {{- $base := path.Base $importPath -}}
+
+    {{- /* Try with underscore prefix first (SCSS convention), then without */ -}}
+    {{- $fullPathUnderscore := "" -}}
+    {{- if eq $dir "." -}}
+        {{- $fullPathUnderscore = printf "css/_%s.css" $base -}}
+    {{- else -}}
+        {{- $fullPathUnderscore = printf "css/%s/_%s.css" $dir $base -}}
+    {{- end -}}
+
+    {{- $fullPathPlain := printf "css/%s.css" $importPath -}}
+
+    {{- /* Check which path exists */ -}}
+    {{- $resolvedPath := "" -}}
+    {{- if resources.Get $fullPathUnderscore -}}
+        {{- $resolvedPath = $fullPathUnderscore -}}
+    {{- else if resources.Get $fullPathPlain -}}
+        {{- $resolvedPath = $fullPathPlain -}}
+    {{- else -}}
+        {{- errorf "Imported CSS file not found: %s (tried %s and %s)" $importPath $fullPathUnderscore $fullPathPlain -}}
+    {{- end -}}
+
+    {{- /* Recursively get the content of the imported file */ -}}
+    {{- $importedContent := htmlUnescape (partial "css-content.html" $resolvedPath) -}}
+
+    {{- /* Replace the @import statement with the imported content */ -}}
+    {{- $scratch.Set "content" (replace ($scratch.Get "content") $match $importedContent) -}}
+{{- end -}}
+
+{{- $scratch.Get "content" -}}
