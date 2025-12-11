@@ -76,7 +76,7 @@
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadein {
     from {
         opacity: 0;
     }
@@ -86,7 +86,7 @@
     }
 }
 
-@keyframes slideInFromTop {
+@keyframes slideinfromtop {
     from {
         opacity: 0;
         transform: translateY(-100px);
@@ -98,7 +98,7 @@
     }
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideinfromleft {
     from {
         opacity: 0;
         transform: translateX(-40px);

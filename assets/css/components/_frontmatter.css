@@ -21,9 +21,9 @@
         color: var(--color-accent);
 
         &.animated {
-            animation: slideInFromLeft 0.8s var(--transition-timing) both;
+            animation: slideinfromleft 0.8s var(--transition-timing) both;
             @media (max-width: 768px) {
-                animation: slideInFromLeft 0.5s 0.2s var(--transition-timing)
+                animation: slideinfromleft 0.5s 0.2s var(--transition-timing)
                     both;
             }
         }
@@ -39,7 +39,7 @@
         justify-content: left;
 
         & .post-tag {
-            animation: slideInFromLeft 0.5s
+            animation: slideinfromleft 0.5s
                 calc(var(--child-animation-delay) + 0.3s)
                 var(--transition-timing) both !important;
         }

@@ -39,7 +39,7 @@ h1 {
     }
 
     &.animated {
-        animation: slideInFromLeft 0.5s 0.1s var(--transition-timing) both;
+        animation: slideinfromleft 0.5s 0.1s var(--transition-timing) both;
     }
 }
 

@@ -33,7 +33,7 @@
         &.animated {
             opacity: 0;
             transform: translateX(60px);
-            animation: postTagSlideIn 0.6s var(--child-animation-delay)
+            animation: posttagslidein 0.6s var(--child-animation-delay)
                 cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         }
     }
@@ -44,7 +44,7 @@
     }
 }
 
-@keyframes postTagSlideIn {
+@keyframes posttagslidein {
     to {
         opacity: 1;
         transform: translateX(0);
