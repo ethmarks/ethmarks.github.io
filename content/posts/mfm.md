@@ -38,7 +38,7 @@ I'm pretty sure that I'll be adding more features at some point in the future, s
 For example, the following Markdown...
 
 ```markdown
-![[Test]](https://ethmarks.github.io)
+![[Test]](https://example.com)
 ```
 
 ...parses into the following HTML.
@@ -47,7 +47,7 @@ For example, the following Markdown...
 <iframe
     scrolling="no"
     title="Test"
-    src="https://ethmarks.github.io"
+    src="https://example.com"
     frameborder="no"
     loading="lazy"
     allowtransparency="true"
@@ -72,7 +72,7 @@ If the file extension of the media src is an [MP4](https://en.wikipedia.org/wiki
 The default behavior is for it to be parsed into a video element that does not loop, is not muted, and requires user input to start playback. For example, the following Markdown...
 
 ```markdown
-![Test](https://ethmarks.github.io/media/example.webm)
+![Test](https://example.com/media/example.webm)
 ```
 
 ...parses into the following HTML.
@@ -80,7 +80,7 @@ The default behavior is for it to be parsed into a video element that does not l
 ```html
 <video
     class="video"
-    src="https://ethmarks.github.io/media/example.webm"
+    src="https://example.com/media/example.webm"
     controls
     alt="Test">
 </video>
@@ -91,7 +91,7 @@ The default behavior is for it to be parsed into a video element that does not l
 The MFM animation syntax is an override of the video syntax. The difference is that the text in the square brackets is prefixed with "GIF ". The "GIF" prefix will be removed from the final alt text. It is then parsed into a video element that loops, is muted, and autoplays. For example, the following Markdown...
 
 ```markdown
-![GIF Test](https://ethmarks.github.io/media/example.webm)
+![GIF Test](https://example.com/media/example.webm)
 ```
 
 ...parses into the following HTML.
@@ -99,7 +99,7 @@ The MFM animation syntax is an override of the video syntax. The difference is t
 ```html
 <video
     class="gif"
-    src="https://ethmarks.github.io/media/example.webm"
+    src="https://example.com/media/example.webm"
     autoplay
     loop
     muted
