@@ -2,7 +2,6 @@
 /* Refactored with CSS custom properties */
 
 :root {
-    // Color palette
     --chroma-bg: var(--color-code-bg);
     --chroma-fg: #e6edf3;
     --chroma-red: #ff7b72;
@@ -19,11 +18,9 @@
     --chroma-pink: #ffa198;
     --chroma-error: #f85149;
 
-    // Background colors
     --chroma-bg-red: #490202;
     --chroma-bg-green: #0f5323;
 
-    // Common properties
     --chroma-line-padding: 0 0.4em 0 0.4em;
     --chroma-line-margin: 0.4em;
 }
@@ -46,7 +43,7 @@
 
 /* Error */
 .chroma .err {
-    color: var(--chroma-error);
+    color: var(--chromaW-error);
 }
 
 /* CodeLine */

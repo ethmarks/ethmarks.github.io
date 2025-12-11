@@ -13,13 +13,11 @@
     --section-margin-top: clamp(3rem, 8vw, 5rem);
     --subsection-margin-top: var(--spacing-lg);
 
-    // Section-specific variables
     --section-padding: var(--spacing-xl);
     --section-padding-mobile: var(--spacing-lg);
     --section-border-radius: var(--radius-xl);
     --section-entrance-offset: 35px;
 
-    // Card variables
     --card-gap: var(--spacing-lg);
     --card-padding: var(--spacing-lg);
 }
@@ -154,7 +152,6 @@
     }
 }
 
-// Content sections styling
 section:not(#intro) {
     margin-top: var(--section-margin-top);
     padding: var(--section-padding);
@@ -219,7 +216,6 @@ section:not(#intro) {
     }
 }
 
-// Distinctive section backgrounds
 #about {
     background: linear-gradient(
         135deg,
@@ -256,7 +252,6 @@ section:not(#intro) {
     border: var(--border-accent-t-2px);
 }
 
-// Cards styling
 #projects,
 #posts {
     margin-top: var(--subsection-margin-top);
