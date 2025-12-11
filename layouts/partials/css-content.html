@@ -20,32 +20,15 @@
     {{- $importPath := replaceRE $importRegex "$1" $match -}}
 
     {{- /* Build the full path: css/ + importPath + .css */ -}}
-    {{- /* Handle paths that may or may not start with underscore */ -}}
-    {{- $dir := path.Dir $importPath -}}
-    {{- $base := path.Base $importPath -}}
+    {{- $fullPath := printf "css/%s.css" $importPath -}}
 
-    {{- /* Try with underscore prefix first (SCSS convention), then without */ -}}
-    {{- $fullPathUnderscore := "" -}}
-    {{- if eq $dir "." -}}
-        {{- $fullPathUnderscore = printf "css/_%s.css" $base -}}
-    {{- else -}}
-        {{- $fullPathUnderscore = printf "css/%s/_%s.css" $dir $base -}}
-    {{- end -}}
-
-    {{- $fullPathPlain := printf "css/%s.css" $importPath -}}
-
-    {{- /* Check which path exists */ -}}
-    {{- $resolvedPath := "" -}}
-    {{- if resources.Get $fullPathUnderscore -}}
-        {{- $resolvedPath = $fullPathUnderscore -}}
-    {{- else if resources.Get $fullPathPlain -}}
-        {{- $resolvedPath = $fullPathPlain -}}
-    {{- else -}}
-        {{- errorf "Imported CSS file not found: %s (tried %s and %s)" $importPath $fullPathUnderscore $fullPathPlain -}}
+    {{- /* Check if the path exists */ -}}
+    {{- if not (resources.Get $fullPath) -}}
+        {{- errorf "Imported CSS file not found: %s" $fullPath -}}
     {{- end -}}
 
     {{- /* Recursively get the content of the imported file */ -}}
-    {{- $importedContent := htmlUnescape (partial "css-content.html" $resolvedPath) -}}
+    {{- $importedContent := htmlUnescape (partial "css-content.html" $fullPath) -}}
 
     {{- /* Replace the @import statement with the imported content */ -}}
     {{- $scratch.Set "content" (replace ($scratch.Get "content") $match $importedContent) -}}
