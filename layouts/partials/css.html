@@ -3,5 +3,5 @@
 {{- $content = htmlUnescape $content -}}
 {{- $resource := resources.FromString . $content -}}
 {{- $resource = $resource | minify | fingerprint "md5" -}}
-<link rel="stylesheet" href="{{ $resource.Permalink }}" />
+<link rel="stylesheet" href="{{ $resource.RelPermalink }}" />
 {{- end -}}
