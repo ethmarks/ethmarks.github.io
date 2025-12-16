@@ -1,6 +1,6 @@
 <nav class="post-links">
     {{ range (where . "Params.unlisted" "ne" true).ByDate.Reverse }}
-    <a class="post-link" href="{{ .Permalink | relURL }}">
+    <a class="post-link" href="{{ .RelPermalink | relURL }}">
         <h3 class="title">{{ .Title }}</h3>
         {{ partial "post-info.html" . }}
         <div class="tags">

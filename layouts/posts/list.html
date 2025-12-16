@@ -8,7 +8,7 @@
 <article class="animated">
     <div class="post-tags">
         {{ range first 20 .Site.Taxonomies.tags.ByCount }}
-        <a class="post-tag animated staggered" href="{{ .Page.Permalink | relURL }}">#{{ .Page.Title }}</a>
+        <a class="post-tag animated staggered" href="{{ .Page.RelPermalink | relURL }}">#{{ .Page.Title }}</a>
         {{ end }}
         <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
         <a class="spacer staggered"></a>

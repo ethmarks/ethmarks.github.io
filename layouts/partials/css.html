@@ -12,5 +12,5 @@
     {{- $processed = $processed | toCSS -}}
 {{- end -}}
 {{- $processed = $processed | minify | fingerprint "md5" -}}
-<link rel="stylesheet" href="{{ $processed.Permalink }}" />
+<link rel="stylesheet" href="{{ $processed.RelPermalink }}" />
 {{- end -}}
