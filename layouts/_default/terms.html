@@ -2,18 +2,20 @@
 {{ partial "css.html" "tags.scss" }}
 {{ end }}
 
-{{ define "main" }}
-<h1 class="animated">
-    {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
-</h1>
-<article class="animated">
-    <div class="post-tags">
-        {{ range .Data.Terms.Alphabetical }} {{ $pages := where .Pages
-        "Params.unlisted" "!=" true }} {{ if gt (len $pages) 0 }}
-        <a class="post-tag" href="{{ .Page.RelPermalink }}"
-            >#{{ .Page.Title }} ({{ len $pages }})</a
-        >
-        {{ end }} {{ end }}
-    </div>
-</article>
+{{ define "body" }}
+<main>
+    <h1 class="animated">
+        {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
+    </h1>
+    <article class="animated">
+        <div class="post-tags">
+            {{ range .Data.Terms.Alphabetical }} {{ $pages := where .Pages
+            "Params.unlisted" "!=" true }} {{ if gt (len $pages) 0 }}
+            <a class="post-tag" href="{{ .Page.RelPermalink }}"
+                >#{{ .Page.Title }} ({{ len $pages }})</a
+            >
+            {{ end }} {{ end }}
+        </div>
+    </article>
+</main>
 {{ end }}

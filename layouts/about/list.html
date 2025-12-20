@@ -4,9 +4,11 @@
 {{ partial "js.html" "components/daysalive.js" }}
 {{ end }}
 
-{{ define "main" }}
-<h1 class="animated">{{ .Title }}</h1>
-<article class="animated">
-    {{ .Content }}
-</article>
+{{ define "body" }}
+<main>
+    <h1 class="animated">{{ .Title }}</h1>
+    <article class="animated">
+        {{ .Content }}
+    </article>
+</main>
 {{ end }}

@@ -4,11 +4,10 @@
 {{ partial "js.html" "404.js" }}
 {{- end }}
 
-{{ define "main" }}
-<h1 class="nomint">404</h1>
-<p>Page not found</p>
-{{ end }}
-
-{{ define "after_main" }}
+{{ define "body" }}
+<main>
+    <h1 class="nomint">404</h1>
+    <p>Page not found</p>
+</main>
 <canvas id="canvas"></canvas>
 {{ end }}

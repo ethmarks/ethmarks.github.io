@@ -2,29 +2,31 @@
 {{ partial "css.html" "post.scss" }}
 {{ end }}
 
-{{ define "main" }}
-{{ $page := . -}}
-{{- $minRead := math.Ceil (div (countwords $page.Content) 200.0) -}}
-<div class="frontmatter">
-<h1 class="animated title">{{ .Title }}</h1>
-{{ partial "post-info.html" . }}
-{{- with .Params.tags }}
-<div class="post-tags">
-    {{- range . | sort }}
-    <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-    {{- end }}
-</div>
-{{ end }}
-{{- if .Params.link }}
-<div class="external-link-row">
-    <a class="external-link" href="{{ .Params.link }}">
-        <img src="/media/icons/{{ .Params.link_icon | default "link" }}.svg" alt="{{ .Params.link_icon | default "link" }} icon" />
-        <span>{{ .Params.link_name | default "External Link" }}</span>
-    </a>
-</div>
-{{ end }}
-</div>
-<article class="animated">
-{{ .Content }}
-</article>
+{{ define "body" }}
+<main>
+    {{- $page := . -}}
+    {{- $minRead := math.Ceil (div (countwords $page.Content) 200.0) }}
+    <div class="frontmatter">
+    <h1 class="animated title">{{ .Title }}</h1>
+    {{ partial "post-info.html" . }}
+    {{- with .Params.tags }}
+    <div class="post-tags">
+        {{- range . | sort }}
+        <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+        {{- end }}
+    </div>
+    {{ end }}
+    {{- if .Params.link }}
+    <div class="external-link-row">
+        <a class="external-link" href="{{ .Params.link }}">
+            <img src="/media/icons/{{ .Params.link_icon | default "link" }}.svg" alt="{{ .Params.link_icon | default "link" }} icon" />
+            <span>{{ .Params.link_name | default "External Link" }}</span>
+        </a>
+    </div>
+    {{ end }}
+    </div>
+    <article class="animated">
+    {{ .Content }}
+    </article>
+<main>
 {{ end }}
