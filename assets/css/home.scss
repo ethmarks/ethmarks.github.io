@@ -103,13 +103,9 @@
     #pfp-container {
         img#pfp {
             width: 256px;
-            height: 256px;
             max-width: 100%;
             height: auto;
-
-            @media (min-width: 1200px) {
-                cursor: pointer;
-            }
+            cursor: pointer;
 
             @media (prefers-reduced-motion: no-preference) {
                 opacity: 0;

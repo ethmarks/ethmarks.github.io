@@ -13,7 +13,7 @@
     const words = text.split(" ");
     const allChars = [];
 
-    words.forEach((word, wordIndex) => {
+    words.forEach((word) => {
       // Create word wrapper span
       const wordSpan = document.createElement("span");
       wordSpan.className = "text-shimmer-word";
