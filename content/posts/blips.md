@@ -11,7 +11,7 @@ link_icon: github
 
 [Blips](https://ethmarks.github.io/blips/) is my personal microblog. Whereas my [Posts](/posts) (like the one you're reading right now) are long-form articles, my blips are smaller, more spontaneous updates. Just little "blips" on a radar.
 
-{{< iframe src="https://ethmarks.github.io/blips/" alt="homepage" >}}
+{{< iframe src="https://ethmarks.github.io/blips/" alt="Blips microblog showing recent blips with a dark teal interface" >}}
 
 ## Why?
 
