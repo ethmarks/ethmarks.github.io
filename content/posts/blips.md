@@ -25,7 +25,7 @@ I made Blips because I wanted to have a place to write about smaller things. The
 
 I write blips about anything that I find noteworthy. In practice, this means it's usually tech-related stuff. I've occasionally blipped about cartography, literature, movies, and sci-fi, but the bulk of my blips are about techy stuff. I try to write in fairly accessible way for a non-technical audience, but I frequently fail at this. Sorry about that.
 
-My blips have a pretty varied purpose. Some are basically just 'I did this thing', some are shower thoughts, and some are about interesting projects, tidbits, or quotes that I've stumbled upon. 
+My blips have pretty varied purposes. Some are basically just 'I did this thing', some are shower thoughts, and some are about interesting projects, tidbits, or quotes that I've stumbled upon. 
 
 To give you a sample, here's a blip that I published on October 5th. It's just an amusing and interesting quote that I found.
 
@@ -48,11 +48,11 @@ Blips uses [SvelteKit](https://svelte.dev/) for the frontend and [Sanity CMS](ht
 
 ### SvelteKit
 
-Building Blips was my first time using a JS-based web framework. Really. I had always used Flask or Hugo or just plain HTML files. I wanted to branch out and expand my skill set, but after spending years hearing people complain about React, I didn't want to go with NextJS. Instead, I chose a framework that I've only ever heard good things about: SvelteKit. I think that it was a pretty good decision. SvelteKit produces fast and performant websites, I like its philosophy, it facilitates access to the entire NodeJS package ecosystem, and it's a serious and respectable framework. Build with SvelteKit was an enjoyable and educational experience, and I plan to use SvelteKit again in future projects.
+Building Blips was my first time using a JS-based web framework. Really. I had always used Flask or Hugo or just plain HTML files. I wanted to branch out and expand my skill set, but after spending years hearing people complain about React, I didn't want to go with NextJS. Instead, I chose a framework that I've only ever heard good things about: SvelteKit. I think that it was a pretty good decision. SvelteKit produces fast and performant websites, I like its philosophy, it facilitates access to the entire NodeJS package ecosystem, and it's a serious and respectable framework. Building with SvelteKit was an enjoyable and educational experience, and I plan to use SvelteKit again in future projects.
 
 ### Sanity
 
-I needed a way to store the content of Blips, and just storing Markdown files in the repo would defeat the point of a convenient microblog. So I needed to use Content Management System. 
+I needed a way to store the content of Blips, and just storing Markdown files in the repo would defeat the point of a convenient microblog. So I needed to use a Content Management System. 
 
 ![Mobile screenshot of Sanity Studio in a project named 'ethmarks-blips' with the content "Kind of crazy that the internet has been around long enough to have witnessed major geopolitical shifts. For example, when first started being registered to countries in 1985, East Germany received .dd. After the reuinification of Germany in 1990, it switched over to .de, leaving .dd unused. Likewise, .cs was originally used by Czechoslovakia until it split into the Czech Republic (.cz) and Slovakia (.sk). Cold War-era countries having their own ccTLDs kind of feels like Napolean having an email address."](~/sanity_studio_screenshot.webp "Editing a blip on my phone")
 
