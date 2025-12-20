@@ -26,6 +26,8 @@
 
 #intro {
     align-items: center;
+    margin-top: var(--main-margin-top);
+    box-sizing: border-box;
 
     #text {
         font-family: var(--font-secondary);
@@ -69,11 +71,14 @@
         .text-shimmer-word {
             display: inline-block;
             white-space: nowrap;
-            margin-left: 0.3em;
             transition: margin-left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
-            &:has(.expand-char) {
-                margin-left: 0.4em;
+            &:not(:first-child) {
+                margin-left: 0.3em;
+
+                &:has(.expand-char) {
+                    margin-left: 0.4em;
+                }
             }
         }
 
@@ -120,7 +125,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        margin-top: var(--intro-top-margin);
+        margin-top: calc(var(--main-margin-top) + var(--intro-top-margin));
         width: 100%;
 
         #text {
@@ -354,6 +359,7 @@ section:not(#intro) {
 }
 
 main {
+    margin-top: 0;
     margin-bottom: var(--card-gap);
 
     @media (max-width: 768px) {
