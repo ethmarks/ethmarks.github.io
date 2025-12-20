@@ -32,12 +32,6 @@ main {
     display: flex;
     flex-direction: column;
     padding: 0;
-
-    @media (max-width: 768px) {
-        --main-margin-sides: var(--main-margin-sides-mobile);
-        --main-margin-top: var(--main-margin-top-mobile);
-        --main-width: var(--main-width-mobile);
-    }
 }
 
 main > article {

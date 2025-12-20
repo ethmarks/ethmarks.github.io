@@ -213,6 +213,12 @@
     --main-margin-sides: 12vw;
     --main-margin-sides-mobile: auto;
 
+    @media (max-width: 768px) {
+        --main-margin-sides: var(--main-margin-sides-mobile);
+        --main-margin-top: var(--main-margin-top-mobile);
+        --main-width: var(--main-width-mobile);
+    }
+
     --article-margin-vertical: clamp(1rem, 4vw, 1.875rem);
 
     // =========================================================================

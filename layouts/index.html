@@ -3,7 +3,7 @@
 {{ partial "js.html" "home.js" }}
 {{ end }}
 
-{{ define "main" }}
+{{ define "body" }}
 <section id="intro">
     <div id="text">
         <span id="greeting" class="text-shimmer" data-shimmer-inverse data-shimmer-delay="200">Ahoy! I'm</span>
@@ -22,86 +22,88 @@
         >
     </div>
 </section>
-<section id="about" class="staggered">
-    <h2>Who I Am</h2>
-    <p>I'm Ethan Marks. I'm a 15-year-old software developer. My work lives at the intersection of code, design, and curiosity. This is my corner of the web.</p>
-    <a href="/about/" class="link-capsule">More about me →</a>
-</section>
-<section id="build" class="staggered">
-    <h2>What I Build</h2>
-    <p>I enjoy writing software and automating things with code. I've been programming for the majority of my life, and I spend most of my free time working on my various projects, including the website you're on right now.</p>
-    <div id="projects">
-        <h3>Featured Projects</h3>
-        <div class="cards-grid">
-            {{ partial "home-card.html" (dict
-            "href" "/posts/asciiglobe/"
-            "src" "media/ascii_globe_frame.png"
-            "alt" "A spinning globe rendered with text"
-            "style" "background: transparent;"
-            "title" "ASCII-Globe"
-            "desc" "A text-based cartographic rendering engine that uses NASA satellite data"
-            ) }}
+<main>
+    <section id="about" class="staggered">
+        <h2>Who I Am</h2>
+        <p>I'm Ethan Marks. I'm a 15-year-old software developer. My work lives at the intersection of code, design, and curiosity. This is my corner of the web.</p>
+        <a href="/about/" class="link-capsule">More about me →</a>
+    </section>
+    <section id="build" class="staggered">
+        <h2>What I Build</h2>
+        <p>I enjoy writing software and automating things with code. I've been programming for the majority of my life, and I spend most of my free time working on my various projects, including the website you're on right now.</p>
+        <div id="projects">
+            <h3>Featured Projects</h3>
+            <div class="cards-grid">
+                {{ partial "home-card.html" (dict
+                "href" "/posts/asciiglobe/"
+                "src" "media/ascii_globe_frame.png"
+                "alt" "A spinning globe rendered with text"
+                "style" "background: transparent;"
+                "title" "ASCII-Globe"
+                "desc" "A text-based cartographic rendering engine that uses NASA satellite data"
+                ) }}
 
-            {{ partial "home-card.html" (dict
-            "href" "/posts/thessa/"
-            "src" "media/thessa_2025-09-23.webp"
-            "alt" "A screenshot of the Thessa interface showing synonyms for the word &lsquo;screenshot&rsquo;"
-            "style" "background: #171919;"
-            "title" "Thessa"
-            "desc" "An AI-powered thesaurus that uses the Gemini API"
-            ) }}
+                {{ partial "home-card.html" (dict
+                "href" "/posts/thessa/"
+                "src" "media/thessa_2025-09-23.webp"
+                "alt" "A screenshot of the Thessa interface showing synonyms for the word &lsquo;screenshot&rsquo;"
+                "style" "background: #171919;"
+                "title" "Thessa"
+                "desc" "An AI-powered thesaurus that uses the Gemini API"
+                ) }}
 
-            {{ partial "home-card.html" (dict
-            "href" "/posts/colourlesstransformer/"
-            "src" "media/painttransformer_walkway.webp"
-            "alt" "A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
-            "style" "background: #a96764;"
-            "title" "ColourlessTransformer"
-            "desc" "A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes"
-            ) }}
+                {{ partial "home-card.html" (dict
+                "href" "/posts/colourlesstransformer/"
+                "src" "media/painttransformer_walkway.webp"
+                "alt" "A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
+                "style" "background: #a96764;"
+                "title" "ColourlessTransformer"
+                "desc" "A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes"
+                ) }}
+            </div>
+            <a href="/tags/projects/" class="link-capsule">All projects →</a>
         </div>
-        <a href="/tags/projects/" class="link-capsule">All projects →</a>
-    </div>
-</section>
-<section id="write" class="staggered">
-    <h2>What I Write</h2>
-    <p>I love to write, and I publish some of my more coherent pieces here on my personal website as posts. I've written technical articles, word collections, poems, short stories, and more.</p>
-    <div id="posts">
-        <h3>Featured Posts</h3>
-        <div class="cards-grid">
-            {{ partial "home-card.html" (dict
-            "href" "/posts/liquidglass/"
-            "src" "media/liquid_glass_banner.webp"
-            "alt" "Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass"
-            "style" "background: #a6acb3;"
-            "title" "Thoughts on Liquid Glass"
-            "desc" "My thoughts on Apple's new Liquid Glass design"
-            ) }}
+    </section>
+    <section id="write" class="staggered">
+        <h2>What I Write</h2>
+        <p>I love to write, and I publish some of my more coherent pieces here on my personal website as posts. I've written technical articles, word collections, poems, short stories, and more.</p>
+        <div id="posts">
+            <h3>Featured Posts</h3>
+            <div class="cards-grid">
+                {{ partial "home-card.html" (dict
+                "href" "/posts/liquidglass/"
+                "src" "media/liquid_glass_banner.webp"
+                "alt" "Various colourful abstract Liquid Glass blobs, using glassmorphic frosted glass transparency and resembling real glass"
+                "style" "background: #a6acb3;"
+                "title" "Thoughts on Liquid Glass"
+                "desc" "My thoughts on Apple's new Liquid Glass design"
+                ) }}
 
-            {{ partial "home-card.html" (dict
-            "href" "/posts/waterman/"
-            "src" "media/waterman_poster.webp"
-            "alt" "An unusual world map in a butterfly shape, showing the continents arranged in eight connected lobes"
-            "style" "background: #124f7f;"
-            "title" "The Waterman Butterfly"
-            "desc" "An exploration of the Waterman Butterfly map projection"
-            ) }}
+                {{ partial "home-card.html" (dict
+                "href" "/posts/waterman/"
+                "src" "media/waterman_poster.webp"
+                "alt" "An unusual world map in a butterfly shape, showing the continents arranged in eight connected lobes"
+                "style" "background: #124f7f;"
+                "title" "The Waterman Butterfly"
+                "desc" "An exploration of the Waterman Butterfly map projection"
+                ) }}
 
-            {{ partial "home-card.html" (dict
-            "href" "/posts/quanth/"
-            "src" "media/plancklengthfoam.webp"
-            "alt" "An illustrated graphic depicting quantum foam"
-            "style" "background: #2f246c;"
-            "title" "I have invented a new measurement system"
-            "desc" "A proposal for a new measurement system based on Planck lengths and quantum physics"
-            ) }}
+                {{ partial "home-card.html" (dict
+                "href" "/posts/quanth/"
+                "src" "media/plancklengthfoam.webp"
+                "alt" "An illustrated graphic depicting quantum foam"
+                "style" "background: #2f246c;"
+                "title" "I have invented a new measurement system"
+                "desc" "A proposal for a new measurement system based on Planck lengths and quantum physics"
+                ) }}
+            </div>
+            <a href="/posts/" class="link-capsule">All posts →</a>
         </div>
-        <a href="/posts/" class="link-capsule">All posts →</a>
-    </div>
-</section>
-<section id="contact" class="staggered">
-    <h2>Contact</h2>
-    <p>Feel free to reach out! I'm always happy to chat. Whether you want to discuss a project, share an interesting idea, or just say hello, I'd love to hear from you.</p>
-    <a href="mailto:ethmarks.dev@gmail.com" class="link-capsule">Email me →</a>
-</section>
+    </section>
+    <section id="contact" class="staggered">
+        <h2>Contact</h2>
+        <p>Feel free to reach out! I'm always happy to chat. Whether you want to discuss a project, share an interesting idea, or just say hello, I'd love to hear from you.</p>
+        <a href="mailto:ethmarks.dev@gmail.com" class="link-capsule">Email me →</a>
+    </section>
+</main>
 {{ end }}

@@ -2,13 +2,15 @@
 {{ partial "css.html" "tag.scss" }}
 {{ end }}
 
-{{ define "main" }}
-<h1 class="animated">
-    {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
-</h1>
-<article class="animated">
-    {{ with index .Site.Data.tags (.Title | urlize) }} {{ if .text }}
-    <p id="tag-text">{{ .text | markdownify }}</p>
-    {{ end }} {{ end }} {{ partial "post-links.html" .Pages }}
-</article>
+{{ define "body" }}
+<main>
+    <h1 class="animated">
+        {{ .Title }} ({{ len (where .Pages "Params.unlisted" "ne" true) }})
+    </h1>
+    <article class="animated">
+        {{ with index .Site.Data.tags (.Title | urlize) }} {{ if .text }}
+        <p id="tag-text">{{ .text | markdownify }}</p>
+        {{ end }} {{ end }} {{ partial "post-links.html" .Pages }}
+    </article>
+</main>
 {{ end }}

@@ -3,25 +3,27 @@
 {{ partial "js.html" "components/randompost.js" }}
 {{ end }}
 
-{{ define "main" }}
-<h1 class="animated">Posts ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
-<article class="animated">
-    <div class="post-tags">
-        {{ range first 20 .Site.Taxonomies.tags.ByCount }}
-        <a class="post-tag animated staggered" href="{{ .Page.RelPermalink | relURL }}">#{{ .Page.Title }}</a>
-        {{ end }}
-        <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
-        <a class="spacer staggered"></a>
-        <a
-            href="#"
-            id="random-post-link"
-            class="random-post-btn animated staggered"
-            title="Go to a random post"
-        >
-            🎲 Random Post
-        </a>
-    </div>
+{{ define "body" }}
+<main>
+    <h1 class="animated">Posts ({{ len (where .Pages "Params.unlisted" "ne" true) }})</h1>
+    <article class="animated">
+        <div class="post-tags">
+            {{ range first 20 .Site.Taxonomies.tags.ByCount }}
+            <a class="post-tag animated staggered" href="{{ .Page.RelPermalink | relURL }}">#{{ .Page.Title }}</a>
+            {{ end }}
+            <a class="post-tag animated staggered" href="{{ "/tags/" | relURL }}">...</a>
+            <a class="spacer staggered"></a>
+            <a
+                href="#"
+                id="random-post-link"
+                class="random-post-btn animated staggered"
+                title="Go to a random post"
+            >
+                🎲 Random Post
+            </a>
+        </div>
 
-    {{ partial "post-links.html" .Pages }}
-</article>
+        {{ partial "post-links.html" .Pages }}
+    </article>
+</main>
 {{ end }}
