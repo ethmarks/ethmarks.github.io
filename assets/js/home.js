@@ -9,19 +9,31 @@
 
     element.innerHTML = "";
 
-    // Create character spans
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-      const span = document.createElement("span");
-      span.className = "text-shimmer-char";
-      span.innerHTML = char === " " ? "&nbsp;" : char;
-      element.appendChild(span);
-    }
+    // Split text into words
+    const words = text.split(" ");
+    const allChars = [];
+
+    words.forEach((word, wordIndex) => {
+      // Create word wrapper span
+      const wordSpan = document.createElement("span");
+      wordSpan.className = "text-shimmer-word";
+
+      // Create character spans within the word
+      for (let i = 0; i < word.length; i++) {
+        const char = word[i];
+        const charSpan = document.createElement("span");
+        charSpan.className = "text-shimmer-char";
+        charSpan.textContent = char;
+        wordSpan.appendChild(charSpan);
+        allChars.push(charSpan);
+      }
+
+      element.appendChild(wordSpan);
+    });
 
     // Animate characters in sequence
-    const chars = element.querySelectorAll(".text-shimmer-char");
-    chars.forEach((char, index) => {
-      const animationIndex = inverse ? chars.length - 1 - index : index;
+    allChars.forEach((char, index) => {
+      const animationIndex = inverse ? allChars.length - 1 - index : index;
       setTimeout(
         () => {
           char.classList.add("in");

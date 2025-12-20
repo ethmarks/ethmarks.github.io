@@ -32,7 +32,6 @@
         font-weight: var(--font-weight-bold);
         display: flex;
         flex-direction: column;
-        white-space: nowrap;
 
         #greeting {
             color: var(--color-greeting);
@@ -49,6 +48,12 @@
             color: var(--color-vocation);
             font-size: var(--font-size-vocation);
             line-height: 1;
+        }
+
+        .text-shimmer-word {
+            display: inline-block;
+            white-space: nowrap;
+            margin-left: 0.3em;
         }
 
         .text-shimmer-char {
