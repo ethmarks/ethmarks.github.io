@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: A website about Salt
 published: 2025-06-11
 tags: [curios]
