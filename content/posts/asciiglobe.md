@@ -4,9 +4,7 @@ published: 2025-05-09
 created: 2025-01-18
 tags: [projects, programming, github, cartography]
 description: A text-based cartographic rendering engine that uses NASA satellite data
-link: https://github.com/ethmarks/ASCII-Globe
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/ASCII-Globe
 ---
 
 Have you ever wanted to see what the Earth looks like in text form?

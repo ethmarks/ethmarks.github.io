@@ -16,12 +16,44 @@
         {{- end }}
     </div>
     {{ end }}
-    {{- if .Params.link }}
+    {{- if or .Params.github .Params.colab .Params.codepen .Params.wikipedia .Params.link }}
     <div class="external-link-row">
-        <a class="external-link" href="{{ .Params.link }}">
-            <img src="/media/icons/{{ .Params.link_icon | default "link" }}.svg" alt="{{ .Params.link_icon | default "link" }} icon" />
-            <span>{{ .Params.link_name | default "External Link" }}</span>
+        {{- if .Params.github }}
+        <a class="external-link" href="{{ .Params.github }}">
+            <img src="/media/icons/github.svg" alt="GitHub icon" />
+            <span>GitHub Repo</span>
         </a>
+        {{ end }}
+        {{- if .Params.colab }}
+        <a class="external-link" href="{{ .Params.colab }}">
+            <img src="/media/icons/colab.svg" alt="Google Colab icon" />
+            <span>Colab Notebook</span>
+        </a>
+        {{ end }}
+        {{- if .Params.codepen }}
+        <a class="external-link" href="{{ .Params.codepen }}">
+            <img src="/media/icons/codepen.svg" alt="CodePen icon" />
+            <span>CodePen</span>
+        </a>
+        {{ end }}
+        {{- if .Params.wikipedia }}
+        <a class="external-link" href="{{ .Params.wikipedia }}">
+            <img src="/media/icons/github.svg" alt="Wikipedia icon" />
+            <span>Wikipedia Article</span>
+        </a>
+        {{ end }}
+        {{- if .Params.webpage }}
+        <a class="external-link" href="{{ .Params.webpage }}">
+            <img src="/media/icons/webpage.svg" alt="web icon" />
+            <span>Webpage</span>
+        </a>
+        {{ end }}
+        {{- if .Params.link }}
+        <a class="external-link" href="{{ .Params.link }}">
+            <img src="/media/icons/link.svg" alt="link icon" />
+            <span>Link</span>
+        </a>
+        {{ end }}
     </div>
     {{ end }}
     </div>

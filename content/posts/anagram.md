@@ -4,9 +4,7 @@ published: 2025-05-12
 created: 2025-04-18
 tags: [projects, programming, language, colab]
 description: A simple little Jupyter notebook to create anagram GIFs
-link: https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK
-link_name: Colab Notebook
-link_icon: colab
+colab: https://colab.research.google.com/drive/1MqpogsUUTuzctVKgg8n8btD3WUuENPAK
 ---
 
 An [Anagram](https://en.wikipedia.org/wiki/Anagram) is a word created by rearranging the letters of another word.

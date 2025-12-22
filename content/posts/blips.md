@@ -2,11 +2,10 @@
 title: Blips
 published: 2025-12-20
 created: 2025-10-07
-tags: [projects, programming, webdev, github, personal website]
+tags: [projects, programming, webdev, svelte, github, personal website]
 description: "My personal micro-blog; it's basically Ethan-flavoured Tumblr"
-link: https://github.com/ethmarks/blips
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/blips
+webpage: https://ethmarks.github.io/blips/
 ---
 
 [Blips](https://ethmarks.github.io/blips/) is my personal microblog. Whereas my [Posts](/posts) (like the one you're reading right now) are long-form articles, my blips are smaller, more spontaneous updates. Just little "blips" on a radar.

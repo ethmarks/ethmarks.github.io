@@ -4,9 +4,8 @@ published: 2025-05-14
 created: 2025-04-03
 tags: [projects, programming, github, webdev, personal website]
 description: The website you're reading right now
-link: https://github.com/ethmarks/ethmarks.github.io
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/ethmarks.github.io
+webpage: https://ethmarks.github.io
 ---
 
 My personal website is my home on the web.

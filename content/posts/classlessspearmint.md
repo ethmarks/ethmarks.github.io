@@ -3,9 +3,7 @@ title: ClasslessSpearmint
 published: 2025-07-20
 tags: [projects, webdev, programming, github, ai, codepen]
 description: ClasslessSpearmint is a Classless CSS style that aesthetically styles raw HTML with my website's theme without needing to assign HTML classes
-link: https://github.com/ethmarks/ClasslessSpearmint
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/ClasslessSpearmint
 ---
 
 Whenever I throw together a simple [CodePen](/tags/codepen) for a quick demo (e.g. for my [text scramble animation](/posts/scrambleanim)), I usually include this single line of code.

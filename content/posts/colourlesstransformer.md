@@ -4,9 +4,7 @@ published: 2025-05-13
 created: 2024-12-22
 tags: [projects, programming, github, ai, webdev, automation]
 description: My Gradio interface for PaintTransformer, a neural image filter that turns photos into paint timelapses
-link: https://github.com/ethmarks/ColourlessTransformer
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/ColourlessTransformer
 ---
 
 [PaintTransformer](https://github.com/Huage001/PaintTransformer) is a neural network that approximates images using paint strokes. This gives it a very pretty and stylized watercolor/painterly aesthetic.

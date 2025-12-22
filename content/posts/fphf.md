@@ -1,11 +1,9 @@
 ---
 title: "Fixed-Point Hash Finder"
 published: 2025-12-21
-tags: [projects, cryptology, github, programming, rust, webdev]
+tags: [projects, cryptography, github, programming, rust, webdev, svelte]
 description: a Rust tool that finds strings that contain part of their own SHA-256 hash
-link: https://github.com/ethmarks/fphf
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/fphf
 ---
 
 ![A screenshot of fphf being used in a terminal window against an abstract blue desktop wallaper. After running the command "fphf", the terminal fills with status info as the process runs before eventually returning the string "The SHA-256 hash of this sentence begins with b43c8b9." and the hash "b43c8b96f151033a566e148d45c43aa84ba153ff9407397f23d5eb43112bb5e1"](~/fphf_konsole.webp)

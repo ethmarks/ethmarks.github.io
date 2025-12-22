@@ -4,9 +4,7 @@ title: Eliza
 published: 2024-12-17
 tags: [projects, programming, ai, history, colab]
 description: My implementation of the 1966 chatbot Eliza
-link: https://colab.research.google.com/drive/1RQ2-HzSdCBQfYQZu6OSrYlOgOHqbQpn_
-link_name: Colab Notebook
-link_icon: colab
+colab: https://colab.research.google.com/drive/1RQ2-HzSdCBQfYQZu6OSrYlOgOHqbQpn_
 ---
 
 [ELIZA](https://en.wikipedia.org/wiki/ELIZA) was the first computer chatbot. Think of it as the great-great-great-grandparent of ChatGPT.

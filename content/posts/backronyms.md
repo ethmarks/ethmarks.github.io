@@ -3,6 +3,7 @@ title: Backronyms
 published: 2025-06-09
 tags: [humor, language]
 description: A fun list of backronyms
+wikipedia: https://en.wikipedia.org/wiki/Backronym
 ---
 
 Did you know that [LASER](https://en.wikipedia.org/wiki/Laser) is an [acronym](https://en.wikipedia.org/wiki/Acronym)? It stands for Light Amplification by Stimulated Emission of Radiation (I'm not making this up).

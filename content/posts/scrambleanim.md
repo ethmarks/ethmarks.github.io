@@ -3,9 +3,7 @@ title: Text Scramble Animation
 published: 2025-06-29
 tags: [programming, webdev, codepen]
 description: A demonstration of my text scrambling JavaScript animation
-link: https://codepen.io/ethmarks/pen/jEPRNXG
-link_name: CodePen
-link_icon: codepen
+codepen: https://codepen.io/ethmarks/pen/jEPRNXG
 ---
 
 Earlier today, [Brad Woods Digital Garden](https://garden.bradwoods.io/) made it to the [front page of HN](https://news.ycombinator.com/item?id=44393920). I had never heard of this website before, so I clicked on the link and explored it. As it turns out, it's the web development blog of [Brad Woods](https://bradwoods.io/). It's also one of the most detailed and high-effort webpages I've seen in quite a while, and the [blog content](https://garden.bradwoods.io/notes/svg/scroll-driven-draw-animation) is high-quality and very interesting. But what really stood out to me was how most of the text on the page initially appears scrambled, and then gets "solved" in a quirky scramble animation.
