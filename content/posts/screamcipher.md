@@ -1,7 +1,7 @@
 ---
 title: Scream Cipher Converter
 published: 2025-06-06
-tags: [programming, codepen, humor, cryptology, automation]
+tags: [programming, codepen, humor, cryptography, automation]
 description: An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'
 codepen: https://codepen.io/ethmarks/full/XJbwKgo
 ---

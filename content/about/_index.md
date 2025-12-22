@@ -36,7 +36,7 @@ I'm **15** years old
 | [Programming](/tags/programming) |
 | [Automation](/tags/automation) |
 | Mathematics |
-| [Cryptology](/tags/cryptology) |
+| [Cryptography](/tags/cryptography) |
 | [Linguistics](/tags/language/) |
 | [Cartography](/tags/cartography) |
 {{< /compact-table >}}
