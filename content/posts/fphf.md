@@ -1,7 +1,7 @@
 ---
 title: "Fixed-Point Hash Finder"
 published: 2025-12-21
-tags: [projects, cryptology, github, programming, rust, webdev]
+tags: [projects, cryptology, github, programming, rust, webdev, svelte]
 description: a Rust tool that finds strings that contain part of their own SHA-256 hash
 github: https://github.com/ethmarks/fphf
 ---
