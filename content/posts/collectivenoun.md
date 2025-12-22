@@ -3,6 +3,7 @@ title: Collective Nouns
 published: 2025-04-23
 tags: [language]
 description: A collection of amusing and obscure collective nouns for animals.
+wikipedia: https://en.wikipedia.org/wiki/Collective_noun
 ---
 
 A [collective noun](https://en.wikipedia.org/wiki/Collective_noun) is a word that names a group of people, animals, or things treated as a single entity. For example, a 'class' is the collective noun for students. A class is grammatically treated as a singular object even though it's composed of multiple students.
