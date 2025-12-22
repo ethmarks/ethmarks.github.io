@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: Mint Flavoured Markdown
 published: 2025-06-30
 tags: [projects, programming, webdev, personal website]
