@@ -3,9 +3,7 @@ title: Scream Cipher Converter
 published: 2025-06-06
 tags: [programming, codepen, humor, cryptology, automation]
 description: An online converter to and from the Scream Cipher, a cipher where each letter is represented by diacritical variations of 'A'
-link: https://codepen.io/ethmarks/full/XJbwKgo
-link_name: CodePen
-link_icon: codepen
+codepen: https://codepen.io/ethmarks/full/XJbwKgo
 ---
 
 ![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](~/xkcd_scream_cipher.webp "Original: https://xkcd.com/3054/")

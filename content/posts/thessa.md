@@ -3,9 +3,8 @@ title: Thessa
 published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
-link: https://github.com/ethmarks/thessa
-link_name: GitHub Repo
-link_icon: github
+github: https://github.com/ethmarks/thessa
+webpage: https://ethmarks.github.io/thessa
 ---
 
 *Note: As of 2025-11-07 I am currently in the middle of refactoring Thessa. Some of the information in this post may be outdated. I'll update this post after all refactorings are complete*.
