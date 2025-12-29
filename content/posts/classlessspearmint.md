@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: ClasslessSpearmint
 published: 2025-07-20
 tags: [projects, webdev, programming, github, ai, codepen]
