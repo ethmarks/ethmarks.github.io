@@ -1,19 +1,21 @@
-{{- $header := partial "header.html" . | jsonify -}}
-{{- $footer := partial "footer.html" . | jsonify -}}
-{{- $js := printf `// Ethmarks Web Components
-// Generated automatically from Hugo partials
+// Ethmarks Web Components
 
 class EthmarksHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = %s;
+    this.innerHTML = `
+      <header>
+          <a href="https://ethmarks.github.io/" id="title" tabindex="0" aria-label="Home">Ethan Marks</a>
+          <nav>
+              <a id="nav-home" class="staggered" href="https://ethmarks.github.io/">Home</a>
+              <a id="nav-about" class="staggered" href="https://ethmarks.github.io/about/">About</a>
+              <a id="nav-posts" class="staggered" href="https://ethmarks.github.io/posts/">Posts</a>
+              <a id="nav-blips" class="staggered" href="https://ethmarks.github.io/blips/">Blips</a>
+              <a id="nav-projects" class="staggered" href="https://ethmarks.github.io/tags/projects/">Projects</a>
+          </nav>
+      </header>`;
 
     const activeLink = this.getAttribute('active');
     if (activeLink) {
-      // Remove any existing active classes
-      const navLinks = this.querySelectorAll('nav a');
-      navLinks.forEach(link => link.classList.remove('active'));
-
-      // Add active class to the specified link by ID
       const targetLink = this.querySelector('#nav-' + activeLink.toLowerCase());
       if (targetLink) {
         targetLink.classList.add('active');
@@ -24,7 +26,16 @@ class EthmarksHeader extends HTMLElement {
 
 class EthmarksFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = %s;
+    this.innerHTML = `
+      <footer>
+          <span id="source">
+              <a href="https://github.com/ethmarks/ethmarks.github.io" id="sourcelink" target="_blank">Website Source</a>
+          </span>
+          <span id="copyright"><a href="https://ethmarks.github.io/about/">Ethan Marks</a>, &copy;2025</span>
+          <span id="email">
+              <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
+          </span>
+      </footer>`;
 
     const sourceLink = this.getAttribute('source');
     if (sourceLink) {
@@ -64,6 +75,3 @@ class EthmarksFooter extends HTMLElement {
 // Register the custom elements
 customElements.define('ethmarks-header', EthmarksHeader);
 customElements.define('ethmarks-footer', EthmarksFooter);
-` $header $footer -}}
-{{- $resource := resources.FromString "js/ethmarks-components.js" $js -}}
-{{- $resource.Publish -}}
