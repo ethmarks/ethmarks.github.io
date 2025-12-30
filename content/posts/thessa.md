@@ -4,12 +4,12 @@ published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
 github: https://github.com/ethmarks/thessa
-webpage: https://ethmarks.github.io/thessa
+webpage: https://thessa.vercel.app
 ---
 
 *Note: As of 2025-11-07 I am currently in the middle of refactoring Thessa. Some of the information in this post may be outdated. I'll update this post after all refactorings are complete*.
 
-[![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)](https://ethmarks.github.io/thessa/)
+[![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)](https://thessa.vercel.app/)
 
 A while ago, I [configured my instance of ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt) to "respond with a [Dale-Chall readability level](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula) of 9.1". This is a precise way of telling it to 'use big words'.
 
@@ -21,7 +21,7 @@ Yesterday (May 21, 2025), I decided to make a web interface for my custom-instru
 
 ## Usage
 
-1. **Go to Thessa webpage**: [https://ethmarks.github.io/thessa](https://ethmarks.github.io/thessa)
+1. **Go to Thessa webpage**: [https://thessa.vercel.app](https://thessa.vercel.app)
 2. **Set Gemini API key**: Thessa requires an API key to function. You can acquire an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 3. **Input a Word**: This is the word that Thessa wil synonymize. Any word will do.
 4. **Press the Generate Button**: Thessa will take your word, construct a prompt, and send it to Gemini.

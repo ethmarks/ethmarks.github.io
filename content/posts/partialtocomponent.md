@@ -328,7 +328,7 @@ And here's what it looks when rendered.
 
 It looks almost exactly like a page on my site. All that from just a few lines of HTML!
 
-I'm already using this approach for [Thessa](https://ethmarks.github.io/thessa/). The [source code for Thessa](https://github.com/ethmarks/thessa) lives in a separate repo from my personal website, so I couldn't just use my normal Hugo partials. Instead, I used `ethmarks-components.js` to import the header and footer using Web Components. The components on Thessa look exactly the same as the components on my personal website. This is because they *are* exactly the same, right down to the HTML.
+I'm already using this approach for [Thessa](https://thessa.vercel.app/). The [source code for Thessa](https://github.com/ethmarks/thessa) lives in a separate repo from my personal website, so I couldn't just use my normal Hugo partials. Instead, I used `ethmarks-components.js` to import the header and footer using Web Components. The components on Thessa look exactly the same as the components on my personal website. This is because they *are* exactly the same, right down to the HTML.
 
 ## Conclusion
 
