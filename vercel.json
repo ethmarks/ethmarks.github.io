@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/blips/:path*",
+      "destination": "https://blips-ethmarks.vercel.app/:path*"
+    }
+  ]
+}
