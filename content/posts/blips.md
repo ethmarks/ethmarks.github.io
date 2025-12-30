@@ -5,12 +5,12 @@ created: 2025-10-07
 tags: [projects, programming, webdev, svelte, github, personal website]
 description: "My personal micro-blog; it's basically Ethan-flavoured Tumblr"
 github: https://github.com/ethmarks/blips
-webpage: https://ethmarks.github.io/blips/
+webpage: https://blips-ethmarks.vercel.app/
 ---
 
-[Blips](https://ethmarks.github.io/blips/) is my personal microblog. Whereas my [Posts](/posts) (like the one you're reading right now) are long-form articles, my blips are smaller, more spontaneous updates. Just little "blips" on a radar.
+[Blips](https://blips-ethmarks.vercel.app/) is my personal microblog. Whereas my [Posts](/posts) (like the one you're reading right now) are long-form articles, my blips are smaller, more spontaneous updates. Just little "blips" on a radar.
 
-{{< iframe src="https://ethmarks.github.io/blips/" alt="Blips microblog showing recent blips with a dark teal interface" >}}
+{{< iframe src="https://blips-ethmarks.vercel.app/" alt="Blips microblog showing recent blips with a dark teal interface" >}}
 
 ## Why?
 
