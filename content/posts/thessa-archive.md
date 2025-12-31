@@ -1,4 +1,5 @@
 ---
+unlisted: true
 title: Thessa
 published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
@@ -6,8 +7,6 @@ description: An AI-powered thesaurus that uses the Gemini API
 github: https://github.com/ethmarks/thessa
 webpage: https://ethmarks.github.io/thessa
 ---
-
-*Note: As of 2025-11-07 I am currently in the middle of refactoring Thessa. Some of the information in this post may be outdated. I'll update this post after all refactorings are complete*.
 
 [![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)](https://ethmarks.github.io/thessa/)
 
