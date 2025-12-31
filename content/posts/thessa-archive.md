@@ -8,6 +8,8 @@ github: https://github.com/ethmarks/thessa
 webpage: https://ethmarks.github.io/thessa
 ---
 
+*Note: this is the archived version of my original project post for [Thessa v1](/posts/thessa-v1), an older version of [Thessa](/posts/thessa)*
+
 [![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)](https://ethmarks.github.io/thessa/)
 
 A while ago, I [configured my instance of ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt) to "respond with a [Dale-Chall readability level](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula) of 9.1". This is a precise way of telling it to 'use big words'.
