@@ -31,7 +31,7 @@ class EthmarksFooter extends HTMLElement {
           <span id="source">
               <a href="https://github.com/ethmarks/ethmarks.github.io" id="sourcelink" target="_blank">Website Source</a>
           </span>
-          <span id="copyright"><a href="https://ethmarks.github.io/about/">Ethan Marks</a>, &copy;2025</span>
+          <span id="copyright"><a href="https://ethmarks.github.io/about/">Ethan Marks</a>, &copy;2026</span>
           <span id="email">
               <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
           </span>
