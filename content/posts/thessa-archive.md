@@ -5,12 +5,11 @@ published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
 github: https://github.com/ethmarks/thessa
-webpage: https://ethmarks.github.io/thessa
 ---
 
-*Note: this is the archived version of my original project post for [Thessa v1](/posts/thessa-v1), an older version of [Thessa](/posts/thessa)*
+_Note: this is the archived version of my original project post for [Thessa v1](/posts/thessa-v1), an older version of [Thessa](/posts/thessa)_
 
-[![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)](https://ethmarks.github.io/thessa/)
+![A screenshot of the Thessa interface showing synonyms for the word 'screenshot'](~/thessa_2025-09-23.webp)
 
 A while ago, I [configured my instance of ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt) to "respond with a [Dale-Chall readability level](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula) of 9.1". This is a precise way of telling it to 'use big words'.
 
@@ -22,7 +21,7 @@ Yesterday (May 21, 2025), I decided to make a web interface for my custom-instru
 
 ## Usage
 
-1. **Go to Thessa webpage**: [https://ethmarks.github.io/thessa](https://ethmarks.github.io/thessa)
+1. **Go to Thessa webpage**: <https://ethmarks.github.io/thessa>
 2. **Set Gemini API key**: Thessa requires an API key to function. You can acquire an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 3. **Input a Word**: This is the word that Thessa wil synonymize. Any word will do.
 4. **Press the Generate Button**: Thessa will take your word, construct a prompt, and send it to Gemini.
@@ -40,7 +39,7 @@ The prompt template used to generate synonyms is below.
 
 ### API Key
 
-Google places some restrictions on access to the Gemini API. They very generously offer 30 free requests every minute per API key. I *could* just hardcode my personal API key into Thessa. This way, all users would use my API key. I'm not going to do that because it would be a bad idea. First, it would mean that all users would be collectively limited to 30 requests per minute: if someone else was using Thessa at the same time you were, they could run my key out of requests and prevent you from accessing Thessa until my key resets. Second, there are bots and scrapers that clone random GitHub repos searching for hardcoded API keys. Once they inevitably stumble upon my key, they would steal it and run it out of requests.
+Google places some restrictions on access to the Gemini API. They very generously offer 30 free requests every minute per API key. I _could_ just hardcode my personal API key into Thessa. This way, all users would use my API key. I'm not going to do that because it would be a bad idea. First, it would mean that all users would be collectively limited to 30 requests per minute: if someone else was using Thessa at the same time you were, they could run my key out of requests and prevent you from accessing Thessa until my key resets. Second, there are bots and scrapers that clone random GitHub repos searching for hardcoded API keys. Once they inevitably stumble upon my key, they would steal it and run it out of requests.
 
 My solution is to have each user generate their own free API key. I wish I didn't have to do this, but it was pretty much the only way I could publish Thessa. Thessa stores your API key in [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). This means that you only have to enter your key once and Thessa will request it from storage on each page load. Information stored in Local Storage is secure and never leaves your device.
 

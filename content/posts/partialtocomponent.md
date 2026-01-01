@@ -19,8 +19,8 @@ Inserting styles into a webpage is easy: I just need to include a link to the CS
 
 ```scss
 /* components.scss */
-@import 'components/header';
-@import 'components/footer';
+@import "components/header";
+@import "components/footer";
 ```
 
 Normally I'd need to publish `components.scss` in order to use it, but I created a Hugo template a while ago that automatically transpiles and publishes all SCSS files. Here's what it looks like, if you're curious.
@@ -38,7 +38,10 @@ Normally I'd need to publish `components.scss` in order to use it, but I created
 So all I need to do to import the component styles into another project is include this line of HTML:
 
 ```html
-<link rel="stylesheet" href="https://ethmarks.github.io/css/components.min.css">
+<link
+  rel="stylesheet"
+  href="https://ethmarks.github.io/css/components.min.css"
+/>
 ```
 
 These component styles combined with ClasslessSpearmint provide all the styles necessary to imitate my site's aesthetic.
@@ -52,13 +55,15 @@ Here's what the HTML for my footer looks like as of the time of writing. The hea
 ```html
 <!-- footer.html -->
 <footer>
-    <span id="repo">
-        <a href="https://github.com/ethmarks/ethmarks.github.io" target="_blank">Website Source</a>
-    </span>
-    <span id="copyright"><a href="/about/">Ethan Marks</a>, &copy;2025</span>
-    <span id="email">
-        <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
-    </span>
+  <span id="repo">
+    <a href="https://github.com/ethmarks/ethmarks.github.io" target="_blank"
+      >Website Source</a
+    >
+  </span>
+  <span id="copyright"><a href="/about/">Ethan Marks</a>, &copy;2025</span>
+  <span id="email">
+    <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
+  </span>
 </footer>
 ```
 
@@ -84,7 +89,7 @@ The only question is how to get the data from the HTML partials into a JavaScrip
 
 I was curious to see how the [Zed Agent](https://zed.dev/agentic) would approach this problem without any supervision. I had no intention of using the code that it came up with, but I thought that this would be a good opportunity to experiment with vibe coding. I set Zed to use Claude Sonnet 4 and gave it the following prompt.
 
-> **User**  \
+> **User** \
 > I want a script, accessible at `/js/ethmarks-components.js`, that defines two Web Components whose content is the same as @header.html and @footer.html. It is absolutely cardinally important that the code be DRY, so you can't just copy the HTMl. Instead, you'll have to do something clever with Hugo that dynamically creates a JS file and publishes it.
 >
 > The end result should be as such:
@@ -97,7 +102,7 @@ I was curious to see how the [Zed Agent](https://zed.dev/agentic) would approach
 
 It spent a few minutes reading my existing files, writing new ones, testing if the site built without errors (it often did not), and continued iterating until it had something that worked.
 
-Its solution was *really* dumb.
+Its solution was _really_ dumb.
 
 It ignored my instruction to create the JS file dynamically and opted instead to make a static JS file that fetches the HTML content from a pseudo-dynamic API that it also created.
 
@@ -105,36 +110,37 @@ Here's the JS script it created to fetch that API data.
 
 ```js
 // components.js
-const apiURL = '/api/index.json'
+const apiURL = "/api/index.json";
 
 class SiteHeader extends HTMLElement {
-    async connectedCallback() {
-        try {
-            const response = await fetch(apiURL);
-            const data = await response.json();
-            this.innerHTML = data.header;
-        } catch (error) {
-            console.error('Failed to load header:', error);
-            this.innerHTML = '<header><a href="https://ethmarks.github.io">Ethan Marks</a></header>';
-        }
+  async connectedCallback() {
+    try {
+      const response = await fetch(apiURL);
+      const data = await response.json();
+      this.innerHTML = data.header;
+    } catch (error) {
+      console.error("Failed to load header:", error);
+      this.innerHTML =
+        '<header><a href="https://ethmarks.github.io">Ethan Marks</a></header>';
     }
+  }
 }
 
 class SiteFooter extends HTMLElement {
-    async connectedCallback() {
-        try {
-            const response = await fetch(apiURL);
-            const data = await response.json();
-            this.innerHTML = data.footer;
-        } catch (error) {
-            console.error('Failed to load footer:', error);
-            this.innerHTML = '<footer><span>Ethan Marks, &copy;2025</span></footer>';
-        }
+  async connectedCallback() {
+    try {
+      const response = await fetch(apiURL);
+      const data = await response.json();
+      this.innerHTML = data.footer;
+    } catch (error) {
+      console.error("Failed to load footer:", error);
+      this.innerHTML = "<footer><span>Ethan Marks, &copy;2025</span></footer>";
     }
+  }
 }
 
-customElements.define('site-header', SiteHeader);
-customElements.define('site-footer', SiteFooter);
+customElements.define("site-header", SiteHeader);
+customElements.define("site-footer", SiteFooter);
 ```
 
 Here's its Hugo template to create a JSON file containing the header and footer HTML.
@@ -176,11 +182,11 @@ And here are the changes it made to my Hugo config to create the "API" output fo
 
 This solution is bad for two reasons.
 
-First, it's hideously overcomplicated; as you'll see later, I managed to accomplish the same thing in a single file, with *far* less code, and without messing with the Hugo config.
+First, it's hideously overcomplicated; as you'll see later, I managed to accomplish the same thing in a single file, with _far_ less code, and without messing with the Hugo config.
 
 Second, the JS script fetches the data from an API. This introduces an extra network request, slows down the page load, and possibly causes CORS issues.
 
-To the Zed Agent's credit, it *did* adhere to my requirements. Its solution does define the Web Components, doesn't interfere with my existing partials, and references the partials in a DRY manner. And the only thing that it cost me (other than eating into my prompt quota) was a few minutes of my time (which I spent reading [Ringworld](https://www.goodreads.com/book/show/61179.Ringworld)).
+To the Zed Agent's credit, it _did_ adhere to my requirements. Its solution does define the Web Components, doesn't interfere with my existing partials, and references the partials in a DRY manner. And the only thing that it cost me (other than eating into my prompt quota) was a few minutes of my time (which I spent reading [Ringworld](https://www.goodreads.com/book/show/61179.Ringworld)).
 
 I've come to similar conclusions from my other experiments with vibe coding. If your goal is 'code that works', vibe coding is probably the easiest and most labor-efficient way to achieve that goal. But if you care even slightly about the quality of the code, AI agents tend to take shortcuts and make dumb architectural decisions.
 
@@ -230,18 +236,20 @@ As of the time of writing, my template produces the following JS:
 
 class EthmarksHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\u003cheader\u003e\n    \u003ca href=\"/\" id=\"title\" tabindex=\"0\" aria-label=\"Home\"\u003eEthan Marks\u003c/a\u003e\n    \u003cnav\u003e\n        \u003ca class=\"staggered\" href=\"/\"\u003eHome\u003c/a\u003e\n        \u003ca class=\"staggered\" href=\"/about/\"\u003eAbout\u003c/a\u003e\n        \u003ca class=\"staggered\" href=\"/posts/\"\u003ePosts\u003c/a\u003e\n        \u003ca class=\"staggered active\" href=\"/tags/projects/\"\u003eProjects\u003c/a\u003e\n    \u003c/nav\u003e\n\u003c/header\u003e\n";
+    this.innerHTML =
+      '\u003cheader\u003e\n    \u003ca href="/" id="title" tabindex="0" aria-label="Home"\u003eEthan Marks\u003c/a\u003e\n    \u003cnav\u003e\n        \u003ca class="staggered" href="/"\u003eHome\u003c/a\u003e\n        \u003ca class="staggered" href="/about/"\u003eAbout\u003c/a\u003e\n        \u003ca class="staggered" href="/posts/"\u003ePosts\u003c/a\u003e\n        \u003ca class="staggered active" href="/tags/projects/"\u003eProjects\u003c/a\u003e\n    \u003c/nav\u003e\n\u003c/header\u003e\n';
   }
 }
 
 class EthmarksFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\u003cfooter\u003e\n    \u003cspan id=\"repo\"\u003e\n        \u003ca href=\"https://github.com/ethmarks/ethmarks.github.io\" target=\"_blank\"\u003eWebsite Source\u003c/a\u003e\n    \u003c/span\u003e\n    \u003cspan id=\"copyright\"\u003e\u003ca href=\"/about/\"\u003eEthan Marks\u003c/a\u003e, \u0026copy;2025\u003c/span\u003e\n    \u003cspan id=\"email\"\u003e\n        \u003ca href=\"mailto:ethmarks.dev@gmail.com\" target=\"_blank\"\u003eContact\u003c/a\u003e\n    \u003c/span\u003e\n\u003c/footer\u003e\n";
+    this.innerHTML =
+      '\u003cfooter\u003e\n    \u003cspan id="repo"\u003e\n        \u003ca href="https://github.com/ethmarks/ethmarks.github.io" target="_blank"\u003eWebsite Source\u003c/a\u003e\n    \u003c/span\u003e\n    \u003cspan id="copyright"\u003e\u003ca href="/about/"\u003eEthan Marks\u003c/a\u003e, \u0026copy;2025\u003c/span\u003e\n    \u003cspan id="email"\u003e\n        \u003ca href="mailto:ethmarks.dev@gmail.com" target="_blank"\u003eContact\u003c/a\u003e\n    \u003c/span\u003e\n\u003c/footer\u003e\n';
   }
 }
 
-customElements.define('ethmarks-header', EthmarksHeader);
-customElements.define('ethmarks-footer', EthmarksFooter);
+customElements.define("ethmarks-header", EthmarksHeader);
+customElements.define("ethmarks-footer", EthmarksFooter);
 ```
 
 The final JS isn't exactly pretty, but the source template (the code whose prettiness is actually important) is simple, concise, and follows best practices.
@@ -294,31 +302,73 @@ Here's a demo page that does exactly that.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Components Test</title>
 
     <!-- global.css includes site styles & component styles -->
-    <link rel="stylesheet" href="https://ethmarks.github.io/css/global.min.css">
+    <link
+      rel="stylesheet"
+      href="https://ethmarks.github.io/css/global.min.css"
+    />
 
-    <script src="https://ethmarks.github.io/js/ethmarks-components.js" defer></script>
-</head>
-<body>
+    <script
+      src="https://ethmarks.github.io/js/ethmarks-components.js"
+      defer
+    ></script>
+  </head>
+  <body>
     <ethmarks-header></ethmarks-header>
     <main>
-        <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Olim erat homo quidam qui in silva habitabat. Hic vir singulis diebus ad fontem ambulabat ut aquam hauriret. Sed quadam die, cum ad fontem pervenit, vidit ibi puellam pulcherrimam capillis aureis. Puella ei dixit se esse nympham fontis et si vellet secum manere, magnam felicitatem ei daturam </p>
-            <p>Vir autem, qui uxorem domi habebat et liberos tres, respondit se non posse relinquere familiam suam. Tunc nympha irascens malum carmen cantavit et statim vir in cervum conversus est. Cornua magna ei creverunt et pedes eius ungulae factae sunt.</p>
-            <p>Diu per silvam errabat, suam formam humanam desiderans. Aliquando prope domum suam ibat et uxorem liberosque videbat, sed illi eum non cognoscebant. Uxor eius saepe dicebat viris vicinis maritum suum mysterioso modo evanisse.</p>
-            <p>Post multos menses, cervus ad fontem rediit et nympham rogavit ut maledicto liberaret eum. Nympha, quae iam paenitentiam egerat crudelitatis suae, respondit se posse eum liberare si aliquis pro eo mortem oppeteret. Cervus tristis factus est, nam neminem noverat qui hoc faceret.</p>
-            <p>Sed ecce! Canis fidelis qui eum per totam silvam secutus erat, subito in aquam saluit. Aquae magicae canem statim necaverunt, sed simul cervum in hominem retransformaverunt. Vir domum cucurrit et familiam suam amplexatus est, numquam obliturus sacrificium canis fidelis.</p>
-            <p>Postea semper ad fontem revertebatur ut flores ibi poneret in memoriam canis sui, et nympha, quae nunc benigna facta erat, fonti virtutem dedit ut aegros sanaret qui cum fide ad eum venirent.</p>
-        </article>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Olim erat homo quidam qui in silva habitabat. Hic vir singulis diebus
+          ad fontem ambulabat ut aquam hauriret. Sed quadam die, cum ad fontem
+          pervenit, vidit ibi puellam pulcherrimam capillis aureis. Puella ei
+          dixit se esse nympham fontis et si vellet secum manere, magnam
+          felicitatem ei daturam
+        </p>
+        <p>
+          Vir autem, qui uxorem domi habebat et liberos tres, respondit se non
+          posse relinquere familiam suam. Tunc nympha irascens malum carmen
+          cantavit et statim vir in cervum conversus est. Cornua magna ei
+          creverunt et pedes eius ungulae factae sunt.
+        </p>
+        <p>
+          Diu per silvam errabat, suam formam humanam desiderans. Aliquando
+          prope domum suam ibat et uxorem liberosque videbat, sed illi eum non
+          cognoscebant. Uxor eius saepe dicebat viris vicinis maritum suum
+          mysterioso modo evanisse.
+        </p>
+        <p>
+          Post multos menses, cervus ad fontem rediit et nympham rogavit ut
+          maledicto liberaret eum. Nympha, quae iam paenitentiam egerat
+          crudelitatis suae, respondit se posse eum liberare si aliquis pro eo
+          mortem oppeteret. Cervus tristis factus est, nam neminem noverat qui
+          hoc faceret.
+        </p>
+        <p>
+          Sed ecce! Canis fidelis qui eum per totam silvam secutus erat, subito
+          in aquam saluit. Aquae magicae canem statim necaverunt, sed simul
+          cervum in hominem retransformaverunt. Vir domum cucurrit et familiam
+          suam amplexatus est, numquam obliturus sacrificium canis fidelis.
+        </p>
+        <p>
+          Postea semper ad fontem revertebatur ut flores ibi poneret in memoriam
+          canis sui, et nympha, quae nunc benigna facta erat, fonti virtutem
+          dedit ut aegros sanaret qui cum fide ad eum venirent.
+        </p>
+      </article>
     </main>
     <ethmarks-footer></ethmarks-footer>
-</body>
+  </body>
 </html>
 ```
 
@@ -328,7 +378,7 @@ And here's what it looks when rendered.
 
 It looks almost exactly like a page on my site. All that from just a few lines of HTML!
 
-I'm already using this approach for [Thessa](https://ethmarks.github.io/thessa/). The [source code for Thessa](https://github.com/ethmarks/thessa) lives in a separate repo from my personal website, so I couldn't just use my normal Hugo partials. Instead, I used `ethmarks-components.js` to import the header and footer using Web Components. The components on Thessa look exactly the same as the components on my personal website. This is because they *are* exactly the same, right down to the HTML.
+I'm already using this approach for [Thessa](/posts/thessa/). The [source code for Thessa](https://github.com/ethmarks/thessa) lives in a separate repo from my personal website, so I couldn't just use my normal Hugo partials. Instead, I used `ethmarks-components.js` to import the header and footer using Web Components. The components on Thessa look exactly the same as the components on my personal website. This is because they _are_ exactly the same, right down to the HTML.
 
 ## Conclusion
 
