@@ -1,6 +1,6 @@
 ---
 unlisted: true
-title: Thessa
+title: Thessa (archive)
 published: 2025-05-21
 tags: [projects, programming, github, webdev, ai]
 description: An AI-powered thesaurus that uses the Gemini API
