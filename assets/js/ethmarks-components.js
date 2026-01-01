@@ -9,7 +9,7 @@ class EthmarksHeader extends HTMLElement {
               <a id="nav-home" class="staggered" href="https://ethmarks.github.io/">Home</a>
               <a id="nav-about" class="staggered" href="https://ethmarks.github.io/about/">About</a>
               <a id="nav-posts" class="staggered" href="https://ethmarks.github.io/posts/">Posts</a>
-              <a id="nav-blips" class="staggered" href="https://ethmarks.github.io/blips/">Blips</a>
+              <a id="nav-blips" class="staggered" href="https://blips-ethmarks.vercel.app/">Blips</a>
               <a id="nav-projects" class="staggered" href="https://ethmarks.github.io/tags/projects/">Projects</a>
           </nav>
       </header>`;
