@@ -19,31 +19,31 @@
     {{- if or .Params.github .Params.colab .Params.codepen .Params.wikipedia .Params.link }}
     <div class="external-link-row">
         {{- if .Params.github }}
-        <a class="external-link" href="{{ .Params.github }}">
+        <a class="external-link animated" href="{{ .Params.github }}">
             <img src="/media/icons/github.svg" alt="GitHub icon" />
             <span>GitHub Repo</span>
         </a>
         {{ end }}
         {{- if .Params.colab }}
-        <a class="external-link" href="{{ .Params.colab }}">
+        <a class="external-link animated" href="{{ .Params.colab }}">
             <img src="/media/icons/colab.svg" alt="Google Colab icon" />
             <span>Colab Notebook</span>
         </a>
         {{ end }}
         {{- if .Params.codepen }}
-        <a class="external-link" href="{{ .Params.codepen }}">
+        <a class="external-link animated" href="{{ .Params.codepen }}">
             <img src="/media/icons/codepen.svg" alt="CodePen icon" />
             <span>CodePen</span>
         </a>
         {{ end }}
         {{- if .Params.wikipedia }}
-        <a class="external-link" href="{{ .Params.wikipedia }}">
+        <a class="external-link animated" href="{{ .Params.wikipedia }}">
             <img src="/media/icons/wikipedia.svg" alt="Wikipedia icon" />
             <span>Wikipedia Article</span>
         </a>
         {{ end }}
         {{- if .Params.webpage }}
-        <a class="external-link" href="{{ .Params.webpage }}">
+        <a class="external-link animated" href="{{ .Params.webpage }}">
             <img src="/media/icons/webpage.svg" alt="web icon" />
             <span>Webpage</span>
         </a>
