@@ -8,7 +8,7 @@
             loading="lazy"
             width="{{ $image.Width }}"
             height="{{ $image.Height }}"
-            {{ with .style }}style="{{ . }}"{{ end }}
+            style="background: {{ if .transparent }}transparent{{ else }}{{ index ($image.Colors) 0 }}{{ end }};"
         >
         <h4>{{ .title }}</h4>
         <p>{{ .desc }}</p>
