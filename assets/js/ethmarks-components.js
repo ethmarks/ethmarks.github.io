@@ -14,11 +14,11 @@ class EthmarksHeader extends HTMLElement {
           </nav>
       </header>`;
 
-    const activeLink = this.getAttribute('active');
+    const activeLink = this.getAttribute("active");
     if (activeLink) {
-      const targetLink = this.querySelector('#nav-' + activeLink.toLowerCase());
+      const targetLink = this.querySelector("#nav-" + activeLink.toLowerCase());
       if (targetLink) {
-        targetLink.classList.add('active');
+        targetLink.classList.add("active");
       }
     }
   }
@@ -29,17 +29,17 @@ class EthmarksFooter extends HTMLElement {
     this.innerHTML = `
       <footer>
           <span id="source">
-              <a href="https://github.com/ethmarks/ethmarks.github.io" id="sourcelink" target="_blank">Website Source</a>
+              <a href="https://github.com/ethmarks/ethmarks.github.io" id="sourcelink">Website Source</a>
           </span>
           <span id="copyright"><a href="https://ethmarks.github.io/about/">Ethan Marks</a>, &copy;2026</span>
           <span id="email">
-              <a href="mailto:ethmarks.dev@gmail.com" target="_blank">Contact</a>
+              <a href="mailto:ethmarks.dev@gmail.com">Contact</a>
           </span>
       </footer>`;
 
-    const sourceLink = this.getAttribute('source');
+    const sourceLink = this.getAttribute("source");
     if (sourceLink) {
-      const sourceAnchor = this.querySelector('a#sourcelink');
+      const sourceAnchor = this.querySelector("a#sourcelink");
       if (sourceAnchor) {
         sourceAnchor.href = sourceLink;
       }
@@ -51,10 +51,12 @@ class EthmarksFooter extends HTMLElement {
       const containerHeight = window.innerHeight;
       const contentHeight = Math.max(
         document.documentElement.scrollHeight,
-        document.body.scrollHeight
+        document.body.scrollHeight,
       );
 
-      if (contentHeight === 0) { return; }
+      if (contentHeight === 0) {
+        return;
+      }
 
       if (contentHeight > containerHeight) {
         body.classList.add(heightOverflowClass);
@@ -73,5 +75,5 @@ class EthmarksFooter extends HTMLElement {
 }
 
 // Register the custom elements
-customElements.define('ethmarks-header', EthmarksHeader);
-customElements.define('ethmarks-footer', EthmarksFooter);
+customElements.define("ethmarks-header", EthmarksHeader);
+customElements.define("ethmarks-footer", EthmarksFooter);
