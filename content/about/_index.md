@@ -80,7 +80,7 @@ I'm **15** years old
 
 ## Education
 
-I'm a homeschooled high school student currently in my third semester of [dual-enrollment](https://en.wikipedia.org/wiki/Dual_enrollment) at my local community college.
+I'm a homeschooled high school student currently in my fourth semester of [dual-enrollment](https://en.wikipedia.org/wiki/Dual_enrollment) at my local community college.
 {{< /column >}}
 
 {{< column >}}
