@@ -85,7 +85,7 @@ Something you almost never notice is that, no matter the format, the text you re
 
 This isn't a problem for subtle transparency, but Liquid Glass is almost completely transparent. If the content behind the Liquid Glass is the same colour as the text on the Liquid Glass, this means that the meager opacity provided by the Liquid Glass doesn't give enough contrast to the text to make it legible.
 
-![iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](~/liquid_glass_contrast.webp "A valuable lesson on the importance of text contrast")
+![TALL iOS 26 Screenshot featuring a translucent Liquid Glass overlay on a white background. Very poorly contrasting text can been seen below, 'Dark Mode On', 'Night Shift Off', and 'True Tone Off'](~/liquid_glass_contrast.webp "A valuable lesson on the importance of text contrast")
 
 For example, try to read the text at the bottom of the iOS 26 screenshot above. Can you read it at all? How long did it take you? Text should be instantly readable, and 3% contrast between text and background is not even close to enough.
 

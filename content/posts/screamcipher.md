@@ -6,7 +6,7 @@ description: An online converter to and from the Scream Cipher, a cipher where e
 codepen: https://codepen.io/ethmarks/full/XJbwKgo
 ---
 
-![An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](~/xkcd_scream_cipher.webp "Original: https://xkcd.com/3054/")
+![TALL An xkcd comic describing a cipher where encrypted messages consist of only the letter 'A', with different diacritics applied to the 'A' to represent each plaintext letter of the alphabet](~/xkcd_scream_cipher.webp "Original: https://xkcd.com/3054/")
 
 This is one of my favorite [xkcd](https://xkcd.com/) comics. It proposes the [Scream Cipher](https://xkcd.com/3054/), a creative, amusing, and not *completely* useless [cipher](https://en.wikipedia.org/wiki/Cipher).
 
