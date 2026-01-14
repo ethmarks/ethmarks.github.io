@@ -1,6 +1,8 @@
 @import "components/header-anim";
 
 :root {
+    --main-width: 1200px;
+
     --color-greeting: var(--color-text);
     --color-name: var(--color-accent);
     --color-vocation: var(--color-text-secondary);

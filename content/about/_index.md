@@ -44,22 +44,6 @@ I'm **15** years old
 
 {{< column >}}
 
-## Likes
-
-{{< compact-table >}}
-| Category | My Favorite |
-|----------|-------------|
-| Colour | <span class="mint"><b>Spearmint Teal</b></span> |
-| Novel | [The Golden Compass](https://www.goodreads.com/book/show/119322.The_Golden_Compass) |
-| Map Projection | [Waterman Butterfly](/posts/waterman) |
-| Bird | [Starling](https://en.wikipedia.org/wiki/Starling) |
-| Foreign Language | [Bulgarian](https://en.wikipedia.org/wiki/Bulgarian_language) |
-| Logical Operator | [XOR](https://en.wikipedia.org/wiki/Exclusive_or) |
-{{< /compact-table >}}
-{{< /column >}}
-
-{{< column >}}
-
 ## Hobbies
 
 {{< compact-table >}}

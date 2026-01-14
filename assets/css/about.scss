@@ -10,7 +10,7 @@ h2 {
 main {
     overflow: hidden;
     @media (min-width: 768px) {
-        --main-margin-sides: 5vw;
+        --main-width: 1000px;
     }
 }
 
@@ -35,7 +35,7 @@ section > div {
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     section {
         display: block;
         align-items: normal;
