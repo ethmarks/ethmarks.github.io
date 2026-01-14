@@ -15,10 +15,10 @@
 {{- $alt := .PlainText -}}
 {{- $is_video := or (strings.HasSuffix $src ".webm") (strings.HasSuffix $src ".mp4") (strings.HasSuffix $src ".ogg") (strings.HasSuffix $src ".mov") -}}
 {{- $is_gif := findRE "GIF" $alt -}}
-{{- $is_verytall := findRE "TALL" $alt -}}
-{{- $verytall := "" -}}
-{{- if $is_verytall -}}
-{{- $verytall = "media-verytall" -}}
+{{- $is_tall := findRE "TALL" $alt -}}
+{{- $tall := "" -}}
+{{- if $is_tall -}}
+{{- $tall = "media-tall" -}}
 {{- end -}}
 {{- $alt_processed := $alt -}}
 {{- $alt_processed = replace $alt_processed "GIF" "" -}}
@@ -32,7 +32,7 @@
     {{ if $is_video -}}
     {{- if $is_gif -}}
     <video
-        class="responsive gif {{ $verytall }}"
+        class="responsive gif {{ $tall }}"
         src="{{ $src }}"
         aria-label="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
@@ -43,7 +43,7 @@
     ></video>
     {{- else -}}
     <video
-        class="responsive video {{ $verytall }}"
+        class="responsive video {{ $tall }}"
         src="{{ $src }}"
         aria-label="{{ $alt_processed }}"
         {{ if $title }}title="{{ $title }}"{{ end }}
@@ -52,7 +52,7 @@
     {{- end -}}
     {{- else -}}
     <img
-        class="responsive {{ $verytall }}"
+        class="responsive {{ $tall }}"
         src="{{ $src }}"
         alt="{{ $alt_processed }}"
         {{ if $width }}width="{{ $width }}"{{ end }}

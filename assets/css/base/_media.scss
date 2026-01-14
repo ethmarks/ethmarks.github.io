@@ -1,8 +1,5 @@
 :root {
-    --media-width: clamp(300px, 60vw, 1000px);
-    @media (max-width: 768px) {
-        --media-width: 100%;
-    }
+    --media-width: 100%;
 }
 
 figure {
@@ -22,14 +19,13 @@ figure {
 
 .responsive {
     max-width: var(--media-width);
-    max-height: var(--max-media-height);
     width: auto;
     height: auto;
     border-radius: var(--radius-xl);
     border: var(--border-standard);
 
-    &.media-verytall {
-        max-height: var(--max-media-height-verytall);
+    &.media-tall {
+        max-height: var(--max-media-height);
     }
 }
 
